@@ -53,6 +53,8 @@ body {
 
 .cursiva {
     font-style: italic;
+    font-size: 11px;
+	
 }
 
 /* Estilos para el select */
