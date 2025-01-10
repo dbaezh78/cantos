@@ -1,0 +1,138 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f9f9f9;
+}
+
+.song-container {
+    width: 800px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.line {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+	padding-left: .5in;
+}
+
+.alcentro {
+    text-align: center;
+}
+
+.tcanto {
+    color: red;
+    text-align: center;
+}
+
+.chords {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+    font-size: 14px;
+}
+
+.lyrics, .alyrics {
+    font-size: 16px;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+}
+
+.alyrics {
+    font-weight: bold;
+}
+
+.cursiva {
+    font-style: italic;
+}
+
+/* Estilos para el select */
+
+select {
+    border: none;
+    background: transparent;
+    font-size: 14px;
+    color: red;
+    font-weight: bold;
+    width: auto; /* Permitir que el ancho sea dinámico */
+    min-width: 50px; /* Ancho mínimo */
+}
+
+
+select.no-arrow {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+select:focus {
+    outline: none;
+}
+
+
+/* Opciones del select */
+select option {
+    background-color: white;
+    color: black;
+    padding: 5px;
+}
+
+/* Eliminar la flecha de select en navegadores Webkit */
+select::-webkit-appearance: none;
+
+.t_a {
+    position: relative; /* Relativo al contenedor */
+    padding-left: 1.5em; /* Deja espacio para la "A" */
+}
+
+.t_a::before {
+    content: "A"; /* Añade la "S" */
+    position: absolute; /* Posición absoluta dentro del contenedor relativo */
+    left: -1; /* Alinear al inicio del contenedor */
+    top: 1; /* Alinear a la parte superior */
+    font-size: 26px; /* Tamaño de fuente */
+    color: gray; /* Color de la "A" */
+    font-family: Arial, sans-serif; /* Fuente */
+    line-height: 1; /* Asegura el alineado vertical */
+	font-weight: bold;
+}
+
+.t_s {
+    position: relative; /* Relativo al contenedor */
+    padding-left: 1.5em; /* Deja espacio para la "A" */
+}
+
+.t_s::before {
+    content: "S"; /* Añade la "S" */
+    position: absolute; /* Posición absoluta dentro del contenedor relativo */
+    left: 0; /* Alinear al inicio del contenedor */
+    top: 1; /* Alinear a la parte superior */
+    font-size: 26px; /* Tamaño de fuente */
+    color: gray; /* Color de la "A" */
+    font-family: Arial, sans-serif; /* Fuente */
+    line-height: 1; /* Asegura el alineado vertical */
+	font-weight: bold;
+}
+/*
+.prefix {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 16px;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+.alyrics {
+    position: relative; // Relativo al prefijo
+    padding-left: 1.5em; // Espacio para el prefijo
+}
+*/
