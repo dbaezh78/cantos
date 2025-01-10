@@ -99,9 +99,9 @@ select::-webkit-appearance: none;
 .t_a::before {
     content: "A"; /* Añade la "S" */
     position: absolute; /* Posición absoluta dentro del contenedor relativo */
-    left: 2; /* Alinear al inicio del contenedor */
+    left: 3; /* Alinear al inicio del contenedor */
     top: 1; /* Alinear a la parte superior */
-    font-size: 26px; /* Tamaño de fuente */
+    font-size: 18px; /* Tamaño de fuente */
     color: gray; /* Color de la "A" */
     font-family: Arial, sans-serif; /* Fuente */
     line-height: 1; /* Asegura el alineado vertical */
@@ -116,9 +116,9 @@ select::-webkit-appearance: none;
 .t_s::before {
     content: "S"; /* Añade la "S" */
     position: absolute; /* Posición absoluta dentro del contenedor relativo */
-    left: 2; /* Alinear al inicio del contenedor */
+    left: 1; /* Alinear al inicio del contenedor */
     top: 1; /* Alinear a la parte superior */
-    font-size: 26px; /* Tamaño de fuente */
+    font-size: 18px; /* Tamaño de fuente */
     color: gray; /* Color de la "A" */
     font-family: Arial, sans-serif; /* Fuente */
     line-height: 1; /* Asegura el alineado vertical */
