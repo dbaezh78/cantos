@@ -1,0 +1,27 @@
+// Lista de acordes
+const acordes = [
+    "Do", "Do7", "Do#", "Re", "Re7", "Re#",
+    "Mi", "Mi7", "Mi♭", "Fa", "Fa7", "Fa#",
+    "Sol", "Sol7", "Sol#","La", "La7", "La#",
+	"Si", "Si♭", "Si7"
+];
+
+// Función para generar las opciones del menú desplegable
+function generarOpciones(defaultValue) {
+    return acordes.map(acorde => 
+        `<option value="${acorde}"${acorde === defaultValue ? ' selected' : ''}>${acorde}</option>`
+    ).join('');
+}
+
+// Configurar cada selector de acordes
+document.querySelectorAll('.chord').forEach(select => {
+    const defaultValue = select.dataset.default || ""; // Acorde predeterminado si está definido
+    select.innerHTML = `<option value=""></option>` + generarOpciones(defaultValue);
+});
+
+// Registrar cambios en los selectores para mostrar la selección
+document.querySelectorAll('.chord').forEach(select => {
+    select.addEventListener('change', event => {
+        console.log(`Acorde seleccionado: ${event.target.value}`);
+    });
+});
