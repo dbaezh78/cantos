@@ -53,8 +53,20 @@ body {
 
 .cursiva {
     font-style: italic;
+    text-align: left;
+    margin-left: -40px;
+    color: #d9534f; /* Mejora del rojo */
 }
 
+/*
+.cursiva {
+    font-style: italic;
+    justify-content: left; // Este no es válido para texto; puedes usar text-align
+    margin-left: -40px;
+    color: red;
+}
+
+*/
 /* Estilos para el select */
 select {
     border: none;
@@ -110,3 +122,32 @@ select option {
 .t_s::before {
     content: "S";
 }
+
+/*Clase para Transportar*/
+.Trnsp {
+	margin-left: 330px;
+	color: blue; /* Color azul */
+	text-shadow: 1px 1px 2px #000, /* Sombra exterior para el efecto */
+                   -1px -1px 1px #fff; /* Sombra interior clara */
+	font-size: 12; /* Tamaño de fuente */
+	font-weight: bold; /* Negrita para mayor efecto */
+}
+
+.aTrnsp{
+	background: #F0FFF0;
+	color: #FFFAFA;
+}
+
+ .refresh-button {
+      padding: 10px 20px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .refresh-button:hover {
+      background-color: #0056b3;
+    }
