@@ -1,9 +1,6 @@
 // Lista de acordes
 const acordes = [
-    "La", "La7", "La#", "Si", "Si♭", "Si7",
-    "Do", "Do7", "Do#", "Re", "Re7", "Re#",
-    "Mi", "Mi7", "Mi♭", "Fa", "Fa7", "Fa#",
-    "Sol", "Sol7", "Sol#"
+    "Do", "Re", "Mi", "Fa", "Sol", "La", "Si"
 ];
 
 // Función para generar las opciones del menú desplegable
@@ -19,9 +16,34 @@ document.querySelectorAll('.chord').forEach(select => {
     select.innerHTML = `<option value=""></option>` + generarOpciones(defaultValue);
 });
 
-// Registrar cambios en los selectores para mostrar la selección
+// Función para obtener el índice de un acorde
+function obtenerIndiceAcorde(acorde) {
+    return acordes.indexOf(acorde);
+}
+
+// Función para calcular un acorde desplazado
+function calcularAcordeDesplazado(acorde, desplazamiento) {
+    const indiceActual = obtenerIndiceAcorde(acorde);
+    if (indiceActual === -1) return acorde; // Si el acorde no está en la lista, no lo cambia
+    const nuevoIndice = (indiceActual + desplazamiento + acordes.length) % acordes.length;
+    return acordes[nuevoIndice];
+}
+
+// Registrar cambios en los selectores para sincronizar todos
 document.querySelectorAll('.chord').forEach(select => {
     select.addEventListener('change', event => {
-        console.log(`Acorde seleccionado: ${event.target.value}`);
+        const acordeSeleccionado = event.target.value;
+        const acordeInicial = obtenerIndiceAcorde(acordeSeleccionado);
+
+        if (acordeInicial !== -1) {
+            // Calcular el desplazamiento
+            const desplazamiento = acordeInicial - obtenerIndiceAcorde(event.target.dataset.default || "");
+            // Actualizar todos los selectores
+            document.querySelectorAll('.chord').forEach(otroSelect => {
+                const acordeActual = otroSelect.value || otroSelect.dataset.default || "";
+                const acordeNuevo = calcularAcordeDesplazado(acordeActual, desplazamiento);
+                otroSelect.value = acordeNuevo;
+            });
+        }
     });
 });
