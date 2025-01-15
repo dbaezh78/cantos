@@ -7,13 +7,18 @@ body {
     align-items: center;
     min-height: 100vh;
     background-color: #f9f9f9;
-	margin-left: 5px
+	margin-left: 5px;
+    line-height: 1; /* Reduce el espacio entre líneas */
+}
+hr {
+    line-height: 20; /* Reduce el espacio entre líneas */
+	
 }
 
 .song-container {
     width: 800px;
     border: 1px solid #ddd;
-    padding: 20px;
+    padding: 40px;
     border-radius: 8px;
     background: #fff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -26,13 +31,28 @@ body {
     padding-left: 0.5in;
 }
 
-.alcentro {
-    text-align: center;
+@font-face {
+    font-family: 'Franklin Gothic Demi Cond';
+    src: url('fonts/FranklinGothicDemiCond.ttf') format('truetype');
 }
 
+.ttcanto {
+    text-align: center;
+    font-weight: bold;
+	font-size: 40px;
+	line-height: 1; /* Reduce el espacio entre líneas */
+    font-family: '72 Black', Arial, sans-serif;
+}
+			
 .tcanto {
     color: red;
     text-align: center;
+	line-height: .1;
+}
+
+.alcentro {
+    text-align: center;
+	line-height: .1;
 }
 
 .chords {
@@ -122,4 +142,3 @@ select option {
 .t_s::before {
     content: "S";
 }
-
