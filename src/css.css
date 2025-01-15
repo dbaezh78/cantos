@@ -126,7 +126,7 @@ select option {
 /*Clase para Transportar*/
 .Trnsp {
 	margin-left: 330px;
-	color: blue; /* Color azul */
+	color: red; /* Color azul */
 	text-shadow: 1px 1px 2px #000, /* Sombra exterior para el efecto */
                    -1px -1px 1px #fff; /* Sombra interior clara */
 	font-size: 12; /* Tamaño de fuente */

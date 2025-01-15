@@ -9,9 +9,7 @@ function generarOpciones(defaultValue) {
 // Configurar cada selector de acordes
 document.querySelectorAll('.chord').forEach(select => {
     const defaultValue = select.dataset.default || "";
-	select.innerHTML = generarOpciones(defaultValue); // No se agrega la opción vacía
-
-//    select.innerHTML = `<option value=""></option>` + generarOpciones(defaultValue);
+    select.innerHTML = generarOpciones(defaultValue);
 });
 
 // Función para obtener el índice de un acorde
@@ -31,14 +29,15 @@ function calcularAcordeDesplazado(acorde, desplazamiento) {
 document.querySelectorAll('.chord').forEach(select => {
     select.addEventListener('change', event => {
         const acordeSeleccionado = event.target.value;
-        const acordeInicial = obtenerIndiceAcorde(acordeSeleccionado);
-        if (acordeInicial !== -1) {
-            const desplazamiento = acordeInicial - obtenerIndiceAcorde(event.target.dataset.default || "");
-            document.querySelectorAll('.chord').forEach(otroSelect => {
-                const acordeActual = otroSelect.value || otroSelect.dataset.default || "";
-                otroSelect.value = calcularAcordeDesplazado(acordeActual, desplazamiento);
-            });
-        }
+        const acordeInicial = obtenerIndiceAcorde(event.target.dataset.default || "");
+        
+        // Calcular el desplazamiento relativo
+        const desplazamiento = obtenerIndiceAcorde(acordeSeleccionado) - acordeInicial;
+
+        // Actualizar todos los selectores basándose en sus valores iniciales
+        document.querySelectorAll('.chord').forEach(otroSelect => {
+            const valorInicial = otroSelect.dataset.default || "";
+            otroSelect.value = calcularAcordeDesplazado(valorInicial, desplazamiento);
+        });
     });
 });
-
