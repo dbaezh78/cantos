@@ -1,0 +1,188 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f9f9f9;
+	margin-left: 5px;
+    line-height: 1; /* Reduce el espacio entre líneas */
+}
+
+hr {
+	margin-bottom: 25px;
+}
+
+.PreCat {
+    top: 0; /* Al principio (parte superior) */
+    right: 0; /* A la derecha */
+    text-align: right; /* Alineación del texto hacia la derecha */
+    font-size: 12px;
+    font-weight: bold;
+    font-style: italic;
+    font-family: sans-serif;
+	color: gray;
+}
+
+.song-container {
+    width: 850px;
+    border: 1px solid #ddd;
+    padding: 40px;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.line {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;		/*Aqui tenemos el margen entre lineas db */
+    padding-left: 0.5in;
+}
+
+@font-face {
+    font-family: 'Franklin Gothic Demi Cond';
+    src: url('fonts/FranklinGothicDemiCond.ttf') format('truetype');
+}
+
+.ttcanto {
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 1; /* Reduce el espacio entre líneas */
+    font-family: '72 Black', Arial, sans-serif;
+}
+			
+.tcanto {
+    color: red;
+    font-size: 25px;
+    text-align: center;
+    font-weight: bold;
+	text-shadow: -1px 0px 0px rgba(255, 0, 0, 0.7); /* Sombra roja */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Sombra negra con desenfoque */
+}
+
+.alcentro {
+    text-align: center;
+	line-height: .1;
+}
+
+.chords {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+    font-size: 14px;
+	line-height: 1.5; /* Ajusta este valor para reducir o aumentar el espacio */
+}
+
+.lyrics {
+    font-size: 17px;
+    color: #333;
+    font-weight: bold;
+	line-height: 0.8; /* Ajusta este valor para reducir o aumentar el espacio */
+}
+
+.alyrics {
+    color: #333;
+
+    font-weight: bold;
+    font-size: 18px;
+	font-family: sans-serif;
+	line-height: 0.8; /* Ajusta este valor para reducir o aumentar el espacio */
+	    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5); /* Sombra negra con desenfoque */
+
+}
+
+.cursiva {
+    font-style: italic;
+    text-align: left;
+    margin-left: -38px;
+    color: #d9534f; /* Mejora del rojo */
+}
+
+/*
+.cursiva {
+    font-style: italic;
+    justify-content: left; // Este no es válido para texto; puedes usar text-align
+    margin-left: -40px;
+    color: red;
+}
+
+*/
+/* Estilos para el select */
+select {
+    border: none;
+    background: transparent;
+    font-size: 14px;
+    color: red;
+    font-weight: bold;
+    width: auto;
+    min-width: 50px;
+}
+
+select.no-arrow {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+select:focus {
+    outline: none;
+}
+
+select option {
+    background-color: white;
+    color: black;
+    padding: 5px;
+}
+
+/* Indicadores personalizados */
+.t_0, .t_a, .t_s {
+    position: relative;
+    padding-left: 1.5em;
+}
+
+.t_0::before, .t_a::before, .t_s::before {
+    position: absolute;
+    left: 20px;
+    top: 1px;
+    font-size: 18px;
+    color: gray;
+    font-family: Arial, sans-serif;
+    line-height: 1;
+    font-weight: bold;
+}
+
+.t_0::before {
+    content: "0";
+}
+
+.t_a::before {
+    content: "A";
+}
+
+.t_s::before {
+    content: "S";
+}
+
+hr style="margin-bottom: 25px;">
+
+
+.sCejillas{
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+    font-size: 14px;
+}
+
+.dbm {
+    margin-bottom: 10px;		/*Aqui tenemos el margen entre lineas db para cuando necesites agregar espacio debajo*/
+}
+
+
+.pantalla {
+    width: 50%;
+    height: 50vh;
+}
