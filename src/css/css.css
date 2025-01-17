@@ -26,14 +26,13 @@ hr {
 }
 
 .PreCat {
-    top: 0; /* Al principio (parte superior) */
-    right: 0; /* A la derecha */
-    text-align: right; /* Alineación del texto hacia la derecha */
+	margin-left: 80%;
+    text-align: right; /* Alineación del texto */
     font-size: 12px;
     font-weight: bold;
     font-style: italic;
     font-family: sans-serif;
-	color: gray;
+    color: gray;
 }
 
 .song-container {
