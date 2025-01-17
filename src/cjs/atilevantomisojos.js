@@ -1,5 +1,5 @@
 	// Titulo
-	let titulo = "A TI LEVANTO MIS OJOS";
+	let titulo = "_______________________A TI LEVANTO MIS OJOS_______________________";
 	let salmo = "Salmo 123 (122)";
 
     // Definir variables con la parte de la Asamble
