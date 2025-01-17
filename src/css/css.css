@@ -1,5 +1,5 @@
 body {
-    width: 100%;
+    width: auto;
 	font-family: sans-serif;
     margin: 0;
     padding: 0;
@@ -8,8 +8,8 @@ body {
     align-items: center;
     min-height: 100vh;
     background-color: #f9f9f9;
-	margin-left: 1%;
-	margin-right: 1%;
+	margin-left: 5%;
+	margin-right: 5%;
     line-height: 1; /* Reduce el espacio entre líneas */
 }
 
@@ -36,7 +36,8 @@ hr {
 }
 
 .song-container {
-    width: 100%;		/* 850px */
+    width: auto;		/* 850px */
+	
     border: 1px solid #ddd;
     padding: 40px;
     border-radius: 8px;
@@ -196,7 +197,7 @@ hr style="margin-bottom: 25px;">
 }
 
 .pantalla {
-    width: 100%;
+    width: 50%;
     height: 50vh;
 }
 
