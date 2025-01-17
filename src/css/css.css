@@ -9,6 +9,7 @@ body {
     min-height: 100vh;
     background-color: #f9f9f9;
 	margin-left: 1%;
+	margin-right: 1%;
     line-height: 1; /* Reduce el espacio entre líneas */
 }
 
@@ -41,6 +42,7 @@ hr {
     padding: 40px;
     border-radius: 8px;
     background: #fff;
+    padding-left: 0.5in;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -48,7 +50,7 @@ hr {
     display: flex;
     flex-direction: column;
     margin-bottom: 5px;		/*Aqui tenemos el margen entre lineas db */
-    padding-left: 0.5in;
+    padding-left: 0.5in;	/* Padding que establece el margen del canto*/
 }
 
 @font-face {
