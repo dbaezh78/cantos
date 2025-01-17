@@ -1,5 +1,5 @@
 body {
-    width: auto;
+    width: 120%;	/*auto;	*/
 	font-family: sans-serif;
     margin: 0;
     padding: 0;
@@ -11,6 +11,15 @@ body {
 	margin-left: 5%;
 	margin-right: 5%;
     line-height: 1; /* Reduce el espacio entre líneas */
+}
+.song-container {
+    width: auto;	/*auto;		/* 850px */
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    background: #fff;
+
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 a {
@@ -33,16 +42,6 @@ hr {
     font-style: italic;
     font-family: sans-serif;
     color: gray;
-}
-
-.song-container {
-    width: auto;		/* 850px */
-    border: 1px solid #ddd;
-    padding: 20px;
-    border-radius: 8px;
-    background: #fff;
-/*    padding-left: 0.5in;	*/
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .line {
