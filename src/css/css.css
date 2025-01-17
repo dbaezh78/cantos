@@ -10,7 +10,7 @@ body {
     min-height: 100vh;				/*	*/
     background-color: #f9f9f9;		/*	*/
 /*	margin-left: 5%;		*/
-	margin-right: 5%;
+/*	margin-right: 5%;		*/
     line-height: 1; /* Reduce el espacio entre líneas */
 }
 
@@ -40,7 +40,7 @@ hr {
 }
 
 .PreCat {
-	margin-left: 80%;
+	margin-left: 75%;
     text-align: right; /* Alineación del texto */
     font-size: 12px;
     font-weight: bold;
