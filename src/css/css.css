@@ -35,7 +35,7 @@ hr {
 }
 
 .song-container {
-    width: 90%;		/* 850px */
+    width: auto;		/* 850px */
     border: 1px solid #ddd;
     padding: 40px;
     border-radius: 8px;
