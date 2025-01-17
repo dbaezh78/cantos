@@ -87,7 +87,7 @@ hr {
 }
 
 .lyrics {
-    font-size: 100%;
+    font-size: 106%;
     color: #333;
     font-weight: bold;
 	line-height: 0.8; /* Ajusta este valor para reducir o aumentar el espacio */
@@ -98,7 +98,7 @@ hr {
     color: #333;
 
     font-weight: bold;
-    font-size: 110%;
+    font-size: 113%;
 	font-family: sans-serif;
 	line-height: 0.8; /* Ajusta este valor para reducir o aumentar el espacio */
 	    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5); /* Sombra negra con desenfoque */
