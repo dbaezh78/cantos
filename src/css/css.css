@@ -92,21 +92,20 @@ hr {
 }
 
 .lyrics {
+	font-family: "Franklin Gothic Medium";
     font-size: 106%;
-    color: #333;
-    font-weight: bold;
+    color: black;
+/*    font-weight: bold;	*/
 	line-height: 0.8; /* Ajusta este valor para reducir o aumentar el espacio */
-
 }
 
 .alyrics {
-    color: #333;
-
+    color: Black;
     font-weight: bold;
     font-size: 113%;
 	font-family: sans-serif;
 	line-height: 0.8; /* Ajusta este valor para reducir o aumentar el espacio */
-	    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5); /* Sombra negra con desenfoque */
+	text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.5); /* Sombra negra con desenfoque */
 
 }
 
@@ -209,4 +208,13 @@ hr style="margin-bottom: 25px;">
     height: auto; /* Mantiene la proporción de la imagen */
     display: block; /* Asegura que la imagen se comporte como un bloque */
     margin-left: auto; /* Empuja la imagen hacia la derecha */
+}
+
+.saudio{
+	width: 90%;
+	justify-content: center;		/*	*/
+	align-items: center;			/*	*/
+	margin-left: 5%;
+	margin-right: 5%;
+
 }
