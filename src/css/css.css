@@ -37,12 +37,11 @@ hr {
 
 .song-container {
     width: auto;		/* 850px */
-	
     border: 1px solid #ddd;
-    padding: 40px;
+    padding: 20px;
     border-radius: 8px;
     background: #fff;
-    padding-left: 0.5in;
+/*    padding-left: 0.5in;	*/
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
