@@ -11,6 +11,14 @@ body {
     line-height: 1; /* Reduce el espacio entre líneas */
 }
 
+a {
+      text-decoration: none; /* Quitar subrayado */
+	  color: Black;
+    }
+	
+a:hover {
+      text-decoration: none; /* Opcional: Subrayado al pasar el cursor */
+}
 hr {
 	margin-bottom: 25px;
 }
