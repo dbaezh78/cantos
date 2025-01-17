@@ -177,7 +177,6 @@ select option {
 
 hr style="margin-bottom: 25px;">
 
-
 .sCejillas{
     display: flex;
     gap: 10px;
@@ -186,9 +185,12 @@ hr style="margin-bottom: 25px;">
 }
 
 .dbm {
-    margin-bottom: 10px;		/*Aqui tenemos el margen entre lineas db para cuando necesites agregar espacio debajo*/
+    margin-bottom: 15px;		/*Aqui tenemos el margen entre lineas db para cuando necesites agregar espacio debajo*/
 }
 
+.dbx {
+    margin-top: 15px;		/*Aqui tenemos el margen entre lineas db para cuando necesites agregar espacio debajo*/
+}
 
 .pantalla {
     width: 50%;

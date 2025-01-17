@@ -42,7 +42,6 @@ document.querySelectorAll('.chord').forEach(select => {
     });
 });
 
-
 // scroll que hace que baje lentamente
 
 let scrolling = false; // Variable para controlar si el desplazamiento está activo
