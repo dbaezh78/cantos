@@ -207,7 +207,7 @@ hr style="margin-bottom: 25px;">
     max-width: 30%; /* Ajusta el tamaño de la imagen */
     height: auto; /* Mantiene la proporción de la imagen */
     display: block; /* Asegura que la imagen se comporte como un bloque */
-    margin-left: auto; /* Empuja la imagen hacia la derecha */
+    margin-left: 60%; /* Empuja la imagen hacia la derecha */
 }
 
 .saudio{
