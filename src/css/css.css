@@ -35,7 +35,7 @@ hr {
 }
 
 .song-container {
-    width: 850px;
+    width: 90%;		/* 850px */
     border: 1px solid #ddd;
     padding: 40px;
     border-radius: 8px;
@@ -90,6 +90,7 @@ hr {
     color: #333;
     font-weight: bold;
 	line-height: 0.8; /* Ajusta este valor para reducir o aumentar el espacio */
+
 }
 
 .alyrics {
