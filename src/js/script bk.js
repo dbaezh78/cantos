@@ -41,6 +41,7 @@ document.querySelectorAll('.chord').forEach(select => {
         });
     });
 });
+
 // scroll que hace que baje lentamente
 
 let scrolling = false; // Variable para controlar si el desplazamiento está activo
@@ -53,9 +54,9 @@ document.getElementById('startScroll').addEventListener('click', function (e) {
 
     scrolling = true;
 
-    // Lee los valores de velocidad e incremento desde los atributos del HTML
-    const velocidad = parseInt(this.getAttribute('data-velocidad'), 10) || 50; // Valor predeterminado: 50 ms
-    const incremento = parseFloat(this.getAttribute('data-incremento')) || 0.7; // Valor predeterminado: 0.7 px
+    // Velocidad del desplazamiento (en milisegundos)
+    const velocidad = 50; // Menor es más rápido
+    const incremento = 0.7; // Cantidad de píxeles que se mueve cada vez
 
     // Función para desplazar hacia abajo lentamente
     function bajarSuavemente() {
@@ -70,7 +71,6 @@ document.getElementById('startScroll').addEventListener('click', function (e) {
     // Comenzar el desplazamiento
     scrollInterval = setInterval(bajarSuavemente, velocidad);
 });
-
 
 // Detener el desplazamiento con doble clic en cualquier parte de la pantalla
 document.addEventListener('dblclick', function () {

@@ -4,14 +4,26 @@
 	let salmo = "2ª Corintios 6,3ss";
 
     // Definir variables con la parte de la Asamble
-    let Asamblea1 = "HERMANOS, A NADIE DEMOS";
-    let Asamblea2 = "OCASIÓN DE TROPIEZO,";
-    let Asamblea3 = "HERMANOS, VIVAMOS ACEPTANDO";
-    let Asamblea4 = "LAS TRIBULACIONES,";
-    let Asamblea5 = "NECESIDADES, ANGUSTIAS Y FATIGAS";
-    let Asamblea6 = "HERMANOS, A NADIE DEMOS … ";
-	let Asamblea7 = "HERMANOS, A NADIE DEMOS …";
-	let Asamblea8 = "HERMANOS, A NADIE DEMOS …";
+	let Asamblea1 = "HERMANOS, A NADIE DEMOS";
+	let Asamblea2 = "OCASIÓN DE TROPIEZO,";
+	let Asamblea3 = "HERMANOS, VIVAMOS ACEPTANDO";
+	let Asamblea4 = "LAS TRIBULACIONES,";
+	let Asamblea5 = "NECESIDADES, ANGUSTIAS Y FATIGAS";
+	let Asamblea6 = "HERMANOS, A NADIE DEMOS";
+	let Asamblea7 = "OCASIÓN DE TROPIEZO,";
+	let Asamblea8 = "HERMANOS, VIVAMOS ACEPTANDO";
+	let Asamblea9 = "LAS TRIBULACIONES,";
+	let Asamblea10 = "NECESIDADES, ANGUSTIAS Y FATIGAS";
+	let Asamblea11 = "HERMANOS, A NADIE DEMOS";
+	let Asamblea12 = "OCASIÓN DE TROPIEZO,";
+	let Asamblea13 = "HERMANOS, VIVAMOS ACEPTANDO";
+	let Asamblea14 = "LAS TRIBULACIONES,";
+	let Asamblea15 = "NECESIDADES, ANGUSTIAS Y FATIGAS";
+	let Asamblea16 = "HERMANOS, A NADIE DEMOS";
+	let Asamblea17 = "OCASIÓN DE TROPIEZO,";
+	let Asamblea18 = "HERMANOS, VIVAMOS ACEPTANDO";
+	let Asamblea19 = "LAS TRIBULACIONES,";
+	let Asamblea20 = "NECESIDADES, ANGUSTIAS Y FATIGAS";
 
 	// Definir variables con la parte del Solista
 	let Cantor1 = "Hermanos, a nadie demos ocasión de tropiezo,";
@@ -47,14 +59,26 @@
     document.getElementById("s1").textContent = salmo;
 
     document.getElementById("a1").textContent = Asamblea1;
-    document.getElementById("a2").textContent = Asamblea2;
-    document.getElementById("a3").textContent = Asamblea3;
-    document.getElementById("a4").textContent = Asamblea4;
-    document.getElementById("a5").textContent = Asamblea5;
-    document.getElementById("a6").textContent = Asamblea6;
-    document.getElementById("a7").textContent = Asamblea7;
-    document.getElementById("a8").textContent = Asamblea8;
-	
+	document.getElementById("a2").textContent = Asamblea2;
+	document.getElementById("a3").textContent = Asamblea3;
+	document.getElementById("a4").textContent = Asamblea4;
+	document.getElementById("a5").textContent = Asamblea5;
+	document.getElementById("a6").textContent = Asamblea6;
+	document.getElementById("a7").textContent = Asamblea7;
+	document.getElementById("a8").textContent = Asamblea8;
+	document.getElementById("a9").textContent = Asamblea9;
+	document.getElementById("a10").textContent = Asamblea10;
+	document.getElementById("a11").textContent = Asamblea11;
+	document.getElementById("a12").textContent = Asamblea12;
+	document.getElementById("a13").textContent = Asamblea13;
+	document.getElementById("a14").textContent = Asamblea14;
+	document.getElementById("a15").textContent = Asamblea15;
+	document.getElementById("a16").textContent = Asamblea16;
+	document.getElementById("a17").textContent = Asamblea17;
+	document.getElementById("a18").textContent = Asamblea18;
+	document.getElementById("a19").textContent = Asamblea19;
+	document.getElementById("a20").textContent = Asamblea20;
+
 	document.getElementById("c1").textContent = Cantor1;
 	document.getElementById("c2").textContent = Cantor2;
 	document.getElementById("c3").textContent = Cantor3;
