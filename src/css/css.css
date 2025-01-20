@@ -72,6 +72,16 @@ hr {
 	margin-bottom: 4px;
 }
 
+.ima {
+    max-width: 30%; /* Ajusta el tamaño de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: block; /* Asegura que la imagen se comporte como un bloque */
+    margin-left: 60%; /* Empuja la imagen hacia la derecha */
+	font-weight: normal; 
+	margin-top: -30px;
+/*    margin-bottom: 0px;		/*Aqui tenemos el margen entre lineas db para cuando necesites agregar espacio debajo*/
+}
+
 .PreCat {
 	margin-left: 75%;
     text-align: right; /* Alineación del texto */
@@ -236,14 +246,6 @@ hr style="margin-bottom: 25px;">
 .pantalla {
     width: 50%;
     height: 50vh;
-}
-
-.ima {
-    max-width: 30%; /* Ajusta el tamaño de la imagen */
-    height: auto; /* Mantiene la proporción de la imagen */http://localhost/cantos/src/chtml/atisenorenmiclamorimploro.html
-    display: block; /* Asegura que la imagen se comporte como un bloque */
-    margin-left: 60%; /* Empuja la imagen hacia la derecha */
-    margin-bottom: -35px;		/*Aqui tenemos el margen entre lineas db para cuando necesites agregar espacio debajo*/
 }
 
 .imax{
