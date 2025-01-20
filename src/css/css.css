@@ -52,6 +52,7 @@ a:hover {
       text-decoration: none; /* Opcional: Subrayado al pasar el cursor */
 }
 hr {
+	margin-top: 1px;
 	margin-bottom: 25px;
 }
 
@@ -97,6 +98,8 @@ hr {
 .alcentro {
     text-align: center;
 	line-height: .1;
+	margin-top: -10px;
+	padding-bottom: 15px;
 }
 
 .chords {
@@ -129,7 +132,7 @@ hr {
     font-style: italic;
     text-align: left;
     margin-left: -38px;
-    color: #d9534f; /* Mejora del rojo */
+    color: Red; /* Mejora del rojo */
 }
 
 /*
@@ -221,9 +224,10 @@ hr style="margin-bottom: 25px;">
 
 .ima {
     max-width: 30%; /* Ajusta el tamaño de la imagen */
-    height: auto; /* Mantiene la proporción de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */http://localhost/cantos/src/chtml/atisenorenmiclamorimploro.html
     display: block; /* Asegura que la imagen se comporte como un bloque */
     margin-left: 60%; /* Empuja la imagen hacia la derecha */
+    margin-bottom: -35px;		/*Aqui tenemos el margen entre lineas db para cuando necesites agregar espacio debajo*/
 }
 
 .imax{
@@ -238,5 +242,13 @@ hr style="margin-bottom: 25px;">
 	align-items: center;			/*	*/
 	margin-left: 5%;
 	margin-right: 5%;
+}
 
+.cnumber {
+	color: #c0b9b9;
+	font-family: Georgia;
+    text-align: right;			/*	*/
+	margin-top: -27px;
+	margin-bottom: 4px;
+	font-weight: normal; /* Add this line */
 }

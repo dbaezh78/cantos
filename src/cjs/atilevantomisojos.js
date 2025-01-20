@@ -5,7 +5,8 @@
     // Definir variables con la parte de la Asamble
     let Asamblea1 = "A TI LEVANTO MIS OJOS,";
     let Asamblea2 = "A TI QUE HABITAS EN EL CIELO";
-    let Asamblea3 = "A TI LEVANTO MIS OJOS … ";
+    let Asamblea3 = "A TI LEVANTO MIS OJOS,";
+    let Asamblea4 = "A TI QUE HABITAS EN EL CIELO";
 
 	// Definir variables con la parte del Solista
 	let Cantor1 = "Como los ojos de los siervos están fijos en las manos de sus señores.";
@@ -28,6 +29,7 @@
     document.getElementById("a1").textContent = Asamblea1;
     document.getElementById("a2").textContent = Asamblea2;
     document.getElementById("a3").textContent = Asamblea3;
+    document.getElementById("a4").textContent = Asamblea4;
 	
 	document.getElementById("c1").textContent = Cantor1;
 	document.getElementById("c2").textContent = Cantor2;

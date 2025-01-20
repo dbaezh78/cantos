@@ -7,13 +7,19 @@
 	let Asamblea1 = "A TI, SEÑOR, EN MI CLAMOR IMPLORO.";
 	let Asamblea2 = "A TI, SEÑOR, EN MI CLAMOR SUPLICO.";
 	let Asamblea3 = "A TI DERRAMO MI LAMENTO,";
-	let Asamblea4 = "A TI MI ANGUSTIA EXPONGO. ";
+	let Asamblea4 = "A TI MI ANGUSTIA EXPONGO.";
 	let Asamblea5 = "A TI, YO CLAMO SEÑOR;";
 	let Asamblea6 = "A TI, YO DIGO: ¡TÚ SOLO ERES MI REFUGIO,";
 	let Asamblea7 = "TÚ ERES MI PORCIÓN EN ESTA TIERRA,";
-	let Asamblea8 = "MI ÚNICA FELICIDAD! ";
-	let Asamblea9 = "A TI, SEÑOR, EN MI CLAMOR …";
-	let Asamblea10 = "A TI, YO CLAMO SEÑOR …";
+	let Asamblea8 = "MI ÚNICA FELICIDAD!";
+	let Asamblea9 = "A TI, SEÑOR, EN MI CLAMOR IMPLORO.";
+	let Asamblea10 = "A TI, SEÑOR, EN MI CLAMOR SUPLICO.";
+	let Asamblea11 = "A TI DERRAMO MI LAMENTO,";
+	let Asamblea12 = "A TI MI ANGUSTIA EXPONGO.";
+	let Asamblea13 = "A TI, YO CLAMO SEÑOR;";
+	let Asamblea14 = "A TI, YO DIGO: ¡TÚ SOLO ERES MI REFUGIO,";
+	let Asamblea15 = "TÚ ERES MI PORCIÓN EN ESTA TIERRA,";
+	let Asamblea16 = "MI ÚNICA FELICIDAD!";
 
 	// Definir variables con la parte del Solista
 	let Cantor1 = "Siento que el espíritu en mí se apaga;";
@@ -48,6 +54,13 @@
 	document.getElementById("a8").textContent = Asamblea8;
 	document.getElementById("a9").textContent = Asamblea9;
 	document.getElementById("a10").textContent = Asamblea10;
+	document.getElementById("a11").textContent = Asamblea11;
+	document.getElementById("a12").textContent = Asamblea12;
+	document.getElementById("a13").textContent = Asamblea13;
+	document.getElementById("a14").textContent = Asamblea14;
+	document.getElementById("a15").textContent = Asamblea15;
+	document.getElementById("a16").textContent = Asamblea16;
+
 	
 	document.getElementById("c1").textContent = Cantor1;
 	document.getElementById("c2").textContent = Cantor2;

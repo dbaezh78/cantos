@@ -6,8 +6,10 @@
 	
 	let Asamblea1 = "A TI, SEÑOR, LEVANTO MI ALMA,";
 	let Asamblea2 = "A TI, OH DIOS MÍO.";
-	let Asamblea3 = "A TI, SEÑOR, LEVANTO MI ALMA ...";
-	let Asamblea4 = "A TI, SEÑOR, LEVANTO MI ALMA ...";
+	let Asamblea3 = "A TI, SEÑOR, LEVANTO MI ALMA,";
+	let Asamblea4 = "A TI, OH DIOS MÍO.";
+	let Asamblea5 = "A TI, SEÑOR, LEVANTO MI ALMA,";
+	let Asamblea6 = "A TI, OH DIOS MÍO.";
 
 	// Definir variables con la parte del Solista
 	let Cantor1 = "En ti confío, Señor,";
@@ -30,6 +32,8 @@
 	document.getElementById("a2").textContent = Asamblea2;
 	document.getElementById("a3").textContent = Asamblea3;
 	document.getElementById("a4").textContent = Asamblea4;
+	document.getElementById("a5").textContent = Asamblea5;
+	document.getElementById("a6").textContent = Asamblea6;
 	
     // Asignando variable para Cantor o Solista//
 	document.getElementById("c1").textContent = Cantor1;
