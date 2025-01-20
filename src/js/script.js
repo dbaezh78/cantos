@@ -79,3 +79,13 @@ document.addEventListener('dblclick', function () {
         scrolling = false;
     }
 });
+
+// Seleccionar la línea principal y el contenido
+const lineaPrincipal = document.querySelector('.linea-principal');
+const contenido = document.querySelector('.contenido');
+
+// Añadir un evento click a la línea principal
+lineaPrincipal.addEventListener('click', () => {
+    // Alternar la clase 'oculto'
+    contenido.classList.toggle('oculto');
+});

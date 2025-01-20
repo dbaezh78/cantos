@@ -261,3 +261,30 @@ hr style="margin-bottom: 25px;">
 	margin-left: 5%;
 	margin-right: 5%;
 }
+
+
+
+/* Ocultando contenido para parte de la asamblea
+/* Estilo para el contenedor principal */
+#contenedor {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+/* Estilo para la línea principal */
+.linea-principal {
+    cursor: pointer;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 10px;
+}
+
+/* Estilo para el contenido */
+.contenido { 
+    display: block; 
+}
+
+/* Clase para ocultar contenido */
+.contenido.oculto {
+    display: none;
+}
