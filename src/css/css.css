@@ -263,28 +263,66 @@ hr style="margin-bottom: 25px;">
 }
 
 
+.contenido {
+    display: block;
+}
+.contenido.oculto {
+    display: none;
+}
 
 /* Ocultando contenido para parte de la asamblea
 /* Estilo para el contenedor principal */
-#contenedor {
-    font-family: Arial, sans-serif;
-    margin: 20px;
+.contenido {
+    display: block;
 }
 
-/* Estilo para la línea principal */
+.contenido.oculto {
+    display: none;
+}
+
 .linea-principal {
     cursor: pointer;
     font-weight: bold;
+    font-size: 1.2em;
     color: black;
     margin-bottom: 10px;
 }
 
-/* Estilo para el contenido */
-.contenido { 
-    display: block; 
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
 }
 
-/* Clase para ocultar contenido */
-.contenido.oculto {
-    display: none;
+
+
+/****************************** */
+   .linexx {
+      margin: 10px 0;
+      cursor: pointer;
+    }
+    .hiddenxx {
+      display: none;
+    }
+
+
+
+
+
+
+/****************************** */
+.hline {
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.coro-group {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc; /* Opcional: Borde para separar grupos */
+  border-radius: 5px;
 }

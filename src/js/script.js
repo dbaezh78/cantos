@@ -72,6 +72,8 @@ document.getElementById('startScroll').addEventListener('click', function (e) {
 });
 
 
+
+/*
 // Detener el desplazamiento con doble clic en cualquier parte de la pantalla
 document.addEventListener('dblclick', function () {
     if (scrolling) {
@@ -88,4 +90,35 @@ const contenido = document.querySelector('.contenido');
 lineaPrincipal.addEventListener('click', () => {
     // Alternar la clase 'oculto'
     contenido.classList.toggle('oculto');
+});
+
+*/
+
+
+
+/*
+
+    // Seleccionar la primera línea y el grupo de líneas (coro)
+    const firstLine = document.getElementById('first-line');
+    const chorus = document.getElementById('chorus');
+
+    // Agregar un evento al hacer clic en la primera línea
+    firstLine.addEventListener('click', () => {
+      chorus.classList.toggle('hidden'); // Alternar la clase 'hidden' para mostrar/ocultar
+    });
+*/
+
+
+// Seleccionar todas las primeras líneas
+// bcoro = chorus
+const firstLines = document.querySelectorAll('.bcoro');
+
+// Iterar sobre cada línea para agregar eventos
+firstLines.forEach(firstLine => {
+  firstLine.addEventListener('click', () => {
+    const hcoro = firstLine.nextElementSibling; // Obtener el siguiente hermano (chorus)
+    if (hcoro) {
+      hcoro.classList.toggle('hidden'); // Alternar la visibilidad
+    }
+  });
 });
