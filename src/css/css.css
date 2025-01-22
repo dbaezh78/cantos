@@ -359,3 +359,9 @@ hr style="margin-bottom: 25px;">
 
 /* --------------------------------------------------*/
 
+
+
+/* Contenido db en el que deshabilita el DIV*/
+.cdb {
+    display: none;
+}
