@@ -1,5 +1,7 @@
 body {
-    width: auto;					/*	*/
+    width: 100%;					/*	*/
+    max-width: 100%; /* Limita el ancho máximo en pantallas grandes */
+/*    width: auto;					/*	*/
 /*	width: 100%;					/*	*/
 	font-family: sans-serif;		/*	*/
 /*	margin: 0;						/*	*/
@@ -16,7 +18,8 @@ body {
 
 .song-container {
     width: auto; /* Ajusta al 90% del ancho del dispositivo */
-    max-width: 850px; /* Limita el ancho máximo en pantallas grandes */
+    max-width: auto; /* Limita el ancho máximo en pantallas grandes */
+/*    max-width: 850px; /* Limita el ancho máximo en pantallas grandes */
     border: 1px solid #ddd;
 	padding: 10px;	
     border-radius: 8px;
@@ -52,6 +55,8 @@ a:hover {
       text-decoration: none; /* Opcional: Subrayado al pasar el cursor */
 }
 hr {
+	    width: 800px;					/*	*/
+
 	margin-top: 1px;
 	margin-bottom: 15px;
 	
@@ -139,7 +144,7 @@ hr {
 
 .lyrics {
 	font-family: "Franklin Gothic Medium";
-    font-size: 100%;
+    font-size: 110%;
     color: black;
 /*    font-weight: bold;	*/
 	line-height: 0.8; /* Ajusta este valor para reducir o aumentar el espacio */
