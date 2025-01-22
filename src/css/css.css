@@ -96,7 +96,8 @@ hr {
     display: flex;
     flex-direction: column;
     margin-bottom: 5px;		/*Aqui tenemos el margen entre lineas db */
-    padding-left: 0.5in;	/* Padding que establece el margen del canto*/
+/*  padding-left: 0.5in;	/* Padding que establece el margen del canto*/
+    padding-left: 0.3in;	/* Padding que establece el margen del canto*/
 }
 
 @font-face {
@@ -205,7 +206,7 @@ select option {
 
 .t_0::before, .t_a::before, .t_s::before {
     position: absolute;
-    left: 20px;
+    left: 5px;
     top: 1px;
     font-size: 18px;
     color: gray;
@@ -255,10 +256,10 @@ hr style="margin-bottom: 25px;">
 }
 
 .saudio{
-	width: 90%;
+	width: 100%;
 	justify-content: center;		/*	*/
 /*	align-items: center;			/*	*/
-/*	margin-left: 10%;*/
+	margin-left: 2%;*/
 /*	margin-right: 5%;
 	display:absolute;		/*	*/
 }
@@ -311,7 +312,10 @@ hr style="margin-bottom: 25px;">
 .hlplay {	/* Este es para aparecer el audio y hay que centrarlo*/
 	margin: 0;
 	cursor: pointer;
-	
+	font-size: 150%;
+    text-align: center;
+	justify-content: center;		/*	*/
+
 	
 
 }
