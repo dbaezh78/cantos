@@ -73,7 +73,6 @@ document.getElementById('startScroll').addEventListener('click', function (e) {
 
 
 
-/*
 // Detener el desplazamiento con doble clic en cualquier parte de la pantalla
 document.addEventListener('dblclick', function () {
     if (scrolling) {
@@ -82,6 +81,26 @@ document.addEventListener('dblclick', function () {
     }
 });
 
+
+// Seleccionar todas las primeras líneas
+// bcoro = chorus
+const firstLines = document.querySelectorAll('.bcoro');
+
+// Iterar sobre cada línea para agregar eventos
+firstLines.forEach(firstLine => {
+  firstLine.addEventListener('click', () => {
+    const hcoro = firstLine.nextElementSibling; // Obtener el siguiente hermano (chorus)
+    if (hcoro) {
+      hcoro.classList.toggle('hidden'); // Alternar la visibilidad
+    }
+  });
+});
+
+
+
+/* Contenido de respaldo y para borrar */
+
+/*
 // Seleccionar la línea principal y el contenido
 const lineaPrincipal = document.querySelector('.linea-principal');
 const contenido = document.querySelector('.contenido');
@@ -107,18 +126,3 @@ lineaPrincipal.addEventListener('click', () => {
       chorus.classList.toggle('hidden'); // Alternar la clase 'hidden' para mostrar/ocultar
     });
 */
-
-
-// Seleccionar todas las primeras líneas
-// bcoro = chorus
-const firstLines = document.querySelectorAll('.bcoro');
-
-// Iterar sobre cada línea para agregar eventos
-firstLines.forEach(firstLine => {
-  firstLine.addEventListener('click', () => {
-    const hcoro = firstLine.nextElementSibling; // Obtener el siguiente hermano (chorus)
-    if (hcoro) {
-      hcoro.classList.toggle('hidden'); // Alternar la visibilidad
-    }
-  });
-});

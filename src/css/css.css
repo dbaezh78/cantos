@@ -257,9 +257,10 @@ hr style="margin-bottom: 25px;">
 .saudio{
 	width: 90%;
 	justify-content: center;		/*	*/
-	align-items: center;			/*	*/
-	margin-left: 5%;
-	margin-right: 5%;
+/*	align-items: center;			/*	*/
+/*	margin-left: 10%;*/
+/*	margin-right: 5%;
+	display:absolute;		/*	*/
 }
 
 
@@ -307,13 +308,21 @@ hr style="margin-bottom: 25px;">
 
 
 /****************************** */
+.hlplay {	/* Este es para aparecer el audio y hay que centrarlo*/
+	margin: 0;
+	cursor: pointer;
+	
+	
+
+}
+
 .hline {
   margin: 10px 0;
   cursor: pointer;
 }
 
 .hidden {
-  display: none;
+  display: none;	
 }
 
 .coro-group {
@@ -322,3 +331,22 @@ hr style="margin-bottom: 25px;">
   border: 1px solid #ccc; /* Opcional: Borde para separar grupos */
   border-radius: 5px;
 }
+
+
+/* --------------------------------------------------*/
+ /* Ocultar la división por defecto */
+        #myDiv {
+            display: none;
+            border: 1px solid black;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        /* Mostrar la división cuando es objetivo del enlace */
+        #myDiv:target {
+            display: block;
+        }
+
+
+/* --------------------------------------------------*/
+
