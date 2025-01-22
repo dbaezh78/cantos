@@ -18,7 +18,7 @@ body {
     width: auto; /* Ajusta al 90% del ancho del dispositivo */
     max-width: 850px; /* Limita el ancho máximo en pantallas grandes */
     border: 1px solid #ddd;
-	padding: 20px;	
+	padding: 10px;	
     border-radius: 8px;
     background: #fff;
     text-align: left;
@@ -139,7 +139,7 @@ hr {
 
 .lyrics {
 	font-family: "Franklin Gothic Medium";
-    font-size: 90%;
+    font-size: 100%;
     color: black;
 /*    font-weight: bold;	*/
 	line-height: 0.8; /* Ajusta este valor para reducir o aumentar el espacio */
