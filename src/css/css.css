@@ -123,7 +123,7 @@ hr {
 			
 .tcanto {
     color: red;
-    font-size: 25px;
+    font-size: 100%;
     text-align: center;
     font-weight: bold;
 	text-shadow: -1px 0px 0px rgba(255, 0, 0, 0.7); /* Sombra roja */
@@ -132,6 +132,8 @@ hr {
 
 .alcentro {
     text-align: center;
+    font-weight: bold;
+    font-size: 100%;
 	line-height: .1;
 	margin-top: -10px;
 	padding-bottom: 15px;
