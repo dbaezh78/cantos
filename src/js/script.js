@@ -41,35 +41,7 @@ document.querySelectorAll('.chord').forEach(select => {
         });
     });
 });
-// scroll que hace que baje lentamente
 
-let scrolling = false; // Variable para controlar si el desplazamiento está activo
-let scrollInterval;    // Variable para almacenar el intervalo del desplazamiento
-
-document.getElementById('startScroll').addEventListener('click', function (e) {
-    e.preventDefault();
-
-    if (scrolling) return; // Si ya está desplazándose, no hace nada
-
-    scrolling = true;
-
-    // Lee los valores de velocidad e incremento desde los atributos del HTML
-    const velocidad = parseInt(this.getAttribute('data-velocidad'), 10) || 50; // Valor predeterminado: 50 ms
-    const incremento = parseFloat(this.getAttribute('data-incremento')) || 0.7; // Valor predeterminado: 0.7 px
-
-    // Función para desplazar hacia abajo lentamente
-    function bajarSuavemente() {
-        if (window.scrollY + window.innerHeight < document.body.scrollHeight) {
-            window.scrollBy(0, incremento);
-        } else {
-            clearInterval(scrollInterval); // Detener desplazamiento al llegar al final
-            scrolling = false;
-        }
-    }
-
-    // Comenzar el desplazamiento
-    scrollInterval = setInterval(bajarSuavemente, velocidad);
-});
 
 
 
@@ -149,3 +121,36 @@ function divsOff() {
     });
   }
 */
+
+
+// Trabajando con al velocidad
+// scroll que hace que baje lentamente
+
+let scrolling = false; // Variable para controlar si el desplazamiento está activo
+let scrollInterval;    // Variable para almacenar el intervalo del desplazamiento
+
+document.getElementById('startScroll').addEventListener('click', function (e) {
+    e.preventDefault();
+
+    if (scrolling) return; // Si ya está desplazándose, no hace nada
+
+    scrolling = true;
+
+    // Lee los valores de velocidad e incremento desde los atributos del HTML
+    const velocidad = parseInt(this.getAttribute('data-velocidad'), 10) || 50; // Valor predeterminado: 50 ms
+    const incremento = parseFloat(this.getAttribute('data-incremento')) || 0.7; // Valor predeterminado: 0.7 px
+
+    // Función para desplazar hacia abajo lentamente
+    function bajarSuavemente() {
+        if (window.scrollY + window.innerHeight < document.body.scrollHeight) {
+            window.scrollBy(0, incremento);
+        } else {
+            clearInterval(scrollInterval); // Detener desplazamiento al llegar al final
+            scrolling = false;
+        }
+    }
+
+    // Comenzar el desplazamiento
+    scrollInterval = setInterval(bajarSuavemente, velocidad);
+});
+
