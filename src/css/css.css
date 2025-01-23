@@ -1,7 +1,7 @@
 body {
     width: 100%;					/*	*/
     max-width: 100%; /* Limita el ancho máximo en pantallas grandes */
-/*    width: auto;					/*	*/
+/*	width: auto;					/*	*/
 /*	width: 100%;					/*	*/
 	font-family: sans-serif;		/*	*/
 /*	margin: 0;						/*	*/
@@ -394,7 +394,7 @@ desactivable por doff y a deshabilitado por divoff
     /* Estilo para los divs deshabilitados */
     /*opacity: 0.5;*/
 	float: left;
-	width: 100%;*/
+	width: 100%;
 	text-align: left;
   }
 
