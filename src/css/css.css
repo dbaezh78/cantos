@@ -32,7 +32,8 @@ body {
 
 .atilevantomisojos-song-container{
     width: auto; /* Ajusta al 90% del ancho del dispositivo */
-    max-width: 850px; /* Limita el ancho máximo en pantallas grandes */
+    max-width: auto; /* Limita el ancho máximo en pantallas grandes */
+/*    max-width: 850px; /* Limita el ancho máximo en pantallas grandes */
     border: 1px solid #ddd;
 	padding: 20px;	
     border-radius: 8px;
@@ -55,7 +56,8 @@ a:hover {
       text-decoration: none; /* Opcional: Subrayado al pasar el cursor */
 }
 hr {
-	    width: 800px;					/*	*/
+/*	    width: 800px;					/*	*/
+	    width: auto;					/*	*/
 
 	margin-top: 1px;
 	margin-bottom: 15px;
@@ -150,6 +152,14 @@ hr {
 	line-height: 0.8; /* Ajusta este valor para reducir o aumentar el espacio */
 }
 
+.lyrics100 {
+	font-family: "Franklin Gothic Medium";
+    font-size: 100%;
+    color: black;
+/*    font-weight: bold;	*/
+	line-height: 0.8; /* Ajusta este valor para reducir o aumentar el espacio */
+}
+
 .alyrics {
     color: Black;
     font-weight: bold;
@@ -178,6 +188,7 @@ hr {
 */
 /* Estilos para el select */
 select {
+	justify-content: center;
     border: none;
     background: transparent;
     font-size: 14px;
@@ -361,7 +372,36 @@ hr style="margin-bottom: 25px;">
 
 
 
-/* Contenido db en el que deshabilita el DIV*/
+/* Contenido db en el que deshabilita el DIV
 .cdb {
     display: none;
+}
+*/
+
+/* css
+Cambiamos divoff
+desactivable por doff y a deshabilitado por divoff
+*/
+.doff {
+    /* Estilo normal de los divs */
+		float: left;
+/*	width: 50%;
+/*	width: 100%;*/
+	text-align: left;
+  }
+
+  .doff.divoff {
+    /* Estilo para los divs deshabilitados */
+    /*opacity: 0.5;*/
+	float: left;
+	width: 100%;*/
+	text-align: left;
+  }
+
+/* Columna div */
+.cdiv {
+	float: left;
+	width: 50%;
+/*	width: 100%;*/
+	text-align: left;
 }

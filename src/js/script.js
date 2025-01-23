@@ -126,3 +126,26 @@ lineaPrincipal.addEventListener('click', () => {
       chorus.classList.toggle('hidden'); // Alternar la clase 'hidden' para mostrar/ocultar
     });
 */
+
+  // Hemos cambiado desactivarDivs por divsOff
+function divsOff() {
+    // Obtener todos los elementos con la clase "doff"
+    const divs = document.querySelectorAll('.doff');
+    // Alternar la clase "divoff" en cada div
+    divs.forEach(div => {
+        div.classList.toggle('divoff');
+    });
+}
+
+/* 
+
+  function divsOff() {
+    // Obtener todos los elementos con la clase "doff"
+    const divs = document.querySelectorAll('.doff');
+  
+    // Agregar la clase "divoff" a cada div
+    divs.forEach(div => {
+      div.classList.add('divoff');
+    });
+  }
+*/
