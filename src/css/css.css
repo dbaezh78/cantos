@@ -12,8 +12,6 @@ body {
 	margin-right: 3%;	
 	margin-left: 3%;	
 	margin-bottom: 3%;	
-
-
     justify-content: center;		/*	*/
 	align-items: center;			/*	*/
     min-height: 100vh;				/*	*/
@@ -23,7 +21,8 @@ body {
 }
 
 .song-container {
-    width: 640px; /* Ajusta al 90% del ancho del dispositivo */
+/*    width: 640px; /* Ajusta al 90% del ancho del dispositivo */
+    width: 790px; /* Ajusta al 90% del ancho del dispositivo */
     max-width: 100%; /* Limita el ancho máximo en pantallas grandes */
 /*    max-width: 850px; /* Limita el ancho máximo en pantallas grandes */
     border: 1px solid #ddd;
@@ -63,14 +62,11 @@ a:hover {
 }
 hr {
 /*	    width: 800px;					/*	*/
-	    width: auto;					/*	*/
-
+	width: auto;					/*	*/
 	margin-top: 1px;
 	margin-bottom: 15px;
-	
 	display: flex;
 	flex-direction: column;
-	
 	clear: both; /* Si hay elementos flotantes */
 	margin-top: 3px; /* Espaciado opcional */
 	margin-bottom: 4px;
@@ -83,6 +79,7 @@ hr {
 	margin-top: -5px;
 	font-weight: normal; 
 	margin-bottom: 4px;
+    margin-right: 10%; /* Margen derecho */
 }
 
 .ima {
@@ -96,13 +93,22 @@ hr {
 }
 
 .PreCat {
-	margin-left: 75%;
+	position: absolute;	
+    width: 50px; /* Ajusta el tamaño de la imagen */
+    margin-right: 70px; /* Margen derecho */
     text-align: right; /* Alineación del texto */
-    font-size: 12px;
+    font-size: 80%;
     font-weight: bold;
     font-style: italic;
     font-family: sans-serif;
     color: gray;
+	
+	margin-left: 9%;
+	margin-top: 1px;
+}
+
+pCatDiv{
+	margin-left: 62%;
 }
 
 .line {
@@ -141,9 +147,8 @@ hr {
     font-size: 100%;
 	line-height: .1;
 	margin-top: -10px;
-	padding-bottom: 15px;
+/*	padding-bottom: 15px;	*/
 }
-
 .chords {
     display: flex;
     gap: 10px;
@@ -153,7 +158,7 @@ hr {
 }
 
 .lyrics {
-	width: 200%;
+	width: 100%;
 	font-family: "Franklin Gothic Medium";
     font-size: 110%;
     color: black;
@@ -171,7 +176,7 @@ hr {
 }
 
 .alyrics {
-	width: 200%;
+	width: 100%;
     color: Black;
     font-weight: bold;
     font-size: 113%;
