@@ -1,6 +1,6 @@
 body {
     width: 100%;					/*	*/
-    max-width: 110%; /* Limita el ancho máximo en pantallas grandes */
+    max-width: 100%; /* Limita el ancho máximo en pantallas grandes */
 /*	width: auto;					/*	*/
 /*	width: 100%;					/*	*/
 	font-family: sans-serif;		/*	*/
@@ -21,16 +21,19 @@ body {
 }
 
 .song-container {
-/*    width: 640px; /* Ajusta al 90% del ancho del dispositivo */
-    width: 790px; /* Ajusta al 90% del ancho del dispositivo */
-    max-width: 100%; /* Limita el ancho máximo en pantallas grandes */
-/*    max-width: 850px; /* Limita el ancho máximo en pantallas grandes */
+/* LO ESTOY DEFINIENDO POR EL CANTO LA ULTIMA VEZ FUE 43%	*/
+    width: 100%; /* Ajusta al 90% del ancho del dispositivo */
+    max-width: 800px; /* Limita el ancho máximo en pantallas grandes */
     border: 1px solid #ddd;
 	padding: 0.5%;	
     border-radius: 8px;
     background: #fff;
     text-align: left;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+/*	width: 820px; /* Ajusta al 90% del ancho del dispositivo */
+/*    width: 800px; /* Ajusta al 90% del ancho del dispositivo */
+/*    width: 43%; /* Ajusta al 90% del ancho del dispositivo */
+/*    max-width: 850px; /* Limita el ancho máximo en pantallas grandes */
 /*	margin-left: 190px;		*/
 /*    margin: 0 auto; /* Centra el contenedor */
 }
@@ -93,17 +96,17 @@ hr {
 }
 
 .PreCat {
-	position: absolute;	
+/*	position: absolute;	
     width: 50px; /* Ajusta el tamaño de la imagen */
-    margin-right: 70px; /* Margen derecho */
-    text-align: right; /* Alineación del texto */
+/*    margin-right: 70px; /* Margen derecho */
+/*    text-align: right; /* Alineación del texto */
     font-size: 80%;
     font-weight: bold;
     font-style: italic;
     font-family: sans-serif;
     color: gray;
 	
-	margin-left: 9%;
+	margin-left: 10%;
 	margin-top: 1px;
 }
 
@@ -197,6 +200,12 @@ pCatDiv{
 
 
 .cursiva {
+    font-style: italic;
+    text-align: left;
+    margin-left: -38px;
+    color: Red; /* Mejora del rojo */
+}
+.csv {
     font-style: italic;
     text-align: left;
     margin-left: -38px;
@@ -416,7 +425,7 @@ desactivable por doff y a deshabilitado por divoff
 	text-align: left;
   }
 
-  .doff.divoff {
+.doff.divoff {
     transform-origin: center; /* Define el punto desde donde se realiza el zoom */
     /* -------------------------------------------*/
 	float: left;
@@ -425,7 +434,6 @@ desactivable por doff y a deshabilitado por divoff
 /*		text-align: left;	*/
 /*		justify-content: right;		/*	*/
 	display: table-caption;
-
   }
 
 /* Columna div */
