@@ -9,21 +9,18 @@
     let Asamblea4 = "A TI QUE HABITAS EN EL CIELO";
 
 	// Definir variables con la parte del Solista
-	let Cantor1 = "Como los ojos de los siervos";
-	let Cantor2 = "están fijos en las manos de sus señores.";
-	let Cantor3 = "Como los ojos de la esclava";
-	let Cantor4 = "en las manos de su señora,";
-	let Cantor5 = "así nuestros ojos miran al Señor,";
-	let Cantor6 = "esperando que tenga piedad,";
-	let Cantor7 = "esperando que tenga piedad.";
-	let Cantor8 = "¡PIEDAD DE NOSOTROS, SEÑOR! ";
-	let Cantor9 = "¡PIEDAD DE NOSOTROS, SEÑOR! ";
-	let Cantor10 = "¡QUE DEMASIADO SE HAN BURLADO DE NOSOTROS,";
-	let Cantor11 = "QUE NUESTRA ALMA ESTÁ SACIADA DE DESPRECIOS!";
-	let Cantor12 = "¡DE LAS BURLAS DE LOS SATISFECHOS,";
-	let Cantor13 = "DEL DESPRECIO DE LOS SOBERBIOS!";
-	let Cantor14 = "¡PIEDAD DE NOSOTROS, SEÑOR!";
-	let Cantor15 = "¡PIEDAD DE NOSOTROS, SEÑOR!";
+	let Cantor1 = "Como los ojos de los siervos están fijos en las manos de sus señores.";
+	let Cantor2 = "Como los ojos de la esclava en las manos de su señora,";
+	let Cantor3 = "así nuestros ojos miran al Señor,";
+	let Cantor4 = "esperando que tenga piedad, esperando que tenga piedad.";
+	let Cantor5 = "¡PIEDAD DE NOSOTROS, SEÑOR! ";
+	let Cantor6 = "¡PIEDAD DE NOSOTROS, SEÑOR! ";
+	let Cantor7 = "¡QUE DEMASIADO SE HAN BURLADO DE NOSOTROS,";
+	let Cantor8 = "QUE NUESTRA ALMA ESTÁ SACIADA DE DESPRECIOS!";
+	let Cantor9 = "¡DE LAS BURLAS DE LOS SATISFECHOS,";
+	let Cantor10 = "DEL DESPRECIO DE LOS SOBERBIOS!";
+	let Cantor11 = "¡PIEDAD DE NOSOTROS, SEÑOR!";
+	let Cantor12 = "¡PIEDAD DE NOSOTROS, SEÑOR!";
 
     // Asignando variable js a variable html //
     document.getElementById("t1").textContent = titulo;
@@ -46,6 +43,3 @@
 	document.getElementById("c10").textContent = Cantor10;
 	document.getElementById("c11").textContent = Cantor11;
 	document.getElementById("c12").textContent = Cantor12;
-	document.getElementById("c13").textContent = Cantor13;
-	document.getElementById("c14").textContent = Cantor14;
-	document.getElementById("c15").textContent = Cantor15;
