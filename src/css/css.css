@@ -1,13 +1,19 @@
+/* CSS
+╔════════════════════════════════════════════════════════╗
+║▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ CSS 4 Web ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓║
+╠════════════════════════════════════════════════════════╣
+║ Creado por: David Báez 							<!-- ║
+║ Fecha de Modificación: 27/1/2025					<!-- ║
+║ Versión: db20250127150 							<!-- ║
+╚════════════════════════════════════════════════════════╝
+
+*/
 body {
     width: 99%;					/*	*/
     max-width: 99%; /* Limita el ancho máximo en pantallas grandes */
-/*	width: auto;					/*	*/
-/*	width: 100%;					/*	*/
 	font-family: sans-serif;		/*	*/
-/*	margin: 50;						/*	*/
 	padding: 0.5%;						/*	*/
     display: flex;					/*	*/
-
 	margin-top: 3%;		
 	margin-right: 3%;	
 	margin-left: 3%;	
@@ -16,12 +22,17 @@ body {
 	align-items: center;			/*	*/
     min-height: 100vh;				/*	*/
     background-color: #f9f9f9;		/*	*/
-
     line-height: 1; /* Reduce el espacio entre líneas */
+/* 
+	Contenido descontinuado!!!
+	══════════════════════════
+		width: auto;	-->
+		width: 100%;	-->
+		margin: 50;		-->
+		*/
 }
 
 .song-container {
-/* LO ESTOY DEFINIENDO POR EL CANTO LA ULTIMA VEZ FUE 43%	*/
     width: 99%; /* Ajusta al 90% del ancho del dispositivo */
     max-width: 800px; /* Limita el ancho máximo en pantallas grandes */
     border: 1px solid #ddd;
@@ -30,30 +41,36 @@ body {
     background: #fff;
     text-align: left;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-/*	width: 820px; /* Ajusta al 90% del ancho del dispositivo */
-/*    width: 800px; /* Ajusta al 90% del ancho del dispositivo */
-/*    width: 43%; /* Ajusta al 90% del ancho del dispositivo */
-/*    max-width: 850px; /* Limita el ancho máximo en pantallas grandes */
-/*	margin-left: 190px;		*/
-/*    margin: 0 auto; /* Centra el contenedor */
+/* 
+	Contenido descontinuado!!!
+	══════════════════════════
+		width: 820px;		--> Ajusta al 90% del ancho del dispositivo
+		width: 800px;		--> Ajusta al 90% del ancho del dispositivo
+		width: 43%;	 		--> Ajusta al 90% del ancho del dispositivo
+		max-width: 850px; 	--> Limita el ancho máximo en pantallas grandes
+		margin-left: 190px;
+		margin: 0 auto; 	--> Centra el contenedor 
+*/  
 }
 
 .atilevantomisojos-song-container{
     width: auto; /* Ajusta al 90% del ancho del dispositivo */
     max-width: auto; /* Limita el ancho máximo en pantallas grandes */
-/*    max-width: 850px; /* Limita el ancho máximo en pantallas grandes */
     border: 1px solid #ddd;
 	padding: 20px;	
     border-radius: 8px;
     background: #fff;
     text-align: left;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-	justify-content: none;		/*	*/
-
-/*	margin-left: 190px;		*/
-/*    margin: 0 auto; /* Centra el contenedor */
+	justify-content: none;
+/* 
+	Contenido descontinuado!!!
+	══════════════════════════
+		margin-left: 190px;
+		margin: 0 auto; 	--> Centra el contenedor 
+		max-width: 850px;	--> Limita el ancho máximo en pantallas grandes
+*/
 }
-
 
 a {
       text-decoration: none; /* Quitar subrayado */
@@ -63,16 +80,24 @@ a {
 a:hover {
       text-decoration: none; /* Opcional: Subrayado al pasar el cursor */
 }
+
 hr {
-/*	    width: 800px;					/*	*/
-	width: auto;					/*	*/
+	width: auto;
 	margin-top: 1px;
 	margin-bottom: 15px;
 	display: flex;
 	flex-direction: column;
 	clear: both; /* Si hay elementos flotantes */
-	margin-top: 3px; /* Espaciado opcional */
-	margin-bottom: 4px;
+/* 
+	Contenido descontinuado!!!
+	══════════════════════════
+		margin-top: 3px; --> Espaciado opcional
+		width: 800px;
+		margin-bottom: 4px;	
+*/
+	
+	margin: 1% 0 1% 0;
+
 }
 
 .cnumber {
@@ -92,22 +117,30 @@ hr {
     margin-left: 60%; /* Empuja la imagen hacia la derecha */
 	font-weight: normal; 
 	margin-top: -30px;
-/*    margin-bottom: 0px;		/*Aqui tenemos el margen entre lineas db para cuando necesites agregar espacio debajo*/
+/* 
+		Contenido descontinuado!!!
+		══════════════════════════
+			margin-bottom: 0px;		--> Aqui tenemos el margen entre lineas db para cuando necesites agregar espacio debajo
+*/
 }
 
 .PreCat {
-/*	position: absolute;	
-    width: 50px; /* Ajusta el tamaño de la imagen */
-/*    margin-right: 70px; /* Margen derecho */
-/*    text-align: right; /* Alineación del texto */
     font-size: 80%;
     font-weight: bold;
     font-style: italic;
     font-family: sans-serif;
     color: gray;
-	
-	margin-left: 50px;
-	margin-top: 1px;
+/* 
+		Contenido descontinuado!!!
+		══════════════════════════
+			position: absolute;	
+			width: 50px; 			---> Ajusta el tamaño de la imagen
+			margin-right: 70px;		---> Margen derecho
+			text-align: right;		---> Alineación del texto
+			margin-left: 50px;
+			margin-top: 1px;
+*/
+
 }
 
 pCatDiv{
@@ -150,7 +183,12 @@ pCatDiv{
     font-size: 100%;
 	line-height: .1;
 	margin-top: -10px;
-/*	padding-bottom: 15px;	*/
+/* 
+		Contenido descontinuado!!!
+		══════════════════════════
+			padding-bottom: 15px;	
+*/
+
 }
 .chords {
     display: flex;
@@ -207,6 +245,14 @@ pCatDiv{
 	text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.5); /* Sombra negra con desenfoque */
 }
 
+.alyrics80 {
+    color: Black;
+    font-weight: bold;
+    font-size: 90%;
+	font-family: sans-serif;
+	line-height: 0.8; /* Ajusta este valor para reducir o aumentar el espacio */
+	text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.5); /* Sombra negra con desenfoque */
+}
 
 .cursiva {
     font-style: italic;
@@ -214,6 +260,11 @@ pCatDiv{
     margin-left: -38px;
     color: Red; /* Mejora del rojo */
 }
+
+/*
+╔═══════════════════════════════╗
+║ csv Abreviación de Cursiva 	║
+╚═══════════════════════════════╝*/
 .csv {
     font-style: italic;
     text-align: left;
@@ -222,15 +273,9 @@ pCatDiv{
 }
 
 /*
-.cursiva {
-    font-style: italic;
-    justify-content: left; // Este no es válido para texto; puedes usar text-align
-    margin-left: -40px;
-    color: red;
-}
-
-*/
-/* Estilos para el select */
+╔═══════════════════════════════╗
+║ Estilos para el select	 	║
+╚═══════════════════════════════╝*/
 select {
 	justify-content: center;
     border: none;
@@ -258,7 +303,14 @@ select option {
     padding: 5px;
 }
 
-/* Indicadores personalizados */
+.sblue{		/* Seleccion Azul*/
+	color: blue;
+}
+
+/*
+╔═══════════════════════════════╗
+║ Indicadores personalizados 	║
+╚═══════════════════════════════╝*/
 .t_0, .t_a, .t_s {
     position: relative;
     padding-left: 1.5em;
@@ -315,14 +367,28 @@ hr style="margin-bottom: 25px;">
     display: block; /* Asegura que la imagen se comporte como un bloque */
 }
 
-.saudio{
-	width: 100%;
-	justify-content: center;		/*	*/
-/*	align-items: center;			/*	*/
-	margin-left: 2%;*/
-/*	margin-right: 5%;
-	display:absolute;		/*	*/
+.saudio {
+    width: 96%; /* Asegura un espacio del 2% a cada lado */
+    margin: 0.3% auto; /* Centra horizontalmente */
+    display: table-cell; /* Esto es importante si no es flex */
+/*		Contenido descontinuado!!! (Esto es importante si no es flex)
+		══════════════════════════
+		display: block; 
+		*/
 }
+
+/* 
+		Contenido descontinuado!!!
+		══════════════════════════
+			.saudio{
+				width: 100%;
+				justify-content: center;		
+				align-items: center;			
+				margin-left: 2%;
+				margin-right: 5%;
+				display:absolute;
+			}
+*/
 
 
 .contenido {
@@ -357,7 +423,6 @@ hr style="margin-bottom: 25px;">
 }
 
 
-
 /****************************** */
    .linexx {
       margin: 10px 0;
@@ -367,17 +432,16 @@ hr style="margin-bottom: 25px;">
       display: none;
     }
 
-
-/****************************** */
-.hlplay {	/* Este es para aparecer el audio y hay que centrarlo*/
+/*
+╔═══════════════════════════════════════════════╗
+║Esto es para hacer aparecer el audio 			║
+╚═══════════════════════════════════════════════╝*/
+.hlplay {
 	margin: 0;
 	cursor: pointer;
 	font-size: 150%;
     text-align: center;
-	justify-content: center;		/*	*/
-
-	
-
+	justify-content: center;
 }
 
 .hline {
@@ -397,8 +461,10 @@ hr style="margin-bottom: 25px;">
 }
 
 
-/* --------------------------------------------------*/
- /* Ocultar la división por defecto */
+/* 
+╔═══════════════════════════════════════════════════════════════════════════╗
+║Ocultar la división por defecto											║
+╚═══════════════════════════════════════════════════════════════════════════╝*/
         #myDiv {
             display: none;
             border: 1px solid black;
@@ -406,61 +472,76 @@ hr style="margin-bottom: 25px;">
             margin-top: 10px;
         }
 
-        /* Mostrar la división cuando es objetivo del enlace */
+/* 
+╔═══════════════════════════════════════════════════════════════════════════╗
+║Mostrar la división cuando es objetivo del enlace 							║
+╚═══════════════════════════════════════════════════════════════════════════╝*/
         #myDiv:target {
             display: block;
         }
 
-
-/* --------------------------------------------------*/
-
-
-
-/* Contenido db en el que deshabilita el DIV
-.cdb {
-    display: none;
-}
+/* 
+		Contenido descontinuado!!!
+		══════════════════════════
+		Contenido db en el que deshabilita el DIV
+	.cdb {
+		display: none;
+		}
 */
 
-/* css
-Cambiamos divoff
-desactivable por doff y a deshabilitado por divoff
-*/
+
+/*
+╔═══════════════════════════════════════════════════════════════════════════╗
+║CSS																		║
+║Cambiamos divoff															║
+║desactivable por doff y a deshabilitado por divoff							║
+╚═══════════════════════════════════════════════════════════════════════════╝*/
+
 .doff {
-    /* Estilo normal de los divs */
-		float: left;
-/*	width: 50%;
-/*	width: 100%;*/
+	float: left;
+	width: 400px;
 	text-align: left;
+	/* 
+		Contenido descontinuado!!!
+		══════════════════════════
+			Estilo normal de los divs
+			width: 50%;		
+	*/
   }
 
 .doff.divoff {
     transform-origin: center; /* Define el punto desde donde se realiza el zoom */
-    /* -------------------------------------------*/
 	float: left;
 	width: 100%;
-/*		float: left;	*/
-/*		text-align: left;	*/
-/*		justify-content: right;		/*	*/
 	display: table-caption;
+
+	/* 
+		Contenido descontinuado!!!
+		══════════════════════════
+		float: left;	
+		text-align: left;
+		justify-content: right;
+	*/
   }
 
 /* Columna div */
 .cdiv {
 	float: left;
 	width: 50%;
-/*	width: 100%;*/
 	text-align: left;
 }
 
-/*
-para poner en body
-display: table-caption;
-*/
+	/* 
+		Contenido descontinuado!!!
+		══════════════════════════
+		width: 100%;
+		para poner en body
+		display: table-caption;
+	*/
 
 .bmusic {
     width: 3%;
-    margin-left: 230px; /* Ajusta este valor según sea necesario */
+    margin-left: 330px; /* Ajusta este valor según sea necesario */
     margin-top: -7px;
 	color: #32325f;
 }
@@ -481,12 +562,24 @@ display: table-caption;
 	letter-spacing: normal;
 	text-transform: none;
 	display: table-caption;
-
 	white-space: nowrap;
 	word-wrap: normal;
-	direction: 1tr;
 	-webkit-font-feature-settings: 'liga';
 	-webkit-font-smoothing: antialiased;
+	/* 
+		Contenido descontinuado!!!
+		══════════════════════════
+		direction: 1tr;
+	*/
 }
 
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=play_arrow" />
+
+.stndiv{	/*Segmento Traste y Nota */
+	margin-top: -10px;
+	float: left;
+}
+
+
+
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=play_arrow");
+
