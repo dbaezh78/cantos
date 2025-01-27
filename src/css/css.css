@@ -1,6 +1,6 @@
 body {
-    width: 100%;					/*	*/
-    max-width: 100%; /* Limita el ancho máximo en pantallas grandes */
+    width: 99%;					/*	*/
+    max-width: 99%; /* Limita el ancho máximo en pantallas grandes */
 /*	width: auto;					/*	*/
 /*	width: 100%;					/*	*/
 	font-family: sans-serif;		/*	*/
@@ -22,7 +22,7 @@ body {
 
 .song-container {
 /* LO ESTOY DEFINIENDO POR EL CANTO LA ULTIMA VEZ FUE 43%	*/
-    width: 100%; /* Ajusta al 90% del ancho del dispositivo */
+    width: 99%; /* Ajusta al 90% del ancho del dispositivo */
     max-width: 800px; /* Limita el ancho máximo en pantallas grandes */
     border: 1px solid #ddd;
 	padding: 0.5%;	
@@ -106,7 +106,7 @@ hr {
     font-family: sans-serif;
     color: gray;
 	
-	margin-left: 10%;
+	margin-left: 50px;
 	margin-top: 1px;
 }
 

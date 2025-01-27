@@ -1,4 +1,4 @@
-	// Titulo
+	// Titulo	Fecha de Modificación 26 Enero 2025
 	let titulo = "A TI LEVANTO MIS OJOS";
 	let salmo = "Salmo 123 (122)";
 
