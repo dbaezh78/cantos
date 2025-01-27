@@ -441,7 +441,12 @@ hr style="margin-bottom: 25px;">
 	cursor: pointer;
 	font-size: 150%;
     text-align: center;
-	justify-content: center;
+	align-content: center;
+/* 
+	Contenido descontinuado!!!
+	══════════════════════════
+		justify-content: center;
+*/
 }
 
 .hline {
@@ -541,7 +546,7 @@ hr style="margin-bottom: 25px;">
 
 .bmusic {
     width: 3%;
-    margin-left: 330px; /* Ajusta este valor según sea necesario */
+    margin-left: 310px; /* Ajusta este valor según sea necesario */
     margin-top: -7px;
 	color: #32325f;
 }
