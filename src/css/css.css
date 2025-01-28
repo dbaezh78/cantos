@@ -4,7 +4,7 @@
 ╠════════════════════════════════════════════════════════╣
 ║ Creado por: David Báez 							<!-- ║
 ║ Fecha de Modificación: 27/1/2025					<!-- ║
-║ Versión: db20250127150 							<!-- ║
+║ Versión: db202501271350 							<!-- ║
 ╚════════════════════════════════════════════════════════╝
 
 */
@@ -291,6 +291,7 @@ select.no-arrow {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+	name: "nota";
 }
 
 select:focus {
