@@ -4,35 +4,36 @@
 
     // Definir variables con la parte de la Asamble
 	
-	let Asamblea1 = "A TI QUE ESCUCHAS LA ORACIÓN";
-	let Asamblea2 = "VIENE TODO MORTAL,";
-	let Asamblea3 = "VIENE TODO MORTAL.";
-	let Asamblea4 = "A TI QUE ESCUCHAS LA ORACIÓN";
-	let Asamblea5 = "VIENE TODO MORTAL,";
-	let Asamblea6 = "VIENE TODO MORTAL.";
-	let Asamblea7 = "A TI QUE ESCUCHAS LA ORACIÓN";
-	let Asamblea8 = "VIENE TODO MORTAL,";
-	let Asamblea9 = "VIENE TODO MORTAL.";
+	let Asamblea1 = "SIN DETENERTE, NO PASES TE RUEGO";
+	let Asamblea2 = "SIN DETENERTE, SIN DETENERTE.";
+	let Asamblea3 = "«OH SEÑOR MÍO, NO PASES TE RUEGO";
+	let Asamblea4 = "SIN DETENERTE, SIN DETENERTE.";
+	let Asamblea5 = "SIN DETENERTE, NO PASES TE RUEGO";
+	let Asamblea6 = "SIN DETENERTE, SIN DETENERTE.»";
+
 
 	// Definir variables con la parte del Solista
-	let Cantor1 = "A ti, Señor, se debe la alabanza, en Sión.";
-	let Cantor2 = "A ti se te cumple el voto, en Jerusalén.";
-	let Cantor3 = "A ti que escuchas la oración";
-	let Cantor4 = "viene todo mortal, viene todo mortal.";
-	let Cantor5 = "Pesan sobre nosotros nuestros pecados,";
-	let Cantor6 = "mas tú perdonas nuestras culpas.";
-	let Cantor7 = "Dichoso el que tú eliges, el que tú llamas,";
-	let Cantor8 = "vivirá en tus atrios.";
-	let Cantor9 = "A ti que escuchas la oración";
-	let Cantor10 = "viene todo mortal, viene todo mortal.";
-	let Cantor11 = "¡Nos saciaremos de los bienes de tu casa,";
-	let Cantor12 = "de la santidad de tu templo!";
-	let Cantor13 = "Con los prodigios de tu amor";
-	let Cantor14 = "tú nos hablas,";
-	let Cantor15 = "con los portentos de tu justicia";
-	let Cantor16 = "nos respondes.";
-	let Cantor17 = "A ti que escuchas la oración";
-	let Cantor18 = "viene todo mortal, viene todo mortal.";
+	let Cantor1 = "Hacía calor aquel día";
+	let Cantor2 = "cuando Abraham estaba sentado";
+	let Cantor3 = "delante de su tienda.";
+	let Cantor4 = "Hacía calor aquel día";
+	let Cantor5 = "cuando Abraham estaba sentado";
+	let Cantor6 = "cerca del encinar de Mambré.";
+	let Cantor7 = "Alzando los ojos, miró,";
+	let Cantor8 = "y tres hombres de pie";
+	let Cantor9 = "estaban delante.";
+	let Cantor10 = "En cuanto los vio";
+	let Cantor11 = "se inclinó hasta el suelo y dijo:";
+	let Cantor12 = "«Oh Señor mío,";
+	let Cantor13 = "no pases te ruego sin detenerte.»";
+	let Cantor14 = "«Os traeré un poco de agua,";
+	let Cantor15 = "os lavaré los pies";
+	let Cantor16 = "y reposaréis a la sombra,";
+	let Cantor17 = "os traeré un bocado, os reconfortaréis";
+	let Cantor18 = "y luego seguiréis adelante.";
+	let Cantor19 = "No por casualidad";
+	let Cantor20 = "habéis pasado hoy delante de mí.»";
+
 
     // Asignando variable Tituto//
     document.getElementById("t1").textContent = titulo;
@@ -45,9 +46,6 @@
 	document.getElementById("a4").textContent = Asamblea4;
 	document.getElementById("a5").textContent = Asamblea5;
 	document.getElementById("a6").textContent = Asamblea6;
-	document.getElementById("a7").textContent = Asamblea7;
-	document.getElementById("a8").textContent = Asamblea8;
-	document.getElementById("a9").textContent = Asamblea9;
 	
     // Asignando variable para Cantor o Solista//
 	document.getElementById("c1").textContent = Cantor1;
@@ -68,4 +66,5 @@
 	document.getElementById("c16").textContent = Cantor16;
 	document.getElementById("c17").textContent = Cantor17;
 	document.getElementById("c18").textContent = Cantor18;
-	
+	document.getElementById("c19").textContent = Cantor19;
+	document.getElementById("c20").textContent = Cantor20;
