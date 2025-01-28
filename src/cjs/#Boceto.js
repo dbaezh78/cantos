@@ -12,7 +12,6 @@
 	let Asamblea5 = "SIN DETENERTE, NO PASES TE RUEGO";
 	let Asamblea6 = "SIN DETENERTE, SIN DETENERTE.»";
 
-
 	// Definir variables con la parte del Solista
 	let Cantor1 = "Hacía calor aquel día";
 	let Cantor2 = "cuando Abraham estaba sentado";

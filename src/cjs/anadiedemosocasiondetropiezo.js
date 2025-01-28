@@ -2,6 +2,7 @@
 	// Titulo
 	let titulo = "A NADIE DEMOS OCASIÓN DE TROPIEZO";
 	let salmo = "2ª Corintios 6,3ss";
+	let dbnos = "22";	//Numero del libro
 
     // Definir variables con la parte de la Asamble
 	let Asamblea1 = "HERMANOS, A NADIE DEMOS";
@@ -57,6 +58,7 @@
     // Asignando variable js a variable html //
     document.getElementById("t1").textContent = titulo;
     document.getElementById("s1").textContent = salmo;
+	document.getElementById("dbno").textContent = dbnos;
 
     document.getElementById("a1").textContent = Asamblea1;
 	document.getElementById("a2").textContent = Asamblea2;

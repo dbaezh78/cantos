@@ -584,3 +584,37 @@ hr style="margin-bottom: 25px;">
 	margin-top: -10px;
 	float: left;
 }
+
+.dbmb100 {margin-bottom: 100px;}
+.dbmb150 {margin-bottom: 150px;}
+.dbmb200 {margin-bottom: 200px;}
+.dbmb250 {margin-bottom: 250px;}
+
+
+
+
+/* NO ME ESTÁ CONVENCIENDO EL BIS*/
+
+.bis_cont {
+	width: 110px;
+	Position: relative;
+    top: -970px;        /* Ajusta la distancia desde la parte superior */
+/*    top: -560px;        /* Ajusta la distancia desde la parte superior */
+    left: 340px;       /* Ajusta la distancia desde la izquierda */
+    display: flex;    /* Alinea los elementos en una fila */
+    align-items: center;
+}
+
+.bis_line {
+    width: 2px;
+    height: 115px;
+    background-color: #d9d3d3;
+    margin-right: 10px;
+    margin-top: 6px;
+}
+
+.bis_texto {
+    font-size: 14px;
+    font-weight: bold;
+    color: #808080;
+}

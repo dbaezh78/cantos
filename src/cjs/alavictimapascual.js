@@ -2,6 +2,7 @@
 	// Titulo
 	let titulo = "A LA VÍCTIMA PASCUAL";
 	let salmo = "Secuencia de Pascua";
+	let dbnos = "21";	//Numero del libro
 
     // Definir variables con la parte de la Asamble
 	let Asamblea1 = "PORQUE CRISTO, MI ESPERANZA,";
@@ -33,10 +34,11 @@
 	let Cantor15 = "los ángeles, las vendas y el sudario.»";
 	let Cantor16 = "Tú, Rey victorioso, danos tú la salvación.";
 
-
     // Asignando variable js a variable html //
     document.getElementById("t1").textContent = titulo;
     document.getElementById("s1").textContent = salmo;
+	document.getElementById("dbno").textContent = dbnos;
+
 
     document.getElementById("a1").textContent = Asamblea1;
     document.getElementById("a2").textContent = Asamblea2;

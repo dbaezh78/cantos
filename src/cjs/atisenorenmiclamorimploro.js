@@ -1,6 +1,7 @@
 	// Titulo
 	let titulo = "A TI, SEÑOR, EN MI CLAMOR IMPLORO";
 	let salmo = "Salmo 142 (141)";
+	let dbnos = "24";	//Numero del libro
 
     // Definir variables con la parte de la Asamble
 	
@@ -43,7 +44,8 @@
     // Asignando variable js a variable html //
     document.getElementById("t1").textContent = titulo;
     document.getElementById("s1").textContent = salmo;
-
+	document.getElementById("dbno").textContent = dbnos;
+	
 	document.getElementById("a1").textContent = Asamblea1;
 	document.getElementById("a2").textContent = Asamblea2;
 	document.getElementById("a3").textContent = Asamblea3;
