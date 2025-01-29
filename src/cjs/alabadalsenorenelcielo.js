@@ -1,0 +1,145 @@
+// Titulo	
+	let titulo = "ALABAD AL SEÑOR EN EL CIELO ";
+	let salmo = "Salmo 148";
+	let dbnos = "30";      //Numero del libro
+	
+// Definir variables con la parte de la Asamble	
+	let Asamblea1 = "¡ALABADLO! ";
+	let Asamblea2 = "¡ALABADLO!";
+	let Asamblea3 = "¡ALABADLO!";
+	let Asamblea4 = "¡ALABADLO!";
+	let Asamblea5 = "¡ALABADLO!";
+	let Asamblea6 = "¡ALABADLO!";
+	let Asamblea7 = "¡ALABADLO!";
+	let Asamblea8 = "¡ALABADLO!";
+	let Asamblea9 = "¡ALABADLO!";
+	let Asamblea10 = "¡ALABADLO!";
+	let Asamblea11 = "¡ALABADLO!";
+	let Asamblea12 = "¡ALABADLO!";
+	let Asamblea13 = "¡ALABADLO!";
+	let Asamblea14 = "¡ALABADLO!";
+	let Asamblea15 = "¡ALABADLO!";
+	let Asamblea16 = "¡ALABADLO!";
+	let Asamblea17 = "¡ALABADLO!";
+	let Asamblea18 = "¡ALABADLO!";
+	let Asamblea19 = "¡ALABADLO!";
+	let Asamblea20 = "¡ALABADLO!";
+	let Asamblea21 = "¡ALABADLO!";
+	let Asamblea22 = "¡ALABADLO!";
+	let Asamblea23 = "¡ALABADLO!";
+	let Asamblea24 = "¡ALABADLO!";
+	let Asamblea25 = "¡ALABADLO!";
+	let Asamblea26 = "¡ALABADLO!";
+	let Asamblea27 = "¡ALABADLO!";
+	let Asamblea28 = "¡ALABADLO!";
+	let Asamblea29 = "¡ALABADLO!";
+	let Asamblea30 = "¡ALABADLO!";
+	
+// Definir variables con la parte de la Asamble	
+	let Cantor1 = "¡Alabad al Señor en el Cielo,";
+	let Cantor2 = "alabad al Señor en lo alto,";
+	let Cantor3 = "alabadlo, todos sus ángeles,";
+	let Cantor4 = "alabadlo, todos sus ejércitos!";
+	let Cantor5 = "Alabadlo, sol y luna,";
+	let Cantor6 = "alabadlo, estrellas lucientes.";
+	let Cantor7 = "Alabadlo, espacios celestes";
+	let Cantor8 = "y aguas que cuelgan en el cielo.";
+	let Cantor9 = "Alaben el nombre del Señor,";
+	let Cantor10 = "porque Él lo mandó, y existieron.";
+	let Cantor11 = "Les dio consistencia perpetua";
+	let Cantor12 = "y una ley que no pasará.";
+	let Cantor13 = "Alabad al Señor en la tierra,";
+	let Cantor14 = "cetáceos y abismos del mar.";
+	let Cantor15 = "Rayos, granizo, nieve y bruma,";
+	let Cantor16 = "viento huracanado";
+	let Cantor17 = "que cumple sus órdenes.";
+	let Cantor18 = "Montes y todas las sierras,";
+	let Cantor19 = "árboles frutales y cedros.";
+	let Cantor20 = "Fieras y animales domésticos,";
+	let Cantor21 = "reptiles y pájaros que vuelan.";
+	let Cantor22 = "Reyes y pueblos del orbe,";
+	let Cantor23 = "príncipes y jefes del mundo.";
+	let Cantor24 = "Los jóvenes";
+	let Cantor25 = "y también las doncellas,";
+	let Cantor26 = "los viejos a una con los niños.";
+	let Cantor27 = "Alaben el nombre del Señor,";
+	let Cantor28 = "el único nombre sublime.";
+	let Cantor29 = "Su majestad,";
+	let Cantor30 = "sobre el cielo y la tierra,";
+	let Cantor31 = "Él da fuerza y vigor a su pueblo.";
+	let Cantor32 = "Alabanza de todos sus fieles,";
+	let Cantor33 = "de Israel, su pueblo elegido.";
+	
+// Asignando variable Tituto//	
+	document.getElementById("t1").textContent = titulo;
+	document.getElementById("s1").textContent = salmo;
+	document.getElementById("dbno").textContent = dbnos;
+	
+// Asignando variable para Asamble//	
+	document.getElementById("a1").textContent = Asamblea1;
+	document.getElementById("a2").textContent = Asamblea2;
+	document.getElementById("a3").textContent = Asamblea3;
+	document.getElementById("a4").textContent = Asamblea4;
+	document.getElementById("a5").textContent = Asamblea5;
+	document.getElementById("a6").textContent = Asamblea6;
+	document.getElementById("a7").textContent = Asamblea7;
+	document.getElementById("a8").textContent = Asamblea8;
+	document.getElementById("a9").textContent = Asamblea9;
+	document.getElementById("a10").textContent = Asamblea10;
+	document.getElementById("a11").textContent = Asamblea11;
+	document.getElementById("a12").textContent = Asamblea12;
+	document.getElementById("a13").textContent = Asamblea13;
+	document.getElementById("a14").textContent = Asamblea14;
+	document.getElementById("a15").textContent = Asamblea15;
+	document.getElementById("a16").textContent = Asamblea16;
+	document.getElementById("a17").textContent = Asamblea17;
+	document.getElementById("a18").textContent = Asamblea18;
+	document.getElementById("a19").textContent = Asamblea19;
+	document.getElementById("a20").textContent = Asamblea20;
+	document.getElementById("a21").textContent = Asamblea21;
+	document.getElementById("a22").textContent = Asamblea22;
+	document.getElementById("a23").textContent = Asamblea23;
+	document.getElementById("a24").textContent = Asamblea24;
+	document.getElementById("a25").textContent = Asamblea25;
+	document.getElementById("a26").textContent = Asamblea26;
+	document.getElementById("a27").textContent = Asamblea27;
+	document.getElementById("a28").textContent = Asamblea28;
+	document.getElementById("a29").textContent = Asamblea29;
+	document.getElementById("a30").textContent = Asamblea30;
+	
+// Asignando variable para Cantor o Solista//	
+	document.getElementById("c1").textContent = Cantor1;
+	document.getElementById("c2").textContent = Cantor2;
+	document.getElementById("c3").textContent = Cantor3;
+	document.getElementById("c4").textContent = Cantor4;
+	document.getElementById("c5").textContent = Cantor5;
+	document.getElementById("c6").textContent = Cantor6;
+	document.getElementById("c7").textContent = Cantor7;
+	document.getElementById("c8").textContent = Cantor8;
+	document.getElementById("c9").textContent = Cantor9;
+	document.getElementById("c10").textContent = Cantor10;
+	document.getElementById("c11").textContent = Cantor11;
+	document.getElementById("c12").textContent = Cantor12;
+	document.getElementById("c13").textContent = Cantor13;
+	document.getElementById("c14").textContent = Cantor14;
+	document.getElementById("c15").textContent = Cantor15;
+	document.getElementById("c16").textContent = Cantor16;
+	document.getElementById("c17").textContent = Cantor17;
+	document.getElementById("c18").textContent = Cantor18;
+	document.getElementById("c19").textContent = Cantor19;
+	document.getElementById("c20").textContent = Cantor20;
+	document.getElementById("c21").textContent = Cantor21;
+	document.getElementById("c22").textContent = Cantor22;
+	document.getElementById("c23").textContent = Cantor23;
+	document.getElementById("c24").textContent = Cantor24;
+	document.getElementById("c25").textContent = Cantor25;
+	document.getElementById("c26").textContent = Cantor26;
+	document.getElementById("c27").textContent = Cantor27;
+	document.getElementById("c28").textContent = Cantor28;
+	document.getElementById("c29").textContent = Cantor29;
+	document.getElementById("c30").textContent = Cantor30;
+	document.getElementById("c31").textContent = Cantor31;
+	document.getElementById("c32").textContent = Cantor32;
+	document.getElementById("c33").textContent = Cantor33;
+	
+// Fin del Codigo //	

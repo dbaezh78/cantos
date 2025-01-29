@@ -1,9 +1,9 @@
-	// Titulo
+// Titulo
 	let titulo = "AL DESPERTAR";
 	let salmo = "Salmo 17 (16)";
 	let dbnos = "29";	//Numero del libro
 
-    // Definir variables con la parte de la Asamble
+// Definir variables con la parte de la Asamble
 	
 	let Asamblea1 = "AL DESPERTAR";
 	let Asamblea2 = "ME SACIARÉ DE TU SEMBLANTE, SEÑOR.";
@@ -26,8 +26,7 @@
 	let Asamblea19 = "AL DESPERTAR";
 	let Asamblea20 = "ME SACIARÉ DE TU SEMBLANTE, SEÑOR. ";
 
-
-	// Definir variables con la parte del Solista
+// Definir variables con la parte del Solista
 	let Cantor1 = "Escucha, Señor, mi oración,";
 	let Cantor2 = "atiende, Señor, a mi clamor,";
 	let Cantor3 = "presta oídos a mi súplica,";
@@ -63,14 +62,12 @@
 	let Cantor33 = "Que yo al despertar, que yo por tu amor";
 	let Cantor34 = "me saciaré de tu rostro Señor.";
 
-
-
-    // Asignando variable Tituto//
+// Asignando variable Tituto//
     document.getElementById("t1").textContent = titulo;
     document.getElementById("s1").textContent = salmo;
 	document.getElementById("dbno").textContent = dbnos;
-
-    // Asignando variable para Asamble//
+	
+// Asignando variable para Asamble//
 	document.getElementById("a1").textContent = Asamblea1;
 	document.getElementById("a2").textContent = Asamblea2;
 	document.getElementById("a3").textContent = Asamblea3;
@@ -93,7 +90,7 @@
 	document.getElementById("a20").textContent = Asamblea20;
 
 	
-    // Asignando variable para Cantor o Solista//
+// Asignando variable para Cantor o Solista//
 	document.getElementById("c1").textContent = Cantor1;
 	document.getElementById("c2").textContent = Cantor2;
 	document.getElementById("c3").textContent = Cantor3;
