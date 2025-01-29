@@ -192,7 +192,7 @@ pCatDiv{
 }
 .chords {
     display: flex;
-    gap: 10px;
+    gap: 0px;
     justify-content: flex-start;
     font-size: 14px;
 	line-height: 1.6; /* Ajusta este valor para reducir o aumentar el espacio */
@@ -267,8 +267,9 @@ pCatDiv{
 ╚═══════════════════════════════╝*/
 .csv {
     font-style: italic;
-    text-align: left;
-    margin-left: -38px;
+	text-align: justify-content;
+/*    text-align: right;*/
+    /*margin-left: -30px;*/
     color: Red; /* Mejora del rojo */
 }
 
@@ -277,21 +278,21 @@ pCatDiv{
 ║ Estilos para el select	 	║
 ╚═══════════════════════════════╝*/
 select {
-	justify-content: center;
+
+	text-align: center;
     border: none;
     background: transparent;
     font-size: 14px;
     color: red;
     font-weight: bold;
-    width: auto;
-    min-width: 50px;
+    width: 1%;
+    min-width: 22px;
 }
 
 select.no-arrow {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-	name: "nota";
 }
 
 select:focus {
@@ -319,7 +320,7 @@ select option {
 
 .t_0::before, .t_a::before, .t_s::before {
     position: absolute;
-    left: 5px;
+    left: 6px;
     top: 20px;
     font-size: 18px;
     color: gray;
@@ -529,6 +530,14 @@ hr style="margin-bottom: 25px;">
 		justify-content: right;
 	*/
   }
+ 
+ .doffx.divoffx {
+    transform-origin: center; /* Define el punto desde donde se realiza el zoom */
+	float: left;
+	width: 100%;
+	display: table-caption;
+	margin-bottom: -135px;
+ }
 
 /* Columna div */
 .cdiv {
@@ -593,28 +602,18 @@ hr style="margin-bottom: 25px;">
 
 
 
-/* NO ME ESTÁ CONVENCIENDO EL BIS*/
-
-.bis_cont {
-	width: 110px;
-	Position: relative;
-    top: -970px;        /* Ajusta la distancia desde la parte superior */
-/*    top: -560px;        /* Ajusta la distancia desde la parte superior */
-    left: 340px;       /* Ajusta la distancia desde la izquierda */
-    display: flex;    /* Alinea los elementos en una fila */
-    align-items: center;
+.bis_ima {
+    width: 220px; /* Ajusta el tamaño de la imagen */
+	position: absolute;
+    max-width: 120px; /* Ajusta el tamaño de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: block; /* Asegura que la imagen se comporte como un bloque */
+    margin-left: 340px; /* Empuja la imagen hacia la derecha */
+    margin-top: 10px; /* Empuja la imagen hacia la derecha */
+	font-weight: normal; 
+	max-width: 100px;
 }
 
-.bis_line {
-    width: 2px;
-    height: 115px;
-    background-color: #d9d3d3;
-    margin-right: 10px;
-    margin-top: 6px;
-}
-
-.bis_texto {
-    font-size: 14px;
-    font-weight: bold;
-    color: #808080;
+.porBis{
+	margin-bottom: 135px;
 }
