@@ -195,15 +195,14 @@ pCatDiv{
     gap: 0px;
     justify-content: flex-start;
     font-size: 14px;
-	line-height: 1.6; /* Ajusta este valor para reducir o aumentar el espacio */
+	line-height: 1.5; /* Ajusta este valor para reducir o aumentar el espacio */
 }
 
 .lyrics {
-	width: 100%;
+	width: 123%;
 	font-family: "Franklin Gothic Medium";
     font-size: 110%;
     color: black;
-/*    font-weight: bold;	*/
 	line-height: 0.8; /* Ajusta este valor para reducir o aumentar el espacio */
 }
 
@@ -217,7 +216,7 @@ pCatDiv{
 }
 
 .alyrics {
-	width: 100%;
+	width: 123%;
     color: Black;
     font-weight: bold;
     font-size: 113%;
@@ -286,6 +285,7 @@ select {
     font-weight: bold;
     width: 1%;
     min-width: 22px;
+	margin-bottom: 5px;
 }
 
 select.no-arrow {
@@ -674,3 +674,14 @@ position: absolute;
     color: black;
     /* font-weight: bold; */
     line-height: 1.0;
+}
+
+/* Estilos básicos para el mensaje */
+ #mensaje {
+            display: none; /* Oculta el mensaje inicialmente */
+			position:absolute;
+            color: red;
+            font-size: 90%;
+            margin-top: -6px;
+            margin-left: 120px;
+        }

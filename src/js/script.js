@@ -154,3 +154,15 @@ document.getElementById('startScroll').addEventListener('click', function (e) {
     scrollInterval = setInterval(bajarSuavemente, velocidad);
 });
 
+
+
+ // Función para mostrar el mensaje y ocultarlo después de 5 segundos
+        function mostrarMensaje() {
+            const mensaje = document.getElementById('mensaje');
+            mensaje.style.display = 'block'; // Muestra el mensaje
+
+            // Oculta el mensaje después de 5 segundos (5000 milisegundos)
+            setTimeout(() => {
+                mensaje.style.display = 'none';
+            }, 3000); // 3000 ms = 3 segundos
+        }
