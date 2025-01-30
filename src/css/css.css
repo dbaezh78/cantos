@@ -616,3 +616,59 @@ hr style="margin-bottom: 25px;">
 .porBis{
 	margin-bottom: 135px;
 }
+
+
+
+.taa::before, .tss::before {
+position: absolute;
+    left: 8px;
+    top: 0px;
+    font-size: 18px;
+    color: gray;
+    font-family: Arial, sans-serif;
+    line-height: 1;
+    font-weight: bold;
+	}
+
+.taa, .tss {
+    position: relative;
+    padding-left: 1.5em;
+}
+
+.taa::before {
+    content: "A";
+}
+
+.tss::before {
+    content: "S";
+}
+
+.dbline {
+    display: flex;
+    flex-direction: column;
+    margin-right: -15px;		/*Aqui tenemos el margen entre lineas db */
+    margin-bottom: 5px;		/*Aqui tenemos el margen entre lineas db */
+    padding-left: 0.5in;	/* Padding que establece el margen del canto*/
+}
+
+.signdb {
+    font-style: italic;
+	text-top: 50px;
+    text-align: right;
+	margin-left: 25px;
+    color: Red; /* Mejora del rojo */
+}
+
+.alab{
+	margin-left: 282px;
+    margin-bottom: -14px;
+    font-size: 15px;
+}
+
+.lyalab {		/*  lyrics_alabanza*/
+    width: 255px;
+    font-family: "Franklin Gothic Medium";
+    font-size: 110%;
+    color: black;
+    /* font-weight: bold; */
+    line-height: 1.0;
