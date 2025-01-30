@@ -507,6 +507,7 @@ hr style="margin-bottom: 25px;">
 	float: left;
 	width: 400px;
 	text-align: left;
+	margin-top: 4px;
 	/* 
 		Contenido descontinuado!!!
 		══════════════════════════
@@ -621,7 +622,7 @@ hr style="margin-bottom: 25px;">
 
 .taa::before, .tss::before {
 position: absolute;
-    left: 8px;
+    left: -19px;
     top: 0px;
     font-size: 18px;
     color: gray;
@@ -660,9 +661,10 @@ position: absolute;
 }
 
 .alab{
-	margin-left: 282px;
+	margin-left: 254px;
     margin-bottom: -14px;
     font-size: 15px;
+	width: 100px;
 }
 
 .lyalab {		/*  lyrics_alabanza*/

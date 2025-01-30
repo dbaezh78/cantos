@@ -51,24 +51,21 @@
 	let Cantor13 = "Alabad al Señor en la tierra,";
 	let Cantor14 = "cetáceos y abismos del mar.";
 	let Cantor15 = "Rayos, granizo, nieve y bruma,";
-	let Cantor16 = "viento huracanado";
-	let Cantor17 = "que cumple sus órdenes.";
-	let Cantor18 = "Montes y todas las sierras,";
-	let Cantor19 = "árboles frutales y cedros.";
-	let Cantor20 = "Fieras y animales domésticos,";
-	let Cantor21 = "reptiles y pájaros que vuelan.";
-	let Cantor22 = "Reyes y pueblos del orbe,";
-	let Cantor23 = "príncipes y jefes del mundo.";
-	let Cantor24 = "Los jóvenes";
-	let Cantor25 = "y también las doncellas,";
-	let Cantor26 = "los viejos a una con los niños.";
-	let Cantor27 = "Alaben el nombre del Señor,";
-	let Cantor28 = "el único nombre sublime.";
-	let Cantor29 = "Su majestad,";
-	let Cantor30 = "sobre el cielo y la tierra,";
-	let Cantor31 = "Él da fuerza y vigor a su pueblo.";
-	let Cantor32 = "Alabanza de todos sus fieles,";
-	let Cantor33 = "de Israel, su pueblo elegido.";
+	let Cantor16 = "viento huracanado que cumple sus órdenes.";
+	let Cantor17 = "Montes y todas las sierras,";
+	let Cantor18 = "árboles frutales y cedros.";
+	let Cantor19 = "Fieras y animales domésticos,";
+	let Cantor20 = "reptiles y pájaros que vuelan.";
+	let Cantor21 = "Reyes y pueblos del orbe,";
+	let Cantor22 = "príncipes y jefes del mundo.";
+	let Cantor23 = "Los jóvenes y también las doncellas,";
+	let Cantor24 = "los viejos a una con los niños.";
+	let Cantor25 = "Alaben el nombre del Señor,";
+	let Cantor26 = "el único nombre sublime.";
+	let Cantor27 = "Su majestad, sobre el cielo y la tierra,";
+	let Cantor28 = "Él da fuerza y vigor a su pueblo.";
+	let Cantor29 = "Alabanza de todos sus fieles,";
+	let Cantor30 = "de Israel, su pueblo elegido.";
 	
 // Asignando variable Tituto//	
 	document.getElementById("t1").textContent = titulo;
@@ -138,8 +135,5 @@
 	document.getElementById("c28").textContent = Cantor28;
 	document.getElementById("c29").textContent = Cantor29;
 	document.getElementById("c30").textContent = Cantor30;
-	document.getElementById("c31").textContent = Cantor31;
-	document.getElementById("c32").textContent = Cantor32;
-	document.getElementById("c33").textContent = Cantor33;
 	
 // Fin del Codigo //	
