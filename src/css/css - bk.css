@@ -1,0 +1,674 @@
+/* CSS
+╔════════════════════════════════════════════════════════╗
+║▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ CSS 4 Web ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓║
+╠════════════════════════════════════════════════════════╣
+║ Creado por: David Báez 							<!-- ║
+║ Fecha de Modificación: 27/1/2025					<!-- ║
+║ Versión: db202501271350 							<!-- ║
+╚════════════════════════════════════════════════════════╝
+
+*/
+body {
+    width: 99%;					/*	*/
+    max-width: 99%; /* Limita el ancho máximo en pantallas grandes */
+	font-family: sans-serif;		/*	*/
+	padding: 0.5%;						/*	*/
+    display: flex;					/*	*/
+	margin-top: 3%;		
+	margin-right: 3%;	
+	margin-left: 3%;	
+	margin-bottom: 3%;	
+    justify-content: center;		/*	*/
+	align-items: center;			/*	*/
+    min-height: 100vh;				/*	*/
+    background-color: #f9f9f9;		/*	*/
+    line-height: 1; /* Reduce el espacio entre líneas */
+/* 
+	Contenido descontinuado!!!
+	══════════════════════════
+		width: auto;	-->
+		width: 100%;	-->
+		margin: 50;		-->
+		*/
+}
+
+.song-container {
+    width: 99%; /* Ajusta al 90% del ancho del dispositivo */
+    max-width: 800px; /* Limita el ancho máximo en pantallas grandes */
+    border: 1px solid #ddd;
+	padding: 0.5%;	
+    border-radius: 8px;
+    background: #fff;
+    text-align: left;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+/* 
+	Contenido descontinuado!!!
+	══════════════════════════
+		width: 820px;		--> Ajusta al 90% del ancho del dispositivo
+		width: 800px;		--> Ajusta al 90% del ancho del dispositivo
+		width: 43%;	 		--> Ajusta al 90% del ancho del dispositivo
+		max-width: 850px; 	--> Limita el ancho máximo en pantallas grandes
+		margin-left: 190px;
+		margin: 0 auto; 	--> Centra el contenedor 
+*/  
+}
+
+.atilevantomisojos-song-container{
+    width: auto; /* Ajusta al 90% del ancho del dispositivo */
+    max-width: auto; /* Limita el ancho máximo en pantallas grandes */
+    border: 1px solid #ddd;
+	padding: 20px;	
+    border-radius: 8px;
+    background: #fff;
+    text-align: left;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+	justify-content: none;
+/* 
+	Contenido descontinuado!!!
+	══════════════════════════
+		margin-left: 190px;
+		margin: 0 auto; 	--> Centra el contenedor 
+		max-width: 850px;	--> Limita el ancho máximo en pantallas grandes
+*/
+}
+
+a {
+      text-decoration: none; /* Quitar subrayado */
+	  color: Black;
+    }
+	
+a:hover {
+      text-decoration: none; /* Opcional: Subrayado al pasar el cursor */
+}
+
+hr {
+	width: auto;
+	margin-top: 1px;
+	margin-bottom: 15px;
+	display: flex;
+	flex-direction: column;
+	clear: both; /* Si hay elementos flotantes */
+/* 
+	Contenido descontinuado!!!
+	══════════════════════════
+		margin-top: 3px; --> Espaciado opcional
+		width: 800px;
+		margin-bottom: 4px;	
+*/
+	
+	margin: 1% 0 1% 0;
+
+}
+
+.cnumber {
+	color: #c0b9b9;
+	font-family: Georgia;
+    text-align: right;	
+	margin-top: -5px;
+	font-weight: normal; 
+	margin-bottom: 4px;
+    margin-right: 10%; /* Margen derecho */
+}
+
+.ima {
+    max-width: 30%; /* Ajusta el tamaño de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: block; /* Asegura que la imagen se comporte como un bloque */
+    margin-left: 60%; /* Empuja la imagen hacia la derecha */
+	font-weight: normal; 
+	margin-top: -30px;
+/* 
+		Contenido descontinuado!!!
+		══════════════════════════
+			margin-bottom: 0px;		--> Aqui tenemos el margen entre lineas db para cuando necesites agregar espacio debajo
+*/
+}
+
+.PreCat {
+    font-size: 80%;
+    font-weight: bold;
+    font-style: italic;
+    font-family: sans-serif;
+    color: gray;
+/* 
+		Contenido descontinuado!!!
+		══════════════════════════
+			position: absolute;	
+			width: 50px; 			---> Ajusta el tamaño de la imagen
+			margin-right: 70px;		---> Margen derecho
+			text-align: right;		---> Alineación del texto
+			margin-left: 50px;
+			margin-top: 1px;
+*/
+
+}
+
+pCatDiv{
+	margin-left: 62%;
+}
+
+.line {
+    display: flex;
+    flex-direction: column;
+    margin-right: -15px;		/*Aqui tenemos el margen entre lineas db */
+    margin-bottom: 5px;		/*Aqui tenemos el margen entre lineas db */
+    padding-left: 0.3in;	/* Padding que establece el margen del canto*/
+}
+
+@font-face {
+    font-family: 'Franklin Gothic Demi Cond';
+    src: url('fonts/FranklinGothicDemiCond.ttf') format('truetype');
+}
+
+.ttcanto {
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 1; /* Reduce el espacio entre líneas */
+    font-family: '72 Black', Arial, sans-serif;
+}
+			
+.tcanto {
+    color: red;
+    font-size: 125%;
+    text-align: center;
+    font-weight: bold;
+	text-shadow: -1px 0px 0px rgba(255, 0, 0, 0.7); /* Sombra roja */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Sombra negra con desenfoque */
+}
+
+.alcentro {
+    text-align: center;
+    font-weight: bold;
+    font-size: 100%;
+	line-height: .1;
+	margin-top: -10px;
+/* 
+		Contenido descontinuado!!!
+		══════════════════════════
+			padding-bottom: 15px;	
+*/
+
+}
+.chords {
+    display: flex;
+    gap: 0px;
+    justify-content: flex-start;
+    font-size: 14px;
+	line-height: 1.6; /* Ajusta este valor para reducir o aumentar el espacio */
+}
+
+.lyrics {
+	width: 100%;
+	font-family: "Franklin Gothic Medium";
+    font-size: 110%;
+    color: black;
+/*    font-weight: bold;	*/
+	line-height: 0.8; /* Ajusta este valor para reducir o aumentar el espacio */
+}
+
+.lyrics100 {
+	width: 200%;
+	font-family: "Franklin Gothic Medium";
+    font-size: 100%;
+    color: black;
+/*    font-weight: bold;	*/
+	line-height: 0.8; /* Ajusta este valor para reducir o aumentar el espacio */
+}
+
+.alyrics {
+	width: 100%;
+    color: Black;
+    font-weight: bold;
+    font-size: 113%;
+	font-family: sans-serif;
+	line-height: 0.8; /* Ajusta este valor para reducir o aumentar el espacio */
+	text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.5); /* Sombra negra con desenfoque */
+}
+
+.alyrics135 {
+	width: 135%;
+    color: Black;
+    font-weight: bold;
+    font-size: 90%;
+	font-family: sans-serif;
+	line-height: 0.8; /* Ajusta este valor para reducir o aumentar el espacio */
+	text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.5); /* Sombra negra con desenfoque */
+}
+.alyrics100 {
+	width: 200%;
+    color: Black;
+    font-weight: bold;
+    font-size: 100%;
+	font-family: sans-serif;
+	line-height: 0.8; /* Ajusta este valor para reducir o aumentar el espacio */
+	text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.5); /* Sombra negra con desenfoque */
+}
+
+.alyrics80 {
+    color: Black;
+    font-weight: bold;
+    font-size: 90%;
+	font-family: sans-serif;
+	line-height: 0.8; /* Ajusta este valor para reducir o aumentar el espacio */
+	text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.5); /* Sombra negra con desenfoque */
+}
+
+.cursiva {
+    font-style: italic;
+    text-align: left;
+    margin-left: -38px;
+    color: Red; /* Mejora del rojo */
+}
+
+/*
+╔═══════════════════════════════╗
+║ csv Abreviación de Cursiva 	║
+╚═══════════════════════════════╝*/
+.csv {
+    font-style: italic;
+	text-align: justify-content;
+/*    text-align: right;*/
+    /*margin-left: -30px;*/
+    color: Red; /* Mejora del rojo */
+}
+
+/*
+╔═══════════════════════════════╗
+║ Estilos para el select	 	║
+╚═══════════════════════════════╝*/
+select {
+	text-align: center;
+    border: none;
+    background: transparent;
+    font-size: 14px;
+    color: red;
+    font-weight: bold;
+    width: 1%;
+    min-width: 22px;
+}
+
+select.no-arrow {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+select:focus {
+    outline: none;
+}
+
+select option {
+    background-color: white;
+    color: black;
+    padding: 5px;
+}
+
+.sblue{		/* Seleccion Azul*/
+	color: blue;
+}
+
+/*
+╔═══════════════════════════════╗
+║ Indicadores personalizados 	║
+╚═══════════════════════════════╝*/
+.t_0, .t_a, .t_s {
+    position: relative;
+    padding-left: 1.5em;
+}
+
+.t_0::before, .t_a::before, .t_s::before {
+    position: absolute;
+    left: 6px;
+    top: 20px;
+    font-size: 18px;
+    color: gray;
+    font-family: Arial, sans-serif;
+    line-height: 1;
+    font-weight: bold;
+}
+
+.t_0::before {
+    content: "0";
+}
+
+.t_a::before {
+    content: "A";
+}
+
+.t_s::before {
+    content: "S";
+}
+
+hr style="margin-bottom: 25px;">
+
+.sCejillas{
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+    font-size: 14px;
+}
+
+.dbm {
+    margin-bottom: 15px;		/*Aqui tenemos el margen entre lineas db para cuando necesites agregar espacio debajo*/
+}
+
+.dbx {
+    margin-top: 15px;		/*Aqui tenemos el margen entre lineas db para cuando necesites agregar espacio debajo*/
+}
+
+.pantalla {
+    width: 50%;
+    height: 50vh;
+}
+
+.imax{
+	max-width: 800px; /* Ajusta el tamaño de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: block; /* Asegura que la imagen se comporte como un bloque */
+}
+
+.saudio {
+    width: 96%; /* Asegura un espacio del 2% a cada lado */
+    margin: 0.3% auto; /* Centra horizontalmente */
+    display: table-cell; /* Esto es importante si no es flex */
+/*		Contenido descontinuado!!! (Esto es importante si no es flex)
+		══════════════════════════
+		display: block; 
+		*/
+}
+
+/* 
+		Contenido descontinuado!!!
+		══════════════════════════
+			.saudio{
+				width: 100%;
+				justify-content: center;		
+				align-items: center;			
+				margin-left: 2%;
+				margin-right: 5%;
+				display:absolute;
+			}
+*/
+
+
+.contenido {
+    display: block;
+}
+.contenido.oculto {
+    display: none;
+}
+
+/* Ocultando contenido para parte de la asamblea
+/* Estilo para el contenedor principal */
+.contenido {
+    display: block;
+}
+
+.contenido.oculto {
+    display: none;
+}
+
+.linea-principal {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: black;
+    margin-bottom: 10px;
+}
+
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/****************************** */
+   .linexx {
+      margin: 10px 0;
+      cursor: pointer;
+    }
+    .hiddenxx {
+      display: none;
+    }
+
+/*
+╔═══════════════════════════════════════════════╗
+║Esto es para hacer aparecer el audio 			║
+╚═══════════════════════════════════════════════╝*/
+.hlplay {
+	margin: 0;
+	cursor: pointer;
+	font-size: 150%;
+    text-align: center;
+	align-content: center;
+/* 
+	Contenido descontinuado!!!
+	══════════════════════════
+		justify-content: center;
+*/
+}
+
+.hline {
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;	
+}
+
+.coro-group {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc; /* Opcional: Borde para separar grupos */
+  border-radius: 5px;
+}
+
+
+/* 
+╔═══════════════════════════════════════════════════════════════════════════╗
+║Ocultar la división por defecto											║
+╚═══════════════════════════════════════════════════════════════════════════╝*/
+        #myDiv {
+            display: none;
+            border: 1px solid black;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+/* 
+╔═══════════════════════════════════════════════════════════════════════════╗
+║Mostrar la división cuando es objetivo del enlace 							║
+╚═══════════════════════════════════════════════════════════════════════════╝*/
+        #myDiv:target {
+            display: block;
+        }
+
+/* 
+		Contenido descontinuado!!!
+		══════════════════════════
+		Contenido db en el que deshabilita el DIV
+	.cdb {
+		display: none;
+		}
+*/
+
+
+/*
+╔═══════════════════════════════════════════════════════════════════════════╗
+║CSS																		║
+║Cambiamos divoff															║
+║desactivable por doff y a deshabilitado por divoff							║
+╚═══════════════════════════════════════════════════════════════════════════╝*/
+
+.doff {
+	float: left;
+	width: 400px;
+	text-align: left;
+	/* 
+		Contenido descontinuado!!!
+		══════════════════════════
+			Estilo normal de los divs
+			width: 50%;		
+	*/
+  }
+
+.doff.divoff {
+    transform-origin: center; /* Define el punto desde donde se realiza el zoom */
+	float: left;
+	width: 100%;
+	display: table-caption;
+
+	/* 
+		Contenido descontinuado!!!
+		══════════════════════════
+		float: left;	
+		text-align: left;
+		justify-content: right;
+	*/
+  }
+ 
+ .doffx.divoffx {
+    transform-origin: center; /* Define el punto desde donde se realiza el zoom */
+	float: left;
+	width: 100%;
+	display: table-caption;
+	margin-bottom: -135px;
+ }
+
+/* Columna div */
+.cdiv {
+	float: left;
+	width: 50%;
+	text-align: left;
+}
+
+	/* 
+		Contenido descontinuado!!!
+		══════════════════════════
+		width: 100%;
+		para poner en body
+		display: table-caption;
+	*/
+
+.bmusic {
+    width: 3%;
+    margin-left: 310px; /* Ajusta este valor según sea necesario */
+    margin-top: -7px;
+	color: #32325f;
+}
+
+@font-face {
+	font-family: 'Material Symbols Outlined';
+	font-style: normal;
+	font-weight: 100 700;
+	src: url(https://fonts.gstatic.com/icon/font?kit=kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsKTDp00f3PbrN41X7o&skey=b8dc2088854b122f&v=v225) format('woff2');
+}
+
+.mso {
+	font-family: 'Material Symbols Outlined';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 150%;
+	line-height: 0;
+	letter-spacing: normal;
+	text-transform: none;
+	display: table-caption;
+	white-space: nowrap;
+	word-wrap: normal;
+	-webkit-font-feature-settings: 'liga';
+	-webkit-font-smoothing: antialiased;
+	/* 
+		Contenido descontinuado!!!
+		══════════════════════════
+		direction: 1tr;
+	*/
+}
+
+
+.stndiv{	/*Segmento Traste y Nota */
+	margin-top: -10px;
+	float: left;
+}
+
+.dbmb100 {margin-bottom: 100px;}
+.dbmb150 {margin-bottom: 150px;}
+.dbmb200 {margin-bottom: 200px;}
+.dbmb250 {margin-bottom: 250px;}
+
+
+
+
+.bis_ima {
+    width: 220px; /* Ajusta el tamaño de la imagen */
+	position: absolute;
+    max-width: 120px; /* Ajusta el tamaño de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: block; /* Asegura que la imagen se comporte como un bloque */
+    margin-left: 340px; /* Empuja la imagen hacia la derecha */
+    margin-top: 10px; /* Empuja la imagen hacia la derecha */
+	font-weight: normal; 
+	max-width: 100px;
+}
+
+.porBis{
+	margin-bottom: 135px;
+}
+
+
+
+.taa::before, .tss::before {
+position: absolute;
+    left: 8px;
+    top: 0px;
+    font-size: 18px;
+    color: gray;
+    font-family: Arial, sans-serif;
+    line-height: 1;
+    font-weight: bold;
+	}
+
+.taa, .tss {
+    position: relative;
+    padding-left: 1.5em;
+}
+
+.taa::before {
+    content: "A";
+}
+
+.tss::before {
+    content: "S";
+}
+
+.dbline {
+    display: flex;
+    flex-direction: column;
+    margin-right: -15px;		/*Aqui tenemos el margen entre lineas db */
+    margin-bottom: 5px;		/*Aqui tenemos el margen entre lineas db */
+    padding-left: 0.5in;	/* Padding que establece el margen del canto*/
+}
+
+.signdb {
+    font-style: italic;
+	text-top: 50px;
+    text-align: right;
+	margin-left: 25px;
+    color: Red; /* Mejora del rojo */
+}
+
+.alab{
+	margin-left: 282px;
+    margin-bottom: -14px;
+    font-size: 15px;
+}
+
+.lyalab {		/*  lyrics_alabanza*/
+    width: 255px;
+    font-family: "Franklin Gothic Medium";
+    font-size: 110%;
+    color: black;
+    /* font-weight: bold; */
+    line-height: 1.0;
