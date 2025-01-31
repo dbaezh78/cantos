@@ -1,0 +1,123 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f8ff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    font-size: 1rem; /* Tamaño de fuente base */
+}
+
+header {
+    background-color: #4CAF50;
+    padding: 1.25rem; /* 20px */
+    color: white;
+    font-size: 1.5rem; /* 24px */
+}
+
+.container {
+    margin: 3.125rem auto; /* 50px */
+    max-width: 23%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.link-button {
+    display: block;
+    margin: 0.01rem 0; /* 10px */
+    padding: 0.4rem; /* 5px */
+    font-size: 1.125rem; /* 18px */
+    color: #333;
+    background-color: white;
+    border: 0.125rem solid #61cee9; /* 2px */
+    border-radius: 0.25rem; /* 4px */
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.link-button:hover {
+    background-color: #2a8727;
+    color: #e5e4e4;
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    header {
+        font-size: 1.25rem; /* 20px */
+        padding: 1rem; /* 16px */
+    }
+
+    .container {
+        max-width: 67%; /* Ajusta el ancho para pantallas más pequeñas */
+        margin: 1.5rem auto; /* 24px */
+    }
+
+    .link-button {
+        font-size: 1rem; /* 16px */
+        margin: 0.5rem 0; /* 8px */
+        padding: 0.5rem; /* 4px */
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        font-size: 1rem; /* 16px */
+        padding: 0.75rem; /* 12px */
+    }
+
+    .container {
+        max-width: 67%; /* Ajusta el ancho para pantallas muy pequeñas */
+        margin: 1rem auto; /* 16px */
+    }
+
+    .link-button {
+        font-size: 0.875rem; /* 14px */
+        margin: 0.0375rem 0; /* 6px */
+        padding: 0.5rem; /* 3px */
+    }
+}
+
+
+/* anterior
+ <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f8ff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            padding: 20px;
+            color: white;
+            font-size: 24px;
+        }
+        .container {
+            margin: 50px auto;
+            max-width: 25%;
+			
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+        }
+        .link-button {
+			display: block;
+			margin: 0px 0;
+			padding: 5px 5px;
+			font-size: 18px;
+			color: #333;
+			background-color: white;
+			border: 2px solid #61cee9;
+			border-radius: 4px;
+			text-decoration: none;
+			transition: background-color 0.3s, color 0.3s;
+        }
+        .link-button:hover {
+            background-color: #f0f8ff;
+            color: #4CAF50;
+        }
+    </style>
+	*/
