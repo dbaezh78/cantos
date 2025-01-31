@@ -2,9 +2,9 @@
 ╔════════════════════════════════════════════════════════╗
 ║▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ CSS 4 Web ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓║
 ╠════════════════════════════════════════════════════════╣
-║ Creado por: David Báez 							<!-- ║
-║ Fecha de Modificación: 27/1/2025					<!-- ║
-║ Versión: db202501271350 							<!-- ║
+║ Creado por: David Báez 							     ║
+║ Fecha de Modificación: 27/1/2025					     ║
+║ Versión: db202501271350 							     ║
 ╚════════════════════════════════════════════════════════╝
 
 */
@@ -195,7 +195,7 @@ pCatDiv{
     gap: 0px;
     justify-content: flex-start;
     font-size: 14px;
-	line-height: 1.5; /* Ajusta este valor para reducir o aumentar el espacio */
+/*	line-height: 1.5; /* Ajusta este valor para reducir o aumentar el espacio */
 }
 
 .lyrics {
@@ -267,9 +267,10 @@ pCatDiv{
 .csv {
     font-style: italic;
 	text-align: justify-content;
+    color: Red; 
+    text-align: justify;
 /*    text-align: right;*/
     /*margin-left: -30px;*/
-    color: Red; /* Mejora del rojo */
 }
 
 /*
@@ -767,6 +768,7 @@ position: absolute;
         .tss::before {
             content: "S";
         }
+
 
 
 
