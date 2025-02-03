@@ -24,16 +24,17 @@ header {
 }
 
 .link-button {
-    display: block;
-    margin: 0.01rem 0; /* 10px */
-    padding: 0.4rem; /* 5px */
-    font-size: 1.125rem; /* 18px */
+    margin: 0.01rem auto;
+    padding: 0.4rem;
+    font-size: 1.125rem;
     color: #333;
     background-color: white;
-    border: 0.125rem solid #61cee9; /* 2px */
-    border-radius: 0.25rem; /* 4px */
+    border: 0.125rem solid #61cee9;
+    border-radius: 0.25rem;
     text-decoration: none;
     transition: background-color 0.3s, color 0.3s;
+    width: 143%;
+    min-width: -webkit-fill-available;
 }
 
 .link-button:hover {
@@ -42,39 +43,40 @@ header {
 }
 
 /* Media Queries para responsividad */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     header {
-        font-size: 1.25rem; /* 20px */
-        padding: 1rem; /* 16px */
+        font-size: 274%; /* 16px */
+        padding: 5%; /* 12px */
     }
 
     .container {
-        max-width: 67%; /* Ajusta el ancho para pantallas más pequeñas */
-        margin: 1.5rem auto; /* 24px */
+        max-width: 63%;
+        margin: 2%;
     }
 
     .link-button {
-        font-size: 1rem; /* 16px */
-        margin: 0.5rem 0; /* 8px */
-        padding: 0.5rem; /* 4px */
+        font-size: 200%;
+        margin: 0.5%;
+        padding: 3%;
     }
 }
 
-@media (max-width: 480px) {
+
+@media (max-width: 384px) {
     header {
-        font-size: 1rem; /* 16px */
-        padding: 0.75rem; /* 12px */
+        font-size: 100%; /* 16px */
+        padding: 5%; /* 12px */
     }
 
     .container {
-        max-width: 67%; /* Ajusta el ancho para pantallas muy pequeñas */
-        margin: 1rem auto; /* 16px */
+        max-width: 50%; /* Ajusta el ancho para pantallas muy pequeñas */
+        margin: 10%; /* 16px */
     }
 
     .link-button {
-        font-size: 0.875rem; /* 14px */
-        margin: 0.0375rem 0; /* 6px */
-        padding: 0.5rem; /* 3px */
+        font-size: 100%;
+        margin: 0.51%;
+        padding: 3%;
     }
 }
 

@@ -1,4 +1,4 @@
-	/* CSS
+/* CSS
 ╔════════════════════════════════════════════════════════╗
 ║▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ CSS 4 Web ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓║
 ╠════════════════════════════════════════════════════════╣
@@ -12,12 +12,12 @@ body {
     width: 99%;					/*	*/
     max-width: 99%; /* Limita el ancho máximo en pantallas grandes */
 	font-family: sans-serif;		/*	*/
-	padding: 0.1%;						/*	*/
+	padding: 0.5%;						/*	*/
     display: flex;					/*	*/
-	margin-top: 1%;		
-	margin-right: 1%;	
-	margin-left: 1%;	
-	margin-bottom: 1%;	
+	margin-top: 3%;		
+	margin-right: 3%;	
+	margin-left: 3%;	
+	margin-bottom: 3%;	
     justify-content: center;		/*	*/
 	align-items: center;			/*	*/
     min-height: 100vh;				/*	*/
@@ -33,8 +33,8 @@ body {
 }
 
 .song-container {
-    width: fit-content; /* Ajusta al 90% del ancho del dispositivo */
-    max-width: max-content; /* Limita el ancho máximo en pantallas grandes */
+    width: 99%; /* Ajusta al 90% del ancho del dispositivo */
+    max-width: 800px; /* Limita el ancho máximo en pantallas grandes */
     border: 1px solid #ddd;
 	padding: 0.5%;	
     border-radius: 8px;
@@ -88,7 +88,6 @@ hr {
 	display: flex;
 	flex-direction: column;
 	clear: both; /* Si hay elementos flotantes */
-	margin: 1% 0 1% 0;
 /* 
 	Contenido descontinuado!!!
 	══════════════════════════
@@ -97,8 +96,9 @@ hr {
 		margin-bottom: 4px;	
 */
 	
-}
+	margin: 1% 0 1% 0;
 
+}
 
 .cnumber {
 	color: #c0b9b9;
@@ -150,10 +150,9 @@ pCatDiv{
 .line {
     display: flex;
     flex-direction: column;
-/*  margin-right: -15px;		/*Aqui tenemos el margen entre lineas db */
-    margin-right: 0px;		/*Aqui tenemos el margen entre lineas db */
+    margin-right: -15px;		/*Aqui tenemos el margen entre lineas db */
     margin-bottom: 5px;		/*Aqui tenemos el margen entre lineas db */
-    padding-left: 5%;	/* Padding que establece el margen del canto*/
+    padding-left: 0.3in;	/* Padding que establece el margen del canto*/
 }
 
 @font-face {
@@ -171,7 +170,7 @@ pCatDiv{
 			
 .tcanto {
     color: red;
-    font-size: 200%;
+    font-size: 125%;
     text-align: center;
     font-weight: bold;
 	text-shadow: -1px 0px 0px rgba(255, 0, 0, 0.7); /* Sombra roja */
@@ -183,39 +182,32 @@ pCatDiv{
     font-weight: bold;
     font-size: 100%;
 	line-height: .1;
-	margin-top: 0;
-}
+	margin-top: -10px;
+/* 
+		Contenido descontinuado!!!
+		══════════════════════════
+			padding-bottom: 15px;	
+*/
 
+}
 .chords {
     display: flex;
-    /*gap: 0px;*/
+    gap: 0px;
     justify-content: flex-start;
     font-size: 14px;
 /*	line-height: 1.5; /* Ajusta este valor para reducir o aumentar el espacio */
 }
 
 .lyrics {
-	width: fit-content;
-	min-width: max-content;
+	width: 123%;
 	font-family: "Franklin Gothic Book",sans-serif;
-    font-size: 100%;
-    color: black;
-	line-height: 0.8; /* Ajusta este valor para reducir o aumentar el espacio */
-}
-
-/* lyrics99%*/
-.lyrics99 {
-	width: fit-content;
-	min-width: max-content;
-	font-family: "Franklin Gothic Book",sans-serif;
-    font-size: 88%;
+    font-size: 110%;
     color: black;
 	line-height: 0.8; /* Ajusta este valor para reducir o aumentar el espacio */
 }
 
 .lyrics100 {
-	width: fit-content;
-	min-width: max-content;
+	width: 200%;
 	font-family: "Franklin Gothic Book";
     font-size: 100%;
     color: black;
@@ -224,30 +216,17 @@ pCatDiv{
 }
 
 .alyrics {
-	width: fit-content;
-	min-width: max-content;
+	width: 123%;
     color: Black;
     font-weight: bold;
-    font-size: 100%;
+    font-size: 113%;
 	font-family: sans-serif;
 	line-height: 0.8; /* Ajusta este valor para reducir o aumentar el espacio */
 	text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.5); /* Sombra negra con desenfoque */
 }
 
-	.alyrics1 {
-		width: fit-content;
-		min-width: max-content;
-		color: Black;
-		font-weight: bold;
-		font-size: 100%;
-		font-family: sans-serif;
-		line-height: 0.8; /* Ajusta este valor para reducir o aumentar el espacio */
-		text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.5); /* Sombra negra con desenfoque */
-	}
-
 .alyrics135 {
-	width: fit-content;
-	min-width: max-content;
+	width: 135%;
     color: Black;
     font-weight: bold;
     font-size: 90%;
@@ -256,8 +235,7 @@ pCatDiv{
 	text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.5); /* Sombra negra con desenfoque */
 }
 .alyrics100 {
-	width: fit-content;
-	min-width: max-content;
+	width: 200%;
     color: Black;
     font-weight: bold;
     font-size: 100%;
@@ -268,7 +246,6 @@ pCatDiv{
 
 .alyrics80 {
     color: Black;
-	min-width: max-content;
     font-weight: bold;
     font-size: 90%;
 	font-family: sans-serif;
@@ -276,22 +253,6 @@ pCatDiv{
 	text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.5); /* Sombra negra con desenfoque */
 }
 
-    .lyrics_, .alyrics_ {
-        width: fit-content;
-		min-width: max-content;
-        font-size: 180%;
-        color: Black;
-        font-family: "Franklin Gothic Book", sans-serif;
-        line-height: 0.8;
-    }
-
-    .lyrics_ {	line-height: 1.0;	}
-    
-    .alyrics_ {
-        font-weight: bold;
-        text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.5);
-    }
-	
 .cursiva {
     font-style: italic;
     text-align: left;
@@ -308,7 +269,8 @@ pCatDiv{
 	text-align: justify-content;
     color: Red; 
     text-align: justify;
-	margin-left: 0px;
+/*    text-align: right;*/
+    /*margin-left: -30px;*/
 }
 
 /*
@@ -316,23 +278,16 @@ pCatDiv{
 ║ Estilos para el select	 	║
 ╚═══════════════════════════════╝*/
 select {
-/*	text-align: right;*/
-    text-align: center;
+	text-align: center;
     border: none;
     background: transparent;
-    font-size: 100%;
+    font-size: 14px;
     color: red;
     font-weight: bold;
-    width: fit-content;;
-/*	width: auto;	*/
-/*    min-width: 10%;	*/
-	min-width: fit-content;
-	margin-bottom: 0%;
+    width: 1%;
+    min-width: 22px;
+	margin-bottom: 5px;
 }
-
-/* Para los diferentes colores de canto	*/
-/*	background-color: deepskyblue;	/* Color Azul */
-	
 
 select.no-arrow {
     -webkit-appearance: none;
@@ -366,7 +321,7 @@ select option {
 .t_0::before, .t_a::before, .t_s::before {
     position: absolute;
     left: 6px;
-    top: 12px;
+    top: 20px;
     font-size: 18px;
     color: gray;
     font-family: Arial, sans-serif;
@@ -603,7 +558,7 @@ hr style="margin-bottom: 25px;">
 .bmusic {
     width: 3%;
     margin-left: 310px; /* Ajusta este valor según sea necesario */
-    margin-top: -4px;
+    margin-top: -7px;
 	color: #32325f;
 }
 
@@ -637,7 +592,7 @@ hr style="margin-bottom: 25px;">
 
 .stndiv{	/*Segmento Traste y Nota */
 	margin-top: -10px;
-/*		float: left;	*/
+	float: left;
 }
 
 .dbmb100 {margin-bottom: 100px;}
@@ -715,7 +670,6 @@ position: absolute;
 
 .lyalab {		/*  lyrics_alabanza*/
     width: 69%;
-	min-width: max-content;
     font-family: "Franklin Gothic Book";
     font-size: 110%;
     color: black;
@@ -732,208 +686,91 @@ position: absolute;
             margin-left: 120px;
         }
 
-	table {
-		border-collapse: collapse;
-		width: ;
-		margin: 3% 0% 3% 0%;
-			}
-		th, td {
-				border: 0px solid black;
-				padding: 0.5%;
-				text-align: left;
-				}
-		 td:first-child {
-			width: fit-content;
-			white-space: nowrap;
-        }
-	
-@media (max-width: 800px) {
-    .lyrics, .alyrics {
-		width: fit-content;
-		min-width: max-content;
-		font-size: 200%;
-		color: Black;
-		font-family: "Franklin Gothic Book", sans-serif;
-        line-height: 0.8; /* Ajusta este valor para reducir o aumentar el espacio */
+/* Modo celular */
+@media (max-width: 417px) {
+    body {
+        width: 99%;					/*	*/
+        max-width: 99%; /* Limita el ancho máximo en pantallas grandes */
+        font-family: sans-serif;		/*	*/
+        padding: 0.5%;						/*	*/
+        display: flex;					/*	*/
+        margin-top: 3%;		
+        margin-right: 3%;	
+        margin-left: 3%;	
+        margin-bottom: 3%;	
+        justify-content: center;		/*	*/
+        align-items: center;			/*	*/
+        min-height: 100vh;				/*	*/
+        background-color: #f9f9f9;		/*	*/
+        line-height: 1; /* Reduce el espacio entre líneas */
     }
-    .lyrics {	line-height: 1.0;	}
     
+    .song-container {
+        width: 99%; /* Ajusta al 90% del ancho del dispositivo */
+        max-width: 800px; /* Limita el ancho máximo en pantallas grandes */
+        border: 1px solid #ddd;
+        padding: 0.5%;	
+        border-radius: 8px;
+        background: #fff;
+        text-align: left;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+
     .alyrics {
-        font-weight: bold;
-        text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.5);
-    }
-	select {
-		font-size: 150%;
-	}
-
-.alyrics1 {
-    width: fit-content;
-    min-width: 110%;
-    color: Black;
-    font-weight: bold;
-    font-size: 138%;
-    font-family: sans-serif;
-    line-height: 0.8;
-    text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.5);
-}
-.tcanto {
-	width: fit-content;
-	min-width: 740px;
-    color: red;
-    font-size: 200%;
-    text-align: center;
-    font-weight: bold;
-    text-shadow: -1px 0px 0px rgba(255, 0, 0, 0.7);
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-	padding-top: 1%;
-}
-.bmusic {
-    width: 3%;
-    margin-left: 44vw;
-    margin-top: -8px;
-    color: #32325f;
-}
-.t_0::before, .t_a::before, .t_s::before {
-    position: absolute;
-    left: 6px;
-    top: 26px;
-    font-size: 24px;
-    color: gray;
-    font-family: Arial, sans-serif;
-    line-height: 1;
-    font-weight: bold;
-}
-.csv {
-    font-style: italic;
-    text-align: right;
-	font-size: 100%;
-    color: Red;
-    margin-left: 0px;
-	}
-	
-	.lyrics_, .alyrics_ {
-    width: fit-content;
-    min-width: 100%;
-    font-size: 179%;
-    color: Black;
-    font-family: "Franklin Gothic Book", sans-serif;
-    line-height: 0.8;
-	}
-	
-    .lyrics_ {	line-height: 1.0;	}
-    
-    .alyrics_ {
-        font-weight: bold;
-        text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.5);
-    }
-	
-}
-
-@media (max-width: 384px) {
-	
-	body {
-    width: 99%;					/*	*/
-    max-width: 99%; /* Limita el ancho máximo en pantallas grandes */
-	font-family: sans-serif;		/*	*/
-	padding: 0.5%;						/*	*/
-    display: flex;					/*	*/
-	margin-top: 3%;		
-	margin-right: 3%;	
-	margin-left: 3%;	
-	margin-bottom: 3%;	
-    justify-content: center;		/*	*/
-	align-items: center;			/*	*/
-    min-height: 100vh;				/*	*/
-    background-color: #f9f9f9;		/*	*/
-    line-height: 1; /* Reduce el espacio entre líneas */
-}
-	
-    .lyrics, .alyrics {
-		width: fit-content;
-		min-width: 360px;
-		font-size: 100%;
-		color: Black;
-		font-family: "Franklin Gothic Book", sans-serif;
-        line-height: 0.8; /* Ajusta este valor para reducir o aumentar el espacio */
-    }
-
-    .lyrics {	line-height: 1.0;	}
-    
-    .alyrics {
-        font-weight: bold;
-        text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.5);
-    }
-	
-	select {
-		font-size: 100%;
-	}
-
-.tcanto {
-	width: fit-content;
-	min-width: 384px;
-    color: red;
-    font-size: 100%;
-    text-align: center;
-    font-weight: bold;
-    text-shadow: -1px 0px 0px rgba(255, 0, 0, 0.7);
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-	padding-top: 1%;
-	}
-	
-.bmusic {
-    width: 3%;
-    margin-left: 600%;
-    margin-top: -8px;
-    color: #32325f;
-	}
-
-.t_0::before, .t_a::before, .t_s::before {
-    position: absolute;
-    left: 6px;
-    top: 14px;
-    font-size: 16px;
-    color: gray;
-    font-family: Arial, sans-serif;
-    line-height: 1;
-    font-weight: bold;
-	}
-	
-	.csv {
-    font-style: italic;
-    text-align: justify-content;
-    color: Red;
-    text-align: justify;
-    margin-left: 0px;
-}
-
-
-    .lyrics_, .alyrics_ {
-        width: fit-content;
-        min-width: 360px;
-        font-size: 81%;
-        color: Black;
-        font-family: "Franklin Gothic Book", sans-serif;
-        line-height: 0.8;
-    }
-
-    .lyrics_ {	line-height: 1.0;	}
-    
-    .alyrics_ {
-        font-weight: bold;
-        text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.5);
-    }
-
-    .alyrics1 {
-        width: fit-content;
-        min-width: max-content;
+        width: 98%;
         color: Black;
         font-weight: bold;
-        font-size: 73%;
+        font-size: 0.89rem;
         font-family: sans-serif;
         line-height: 0.8;
         text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.5);
     }
+    .lyrics {
+        width: 100%;
+        font-family: "Franklin Gothic Book",sans-serif;
+        font-size: 1rem;
+        color: black;
+        line-height: 0.8; /* Ajusta este valor para reducir o aumentar el espacio */
+    }
+
+    .song-container {
+        width: 99%; /* Ajusta al 90% del ancho del dispositivo */
+        max-width: 800px; /* Limita el ancho máximo en pantallas grandes */
+        border: 1px solid #ddd;
+        padding: 0.5%;	
+        border-radius: 8px;
+        background: #fff;
+        text-align: left;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .taa::before, .tss::before {
+        position: absolute;
+            left: -19px;
+            top: 0px;
+            font-size: 18px;
+            color: gray;
+            font-family: Arial, sans-serif;
+            line-height: 1;
+            font-weight: bold;
+            }
+        
+        .taa, .tss {
+            position: relative;
+            padding-left: 1.5em;
+        }
+        
+        .taa::before {
+            content: "A";
+        }
+        
+        .tss::before {
+            content: "S";
+        }
+
+
+
+
 
 }
-
-
