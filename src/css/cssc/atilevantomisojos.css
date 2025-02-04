@@ -101,3 +101,27 @@
 .m99 { margin-right: 99%}
 .m100 { margin-right: 100%}
 
+
+/* Inicio del grupo de 460px que va desde la fila 2014 hasta 3016 */
+@media (max-width: 384px) {
+/* Margen de Contenido*/
+.m00 { margin-right: 0%}
+/*.m23 { margin-right: 30%}*/
+.m28 { margin-right: 42%}
+.m30 { margin-right: 44%}
+.m33 { margin-right: 49%}
+.m48 { margin-right: 68%}
+
+}
+/* Inicio del grupo de 460px que va desde la fila 2014 a 3016 */
+
+/* Fin del grupo de 800px que va desde la fila 1007 a 2011 */
+@media (max-width: 800px) {
+.m00 { margin-right: 0%}
+/*.m23 { margin-right: 30%}*/
+.m28 { margin-right: 42%}
+.m30 { margin-right: 44%}
+.m33 { margin-right: 49%}
+.m48 { margin-right: 68%}
+
+}
