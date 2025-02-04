@@ -20,18 +20,14 @@
 	.m18 { margin-right: 18%}
 	.m19 { margin-right: 19%}
 	.m20 { margin-right: 20%}
-	.m20a { margin-right: 20%}
 	.m21 { margin-right: 21%}
-	.m21a { margin-right: 21%}
 	.m22 { margin-right: 22%}
 	.m23 { margin-right: 23%}
 	.m24 { margin-right: 24%}
 	.m25 { margin-right: 25%}
 	.m26 { margin-right: 26%}
 	.m27 { margin-right: 27%}
-	.m27a { margin-right: 27%}
 	.m28 { margin-right: 28%}
-	.m28a { margin-right: 28%}
 	.m29 { margin-right: 29%}
 	.m30 { margin-right: 30%}
 	.m31 { margin-right: 31%}
@@ -39,22 +35,18 @@
 	.m33 { margin-right: 33%}
 	.m34 { margin-right: 34%}
 	.m35 { margin-right: 35%}
-	.m35a { margin-right: 35%}
 	.m36 { margin-right: 36%}
 	.m37 { margin-right: 37%}
 	.m38 { margin-right: 38%}
 	.m39 { margin-right: 39%}
 	.m40 { margin-right: 40%}
-	.m40a { margin-right: 40%}
 	.m41 { margin-right: 41%}
 	.m42 { margin-right: 42%}
 	.m43 { margin-right: 43%}
 	.m44 { margin-right: 44%}
 	.m45 { margin-right: 45%}
-	.m45a{ margin-right: 45%}
 	.m46 { margin-right: 46%}
 	.m47 { margin-right: 47%}
-	.m47a { margin-right: 47%}
 	.m48 { margin-right: 48%}
 	.m49 { margin-right: 49%}
 	.m50 { margin-right: 50%}
@@ -113,16 +105,7 @@
 @media (min-width: 200px) and (max-width: 384px) {
     /* Margen de Contenido*/
     .m00 { margin-right: 0%}
-    .m22 { margin-right: 18%}
-    .m20a { margin-right: 20%}
-    .m21a { margin-right: 18%}
-    .m27a { margin-right: 21%}
-    .m28a { margin-right: 28%}
-    .m30 { margin-right: 26%}
-    .m30a { margin-right: 26%}
-    .m35a { margin-right: 30%}
-    .m40 { margin-right: 33%}
-    .m40a { margin-right: 33%}
+    .m13 { margin-right: 10%}
 
 
 	
@@ -132,33 +115,7 @@
     /* Fin del grupo de 800px que va desde la fila 1007 a 2011 */
 @media (min-width: 400px) and (max-width: 800px) {
 	.m00 { margin-right: 0%}
-	.m07 { margin-right: 15%}
-	.m14 { margin-right: 35%}
-	.m15 { margin-right: 36%}
-	.m18 { margin-right: 40%}
-	.m19 { margin-right: 40%}
-	.m20 { margin-right: 40%}
-	.m20a { margin-right: 45%}
-	.m21 { margin-right: 42%}
-	.m21a { margin-right: 37%}
-    .m22 { margin-right: 38%}
-	.m24 { margin-right: 50%}
-	.m25 { margin-right: 52%}
-	.m27 { margin-right: 56%}
-	.m27a { margin-right: 47%}
-	.m28 { margin-right: 70%}
-	.m28a { margin-right: 55%}
-	.m29 { margin-right: 59%}
-    .m30 { margin-right: 54%}
-    .m35a { margin-right: 54%}
-    .m31 { margin-right: 68%}
-    .m40 { margin-right: 70%}	
-	.m26 { margin-right: 55%}
-	.m33 { margin-right: 65%}
-	.m35a { margin-right: 60%}
-	.m40a { margin-right: 70%}
-	.m37 { margin-right: 73%}
-	.m47 { margin-right: 95%}
-	.m48 { margin-right: 95%}
+    .m13 { margin-right: 25%}
+
 
 }

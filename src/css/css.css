@@ -10,8 +10,10 @@
 */
 body {
     width: 99%;					/*	*/
-    max-width: 99%; /* Limita el ancho máximo en pantallas grandes */
-	font-family: sans-serif;		/*	*/
+     max-width: 99%; /* Limita el ancho máximo en pantallas grandes */
+    /* width: max-content;					/*	*/
+    /*max-width: max-content; /* Limita el ancho máximo en pantallas grandes */
+	font-family: "Franklin Gothic",sans-serif;
 	padding: 0.1%;						/*	*/
     display: flex;					/*	*/
 	margin-top: 1%;		
@@ -33,10 +35,10 @@ body {
 }
 
 .song-container {
-    width: fit-content; /* Ajusta al 90% del ancho del dispositivo */
+    width: max-content; /* Ajusta al 90% del ancho del dispositivo */
     max-width: max-content; /* Limita el ancho máximo en pantallas grandes */
     border: 1px solid #ddd;
-	padding: 0.5%;	
+	padding: 5%;	
     border-radius: 8px;
     background: #fff;
     text-align: left;
@@ -192,22 +194,30 @@ pCatDiv{
     justify-content: flex-start;
     font-size: 14px;
 /*	line-height: 1.5; /* Ajusta este valor para reducir o aumentar el espacio */
+
 }
 
-.lyrics {
-	width: fit-content;
-	min-width: max-content;
-	font-family: "Franklin Gothic Book",sans-serif;
+.alyrics, .lyrics {
+    width: max-content;
+    max-width: max-content;
+    font-family: "Franklin Gothic", sans-serif;
     font-size: 100%;
+    line-height: 0.8; /* Ajusta este valor para reducir o aumentar el espacio */
     color: black;
-	line-height: 0.8; /* Ajusta este valor para reducir o aumentar el espacio */
+
 }
+
+.alyrics {
+    font-weight: bold;
+	/*text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.5); /* Sombra negra con desenfoque */
+}
+
 
 /* lyrics99%*/
 .lyrics99 {
 	width: fit-content;
 	min-width: max-content;
-	font-family: "Franklin Gothic Book",sans-serif;
+	font-family: "Franklin Gothic",sans-serif;
     font-size: 88%;
     color: black;
 	line-height: 0.8; /* Ajusta este valor para reducir o aumentar el espacio */
@@ -223,24 +233,13 @@ pCatDiv{
 	line-height: 0.8; /* Ajusta este valor para reducir o aumentar el espacio */
 }
 
-.alyrics {
-	width: fit-content;
-	min-width: max-content;
-    color: Black;
-    font-weight: bold;
-    font-size: 100%;
-	font-family: sans-serif;
-	line-height: 0.8; /* Ajusta este valor para reducir o aumentar el espacio */
-	text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.5); /* Sombra negra con desenfoque */
-}
-
 	.alyrics1 {
 		width: fit-content;
 		min-width: max-content;
 		color: Black;
 		font-weight: bold;
 		font-size: 100%;
-		font-family: sans-serif;
+		font-family: "Franklin Gothic", sans-serif;
 		line-height: 0.8; /* Ajusta este valor para reducir o aumentar el espacio */
 		text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.5); /* Sombra negra con desenfoque */
 	}
@@ -251,7 +250,7 @@ pCatDiv{
     color: Black;
     font-weight: bold;
     font-size: 90%;
-	font-family: sans-serif;
+	font-family: "Franklin Gothic", sans-serif;
 	line-height: 0.8; /* Ajusta este valor para reducir o aumentar el espacio */
 	text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.5); /* Sombra negra con desenfoque */
 }
@@ -261,7 +260,7 @@ pCatDiv{
     color: Black;
     font-weight: bold;
     font-size: 100%;
-	font-family: sans-serif;
+	font-family: "Franklin Gothic", sans-serif;
 	line-height: 0.8; /* Ajusta este valor para reducir o aumentar el espacio */
 	text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.5); /* Sombra negra con desenfoque */
 }
@@ -271,7 +270,7 @@ pCatDiv{
 	min-width: max-content;
     font-weight: bold;
     font-size: 90%;
-	font-family: sans-serif;
+	font-family: "Franklin Gothic", sans-serif;
 	line-height: 0.8; /* Ajusta este valor para reducir o aumentar el espacio */
 	text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.5); /* Sombra negra con desenfoque */
 }
@@ -281,7 +280,7 @@ pCatDiv{
 		min-width: max-content;
         font-size: 180%;
         color: Black;
-        font-family: "Franklin Gothic Book", sans-serif;
+        font-family: "Franklin Gothic", sans-serif;
         line-height: 0.8;
     }
 
@@ -386,9 +385,11 @@ select option {
     content: "S";
 }
 
-hr style="margin-bottom: 25px;">
+hr {
+    margin-bottom: 25px; 
+}
 
-.sCejillas{
+.sCejillas {
     display: flex;
     gap: 10px;
     justify-content: flex-start;
@@ -645,16 +646,14 @@ hr style="margin-bottom: 25px;">
 .dbmb200 {margin-bottom: 200px;}
 .dbmb250 {margin-bottom: 250px;}
 
-
-
-
 .bis_ima {
+    float: left;
     width: 220px; /* Ajusta el tamaño de la imagen */
 	position: absolute;
     max-width: 120px; /* Ajusta el tamaño de la imagen */
     height: auto; /* Mantiene la proporción de la imagen */
     display: block; /* Asegura que la imagen se comporte como un bloque */
-    margin-left: 340px; /* Empuja la imagen hacia la derecha */
+    margin-left: 300px; /* Empuja la imagen hacia la derecha */
     margin-top: 10px; /* Empuja la imagen hacia la derecha */
 	font-weight: normal; 
 	max-width: 100px;
@@ -716,7 +715,7 @@ position: absolute;
 .lyalab {		/*  lyrics_alabanza*/
     width: 69%;
 	min-width: max-content;
-    font-family: "Franklin Gothic Book";
+    font-family: "Franklin Gothic";
     font-size: 110%;
     color: black;
     line-height: 1.0;
@@ -734,7 +733,8 @@ position: absolute;
 
 	table {
 		border-collapse: collapse;
-		width: ;
+		width: 100%;
+		max-width: 100%;
 		margin: 3% 0% 3% 0%;
 			}
 		th, td {
@@ -746,17 +746,217 @@ position: absolute;
 			width: fit-content;
 			white-space: nowrap;
         }
+
+        .hmsize{
+            font-size: 68%;
+        }
+    
+
+
+
+/* FIN DEL CONTENIDO LIBRE O SIN FORMATO ESPECIFICADO*/
+
+
+
+
+
+/*@media (min-width: 200px) and (max-width: 384px) { */
+@media (min-width: 200px) and (max-width: 399px) {
 	
-@media (max-width: 800px) {
+	body {/*    width: 99%;					/*	*/ 
+    width: 99%;					/*	*//*max99idth: 99%; /* Limita el ancho máximo en pantallas grandes */ 
+    max-width: 99%; /* Limita el ancho máximo en pantallas gra99es */
+	font-family: sans-serif;		/*	*/
+	padding: 0.5%;						/*	*/
+    display: flex;					/*	*/
+	margin-top: 3%;		
+	margin-right: 3%;	
+	margin-left: 3%;	
+	margin-bottom: 3%;	
+    justify-content: center;		/*	*/
+	align-items: center;			/*	*/
+    min-height: 100vh;				/*	*/
+    background-color: #f9f9f9;		/*	*/
+    line-height: 1; /* Reduce el espacio entre líneas */
+}
+
+.song-container {
+    width: fit-content;
+    max-width: max-content;
+    border: 1px solid #ddd;
+    padding: 2%;
+    border-radius: 8px;
+    background: #fff;
+    text-align: left;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+	/* 200px - 399px */
     .lyrics, .alyrics {
-		width: fit-content;
-		min-width: max-content;
-		font-size: 200%;
+		width: max-content;
+		max-width: max-content;
+		font-size: 91%;
 		color: Black;
-		font-family: "Franklin Gothic Book", sans-serif;
+		font-family: "Franklin Gothic", sans-serif;
         line-height: 0.8; /* Ajusta este valor para reducir o aumentar el espacio */
     }
+
     .lyrics {	line-height: 1.0;	}
+    
+    .alyrics {
+        font-weight: bold;
+        text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.5);
+    }
+	
+	select {
+		font-size: 100%;
+	}
+
+.tcanto {
+	width: fit-content;
+	min-width: 384px;
+    color: red;
+    font-size: 100%;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: -1px 0px 0px rgba(255, 0, 0, 0.7);
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+	padding-top: 1%;
+	}
+	
+.bmusic {
+    width: 3%;
+    /* margin-left: 600%; */
+    margin-top: -8px;
+    color: #32325f;
+	}
+
+.t_0::before, .t_a::before, .t_s::before {
+    position: absolute;
+    left: 0%;
+    top: 14px;
+    font-size: 16px;
+    color: gray;
+    font-family: Arial, sans-serif;
+    line-height: 1;
+    font-weight: bold;
+	}
+	
+	.csv {
+    font-style: italic;
+    text-align: justify-content;
+    color: Red;
+    text-align: justify;
+    margin-left: 0px;
+}
+
+
+    .lyrics_, .alyrics_ {
+        width: fit-content;
+        min-width: 360px;
+        font-size: 81%;
+        color: Black;
+        font-family: "Franklin Gothic", sans-serif;
+        line-height: 0.8;
+    }
+
+    .lyrics_ {	line-height: 1.0;	}
+    
+    .alyrics_ {
+        font-weight: bold;
+        text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.5);
+    }
+
+    .alyrics1 {
+        width: fit-content;
+        min-width: max-content;
+        color: Black;
+        font-weight: bold;
+        font-size: 73%;
+        font-family: sans-serif;
+        line-height: 0.8;
+        text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.5);
+    }
+
+    .bis_ima {
+        float: left;
+        width: 25%; /* Ajusta el tamaño de la imagen */
+        position: absolute;
+        max-width: 24%; /* Ajusta el tamaño de la imagen */
+        height: auto; /* Mantiene la proporción de la imagen */
+        display: block; /* Asegura que la imagen se comporte como un bloque */
+        margin-left: 67%; /* Empuja la imagen hacia la derecha */
+        margin-top: 2%; /* Empuja la imagen hacia la derecha */
+        font-weight: normal; 
+    }
+    .hmsize{
+        font-size: 60%;
+    }
+
+
+}
+
+/* ESTAMOS EN EL ÁREA DEL 400px a 800px 
+╔═══════════════════════════════════════════════════════════════════════════════════════════════════╗
+║▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 400 px a 800 px ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓║
+╚═══════════════════════════════════════════════════════════════════════════════════════════════════╝
+*/
+
+@media (min-width: 400px) and (max-width: 800px) {
+
+/*
+    body {
+        width: max-content;
+        max-width: max-content;
+        font-family: "Franklin Gothic", sans-serif;
+        padding: 0.1%;
+        display: flex;
+        margin: 0 auto; 
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #f9f9f9;
+        line-height: 1;
+        }
+        */
+        
+        body {
+            width: max-content;
+            max-width: max-content;
+            font-family: "Franklin Gothic", sans-serif;
+            padding: 0.1%;
+            display: flex
+        ;
+            margin-top: 1%;
+            margin-right: 1%;
+            margin-left: 1%;
+            margin-bottom: 1%;
+            justify-content: center;
+            align-items: center;
+            min-height: 81vh;
+            background-color: #f9f9f9;
+            line-height: 1;
+        }
+
+
+.song-container {
+    width: max-content;
+    max-width: max-content;
+    border: 1px solid #ddd;
+    padding: 1% 1% 1% 1%;
+    border-radius: 0% 2% 2% 0%;
+    background: #fff;
+    text-align: left;    
+    box-shadow: inset -7px -6px 20px 8px rgba(0, 0, 0, 0.1);
+    
+}
+
+
+    .lyrics, .alyrics {
+		font-size: 166%;
+		color: Black;
+		font-family: "Franklin Gothic", sans-serif;
+        line-height: 0.8; /* Ajusta este valor para reducir o aumentar el espacio */
+    }
     
     .alyrics {
         font-weight: bold;
@@ -768,11 +968,11 @@ position: absolute;
 
 .alyrics1 {
     width: fit-content;
-    min-width: 110%;
+    max-width: max-content;
     color: Black;
     font-weight: bold;
-    font-size: 138%;
-    font-family: sans-serif;
+    font-size: 170%;
+    font-family: "Franklin Gothic", sans-serif;
     line-height: 0.8;
     text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.5);
 }
@@ -803,20 +1003,21 @@ position: absolute;
     line-height: 1;
     font-weight: bold;
 }
-.csv {
-    font-style: italic;
-    text-align: right;
-	font-size: 100%;
-    color: Red;
-    margin-left: 0px;
-	}
-	
+        .csv {
+        font-style: italic;
+        text-align: right;
+        font-size: 100%;
+        color: Red;
+        margin-left: 0px;
+	    }
+
+    	/* 400px - 800px */
 	.lyrics_, .alyrics_ {
     width: fit-content;
-    min-width: 100%;
-    font-size: 179%;
+    min-width: max-content;
+    font-size: 166%;
     color: Black;
-    font-family: "Franklin Gothic Book", sans-serif;
+    font-family: "Franklin Gothic", sans-serif;
     line-height: 0.8;
 	}
 	
@@ -826,114 +1027,21 @@ position: absolute;
         font-weight: bold;
         text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.5);
     }
-	
-}
 
-@media (max-width: 384px) {
-	
-	body {
-    width: 99%;					/*	*/
-    max-width: 99%; /* Limita el ancho máximo en pantallas grandes */
-	font-family: sans-serif;		/*	*/
-	padding: 0.5%;						/*	*/
-    display: flex;					/*	*/
-	margin-top: 3%;		
-	margin-right: 3%;	
-	margin-left: 3%;	
-	margin-bottom: 3%;	
-    justify-content: center;		/*	*/
-	align-items: center;			/*	*/
-    min-height: 100vh;				/*	*/
-    background-color: #f9f9f9;		/*	*/
-    line-height: 1; /* Reduce el espacio entre líneas */
-}
-	
-    .lyrics, .alyrics {
-		width: fit-content;
-		min-width: 360px;
-		font-size: 100%;
-		color: Black;
-		font-family: "Franklin Gothic Book", sans-serif;
-        line-height: 0.8; /* Ajusta este valor para reducir o aumentar el espacio */
+    .bis_ima {
+        float: left;
+        width: 18%; /* Ajusta el tamaño de la imagen */
+        position: absolute;
+        max-width: 18%; /* Ajusta el tamaño de la imagen */
+        height: auto; /* Mantiene la proporción de la imagen */
+        display: block; /* Asegura que la imagen se comporte como un bloque */
+        margin-left: 61%; /* Empuja la imagen hacia la derecha */
+        margin-top: 2%; /* Empuja la imagen hacia la derecha */
+        font-weight: normal; 
     }
 
-    .lyrics {	line-height: 1.0;	}
-    
-    .alyrics {
-        font-weight: bold;
-        text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.5);
-    }
-	
-	select {
-		font-size: 100%;
-	}
-
-.tcanto {
-	width: fit-content;
-	min-width: 384px;
-    color: red;
-    font-size: 100%;
-    text-align: center;
-    font-weight: bold;
-    text-shadow: -1px 0px 0px rgba(255, 0, 0, 0.7);
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-	padding-top: 1%;
-	}
-	
-.bmusic {
-    width: 3%;
-    margin-left: 600%;
-    margin-top: -8px;
-    color: #32325f;
-	}
-
-.t_0::before, .t_a::before, .t_s::before {
-    position: absolute;
-    left: 0%;
-    top: 14px;
-    font-size: 16px;
-    color: gray;
-    font-family: Arial, sans-serif;
-    line-height: 1;
-    font-weight: bold;
-	}
-	
-	.csv {
-    font-style: italic;
-    text-align: justify-content;
-    color: Red;
-    text-align: justify;
-    margin-left: 0px;
-}
-
-
-    .lyrics_, .alyrics_ {
-        width: fit-content;
-        min-width: 360px;
-        font-size: 81%;
-        color: Black;
-        font-family: "Franklin Gothic Book", sans-serif;
-        line-height: 0.8;
-    }
-
-    .lyrics_ {	line-height: 1.0;	}
-    
-    .alyrics_ {
-        font-weight: bold;
-        text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.5);
-    }
-
-    .alyrics1 {
-        width: fit-content;
-        min-width: max-content;
-        color: Black;
-        font-weight: bold;
-        font-size: 73%;
-        font-family: sans-serif;
-        line-height: 0.8;
-        text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.5);
+    .hmsize{
+        font-size: 100%;
     }
 
 }
-
-
