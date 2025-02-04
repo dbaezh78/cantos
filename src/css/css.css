@@ -181,7 +181,7 @@ pCatDiv{
     width: max-content;
     max-width: max-content;
     font-family: "Franklin Gothic", sans-serif;
-    font-size: 100%;
+    font-size: large;
     line-height: 0.8; /* Ajusta este valor para reducir o aumentar el espacio */
     color: black;
 
@@ -198,7 +198,7 @@ pCatDiv{
 	width: fit-content;
 	min-width: max-content;
 	font-family: "Franklin Gothic",sans-serif;
-    font-size: 88%;
+    font-size: large; /*88%; */
     color: black;
 	line-height: 0.8; /* Ajusta este valor para reducir o aumentar el espacio */
 }
@@ -218,7 +218,7 @@ pCatDiv{
 		min-width: max-content;
 		color: Black;
 		font-weight: bold;
-		font-size: 100%;
+		font-size: large; /*100%; */
 		font-family: "Franklin Gothic", sans-serif;
 		line-height: 0.8; /* Ajusta este valor para reducir o aumentar el espacio */
 		text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.5); /* Sombra negra con desenfoque */
@@ -229,7 +229,7 @@ pCatDiv{
 	min-width: max-content;
     color: Black;
     font-weight: bold;
-    font-size: 90%;
+    font-size: large; /* 90%;*/
 	font-family: "Franklin Gothic", sans-serif;
 	line-height: 0.8; /* Ajusta este valor para reducir o aumentar el espacio */
 	text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.5); /* Sombra negra con desenfoque */
@@ -239,7 +239,7 @@ pCatDiv{
 	min-width: max-content;
     color: Black;
     font-weight: bold;
-    font-size: 100%;
+    font-size: large; /* 100%; */
 	font-family: "Franklin Gothic", sans-serif;
 	line-height: 0.8; /* Ajusta este valor para reducir o aumentar el espacio */
 	text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.5); /* Sombra negra con desenfoque */
@@ -249,7 +249,7 @@ pCatDiv{
     color: Black;
 	min-width: max-content;
     font-weight: bold;
-    font-size: 90%;
+    font-size: large; /* 90%; */
 	font-family: "Franklin Gothic", sans-serif;
 	line-height: 0.8; /* Ajusta este valor para reducir o aumentar el espacio */
 	text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.5); /* Sombra negra con desenfoque */
@@ -258,7 +258,7 @@ pCatDiv{
     .lyrics_, .alyrics_ {
         width: fit-content;
 		min-width: max-content;
-        font-size: 180%;
+        font-size: large; /* 180%; */
         color: Black;
         font-family: "Franklin Gothic", sans-serif;
         line-height: 0.8;
@@ -931,7 +931,7 @@ position: absolute;
 
 
     .lyrics, .alyrics {
-		font-size: 166%;
+		font-size: xx-large;
 		color: Black;
 		font-family: "Franklin Gothic", sans-serif;
         line-height: 0.8; /* Ajusta este valor para reducir o aumentar el espacio */
