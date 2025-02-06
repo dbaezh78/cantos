@@ -118,7 +118,7 @@
     /* Inicio del grupo de 460px que va desde la fila 2014 a 3016 */
     
     /* Fin del grupo de 800px que va desde la fila 1007 a 2011 */
-    @media (min-width: 400px) and (max-width: 800px) {
+    @media (min-width: 460px) and (max-width: 800px) {
         .m00 { margin-right: 0%}
         .m05 { margin-right: 23%}
         .m11 { margin-right: 23%}
@@ -137,6 +137,7 @@
         .m39 { margin-right: 83%}
         .m40 { margin-right: 84%}
         .m42 { margin-right: 90%}
+        .m47 { margin-right: 87%}
         .m48 { margin-right: 100%}
         .m50 { margin-right: 83%}
         .m56 { margin-right: 120%}

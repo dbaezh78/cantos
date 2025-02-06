@@ -743,7 +743,7 @@ position: absolute;
 ╚═══════════════════════════════════════════════════════════════════════════════════════════════════╝
 */
 /*@media (min-width: 200px) and (max-width: 384px) { */
-@media (min-width: 200px) and (max-width: 399px) {
+@media (min-width: 200px) and (max-width: 459px) {
 	
 	body {/*    width: 99%;					/*	*/ 
     width: 99%;					/*	*//*max99idth: 99%; /* Limita el ancho máximo en pantallas grandes */ 
@@ -881,7 +881,7 @@ position: absolute;
 ╚═══════════════════════════════════════════════════════════════════════════════════════════════════╝
 */
 
-@media (min-width: 400px) and (max-width: 800px) {
+@media (min-width: 460px) and (max-width: 800px) {
 
 /*
     body {
