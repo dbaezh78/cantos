@@ -1,0 +1,121 @@
+/* Margen de Contenido*/
+	.m00 { margin-right: 0%}
+	.m01 { margin-right: 1%}
+	.m02 { margin-right: 2%}
+	.m03 { margin-right: 3%}
+	.m04 { margin-right: 4%}
+	.m05 { margin-right: 5%}
+	.m06 { margin-right: 6%}
+	.m07 { margin-right: 7%}
+	.m08 { margin-right: 8%}
+	.m09 { margin-right: 9%}
+	.m10 { margin-right: 10%}
+	.m11 { margin-right: 11%}
+	.m12 { margin-right: 12%}
+	.m13 { margin-right: 13%}
+	.m14 { margin-right: 14%}
+	.m15 { margin-right: 15%}
+	.m16 { margin-right: 16%}
+	.m17 { margin-right: 17%}
+	.m18 { margin-right: 18%}
+	.m19 { margin-right: 19%}
+	.m20 { margin-right: 20%}
+	.m21 { margin-right: 21%}
+	.m22 { margin-right: 22%}
+	.m23 { margin-right: 23%}
+	.m24 { margin-right: 24%}
+	.m25 { margin-right: 25%}
+	.m26 { margin-right: 26%}
+	.m27 { margin-right: 27%}
+	.m28 { margin-right: 28%}
+	.m29 { margin-right: 29%}
+	.m30 { margin-right: 30%}
+	.m31 { margin-right: 31%}
+	.m32 { margin-right: 32%}
+	.m33 { margin-right: 33%}
+	.m34 { margin-right: 34%}
+	.m35 { margin-right: 35%}
+	.m36 { margin-right: 36%}
+	.m37 { margin-right: 37%}
+	.m38 { margin-right: 38%}
+	.m39 { margin-right: 39%}
+	.m40 { margin-right: 40%}
+	.m41 { margin-right: 41%}
+	.m42 { margin-right: 42%}
+	.m43 { margin-right: 43%}
+	.m44 { margin-right: 44%}
+	.m45 { margin-right: 45%}
+	.m46 { margin-right: 46%}
+	.m47 { margin-right: 47%}
+	.m48 { margin-right: 48%}
+	.m49 { margin-right: 49%}
+	.m50 { margin-right: 50%}
+	.m51 { margin-right: 51%}
+	.m52 { margin-right: 52%}
+	.m53 { margin-right: 53%}
+	.m54 { margin-right: 54%}
+	.m55 { margin-right: 55%}
+	.m56 { margin-right: 56%}
+	.m57 { margin-right: 57%}
+	.m58 { margin-right: 58%}
+	.m59 { margin-right: 59%}
+	.m60 { margin-right: 60%}
+	.m61 { margin-right: 61%}
+	.m62 { margin-right: 62%}
+	.m63 { margin-right: 63%}
+	.m64 { margin-right: 64%}
+	.m65 { margin-right: 65%}
+	.m66 { margin-right: 66%}
+	.m67 { margin-right: 67%}
+	.m68 { margin-right: 68%}
+	.m69 { margin-right: 69%}
+	.m70 { margin-right: 70%}
+	.m71 { margin-right: 71%}
+	.m72 { margin-right: 72%}
+	.m73 { margin-right: 73%}
+	.m74 { margin-right: 74%}
+	.m75 { margin-right: 75%}
+	.m76 { margin-right: 76%}
+	.m77 { margin-right: 77%}
+	.m78 { margin-right: 78%}
+	.m79 { margin-right: 79%}
+	.m80 { margin-right: 80%}
+	.m81 { margin-right: 81%}
+	.m82 { margin-right: 82%}
+	.m83 { margin-right: 83%}
+	.m84 { margin-right: 84%}
+	.m85 { margin-right: 85%}
+	.m86 { margin-right: 86%}
+	.m87 { margin-right: 87%}
+	.m88 { margin-right: 88%}
+	.m89 { margin-right: 89%}
+	.m90 { margin-right: 90%}
+	.m91 { margin-right: 91%}
+	.m92 { margin-right: 92%}
+	.m93 { margin-right: 93%}
+	.m94 { margin-right: 94%}
+	.m95 { margin-right: 95%}
+	.m96 { margin-right: 96%}
+	.m97 { margin-right: 97%}
+	.m98 { margin-right: 98%}
+	.m99 { margin-right: 99%}
+	.m100 { margin-right: 100%}
+
+/* Inicio del grupo de 348px que va desde la fila 2014 hasta 3016 */
+@media (min-width: 200px) and (max-width: 384px) {
+    /* Margen de Contenido*/
+    .m00 { margin-right: 0%}
+    .m13 { margin-right: 10%}
+
+
+	
+    }
+    /* Inicio del grupo de 460px que va desde la fila 2014 a 3016 */
+    
+    /* Fin del grupo de 800px que va desde la fila 1007 a 2011 */
+@media (min-width: 400px) and (max-width: 800px) {
+	.m00 { margin-right: 0%}
+    .m13 { margin-right: 25%}
+
+
+}
