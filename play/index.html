@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reproductor de Música</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <link rel="icon" href="img/play-circle-fill.svg" type="image/x-icon" />
+</head>
+<body>
+
+    <section class="reproductor-musica">
+
+        <div class="selector-archivos">
+            <div class="selector selector-musica">
+                <label for="musica-input">Playlist +</label>
+                <input id="musica-input" type="file" multiple accept="audio/*">
+            </div>
+            <div class="selector selector-fondo">
+                <label for="fondo-input">Background</label>
+                <input id="fondo-input" type="file" accept="image/*">
+            </div>
+        </div>
+
+        <div class="playlist">
+            <h2>Mi Playlist</h2>
+            <ul id="playlist-container">
+            </ul>
+        </div>
+
+        <h1>Título</h1>
+        <p>Nombre</p>
+        <audio id="cancion">
+            <source src="" type="audio/mpeg"/>
+        </audio>
+        <input type="range" value="0" id="progreso"/>
+        <div class="controles">
+            <button class="aleatorio control">
+                <i class="bi bi-shuffle" id="iconoAleatorio"></i>
+            </button>
+            <button class="atras control">
+                <i class="bi bi-rewind-fill"></i>
+            </button>
+            <button class="boton-reproducir-pausar iconoControl">
+                <i class="bi bi-play-fill" id="iconoControl"></i>
+            </button>
+            <button class="adelante control">
+                <i class="bi bi-fast-forward-fill"></i>
+            </button>
+            <button class="repetir control">
+                <i class="bi bi-repeat" id="iconoRepetir"></i>
+            </button>
+        </div>
+    </section>
+    
+    <script src="app.js"></script>
+</body>
+</html>
