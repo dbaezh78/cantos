@@ -380,6 +380,10 @@ hr {
     margin-bottom: 15px;		/*Aqui tenemos el margen entre lineas db para cuando necesites agregar espacio debajo*/
 }
 
+.db5 {
+    margin-bottom: 5px;		/*Aqui tenemos el margen entre lineas db para cuando necesites agregar espacio debajo*/
+}
+
 .dbx {
     margin-top: 15px;		/*Aqui tenemos el margen entre lineas db para cuando necesites agregar espacio debajo*/
 }
@@ -397,7 +401,7 @@ hr {
 
 .saudio {
     width: 96%; /* Asegura un espacio del 2% a cada lado */
-    margin: 0.3% auto; /* Centra horizontalmente */
+    margin: 1.3% auto 1.3px auto; /* Centra horizontalmente */
     display: table-cell; /* Esto es importante si no es flex */
 /*		Contenido descontinuado!!! (Esto es importante si no es flex)
 		══════════════════════════
@@ -599,11 +603,11 @@ hr {
 	font-family: 'Material Symbols Outlined';
 	font-weight: normal;
 	font-style: normal;
-	font-size: 150%;
+	font-size: 140%;
 	line-height: 0;
 	letter-spacing: normal;
 	text-transform: none;
-	display: table-caption;
+	display: revert-layer;
 	white-space: nowrap;
 	word-wrap: normal;
 	-webkit-font-feature-settings: 'liga';
@@ -1022,4 +1026,8 @@ position: absolute;
         font-size: 100%;
     }
 
+}
+
+.dhide {
+    display: none;
 }

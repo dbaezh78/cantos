@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ocultar con CSS</title>
+    <style>
+
+/* Mantener visible el checkbox */
+#toggle { 
+    cursor: pointer;
+}
+
+/* Ocultar por defecto los elementos con la clase dhide */
+.dhide {
+    display: none;
+}
+
+/* Mostrar los elementos cuando el checkbox está marcado */
+#toggle:checked ~ .dhide {
+    display: block;
+}
+
+</style>
+
+</head>
+<body>
+<input type="checkbox" id="toggle">
+
+<!-- Elementos en distintas partes del HTML -->
+<i class="dhide">
+    <select class="chord no-arrow" name="nMusic" data-default="Re"></select>
+    <i><b class="csv">7</b></i>
+</i>
+
+<p class="dhide">Este es otro contenido que se oculta y muestra.</p>
+
+</body>
+
+</html>

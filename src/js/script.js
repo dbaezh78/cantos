@@ -166,3 +166,14 @@ document.getElementById('startScroll').addEventListener('click', function (e) {
                 mensaje.style.display = 'none';
             }, 3000); // 3000 ms = 3 segundos
         }
+
+    document.getElementById('toggle').addEventListener('change', function() {
+        var elements = document.querySelectorAll('.hct');
+        elements.forEach(function(element) {
+            if (this.checked) {
+                element.classList.remove('dhide');
+            } else {
+                element.classList.add('dhide');
+            }
+        }, this);
+    });
