@@ -116,6 +116,27 @@
 @media (min-width: 400px) and (max-width: 800px) {
 	.m00 { margin-right: 0%}
     .m13 { margin-right: 25%}
+    .m20 { margin-right: 36%}
+    .m24 { margin-right: 48%}
+    .m29 { margin-right: 53%}
+    .m30 { margin-right: 57%}
+    .m33 { margin-right: 62%}
+    .m32 { margin-right: 58%}
+    .m34 { margin-right: 60%}
+    .m35 { margin-right: 63%}
+    .m36 { margin-right: 65%}
+    .m40 { margin-right: 73%}
+    .m45 { margin-right: 84%}
+    .m47 { margin-right: 85%}
+    .m50 { margin-right: 88%}
+    .m62 { margin-right: 110%}
+	.m38 {margin-right: 70%} /*c13*/
+	.m22 {margin-right: 39%} /*c14*/
+	.m46 {margin-right: 84%} /*c16*/
+	.m43 {margin-right: 79%} /*c18*/
+	.m27 {margin-right: 57%} /*c19*/
+	.m41 {margin-right: 74%} /*c20*/
+	.m25 {margin-right: 48%} /*c24*/
 
 
 }
