@@ -14,7 +14,7 @@
 	let Asamblea6 = "ALELUYA, ALELUYA.";
 	let Asamblea7 = "OH MUERTE ¿DÓNDE ESTÁ TU AGUIJÓN?";
 	let Asamblea8 = "ALELUYA, ALELUYA.";
-	let Asamblea9 = "POR ESO CANTAMOS:";
+	let Asamblea9 = "POR ESO CANTAMOS...";
 	let Asamblea10 = "LA MUERTE ES ABSORBIDA";
 	let Asamblea11 = "EN LA VICTORIA.";
 	let Asamblea12 = "ALELUYA, ALELUYA.";
@@ -25,7 +25,7 @@
 	let Asamblea17 = "ALELUYA, ALELUYA, ALELUYA. ";
 	let Asamblea18 = "SEGÚN LAS ESCRITURAS;";
 	let Asamblea19 = "SEGÚN LAS ESCRITURAS; ";
-	let Asamblea20 = "POR ESO CANTAMOS:";
+	let Asamblea20 = "POR ESO CANTAMOS...";
 	let Asamblea21 = "LA MUERTE ES ABSORBIDA";
 	let Asamblea22 = "EN LA VICTORIA.";
 	let Asamblea23 = "ALELUYA, ALELUYA.";
