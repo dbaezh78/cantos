@@ -1,11 +1,9 @@
-// Lista de acordes con todas las notas cromáticas
-const acordes = ["Do", "Do#", "Re", "Re#", "Mi", "Fa", "Fa#", "Sol", "Sol#", "La", "Sib", "Si"];
+// Lista de acordes
+const acordes = ["Do", "Re", "Mi", "Fa", "Sol", "La", "Si"];
 
 // Función para generar las opciones del menú desplegable
 function generarOpciones(defaultValue) {
-    return acordes.map(acorde => 
-        `<option value="${acorde}"${acorde === defaultValue ? ' selected' : ''}>${acorde}</option>`
-    ).join('');
+    return acordes.map(acorde => `<option value="${acorde}"${acorde === defaultValue ? ' selected' : ''}>${acorde}</option>`).join('');
 }
 
 // Configurar cada selector de acordes
@@ -19,7 +17,7 @@ function obtenerIndiceAcorde(acorde) {
     return acordes.indexOf(acorde);
 }
 
-// Función para calcular un acorde desplazado correctamente en la escala cromática
+// Función para calcular un acorde desplazado
 function calcularAcordeDesplazado(acorde, desplazamiento) {
     const indiceActual = obtenerIndiceAcorde(acorde);
     if (indiceActual === -1) return acorde;
@@ -43,7 +41,6 @@ document.querySelectorAll('.chord').forEach(select => {
         });
     });
 });
-
 
 
 
