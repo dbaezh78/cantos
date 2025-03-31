@@ -342,7 +342,7 @@ select option {
     padding-left: 1.5em;
 }
 
-.t_0::before, .t_a::before, .t_s::before {
+.t_0::before, .t_a::before, .t_s::before, .t_s1::before {
     position: absolute;
     left: 0%;
     top: 12px;
@@ -354,7 +354,18 @@ select option {
 }
 
 .t_0::before {
-    content: "0";
+    position: absolute;
+    left: 0%;
+    top: 0px;
+    font-size: 18px;
+    color: gray;
+    font-family: Arial, sans-serif;
+    line-height: 1;
+    font-weight: bold;
+}
+
+.t_0::before {
+    content: "A";
 }
 
 .t_a::before {
@@ -362,6 +373,10 @@ select option {
 }
 
 .t_s::before {
+    content: "S";
+}
+
+.t_s1::before {
     content: "S";
 }
 
