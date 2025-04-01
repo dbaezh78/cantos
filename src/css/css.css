@@ -365,6 +365,18 @@ select option {
     font-weight: bold;
 }
 
+.niño::before {
+    position: absolute;
+    margin-left: -27px;
+    margin-top: 21px;
+    font-size: 13px;
+    color: gray;
+    font-family: Arial, sans-serif;
+    line-height: 1;
+    font-weight: bold;
+}
+
+
 .t_0::before {
     content: "A";
 }
@@ -379,6 +391,10 @@ select option {
 
 .t_s1::before {
     content: "S";
+}
+
+.niño::before {
+    content: "Niños:";
 }
 
 hr {
