@@ -20,6 +20,7 @@ a {
 
 .cima {
     width: 20%;
+    padding: 3%;
 }
 
 header {
@@ -293,3 +294,33 @@ h2 {
             margin-right: -5px;
             }
 }
+.resucito-linea {
+    display: flex;
+    align-items: center;
+    gap: 4px; /* Espacio entre elementos */
+    white-space: nowrap; /* Evita saltos de línea */
+  }
+  
+  .punto-rojo {
+    color: red;
+    font-size: 1em; /* Mismo tamaño que el texto */
+  }
+  
+  .rd-colores {
+    font-size: 0.7em; /* Más pequeño que "RESUCITÓ" */
+    display: inline-flex;
+  }
+  
+  .r-azul {
+    color: blue;
+  }
+  
+  .d-rojo {
+    color: red;
+  }
+
+  .d-blanco {
+    color: #6b4323cd;
+  }
+
+  
