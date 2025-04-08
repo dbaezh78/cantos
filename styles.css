@@ -58,7 +58,7 @@ h2 {
 
 .filter-toggle-button {
     padding: 10px 15px;
-    background-color: #9722c2;
+    background-color: #2196F3;
     color: white;
     border: none;
     border-radius: 20px 0 0 20px;
@@ -69,7 +69,7 @@ h2 {
 }
 
 .filter-toggle-button:hover {
-    background-color: #9722c2;
+    background-color: #2196F3;
 }
 
 .search-container input {
@@ -283,7 +283,7 @@ h2 {
         }
 
         .filter-toggle-button {
-            background-color: #9722c2;
+            background-color: #2196F3;
             color: white;
             border: none;
             border-radius: 20px 0 0 20px;

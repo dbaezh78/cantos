@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     function getCategoryColor(category) {
         switch(category) {
-            case 'Precatecumenado': return '#ffffff';
+            case 'Precatecumenado': return '#eee';
             case 'Catecumenado': return '#2196F3';
             case 'Eleccion': return '#8BC34A';
             case 'Liturgia': return '#FFEB3B';
