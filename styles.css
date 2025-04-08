@@ -4,17 +4,28 @@ body {
     color: #333;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 5px;
     background-color: #f9f9f9;
 }
 
 a {
     text-decoration: none;
 }
+
+.tResucito{
+    color: #bc0009;
+    font-size: 454%;
+    text-align: center;
+}
+
+.cima {
+    width: 20%;
+}
+
 header {
     text-align: center;
-    margin-bottom: 30px;
-    padding-bottom: 20px;
+    margin-bottom: 5px;
+    padding-bottom: 2px;
     border-bottom: 2px solid #ddd;
 }
 
@@ -42,11 +53,12 @@ h2 {
 
 .search-container {
     display: flex;
+    align-items: baseline;
 }
 
 .filter-toggle-button {
     padding: 10px 15px;
-    background-color: #607D8B;
+    background-color: #9722c2;
     color: white;
     border: none;
     border-radius: 20px 0 0 20px;
@@ -57,7 +69,7 @@ h2 {
 }
 
 .filter-toggle-button:hover {
-    background-color: #546E7A;
+    background-color: #9722c2;
 }
 
 .search-container input {
@@ -151,15 +163,15 @@ h2 {
 .songs-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
+    gap: 8px;
 }
 
-.song-card {
+.song-card { /* Esta es la tarjeta del canto*/
     display: block;
     text-decoration: none;
     color: inherit;
     background-color: white;
-    padding: 20px;
+    padding: 4px;       /* Estaba en 20px */
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     transition: transform 0.3s, box-shadow 0.3s;
@@ -172,7 +184,7 @@ h2 {
 
 .song-title {
     font-size: 1.2rem;
-    margin-bottom: 5px;
+    margin-bottom: 2px;
     color: #222;
 }
 
@@ -191,7 +203,7 @@ h2 {
     border-radius: 4px;
     font-size: 0.8rem;
     margin-right: 5px;
-    margin-bottom: 5px;
+    /*margin-bottom: 5px;*/
 }
 
 .song-moment {
@@ -250,4 +262,34 @@ h2 {
     .category-filters, .moment-filters {
         flex-direction: column;
     }
+}
+
+@media (max-width: 384px) {
+    .cima {
+        width: 50%;
+    }
+    #clearSearch {
+        width: 26%;
+        border-radius: 0 20px 20px 0;
+    }
+        .search-container input {
+            border-radius: 0;
+            margin-bottom: 5px;
+            width: 40%;
+        }
+        .filter-toggle-button {
+            width: 26%;
+            border-radius: 20px 0 0 20px;
+        }
+
+        .filter-toggle-button {
+            background-color: #9722c2;
+            color: white;
+            border: none;
+            border-radius: 20px 0 0 20px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s;
+            margin-right: -5px;
+            }
 }
