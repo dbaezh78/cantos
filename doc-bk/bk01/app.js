@@ -2,8 +2,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const songsList = document.querySelector('.songs-list');
     const searchInput = document.getElementById('searchInput');
     const clearSearch = document.getElementById('clearSearch');
-    const toggleFilters = document.getElementById('toggleFilters');
-    const filtersContainer = document.querySelector('.filters-container');
     const categoryFilters = document.querySelectorAll('.category-filter');
     const momentFilters = document.querySelectorAll('.moment-filter');
     
@@ -60,39 +58,39 @@ document.addEventListener('DOMContentLoaded', function() {
     function filterSongs() {
         let filteredSongs = [...songs];
         
-        // Filtrar por categoría
         if (activeFilters.category) {
             filteredSongs = filteredSongs.filter(song => song.category === activeFilters.category);
         }
         
-        // Filtrar por momentos litúrgicos
         if (activeFilters.moments.length > 0) {
             filteredSongs = filteredSongs.filter(song => 
                 song.moments.some(moment => activeFilters.moments.includes(moment))
             );
         }
         
-        // Filtrar por búsqueda
-        const searchTerm = removeAccents(searchInput.value.toLowerCase());
+        displaySongs(filteredSongs);
+    }
+    
+    // Búsqueda en tiempo real
+    searchInput.addEventListener('input', function() {
+        const searchTerm = removeAccents(this.value.toLowerCase());
+        
         if (searchTerm) {
-            filteredSongs = filteredSongs.filter(song => 
+            const filteredSongs = songs.filter(song => 
                 removeAccents(song.title.toLowerCase()).includes(searchTerm) || 
                 removeAccents(song.subtitle.toLowerCase()).includes(searchTerm)
             );
+            displaySongs(filteredSongs);
+        } else {
+            filterSongs(); // Aplicar otros filtros si existen
         }
-        
-        displaySongs(filteredSongs);
-    }
+    });
     
     // Función para eliminar acentos
     function removeAccents(text) {
         return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
     }
     
-    // Búsqueda en tiempo real
-    searchInput.addEventListener('input', filterSongs);
-    
-    // Limpiar búsqueda y filtros
     clearSearch.addEventListener('click', function() {
         searchInput.value = '';
         activeFilters.category = null;
@@ -104,13 +102,6 @@ document.addEventListener('DOMContentLoaded', function() {
         displaySongs(songs);
     });
     
-    // Mostrar/ocultar filtros
-    toggleFilters.addEventListener('click', function() {
-        filtersContainer.classList.toggle('hidden');
-        this.innerHTML = filtersContainer.classList.contains('hidden') ? 'Filtrar ▼' : 'Filtrar ▲';
-    });
-    
-    // Filtros por categoría
     categoryFilters.forEach(filter => {
         filter.addEventListener('click', function() {
             const category = this.getAttribute('data-category');
@@ -128,7 +119,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Filtros por momento litúrgico
     momentFilters.forEach(filter => {
         filter.addEventListener('click', function() {
             const moment = this.getAttribute('data-moment');
@@ -143,6 +133,23 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
             filterSongs();
+        });
+    });
+    
+    // Mostrar/ocultar filtros al hacer clic en los títulos
+    document.querySelectorAll('.filter-toggle').forEach(toggle => {
+        toggle.addEventListener('click', function() {
+            const target = this.getAttribute('data-target');
+            const filterContainer = document.querySelector(`.${target}`);
+            
+            filterContainer.classList.toggle('hidden');
+            
+            // Cambiar el indicador (▼/▲)
+            if (filterContainer.classList.contains('hidden')) {
+                this.innerHTML = this.textContent.replace('▲', '▼');
+            } else {
+                this.innerHTML = this.textContent.replace('▼', '▲');
+            }
         });
     });
 });

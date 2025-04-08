@@ -11,36 +11,44 @@
         <a href="./">
         <h1 style="color:#bc0009; font-size: 470%;">RESUCITÓ</h1>
         <img width="20%"    src="/cantos/img/logo_cantos.png" alt="Camino neocatecumenal"></a>
-        
     </header>
 
     <div class="controls">
         <div class="search-container">
+            <button id="toggleFilters" class="filter-toggle-button">Filtrar ▼</button>
             <input type="text" id="searchInput" placeholder="Buscar cantos...">
-            <button id="searchButton">Buscar</button>
             <button id="clearSearch">Limpiar</button>
         </div>
 
-        <div class="filters">
-            <h3 class="filter-toggle" data-target="category-filters">Categorías principales: ▼</h3>
-            <div class="category-filters hidden">
-                <button class="category-filter" data-category="Precatecumenado">Precatecumenado</button>
-                <button class="category-filter" data-category="Catecumenado">Catecumenado</button>
-                <button class="category-filter" data-category="Eleccion">Elección</button>
-                <button class="category-filter" data-category="Liturgia">Liturgia</button>
-                <button class="moment-filter" data-moment="Entrada">Entrada</button>
-                <button class="moment-filter" data-moment="Paz">Paz</button>
-                <button class="moment-filter" data-moment="Fracción del Pan">Fracción del Pan</button>
-                <button class="moment-filter" data-moment="Comunión">Comunión</button>
-                <button class="moment-filter" data-moment="Final">Final</button>
-                <button class="moment-filter" data-moment="Adviento">Adviento</button>
-                <button class="moment-filter" data-moment="Navidad">Navidad</button>
-                <button class="moment-filter" data-moment="Pascua - Pentecostés">Pascua - Pentecostés</button>
-                <button class="moment-filter" data-moment="Virgen">Vírgen María</button>
-                <button class="moment-filter" data-moment="Aclamación">Aclamación</button>
-                <button class="moment-filter" data-moment="Laudes/Visperas">Laudes</button>
-                <button class="moment-filter" data-moment="Penitencial">Penitencial</button>
-                <button class="moment-filter" data-moment="Salmodia">Salmodia</button>
+        <div class="filters-container hidden">
+            <div class="filters">
+                <h3>Etapas del Camino</h3>
+                <div class="category-filters">
+                    <button class="category-filter" data-category="Precatecumenado">Precatecumenado</button>
+                    <button class="category-filter" data-category="Catecumenado">Catecumenado</button>
+                    <button class="category-filter" data-category="Eleccion">Elección</button>
+                    <button class="category-filter" data-category="Liturgia">Liturgia</button>
+                </div>
+
+                <h3>Filtros de los Cantos</h3>
+                <div class="moment-filters">
+                    <button class="moment-filter" data-moment="Entrada">Entrada</button>
+                    <button class="moment-filter" data-moment="Paz">Paz</button>
+                    <button class="moment-filter" data-moment="Fracción del Pan">Fracción del Pan</button>
+                    <button class="moment-filter" data-moment="Comunión">Comunión</button>
+                    <button class="moment-filter" data-moment="Final">Final</button>
+                    <button class="moment-filter" data-moment="Adviento">Adviento</button>
+                    <button class="moment-filter" data-moment="Navidad">Navidad</button>
+                    <button class="moment-filter" data-moment="Pascua">Pascua</button>
+                    <button class="moment-filter" data-moment="Pentecostés">Pentecostés</button>
+                    <button class="moment-filter" data-moment="Virgen">Vírgen María</button>
+                    <button class="moment-filter" data-moment="Aclamación">Aclamación</button>
+                    <button class="moment-filter" data-moment="Laudes/Visperas">Laudes</button>
+                    <button class="moment-filter" data-moment="Penitencial">Penitencial</button>
+                    <button class="moment-filter" data-moment="Salmodia">Salmodia</button>
+                    <button class="moment-filter" data-moment="Nuevo Testamento">Nuevo Testamento</button>
+                    <button class="moment-filter" data-moment="Antiguo Testamento">Antiguo Testamento</button>
+                </div>
             </div>
         </div>
     </div>
