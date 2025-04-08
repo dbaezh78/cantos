@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
+    text-align: left;
     background-color: #f0f8ff;
     color: #333;
     margin: 0;
@@ -33,8 +33,8 @@ header {
     border-radius: 0.25rem;
     text-decoration: none;
     transition: background-color 0.3s, color 0.3s;
-    width: 143%;
-    min-width: -webkit-fill-available;
+    width: 100%;
+    min-width: max-content;
 }
 
 .link-button:hover {

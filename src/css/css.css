@@ -34,10 +34,9 @@ body {
     border: 1px solid #ddd;
     padding: 1% 2% 1% 2%;
     border-radius: 1% 1% 1% 1%;
-    background: #fff;
+    background: white;
     text-align: left;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-
 }
 
 .atilevantomisojos-song-container{
