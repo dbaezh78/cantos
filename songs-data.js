@@ -6,6 +6,7 @@ const songs = [
     {id:3,title: "A ti levanto mis ojos", subtitle: "Salmo 123 (122)", category: "Precatecumenado", moments: ["Cuaresma", "Antiguo Testamento"], url: "/cantos/src/chtml/a/atilevantomisojos.html"},
     {id:4,title: "A ti, Señor, en mi clamor imploro", subtitle: "Salmo 142 (141)", category: "Precatecumenado", moments: ["Cuaresma", "Antiguo Testamento"], url: "/cantos/src/chtml/a/atisenorenmiclamorimploro.html"},
     {id:5,title: "A ti, Señor, levanto mi alma", subtitle: "Salmo 25 (24)", category: "Precatecumenado", moments: ["Cuaresma", "Antiguo Testamento"], url: "/cantos/src/chtml/a/atisenorlevantomialma.html"},
+/*
     {id:6,title: "A ti, Señor, se debe la alabanza en Sión ", subtitle: "Salmo 65 (64)", category: "Precatecumenado", moments: ["Cuaresma", "Laudes/Visperas", "Antiguo Testamento"], url: "/cantos/src/chtml/a/atisenorsedebelaalabanzaension.html"},
     {id:7,title: "Abraham ", subtitle: "Teofanía de Mambré – Génesis 18,1-5", category: "Precatecumenado", moments: ["Laudes/Visperas", "Entrada", "Antiguo Testamento"], url: "/cantos/src/chtml/a/abraham.html"},
     {id:8,title: "Aclamad al Señor", subtitle: "Salmo 100 (99)", category: "Precatecumenado", moments: ["Laudes/Visperas", "Final", "Antiguo Testamento"], url: "/cantos/src/chtml/a/aclamadalsenor.html"},
@@ -179,7 +180,9 @@ const songs = [
     {id:177,title: "Salmodia para las Oraciones universales ", subtitle: "Melodía para utilizar en las Oraciones universales", category: "Liturgia", moments: [""], url: "/cantos/src/chtml/s/salmodiaparalasoracionesuniversales.html"},
     {id:178,title: "Santo Palomeras 65 ", subtitle: "Tiempo de Adviento – Navidad", category: "Liturgia", moments: [""], url: "/cantos/src/chtml/s/santopalomeras65.html"},
     {id:179,title: "Santo Hebreo ", subtitle: "Tiempo de Cuaresma", category: "Liturgia", moments: [""], url: "/cantos/src/chtml/s/santohebreo.html"},
+    */
     {id:180,title: "Santo Palestina 74 ", subtitle: "Tiempo Pascual", category: "Liturgia", moments: [""], url: "/cantos/src/chtml/s/santopalestina74.html"},
+    /*
     {id:181,title: "Santo Roma 77 ", subtitle: "Tiempo Ordinario", category: "Liturgia", moments: ["Ordinario"], url: "/cantos/src/chtml/s/santoroma77.html"},
     {id:182,title: "Santo 1982 ", subtitle: "Tiempo Ordinario", category: "Liturgia", moments: ["Ordinario"], url: "/cantos/src/chtml/s/santo1982.html"},
     {id:183,title: "Santo 1988 ", subtitle: "Tiempo Ordinario", category: "Liturgia", moments: ["Ordinario"], url: "/cantos/src/chtml/s/santo1988.html"},
@@ -207,7 +210,9 @@ const songs = [
     {id:205,title: "Oh Señor, mi corazón ya no es ambicioso ", subtitle: "Salmo 131 (130)", category: "Catecumenado", moments: ["Antiguo Testamento"], url: "/cantos/src/chtml/o/ohsenormicorazonyanoesambicioso.html"},
     {id:206,title: "Señor, tú me escrutas y conoces ", subtitle: "Salmo 139 (138)", category: "Catecumenado", moments: ["Antiguo Testamento"], url: "/cantos/src/chtml/s/senortumeescrutasyconoces.html"},
     {id:207,title: "Shemá Israel", subtitle: "Deuteronomio 6,4-9", category: "Catecumenado", moments: ["Pentecostés", "Antiguo Testamento"], url: "/cantos/src/chtml/s/shemaisrael.html"},
+    */
     {id:208,title: "Siéntate solitario y silencioso ", subtitle: "Lamentaciones 3", category: "Catecumenado", moments: ["Cuaresma", "Antiguo Testamento"], url: "/cantos/src/chtml/s/sientatesolitarioysilencioso.html"},
+    /*
     {id:209,title: "Tú has cubierto de vergüenza la muerte ", subtitle: "Homilía de Melitón de Sardes sobre la Pascua – Oficio de Lecturas de Jueves Santo", category: "Catecumenado", moments: ["Pascua", "Virgen", "Fracción del Pan"], url: "/cantos/src/chtml/t/tuhascubiertodevergüenzalamuerte.html"},
     {id:211,title: "A la cena del cordero", subtitle: "Himno de Vísperas del tiempo Pascual hasta la Ascensión", category: "Eleccion", moments: ["Pascua", "Laudes/Visperas", "Entrada"], url: "/cantos/src/chtml/a/alacenadelcordero.html"},
     {id:212,title: "Abbá Padre ", subtitle: "Romanos 8,15-17", category: "Eleccion", moments: ["Laudes/Visperas", "Comunión", "Nuevo Testamento"], url: "/cantos/src/chtml/a/abbapadre.html"},
@@ -229,7 +234,9 @@ const songs = [
     {id:228,title: "La voz de mi amado", subtitle: "Cantar de los Cantares 2,8-17", category: "Eleccion", moments: ["Comunión", "Antiguo Testamento"], url: "/cantos/src/chtml/l/lavozdemiamado.html"},
     {id:229,title: "Me robaste el corazón ", subtitle: "Cantar de los Cantares 4,9-16.5,1", category: "Eleccion", moments: ["Pascua", "Comunión", "Antiguo Testamento"], url: "/cantos/src/chtml/m/merobasteelcorazon.html"},
     {id:230,title: "No resistáis al mal", subtitle: "Mateo 5,38ss", category: "Eleccion", moments: ["Comunión", "Nuevo Testamento"], url: "/cantos/src/chtml/n/noresistaisalmal.html"},
+    */
     {id:231,title: "Noli me tangere ", subtitle: "Juan 20,15-17", category: "Eleccion", moments: ["Pascua", "Nuevo Testamento"], url: "/cantos/src/chtml/n/nolimetangere.html"},
+    /*
     {id:232,title: "Quién es ésta que sube del desierto", subtitle: "Cantar de los Cantares 8,5-7", category: "Eleccion", moments: ["Comunión", "Final", "Antiguo Testamento"], url: "/cantos/src/chtml/q/quienesestaquesubedeldesierto.html"},
     {id:233,title: "Quiero andar", subtitle: "Canto Sefardí", category: "Eleccion", moments: ["Final"], url: "/cantos/src/chtml/q/quieroandar.html"},
     {id:234,title: "Sermón de la montaña", subtitle: "Lucas 6,20-38", category: "Eleccion", moments: ["Comunión", "Nuevo Testamento"], url: "/cantos/src/chtml/s/sermondelamontana.html"},
@@ -237,5 +244,5 @@ const songs = [
     {id:236,title: "Tú eres mi esperanza, Señor", subtitle: "Oda XXIX de Salomón", category: "Eleccion", moments: ["Adviento", "Cuaresma"], url: "/cantos/src/chtml/t/tueresmiesperanzasenor.html"},
     {id:237,title: "Ven del Líbano", subtitle: "Cantar de los Cantares 4,8ss", category: "Eleccion", moments: ["Entrada", "Antiguo Testamento"], url: "/cantos/src/chtml/v/vendellibano.html"},
     {id:239,title: "Prountuario de Acordes", subtitle: "Notas", category: "Notas", moments: ["Notas"], url: "/cantos/src/chtml/p/prountuariodeacordes.html"}      
-
+*/
 ];
