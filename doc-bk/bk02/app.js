@@ -12,9 +12,6 @@ document.addEventListener('DOMContentLoaded', function() {
         moments: []
     };
     
-    let clickCount = 0;
-    let clickTimer = null;
-    
     // Mostrar todos los cantos al cargar la página
     displaySongs(songs);
     
@@ -85,12 +82,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         displaySongs(filteredSongs);
-        
-        // Ocultar filtros después de aplicar
-        if (activeFilters.category || activeFilters.moments.length > 0) {
-            filtersContainer.classList.add('hidden');
-            toggleFilters.innerHTML = '';
-        }
     }
     
     // Función para eliminar acentos
@@ -100,22 +91,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Búsqueda en tiempo real
     searchInput.addEventListener('input', filterSongs);
-    
-    // Contador de clics en el buscador
-    searchInput.addEventListener('click', function() {
-        clickCount++;
-        
-        if (clickTimer) {
-            clearTimeout(clickTimer);
-        }
-        
-        clickTimer = setTimeout(() => {
-            if (clickCount >= 3) {
-                clearSearch.click();
-            }
-            clickCount = 0;
-        }, 300);
-    });
     
     // Limpiar búsqueda y filtros
     clearSearch.addEventListener('click', function() {
@@ -132,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Mostrar/ocultar filtros
     toggleFilters.addEventListener('click', function() {
         filtersContainer.classList.toggle('hidden');
-        this.innerHTML = filtersContainer.classList.contains('hidden') ? '' : '';
+        this.innerHTML = filtersContainer.classList.contains('hidden') ? 'Filtrar ▼' : 'Filtrar ▲';
     });
     
     // Filtros por categoría
