@@ -6,7 +6,7 @@ const songs = [
     {id:3,title: "A ti levanto mis ojos", subtitle: "Salmo 123 (122)", category: "Precatecumenado", moments: ["Cuaresma", "Antiguo Testamento"], url: "/cantos/src/chtml/a/atilevantomisojos.html"},
     {id:4,title: "A ti, Señor, en mi clamor imploro", subtitle: "Salmo 142 (141)", category: "Precatecumenado", moments: ["Cuaresma", "Antiguo Testamento"], url: "/cantos/src/chtml/a/atisenorenmiclamorimploro.html"},
     {id:5,title: "A ti, Señor, levanto mi alma", subtitle: "Salmo 25 (24)", category: "Precatecumenado", moments: ["Cuaresma", "Antiguo Testamento"], url: "/cantos/src/chtml/a/atisenorlevantomialma.html"},
-/*  * /
+/*  */
     {id:6,title: "A ti, Señor, se debe la alabanza en Sión ", subtitle: "Salmo 65 (64)", category: "Precatecumenado", moments: ["Cuaresma", "Laudes/Visperas", "Antiguo Testamento"], url: "/cantos/src/chtml/a/atisenorsedebelaalabanzaension.html"},
     {id:7,title: "Abraham ", subtitle: "Teofanía de Mambré – Génesis 18,1-5", category: "Precatecumenado", moments: ["Laudes/Visperas", "Entrada", "Antiguo Testamento"], url: "/cantos/src/chtml/a/abraham.html"},
     {id:8,title: "Aclamad al Señor", subtitle: "Salmo 100 (99)", category: "Precatecumenado", moments: ["Laudes/Visperas", "Final", "Antiguo Testamento"], url: "/cantos/src/chtml/a/aclamadalsenor.html"},
@@ -182,7 +182,7 @@ const songs = [
     {id:179,title: "Santo Hebreo ", subtitle: "Tiempo de Cuaresma", category: "Liturgia", moments: [""], url: "/cantos/src/chtml/s/santohebreo.html"},
 /**/
     {id:180,title: "Santo Palestina 74 ", subtitle: "Tiempo Pascual", category: "Liturgia", moments: [""], url: "/cantos/src/chtml/s/santopalestina74.html"},
-/** /
+/**/
     {id:181,title: "Santo Roma 77 ", subtitle: "Tiempo Ordinario", category: "Liturgia", moments: ["Ordinario"], url: "/cantos/src/chtml/s/santoroma77.html"},
     {id:182,title: "Santo 1982 ", subtitle: "Tiempo Ordinario", category: "Liturgia", moments: ["Ordinario"], url: "/cantos/src/chtml/s/santo1982.html"},
     {id:183,title: "Santo 1988 ", subtitle: "Tiempo Ordinario", category: "Liturgia", moments: ["Ordinario"], url: "/cantos/src/chtml/s/santo1988.html"},
@@ -212,7 +212,7 @@ const songs = [
     {id:207,title: "Shemá Israel", subtitle: "Deuteronomio 6,4-9", category: "Catecumenado", moments: ["Pentecostés", "Antiguo Testamento"], url: "/cantos/src/chtml/s/shemaisrael.html"},
 /*    */
     {id:208,title: "Siéntate solitario y silencioso ", subtitle: "Lamentaciones 3", category: "Catecumenado", moments: ["Cuaresma", "Antiguo Testamento"], url: "/cantos/src/chtml/s/sientatesolitarioysilencioso.html"},
-/*    * /
+/*    */
     {id:209,title: "Tú has cubierto de vergüenza la muerte ", subtitle: "Homilía de Melitón de Sardes sobre la Pascua – Oficio de Lecturas de Jueves Santo", category: "Catecumenado", moments: ["Pascua", "Virgen", "Fracción del Pan"], url: "/cantos/src/chtml/t/tuhascubiertodevergüenzalamuerte.html"},
     {id:211,title: "A la cena del cordero", subtitle: "Himno de Vísperas del tiempo Pascual hasta la Ascensión", category: "Eleccion", moments: ["Pascua", "Laudes/Visperas", "Entrada"], url: "/cantos/src/chtml/a/alacenadelcordero.html"},
     {id:212,title: "Abbá Padre ", subtitle: "Romanos 8,15-17", category: "Eleccion", moments: ["Laudes/Visperas", "Comunión", "Nuevo Testamento"], url: "/cantos/src/chtml/a/abbapadre.html"},
