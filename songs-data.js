@@ -99,7 +99,7 @@ const songs = [
     {id:95,title: "Oh Dios, tú eres mi Dios ", subtitle: "Salmo 63 (62)", category: "Precatecumenado", moments: ["Adviento", "Laudes/Visperas", "Antiguo Testamento"], url: "/cantos/src/chtml/o/ohdiostueresmidios.html"},
     {id:96,title: "Oh Jesús, amor mío ", subtitle: "Himno", category: "Precatecumenado", moments: ["Cuaresma", "Fracción del Pan", "Comunión"], url: "/cantos/src/chtml/o/ohjesusamormio.html"},
     {id:97,title: "Oh muerte, ¿dónde está tu victoria? ", subtitle: "1ª Corintios 15", category: "Precatecumenado", moments: ["Pascua", "Nuevo Testamento"], url: "/cantos/src/chtml/o/ohmuerte¿dondeestatuvictoria?.html"},
-    {id:98,title: "Oh Señor, nuestro Dios ", subtitle: "Salmo 8", category: "Precatecumenado", moments: ["Laudes/Visperas", "Entrada", "Comunión", "Antiguo Testamento"], url: "/cantos/src/chtml/o/ohsenornuestrodios.html"},
+    {id:98,title: "Oh Señor, nuestro Dios ", subtitle: "Salmo 8", category: "Precatecumenado", moments: ["Laudes/Visperas", "Entrada", "Comunión", "Antiguo Testamento"], url: "/cantos/src/chtml/o/ohSenornuestroDios.html"},
     {id:99,title: "Os tomaré de entre las naciones ", subtitle: "Cántico de Ezequiel – Ez 36,24-28", category: "Precatecumenado", moments: ["Entrada", "Antiguo Testamento"], url: "/cantos/src/chtml/o/ostomaredeentrelasnaciones.html"},
     {id:100,title: "Paloma incorrupta ", subtitle: "Himno inspirado en los Kontákia de san Romano el Meloda", category: "Precatecumenado", moments: ["Virgen"], url: "/cantos/src/chtml/p/palomaincorrupta.html"},
     {id:101,title: "Pentecostés", subtitle: "Himno", category: "Precatecumenado", moments: ["Pentecostés", "Comunión"], url: "/cantos/src/chtml/p/pentecostes.html"},
