@@ -43,7 +43,7 @@ input {
     font-size: 33%;
     margin-left: 0%;
     margin-right: 0;
-    color: midnightblue;
+    color: goldenrod;
 }
 header {
     text-align: center;
@@ -252,14 +252,17 @@ h2 {
     display: none;
 }
 
+/* Mueve el texto completamente a la izquierda */
+/*
 @keyframes marquee {
     0% {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-100%); /* Mueve el texto completamente a la izquierda */
+        transform: translateX(-100%); 
     }
 }
+    */
 
 /* Asegurar que los otros estilos permanezcan igual */
 .dbboton {
@@ -491,7 +494,7 @@ h2 {
     }
 
     .tResucito{
-        font-size: 4rem;
+        font-size: 3rem;
         color: #bc0009;
         text-align: center;
         font-weight: bold;
@@ -504,6 +507,14 @@ h2 {
         margin-left: 66%;
         margin-top: 1px;
     }
+
+    .sIn {
+        font-size: 33%;
+        margin-left: -1%;
+        margin-right: 1%;
+        color: goldenrod;
+    }
+
 }
 
 @media (max-width: 800px) {
@@ -521,9 +532,9 @@ h2 {
 
     .sIn {
         font-size: 33%;
-        margin-left: 0%;
+        margin-left: -1%;
         margin-right: 1%;
-        color: midnightblue;
+        color: goldenrod;
     }
     
     #clearSearch {
@@ -563,7 +574,7 @@ h2 {
     }
 
     .tResucito{
-        font-size: 4rem;
+        font-size: 3rem;
         color: #bc0009;
         text-align: center;
         font-weight: bold;

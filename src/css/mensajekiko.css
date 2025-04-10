@@ -13,7 +13,7 @@
 }
 
 @keyframes marquee {
-    0% { transform: translateX(28%); }
+    0% { transform: translateX(45%); }
     100% { transform: translateX(-100%); }
 }
 
@@ -55,5 +55,14 @@
 @keyframes marquee {
     0% { transform: translateX(7%); }
     100% { transform: translateX(-100%); }
+            }
 }
+
+
+@media (max-width: 800px) {
+
+    @keyframes marquee {
+        0% { transform: translateX(14%); }
+        100% { transform: translateX(-100%); }
+                }
 }

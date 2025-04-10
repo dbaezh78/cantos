@@ -19,70 +19,56 @@ document.addEventListener('DOMContentLoaded', function() {
     // Mostrar todos los cantos al cargar la página
     displaySongs(songs);
 
-
-// Función para mostrar los cantos
-// Modifica la función displaySongs para manejar ambas vistas
-function displaySongs(songsToDisplay) {
-    songsList.innerHTML = '';
-    
-    songsToDisplay.forEach(song => {
-        const songCard = document.createElement('a');
-        songCard.className = 'song-card';
-        songCard.setAttribute('data-category', song.category);
-        songCard.setAttribute('data-id', song.id);
-        songCard.href = song.url;
+    // Función para mostrar los cantos
+    function displaySongs(songsToDisplay) {
+        songsList.innerHTML = '';
+        
+        songsToDisplay.forEach(song => {
+            const songCard = document.createElement('a');
+            songCard.className = 'song-card';
+            songCard.setAttribute('data-category', song.category);
+            songCard.setAttribute('data-id', song.id);
+            songCard.href = song.url;
+            
+            if (toggleView.checked) {
+                // Vista de tarjetas
+                songCard.innerHTML = `
+                    <h3 class="song-title">${song.title}</h3>
+                    <p class="song-subtitle">${song.subtitle}</p>
+                    <div>
+                        <span class="song-category" style="background-color: ${getCategoryColor(song.category)}; color: ${getCategoryTextColor(song.category)}">${song.category}</span>
+                        ${song.moments.map(moment => `<span class="song-moment">${moment}</span>`).join('')}
+                    </div>
+                `;
+            } else {
+                // Vista de lista simplificada
+                songCard.innerHTML = `
+                    <b class="song-title">${song.title}</b>
+                `;
+            }
+            
+            songsList.appendChild(songCard);
+        });
         
         if (toggleView.checked) {
-            
-            //Ocultando el contenido
-            filtersContainer.classList.add('hidden');
-            toggleFilters.innerHTML = '';
-            //**************************************** */
-
-            // Vista de tarjetas (como está actualmente)
-            songCard.innerHTML = `
-            
-                <h3 class="song-title">${song.title}</h3>
-                <p class="song-subtitle">${song.subtitle}</p>
-                <div>
-                    <span class="song-category" style="background-color: ${getCategoryColor(song.category)}; color: ${getCategoryTextColor(song.category)}">${song.category}</span>
-                    ${song.moments.map(moment => `<span class="song-moment">${moment}</span>`).join('')}
-                </div>
-            `;
+            songsList.classList.remove('list-view');
         } else {
-            // Vista de lista simplificada
-            songCard.innerHTML = `
-                <b class="song-title">${song.title}</b>
-            `;
+            songsList.classList.add('list-view');
         }
-        
-        songsList.appendChild(songCard);
-    });
-    
-    // Aplicar la clase según el estado del checkbox
-    if (toggleView.checked) {
-        songsList.classList.remove('list-view');
-    } else {
-        songsList.classList.add('list-view');
     }
-}
 
-// Agrega el event listener para el toggle de vista
-toggleView.addEventListener('change', function() {
+    // Función mejorada para normalizar texto (quita acentos, signos y espacios extras)
+    function normalizeText(text) {
+        return text
+            .toString()
+            .toLowerCase()
+            .normalize("NFD")  // Separa los acentos
+            .replace(/[\u0300-\u036f]/g, "")  // Elimina los acentos
+            .replace(/[^\w\s]/g, '')  // Elimina signos de puntuación
+            .replace(/\s+/g, ' ')  // Reduce espacios múltiples a uno solo
+            .trim();  // Elimina espacios al inicio y final
+    }
 
-    //Ocultando el contenido
-    filtersContainer.classList.add('hidden');
-    toggleFilters.innerHTML = '';
-    //**************************************** */
-
-    // Actualizar el texto del label
-    const labelText = this.nextElementSibling;
-    labelText.textContent = this.checked ? 'Vista de tarjetas' : 'Vista de lista';
-    
-    // Volver a mostrar las canciones con la nueva vista
-    filterSongs();
-});
-    
     function getCategoryColor(category) {
         switch(category) {
             case 'Precatecumenado': return '#eee';
@@ -116,12 +102,12 @@ toggleView.addEventListener('change', function() {
             );
         }
         
-        // Filtrar por búsqueda
-        const searchTerm = removeAccents(searchInput.value.toLowerCase());
+        // Filtrar por búsqueda (usando la nueva función normalizeText)
+        const searchTerm = normalizeText(searchInput.value);
         if (searchTerm) {
             filteredSongs = filteredSongs.filter(song => 
-                removeAccents(song.title.toLowerCase()).includes(searchTerm) || 
-                removeAccents(song.subtitle.toLowerCase()).includes(searchTerm)
+                normalizeText(song.title).includes(searchTerm) || 
+                (song.subtitle && normalizeText(song.subtitle).includes(searchTerm))
             );
         }
         
@@ -134,17 +120,9 @@ toggleView.addEventListener('change', function() {
         }
     }
     
-    function removeAccents(text) {
-        return text.normalize("NFD")
-            .replace(/[\u0300-\u036f]/g, "")  // Elimina acentos
-            .replace(/[¿¡!,?]/g, "");         // Elimina signos de interrogación, exclamación y comas
-    }
-    
-    
-    // Búsqueda en tiempo real
+    // Resto del código permanece igual...
     searchInput.addEventListener('input', filterSongs);
     
-    // Contador de clics en el buscador
     searchInput.addEventListener('click', function() {
         clickCount++;
         
@@ -160,7 +138,6 @@ toggleView.addEventListener('change', function() {
         }, 300);
     });
     
-    // Limpiar búsqueda y filtros
     clearSearch.addEventListener('click', function() {
         searchInput.value = '';
         activeFilters.category = null;
@@ -172,13 +149,11 @@ toggleView.addEventListener('change', function() {
         displaySongs(songs);
     });
     
-    // Mostrar/ocultar filtros
     toggleFilters.addEventListener('click', function() {
         filtersContainer.classList.toggle('hidden');
         this.innerHTML = filtersContainer.classList.contains('hidden') ? '' : '';
     });
     
-    // Filtros por categoría
     categoryFilters.forEach(filter => {
         filter.addEventListener('click', function() {
             const category = this.getAttribute('data-category');
@@ -196,7 +171,6 @@ toggleView.addEventListener('change', function() {
         });
     });
     
-    // Filtros por momento litúrgico
     momentFilters.forEach(filter => {
         filter.addEventListener('click', function() {
             const moment = this.getAttribute('data-moment');
