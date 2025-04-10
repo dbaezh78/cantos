@@ -1,7 +1,6 @@
     // Datos de los cantos
 const songs = [
     
-    {id:0,title: "Libro de Canto en PDF", subtitle: "Cantos del Camino Neo Catecumenal", category: "Catecumenado", moments: ["Autor: Kiko Argüelo"], url: "/cantos/src/doc/resucito.pdf"},
     {id:1,title: "A la víctima pascual", subtitle: "Secuencia de Pascua", category: "Precatecumenado", moments: ["Pascua", "Pentecostés", "Entrada", "Comunión", "Final", "Nuevo Testamento"], url: "/cantos/src/chtml/a/alavictimapascual.html"},
     {id:2,title: "A nadie demos ocasión de tropiezo", subtitle: "2ª Corintios 6,3ss", category: "Precatecumenado", moments: ["Nuevo Testamento"], url: "/cantos/src/chtml/a/anadiedemosocasiondetropiezo.html"},
     {id:3,title: "A ti levanto mis ojos", subtitle: "Salmo 123 (122)", category: "Precatecumenado", moments: ["Cuaresma", "Antiguo Testamento"], url: "/cantos/src/chtml/a/atilevantomisojos.html"},
@@ -244,6 +243,7 @@ const songs = [
     {id:235,title: "Suba el Esposo al leño de su tálamo", subtitle: "Himno de san Quodvultdeus", category: "Eleccion", moments: ["Pascua"], url: "/cantos/src/chtml/s/subaelesposoallenodesutalamo.html"},
     {id:236,title: "Tú eres mi esperanza, Señor", subtitle: "Oda XXIX de Salomón", category: "Eleccion", moments: ["Adviento", "Cuaresma"], url: "/cantos/src/chtml/t/tueresmiesperanzasenor.html"},
     {id:237,title: "Ven del Líbano", subtitle: "Cantar de los Cantares 4,8ss", category: "Eleccion", moments: ["Entrada", "Antiguo Testamento"], url: "/cantos/src/chtml/v/vendellibano.html"},
-    {id:239,title: "Prountuario de Acordes", subtitle: "Notas", category: "Notas", moments: ["Notas"], url: "/cantos/src/chtml/p/prountuariodeacordes.html"}      
-/*  */
+    /*  */
+    {id:239,title: "Libro de Canto en PDF", subtitle: "Cantos del Camino Neo Catecumenal", category: "Catecumenado", moments: ["Autor: Kiko Argüelo"], url: "/cantos/src/doc/resucito.pdf"},
+    {id:240,title: "Prountuario de Acordes", subtitle: "Notas", category: "Catecumenado", moments: ["Notas"], url: "/cantos/src/chtml/p/prountuariodeacordes.html"},
 ];
