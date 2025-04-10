@@ -1,11 +1,10 @@
 body {
     font-family: 'Arial', sans-serif;
-/*    line-height: 1.6;*/
-    color: #333;
-/*    max-width: 1200px;
-    margin: 0 auto; */
     padding: 2px;
     background-color: #87ceeb24;
+/*  line-height: 1.6;
+    max-width: 1200px;
+    margin: 0 auto; */
 }
 
 a {
@@ -129,7 +128,7 @@ h2 {
     max-width: fit-content;
     background-color: white;
     color: #333;
-    border: 1px solid #9e9e9e
+    border: 1px solid #9e9e9e;
 }
 
 .category-filter[data-category="Catecumenado"] {
@@ -197,7 +196,7 @@ h2 {
 
 .song-subtitle {
     font-size: 0.9rem;
-    color: #666;
+    color: #667;
     margin-bottom: 10px;
     font-style: italic;
     /*text-align: center;*/
@@ -253,12 +252,6 @@ h2 {
     display: none;
 }
 
-.marquee-text {
-    display: inline-block;
-    padding-left: 100%; /* Empieza completamente fuera del contenedor */
-    animation: marquee 55s linear infinite;
-}
-
 @keyframes marquee {
     0% {
         transform: translateX(0);
@@ -289,7 +282,7 @@ h2 {
 
 .dblink-fb{
     background-color: rgb(15, 98, 230);
-    color: white
+    color: white;
 }
 
 .dblink-fb:hover{
@@ -298,8 +291,8 @@ h2 {
 }
 
 .dblink-ev {
-    background-color: rgb(119, 18, 18);
     color: white;  
+    background-color: rgb(119, 18, 18);
 }
 
 .dblink-ev:hover {
@@ -308,12 +301,12 @@ h2 {
 }
 
 .dblink-laudes{
-    background-color: rgb(30, 82, 109);
-    color: yellow
+    background-color: #ffffcc;
+    color: #0f0f02;
 }
 .dblink-laudes:hover{
-    background-color: rgb(233, 233, 140);
-    color: blue;
+    background-color: #2196f3;
+    color: #ffffcc;
 }
 
 .dblink-ac {
@@ -411,9 +404,11 @@ h2 {
         border-radius: 0 0 20px 20px;
     }
     
+    /* 
     .category-filters, .moment-filters {
-        /*flex-direction: column; */
+        flex-direction: column;
     }
+    */
 }
 
 .resucito-linea {
@@ -548,7 +543,7 @@ h2 {
     .filter-toggle-button {
         padding: 10px 10px;
         background-color: #ffffff00;
-        border-color: ffffff00;
+        border-color: #ffffff00;
         color: rgba(0, 0, 0, 0.7);
         border: none;
         border-radius: 50%;

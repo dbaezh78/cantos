@@ -1,0 +1,59 @@
+/* Estilo del enlace original */
+.dblink {
+    display: block;
+    text-decoration: none;
+    /*    color: inherit;*/
+}
+
+.marquee-text {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 70s linear infinite;
+    color: darkgoldenrod;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(28%); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Estilo del modal que aparecerá */
+.modal-cantos {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenido-cantos {
+    background-color: #FFFFCC; /* Amarillo claro */
+    font-family: 'Neocat-Regular_3.0', sans-serif;
+    padding: 2rem;
+    width: 80%;
+    max-width: 800px;
+    max-height: 80vh;
+    overflow-y: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+}
+
+/* Si necesitas cargar la fuente */
+@font-face {
+    font-family: 'Neocat-Regular_3.0';
+    src: url('/cantos/src/doc/Neocat-Regular_3.0.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@media (max-width: 385px) {
+@keyframes marquee {
+    0% { transform: translateX(7%); }
+    100% { transform: translateX(-100%); }
+}
+}
