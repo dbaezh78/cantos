@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const filtersContainer = document.querySelector('.filters-container');
     const categoryFilters = document.querySelectorAll('.category-filter');
     const momentFilters = document.querySelectorAll('.moment-filter');
+    const toggleView = document.getElementById('toggleView');
     
     let activeFilters = {
         category: null,
@@ -17,19 +18,30 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Mostrar todos los cantos al cargar la página
     displaySongs(songs);
+
+
+// Función para mostrar los cantos
+// Modifica la función displaySongs para manejar ambas vistas
+function displaySongs(songsToDisplay) {
+    songsList.innerHTML = '';
     
-    // Función para mostrar los cantos
-    function displaySongs(songsToDisplay) {
-        songsList.innerHTML = '';
+    songsToDisplay.forEach(song => {
+        const songCard = document.createElement('a');
+        songCard.className = 'song-card';
+        songCard.setAttribute('data-category', song.category);
+        songCard.setAttribute('data-id', song.id);
+        songCard.href = song.url;
         
-        songsToDisplay.forEach(song => {
-            const songCard = document.createElement('a');
-            songCard.className = 'song-card';
-            songCard.setAttribute('data-category', song.category);
-            songCard.setAttribute('data-id', song.id);
-            songCard.href = song.url;
+        if (toggleView.checked) {
             
+            //Ocultando el contenido
+            filtersContainer.classList.add('hidden');
+            toggleFilters.innerHTML = '';
+            //**************************************** */
+
+            // Vista de tarjetas (como está actualmente)
             songCard.innerHTML = `
+            
                 <h3 class="song-title">${song.title}</h3>
                 <p class="song-subtitle">${song.subtitle}</p>
                 <div>
@@ -37,10 +49,39 @@ document.addEventListener('DOMContentLoaded', function() {
                     ${song.moments.map(moment => `<span class="song-moment">${moment}</span>`).join('')}
                 </div>
             `;
-            
-            songsList.appendChild(songCard);
-        });
+        } else {
+            // Vista de lista simplificada
+            songCard.innerHTML = `
+                <b class="song-title">${song.title}</b>
+            `;
+        }
+        
+        songsList.appendChild(songCard);
+    });
+    
+    // Aplicar la clase según el estado del checkbox
+    if (toggleView.checked) {
+        songsList.classList.remove('list-view');
+    } else {
+        songsList.classList.add('list-view');
     }
+}
+
+// Agrega el event listener para el toggle de vista
+toggleView.addEventListener('change', function() {
+
+    //Ocultando el contenido
+    filtersContainer.classList.add('hidden');
+    toggleFilters.innerHTML = '';
+    //**************************************** */
+
+    // Actualizar el texto del label
+    const labelText = this.nextElementSibling;
+    labelText.textContent = this.checked ? 'Vista de tarjetas' : 'Vista de lista';
+    
+    // Volver a mostrar las canciones con la nueva vista
+    filterSongs();
+});
     
     function getCategoryColor(category) {
         switch(category) {

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESUCITÓ - Cantos Neocatecumenales</title>
+    <link rel="icon" href="/src/ico.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="dblink dblink-ac">
+            <span class="marquee-text">Amad a vuestros enemigos, vengo pronto!</span>
+        </a>
+
+            <b class="tResucito">
+                RESUCITÓ <span class="punto-rojo">.</span> 
+                <div class="rdstyle">
+                <span class="rd-colores">
+                    <span class="d-blanco">✟</span><span class="r-azul">R</span><span class="d-rojo">D</span>
+                </span></div>
+              </b>
+                    <img class="cima" src="/cantos/img/logo_cantos.png" alt="Camino neocatecumenal"></a>
+    </header>
+
+    <div class="controls">
+        <div class="search-container">
+            <button id="toggleFilters" class="filter-toggle-button"></button>
+            <input type="text" id="searchInput" placeholder="Buscar Canto...">
+            <button id="clearSearch" title="Limpiar búsqueda"></button>
+        </div>
+
+        <div class="filters-container hidden">
+            <div class="filters">
+
+                <div class="dbboton">
+                    <a href="/salterios/" target="_blank" class="dblink dblink-laudes">Laudes</a>
+                    <a href="/ev/index.html" target="_blank" class="dblink dblink-ev">Evangelio</a>
+                    <a href="https://www.youtube.com/@CristoJesusReydereyes" target="_blank" class="dblink dblink-yt">youtube</a>
+                    <a href="https://www.facebook.com/groups/evangelios" target="_blank" class="dblink dblink-fb">facebook</a>
+                    </div>
+        
+                <h3>Etapas del Camino</h3>
+                <div class="category-filters">
+                    <button class="category-filter" data-category="Precatecumenado">Precatecumenado</button>
+                    <button class="category-filter" data-category="Catecumenado">Catecumenado</button>
+                    <button class="category-filter" data-category="Eleccion">Elección</button>
+                    <button class="category-filter" data-category="Liturgia">Liturgia</button>
+                </div>
+
+                <h3>Filtros de los Cantos</h3>
+                <div class="moment-filters">
+                    <button class="moment-filter" data-moment="Entrada">Entrada</button>
+                    <button class="moment-filter" data-moment="Paz">Paz</button>
+                    <button class="moment-filter" data-moment="Fracción del Pan">Fracción del Pan</button>
+                    <button class="moment-filter" data-moment="Comunión">Comunión</button>
+                    <button class="moment-filter" data-moment="Final">Final</button>
+                    <button class="moment-filter" data-moment="Adviento">Adviento</button>
+                    <button class="moment-filter" data-moment="Navidad">Navidad</button>
+                    <button class="moment-filter" data-moment="Pascua">Pascua</button>
+                    <button class="moment-filter" data-moment="Pentecostés">Pentecostés</button>
+                    <button class="moment-filter" data-moment="Virgen">Vírgen María</button>
+                    <button class="moment-filter" data-moment="Aclamación">Aclamación</button>
+                    <button class="moment-filter" data-moment="Laudes/Visperas">Laudes</button>
+                    <button class="moment-filter" data-moment="Penitencial">Penitencial</button>
+                    <button class="moment-filter" data-moment="Salmodia">Salmodia</button>
+                    <button class="moment-filter" data-moment="Nuevo Testamento">Nuevo Testamento</button>
+                    <button class="moment-filter" data-moment="Antiguo Testamento">Antiguo Testamento</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="songs-list">
+        <!-- Los cantos se cargarán aquí dinámicamente -->
+    </div>
+
+    <script src="songs-data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

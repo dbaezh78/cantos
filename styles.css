@@ -17,15 +17,15 @@ input {
     font-family: 'Times New Roman', Times, serif;
 }
 .rdstyle{
-    font-size: 58%;
-    margin-left: 23%;
-    margin-top: -4%;
-    transform: rotateZ(-30deg);
+    margin-top: 0%;
+    width: 18%;
+    /*transform: rotateZ(-30deg);*/
 }
-.tResucito{
+.tResucito {
     color: #bc0009;
-    font-size: 454%;
+    font-size: 4rem;
     text-align: center;
+    font-weight:bold;
 }
 
 .cima {
@@ -33,6 +33,19 @@ input {
     padding: 1.3%;
 }
 
+.sRD {
+    margin-top: -1%;
+    width: 3%;
+    margin-bottom: -8px;
+    margin-left: -9px;
+}
+
+.sIn {
+    font-size: 33%;
+    margin-left: 0%;
+    margin-right: 0;
+    color: midnightblue;
+}
 header {
     text-align: center;
 /*    margin-bottom: 5px;*/
@@ -154,8 +167,9 @@ h2 {
 
 .songs-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 8px;
+    /*grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));*/
+    /*gap: 8px;*/
+    justify-items:stretch;
 }
 
 .song-card { /* Esta es la tarjeta del canto*/
@@ -163,10 +177,11 @@ h2 {
     text-decoration: none;
     color: inherit;
     background-color: white;
-    padding: 4px;       /* Estaba en 20px */
-    border-radius: 8px;
+    padding: 12px;       /* Estaba en 20px */
+    border-radius: 0px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     transition: transform 0.3s, box-shadow 0.3s;
+    /*grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));*/
 }
 
 .song-card:hover {
@@ -175,7 +190,7 @@ h2 {
 }
 
 .song-title {
-    font-size: 1.33rem;
+    /*font-size: 1.33rem;*/
     margin-bottom: 2px;
     color: #222;
 }
@@ -185,7 +200,7 @@ h2 {
     color: #666;
     margin-bottom: 10px;
     font-style: italic;
-    text-align: center;
+    /*text-align: center;*/
     margin-top: 0px;
 }
 
@@ -211,26 +226,26 @@ h2 {
 
 .song-card[data-category="Precatecumenado"] {
     border: 1px solid white;
-    border-left: 5px solid #9e9e9ed9;
+    border-left: 8px solid #9e9e9e6b;
     color: #ddd;
     box-shadow: 5px 5px 12px #9e9e9ed9;
 }
 
 .song-card[data-category="Catecumenado"] {
     border: 1px solid #2196f3;
-    border-left: 5px solid #2196f3;
+    border-left: 8px solid #2196f3;
     box-shadow: 5px 5px 12px #2196f3;
 }
 
 .song-card[data-category="Eleccion"] {
     border: 1px solid #8BC34A;
-    border-left: 5px solid #8BC34A;
+    border-left: 8px solid #8BC34A;
     box-shadow: 5px 5px 12px #8BC34A;
 }
 
 .song-card[data-category="Liturgia"] {
     border: 1px solid #FFEB3B;
-    border-left: 5px solid #FFEB3B;
+    border-left: 8px solid #FFEB3B;
     box-shadow: 5px 5px 12px #FFEB3B;
 }
 
@@ -425,11 +440,26 @@ h2 {
     color: #6b4323cd;
 }
 
-@media (max-width: 384px) {
+.cbox {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 10px;
+}
+
+
+@media (max-width: 385px) {
     .cima {
         width: 50%;
         /*margin-top: -9%;*/
     }
+
+    .sRD {
+        margin-top: -1%;
+        width: 3%;
+        margin-bottom: -8px;
+        margin-left: -9px;
+    }
+    
+
     #clearSearch {
         width: 26%;
         border-radius: 0 20px 20px 0;
@@ -459,15 +489,17 @@ h2 {
     }
 
     .rdstyle{
-        font-size: 58%;
-        margin-left: 84%;
-        margin-top: -14%;
-        transform: rotateZ(-30deg);
+        margin-top: -18.5%;
+        text-align: right;
+        width: 16%;
+/*        transform: rotateZ(-30deg);*/
     }
 
     .tResucito{
+        font-size: 4rem;
         color: #bc0009;
         text-align: center;
+        font-weight: bold;
     }
 
     .punto-rojo {
@@ -484,6 +516,21 @@ h2 {
         width: 50%;
         /*margin-top: -9%;*/
     }
+
+    .sRD {
+        margin-top: -1%;
+        width: 11%;
+        margin-bottom: 0px;
+        margin-left: -20px;
+    }
+
+    .sIn {
+        font-size: 33%;
+        margin-left: 0%;
+        margin-right: 1%;
+        color: midnightblue;
+    }
+    
     #clearSearch {
         width: auto;
         border-radius: 50%;
@@ -511,17 +558,20 @@ h2 {
         margin-right: 0px;
         width: auto;
     }
-
+    
     .rdstyle{
-        font-size: 58%;
-        margin-left: 84%;
-        margin-top: -14%;
-        transform: rotateZ(-30deg);
+        margin-top: -26%;
+        text-align: right;
+        width: 16%;
+        float: right;
+/*        transform: rotateZ(-30deg);*/
     }
 
     .tResucito{
+        font-size: 4rem;
         color: #bc0009;
         text-align: center;
+        font-weight: bold;
     }
 
     .punto-rojo {
