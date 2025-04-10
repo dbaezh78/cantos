@@ -1,6 +1,7 @@
     // Datos de los cantos
 const songs = [
-
+    
+    {id:0,title: "Libro de Canto en PDF", subtitle: "Cantos del Camino Neo Catecumenal", category: "Catecumenado", moments: ["Autor: Kiko Argüelo"], url: "/cantos/src/doc/resucito.pdf"},
     {id:1,title: "A la víctima pascual", subtitle: "Secuencia de Pascua", category: "Precatecumenado", moments: ["Pascua", "Pentecostés", "Entrada", "Comunión", "Final", "Nuevo Testamento"], url: "/cantos/src/chtml/a/alavictimapascual.html"},
     {id:2,title: "A nadie demos ocasión de tropiezo", subtitle: "2ª Corintios 6,3ss", category: "Precatecumenado", moments: ["Nuevo Testamento"], url: "/cantos/src/chtml/a/anadiedemosocasiondetropiezo.html"},
     {id:3,title: "A ti levanto mis ojos", subtitle: "Salmo 123 (122)", category: "Precatecumenado", moments: ["Cuaresma", "Antiguo Testamento"], url: "/cantos/src/chtml/a/atilevantomisojos.html"},

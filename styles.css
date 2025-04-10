@@ -256,7 +256,7 @@ h2 {
 .marquee-text {
     display: inline-block;
     padding-left: 100%; /* Empieza completamente fuera del contenedor */
-    animation: marquee 15s linear infinite;
+    animation: marquee 55s linear infinite;
 }
 
 @keyframes marquee {
