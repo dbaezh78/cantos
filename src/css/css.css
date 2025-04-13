@@ -39,6 +39,42 @@ body {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
+.song-eleccion {
+    width: max-content; /* Ajusta al 90% del ancho del dispositivo */
+    max-width: max-content; /* Limita el ancho máximo en pantallas grandes */
+    border: 1px solid #ddd;
+    padding: 1% 2% 1% 2%;
+    border-radius: 1% 1% 1% 1%;
+    background: #CEFFCF;
+    text-align: left;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.song-catecumenado {
+    width: max-content; /* Ajusta al 90% del ancho del dispositivo */
+    max-width: max-content; /* Limita el ancho máximo en pantallas grandes */
+    border: 1px solid #ddd;
+    padding: 1% 2% 1% 2%;
+    border-radius: 1% 1% 1% 1%;
+    background: #CBECFE;
+    text-align: left;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.song-liturgia {
+    width: max-content; /* Ajusta al 90% del ancho del dispositivo */
+    max-width: max-content; /* Limita el ancho máximo en pantallas grandes */
+    border: 1px solid #ddd;
+    padding: 1% 2% 1% 2%;
+    border-radius: 1% 1% 1% 1%;
+    background: #FFFFCB;
+    text-align: left;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
 .atilevantomisojos-song-container{
     width: auto; /* Ajusta al 90% del ancho del dispositivo */
     max-width: auto; /* Limita el ancho máximo en pantallas grandes */
