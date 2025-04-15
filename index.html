@@ -13,30 +13,78 @@
     <header>
         <a href="#" id="cantoLink">
         <b class="dblink dblink-ac">
-            <span class="marquee-text">Amad a vuestros enemigos, vengo pronto!, En el CAMINO NEOCATECUMENAL, vemos aparecer hoy un servicio humilde y esencial cual es el del CANTOR.
-Él, en este itinerario de educación de la fe, tiene la misión de ayudar a crear la comunidad litúrgica o, mejor, de recrearla; de convertir tantas veces una pluralidad en una unidad de culto: «A una sola voz, con un solo corazón y con una sola alma».
-Culto espiritual que se expresa en la acción litúrgica de la comunidad: fuente constante, en nuestro caminar histórico, de lo más profundamente inocente: el sentimiento de nuestra maldad iluminado por lo inefable del amor de ALGUIEN que nos ama así, que nos ama aunque hayamos sido sus enemigos; fuente de la conversión, fuente de la FE.
+            <span class="marquee-text">Amad a vuestros enemigos, vengo pronto!, No resistais al mal, el cantor no está llamado a cocechar humildad sino a sembrarla, deja que Dios la coceche para ti.
             </span>
         </b>
     </a>
+    <div style="margin-left: auto;" >
+        <img class="sRD" src="/cantos/img/rd.png" oncontextmenu="return false;" draggable="false" alt="Camino neocatecumenal">
+    </div>
 
+    
     <div id="Inicio"> </div>
-        <a href="/cantos">
-            <div class="tResucito">
-                RESUCITÓ <span class="sIn">para</span> 
-                    <img class="sRD" src="/cantos/img/rd.png" alt="Camino neocatecumenal"><br>
+    <a href="/cantos">
+        <div class="tResucito">
+            RESUCITÓ 
+            <br>
                     <img class="cima" src="/cantos/img/logo_cantos.png" alt="Camino neocatecumenal">
               </div>
             </a>
     </header>
+<!--
+    <div>
+        <label><input class=""  type="checkbox" id="toggleView"><span>Ver como lista</span></label>
+        <label><input class=""  type="checkbox" id="kikomsg-tv"><span>Kiko Argüello</span></label>
+    </div>
+-->
 
+<div>
+    <label for="toggleView">
+        <input type="checkbox" id="toggleView">
+        <span>Lista</span>
+    </label>
+    
+    <input type="checkbox" id="mostrar-mensaje">
+        <label for="mostrar-mensaje">Kiko Argüello</label>
+
+    <input type="checkbox" id="mostrar-mensaje-jp2">
+        <label for="mostrar-mensaje-jp2">Juan Pablo II</label>
+
+
+<!-- Mensaje Kiko oculto inicialmente -->
+<div class="mensaje-kiko">
+    <span style="font-family: Neocat,serif; font-size: 23px; text-align: justify;">Cantos del Camino Neocatecumenal</span>
+    <p style="text-align: justify;">
+        En el CAMINO NEOCATECUMENAL vemos aparecer hoy un servicio humilde y esencial, cual es el del CANTOR.<br>
+
+        El cantor, en este itinerario de educación de la fe, tiene la misión de ayudar a crear la comunidad litúrgica o, mejor, de recrearla; de convertir tantas veces una pluralidad en una unidad de culto: <i>«A una sola voz, con un solo corazón y con una sola alma».</i><br>
+
+        Culto espiritual que se expresa en la acción litúrgica de la comunidad, fuente constante, en nuestro caminar histórico, de lo más profundamente inocente: el sentimiento de nuestra maldad iluminado por lo inefable del amor de ALGUIEN que nos ama así, que nos ama aunque hayamos sido sus enemigos; fuente de la conversión, fuente de la FE. 
+        <br><b><i>Kiko Argüello</i></b>
+    </p>
+</div>
+
+<!-- Mensaje Kiko oculto inicialmente -->
+<div class="msg-jp2">
+    <span style="font-family: Neocat,serif; font-size: 23px; text-align: justify;">A LOS CANTORES</span>
+    <p style="text-align: justify;">
+        «Dirijo un saludo cordial a los cantores-salmistas de las Comunidades Neocatecumenales. Queridísimos: el misterio de Cristo Resucitado, que os disponéis a celebrar con vuestros cantos, sea testimoniado también con vuestra vida, de manera que quede exaltado ante el mundo por el acorde armonioso de las palabras y de las obras de Aquel que "muriendo destruyó la muerte, y resucitando, restauró la vida".
+        <br>
+        A todos vosotros y a vuestros seres queridos, mi Bendición Apostólica».
+        <br><b><i>S. JUAN PABLO II</i></b>
+    </p>
+</div>
+
+</div>
+
+    
     <div class="controls">
         <div class="search-container">
             <button id="toggleFilters" class="filter-toggle-button"></button>
             <input type="text" id="searchInput" placeholder="Buscar Canto...">
             <button id="clearSearch" title="Limpiar búsqueda"></button>
         </div>
-
+        
         <div class="filters-container hidden">
             <div class="filters">
 
@@ -45,20 +93,12 @@ Culto espiritual que se expresa en la acción litúrgica de la comunidad: fuente
                     <a href="/ev/index.html" target="_blank" class="dblink dblink-ev">Evangelio</a>
                     <a href="https://www.youtube.com/@CristoJesusReydereyes" target="_blank" class="dblink dblink-yt">youtube</a>
                     <a href="https://www.facebook.com/groups/evangelios" target="_blank" class="dblink dblink-fb">facebook</a>
+                    <a href="#" class="dblink dblink-fb">Kiko Arguello</a>
                     </div>
 
-
-                 <!-- Agrega este nuevo div para el toggle de vista -->
-    <div class="view-toggle">
-        <label>
-            <input class=""  type="checkbox" id="toggleView">
-            <span>Ver como lista</span>
-        </label>
-    </div>
+                    <!-- Agrega este nuevo div para el toggle de vista -->
+                    <!-- antes→ <div class="view-toggle">-->
                 
-
-                    
-        
                 <h3>Etapas del Camino</h3>
                 <div class="category-filters">
                     <button class="category-filter" data-category="Precatecumenado">Precatecumenado</button>

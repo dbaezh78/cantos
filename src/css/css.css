@@ -200,7 +200,7 @@ pCatDiv{
     font-weight: bold;
     font-size: 100%;
 	line-height: .1;
-	margin-top: 0;
+	margin-top: -13px;
 }
 
 .chords {

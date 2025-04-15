@@ -2,6 +2,7 @@
 .dblink {
     display: block;
     text-decoration: none;
+    margin-top: -11px;
     /*    color: inherit;*/
 }
 
@@ -10,6 +11,7 @@
     white-space: nowrap;
     animation: marquee 70s linear infinite;
     color: darkgoldenrod;
+    margin-top: 15px;
 }
 
 @keyframes marquee {

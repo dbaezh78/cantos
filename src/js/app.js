@@ -77,7 +77,7 @@ toggleView.addEventListener('change', function() {
 
     // Actualizar el texto del label
     const labelText = this.nextElementSibling;
-    labelText.textContent = this.checked ? 'Vista de tarjetas' : 'Vista de lista';
+    labelText.textContent = this.checked ? 'Tarjetas' : 'Lista';
     
     // Volver a mostrar las canciones con la nueva vista
     filterSongs();

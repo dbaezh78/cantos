@@ -27,7 +27,10 @@ input {
     color: #bc0009;
     font-size: 4rem;
     text-align: center;
-    /*font-weight:bold;*/
+    font-weight: bold;
+    letter-spacing: -4.5px;
+    margin-bottom: -30px;
+    margin-top: -20px;
 }
 
 .cima {
@@ -36,10 +39,9 @@ input {
 }
 
 .sRD {
-    margin-top: -1%;
     width: 3%;
-    margin-bottom: -8px;
-    margin-left: -9px;
+    margin-bottom: -122px;
+/*    margin-left: -9px; */
 }
 
 .sIn {
@@ -48,7 +50,7 @@ input {
     color: goldenrod;
 }
 header {
-    text-align: center;
+    text-align: right;
 /*    margin-bottom: 5px;*/
     padding-bottom: 2px;
 }
@@ -387,6 +389,39 @@ h2 {
     content: "🔍";
 }
 
+/* 15/4/2025 11.2*/
+/* Oculta los checkboxes visualmente (pero siguen funcionales) */
+/* Oculta el mensaje inicialmente */
+.mensaje-kiko, .msg-jp2 {
+    display: none;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background: #f9f9f9;
+}
+
+/* Muestra el mensaje cuando el checkbox está marcado */
+#mostrar-mensaje:checked ~ .mensaje-kiko {
+    display: block;
+}
+
+#mostrar-mensaje-jp2:checked ~ .msg-jp2 {
+    display: block;
+}
+/*
+
+.mensaje-kiko {
+    display: none;
+    margin-top: -27px;
+    padding: 9px;
+    border: 1px solid #ccc;
+    background: #f9f9f9;
+}
+*/
+
+
+
+
 @media (max-width: 768px) {
     .search-container {
         flex-wrap: wrap;
@@ -530,8 +565,8 @@ h2 {
     .sRD {
         margin-top: -1%;
         width: 11%;
-        margin-bottom: 0px;
-        margin-left: -20px;
+        margin-bottom: -36px;
+        margin-left: 0px;
     }
 
     .sIn {
@@ -581,6 +616,7 @@ h2 {
         font-size: 3rem;
         color: #bc0009;
         text-align: center;
+        margin-bottom: -11px;
 /*        font-weight: bold;*/
     }
 
