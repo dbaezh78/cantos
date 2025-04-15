@@ -1,6 +1,6 @@
 body {
     
-    /* font-family: 'Arial', sans-serif;*/
+    /* font-family: 'Arial', sans-serif; */
     font-family: apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Roboto', sans-serif;
 
     padding: 2px;
@@ -18,6 +18,21 @@ input {
     font-style: italic;
     font-family: apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Roboto', sans-serif;
 }
+
+@font-face {
+    font-family: Neocat;
+    src: url('/cantos/src/font/Neocat-Regular_3.0.ttf') format('truetype');
+    font-display: swap; /* Muestra texto con fuente fallback mientras carga */
+}
+
+.MsgClass {
+    font-family: Neocat, Georgia, serif; /* Georgia es similar a serif */
+    font-size: 23px; 
+    text-align: justify;
+}
+
+
+
 .rdstyle{
     margin-top: 0%;
     width: 18%;

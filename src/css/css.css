@@ -28,6 +28,7 @@ body {
 
 }
 
+
 .song-container {
     width: max-content; /* Ajusta al 90% del ancho del dispositivo */
     max-width: max-content; /* Limita el ancho máximo en pantallas grandes */
