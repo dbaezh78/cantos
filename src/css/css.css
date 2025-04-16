@@ -943,7 +943,13 @@ position: absolute;
     .hmsize{
         font-size: 60%;
     }
-
+    .alcentro {
+        text-align: center;
+        font-weight: bold;
+        font-size: 100%;
+        line-height: .1;
+        margin-top: -3px;
+    }
 
 }
 
