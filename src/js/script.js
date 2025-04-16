@@ -1,5 +1,5 @@
 // Lista de acordes con todas las notas cromáticas
-const acordes = ["Do", "Do#", "Re", "Re#", "Mi", "Fa", "Fa#", "Sol", "Sol#", "La", "Sib", "Si"];
+const acordes = ["Do", "Do#", "Re", "Re#", "Mi", "Fa", "Fa#", "Sol", "Sol#", "La", "Si♭", "Si"];
 
 // Función para generar las opciones del menú desplegable
 function generarOpciones(defaultValue) {
