@@ -445,7 +445,9 @@ select option {
 }
 
 hr {
-    margin-bottom: 25px; 
+    /*margin-bottom: 25px; */
+    margin-bottom: 0px;
+    margin-top: 10px;
 }
 
 .sCejillas {
@@ -479,14 +481,35 @@ hr {
 }
 
 .saudio {
-    width: 96%; /* Asegura un espacio del 2% a cada lado */
+    width: 101%; /* Asegura un espacio del 2% a cada lado */
     margin: 1.3% auto 1.3px auto; /* Centra horizontalmente */
     display: table-cell; /* Esto es importante si no es flex */
+    background-color: #f0f0f0;
 /*		Contenido descontinuado!!! (Esto es importante si no es flex)
 		══════════════════════════
 		display: block; 
 		*/
 }
+
+.saudio_3 {
+    width: 33%; /* Asegura un espacio del 2% a cada lado */
+    margin: 1.3% auto 1.3px auto; /* Centra horizontalmente */
+    display: table-cell; /* Esto es importante si no es flex */
+}
+
+.square-audio {
+    width: 30%;
+    border-radius: 0 !important; /* Esto quita el redondeo */
+    background-color: #f0f0f0; /* Color de fondo opcional */
+}
+
+/* Estilo para los controles del reproductor */
+.square-audio::-webkit-media-controls-panel {
+    border-radius: 0 !important;
+    background-color: #f0f0f0;
+}
+
+
 
 /* 
 		Contenido descontinuado!!!
