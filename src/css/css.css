@@ -181,7 +181,8 @@ pCatDiv{
 /*  margin-right: -15px;		/*Aqui tenemos el margen entre lineas db */
     margin-right: 0px;		/*Aqui tenemos el margen entre lineas db */
     margin-bottom: 5px;		/*Aqui tenemos el margen entre lineas db */
-    padding-left: 5%;	/* Padding que establece el margen del canto*/
+    /* padding-left: 5%;	/* Padding que establece el margen del canto*/
+    padding-left: 7%;	/* Padding que establece el margen del canto*/
 }
 
 @font-face {
@@ -385,19 +386,19 @@ select option {
 ╔═══════════════════════════════╗
 ║ Indicadores personalizados 	║
 ╚═══════════════════════════════╝*/
-.t_0, .t_a, .t_s {
+.t_0, .t_a, .t_s, .ta1, .ta2, .ta3 {
     position: relative;
     padding-left: 1.5em;
 }
 
-.t_0::before, .t_a::before, .t_s::before, .t_s1::before {
+.t_0::before, .t_a::before, .t_s::before, .t_s1::before, .ta1::before, .ta2::before, .ta3::before {
     position: absolute;
     left: 0%;
     top: 12px;
     font-size: 18px;
-    color: gray;
+    color: #80808082;
     font-family: Arial, sans-serif;
-    line-height: 1;
+    line-height: 1.3;
     font-weight: bold;
 }
 
@@ -438,6 +439,18 @@ select option {
 
 .t_s1::before {
     content: "C";
+}
+
+.ta1::before {
+    content: "A1";
+}
+
+.ta2::before {
+    content: "A2";
+}
+
+.ta3::before {
+    content: "A3";
 }
 
 .niño::before {

@@ -1,6 +1,6 @@
 // Titulo	
 let titulo = "ALELUYA INTERLECCIONAL";
-let salmo = "Liturgico";
+let salmo = "Apropiados para los tiempos de Adviento, Navidad y Ordinario.";
 let dbnos = "180";      //Numero del libro
 
 // Definir variables con la parte de la Asamble	
