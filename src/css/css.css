@@ -40,6 +40,17 @@ body {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
+.song-precatecumenado {
+    width: max-content; /* Ajusta al 90% del ancho del dispositivo */
+    max-width: max-content; /* Limita el ancho máximo en pantallas grandes */
+    border: 1px solid #ddd;
+    padding: 1% 2% 1% 2%;
+    border-radius: 1% 1% 1% 1%;
+    background: white;
+    text-align: left;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
 .song-eleccion {
     width: max-content; /* Ajusta al 90% del ancho del dispositivo */
     max-width: max-content; /* Limita el ancho máximo en pantallas grandes */
@@ -422,11 +433,11 @@ select option {
 }
 
 .t_s::before {
-    content: "S";
+    content: "C";
 }
 
 .t_s1::before {
-    content: "S";
+    content: "C";
 }
 
 .niño::before {
@@ -738,7 +749,7 @@ position: absolute;
 }
 
 .tss::before {
-    content: "S";
+    content: "C";
 }
 
 .dbline {
@@ -766,7 +777,7 @@ position: absolute;
 
 .lyalab {		/*  lyrics_alabanza*/
     width: 69%;
-	min-width: max-content;
+	min-width: auto;
     font-family: "Franklin Gothic";
     font-size: 110%;
     color: black;

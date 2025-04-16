@@ -155,7 +155,7 @@ const songs = [
     {id:152,title: "Oh Dios, por tu nombre sálvame", subtitle: "Sal 54 (53)", category: "Precatecumenado", moments: ["Antiguo Testamento"], url: "/cantos/src/chtml/o/ohdiosportunombresalvame.html"},
     {id:153,title: "Oh Dios, tú eres mi Dios", subtitle: "Sal 63 (62)", category: "Precatecumenado", moments: ["Laudes","Antiguo Testamento"], url: "/cantos/src/chtml/o/ohdiostueresmidios.html"},
     {id:154,title: "Oh Jesús, amor mío", subtitle: "(Kiko Argüello)", category: "Precatecumenado", moments: ["Cuaresma","Pan"], url: "/cantos/src/chtml/o/ohjesusamormio.html"},
-    {id:155,title: "Oh muerte, ¿dónde está tu victoria?", subtitle: "1 Corintios 15", category: "Precatecumenado", moments: ["Pascua","Pentecostés","Comunión","Nuevo Testamento"], url: "/cantos/src/chtml/o/ohmuerte¿dondeestatuvictoria?.html"},
+    {id:155,title: "Oh muerte, ¿dónde está tu victoria?", subtitle: "1 Corintios 15", category: "Precatecumenado", moments: ["Pascua","Pentecostés","Comunión","Nuevo Testamento"], url: "/cantos/src/chtml/o/ohmuertedondeestatuvictoria.html"},
     {id:156,title: "Oh Señor, mi corazón ya no es ambicioso", subtitle: "Sal 131 (130)", category: "Catecumenado", moments: ["Antiguo Testamento"], url: "/cantos/src/chtml/o/ohsenormicorazonyanoesambicioso.html"},
     {id:157,title: "Oh Señor, nuestro Dios", subtitle: "Salmo 8", category: "Precatecumenado", moments: ["Entrada","Laudes","Antiguo Testamento"], url: "/cantos/src/chtml/o/ohsenornuestrodios.html"},
     {id:158,title: "Os tomaré de entre las naciones", subtitle: "Ezequiel 36,24-28", category: "Precatecumenado", moments: ["Pascua","Pentecostés","Entrada","Antiguo Testamento"], url: "/cantos/src/chtml/o/ostomaredeentrelasnaciones.html"},
