@@ -832,7 +832,7 @@ position: absolute;
 
 	table {
 		border-collapse: collapse;
-		width: 100%;
+		/*width: 100%;*/
 		max-width: 100%;
 		margin: 3% 0% 3% 0%;
 			}
