@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamaño de Pantalla</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        #screen-size {
+            font-size: 24px;
+            margin: 20px;
+            padding: 20px;
+            border: 2px solid #333;
+            border-radius: 10px;
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tamaño de tu Pantalla</h1>
+    <div id="screen-size">
+        Cargando...
+    </div>
+
+    <script>
+        function updateScreenSize() {
+            const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+            const height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+            
+            document.getElementById('screen-size').innerHTML = `
+                Ancho: ${width}px <br>
+                Alto: ${height}px
+            `;
+        }
+
+        // Mostrar el tamaño inicial
+        updateScreenSize();
+
+        // Actualizar cuando cambie el tamaño de la ventana
+        window.addEventListener('resize', updateScreenSize);
+    </script>
+</body>
+</html>
