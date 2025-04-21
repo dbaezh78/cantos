@@ -1,8 +1,8 @@
 
 	// Titulo
 	let titulo = "A LA VÍCTIMA PASCUAL";
-	let salmo = "Secuencia de Pascua";
-	let dbnos = "21";	//Numero del libro
+	let salmo = "Secuencia de Pascua - Himno lat. «Vlctlmae paschall laudes»";
+	let dbnos = "1";	//Numero del libro
 
     // Definir variables con la parte de la Asamble
 	let Asamblea1 = "PORQUE CRISTO, MI ESPERANZA,";
