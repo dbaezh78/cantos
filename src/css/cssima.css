@@ -1,7 +1,7 @@
 /* MUESTRA DE IMAGEN */
 
  .imajpg {
-      margin-left: 48%;
+      /*margin-left: 48%;*/
       cursor: pointer;
       transition: transform 0.3s;
     }

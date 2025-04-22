@@ -44,7 +44,7 @@ body {
     width: max-content; /* Ajusta al 90% del ancho del dispositivo */
     max-width: max-content; /* Limita el ancho máximo en pantallas grandes */
     border: 1px solid #ddd;
-    padding: 1% 2% 1% 2%;
+    padding: 2% 2% 2% 2%;
     border-radius: 1% 1% 1% 1%;
     background: white;
     text-align: left;
@@ -135,14 +135,14 @@ hr {
 	margin-top: -5px;
 	font-weight: normal; 
 	margin-bottom: 4px;
-    margin-right: 10%; /* Margen derecho */
+    text-align: right; /* Margen derecho */
 }
 
 .ima {
     max-width: 30%; /* Ajusta el tamaño de la imagen */
     height: auto; /* Mantiene la proporción de la imagen */
     display: block; /* Asegura que la imagen se comporte como un bloque */
-    margin-left: 60%; /* Empuja la imagen hacia la derecha */
+    /*margin-left: 60%; /* Empuja la imagen hacia la derecha */
 	font-weight: normal; 
 	margin-top: -30px;
 /* 
@@ -851,7 +851,74 @@ position: absolute;
         }
     
 
+        .notas-columna {
+            width: 30%;
+            float: left;
+        }
+        
+        .notas-enlace {
+            padding: 2px;
+            border: 1px solid #f2e5e5;
+            display: inline-block;
+            margin: 2px;
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        #imagen-container {
+            display: none;
+            position: relative;  /* Cambiado de 'relative' a 'fixed' */
+            bottom: 0px;     /* Distancia desde el borde inferior */
+            right: -62px;      /* Distancia desde el borde derecho */
+            width: 15%;
+            min-width: 150px;
+            background: white;
+            border: 1px solid #f2e5e5;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+            /* Aseguramos que sea cuadrado */
+            aspect-ratio: 1/1;
+            /* Contenido centrado */
+            /* display: flex; */
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        
+        
+        #imagen-nota {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        
+        .cerrar-btn {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background: #f2e5e5;
+            border: 1px solid #ccc;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            font-size: 12px;
+            line-height: 18px;
+            text-align: center;
+        }
 
+    .piecategoria {
+        background-color: white;
+        border: 1px solid #f2e5e5;
+        display: inline-block;
+        border-radius: 4px;
+        padding: 1px;
+        margin: 1px;
+    }
+
+    .ppascua {background-color: #3dcef0;}
+    .penteco {background-color: #f0433d;}
 
 /* FIN DEL CONTENIDO LIBRE O SIN FORMATO ESPECIFICADO*/
 
@@ -993,7 +1060,7 @@ position: absolute;
     .alcentro {
         text-align: center;
         font-weight: bold;
-        font-size: 100%;
+        font-size: 75%;
         line-height: .1;
         margin-top: -3px;
     }
