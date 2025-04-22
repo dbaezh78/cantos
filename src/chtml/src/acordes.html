@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .guitarra {
+            display: grid;
+            grid-template-rows: repeat(6, 1fr);
+            grid-template-columns: repeat(7, 1fr);
+            width: 500px;
+            height: 300px;
+            margin: 20px;
+            background-color: #f5e6c8; /* Color madera claro */
+            position: relative;
+        }
+        
+        /* Cuerdas (líneas horizontales) */
+        .guitarra::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            background: linear-gradient(to bottom, 
+                transparent 0%, 
+                transparent calc(100%/12), 
+                #333 calc(100%/12), 
+                #333 calc(100%/12 + 1px), 
+                transparent calc(100%/12 + 1px), 
+                transparent calc(100%/6), 
+                #333 calc(100%/6), 
+                #333 calc(100%/6 + 1px), 
+                transparent calc(100%/6 + 1px), 
+                transparent calc(100%/4), 
+                #333 calc(100%/4), 
+                #333 calc(100%/4 + 1px), 
+                transparent calc(100%/4 + 1px), 
+                transparent calc(100%/3), 
+                #333 calc(100%/3), 
+                #333 calc(100%/3 + 1px), 
+                transparent calc(100%/3 + 1px), 
+                transparent calc(5*100%/12), 
+                #333 calc(5*100%/12), 
+                #333 calc(5*100%/12 + 1px), 
+                transparent calc(5*100%/12 + 1px), 
+                transparent calc(100%/2), 
+                #333 calc(100%/2), 
+                #333 calc(100%/2 + 1px), 
+                transparent calc(100%/2 + 1px));
+        }
+        
+        /* Trastes (líneas verticales) */
+        .guitarra::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background: linear-gradient(to right, 
+                transparent 0%, 
+                transparent calc(100%/7), 
+                #000 calc(100%/7), 
+                #000 calc(100%/7 + 2px), 
+                transparent calc(100%/7 + 2px), 
+                transparent calc(2*100%/7), 
+                #000 calc(2*100%/7), 
+                #000 calc(2*100%/7 + 2px), 
+                transparent calc(2*100%/7 + 2px), 
+                transparent calc(3*100%/7), 
+                #000 calc(3*100%/7), 
+                #000 calc(3*100%/7 + 2px), 
+                transparent calc(3*100%/7 + 2px), 
+                transparent calc(4*100%/7), 
+                #000 calc(4*100%/7), 
+                #000 calc(4*100%/7 + 2px), 
+                transparent calc(4*100%/7 + 2px), 
+                transparent calc(5*100%/7), 
+                #000 calc(5*100%/7), 
+                #000 calc(5*100%/7 + 2px), 
+                transparent calc(5*100%/7 + 2px), 
+                transparent calc(6*100%/7), 
+                #000 calc(6*100%/7), 
+                #000 calc(6*100%/7 + 2px), 
+                transparent calc(6*100%/7 + 2px));
+        }
+        
+        /* Puntos en los trastes 3, 5, 7, etc. (opcional) */
+        .punto {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #000;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .punto-3 {
+            left: calc(3*100%/7);
+            top: 50%;
+        }
+        
+        .punto-5 {
+            left: calc(5*100%/7);
+            top: 50%;
+        }
+        
+        .punto-doble-1 {
+            left: calc(7*100%/14);
+            top: 30%;
+        }
+        
+        .punto-doble-2 {
+            left: calc(7*100%/14);
+            top: 70%;
+        }
+    </style>
+</head>
+<body>
+    <div class="guitarra">
+        <!-- Puntos de referencia (opcionales) -->
+        <div class="punto punto-3"></div>
+        <div class="punto punto-5"></div>
+        <div class="punto punto-doble-1"></div>
+        <div class="punto punto-doble-2"></div>
+    </div>
+</body>
+</html>

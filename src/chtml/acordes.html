@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='es'>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glosario de Acordes de Guitarra</title>
+    <link rel="stylesheet" href="acordes.css">
+</head>
+<body>
+    <div id='header'>
+        <h1>Glosario de Acordes</h1>
+    </div>
+    <div id='main'>
+        <div id='chord-display'>
+            <div id='chord-name'>DO</div>
+            <div id='chord-diagrams'>
+                <div class='diagram-container'></div>
+            </div>
+            <div id='chord-nav'>
+                <button id='prev-chord'>◀</button>
+                <div id='position-indicator'></div>
+                <button id='next-chord'>▶</button>
+            </div>
+        </div>
+        <div id='chord-selector'>
+            <div class='selector-row'>
+                <div class='scroll-container'>
+                    <div class='note-list'>
+                        <div class='empty'></div>
+                        <div class='note selected'>DO</div>
+                        <div class='note'>DO#</div>
+                        <div class='note'>REb</div>
+                        <div class='note'>RE</div>
+                        <div class='note'>RE#</div>
+                        <div class='note'>MIb</div>
+                        <div class='note'>MI</div>
+                        <div class='note'>FA</div>
+                        <div class='note'>FA#</div>
+                        <div class='note'>SOLb</div>
+                        <div class='note'>SOL</div>
+                        <div class='note'>SOL#</div>
+                        <div class='note'>LAb</div>
+                        <div class='note'>LA</div>
+                        <div class='note'>LA#</div>
+                        <div class='note'>SIb</div>
+                        <div class='note'>SI</div>
+                        <div class='empty'></div>
+                    </div>
+                </div>
+            </div>
+            <div class='selector-row'>
+                <div class='scroll-container'>
+                    <div class='type-list'>
+                        <div class='empty'></div>
+                        <div class='type selected'>M</div>
+                        <div class='type'>m</div>
+                        <div class='type'>7</div>
+                        <div class='type'>m7</div>
+                        <div class='type'>maj7</div>
+                        <div class='type'>aug</div>
+                        <div class='type'>dim</div>
+                        <div class='type'>sus</div>
+                        <div class='type'>5</div>
+                        <div class='type'>6</div>
+                        <div class='type'>9</div>
+                        <div class='type'>add9</div>
+                        <div class='type'>m6</div>
+                        <div class='type'>mmaj7</div>
+                        <div class='type'>m9</div>
+                        <div class='type'>11</div>
+                        <div class='type'>7sus4</div>
+                        <div class='type'>13</div>
+                        <div class='type'>6add9</div>
+                        <div class='type'>-5</div>
+                        <div class='type'>7-5</div>
+                        <div class='type'>7maj5</div>
+                        <div class='type'>maj9</div>
+                        <div class='empty'></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id='controls'>
+            <button id='toggle-notation'>C D E</button>
+            <button id='toggle-lefty'>Zurdo</button>
+        </div>
+    </div>
+    <div id='footer'>
+        <p>© Glosario de Acordes - Todos los derechos reservados</p>
+    </div>
+    <script src="acordes.js"></script>
+</body>
+</html>

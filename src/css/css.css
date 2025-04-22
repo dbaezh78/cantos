@@ -910,15 +910,16 @@ position: absolute;
 
     .piecategoria {
         background-color: white;
-        border: 1px solid #f2e5e5;
+        border: 1px solid goldenrod;
         display: inline-block;
         border-radius: 4px;
         padding: 1px;
         margin: 1px;
     }
 
-    .ppascua {background-color: #3dcef0;}
-    .penteco {background-color: #f0433d;}
+    .ppascua {color: #3dcef0;}
+    .ppenteco {color: #f0433d;}
+    .plaudes {color: rgb(56, 162, 6);}
 
 /* FIN DEL CONTENIDO LIBRE O SIN FORMATO ESPECIFICADO*/
 

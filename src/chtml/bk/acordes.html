@@ -1,0 +1,613 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML lang='es'>
+<HEAD>
+<META HTTP-EQUIV="Content-Language" CONTENT="es">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Content-Script-Type" CONTENT="text/javascript">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<META NAME="description" CONTENT="Glosario de acordes de LaCuerda.net (La Cuerda). Diccionario de acordes con todas las posiciones. Notación C,D,E y Do,Re,Mi.">
+<META NAME="keywords" CONTENT="acordes, guitarra, lacuerda, la cuerda, diagramas, diccionario, glosario">
+<TITLE>Acordes de Guitarra</TITLE>
+<link rel='apple-touch-icon' href='//lacuerda.net/IMG/lc-favicon-196.png'>
+<link rel='icon' href='//lacuerda.net/IMG/lc-favicon-32.png' type='image/png' sizes='32x32'/>
+<link rel='icon' href='//lacuerda.net/IMG/lc-favicon-192.png' type='image/png' sizes='192x192'/>
+<script src="js/acorde.js"></script>
+<script src='js/iscroll.js'></script>
+<script src='js/toolDiag.js'></script>
+<script>
+var googletag = googletag || {cmd:[]};
+var myAds = [{adu:'/37756251/728top', sz:[728, 90], id:'div-gpt-ad-1430236222398-0'} ];
+if (window.innerWidth<600) myAds.push({adu:'/37756251/MOBlist', sz:[320, 50], id:'div-gpt-ad-1430236222398-3'});
+
+</script>
+<script async='async' src='js/gpt.js'></script>
+<script async='async' src="https://acordes.lacuerda.net/UTIL/pb.php"></script>
+<script async src="https://cdn.insurads.com/bootstrap/55QXK4XS.js"></script>
+
+
+<LINK href="/js/style.css" rel="stylesheet" type="text/css">
+
+<link rel='apple-touch-icon' href='acordes-196.png'>
+<link rel='icon' href='acordes-32.png' type='image/png' sizes='32x32'/>
+<link rel='icon' href='acordes-192.png' type='image/png' sizes='192x192'/>
+<meta property='og:site_name' content='Glosario de Acordes' /><meta property='og:type' content='website' />  
+<meta property='og:image' content='https://lacuerda.net/Recursos/acordes/acordes-196.png' />
+<meta property='og:url' content='https://lacuerda.net/Recursos/acordes/' />  
+<meta property='og:title' content='Acordes de Guitarra' />
+<script data-ad-client='ca-pub-7606885247521315' async src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'></script>
+<script async src='https://www.googletagmanager.com/gtag/js?id=UA-8916411-9'></script>
+<script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date());
+gtag('config', 'UA-8916411-9');</script>
+
+<style>
+.mBody { min-height:400px }
+#wrapper { margin-left:auto; margin-right:auto }
+#verwrap { width:720px; height:155px; font-size:22px; overflow:scroll }
+
+#t_loader { margin-top:50px }
+.posteV { background-color:#fff!important; width:4.02em; z-index:0 }
+#chordname { font:bold 18px arial; color:#000; margin:5px 0 4px 0; padding:0; width:100%; height:20px; text-align:center; background:transparent }
+#verdiv div.fretnum {font:bold 70% helvetica; color:#000; text-align:left; display:block; margin-top:4px; margin-left:35px; line-height:0.95em}
+span.spanV { font-size:65%; padding-top:2.3em;  }
+#myIndi {
+      position: relative; height:10px; margin:12px auto 24px auto;
+      background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAKCAYAAABrGwT5AAAAAXNSR0IArs4c6QAAAAlwSFlzAAALEwAACxMBAJqcGAAAAER0RVh0Q29tbWVudAB0SU1FIGNodW5rbGVuIDcgaWdub3JlZDoNQVNDSUk6IC7DnS4uLjYzDUhFWDogMDdERDA1MDYwODM2MzO3EoHyAAAAIXRFWHRTb2Z0d2FyZQBHcmFwaGljQ29udmVydGVyIChJbnRlbCl3h/oZAAAAbUlEQVR4nGJggIKpU6fKnD17dhIQvwfib0C8AiimxUAIbN682R6o+C4Q/0fD74BykTg1Ak2XBSp6iEUjDH8BqjHHqhkoOQOPRhheiEvzJyI03wQqZaG6ZvKdTVGAgQDZUYXkApITCQAAAP//AwDrzRa+mm7gaAAAAABJRU5ErkJggg==');
+}
+
+#dotty { position: absolute; width: 10px; height: 10px; border-radius: 5px; background: #c00; }
+.verSelect { width:20px; height:16px; line-height:20px; font-size:20px; color:#aaa; cursor:pointer; -webkit-user-select:none;  }
+.verSelect:hover {color:#f84 }
+.verSelect:active {color:#c00 }
+
+div.wrapdiv { width:100%; height:40px; margin-top:10px; overflow:scroll; background:#ddd; -ms-overflow-style:none  }
+div.wrapdiv::-webkit-scrollbar { display: none }
+
+div.uldiv { width:1344px; height:40px }
+div.uldiv ul { list-style:none; display:block; float:left; width:100%; height:100%;
+padding:0; margin:0; text-align:left;
+}
+div.uldiv li { margin:0; width:60px; height:40px; padding:2px; font:bold 12px/36px Roboto,arial,helvetica; white-space:nowrap; overflow:hidden; display:block; color:#222; float:left; text-align:center; }
+div.uldiv li.sel { 	color:#ffffff; background:#f84 }
+
+
+button.acoBut { font:bold 11px Lato,arial; width:80px; height:30px; margin:0 3px 10px 3px; border-radius:5px; border:0; color:#000; background:#ddd; cursor:pointer; -webkit-user-select:none }
+
+#fcfdiv { margin:20px 5px 0 5px; height:40px; overflow:hidden; font-size:18px; line-height:30px }
+
+div.prefBut { float:right; width:60px; height:30px; line-height:30px; text-align:center; background:#ccc; border-right:solid 1px #aaa }
+div.prefBut img { width:24px; height:24px; margin-top:3px }
+</style>
+</HEAD>
+
+<BODY onload="; bidStart(); ">
+<div id='mTopCont'></div>
+<div id='mHead'>
+	<div class='mhTit' >LaCuerda.net: Acordes de Guitarra</div>
+</div>
+<script>mShTop();</script>
+<div id='mCols'><div id='mLeft'>
+<div id='mlMenu'><div class=mlTit style="background-color:#800080">Recursos</div>
+			<ul id='mlSecs'><li  onclick="w.location='//lacuerda.net//Recursos/afinador/'">Afinador</li>
+<li style="background-color:#eee" onclick="w.location='//lacuerda.net//Recursos/acordes/'">Glosario de Acordes</li>
+<li  onclick="w.location='//lacuerda.net//Recursos/ritmos/'">Glosario de Ritmos</li>
+<li  onclick="w.location='//lacuerda.net//Recursos/charango/'">Acordes de Charango</li>
+<li  onclick="w.location='//lacuerda.net//Recursos/cursoguitarra/'">Curso de Guitarra</li>
+<li  onclick="w.location='//lacuerda.net//Recursos/cursocanto/'">Curso de Canto</li>
+<li  onclick="w.location='//lacuerda.net//Recursos/cursobajo/'">Curso de Bajo</li>
+<li  onclick="w.location='//lacuerda.net//Recursos/biblioteca_de_partituras.html'">Biblioteca de partituras</li>
+<li  onclick="w.location='//lacuerda.net//Recursos/teoria/'">Teoría Musical</li>
+<li  onclick="w.location='//lacuerda.net//Recursos/clasica/'">Guitarra Clásica</li>
+<li  onclick="w.location='//lacuerda.net//Recursos/articulos/'">Ejercicios y Artículos</li>
+<li  onclick="w.location='//lacuerda.net//Recursos/informacion/'">Información Práctica</li>
+</ul>
+</div>
+</div>
+
+<div class='mBody'>
+<div class='mbTit' id='mbTit'><div>
+Acordes de Guitarra</div>
+</div>
+<div id=ban728><!-- /37756251/728top -->
+<div id='div-gpt-ad-1430236222398-0'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1430236222398-0'); });
+</script>
+</div>
+</div>
+<script type="text/javascript" charset="utf-8">
+var db, nota, tono, lastElm = {}, lastPos = {}, chordDesc = {};
+var chordFullWidth = true;
+var iniWidth = w.innerWidth;
+var IPAD = (navigator.userAgent.indexOf('iPad')!=-1) ? 1:0;
+var bigScreen = !IPAD;
+var actVer = 0, maxVer = 1;
+var notaScroll = null, modoScroll = null, espeScroll = null;
+
+function SCT() {}
+var cWin = w;
+
+toolDiag.chordBase = {"C":["01023X","35553X","889AA8","31023X","CDCEFX","CDCAXX"]};
+var chordName = "C";
+var acoList = chordName;
+var	chordVers = (bigScreen == 0) ? toolDiag.chordBase[chordName] : [toolDiag.chordBase[chordName][0]];
+maxVer = 5;
+var chordList = toolDiag.chordBase;
+
+
+function loaded() {
+  DO.addEventListener('touchmove', function(e){ e.preventDefault() }, true);
+  GS('wrapper').width = w.getComputedStyle(GE('mbTit')).getPropertyValue('width');
+  preList = "C+Cm+C7+D+Dm+D7+E+Em+E7+F+Fm+F7+G+Gm+G7+A+Am+A7+B+Bm+B7";
+  setTimeout("ADS('//acordes.lacuerda.net/TRAN/procDiag.php?guitarOnly=2&desc='+preList)",1);
+
+  w.emptyLen = PI(GS('wrapper').width)/2 - 30;
+  console.log('emptyLen:'+emptyLen);
+
+  nocheEl = DO.createElement('style');
+  DO.head.appendChild(nocheEl);
+  nocheEl.appendChild(DO.createTextNode(''));
+  nocheEl.sheet.insertRule('div.uldiv li.empty { width:'+w.emptyLen+'px }', 0);
+
+  nocheEl = DO.createElement('style');
+   DO.head.appendChild(nocheEl);
+   nocheEl.appendChild(DO.createTextNode(''));
+   nocheEl.sheet.insertRule('#tranView { background:#000 }', 0);
+
+
+  console.log('wrapper width:'+GS('wrapper').width);
+ 	vScrollStart();
+	scrollStart();
+//	setInterval('blockOr()', 120);
+  blockOr();
+
+  iniWidth = w.innerWidth;
+	lastElm ={'notalist':GE('notaIni'), 'modolist':GE('modoIni'),'espelist':GE('espeIni')};
+	lastPos =   { 'notalist':0, 'modolist':0, 'espelist':0 };
+	chordDesc = { 'notalist':'DO', 'modolist':'M', 'espelist':'' };
+
+	if (typeof(LS.fcf) == 'undefined') lsSet('fcf',1);
+	else if (LS.fcf.substr(0,1) == 'o') lsSet('fcf',1);
+
+	setTimeout('persistDraw()',300);
+}
+
+function persistDraw() {
+	if (HTML('verwrap') == "") {
+		chordDraw();
+		HTML('chordname', "DO");
+		setTimeout("persistDraw()", 100);
+	}
+}
+
+function blockOr() {
+  document.body.style.width = w.innerWidth;
+  GS('wrapper').width = w.getComputedStyle(GE('mbTit')).getPropertyValue('width');
+	chordDraw();
+	if (bigScreen == 1) return;
+
+	vScroll.refresh();
+	notaScroll.refresh();
+	modoScroll.refresh();
+	espeScroll.refresh();
+}
+
+
+function vScrollStart() {
+	if (bigScreen == 1) return;
+	vScroll = new IScroll('#verwrap', {
+		scrollX: true,
+		scrollY: false,
+		momentum: false,
+		snap: true,
+		snapSpeed: 400,
+		keyBindings: true,
+		indicators: {
+			el: document.getElementById('myIndi'),
+			resize: false,
+			listenY: false
+		}
+	});
+	setTimeout("vScroll.refresh()", 500);
+}
+
+function scrollStart() {
+
+	if (bigScreen == 1) {
+		GS('nota').width = (PI(GS('nota').width)-128)+'px';
+		GS('modo').width = (PI(GS('modo').width)-128)+'px';
+		GS('espe').width = (PI(GS('espe').width)-128)+'px';
+	}
+
+  GS('nota').width = ((17*60) + (2 * emptyLen))+'px';
+  GS('modo').width = ((17*60) + (2 * emptyLen))+'px';
+  GS('espe').width = ((17*60) + (2 * emptyLen))+'px';
+
+	if (bigScreen == 1) return;
+
+	var iscrollOpts = {tap:'myTap', disableMouse:true, scrollX: true, scrollY:false, hScrollbar:false, vScrollbar:false };
+
+	notaScroll = new IScroll('#mywrapa', iscrollOpts);
+    notaScroll.on('scrollEnd', function() { try { elmScroll(notaScroll); } catch(err) {} });
+	GE('mywrapa').addEventListener('myTap', function(e) { elmSelect(notaScroll,e); }, false);
+
+	modoScroll = new IScroll('#mywrapb', iscrollOpts);
+    modoScroll.on('scrollEnd', function() { try { elmScroll(modoScroll); } catch(err) {} });
+	GE('mywrapb').addEventListener('myTap', function(e) { elmSelect(modoScroll,e); }, false);
+
+	espeScroll = new IScroll('#mywrapc', iscrollOpts);
+    espeScroll.on('scrollEnd', function() { try { elmScroll(espeScroll); } catch(err) {} });
+	GE('mywrapc').addEventListener('myTap', function(e) { elmSelect(espeScroll,e); }, false);
+}
+
+
+
+var scrolling = 0;
+function elmScroll(scrollElm) {
+    if (bigScreen == 1) return;
+    listElm = scrollElm.scroller.childNodes[1];
+		var scrollX = (bigScreen == 0) ? scrollElm.x : GE('mywrapa').scrollLeft;
+    console.log('listElm:'+listElm.id);
+    if (lastPos[listElm.id] == scrollElm.x) return;
+
+
+    var act = Math.ceil((scrollElm.x)/-60);
+    console.log('antes:'+scrollElm.x+' act:'+act);
+    newpos = 0 - act*60;
+    if (newpos != scrollElm.x) {
+        scrolling = 1;
+        scrollElm.scrollTo(newpos,0);
+        scrolling = 0;
+    }
+    act = Math.floor((scrollElm.x)/-60)+1;
+    console.log('despues:'+scrollElm.x+' act:'+act);
+
+    var actElm = listElm.childNodes[(act*2)+1];
+    console.log('inner:'+actElm.innerHTML);
+    if (actElm.innerHTML == "") actElm = listElm.childNodes[(act*2)-1];
+    chordDesc[listElm.id] = actElm.innerHTML;
+    if (lastElm[listElm.id] != null) lastElm[listElm.id].removeAttribute('class');
+    actElm.setAttribute('class','sel');
+    lastElm[listElm.id] = actElm;
+    lastPos[listElm.id] = scrollElm.x;
+    chordShow();
+}
+
+
+var lastClick = 0;
+function elmSelect(scrollElm,e) {
+	e.preventDefault();
+	SCT();
+
+	var now = (new Date()).getTime();
+	if (now - lastClick < 750) return;
+	lastClick = now;
+
+	if (!e) var e = window.event; var tg = (window.event) ? e.srcElement : e.target;
+	if (tg.tagName != 'LI' || tg.innerHTML == "") return;
+
+	ch = tg.parentNode.childNodes; var i = 0; for (x = 0; x < ch.length; x++) if (ch[x] == tg) { i = x; break }
+	act = parseInt(i/2);
+	newpos = 0 - (act-1)*60;
+	if (bigScreen == 0) scrollElm.scrollTo(newpos,0); else tg.parentNode.parentNode.parentNode.scroll(0-newpos,0);
+
+	var actElm = tg;
+	if (lastElm[tg.parentNode.id] != null) lastElm[tg.parentNode.id].removeAttribute('class');
+	actElm.setAttribute('class','sel');
+	chordDesc[tg.parentNode.id] = actElm.innerHTML;
+	lastElm[tg.parentNode.id] = actElm;
+	lastPos[tg.parentNode.id] = newpos;
+	chordShow();
+	return false;
+}
+
+function chordShow() {
+	if (chordDesc['espelist'] != "")
+		chordName = chordDesc['espelist'];
+	else {
+		chordName = chordDesc['notalist'];
+		if (chordDesc['modolist'] != 'M') chordName += chordDesc['modolist'];
+	}
+
+	acoList = chordName;
+	cWin.chordFillList(chordShow2);
+	return;
+}
+
+function chordShow2() {
+  var s = acoList;
+  s = (chordIsLatin(s)) ? trans2Sax(s) : s;
+  if (s.indexOf('b') != -1) s = trans2Sus(s);
+console.log('acolist:'+acoList+' s:'+s);
+	if (bigScreen == 1 && typeof(toolDiag.chordBase[s]) != "undefined") {
+		chordVers = [toolDiag.chordBase[s][0]];
+		actVer = 0;
+    GS('dotty').marginLeft = 0;
+		maxVer = toolDiag.chordBase[s].length;
+	}
+	else
+		chordVers = toolDiag.chordBase[s];
+
+	console.log("chordVers:"+chordVers);
+
+	chordDraw();
+	vScrollStart();
+	if (bigScreen == 0) setTimeout("vScroll.scrollTo(0,0)",1);
+	HTML('chordname', chordName);
+}
+
+
+function chordSwap() {
+	but = GE('butNota');
+var esLat = (but.innerHTML == "C D E") ? true : false;
+nota = document.getElementById('notalist');
+for (i=1; i<nota.childNodes.length; i+=2) {
+	elm = nota.childNodes[i];
+	elm.innerHTML = (esLat) ? trans2Sax(elm.innerHTML) : trans2Lat(elm.innerHTML);
+}
+espe = document.getElementById('espelist');
+for (i=1; i<espe.childNodes.length; i+=2) {
+	elm = espe.childNodes[i];
+	elm.innerHTML = (esLat) ? trans2Sax(elm.innerHTML) : trans2Lat(elm.innerHTML);
+}
+if (GS('mywrapc').display!='none') {
+	hide('mywrapc');
+	setTimeout("show('mywrapc')",10);
+}
+chordDesc['notalist'] = (esLat) ? trans2Sax(chordDesc['notalist']) : trans2Lat(chordDesc['notalist']);
+chordDesc['espelist'] = (esLat) ? trans2Sax(chordDesc['espelist']) : trans2Lat(chordDesc['espelist']);
+chordShow();
+but.innerHTML = (esLat) ? "DO RE MI" : "C D E";
+}
+
+var espeOn = 0;
+function showEspe() {
+  espeOn = !espeOn;
+  a = espeOn;
+if (a == 1) {
+	hide('mywrapa');
+	hide('mywrapb');
+	show('mywrapc');
+	if (bigScreen != 1) espeScroll.refresh();
+	HTML('butEspe', "Normales");
+	chordDesc['espelist'] = lastElm['espelist'].innerHTML;
+}
+else {
+	show('mywrapa');
+	show('mywrapb');
+	hide('mywrapc');
+  HTML('butEspe', "Especiales");
+	chordDesc['espelist'] = '';
+}
+chordShow();
+}
+
+var zurdoOn = 0, styleEl = null;
+function showZurdo() {
+  zurdoOn = !zurdoOn;
+  GS('butZurdo').background = (zurdoOn == 1) ? '#f84' : '';
+  GS('butZurdo').color = (zurdoOn == 1) ? '#fff' : '';
+
+  if (zurdoOn == 1) {
+    styleEl = DO.createElement('style');
+  	DO.head.appendChild(styleEl);
+  	styleEl.appendChild(document.createTextNode(''));
+  	out = "div.fret { background-image:url('//lacuerda.net/DIAGS/fretBigBis.png') }";
+  	styleEl.sheet.insertRule(out, 0);
+  }
+  else {
+    DO.head.removeChild(styleEl);
+  }
+
+  chordShow();
+}
+
+
+function setPrefs(n) {
+	lsSet('fcf', n);
+
+	for(i = 0; i < 3; i++) {
+		GS('but'+i).backgroundColor = (i==n) ? "#FC5F08" : "#ccc";
+		img = "img/diag" + i + ((i == n) ? "b" : "") + ".gif";
+		HTML('but'+i, "<img src='"+img+"'>");
+	}
+	chordShow();
+	vScroll.refresh();
+}
+
+
+function doPromo(n) {
+        lsSet('promoSec', 4);
+        w.location='Gplus.html';
+        return;
+}
+
+function verSelect(delta) {
+	if (delta == -1 && actVer == 0) return;
+	if (delta == +1 && actVer == maxVer - 1) return;
+
+	var s = acoList;
+  s = (chordIsLatin(s)) ? trans2Sax(s) : s;
+  if (s.indexOf('b') != -1) s = trans2Sus(s);
+
+	actVer += delta;
+	chordVers = [toolDiag.chordBase[s][actVer]];
+	console.log("chordVers:"+chordVers);
+	chordDraw();
+	GS('dotty').marginLeft = (actVer*15)+'px';
+}
+
+
+</script>
+
+<div id=wrapper>
+<div id=scroller>
+<div id='chordname'>DO</div>
+<div id="verwrap"><div id="verdiv"><div class='fret' style='margin-left:12px'></div></div></div>
+<div style='display:flex; justify-content: space-between; width:180px; margin:10px auto'>
+	<div class=verSelect style='text-align:right' onclick='verSelect(-1)'>&#9664;</div>
+	<div id="myIndi" style='width:10px; margin-top:5px'><div id="dotty"></div></div>
+	<div class=verSelect onclick='verSelect(+1)'>&#9658;</div>
+</div>
+
+<center>
+<button class=acoBut id=butNota onclick="chordSwap(); return false" onclick="void(null); return false">C D E</button>
+<button class=acoBut id=butEspe onclick="showEspe(); return false">Especiales</button>
+<button class=acoBut id=butZurdo onclick="showZurdo(); return false">Zurdo</button>
+</center>
+<br>
+
+<div id=mywrapa class=wrapdiv>
+	<div id=nota class=uldiv style="width:1344px">
+		<ul id="notalist" onclick="elmSelect(notaScroll,event)">
+			<li class=empty></li>
+			<li id=notaIni class='sel'>DO</li>
+			<li>DO#</li>
+			<li>REb</li>
+			<li>RE</li>
+			<li>RE#</li>
+			<li>MIb</li>
+			<li>MI</li>
+			<li>FA</li>
+			<li>FA#</li>
+			<li>SOLb</li>
+			<li>SOL</li>
+			<li>SOL#</li>
+			<li>LAb</li>
+			<li>LA</li>
+			<li>LA#</li>
+			<li>SIb</li>
+			<li>SI</li>
+			<li class=empty></li>
+		</ul>
+	</div>
+</div>
+
+<div id=mywrapb class=wrapdiv>
+	<div id=modo class=uldiv style="width:1728px">
+		<ul id="modolist" onclick="return elmSelect(modoScroll,event)">
+			<li class=empty></li>
+			<li id=modoIni class=sel>M</li>
+			<li>m</li>
+      <li>7</li>
+      <li>m7</li>
+      <li>maj7</li>
+			<li>aug</li>
+      <li>dim</li>
+			<li>sus</li>
+			<li>5</li>
+			<li>6</li>
+			<li>9</li>
+			<li>add9</li>
+			<li>m6</li>
+			<li>mmaj7</li>
+			<li>m9</li>
+			<li>11</li>
+			<li>7sus4</li>
+			<li>13</li>
+			<li>6add9</li>
+			<li>-5</li>
+			<li>7-5</li>
+			<li>7maj5</li>
+			<li>maj9</li>
+			<li class=empty></li>
+		</ul>
+	</div>
+</div>
+
+<div id='mywrapc' class=wrapdiv style="display:none; margin-bottom:80px">
+	<div id=espe class=uldiv style="width:3392px; font-size:20px">
+		<ul id="espelist" onclick="return elmSelect(espeScroll,event)">
+			<li class=empty></li>
+			<li id=espeIni class=sel>DO/MI</li>
+			<li>DO/FA</li>
+			<li>DO/SOL</li>
+			<li>RE/FA#</li>
+			<li>RE/DO</li>
+			<li>RE/SI</li>
+			<li>RE/SIb</li>
+			<li>RE/LA</li>
+			<li>MI/SI</li>
+			<li>MI/DO#</li>
+			<li>MI/RE</li>
+			<li>MI/RE#</li>
+			<li>MI/FA</li>
+			<li>MI/FA#</li>
+			<li>MI/SOL</li>
+			<li>MI/SOL#</li>
+			<li>MIm/SI</li>
+			<li>MIm/DO#</li>
+			<li>MIm/RE</li>
+			<li>MIm/RE#</li>
+			<li>MIm/FA</li>
+			<li>MIm/FA#</li>
+			<li>MIm/SOL</li>
+			<li>MIm/SOL#</li>
+			<li>FA/DO</li>
+			<li>FA/RE</li>
+			<li>FA/RE#</li>
+			<li>FA/MI</li>
+			<li>FA/SOL</li>
+			<li>FA/LA</li>
+			<li>FAm/DO</li>
+			<li>SOL/RE</li>
+			<li>SOL/MI</li>
+			<li>SOL/FA</li>
+			<li>SOL/FA#</li>
+			<li>SOL/SI</li>
+			<li>SOLm/RE</li>
+			<li>LA/SOL#</li>
+			<li>LA/SOL</li>
+			<li>LA/FA#</li>
+			<li>LA/FA</li>
+			<li>LA/MI</li>
+			<li>LA/DO#</li>
+			<li>LAm/SOL#</li>
+			<li>LAm/SOL</li>
+			<li>LAm/FA#</li>
+			<li>LAm/FA</li>
+			<li>LAm/MI</li>
+			<li>LAm/DO</li>
+			<li class=empty></li>
+		</ul>
+	</div>
+</div>
+
+	</div>
+</div>
+
+<div class=texto style="margin-top:30px; text-align:center">
+
+	Este glosario de acordes de guitarra es ofrecido gratis por LaCuerda.net (La Cuerda). Esta herramienta te permite consultar todas las formas que hay de formar cada acorde.
+	Para ver las diferentes formas de tocar un acorde de guitarra desliza el diagrama horizontalmente.
+	<!--
+  Si lo que buscas son acordes de ukulele,
+  acordes de piano o acordes de charango te invitamos a descargar nuestra app.
+-->
+</div></center>
+<script>
+loaded();
+</script>
+
+<div id="naeXTReMe" style="display:none"><img height="1" width="1" alt=""
+src='//nht-2.extreme-dm.com/n2.g?login=redenes&amp;pid=acordes&amp;j=n&amp;jv=n&amp;auto=y' />
+</div>
+
+</div>
+</div>
+<div id='mBot' style='clear:all'>
+<b>&copy;</b> LaCuerda<font color=#a0a0a0>.net</font> &middot <a rel=nofollow href=//lacuerda.net/Extras/legal.php>aviso legal</a> &middot; <a rel=nofollow href=//lacuerda.net/Extras/privpol.php>privacidad</a> &middot; <a title='Acordes de Guitarra' href='//lacuerda.net/'>es</a>
+ &middot; <a title='Guitar Chords' href='//lacuerda.net/?lang=EN'>en</a>
+ &middot; <a title='Cifras de Violão' href='//lacuerda.net/?lang=PT'>pt</a>
+ &middot; <a rel=nofollow href=//lacuerda.net/Extras/contacto.php>contacto</a>
+</div>
+<div id='mMask' style='display:none' onclick='toogleMenu()'></div>
+<div id='ban320'>
+<!-- /37756251/MOBlist -->
+<div id='div-gpt-ad-1430236222398-3' style='height:50px; width:320px;'>
+<script type='text/javascript'>
+if (window.innerWidth < 600) googletag.cmd.push(function() { googletag.display('div-gpt-ad-1430236222398-3'); });</script></div>
+</div>
+<div style='height:1px; background:#000'></div>
+<script>if (typeof(fixBot) != 'undefined') fixBot();</script>
+</body></html>
