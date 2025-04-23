@@ -28,7 +28,6 @@ body {
 
 }
 
-
 .song-container {
     width: max-content; /* Ajusta al 90% del ancho del dispositivo */
     max-width: max-content; /* Limita el ancho máximo en pantallas grandes */
@@ -116,7 +115,7 @@ hr {
 	display: flex;
 	flex-direction: column;
 	clear: both; /* Si hay elementos flotantes */
-	margin: 1% 0 1% 0;
+/*	margin: 1% 0 1% 0; */
 /* 
 	Contenido descontinuado!!!
 	══════════════════════════
@@ -189,6 +188,69 @@ pCatDiv{
     font-family: 'Franklin Gothic Demi Cond';
     src: url('fonts/FranklinGothicDemiCond.ttf') format('truetype');
 }
+
+@font-face {
+    font-family: 'Material Symbols Outlined';
+    font-style: normal;
+    font-weight: 100 700;
+    src: url(/cantos/src/font/font.woff2) format('woff2');
+  }
+  
+  .mso1 {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+    border: 1px solid #d7d8da;
+    border-radius: 2em;
+    cursor: pointer;
+
+  }
+  
+
+.material-symbols-outlined {
+        font-family: 'Material Symbols Outlined';
+        font-weight: 200;
+        font-size: 5px;
+        line-height: 1;
+        letter-spacing: normal;
+        text-transform: none;
+        display: inline-block;
+        white-space: nowrap;
+        word-wrap: normal;
+        direction: ltr;
+        -webkit-font-feature-settings: 'liga';
+        -webkit-font-smoothing: antialiased;
+        border: 1px solid #d7d8da;
+        border-radius: 2em;
+
+  }
+
+  .flecha{ 
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 0;
+    letter-spacing: normal;
+    text-transform: none;
+    display: revert-layer;
+    width: 3%;
+    color: rgb(159, 159, 166);
+    cursor: pointer;
+    border: 1px solid #d7d8da;
+    border-radius: 2em;
+
+  }
 
 .ttcanto {
     text-align: center;
@@ -460,7 +522,7 @@ select option {
 hr {
     /*margin-bottom: 25px; */
     margin-bottom: 0px;
-    margin-top: 10px;
+/*    margin-top: 10px;*/
 }
 
 .sCejillas {
@@ -867,10 +929,10 @@ position: absolute;
         
         #imagen-container {
             display: none;
-            position: sticky;  /* Cambiado de 'relative' a 'fixed' */
-            bottom: 0px;     /* Distancia desde el borde inferior */
-            left: 100%;      /* Distancia desde el borde derecho */
-            width: 13%;
+            position: relative;  /* Cambiado de 'relative' a 'fixed' */
+            /* bottom: 0px;     /* Distancia desde el borde inferior */
+            /* left: 100%;      /* Distancia desde el borde derecho */
+            width: 15%;
             /* min-width: 150px; */
             background: white;
             border: 1px solid #f2e5e5;
@@ -881,7 +943,7 @@ position: absolute;
             /* Contenido centrado */
             /* display: flex; */
             align-items: center;
-            justify-content: center;
+            /* justify-content: center; */
             /* padding: 10px; */
             box-sizing: border-box;
         }
@@ -911,15 +973,49 @@ position: absolute;
     .piecategoria {
         background-color: white;
         border: 1px solid goldenrod;
-        display: inline-block;
-        border-radius: 4px;
-        padding: 1px;
-        margin: 1px;
+        display: contents; /*inline-block;*/
+        border-radius: 0px;
+        padding: 0px;
+        margin: 0px;
     }
 
     .ppascua {color: #3dcef0;}
     .ppenteco {color: #f0433d;}
     .plaudes {color: rgb(56, 162, 6);}
+    .pcuaresma {color: rgb(59, 6, 87);}
+    .padviento {color: rgb(59, 6, 87);}
+    .pentrada {color: #3dcef0;}
+
+
+    .dh {
+        display: none;
+    }
+
+    .lvertical {
+        display: flex; 
+        align-items: center; 
+        border-left: 1px solid #868686; 
+        height: 50px; 
+        padding-left: 10px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
 
 /* FIN DEL CONTENIDO LIBRE O SIN FORMATO ESPECIFICADO*/
 

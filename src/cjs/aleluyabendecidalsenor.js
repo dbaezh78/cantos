@@ -1,7 +1,7 @@
 // Titulo	
 let titulo = "ALELUYA, BENDECID AL SEÑOR";
 let salmo = "Salmo 134 (133)";
-let dbnos = "33";      //Numero del libro
+let dbnos = "14";      //Numero del libro
 
 // Definir variables con la parte de la Asamble	
 let Asamblea1 = "ALELÚ, ALELÚ, ALE E LU U YA,";

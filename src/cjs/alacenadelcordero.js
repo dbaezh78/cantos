@@ -2,7 +2,7 @@
 
 
 // Titulo	
-	let titulo = "A LA CENA DEL CORDERO ";
+	let titulo = "A LA CENA DEL CORDERO";
 	let salmo = "Himno lat. «Ad cenam Agni provldl";
 	let dbnos = "237";      //Numero del libro
 	

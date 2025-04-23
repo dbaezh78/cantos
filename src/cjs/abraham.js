@@ -1,7 +1,7 @@
 	// Titulo
 	let titulo = "ABRAHAM";
 	let salmo = "Teofanía de Mambré – Génesis 18,1-5";
-	let dbnos = "27";	//Numero del libro
+	let dbnos = "8";	//Numero del libro
 
     // Definir variables con la parte de la Asamble
 	

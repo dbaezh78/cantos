@@ -1,7 +1,7 @@
 	// Titulo	Fecha de Modificación 26 Enero 2025
 	let titulo = "A TI LEVANTO MIS OJOS";
 	let salmo = "Salmo 123 (122)";
-	let dbnos = "23";	//Numero del libro
+	let dbnos = "3";	//Numero del libro
 
     // Definir variables con la parte de la Asamble
     let Asamblea1 = "A TI LEVANTO MIS OJOS,";

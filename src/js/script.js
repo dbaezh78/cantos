@@ -180,3 +180,14 @@ document.getElementById('startScroll').addEventListener('click', function (e) {
             }
         }, this);
     });
+
+
+    function mostrarImagen(src) {
+		document.getElementById('imagen-nota').src = src;
+		document.getElementById('imagen-container').style.display = 'block';
+		
+		// Desplazarse a la imagen
+		document.getElementById('imagen-container').scrollIntoView({
+			behavior: 'smooth'
+		});
+	}

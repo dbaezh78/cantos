@@ -1,7 +1,7 @@
 // Titulo	
 	let titulo = "ALABAD AL SEÑOR EN EL CIELO ";
 	let salmo = "Salmo 148";
-	let dbnos = "30";      //Numero del libro
+	let dbnos = "11";      //Numero del libro
 	
 // Definir variables con la parte de la Asamble	
 	let Asamblea1 = "¡ALABADLO! ";
