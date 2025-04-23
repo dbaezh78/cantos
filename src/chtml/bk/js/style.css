@@ -1,12 +1,22 @@
 @import url('https://fonts.googleapis.com/css?family=Oxygen+Mono|Nunito:400,700,900|Khand|Lato|Roboto&display=swap');
 
 /**** GENERAL ****/
-* { box-sizing: border-box }
+* { 
+	box-sizing: border-box;
+	padding: 1px;
+ }
 :root {
 	--main-max-width: 1220px;
 	--sec-fonts: Khand,tahoma,verdana;
 }
-body  { margin:41px 0 0 0; background:#fff; font:normal 14px/1.2 Roboto,arial,helvetica; color:#000 }
+
+body  { 
+	margin:0px 0 0 0; 
+	background:#fff; 
+	font:normal 14px/1.2 Roboto,arial,helvetica; 
+	color:#000 
+}
+
 table { border-collapse:collapse; margin:0 }
 td    { font-size:10pt; padding:0 }
 a     { text-decoration:none; color:#06e }
@@ -36,7 +46,13 @@ button.orng { border:1px solid #f62; background:#f84; width:90px; height:27px; c
 .butCmd:hover { background-color:#444 }
 .butCmd:active { background-color:#f84 }
 .butCmd em { text-decoration:none; display:block; font:normal 0.45em/2.2 roboto,arial;  }
-.butCmd em.small { font:normal 0.35em/2.9 roboto,arial }
+
+
+.butCmd em.small {
+	font:normal 0.35em/2.9 roboto,arial 
+}
+
+
 em.lupaCont { display:block; float:left; width:22px; margin-top:2px; height:22px; padding:2px 0 0 5px; background:#ccc; border-radius:0 3px 3px 0; cursor:pointer; -webkit-user-select:none }
 span.lupa { display:inline-block; -webkit-transform: rotate(-45deg); -moz-transform: rotate(-45deg); transform: rotate(-45deg); font:bold 18px/18px arial; color:#fff }
 span.lupa::before { content:"\0026B2" }
@@ -44,22 +60,89 @@ span.lupa::before { content:"\0026B2" }
 
 
 /** PUBLICIDAD **/
-#ban160,#ban300,#ban728, #ban728b, #ban320 { overflow:hidden; background:#eee; text-align:center }
-#ban160 {width:160px; height:600px; margin:20px 0 }
-#ban300 {width:300px; height:250px; float:right; margin-bottom:10px }
-#ban728 {width:728px; height:90px; margin-bottom:12px }
-#ban728b { width:728px; height:90px; margin:10px 0 15px 1px }
-#ban320 {position:fixed; left:0; bottom:0; width:100%; display:none; overflow:hidden; }
-#ban320 { z-index:3; border-top:1px solid #888; -webkit-transform-origin:0 0  }
-#ban320 div { margin:0 }
+#ban160,#ban300,#ban728, #ban728b, #ban320 { 
+	overflow:hidden; 
+	background:#eee; 
+	text-align:center 
+}
+
+
+#ban160 {
+	width:160px; 
+	height:600px; 
+	margin:20px 0 
+}
+
+#ban300 {
+	width:300px; 
+	height:250px; 
+	float:right; 
+	margin-bottom:10px 
+}
+
+#ban728 {
+	width:728px; 
+	height:90px; 
+	margin-bottom:12px 
+}
+
+#ban728b { 
+	width:728px; 
+	height:90px; 
+	margin:10px 0 15px 1px 
+}
+
+#ban320 {
+	position:fixed; 
+	left:0; 
+	bottom:0; 
+	width:100%; 
+	display:none; 
+	overflow:hidden; 
+}
+
+#ban320 { 
+	z-index:3; 
+	border-top:1px solid #888; 
+	-webkit-transform-origin:0 0 
+ }
+
+ #ban320 div { 
+	margin:0 
+}
 
 /** UTILERIAS **/
-div.multipag { clear:both; width:100%; background:#ddd; border-radius:3px;  padding:5px; font:bold 12px/22px var(--sec-fonts); color:#fff; }
+div.multipag {
+	clear:both; 
+	width:100%; 
+	background:#d2dbf2; 
+	border-radius:3px;  
+	padding:5px; 
+	font:bold 12px/22px var(--sec-fonts); 
+	color:#fff; }
+
+
 div.multipag .first { float:left; font-size:16px; color:#000; margin-right:10px; }
 div.multipag ul { display:inline-block }
-div.multipag li { float:left; cursor:pointer; width:20px; height:20px; border-radius:10px; margin-right:4px; background:#444; text-align:center}
+
+div.multipag li {
+	float:left; 
+	cursor:pointer; 
+	width:20px; 
+	height:20px; 
+	border-radius:10px; 
+	margin-right:4px; 
+	background:#444; 
+	text-align:center
+}
+
+
 div.multipag .last {float:right; text-align:right; font-size:14px; white-space:nowrap; color:#000 }
-div.multipag li.sel, div.multipag a:hover { background-color:#f84;  }
+
+div.multipag li.sel, div.multipag a:hover {
+	background-color:black;
+}
+
 div.multipag li.sig { width:30px }
 
 .cal { width:80px; height:9px; background:transparent url('/IMG/Califs.png') no-repeat; }
@@ -141,7 +224,16 @@ div.multipag li.sig { width:30px }
 #mMask div { font:bold 30px/1.2 arial; color:#fff; text-align:center; margin:60px auto 0 auto }
 #mMask img { margin:200px auto 0 auto; width:100px; height:100px; }
 /*** Main Columns ***/
-#mCols { display:flex; align-items:flex-start; padding:0 10px; margin:15px auto; max-width:var(--main-max-width);  }
+
+#mCols {
+	display:flex; 
+	align-items:flex-start; 
+	padding:0 10px; 
+/*	margin:0 auto; */
+/*	max-width:var(--main-max-width); */
+	justify-content: space-around;
+}
+
 #mLeft { z-index:8; padding:0 0 0 0; height:100%; margin-right:30px; width:200px; min-width:200px; vertical-align:top }
 .mlTit { height:30px; color:#fff; font:bold 20px/30px Khand,arial; padding:2px 0 0 5px; background:#aaa; border:0 }
 .mlTit a { color:#d8d8d8 }
@@ -170,7 +262,9 @@ div.multipag li.sig { width:30px }
 #t_loader { display:block; width:32px; height:32px; margin:10px auto;
 						border: 4px solid #f3f3f3; border-radius: 50%; border-top: 4px solid #666; width: 30px; height: 30px;
   					-webkit-animation: spin 1s linear infinite; animation: spin 1s linear infinite; }
+
 @-webkit-keyframes spin { 0% { -webkit-transform: rotate(0deg); } 100% { -webkit-transform: rotate(360deg); }}
+
 @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); }}
 
 .tlTit { width:200px; background-color:#fff; padding:0; border-radius:5px 5px 0 0; height:24px; margin-bottom:3px; font-size:12px; line-height:22px }
@@ -614,7 +708,13 @@ div.chordTit { font:bold 1.2em/0.9em arial; text-align:center }
 
 div.fret, div.fretbis, div.fretVer, div.fretUku, div.fretCha { margin:0 auto; width:8.714em; height:5.714em; text-align:left; padding-top:0.071em;
 												background-image:url('//lacuerda.net/DIAGS/fret2.png'); -webkit-background-size:8.714em 5.714em; background-repeat:no-repeat}
-div.fret { width:720px; background-image:url('//lacuerda.net/DIAGS/fretBig.png'); background-size:720px 128px }
+div.fret { 
+	/*
+	width:720px; */
+	width:auto; 
+	background-image:url('/cantos/src/ima/guitar.png'); 
+	background-size:720px 128px }
+
 div.fretbis { background-image:url('//lacuerda.net/DIAGS/fretbis2.png') }
 div.fretVer { padding-top:0; width:5.571em; height:7.857em; -webkit-background-size:5.571em 7.857em; background-image:url('//lacuerda.net/DIAGS/fretVer.png') }
 div.fretUku { padding-top:0; width:5.342em; height:5.857em; font-size:14px; text-align:left; -webkit-background-size:5.142em 5.857em; background-image:url('/DIAGS/fretUku.png') }
@@ -639,7 +739,15 @@ div.piaElm div.piano { margin:5px auto 0 auto }
 
 div.poste, .posteV { background-color:#f0f0f0; text-align:center; width:0.214em; height:4em; border-right:0.143em solid #000; position:absolute; margin:0.286em 0 0 1.357em }
 div.poste { background-color:#fff!important; margin-left:1.35em; width:0.57em; height:4.1em; margin-top:0.28em; z-index:0 }
-div.cejilla, .cejillaV { background-color:#222; border-radius:0.286em; text-align:center; width:0.571em; height:4.714em; position:absolute }
+
+div.cejilla, .cejillaV { 
+	background-color: rgb(206 72 0);
+	border-radius:0.286em; 
+	text-align:center; 
+	width:0.571em; 
+	height:4.714em; 
+	position:absolute }
+
 div.dedo { color:#fff; font:normal 0.571em/0.825 arial; background-color:#222; border-radius:0.625em; text-align:center; width:1.25em; height:1.25em; padding-top:0.25em; margin-bottom:0.125em }
 div.cruz {  color:#000; font:normal 1.2em/0.78 arial; margin-left:0.825em; height:0.625em; z-index:2 }
 div.alaire { width:0.714em; height:0.786em; }
