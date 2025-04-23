@@ -378,16 +378,25 @@
     </div>
 
     <!-- Columna 2 - Notas musicales -->
-    <div class="notas-columna">
-        <a href="#" class="notas-enlace" onclick="mostrarImagen('/cantos/src/ima/do.png'); return false;">Do</a>
-        <a href="#" class="notas-enlace" onclick="mostrarImagen('/cantos/src/ima/re.png'); return false;">Re</a>
-        <a href="#" class="notas-enlace" onclick="mostrarImagen('/cantos/src/ima/mi.png'); return false;">Mi</a>
-        <a href="#" class="notas-enlace" onclick="mostrarImagen('/cantos/src/ima/fa.png'); return false;">Fa</a>
-        <a href="#" class="notas-enlace" onclick="mostrarImagen('/cantos/src/ima/sol.png'); return false;">Sol</a>
-        <a href="#" class="notas-enlace" onclick="mostrarImagen('/cantos/src/ima/la.png'); return false;">La</a>
-        <a href="#" class="notas-enlace" onclick="mostrarImagen('/cantos/src/ima/si.png'); return false;">Si</a>
-    </div>
-    
+
+    <button onclick="document.getElementById('footer-frame').classList.toggle('oculto')" 
+    style="position:relative;
+    bottom:0;right:0;
+    border:none;
+    background:none;
+    font-size:24px;
+    cursor:pointer">♫</button>
+
+<iframe id="footer-frame" src="/cantos/src/chtml/acordes.html" 
+    style="position:relative;
+    bottom:0px;
+    right:0;
+    width:74%;
+    height:auto;
+    border:none"
+    class="contenido oculto"></iframe>
+
+
     <!-- Columna 3 -->
     <div style="width: 10%; float: left; box-sizing: border-box;">
         <a href="#" id="top"><h1 class="cnumber" id="dbno"></h1></a>
