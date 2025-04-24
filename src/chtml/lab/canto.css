@@ -1,0 +1,97 @@
+body {
+  font-family: 'Xpress Rounded', 'Arial', sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0px;
+  line-height: 0; /*1.6;*/
+}
+
+.line {
+  position: relative;
+  margin: 0px 0;
+  font-size: 1.1em;
+}
+
+.chords {
+  position: relative;
+  height: 15px;
+  margin-bottom: 5px;
+}
+
+.chord {
+  position: absolute;
+  top: 0;
+  border: none;
+  background: transparent;
+  font-weight: bold;
+  color: red;
+  font-size: 0.85em;
+  padding: 0px 4px;
+  cursor: pointer;
+  transform: translateX(-50%);
+  min-width: 40px;
+  text-align: center;
+  font-family: inherit;
+}
+
+.chord:hover {
+  background-color: #e8f4f8;
+  border-radius: 3px;
+}
+
+.lyrics {
+  white-space: pre-wrap;
+  padding: 2px 0;
+}
+
+.alyrics {
+  white-space: pre-wrap;
+  padding: 2px 0;
+  font-weight: bold;
+}
+
+
+.selector-tonica {
+  margin-bottom: 25px;
+  padding: 12px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1em;
+}
+
+.selector-tonica label {
+  font-weight: bold;
+}
+
+.selector-tonica select {
+  padding: 6px 10px;
+  font-size: 0.95em;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: white;
+}
+
+.no-arrow {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align-last: center;
+}
+
+#reset-transpose {
+  padding: 6px 12px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background-color 0.2s;
+}
+
+#reset-transpose:hover {
+  background-color: #c0392b;
+}

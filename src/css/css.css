@@ -13,6 +13,7 @@ body {
      max-width: 99%; /* Limita el ancho máximo en pantallas grandes */
     /* width: max-content;
     /*max-width: max-content; /* Limita el ancho máximo en pantallas grandes */
+	/* font-family: 'Arial', sans-serif;    */
 	font-family: "Franklin Gothic",sans-serif;
 	padding: 0.1%;
     display: flex;
@@ -291,7 +292,9 @@ pCatDiv{
 .alyrics, .lyrics {
     width: max-content;
     max-width: max-content;
-    font-family: "Franklin Gothic", sans-serif;
+    /*font-family: "Franklin Gothic", sans-serif;*/
+    font-family: 'Arial', sans-serif;
+    
     font-size: large;
     line-height: 0.8; /* Ajusta este valor para reducir o aumentar el espacio */
     color: black;
@@ -522,7 +525,7 @@ select option {
 hr {
     /*margin-bottom: 25px; */
     margin-bottom: 0px;
-/*    margin-top: 10px;*/
+    margin-top: 10px; /* Este margen separa la linea de los iconos de arriba */
 }
 
 .sCejillas {
