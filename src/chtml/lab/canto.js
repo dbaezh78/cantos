@@ -233,7 +233,7 @@ function crearVersoHTML(verso, index) {
     
     return `
         <div class="linea ${verso.bis ? 'con-bis' : ''}">
-            <div class="texto-contenedor">
+            <div class="texto-contenedor" style="width: 100%;">
                 <div class="chords">
                     ${(verso.acordes || []).map((a, i) => `
                         <select class="chord no-arrow"

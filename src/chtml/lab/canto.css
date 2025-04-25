@@ -197,3 +197,103 @@ body {
   color: #1a73e8;
   font-weight: bold;
 }
+
+
+/*
+
+*/
+
+        * {
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        .contenedor-tabla {
+            width: max-content;
+            max-width: max-content;
+            margin: 20px auto;
+            overflow-x: auto;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+        }
+        
+        .titulo {
+            background-color: #4CAF50;
+            color: white;
+            font-size: 1.5em;
+        }
+        
+        .subtitulo {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        
+        .encabezado-columnas {
+            background-color: #2196F3;
+            color: white;
+        }
+        
+        .flecha {
+            font-size: 1.5em;
+            padding: 5px 15px;
+            cursor: pointer;
+        }
+
+        .nav {
+          display: inline-block; 
+          margin: 0 20px;
+          cursor: pointer;
+        }
+        
+        /* Contenedor principal de las 6 columnas */
+        .contenedor-6-columnas {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        /* Cada grupo de 3 columnas */
+        .grupo-columnas {
+            flex: 1;
+            min-width: 50%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        /* Columnas individuales */
+        
+        /* Estilo para el enlace */
+        .enlace-columna {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .enlace-columna:hover {
+            text-decoration: underline;
+        }
+        
+        /* Modo móvil (se activa con el clic o en pantallas pequeñas) */
+        .modo-movil .grupo-columnas {
+            min-width: 100% !important;
+        }
+        
+        @media (max-width: 600px) {
+            .grupo-columnas {
+                min-width: 100% !important;
+            }
+        }
+        
+        .pie-tres-columnas {
+            background-color: #f8f9fa;
+        }
+    
