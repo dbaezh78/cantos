@@ -1,16 +1,180 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-  <title>Letras con Acordes</title>
+
   <link rel="stylesheet" href="canto.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Xpress+Rounded&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="canto.css" type=text/css rel=stylesheet>
+
+  <title>Tabla Completa con Columnas</title>
+
+<style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        .contenedor-tabla {
+            width: max-content;
+            max-width: max-content;
+            margin: 20px auto;
+            overflow-x: auto;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+        }
+        
+        .titulo {
+            background-color: #4CAF50;
+            color: white;
+            font-size: 1.5em;
+        }
+        
+        .subtitulo {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        
+        .encabezado-columnas {
+            background-color: #2196F3;
+            color: white;
+        }
+        
+        .flecha {
+            font-size: 1.5em;
+            padding: 5px 15px;
+        }
+        
+        /* Contenedor principal de las 6 columnas */
+        .contenedor-6-columnas {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        /* Cada grupo de 3 columnas */
+        .grupo-columnas {
+            flex: 1;
+            min-width: 50%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        /* Columnas individuales */
+        
+        /* Estilo para el enlace */
+        .enlace-columna {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .enlace-columna:hover {
+            text-decoration: underline;
+        }
+        
+        /* Modo móvil (se activa con el clic o en pantallas pequeñas) */
+        .modo-movil .grupo-columnas {
+            min-width: 100% !important;
+        }
+        
+        @media (max-width: 600px) {
+            .grupo-columnas {
+                min-width: 100% !important;
+            }
+        }
+        
+        .pie-tres-columnas {
+            background-color: #f8f9fa;
+        }
+    </style>
 </head>
 <body>
+    <div class="contenedor-tabla">
+        <table>
+            <!-- Fila 1: Título -->
+            <tr>
+                <td style="width: 15%; background-color: #4CAF50; color: white;">Logo</td>
+                <td class="titulo" colspan="5">TÍTULO PRINCIPAL</td>
+            </tr>
+            
+            <!-- Fila 2: Subtítulo -->
+            <tr>
+                <td class="subtitulo" colspan="6">Subtítulo descriptivo</td>
+            </tr>
+            
+            <!-- Fila 3: Encabezado de 6 columnas -->
+            <tr class="encabezado-columnas">
+                <th>Col 1</th>
+                <th>Col 2</th>
+                <th><span class="enlace-columna" id="toggleColumnas">Col 3</span></th>
+                <th>Col 4</th>
+                <th>Col 5</th>
+                <th>Col 6</th>
+            </tr>
+            
+            <!-- Fila 4: 6 columnas (3+3) -->
+            <tr>
+                <td colspan="6" style="padding: 0;">
+                    <div class="contenedor-6-columnas" id="contenedorColumnas">
+                        <!-- Grupo Izquierdo (3 columnas) -->
+                        <div class="grupo-columnas grupo-izquierdo">
+                            
+                            <div class="col2">
 
-  <div id="contenedor-letra"></div>
+                              <div id="contenedor-letra"></div>
+                            
+                            </div>
+
+                        </div>
+                        
+                        <!-- Grupo Derecho (3 columnas) -->
+                        <div class="grupo-columnas grupo-derecho">
+                            <div class="col4">Contenido derecho 1</div>
+                            <div class="col5">Contenido derecho 2</div>
+                            <div class="col6">Contenido derecho 3</div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            
+            <!-- Fila 5: Flechas -->
+            <tr>
+                <td colspan="6" style="text-align: center;">
+                    <span class="flecha">←</span>
+                    <span style="display: inline-block; margin: 0 20px;">Navegación</span>
+                    <span class="flecha">→</span>
+                </td>
+            </tr>
+            
+            <!-- Fila 6: Pie con 3 columnas -->
+            <tr class="pie-tres-columnas">
+                <td colspan="2">Información 1</td>
+                <td colspan="2">Información 2</td>
+                <td colspan="2">Información 3</td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        document.getElementById('toggleColumnas').addEventListener('click', function() {
+            document.getElementById('contenedorColumnas').classList.toggle('modo-movil');
+        });
+    </script>
+
+  
   <script src="canto.js"></script>
   
   

@@ -1,6 +1,15 @@
+@font-face {
+  font-family: 'Xpress Rounded';
+  src: url('ruta/a/XpressRounded.woff2') format('woff2'),
+       url('ruta/a/XpressRounded.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; /* Para que el navegador la muestre rápidamente */
+}
+
 body {
-  font-family: 'Xpress Rounded', 'Arial', sans-serif;
-  max-width: 800px;
+  font-family: "Franklin Gothic Medium", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Roboto", sans-serif;
+  max-width: unset;
   margin: 0 auto;
   padding: 0px;
   line-height: 0; /*1.6;*/
@@ -30,7 +39,7 @@ body {
   cursor: pointer;
   transform: translateX(-50%);
   min-width: 40px;
-  text-align: center;
+  text-align: justify; /* center;*/
   font-family: inherit;
 }
 
@@ -39,17 +48,19 @@ body {
   border-radius: 3px;
 }
 
-.lyrics {
-  white-space: pre-wrap;
-  padding: 2px 0;
-}
 
 .alyrics {
+  font-family: 'Franklin Gothic Medium';
   white-space: pre-wrap;
   padding: 2px 0;
   font-weight: bold;
 }
 
+.lyrics {
+  font-family: 'Franklin Gothic';
+  white-space: pre-wrap;
+  padding: 2px 0;
+}
 
 .selector-tonica {
   margin-bottom: 25px;
@@ -94,4 +105,95 @@ body {
 
 #reset-transpose:hover {
   background-color: #c0392b;
+}
+
+.col1 {
+  padding: 3%;
+  /*flex: 1;
+  min-width: 33.33%;
+  border: 1px solid #ddd;*/
+}
+
+.col2 {
+  padding: 12px;
+  text-align: start;
+  display: flex;
+  flex: inherit;
+  justify-content: center;
+  margin-left: 0;
+  /*flex: 1;
+  min-width: 33.33%;
+  border: 1px solid #ddd;
+  */
+}
+
+.col3 {
+  padding: 5px;
+/*  flex: 1;
+  min-width: 33.33%;
+  border: 1px solid #ddd;
+  */
+}
+
+.col4 {
+  flex: 1;
+  min-width: 33.33%;
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+.col5 {
+  flex: 1;
+  min-width: 33.33%;
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+.col6 {
+  flex: 1;
+  min-width: 33.33%;
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+
+/* 
+*************************
+*/
+
+.linea {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.con-bis {
+  align-items: stretch; /* Para que el lvertical ocupe toda la altura */
+}
+
+.indicadores {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.tipo-voz {
+  font-weight: bold;
+  margin-right: 15px;
+}
+
+.lvertical {
+  display: flex; 
+  align-items: center; 
+  border-left: 1px solid #868686; 
+  height: 50px; 
+  padding-left: 10px;
+  font-style: italic;
+  color: #666;
+}
+
+
+.acorde {
+  color: #1a73e8;
+  font-weight: bold;
 }

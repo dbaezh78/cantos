@@ -1,99 +1,59 @@
 {
   "versos": [
     {
-      "cantor": "Hacía calor aquel día",
+      "tipo": "C",
+      "cantor": "Muerte y vida se han enfrentado",
       "acordes": [{"acorde": "Do", "posicion": 12, "base": "Do"}]
     },
     {
-      "cantor": "cuando Abraham estaba sentado",
+      "tipo": "C",
+      "cantor": "en un prodigioso duelo:",
       "acordes": [
         {"acorde": "Re", "posicion": 12, "base": "Re"},
         {"acorde": "Mi", "posicion": 150, "base": "Mi"}
       ]
     },
     {
-      "cantor": "delante de su tienda.",
+      "tipo": "C",
+      "cantor": "el Señor de la Vida estaba muerto,",
+      "bis": "BIS A",
       "acordes": [
         {"acorde": "Fa", "posicion": 40, "base": "Fa"}
       ]
     },
     {
-      "cantor": "Hacía calor aquel día.",
+      "tipo": "C",
+      "cantor": "mas ahora está vivo y triunfa.",
+      "bis": "BIS A",
       "acordes": [
-        {"acorde": "Sol", "posicion": 40, "base": "Sol"}
+        {"acorde": "Fa", "posicion": 40, "base": "Fa"}
       ]
     },
     {
-      "cantor": "delante de su tienda.",
+      "tipo": "A",
+      "coro": "PORQUE CRISTO, MI ESPERANZA.",
       "acordes": [
-        {"acorde": "La", "posicion": 12, "base": "La"},
-        {"acorde": "Si", "posicion": 80, "base": "Si"}
+        {"acorde": "Re", "posicion": 12, "base": "Re"},
+        {"acorde": "Mi", "posicion": 150, "base": "Mi"}
       ]
     },
     {
-      "cantor": "delante de su tienda.",
+      "tipo": "A",
+      "coro": "¡HA RESUCITADO!.",
+      "bis": "BIS B",
       "acordes": [
-        {"acorde": "Do#", "posicion": 12, "base": "Do#"},
-        {"acorde": "Re#-", "posicion": 80, "base": "Re#"}
+        {"acorde": "Re", "posicion": 12, "base": "Re"},
+        {"acorde": "Mi", "posicion": 150, "base": "Mi"}
       ]
     },
     {
-      "cantor": "daré gracias a tu nombre.",
+      "tipo": "A",
+      "coro": "QUE NUESTRA ALMA ESTÁ SACIADA DE DESPRECIOS!",
+      "bis": "BIS B",
       "acordes": [
-        {"acorde": "Do", "posicion": 12, "base": "Do"},
-        {"acorde": "Re", "posicion": 40, "base": "Re"},
-        {"acorde": "Mi", "posicion": 70, "base": "Mi"},
-        {"acorde": "Fa", "posicion": 100, "base": "Fa"},
-        {"acorde": "Sol", "posicion": 130, "base": "Sol"},
-        {"acorde": "La", "posicion": 160, "base": "La"},
-        {"acorde": "Si", "posicion": 190, "base": "Si"}
+        {"acorde": "Re", "posicion": 12, "base": "Re"},
+        {"acorde": "Mi", "posicion": 150, "base": "Mi"}
       ]
-    },
-
-    {"coro1": "A TI, SEÑOR, EN MI CLAMOR IMPLORO.",
-      "acordes": [
-        {"acorde": "Re", "posicion": 12, "base": "Re"},
-        {"acorde": "Mi", "posicion": 150, "base": "Mi"}
-      ]},
-      {"coro1": "A TI, SEÑOR, EN MI CLAMOR IMPLORO.",
-      "acordes": [
-        {"acorde": "Re", "posicion": 12, "base": "Re"},
-        {"acorde": "Mi", "posicion": 150, "base": "Mi"}
-      ]},
-      {"coro1": "A TI DERRAMO MI LAMENTO,",
-      "acordes": [
-        {"acorde": "Re", "posicion": 12, "base": "Re"},
-        {"acorde": "Mi", "posicion": 150, "base": "Mi"}
-      ]},
-
-
-      {"coro1": "A TI MI ANGUSTIA EXPONGO",
-      "acordes": [
-        {"acorde": "Re", "posicion": 12, "base": "Re"},
-        {"acorde": "Mi", "posicion": 150, "base": "Mi"}
-      ]},
-      {"coro2": "ESTABAN DELANTE, EN CUANTO LOS VIO",
-      "acordes": [
-        {"acorde": "Re", "posicion": 12, "base": "Re"},
-        {"acorde": "Mi", "posicion": 150, "base": "Mi"}
-      ]},{"coro2": "A TI, YO CLAMO SEÑOR;",
-      "acordes": [
-        {"acorde": "Re", "posicion": 12, "base": "Re"},
-        {"acorde": "Mi", "posicion": 150, "base": "Mi"}
-      ]},{"coro2": "A TI, YO DIGO: ¡TÚ SOLO ERES MI REFUGIO,",
-      "acordes": [
-        {"acorde": "Re", "posicion": 12, "base": "Re"},
-        {"acorde": "Mi", "posicion": 150, "base": "Mi"}
-      ]},
-      {"coro2": "TÚ ERES MI PORCIÓN EN ESTA TIERRA,",
-      "acordes": [
-        {"acorde": "Re", "posicion": 12, "base": "Re"},
-        {"acorde": "Mi", "posicion": 150, "base": "Mi"}
-      ]},
-      {"coro2": "MI ÚNICA FELICIDAD!,",
-      "acordes": [
-        {"acorde": "Re", "posicion": 12, "base": "Re"},
-        {"acorde": "Mi", "posicion": 150, "base": "Mi"}
-      ]}
+    }
   ]
 }

@@ -222,3 +222,36 @@ function obtenerDesplazamiento(acordeInicial, acordeFinal) {
 
     return (indiceFinal - indiceInicial + acordesCromaticos.length) % acordesCromaticos.length;
 }
+
+// 10.42 - 4.24.2025
+
+function crearVersoHTML(verso, index) {
+    // Determinar el texto y clase según el tipo
+    const texto = verso.cantor || verso.coro || '';
+    const esCoro = !!verso.coro;
+    const tipoVoz = esCoro ? 'A' : 'C';
+    
+    return `
+        <div class="linea ${verso.bis ? 'con-bis' : ''}">
+            <div class="texto-contenedor">
+                <div class="chords">
+                    ${(verso.acordes || []).map((a, i) => `
+                        <select class="chord no-arrow"
+                                data-verso="${index}"
+                                data-acorde="${i}"
+                                data-base="${a.base}"
+                                data-original="${a.acorde}"
+                                style="left:${a.posicion}px">
+                            ${generarOpcionesAcordes(a.acorde)}
+                        </select>
+                    `).join('')}
+                </div>
+                <div class="${esCoro ? 'alyrics' : 'lyrics'}">${texto}</div>
+            </div>
+            <div class="indicadores">
+                <span class="tipo-voz">${tipoVoz}</span>
+                ${verso.bis ? `<div class="lvertical">${verso.bis}</div>` : ''}
+            </div>
+        </div>
+    `;
+}
