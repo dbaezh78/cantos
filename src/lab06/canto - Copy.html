@@ -2,16 +2,21 @@
 <html lang="es">
 <head>
 
-  <link rel="stylesheet" href="canto.css">
+    <meta charset="UTF-8">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Xpress+Rounded&display=swap" rel="stylesheet">
-  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_left_alt,arrow_right_alt,queue_music" rel="stylesheet" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu_book" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="dbcss.css" type=text/css rel=stylesheet>
+  <!-- 
   <link href="canto.css" type=text/css rel=stylesheet>
+  -->
+
+  
 
   <title>Tabla Completa con Columnas</title>
-
 
 </head>
 <body>
@@ -19,28 +24,43 @@
         <table>
             <!-- Fila 1: Título -->
             <tr>
-                <td class="home">
-                    
+                <td style="width: 15%; background-color: #4CAF50; color: white;">
+                
+                
                     <div><a href="/cantos/">				
                         <svg height="24px" viewBox="0 0 24 24" width="24px" fill="#5f6368">
                         <path d="M0 0h24v24H0V0z" fill="none"/>							
                         <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8h5z"/>					
-                        </svg> </a></div>
+                        </svg> </a></div>																											
                 
                 </td>
-                <td class="titulo" colspan="5">A TI, SEÑOR, SE DEBE LA ALABANZA EN SIÓN</td>
+                    
+                    <td class="titulo" id="t1" colspan="5"></td>
+
+                </td>
             </tr>
             
             <!-- Fila 2: Subtítulo -->
             <tr>
-                <td class="subtitulo" colspan="6">Salmo 65 (64)</td>
+                    
+                    <td class="subtitulo" id="s1" colspan="6"></td>
+
+
+                </td>
             </tr>
             
             <!-- Fila 3: Encabezado de 6 columnas -->
             <tr class="encabezado-columnas">
                 <th>Col 1</th>
                 <th>Col 2</th>
-                <th><span class="enlace-columna" id="toggleColumnas">Col 3</span></th>
+                <th><span class="enlace-columna" id="toggleColumnas">
+
+                    
+                    <span class="material-symbols-outlined">
+                        menu_book
+                        </span>
+
+                </span></th>
                 <th>Col 4</th>
                 <th>Col 5</th>
                 <th>Col 6</th>
@@ -49,26 +69,39 @@
             <!-- Fila 4: 6 columnas (3+3) -->
             <tr>
                 <td colspan="6" style="padding: 0;">
-                    <div class="contenedordecolumnas" id="contenedorColumnas">
+                    <div class="contenedor-6-columnas" id="contenedorColumnas">
                         <!-- Grupo Izquierdo (3 columnas) -->
                         <div class="grupo-columnas grupo-izquierdo">
-                            
+
                             <div class="izq">
 
-                              <div id="contenedor-letra-izq"></div>
+                                iiiiiiiiiiiiiiiiiiiiiiiiii
+                    <!-- Asamblea -->
+                    <div class="line"><div class="alyrics" id="a1"></div></div>
+                    <div class="line"><div class="alyrics" id="a2"></div></div>
+                    <div class="line"><div class="alyrics" id="a3"></div></div>
+                    <div class="line"><div class="alyrics" id="a4"></div></div>
 
                             
                             </div>
 
                         </div>
                         
-                        <!-- Grupo Derecho  -->
-
+                        <!-- Grupo Derecho (3 columnas) -->
                         <div class="grupo-columnas grupo-derecho">
-                            <div class="der">Contenido derecho 1
 
-                              <div id="contenedor-letra-der"></div>
+                            <div class="der">
+                                ddddddddddddddddddddddddddddddddd
+                                <div id="contenedor-letra"></div>
 
+                                <div class="line"><div class="lyrics" id="c1"></div></div>
+                                <div class="line"><div class="lyrics" id="c2"></div></div>
+                                <div class="line"><div class="lyrics" id="c3"></div></div>
+                                <div class="line"><div class="lyrics" id="c4"></div></div>
+                            
+
+
+                            
                             </div>
                         </div>
                     </div>
@@ -79,7 +112,7 @@
             <tr>
                 <td colspan="6" style="text-align: center;">
                     <span class="flecha">←</span>
-                    <span style="display: inline-block; margin: 0 20px;">Navegación</span>
+                    <span class="nav">Navegación</span>
                     <span class="flecha">→</span>
                 </td>
             </tr>
@@ -99,8 +132,10 @@
         });
     </script>
 
-  
-  <script src="canto.js"></script>
+
+<script src="mainjs.js"></script>
+<script src="amoalsenor.js"></script>
+
   
   
 </body>

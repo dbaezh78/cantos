@@ -9,6 +9,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="canto.css" type=text/css rel=stylesheet>
+  <link href="estilos.css" type=text/css rel=stylesheet>
 
   <title>Tabla Completa con Columnas</title>
 
@@ -28,12 +29,16 @@
                         </svg> </a></div>
                 
                 </td>
-                <td class="titulo" colspan="5">A TI, SEÑOR, SE DEBE LA ALABANZA EN SIÓN</td>
+
+                <div style="height: 20px;"></div>
+            
+                <td class="titulo" id="t1" colspan="5"></td>
+                
             </tr>
             
             <!-- Fila 2: Subtítulo -->
             <tr>
-                <td class="subtitulo" colspan="6">Salmo 65 (64)</td>
+                <td class="subtitulo" id="s1" colspan="6"></td>
             </tr>
             
             <!-- Fila 3: Encabezado de 6 columnas -->
@@ -55,7 +60,12 @@
                             
                             <div class="izq">
 
-                              <div id="contenedor-letra"></div>
+    <!-- Asamblea -->
+    <div class="line"><div class="alyrics" id="a1"></div></div>
+    <div class="line"><div class="alyrics" id="a2"></div></div>
+    <div class="line"><div class="alyrics" id="a3"></div></div>
+    <div class="line"><div class="alyrics" id="a4"></div></div>
+
                             
                             </div>
 
@@ -64,7 +74,11 @@
                         <!-- Grupo Derecho  -->
 
                         <div class="grupo-columnas grupo-derecho">
-                            <div class="der">Contenido derecho 1</div>
+                            <div class="der">Contenido derecho 1
+
+                              <div id="contenedor-letra"></div>
+                              
+                            </div>
                         </div>
                     </div>
                 </td>
@@ -83,7 +97,9 @@
             <tr class="pie-tres-columnas">
                 <td colspan="2">Información 1</td>
                 <td colspan="2">Información 2</td>
-                <td colspan="2">Información 3</td>
+
+                <td colspan="2"><div id="dbno"></div></td>
+
             </tr>
         </table>
     </div>
@@ -95,7 +111,8 @@
     </script>
 
   
-  <script src="canto.js"></script>
+<script src="mainjs.js"></script>
+<script src="amoalsenor.js"></script>
   
   
 </body>

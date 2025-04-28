@@ -1,55 +1,54 @@
 {
-  "versos": [
+  "cantos": [
     {
-      "tipo": "C",
-      "cantor": "Muerte y vida se han enfrentado",
-      "acordes": [{"acorde": "Do", "posicion": 12, "base": "Do"}]
-    },
-    {
-      "tipo": "A",
-      "cantor": "en un prodigioso duelo:",
-      "acordes": [
-        {"acorde": "Re", "posicion": 12, "base": "Re"},
-        {"acorde": "Mi", "posicion": 150, "base": "Mi"}
-      ]
-    },
-    {
-      "cantor": "el Señor de la Vida estaba muerto,",
-      "acordes": [
-        {"acorde": "Fa", "posicion": 40, "base": "Fa"}
-      ]
-    },
-    {
-      "tipo": "C",
-      "cantor": "mas ahora está vivo y triunfa.",
-      "bis": "BIS A",
-      "acordes": [
-        {"acorde": "Fa", "posicion": 40, "base": "Fa"}
-      ]
-    },
-    {
-      "tipo": "A",
-      "coro": "PORQUE CRISTO, MI ESPERANZA.",
-      "bis": "BIS A",
-      "acordes": [
-        {"acorde": "Re", "posicion": 12, "base": "Re"},
-        {"acorde": "Mi", "posicion": 150, "base": "Mi"}
-      ]
-    },
-    {
-      "tipo": "A",
-      "coro": "¡HA RESUCITADO!.",
-      "acordes": [
-        {"acorde": "Re", "posicion": 12, "base": "Re"},
-        {"acorde": "Mi", "posicion": 150, "base": "Mi"}
-      ]
-    },
-    {
-      "tipo": "A",
-      "coro": "QUE NUESTRA ALMA ESTÁ SACIADA DE DESPRECIOS!",
-      "acordes": [
-        {"acorde": "Re", "posicion": 12, "base": "Re"},
-        {"acorde": "Mi", "posicion": 150, "base": "Mi"}
+      "id": 1,
+      "titulo": "A TI, SEÑOR, SE DEBE LA ALABANZA EN SIÓN",
+      "subtitulo": "Salmo 65 (64)",
+      "secciones": [
+        {
+          "tipo": "A",
+          "posicion": "izquierda",
+          "estrofas": [
+            {
+              "texto": "A ti, Señor, se debe la alabanza en Sión,\nse cumple lo que prometiste.",
+              "acordes": [
+                {"acorde": "Re", "posicion": 5, "base": "Re"},
+                {"acorde": "Sol", "posicion": 215, "base": "Sol"}
+              ]
+            }
+          ]
+        },
+        {
+          "tipo": "C",
+          "posicion": "derecha",
+          "estrofas": [
+            {
+              "texto": "Tu que escucha nuestra oración,\nviene todo mortal",
+              "acordes": [
+                {"acorde": "La", "posicion": 10, "base": "La"},
+                {"acorde": "Mi", "posicion": 35, "base": "Mi"}
+              ]
+            }
+          ]
+        },
+        {
+          "tipo": "A",
+          "posicion": "izquierda",
+          "estrofas": [
+            {
+              "texto": "Los pecados me dominan,\npero tú nos perdonas.",
+              "acordes": [
+                {"acorde": "Re", "posicion": 8, "base": "Re"},
+                {"acorde": "Sol", "posicion": 40, "base": "Sol"}
+              ]
+            }
+          ]
+        }
+      ],
+      "info": [
+        "Autor: Anónimo",
+        "Tono: Salmódico",
+        "Uso: Liturgia de las Horas"
       ]
     }
   ]

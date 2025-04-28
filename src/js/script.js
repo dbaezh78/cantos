@@ -44,10 +44,6 @@ document.querySelectorAll('.chord').forEach(select => {
     });
 });
 
-
-
-
-
 // Detener el desplazamiento con doble clic en cualquier parte de la pantalla
 document.addEventListener('dblclick', function () {
     if (scrolling) {
@@ -57,8 +53,7 @@ document.addEventListener('dblclick', function () {
 });
 
 
-// Seleccionar todas las primeras líneas
-// bcoro = chorus
+// Seleccionar todas las primeras líneas    // bcoro = chorus
 const firstLines = document.querySelectorAll('.bcoro');
 
 // Iterar sobre cada línea para agregar eventos
@@ -71,37 +66,6 @@ firstLines.forEach(firstLine => {
   });
 });
 
-
-
-/* Contenido de respaldo y para borrar */
-
-/*
-// Seleccionar la línea principal y el contenido
-const lineaPrincipal = document.querySelector('.linea-principal');
-const contenido = document.querySelector('.contenido');
-
-// Añadir un evento click a la línea principal
-lineaPrincipal.addEventListener('click', () => {
-    // Alternar la clase 'oculto'
-    contenido.classList.toggle('oculto');
-});
-
-*/
-
-
-
-/*
-
-    // Seleccionar la primera línea y el grupo de líneas (coro)
-    const firstLine = document.getElementById('first-line');
-    const chorus = document.getElementById('chorus');
-
-    // Agregar un evento al hacer clic en la primera línea
-    firstLine.addEventListener('click', () => {
-      chorus.classList.toggle('hidden'); // Alternar la clase 'hidden' para mostrar/ocultar
-    });
-*/
-
   // Hemos cambiado desactivarDivs por divsOff
 function divsOff() {
     // Obtener todos los elementos con la clase "doff"
@@ -112,21 +76,7 @@ function divsOff() {
     });
 }
 
-/* 
-
-  function divsOff() {
-    // Obtener todos los elementos con la clase "doff"
-    const divs = document.querySelectorAll('.doff');
-  
-    // Agregar la clase "divoff" a cada div
-    divs.forEach(div => {
-      div.classList.add('divoff');
-    });
-  }
-*/
-
-
-// Trabajando con al velocidad
+// Trabajando con la velocidad
 // scroll que hace que baje lentamente
 
 let scrolling = false; // Variable para controlar si el desplazamiento está activo
@@ -156,8 +106,6 @@ document.getElementById('startScroll').addEventListener('click', function (e) {
     // Comenzar el desplazamiento
     scrollInterval = setInterval(bajarSuavemente, velocidad);
 });
-
-
 
  // Función para mostrar el mensaje y ocultarlo después de 5 segundos
         function mostrarMensaje() {
@@ -191,3 +139,45 @@ document.getElementById('startScroll').addEventListener('click', function (e) {
 			behavior: 'smooth'
 		});
 	}
+
+
+
+    
+/* Contenido de respaldo y para borrar */
+
+/*
+// Seleccionar la línea principal y el contenido
+const lineaPrincipal = document.querySelector('.linea-principal');
+const contenido = document.querySelector('.contenido');
+
+// Añadir un evento click a la línea principal
+lineaPrincipal.addEventListener('click', () => {
+    // Alternar la clase 'oculto'
+    contenido.classList.toggle('oculto');
+});
+
+*/
+
+
+/*
+    // Seleccionar la primera línea y el grupo de líneas (coro)
+    const firstLine = document.getElementById('first-line');
+    const chorus = document.getElementById('chorus');
+
+    // Agregar un evento al hacer clic en la primera línea
+    firstLine.addEventListener('click', () => {
+      chorus.classList.toggle('hidden'); // Alternar la clase 'hidden' para mostrar/ocultar
+    });
+*/
+
+/* 
+  function divsOff() {
+    // Obtener todos los elementos con la clase "doff"
+    const divs = document.querySelectorAll('.doff');
+  
+    // Agregar la clase "divoff" a cada div
+    divs.forEach(div => {
+      div.classList.add('divoff');
+    });
+  }
+*/
