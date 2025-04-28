@@ -8,7 +8,7 @@ let desplazamientoActual = 0;
 
 document.addEventListener('DOMContentLoaded', function() {
     fetch('canto.json')
-        .then(response => {
+        .then(response => { 
             if (!response.ok) {
                 throw new Error('Error al cargar el archivo JSON');
             }
@@ -228,32 +228,36 @@ function obtenerDesplazamiento(acordeInicial, acordeFinal) {
 function crearVersoHTML(verso, index) {
     const texto = verso.cantor || verso.coro || '';
     const esCoro = !!verso.coro;
-    const tipoVoz = esCoro ? 'A' : 'C'; // 'A' para coro, 'C' para cantor
+    const tipoVoz = esCoro ? 'A' : 'C';
     
     return `
-    <div class="linea ${verso.bis ? 'con-bis' : ''}">
-        <!-- TipoVoz (siempre visible, espacio reservado) -->
-        <span class="tipo-voz">${tipoVoz}</span>
-        
-        <!-- Contenido del verso (letra + acordes) -->
-        <div class="texto-contenedor">
-            <div class="chords">
-                ${(verso.acordes || []).map((a, i) => `
-                    <select class="chord no-arrow"
-                            data-verso="${index}"
-                            data-acorde="${i}"
-                            data-base="${a.base}"
-                            data-original="${a.acorde}"
-                            style="left:${a.posicion}px">
-                        ${generarOpcionesAcordes(a.acorde)}
-                    </select>
-                `).join('')}
+        <div class="linea ${verso.bis ? 'con-bis' : ''}">
+            <!-- Tipo de voz ahora a la izquierda -->
+            <span class="tipo-voz">${tipoVoz}</span>
+            
+            <div class="texto-contenedor">
+                <div class="chords">
+                    ${(verso.acordes || []).map((a, i) => `
+                        <select class="chord no-arrow"
+                                data-verso="${index}"
+                                data-acorde="${i}"
+                                data-base="${a.base}"
+                                data-original="${a.acorde}"
+                                style="left:${a.posicion}px">
+                            ${generarOpcionesAcordes(a.acorde)}
+                        </select>
+                    `).join('')}
+                </div>
+                <div class="${esCoro ? 'alyrics' : 'lyrics'}">${texto}</div>
             </div>
-            <div class="${esCoro ? 'alyrics' : 'lyrics'}">${texto}</div>
+            
+            <!-- Indicadores solo para el bis -->
+            ${verso.bis ? `
+                <div class="indicadores">
+                    <div class="lvertical">${verso.bis}</div>
+                </div>
+            ` : ''}
         </div>
-        
-        <!-- BIS (si está definido, 10px del final) -->
-        ${verso.bis ? `<div class="bis-indicador" style="right: 10px;">${verso.bis}</div>` : ''}
-    </div>
     `;
 }
+

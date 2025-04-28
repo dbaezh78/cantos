@@ -107,11 +107,28 @@ body {
   background-color: #c0392b;
 }
 
-.col1 {
-  padding: 3%;
-  /*flex: 1;
-  min-width: 33.33%;
-  border: 1px solid #ddd;*/
+.izq {
+  width: 100%;
+  padding: 12px;
+  display: flex;
+  justify-content: flex-start;
+  /*
+  text-align: start;
+  max-width: max-content;
+  flex: inherit;
+  margin-left: 0;
+  justify-content: center;
+  */
+}
+.der {
+  width: 50%;
+  max-width: max-content;
+  padding: 12px;
+  text-align: start;
+  display: flex;
+  flex: inherit;
+  justify-content: center;
+  margin-left: 0;
 }
 
 .col2 {
@@ -163,25 +180,75 @@ body {
 
 .linea {
   display: flex;
-  justify-content: space-between;
+  align-items: flex-start;
+  position: relative; /* Para posicionar el BIS */
+  margin-bottom: 8px; /* Espacio entre versos */
+}
+
+/*
+.linea {
+  display: flex;
+  justify-content: flex-start;
   margin-bottom: 10px;
 }
+  */
 
 .con-bis {
   align-items: stretch; /* Para que el lvertical ocupe toda la altura */
 }
 
+
+.indicadores {
+  position: relative;
+}
+/*
 .indicadores {
   display: flex;
   align-items: center;
   margin-left: 20px;
 }
+  */
 
+  .tipo-voz {
+    width: 20px; /* Espacio reservado fijo */
+    margin-right: 8px;
+    font-weight: bold;
+    color: #666;
+}
+/*
 .tipo-voz {
   font-weight: bold;
-  margin-right: 15px;
+  margin-right: 18px;
+  margin-top: 4%;
+}
+*/
+.texto-contenedor {
+  flex-grow: 1; /* Ocupa el espacio restante */
+  position: relative;
 }
 
+.bis-indicador {
+  position: absolute;
+  right: 10px; /* 10px del borde derecho */
+  top: 0;
+  font-style: italic;
+  color: #888;
+}
+
+
+.lvertical {
+  border-left: 1px solid #868686; 
+  height: 50px;
+  margin-left: 100px;
+  display: flex;
+  align-items:center;
+  position: relative;
+  /* otros estilos que ya tengas 
+  top: 0;
+  position: absolute;
+  */
+}
+/*
 .lvertical {
   display: flex; 
   align-items: center; 
@@ -191,17 +258,13 @@ body {
   font-style: italic;
   color: #666;
 }
-
+*/
 
 .acorde {
   color: #1a73e8;
   font-weight: bold;
 }
 
-
-/*
-
-*/
 
         * {
             box-sizing: border-box;
@@ -226,16 +289,7 @@ body {
             text-align: center;
         }
         
-        .titulo {
-            background-color: #4CAF50;
-            color: white;
-            font-size: 1.5em;
-        }
         
-        .subtitulo {
-            background-color: #f2f2f2;
-            font-weight: bold;
-        }
         
         .encabezado-columnas {
             background-color: #2196F3;
@@ -245,17 +299,10 @@ body {
         .flecha {
             font-size: 1.5em;
             padding: 5px 15px;
-            cursor: pointer;
-        }
-
-        .nav {
-          display: inline-block; 
-          margin: 0 20px;
-          cursor: pointer;
         }
         
         /* Contenedor principal de las 6 columnas */
-        .contenedor-6-columnas {
+        .contenedordecolumnas {
             display: flex;
             flex-wrap: wrap;
         }
@@ -266,6 +313,7 @@ body {
             min-width: 50%;
             display: flex;
             flex-wrap: wrap;
+            justify-content:flex-start;
         }
         
         /* Columnas individuales */
@@ -296,4 +344,105 @@ body {
         .pie-tres-columnas {
             background-color: #f8f9fa;
         }
-    
+
+        .home {
+        width: auto;
+        background-color: white;
+        color: black;
+        }
+          
+
+        .titulo {
+          /* Estilo base (Mobile First) */
+          font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
+          color: red;
+          padding: 12px 15px;
+          margin: 0 auto;
+          text-align: center;
+          font-size: 1.5rem; 
+          background-color: white;
+          font-weight: bold;
+          box-sizing: border-box;
+          box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+          /*width: 100%;*/
+        
+          /* Tablets pequeñas (≥576px) */
+          @media (min-width: 576px) {
+            font-size: 1.35rem;
+            padding: 14px 20px;
+          }
+        
+          /* Tablets (≥768px) */
+          @media (min-width: 768px) {
+            font-size: 1.5rem; /* Tu tamaño original */
+            max-width: 720px;
+            border-radius: 6px;
+          }
+        
+          /* Laptops (≥992px) */
+          @media (min-width: 992px) {
+            max-width: 960px;
+            font-size: 1.7rem;
+            padding: 16px 25px;
+          }
+        
+          /* Pantallas grandes (≥1200px) */
+          @media (min-width: 1200px) {
+            max-width: 1080px; /* Mismo ancho que .subtitulo */
+            font-size: 1.8rem;
+            padding: 18px 30px;
+          }
+        
+          /* Pantallas extra grandes (≥1920px) */
+          @media (min-width: 1920px) {
+            max-width: 1200px;
+            font-size: 2rem;
+          }
+        }
+
+
+
+        .subtitulo {
+          /* Estilo base (móviles pequeños) */
+          width: 100%;
+          max-width: 100%;
+          padding: 1%;    /*0 15px;*/
+          box-sizing: border-box;
+          margin: 0 auto;
+          text-align: center;
+          font-size: 1rem;
+          background-color: white;
+          color: #605C5F;
+          font-weight: bold;
+
+        
+          /* Tablets pequeñas (vertical) */
+          @media (min-width: 576px) {
+            width: 540px;
+            font-size: 1.1rem;
+          }
+        
+          /* Tablets (horizontal) */
+          @media (min-width: 768px) {
+            width: 720px;
+            font-size: 1.2rem;
+          }
+        
+          /* Laptops pequeñas */
+          @media (min-width: 992px) {
+            width: 960px;
+            font-size: 1.3rem;
+          }
+        
+          /* Pantallas HD (1080p) */
+          @media (min-width: 1200px) {
+            width: 1080px; /* Tu medida original */
+            font-size: 1.4rem;
+          }
+        
+          /* Pantallas grandes (2K/4K) */
+          @media (min-width: 1920px) {
+            width: 1080px; /* Mantiene el mismo ancho pero centrado */
+            font-size: 1.6rem;
+          }
+        }

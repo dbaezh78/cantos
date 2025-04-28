@@ -1,13 +1,12 @@
 {
   "versos": [
     {
-      "tipo": "C",
       "cantor": "Muerte y vida se han enfrentado",
       "acordes": [{"acorde": "Do", "posicion": 12, "base": "Do"}]
     },
     {
-      "tipo": "C",
       "cantor": "en un prodigioso duelo:",
+      "bis": "BIS A",  
       "acordes": [
         {"acorde": "Re", "posicion": 12, "base": "Re"},
         {"acorde": "Mi", "posicion": 150, "base": "Mi"}
@@ -16,44 +15,7 @@
     {
       "tipo": "C",
       "cantor": "el Señor de la Vida estaba muerto,",
-      "bis": "BIS A",
-      "acordes": [
-        {"acorde": "Fa", "posicion": 40, "base": "Fa"}
-      ]
-    },
-    {
-      "tipo": "C",
-      "cantor": "mas ahora está vivo y triunfa.",
-      "bis": "BIS A",
-      "acordes": [
-        {"acorde": "Fa", "posicion": 40, "base": "Fa"}
-      ]
-    },
-    {
-      "tipo": "A",
-      "coro": "PORQUE CRISTO, MI ESPERANZA.",
-      "acordes": [
-        {"acorde": "Re", "posicion": 12, "base": "Re"},
-        {"acorde": "Mi", "posicion": 150, "base": "Mi"}
-      ]
-    },
-    {
-      "tipo": "A",
-      "coro": "¡HA RESUCITADO!.",
-      "bis": "BIS B",
-      "acordes": [
-        {"acorde": "Re", "posicion": 12, "base": "Re"},
-        {"acorde": "Mi", "posicion": 150, "base": "Mi"}
-      ]
-    },
-    {
-      "tipo": "A",
-      "coro": "QUE NUESTRA ALMA ESTÁ SACIADA DE DESPRECIOS!",
-      "bis": "BIS B",
-      "acordes": [
-        {"acorde": "Re", "posicion": 12, "base": "Re"},
-        {"acorde": "Mi", "posicion": 150, "base": "Mi"}
-      ]
+      "acordes": [{"acorde": "Fa", "posicion": 40, "base": "Fa"}]
     }
   ]
 }
