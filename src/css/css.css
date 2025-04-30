@@ -779,6 +779,13 @@ hr {
 	src: url(https://fonts.gstatic.com/icon/font?kit=kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsKTDp00f3PbrN41X7o&skey=b8dc2088854b122f&v=v225) format('woff2');
 }
 
+@font-face {
+    font-family: 'Material Symbols Outlined';
+    font-style: normal;
+    font-weight: 100 700;
+src: url(/cantos/src/font/font.woff2) format('woff2');
+}
+
 .mso {
 	font-family: 'Material Symbols Outlined';
 	font-weight: normal;
