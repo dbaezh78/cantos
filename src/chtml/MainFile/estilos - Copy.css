@@ -64,14 +64,14 @@ a {
     padding: 0;
     margin: 0;
     text-align: right;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .csv {
     font-style: italic;
     color: red;
     margin-left: 0px;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 
@@ -190,7 +190,7 @@ a {
         /* Tablets (horizontal) */
         @media (min-width: 768px) {
           width: 75%;    /* 720px;*/
-          font-size: 1.5rem;
+          font-size: 1.2rem;
         }
         
         /* Laptops pequeñas */
@@ -207,7 +207,7 @@ a {
         /* Pantallas HD (1080p) */
         @media (min-width: 1200px) {
           width: 75%;
-          font-size: 1.2rem;
+          font-size: 1rem;
           /*
           width: 75%;
           width: 1080px; /* Tu medida original */
@@ -349,14 +349,14 @@ a {
     padding: 0;
     margin: 0;
     text-align: right;
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   
   .csv {
     font-style: italic;
     color: red;
     margin-left: 0px;
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   @font-face {
@@ -373,7 +373,7 @@ a {
     width: 100%; /* O un ancho fijo si es necesario */
     position: relative;
     white-space: nowrap; /* Evita saltos de línea inesperados */
-    font-size: 1.2rem; /* Tamaño consistente en todos los dispositivos */
+    font-size: 1rem; /* Tamaño consistente en todos los dispositivos */
     font-family: 'Libre Franklin', Arial, sans-serif; /* Fuente fija */
     letter-spacing: normal; /* Evita espaciado variable */
   
@@ -383,43 +383,43 @@ a {
     width: max-content;
     position: relative;
     z-index: 1;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-family: 'Libre Franklin', Arial, sans-serif;
 
     @media (min-width: 384px) {
       width: max-content;
-      font-size: 1.2rem;
+      font-size: 1rem;
     }
 
     @media (min-width: 412px) {
-      font-size: 1.2rem;
+      font-size: 1rem;
     }
 
     /* Tablets pequeñas (vertical) */
 
     @media (min-width: 576px) {
-      font-size: 1.2rem;
+      font-size: 1rem;
     }
   
     /* Tablets (horizontal) */
     @media (min-width: 768px) {
-      font-size: 1.5rem;
+      font-size: 1rem;
     }
     
     /* Laptops pequeñas */
     @media (min-width: 992px) {
-      font-size: 1.2rem;
+      font-size: 1rem;
       
     }
     
     /* Pantallas HD (1080p) */
     @media (min-width: 1200px) {
-      font-size: 1.2rem;
+      font-size: 1rem;
     }
     
     /* Pantallas grandes (2K/4K) */
     @media (min-width: 1920px) {
-      font-size: 1.2rem;
+      font-size: 1rem;
     }
    
 }
@@ -436,42 +436,42 @@ a {
 .alyrics, .csv .chord {
 
     @media (min-width: 383px) {
-      font-size: 1.2rem;
+      font-size: 1rem;
     }
 
     @media (min-width: 384px) {
-      font-size: 1.2rem;
+      font-size: 1rem;
     }
 
     @media (min-width: 412px) {
-      font-size: 1.2rem;
+      font-size: 1rem;
     }
 
     /* Tablets pequeñas (vertical) */
 
     @media (min-width: 576px) {
-      font-size: 1.2rem;
+      font-size: 1rem;
     }
   
     /* Tablets (horizontal) */
     @media (min-width: 768px) {
-      font-size: 1.5rem;
+      font-size: 1rem;
     }
     
     /* Laptops pequeñas */
     @media (min-width: 992px) {
-      font-size: 1.2rem;
+      font-size: 1rem;
       
     }
     
     /* Pantallas HD (1080p) */
     @media (min-width: 1200px) {
-      font-size: 1.2rem;
+      font-size: 1rem;
     }
     
     /* Pantallas grandes (2K/4K) */
     @media (min-width: 1920px) {
-      font-size: 1.2rem;
+      font-size: 1rem;
     }
 
   }

@@ -128,6 +128,7 @@ function detenerDesplazamiento() {
  ***********************/
 function cargarCanto(partitura) {
     // Metadatos
+    document.getElementById('tc').textContent = partitura.tituloc;
     document.getElementById('t1').textContent = partitura.titulo;
     document.getElementById('s1').textContent = partitura.salmo;
     document.getElementById('dbno').textContent = partitura.dbnos;

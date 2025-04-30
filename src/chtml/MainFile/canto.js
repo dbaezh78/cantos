@@ -1,8 +1,12 @@
 /***********************
  * DATOS DEL CANTO
  ***********************/
+
+const NOMBREDELCANTO = "AMO AL SEÑOR";
+
 const partitura = {
-    titulo: "AMO AL SEÑOR",
+    tituloc: NOMBREDELCANTO,
+    titulo: NOMBREDELCANTO,
     salmo: "Salmo 116 (114-115)",
     dbnos: "18",
     
@@ -81,13 +85,11 @@ const partitura = {
     
     cantorAcordes: [
         //  1
-        [{acorde: "Re", posicion: 10, base: "Re", extension: ""},
-        {acorde: "Fa#", posicion: 128, base: "Fa#", extension: "m"}],
+        [{acorde: "Re", posicion: -14, base: "Re", extension: ""},
+        {acorde: "Fa#", posicion: 164, base: "Fa#", extension: "m"}],
             
         //  2
-        [{acorde: "Sol", posicion: 0, base: "Sol", extension: ""},
-        {acorde: "Mi", posicion: 120, base: "Mi", extension: ""},
-        {acorde: "La", posicion: 120, base: "La", extension: ""}],
+        [{acorde: "Sol", posicion: 76, base: "Sol", extension: ""}],
             
         //  3
         [{acorde: "Sol", posicion: 140, base: "Sol", extension: "7"},
