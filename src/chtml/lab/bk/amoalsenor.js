@@ -16,7 +16,6 @@ const partitura = {
         "PORQUE EL SEÑOR FUE BUENO CONTIGO.",
         "ÉL TE HA LIBRADO DE LA MUERTE.",
         "HA PRESERVADO TUS PIES, DE LA CAÍDA."
-
     ],
         
     asambleaAcordes: [
@@ -52,10 +51,9 @@ const partitura = {
             {acorde: "Mi", posicion: 20, base: "Mi", extension: "m6"},
             {acorde: "La", posicion: 170, base: "La", extension: "7"}
         ]
-
     ],
     
-    // Estructura IDÉNTICA para Cantor (arrays paralelos)
+    // Estructura para Cantor
     cantor: [
         "Amo al Señor, porque escucha",
         "mi voz suplicante;",
@@ -82,27 +80,3 @@ const partitura = {
         ]
     ]
 };
-
-// Iniciar carga del canto
-// Función para cargar el canto en la página
-function cargarCanto(partitura) {
-    // Cargar título y subtítulo
-    document.getElementById('t1').textContent = partitura.titulo;
-    document.getElementById('s1').textContent = partitura.salmo;
-    document.getElementById('dbno').textContent = partitura.dbnos;
-
-    // Cargar textos de asamblea
-    for (let i = 0; i < partitura.asamblea.length; i++) {
-        const elemento = document.getElementById(`a${i+1}`);
-        if (elemento) elemento.textContent = partitura.asamblea[i];
-    }
-
-    // Cargar textos de cantor
-    for (let i = 0; i < partitura.cantor.length; i++) {
-        const elemento = document.getElementById(`c${i+1}`);
-        if (elemento) elemento.textContent = partitura.cantor[i];
-    }
-}
-
-// Iniciar carga del canto
-document.addEventListener('DOMContentLoaded', () => cargarCanto(partitura));
