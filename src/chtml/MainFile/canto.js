@@ -86,10 +86,10 @@ const partitura = {
     cantorAcordes: [
         //  1
         [{acorde: "Re", posicion: -14, base: "Re", extension: ""},
-        {acorde: "Fa#", posicion: 164, base: "Fa#", extension: "m"}],
+        {acorde: "Fa#", posicion: 196, base: "Fa#", extension: "m"}],
             
         //  2
-        [{acorde: "Sol", posicion: 76, base: "Sol", extension: ""}],
+        [{acorde: "Sol", posicion: 89, base: "Sol", extension: ""}],
             
         //  3
         [{acorde: "Sol", posicion: 140, base: "Sol", extension: "7"},

@@ -190,4 +190,3 @@ document.addEventListener('DOMContentLoaded', () => {
 document.getElementById('toggleColumnas').addEventListener('click', function() {
     document.getElementById('contenedorColumnas').classList.toggle('modo-movil');
 });
-
