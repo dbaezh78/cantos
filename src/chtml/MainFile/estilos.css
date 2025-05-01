@@ -48,7 +48,7 @@ a {
     position: absolute;
     top: -14px;
     left: 0;
-    width: 100%;
+    width: 100%;: 100%;
     height: 20px;
     pointer-events: none; /* Permite clics en el texto debajo */
 }
@@ -67,14 +67,6 @@ a {
     font-size: 1.2rem;
 }
 
-.csv {
-    font-style: italic;
-    color: red;
-    margin-left: 0px;
-    font-size: 1.2rem;
-}
-
-
 .no-arrow {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -85,11 +77,40 @@ a {
     color: #2c3e50;
 }
 
+.chord {
+  background: none;
+  border: none;
+  appearance: none;
+  font-weight: bold;
+  color: red;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  text-align: right;
+  font-size: 1.2rem;
+  /*top: -3px;*/
+}
+
 .chord-container {
-    position: absolute;
-    display: inline-block;
-    white-space: nowrap;
-    pointer-events: auto; /* Permite interactuar con los selects */
+  position: absolute;
+  display: inline-block;
+  white-space: nowrap;
+  pointer-events: auto; /* Permite interactuar con los selects */
+
+  position: absolute;
+  transform: translateX(-50%); /* Centra el acorde en la posición */
+  white-space: nowrap;
+  pointer-events: auto;
+  top: -3px;        /* Este controla la posición del del acorde ↑↓ */
+
+  /*    top: -14px;*/
+}
+
+.csv {
+  font-style: italic;
+  color: red;
+  margin-left: 0px;
+  font-size: 1.2rem;
 }
 
 .contenedor-tabla {
@@ -138,20 +159,20 @@ a {
         /* Tablets (≥768px) */
         @media (min-width: 768px) {
           font-size: 1.5rem; /* Tu tamaño original */
-          max-width: 720px;
+          max-width: 100%;
           border-radius: 6px;
         }
       
         /* Laptops (≥992px) */
         @media (min-width: 992px) {
-          max-width: 960px;
+          max-width: 100%;
           font-size: 1.7rem;
           padding:  0px 12px 0px 12px;
         }
       
         /* Pantallas grandes (≥1200px) */
         @media (min-width: 1200px) {
-          max-width: 1080px; /* Mismo ancho que .subtitulo */
+          max-width: 100%; /* Mismo ancho que .subtitulo */
           font-size: 1.8rem;
           padding:  0px 12px 0px 12px;
           /*
@@ -159,13 +180,11 @@ a {
         }
       
         /* Pantallas extra grandes (≥1920px) */
-        @media (min-width: 1920px) {
-          max-width: 1200px;
+        @media (min-width: 1201px) {
+          min-width: 100%;
           font-size: 2rem;
         }
       }
-
-
 
       .subtitulo {
         /* Estilo base (móviles pequeños) */
@@ -183,6 +202,10 @@ a {
         max-width: 100%;
         */
 
+        @media (min-width: 384px) {
+          width: 100%;
+          font-size: 1.1rem;
+        }
       
         /* Tablets pequeñas (vertical) */
         @media (min-width: 576px) {
@@ -192,7 +215,7 @@ a {
       
         /* Tablets (horizontal) */
         @media (min-width: 768px) {
-          width: 75%;    /* 720px;*/
+          width: 100%;    /* 720px;*/
           font-size: 1.5rem;
         }
         
@@ -264,13 +287,15 @@ a {
     .flecha {
         font-size: 1.5em;
         padding: 5px 15px;
+        cursor: pointer;
     }
 
 
     .izq {
       max-width: max-content;
-      padding: 12px;
+      padding: 10px;
       margin-top: 3%;
+      margin-left: 4%;
       /*
       width: 100%;
         display: flex;
@@ -284,8 +309,9 @@ a {
       }
       .der {
         max-width: max-content;
-        padding: 12px;
+        padding: 10px;
         margin-top: 3%;
+        margin-left: 4%;
 /*
         max-width: max-content;
         text-align: start;
@@ -300,7 +326,7 @@ a {
       .dbtable {
         max-width: max-content;
         border: 1px solid #ddd;
-        padding: 2% 2% 2% 2%;
+        padding: 2% 2% 1% 2%;
         border-radius: 1% 1% 1% 1%;
         background: white;
         text-align: left;
@@ -334,33 +360,17 @@ a {
       margin: 1.3% auto 1.3px auto;
       display: table-cell;
       background-color: #f1f3f4;
+
+      @media (max-width: 384px) {
+        width: 111%;
+      }
+
   }
 
   .cno {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: right
 
-  }
-
-  .chord {
-    background: none;
-    border: none;
-    appearance: none;
-    font-weight: bold;
-    color: red;
-    position: relative;
-    padding: 0;
-    margin: 0;
-    text-align: right;
-    font-size: 1.2rem;
-    top: 11px
-  }
-  
-  .csv {
-    font-style: italic;
-    color: red;
-    margin-left: 0px;
-    font-size: 1.2rem;
   }
 
   @font-face {
@@ -439,10 +449,6 @@ a {
 
 .alyrics, .csv .chord {
 
-    @media (min-width: 383px) {
-      font-size: 1.2rem;
-    }
-
     @media (min-width: 384px) {
       font-size: 1.2rem;
     }
@@ -450,8 +456,6 @@ a {
     @media (min-width: 412px) {
       font-size: 1.2rem;
     }
-
-    /* Tablets pequeñas (vertical) */
 
     @media (min-width: 576px) {
       font-size: 1.2rem;
@@ -536,3 +540,39 @@ a {
 
 
 
+.ta, .tc, .ta1, .ta2, .ta3, .niño, .hombre, .mujer {
+  position: relative;
+  padding-left: 1.5em;
+}
+
+.ta::before, .tc::before, .ta1::before, .ta2::before, .ta3::before, .niño::before, .hombre::before, .mujer::before {
+  position: absolute;
+  left: -6%;
+  top: 0px;
+  font-size: 18px;
+  color: #80808082;
+  font-family: Arial, sans-serif;
+  line-height: 1.3;
+  font-weight: bold;
+}
+
+.ta::before {content: "A";}
+.tc::before {content: "C";}
+.ta1::before {content: "A1";}
+.ta2::before {content: "A2";}
+.ta3::before {content: "A3";}
+.niño::before {content: "Niños:";}
+.hombre::before {content: "Hombre:";}
+.mujer::before {content: "Mujer:";}
+
+.navegar{
+  padding: 40px;
+  text-align: center;
+  
+}
+
+.nav {
+  display: inline-block; 
+  margin: 0 20px;
+  cursor: pointer;
+}
