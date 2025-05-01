@@ -85,71 +85,72 @@ const partitura = {
     
     cantorAcordes: [
         //  1
-        [{acorde: "Re", posicion: -14, base: "Re", extension: ""},
-        {acorde: "Fa#", posicion: 196, base: "Fa#", extension: "m"}],
-            
+
+        [{acorde: "Re", posicion: "cp1", base: "Re", extension: ""},
+         {acorde: "Fa#", posicion: "cp55", base: "Fa#", extension: "m"}],
+       
         //  2
-        [{acorde: "Sol", posicion: 89, base: "Sol", extension: ""}],
+        [{acorde: "Sol", posicion: "cp27", base: "Sol", extension: ""}],
             
         //  3
-        [{acorde: "Sol", posicion: 140, base: "Sol", extension: "7"},
-         {acorde: "Re", posicion: 15, base: "Re", extension: "m"}],
+        [{acorde: "Sol", posicion: "cp4", base: "Sol", extension: "7"},
+         {acorde: "Re", posicion: "cp5", base: "Re", extension: "m"}],
 
         //  4
-        [{acorde: "La", posicion: 30, base: "La", extension: "7"},
-         {acorde: "Re", posicion: 160, base: "Re", extension: ""}],
+        [{acorde: "La", posicion: "cp6", base: "La", extension: "7"},
+         {acorde: "Re", posicion: "cp7", base: "Re", extension: ""}],
 
         //  5
-        [{acorde: "Sol", posicion: 30, base: "Sol", extension: ""},
-         {acorde: "Re", posicion: 160, base: "Re", extension: ""}],
+        [{acorde: "Sol", posicion: "cp8", base: "Sol", extension: ""},
+         {acorde: "Re", posicion: "cp9", base: "Re", extension: ""}],
 
         //  6
-        [{acorde: "La", posicion: 30, base: "La", extension: "7"},
-         {acorde: "Re", posicion: 160, base: "Re", extension: ""}],
+        [{acorde: "La", posicion: "cp10", base: "La", extension: "7"},
+         {acorde: "Re", posicion: "cp11", base: "Re", extension: ""}],
 
         //  7         
-         [{acorde: "La", posicion: 30, base: "La", extension: "7"},
-          {acorde: "Re", posicion: 160, base: "Re", extension: ""}],
+         [{acorde: "La", posicion: "cp12", base: "La", extension: "7"},
+          {acorde: "Re", posicion: "cp13", base: "Re", extension: ""}],
         
         //  8
-        [{acorde: "La", posicion: 30, base: "La", extension: "7"},
-         {acorde: "Re", posicion: 160, base: "Re", extension: ""}],
+        [{acorde: "La", posicion: "cp14", base: "La", extension: "7"},
+         {acorde: "Re", posicion: "cp15", base: "Re", extension: ""}],
 
         //  9
-        [{acorde: "La", posicion: 30, base: "La", extension: "7"},
-         {acorde: "Re", posicion: 160, base: "Re", extension: ""}],
+        [{acorde: "La", posicion: "cp16", base: "La", extension: "7"},
+         {acorde: "Re", posicion: "cp17", base: "Re", extension: ""}],
 
         //  10
-        [{acorde: "La", posicion: 30, base: "La", extension: "7"},
-         {acorde: "Re", posicion: 160, base: "Re", extension: ""}],
+        [{acorde: "La", posicion: "cp18", base: "La", extension: "7"},
+         {acorde: "Re", posicion: "cp19", base: "Re", extension: ""}],
 
          //  11
-        [{acorde: "La", posicion: 30, base: "La", extension: "7"},
-         {acorde: "Re", posicion: 160, base: "Re", extension: ""}],
+        [{acorde: "La", posicion: "cp20", base: "La", extension: "7"},
+         {acorde: "Re", posicion: "cp21", base: "Re", extension: ""}],
 
          //  12
-        [{acorde: "La", posicion: 30, base: "La", extension: "7"},
-         {acorde: "Re", posicion: 160, base: "Re", extension: ""}],
+        [{acorde: "La", posicion: "cp22", base: "La", extension: "7"},
+         {acorde: "Re", posicion: "cp23", base: "Re", extension: ""}],
 
          //  13
-        [{acorde: "La", posicion: 30, base: "La", extension: "7"},
-         {acorde: "Re", posicion: 160, base: "Re", extension: ""}],
+        [{acorde: "La", posicion: "cp24", base: "La", extension: "7"},
+         {acorde: "Re", posicion: "cp25", base: "Re", extension: ""}],
 
          //  14
-        [{acorde: "La", posicion: 30, base: "La", extension: "7"},
-         {acorde: "Re", posicion: 160, base: "Re", extension: ""}],
+        [{acorde: "La", posicion: "cp26", base: "La", extension: "7"},
+         {acorde: "Re", posicion: "cp27", base: "Re", extension: ""}],
 
          //  15
-        [{acorde: "La", posicion: 30, base: "La", extension: "7"},
-         {acorde: "Re", posicion: 160, base: "Re", extension: ""}],
+        [{acorde: "La", posicion: "cp28", base: "La", extension: "7"},
+         {acorde: "Re", posicion: "cp29", base: "Re", extension: ""}],
 
          //  16
-        [{acorde: "La", posicion: 30, base: "La", extension: "7"},
-         {acorde: "Re", posicion: 160, base: "Re", extension: ""}],
+        [{acorde: "La", posicion: "cp30", base: "La", extension: "7"},
+         {acorde: "Re", posicion: "cp31", base: "Re", extension: ""}],
 
          //  17
-        [{acorde: "La", posicion: 30, base: "La", extension: "7"},
-         {acorde: "Re", posicion: 160, base: "Re", extension: ""}],
+        [{acorde: "La", posicion: "cp32", base: "La", extension: "7"},
+         {acorde: "Re", posicion: "cp33", base: "Re", extension: ""}],
     ]
 };
 

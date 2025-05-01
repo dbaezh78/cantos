@@ -48,7 +48,7 @@ function renderizarAcordes(contenedor, acordesData) {
     acordesData.forEach(acorde => {
         const grupo = document.createElement('div');
         grupo.className = 'chord-container';
-        grupo.classList.add(acorde.posicion); // Añade clase con la variable de posición
+        grupo.style.left = `${acorde.posicion}px`;
         
         const select = document.createElement('select');
         select.className = 'chord no-arrow';
@@ -69,7 +69,6 @@ function renderizarAcordes(contenedor, acordesData) {
     
     contenedor.insertBefore(divAcordes, contenedor.querySelector('.lyrics'));
 }
-
 
 /***********************
  * FUNCIONES DE INTERFAZ
