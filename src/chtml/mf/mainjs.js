@@ -195,4 +195,13 @@ document.getElementById('toggleColumnas').addEventListener('click', function() {
 
 
 
+
+// BAJAR AL PRESIONAR TITULO
+
+
+
+
+
+
 // OCULTAR CONTENIDO
+

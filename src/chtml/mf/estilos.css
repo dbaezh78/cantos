@@ -281,12 +281,17 @@ a {
       flex-wrap: wrap;
       justify-content:flex-start;
       margin-left: 0px;
-      /*   
-      margin-left: 15px;
-      flex: 1;
-      width: 100%;
-      min-width: 47%;
-      */
+  
+      @media (min-width: 768px) {
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+
+        /*
+        width: 50%;
+        max-width: 50%;*/
+      }
+      
     }
 
     .flecha {
@@ -303,9 +308,10 @@ a {
       margin-left: 7%;
 
       @media (min-width: 384px) {
-        max-width: max-content;
+        max-width: 394px;
         margin-top: 3%;
         margin-left: 3%;
+        /*max-width: max-content;*/
       }
     }
 
@@ -316,9 +322,10 @@ a {
         margin-left: 7%;
 
         @media (min-width: 384px) {
-          max-width: max-content;
+          max-width: 394px;
           margin-top: 3%;
           margin-left: 3%;
+          /*max-width: max-content;*/
         }
   
       }
@@ -327,10 +334,9 @@ a {
         max-width: max-content;
         border: 1px solid #ddd;
         padding: 2% 2% 1% 2%;
-        border-radius: 1% 1% 1% 1%;
+        border-radius: 10px;
         background: white;
         text-align: left;
-        border-radius: 1% 1% 1% 1%;
     
       }
 
@@ -503,11 +509,6 @@ a {
     flex-direction: column;
   }
   
-  .grupo-columnas {
-    width: 100%;
-    max-width: 100%;
-    margin-left: 0;
-  }
   
   .izq, .der {
     width: 100%;
@@ -587,3 +588,20 @@ a {
 
 /*OCULTAR CONTENIDO*/
 
+
+/* Sistema de toggle minimalista */
+.js-toggle-group {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.35s ease;
+}
+
+.js-toggle-group.is-visible {
+  max-height: 9999px; /* Valor suficientemente grande */
+}
+
+/* Mantiene el espacio para los acordes */
+.line {
+  position: relative;
+  min-height: 1.2em; /* Ajusta según necesidad */
+}
