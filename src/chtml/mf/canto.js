@@ -83,14 +83,14 @@ function ac(nota, posicion, extension = "") {
 /* 2 */     [ac("Sol", "cp1"),          ac("Mi", "cp50", "m6"),     ac("La", "cp89", "7")],
 /* 3*/      [ac("Sol", "cp1"),          ac("Re", "cp70")],
 /* 4*/      [ac("La", "cp55", "7"),     ac("Re", "cp87")],
-/* 5*/      [ac("Sol", "cp10"),         ac("Re", "cp50")],
-/* 6*/      [ac("La", "cp10", "7"),     ac("Re", "cp50")],
-/* 7*/      [ac("Sol", "cp10"),         ac("Re", "cp50")],
-/* 8*/      [ac("La", "cp20", "m6"),    ac("Re", "cp50", "7")],
-/* 9*/      [ac("La", "cp20", "m6"),    ac("Re", "cp50", "7")],
-/* 10*/     [ac("La", "cp20", "m6"),    ac("Re", "cp50", "7")],
-/* 11*/     [ac("La", "cp20", "m6"),    ac("Re", "cp50", "7")],
-/* 12*/     [ac("La", "cp20", "m6"),    ac("Re", "cp50", "7")]
+/* 5*/      [ac("Sol", "cp1"),          ac("Re", "cp69")],
+/* 6*/      [ac("La", "cp54", "7"),     ac("Re", "cp86")],
+/* 7*/      [ac("Re", "cp1"),           ac("Fa#", "cp70", "m")],
+/* 8*/      [ac("Sol", "cp1"),          ac("Mi", "cp50", "m6"),     ac("La", "cp89", "7")],
+/* 9*/      [ac("Sol", "cp1"),          ac("Re", "cp70")],
+/* 10*/     [ac("La", "cp55", "7"),     ac("Re", "cp87")],
+/* 11*/     [ac("Sol", "cp1"),          ac("Re", "cp69")],
+/* 12*/     [ac("La", "cp54", "7"),     ac("Re", "cp86")]
       ]
   };
   
