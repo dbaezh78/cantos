@@ -9,9 +9,7 @@
     <link type=text/css rel=stylesheet href="canto.css" >
     <link type=text/css rel=stylesheet href="estilos.css" >
     
-    <!--
-        <meta http-equiv="refresh" content="1">    
-        -->
+    <!--<meta http-equiv="refresh" content="1">    -->
 
   <title id="tc"></title>
 
@@ -50,41 +48,46 @@
             <!-- Fila 3: Encabezado de 6 columnas -->
             <tr class="encabezado-columnas">
                 
-                <th class="cat">
-                    Catecumenado
+                <th class="precat">
+                    PreCatecumenado
                 </th>
                 
                 <th>
                     <a href="#" id="down">
                         <span class="mso" id="down">replace_audio</span>
                     </a>
-                    
                 </th>
                 
                 <th>
                     
-                    <a href="#" id="down">
-                    <span class="enlace-columna mso" id="toggleColumnas mso">
-                        
-                        menu_book
+                    <a href="#" id="toggleVista">
+                        <span class="mso">menu_book</span>
                     </a>
-                                   
+                
+
+
                 </span></th>
                 <th>
                 
-                    <!--
-                        <div class="hlplay line bcoro bmusic mso">queue_music</div>
-                    -->
-                    <a href="#" id="down">
-                    <span class="mso">queue_music</span>
-                </a>
+
+                    <a href="#reproductor-audio" id="audio-control-btn" class="audio-control">
+                        <span class="mso audio-icon">play_circle</span>  
+                    </a>
+
+                    
                 </th>
-                <th>C5</th>
+                <th>
+                    
+                    <span class="mso">
+                        visibility
+                        </span>
+                    
+                    </th>
 
                 <th>
                 
                     <!-- Flecha para abajo ↓ -->
-                    <a href="#" id="startScroll" data-velocidad="110" data-incremento="1">
+                    <a href="#" id="startScroll" data-velocidad="200" data-incremento="1">
                         <span class="mso">south</span>
                     </a>
                 
@@ -139,9 +142,6 @@
 <div class="grupo-columnas grupo-derecho">
     <div class="der">
 
-  
-    
-
 <div class="tc"></div>
     <!-- Cantor -->
     <div class="line"><div class="lyrics" id="c10"></div></div>
@@ -157,22 +157,19 @@
 
 <div style="height: 4%"></div>
     <div class="ta"></div>
+
     <!-- Asamblea -->
 
+    <div class="line hline bcoro">
+    <div class="line"><div class="alyrics" id="a7"></div></div></div>
 
-    
-    <!-- OCULTAR CON LA PRIMERA LINEA LAS DEMAS LINEAS USANDO-->
-    <div class="line"><div class="alyrics" id="a7"></div></div>
-        <div class="line"><div class="alyrics" id="a8"></div></div>
+    <div class="hcoro dbhide">  <!-- DIV para ocultar contenido-->
+    <div class="line"><div class="alyrics" id="a8"></div></div>
         <div class="line"><div class="alyrics" id="a9"></div></div>
         <div class="line"><div class="alyrics" id="a10"></div></div>
         <div class="line"><div class="alyrics" id="a11"></div></div>
         <div class="line"><div class="alyrics" id="a12"></div></div>
-
-
-
-
-
+    </div>
 
                             </div>
                         </div>
@@ -189,7 +186,8 @@
                 </td>
             </tr>
             <div style="height: 4%;"></div>
-            <!-- Fila 6: Pie con 3 columnas -->
+
+<!-- Fila 6: Pie con 3 columnas -->
             <tr class="pie-tres-columnas">
                 <td colspan="2">Información 1</td>
                 <td colspan="2">Información 2</td>
@@ -199,17 +197,14 @@
         
         </table>
 
-        <div class="hcoro hidden">
-            <audio class="saudio" controls="" controlslist="nodownload" preload="none" loop>
-            <source src="/cantos/src/audio/aclamacionesalaoraciondelosfieles.mp3" type="audio/mpeg"></audio>
-            </div>
-    </div>
 
-    <script>
-        document.getElementById('toggleColumnas').addEventListener('click', function() {
-            document.getElementById('contenedorColumnas').classList.toggle('modo-movil');
-        });
-    </script>
+<!-- SECCION DEL REPRODUCTOR-->
+        
+        <div id="reproductor-audio">
+            <audio class="saudio" controls controlslist="nodownload" preload="metadata" loop>
+                <source src="/audio/amoalsenor.mp3" type="audio/mpeg">
+            </audio>
+        </div>       
 
   
 <script src="mainjs.js"></script>
