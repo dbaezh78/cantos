@@ -296,3 +296,22 @@ document.getElementById('toggleVista')?.addEventListener('click', function(e) {
     document.getElementById('contenedorColumnas').classList.toggle('columnas-apiladas');
 });
 
+
+
+// FUNCION DEL TRASTE SELECIONADO
+
+// Lista de trastes
+const dbTrastes = ["♫", "1°", "2°", "3°", "4°", "5°", "6°", "7°", "8°", "9°", "10°"];
+
+// Función para generar las opciones del menú desplegable
+function dbGenerarOpciones(defaultValue) {
+    return dbTrastes
+        .map(traste => `<option value="${traste}"${traste === defaultValue ? ' selected' : ''}>${traste}</option>`)
+        .join('');
+}
+
+// Configurar cada selector de trastes
+document.querySelectorAll('.dbMiTraste').forEach(select => {
+    const dbDefaultValue = select.dataset.default || "1°"; // Si no se especifica, por defecto será "1°"
+    select.innerHTML = dbGenerarOpciones(dbDefaultValue);
+});

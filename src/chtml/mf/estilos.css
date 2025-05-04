@@ -312,7 +312,7 @@ a {
       @media (min-width: 384px) {
         max-width: 394px;
         margin-top: 3%;
-        margin-left: 3%;
+        margin-left: 5;
         /*max-width: max-content;*/
       }
     }
@@ -326,7 +326,7 @@ a {
         @media (min-width: 384px) {
           max-width: 394px;
           margin-top: 3%;
-          margin-left: 3%;
+          margin-left: 5%;
           /*max-width: max-content;*/
         }
   
@@ -563,7 +563,7 @@ a {
   font-weight: bold;
 
   @media (min-width: 768px) {
-    left: -5%;
+    left: -8%;
     }
   
 
@@ -595,7 +595,7 @@ a {
 /* ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ OCULTAR CONTENIDO ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ */
 
 .hline {
-  margin: 10px 0;
+/*  margin: 10px 0; */
   cursor: pointer;
 }
 
@@ -679,3 +679,20 @@ a {
 }
 /* ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ CSS PARA DIVIDIR CANTO ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ */
 
+
+/*  CSS TRASTE */
+
+select.dbMiTraste {
+  background-color: transparent;
+  color: white;
+  padding: 5px;
+  font-weight: bold;
+  border: none;
+  appearance: none;
+}
+
+/* Estilo para las opciones del select */
+select.dbMiTraste option {
+  background-color: #333;
+  color: white;
+}
