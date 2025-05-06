@@ -339,9 +339,82 @@ function inicializarAplicacion() {
 }
 
 
+/* ****************************************
+FUNCION DE BUSCADOR
+******************************************/
+// Función de búsqueda corregida
+document.getElementById('inputBusqueda').addEventListener('input', async function(e) {
+    const query = e.target.value.toLowerCase().trim();
+    const resultadosDiv = document.getElementById('resultadosBusqueda');
+    
+    if (query.length < 3) {
+        resultadosDiv.style.display = 'none';
+        return;
+    }
+
+    try {
+        // Ruta absoluta desde el origen /cantos/
+        const response = await fetch(`/cantos/resucito/find/index.json?v=${Date.now()}`);
+        
+        if (!response.ok) {
+            throw new Error(`Error HTTP ${response.status}`);
+        }
+        
+        const cantos = await response.json();
+        console.log("Datos cargados:", cantos); // Para depuración
+        
+        const resultados = cantos.filter(canto => 
+            canto.titulo.toLowerCase().includes(query) || 
+            canto.letra.includes(query)
+        ).slice(0, 8);
+
+        mostrarResultados(resultados);
+    } catch (error) {
+        console.error("Error en búsqueda:", error);
+        resultadosDiv.innerHTML = `
+            <div class="resultado-item">
+                Error al cargar: ${error.message}<br>
+                <small>Ruta intentada: /cantos/resucito/find/index.json</small>
+            </div>`;
+        resultadosDiv.style.display = 'block';
+    }
+});
+
+// Función para mostrar resultados (mejorada)
+function mostrarResultados(resultados) {
+    const contenedor = document.getElementById('resultadosBusqueda');
+    contenedor.innerHTML = '';
+
+    if (resultados.length === 0) {
+        contenedor.innerHTML = '<div class="resultado-item">No hay coincidencias</div>';
+    } else {
+        resultados.forEach(canto => {
+            const div = document.createElement('div');
+            div.className = 'resultado-item';
+            div.innerHTML = `
+                <strong>${canto.titulo}</strong>
+                <br>
+                <small>${canto.salmo}</small>
+                <br>
+                <small class="ruta-archivo">${canto.archivo}</small>
+            `;
+            div.onclick = () => window.location.href = canto.archivo;
+            contenedor.appendChild(div);
+        });
+    }
+    contenedor.style.display = 'block';
+}
+
+
+/* ****************************************
+FUNCION DE BUSCADOR
+******************************************/
+
+
 /***********************
  * INICIO DE LA APLICACIÓN
  ***********************/
 document.addEventListener('DOMContentLoaded', inicializarAplicacion);
+
 
 

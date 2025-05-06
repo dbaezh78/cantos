@@ -7,8 +7,8 @@
     <link rel="icon" href="/cantos/src/ico.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link type=text/css rel=stylesheet href="canto.css" >
-    <link type=text/css rel=stylesheet href="estilos.css" >
+    <link type=text/css rel=stylesheet href="/cantos/resucito/cssCantos/amoalsenor.css" >
+    <link type=text/css rel=stylesheet href="/cantos/resucito/src/estilos.css" >
     
     <!--<meta http-equiv="refresh" content="1">    -->
 
@@ -33,6 +33,18 @@
                             </svg> </a></div>
                     </div>
             </td>
+
+            <td>
+
+                <div class="buscador-cantos">
+                    <input type="text" id="inputBusqueda" placeholder="🔍ver otro canto..." autocomplete="off">
+                    <div id="resultadosBusqueda"></div>
+                </div>
+
+
+            </td>
+
+
             </tr>
 
                 <tr>
@@ -253,15 +265,13 @@
 <!-- SECCION DEL REPRODUCTOR-->
         
         <div id="reproductor-audio">
-            <audio class="saudio" controls controlslist="nodownload" preload="metadata" loop>
+            <audio class="saudio" controls controlslist="download" preload="metadata" loop>
                 <source src="/audio/amoalsenor.mp3" type="audio/mpeg">
             </audio>
         </div>       
 
   
-<script src="mainjs.js"></script>
-<script src="canto.js"></script>
-  
-  
+<script src="/cantos/resucito/src/mainjs.js"></script>
+<script src="/cantos/resucito/cjs/amoalsenor.js"></script>
 </body>
 </html>

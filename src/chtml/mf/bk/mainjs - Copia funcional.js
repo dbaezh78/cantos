@@ -2,11 +2,8 @@
  * CONFIGURACIÓN GENERAL
  ***********************/
 const acordes = ["Do", "Do#", "Re", "Re#", "Mi", "Fa", "Fa#", "Sol", "Sol#", "La", "Si♭", "Si"];
-const dbTrastes = ["♫", "1°", "2°", "3°", "4°", "5°", "6°", "7°", "8°", "9°", "10°"];
-
-// Variables de estado global
 let scrolling = false;
-let scrollInterval = null;
+let scrollInterval;
 
 /***********************
  * FUNCIONES DE ACORDES
@@ -51,7 +48,7 @@ function renderizarAcordes(contenedor, acordesData) {
     acordesData.forEach(acorde => {
         const grupo = document.createElement('div');
         grupo.className = 'chord-container';
-        grupo.classList.add(acorde.posicion);
+        grupo.classList.add(acorde.posicion); // Añade clase con la variable de posición
         
         const select = document.createElement('select');
         select.className = 'chord no-arrow';
@@ -73,6 +70,7 @@ function renderizarAcordes(contenedor, acordesData) {
     contenedor.insertBefore(divAcordes, contenedor.querySelector('.lyrics'));
 }
 
+
 /***********************
  * FUNCIONES DE INTERFAZ
  ***********************/
@@ -88,9 +86,6 @@ function divsOff() {
     });
 }
 
-/***********************
- * MOSTRAR IMAGENES
- ***********************/
 function mostrarImagen(src) {
     const imgContainer = document.getElementById('imagen-container');
     document.getElementById('imagen-nota').src = src;
@@ -98,38 +93,26 @@ function mostrarImagen(src) {
     imgContainer.scrollIntoView({ behavior: 'smooth' });
 }
 
-
 function mostrarMensaje() {
     const mensaje = document.getElementById('mensaje');
     mensaje.style.display = 'block';
     setTimeout(() => mensaje.style.display = 'none', 3000);
 }
 
-/***********************
- * CONTROL DE DESPLAZAMIENTO MEJORADO
- ***********************/
-function toggleDesplazamiento() {
-    if (scrolling) {
-        detenerDesplazamiento();
-    } else {
-        iniciarDesplazamiento();
-    }
-}
+
+
+/*********************************************************************
+ *                      CONTROL DE DESPLAZAMIENTO
+ *********************************************************************/
 
 function iniciarDesplazamiento() {
     if (scrolling) return;
     
     scrolling = true;
     const btn = document.getElementById('startScroll');
-    if (!btn) return;
-    
     const velocidad = parseInt(btn.getAttribute('data-velocidad')) || 50;
     const incremento = parseFloat(btn.getAttribute('data-incremento')) || 0.7;
 
-    // Cambiar ícono del botón
-    const icon = btn.querySelector('span');
-    if (icon) icon.textContent = 'pause';
-    
     scrollInterval = setInterval(() => {
         if (window.scrollY + window.innerHeight < document.body.scrollHeight) {
             window.scrollBy(0, incremento);
@@ -140,136 +123,16 @@ function iniciarDesplazamiento() {
 }
 
 function detenerDesplazamiento() {
-    if (!scrolling) return;
-    
     clearInterval(scrollInterval);
-    scrollInterval = null;
     scrolling = false;
-    
-    // Restaurar ícono del botón
-    const btn = document.getElementById('startScroll');
-    if (btn) {
-        const icon = btn.querySelector('span');
-        if (icon) icon.textContent = 'south';
-    }
 }
 
-function configurarEventosDesplazamiento() {
-    const scrollBtn = document.getElementById('startScroll');
-    
-    // Evento para el botón (toggle)
-    if (scrollBtn) {
-        scrollBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            toggleDesplazamiento();
-        });
-    }
-    
-    // Evento para detener al hacer clic en cualquier parte
-    document.addEventListener('click', function(e) {
-        if (!scrolling) return;
-        
-        let target = e.target;
-        let isScrollButton = false;
-        
-        // Verificar si el clic fue en el botón o sus hijos
-        while (target && target !== document) {
-            if (target.id === 'startScroll') {
-                isScrollButton = true;
-                break;
-            }
-            target = target.parentNode;
-        }
-        
-        // Detener solo si no fue en el botón
-        if (!isScrollButton) {
-            detenerDesplazamiento();
-        }
-    });
-    
-    // También detener al hacer doble clic
-    document.addEventListener('dblclick', detenerDesplazamiento);
-}
 
-/***********************
- * FUNCIONES DEL REPRODUCTOR
- ***********************/
-function configurarReproductor() {
-    const audioBtn = document.getElementById('audio-control-btn');
-    const audioPlayer = document.querySelector('.saudio');
-    
-    if (!audioBtn || !audioPlayer) {
-        console.error('Elementos del reproductor no encontrados');
-        return;
-    }
-    
-    const icon = audioBtn.querySelector('.audio-icon');
-    
-    audioBtn.addEventListener('click', async function(e) {
-        e.preventDefault();
-        
-        try {
-            document.getElementById('reproductor-audio').scrollIntoView({ 
-                behavior: 'smooth',
-                block: 'center'
-            });
-            
-            if (audioPlayer.paused) {
-                await audioPlayer.play().catch(err => {
-                    audioPlayer.controls = true;
-                    throw err;
-                });
-                icon.textContent = 'pause_circle';
-                
-                setTimeout(() => {
-                    audioPlayer.removeAttribute('controls');
-                }, 9999999999999);
-            } else {
-                audioPlayer.pause();
-                icon.textContent = 'play_circle';
-                audioPlayer.setAttribute('controls', '');
-            }
-        } catch (error) {
-            console.error('Error en reproducción:', error);
-            audioPlayer.setAttribute('controls', '');
-            const originalIcon = icon.textContent;
-            icon.textContent = 'error';
-            
-            setTimeout(() => {
-                alert('Por favor haz clic en el botón de play del reproductor para iniciar la música.');
-            }, 100);
-            
-            setTimeout(() => {
-                icon.textContent = originalIcon;
-            }, 2000);
-        }
-    });
-    
-    audioPlayer.addEventListener('ended', function() {
-        const icon = document.querySelector('#audio-control-btn .audio-icon');
-        if (icon) icon.textContent = 'play_circle';
-    });
-}
 
-/***********************
- * FUNCIONES DE TRASTES
- ***********************/
-function dbGenerarOpciones(defaultValue) {
-    return dbTrastes
-        .map(traste => `<option value="${traste}"${traste === defaultValue ? ' selected' : ''}>${traste}</option>`)
-        .join('');
-}
 
-function configurarTrastes() {
-    document.querySelectorAll('.dbMiTraste').forEach(select => {
-        const dbDefaultValue = select.dataset.default || "1°";
-        select.innerHTML = dbGenerarOpciones(dbDefaultValue);
-    });
-}
-
-/***********************
- * CARGA DE CANTOS
- ***********************/
+/*********************************************************************
+*                   CARGA DE CANTOS (ACTUALIZADA)
+*********************************************************************/
 function cargarCanto(partitura) {
     // Metadatos
     document.getElementById('tc').textContent = partitura.tituloc;
@@ -277,7 +140,7 @@ function cargarCanto(partitura) {
     document.getElementById('s1').textContent = partitura.salmo;
     document.getElementById('dbno').textContent = partitura.dbnos;
 
-    // Asamblea
+    // Asamblea (arrays paralelos)
     partitura.asamblea.forEach((texto, i) => {
         const elemento = document.getElementById(`a${i+1}`);
         if (elemento) {
@@ -288,7 +151,7 @@ function cargarCanto(partitura) {
         }
     });
 
-    // Cantor
+    // Cantor (arrays paralelos - nueva estructura)
     partitura.cantor.forEach((texto, i) => {
         const elemento = document.getElementById(`c${i+1}`);
         if (elemento) {
@@ -303,22 +166,18 @@ function cargarCanto(partitura) {
 }
 
 /***********************
- * CONFIGURACIÓN INICIAL
+ * EVENTOS
  ***********************/
-function inicializarAplicacion() {
+document.addEventListener('DOMContentLoaded', () => {
+    // Configuración inicial
     configurarSelectores();
-    configurarEventosAcordes();
-    configurarEventosDesplazamiento();
-    configurarTrastes();
-    configurarReproductor();
     
-    // Evento para alternar vista
-    document.getElementById('toggleVista')?.addEventListener('click', function(e) {
+    // Eventos generales
+    document.addEventListener('dblclick', detenerDesplazamiento);
+    document.getElementById('startScroll')?.addEventListener('click', (e) => {
         e.preventDefault();
-        document.getElementById('contenedorColumnas').classList.toggle('columnas-apiladas');
+        iniciarDesplazamiento();
     });
-
-    // Evento para toggle de elementos
     document.getElementById('toggle')?.addEventListener('change', function() {
         toggleElementos('.hct', this.checked ? 'show' : 'hide');
     });
@@ -327,21 +186,138 @@ function inicializarAplicacion() {
     document.querySelectorAll('.bcoro').forEach(linea => {
         linea.addEventListener('click', () => {
             const target = linea.nextElementSibling;
-            if (target) target.classList.toggle('dbhide');
+            if (target) {
+                target.classList.toggle('dbhide');
+            }
         });
     });
+});
 
-    // Evento para divsOff
-    const divsOffBtn = document.querySelector('.divsOff-btn');
-    if (divsOffBtn) {
-        divsOffBtn.addEventListener('click', divsOff);
+
+
+
+// BAJAR AL PRESIONAR TITULO
+
+
+// OCULTAR CONTENIDO
+
+// Seleccionar todas las primeras líneas    // bcoro = chorus
+const firstLines = document.querySelectorAll('.bcoro');
+
+// Iterar sobre cada línea para agregar eventos
+firstLines.forEach(firstLine => {
+  firstLine.addEventListener('click', () => {
+    const hcoro = firstLine.nextElementSibling; // Obtener el siguiente hermano (chorus)
+    if (hcoro) {
+      hcoro.classList.toggle('hidden'); // Alternar la visibilidad
     }
+  });
+});
+
+  // Hemos cambiado desactivarDivs por divsOff
+function divsOff() {
+    // Obtener todos los elementos con la clase "doff"
+    const divs = document.querySelectorAll('.doff');
+    // Alternar la clase "divoff" en cada div
+    divs.forEach(div => {
+        div.classList.toggle('divoff');
+    });
 }
 
+// REPRODUCTOR MEJORADO
 
-/***********************
- * INICIO DE LA APLICACIÓN
- ***********************/
-document.addEventListener('DOMContentLoaded', inicializarAplicacion);
+// CONTROL DEL REPRODUCTOR DE AUDIO MEJORADO
+document.addEventListener('DOMContentLoaded', function() {
+    const audioBtn = document.getElementById('audio-control-btn');
+    const audioPlayer = document.querySelector('.saudio');
+    
+    if (!audioBtn || !audioPlayer) {
+        console.error('Elementos del reproductor no encontrados');
+        return;
+    }
+    
+    // Icono del botón
+    const icon = audioBtn.querySelector('.audio-icon');
+    
+    audioBtn.addEventListener('click', async function(e) {
+        e.preventDefault();
+        
+        try {
+            // 1. Desplazamiento al reproductor
+            document.getElementById('reproductor-audio').scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'center'
+            });
+            
+            // 2. Control de reproducción
+            if (audioPlayer.paused) {
+                // Intenta reproducir
+                await audioPlayer.play().catch(err => {
+                    // Si falla por políticas del navegador
+                    audioPlayer.controls = true;
+                    throw err;
+                });
+                icon.textContent = 'pause_circle';
+                
+                // Ocultar controles después de reproducir
+                setTimeout(() => {
+                    audioPlayer.removeAttribute('controls');
+                }, 9999999999999);
+            } else {
+                audioPlayer.pause();
+                icon.textContent = 'play_circle';
+                audioPlayer.setAttribute('controls', '');
+            }
+        } catch (error) {
+            console.error('Error en reproducción:', error);
+            
+            // Mostrar controles y feedback al usuario
+            audioPlayer.setAttribute('controls', '');
+            const originalIcon = icon.textContent;
+            icon.textContent = 'error';
+            
+            // Mensaje para el usuario
+            setTimeout(() => {
+                alert('Por favor haz clic en el botón de play del reproductor para iniciar la música.');
+            }, 100);
+            
+            // Restaurar ícono
+            setTimeout(() => {
+                icon.textContent = originalIcon;
+            }, 2000);
+        }
+    });
+    
+    // Actualizar ícono cuando el audio termine
+    audioPlayer.addEventListener('ended', function() {
+        icon.textContent = 'play_circle';
+    });
+});
 
 
+// FUNCION PARA DIVIDIR CANTO
+
+document.getElementById('toggleVista')?.addEventListener('click', function(e) {
+    e.preventDefault();
+    document.getElementById('contenedorColumnas').classList.toggle('columnas-apiladas');
+});
+
+
+
+// FUNCION DEL TRASTE SELECIONADO
+
+// Lista de trastes
+const dbTrastes = ["♫", "1°", "2°", "3°", "4°", "5°", "6°", "7°", "8°", "9°", "10°"];
+
+// Función para generar las opciones del menú desplegable
+function dbGenerarOpciones(defaultValue) {
+    return dbTrastes
+        .map(traste => `<option value="${traste}"${traste === defaultValue ? ' selected' : ''}>${traste}</option>`)
+        .join('');
+}
+
+// Configurar cada selector de trastes
+document.querySelectorAll('.dbMiTraste').forEach(select => {
+    const dbDefaultValue = select.dataset.default || "1°"; // Si no se especifica, por defecto será "1°"
+    select.innerHTML = dbGenerarOpciones(dbDefaultValue);
+});
