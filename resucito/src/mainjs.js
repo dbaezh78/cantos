@@ -395,9 +395,13 @@ function mostrarResultados(resultados) {
                 <strong>${canto.titulo}</strong>
                 <br>
                 <small>${canto.salmo}</small>
-                <br>
-                <small class="ruta-archivo">${canto.archivo}</small>
             `;
+            /* Esto se ha suprimido de la presentacion de la busqueda
+                            <br>
+                <small class="ruta-archivo">${canto.archivo}</small>
+
+
+            */
             div.onclick = () => window.location.href = canto.archivo;
             contenedor.appendChild(div);
         });
