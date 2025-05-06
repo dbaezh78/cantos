@@ -451,8 +451,8 @@
           .dbtable:has(.eleccion) {background-color:#CEFFCF;}
 
           th {
-            min-width: auto;
             text-align: center;
+            /* min-width: auto;*/
           }
 
           .precat, .liturgia, .cat, .eleccion {
@@ -460,7 +460,7 @@
             font-family: Franklin Gothic;
             color: black; 
             border: 1px solid black;
-            width: 30%;
+            /* width: 30%; */
           }
 
           .precat {background-color: white;}
@@ -686,25 +686,25 @@
 /*****************  BUSCADOR EN EL CANTO ******************/
 
 .buscador-cantos {
-  margin: 0 auto 20px;
-  max-width: 600px;
-  position: relative;
+  margin-left: auto;  /* Esto empuja el div a la derecha */
+  width: fit-content; /* Ajusta el ancho al contenido */
+  position: relative; /* Necesario para el dropdown */
 }
 #inputBusqueda {
-  /*width: 100%; */
-  padding: 12px;
+  padding: 8px 12px;
   border: 1px solid #ddd;
-  border-radius: 4px;
+  border-radius: 20px;
+  width: 200px;
+  text-align: left;
 }
 #resultadosBusqueda {
-  display: none;
   position: absolute;
-  width: 100%;
-  max-height: 300px;
-  overflow-y: auto;
+  right: 0;
   background: white;
   border: 1px solid #ddd;
+  margin-top: 5px;
   z-index: 1000;
+  display: none; /* Oculto por defecto */
 }
 .resultado-item {
   padding: 10px;
@@ -713,4 +713,9 @@
 }
 .resultado-item:hover {
   background: #f5f5f5;
+}
+
+.dbright {
+  display: flex;
+  justify-content: flex-end; /* Alinea todo en la celda a la derecha */
 }

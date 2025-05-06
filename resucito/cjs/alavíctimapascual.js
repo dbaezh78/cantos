@@ -14,7 +14,7 @@ function ac(nota, posicion, extension = "") {
         const partitura = {
             tituloc: NOMBREDELCANTO,
             titulo: NOMBREDELCANTO,
-            salmo: "Secuencia de Pascua - Himno lat. «Vlctlmae paschall laudes»",
+            salmo: "Secuencia de Pascua",
             dbnos: "18",
       
             // Estructura para Cantor (texto)
