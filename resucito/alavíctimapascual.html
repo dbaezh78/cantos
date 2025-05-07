@@ -185,12 +185,12 @@
             </tr>
             <div style="height: 4%;"></div>
 
-<!-- Fila 6: Pie con 3 columnas -->
-            <tr class="pie-tres-columnas">
+            
 
-                <td colspan="2">
-                    
-                    
+<tr class="pie-tres-columnas">
+    
+    <td colspan="2">
+        
                     <div style="overflow: hidden;">
                         <!-- Columna 1 -->
                         <div style="width: 60%; float: left;">
@@ -205,22 +205,16 @@
                             <p class="dh piecategoria salida">Salida</p>
                         </div>
                 
-                
                 </td>
 
-
-                <td colspan="2">
-                    
-                    
-                    <!-- Columna 2 - Notas musicales -->
+                
+<!-- Trabajando con la tabla para mejorar la vista de los acordes                
+            </table><table>
+            -->
+                
+<!-- Columna 2 - Notas musicales -->
+<td colspan="2">
     <div class="notas-columna">
-
-        <span id="imagen-container">
-            <div style="position: relative;">
-                <img id="imagen-nota" src="" alt="Nota musical">
-                <button class="cerrar-btn" onclick="document.getElementById('imagen-container').style.display='none'">×</button>
-            </div>
-        </span>
 
         <a href="#" class="notas-enlace" onclick="mostrarImagen('/cantos/src/ima/re.jpg'); return false;">Re</a>
         <a href="#" class="notas-enlace" onclick="mostrarImagen('/cantos/src/ima/mim6.jpg'); return false;">Mim6</a>
@@ -256,8 +250,22 @@
             </audio>
         </div>       
 
+        <span id="imagen-container">
+            <div class="dbpict">
+                <img id="imagen-nota" src="" alt="Nota musical">
+                <button class="cerrar-btn" onclick="document.getElementById('imagen-container').style.display='none'">×</button>
+            </div>
+        </span>
+
   
 <script src="/cantos/resucito/src/mainjs.js"></script>
 <script src="/cantos/resucito/cjs/alavíctimapascual.js"></script>
 </body>
 </html>
+
+
+
+<!--
+<div align="left" style="float: left;"> 
+<div align="right"  style="float: right;"> 
+-->
