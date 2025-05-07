@@ -674,7 +674,6 @@
   z-index: 1000;
   align-items: center;
   box-sizing: border-box;
-  text-align: -webkit-center;
   /*  width: 15%;*/
 }
 
@@ -719,7 +718,7 @@
 
 
 #imagen-nota {
-  max-width: 7em;
+  max-width: 29em;
   width: max-content;
   object-fit: contain;
   align-content: center;
