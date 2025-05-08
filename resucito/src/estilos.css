@@ -1,4 +1,10 @@
-      /* CSS PARA LIBRO DE CANTOS*/
+/*
+NO DECÍS VOSOTROS…(Franklin Gothic Heavy)
+Yo os he mandado a segar(Franklin Gothic Medium)
+*/
+
+
+/* CSS PARA LIBRO DE CANTOS*/
       @font-face {
         font-family: 'Libre Franklin';
         src: url('cantos/src/fonts/LibreFranklin-Bold.ttf') format('truetype');
@@ -22,9 +28,10 @@
         width: max-content;
         position: relative;
         white-space: nowrap; /* Evita saltos de línea inesperados */
-        font-size: 1.2rem; /* Tamaño consistente en todos los dispositivos */
-        font-family: 'Franklin Gothic', 'Libre Franklin', Arial, sans-serif; /* Fuente fija */
+        font-size: 1rem; /* Tamaño consistente en todos los dispositivos */
+        font-family: 'Franklin Gothic Medium', Arial, sans-serif;  /* Fuente fija */
         letter-spacing: normal; /* Evita espaciado variable */
+        font-style: normal;
         z-index: 1;
 
         @media (min-width: 384px) {font-size: 1.07rem;}
@@ -40,9 +47,10 @@
         width: max-content;
         position: relative;
         white-space: nowrap; /* Evita saltos de línea inesperados */
-        font-family: 'Franklin Gothic', 'Libre Franklin', Arial, sans-serif; /* Fuente fija */
+        font-family: 'Franklin Gothic Medium', 'Franklin Gothic', Arial, sans-serif; /* Fuente fija */
         font-size: 1.2rem; /* Tamaño consistente en todos los dispositivos */
         font-weight: bold;
+        font-weight: 900;
         letter-spacing: normal; /* Evita espaciado variable */
         z-index: 1;
 
@@ -59,15 +67,15 @@
           font-style: italic;
           color: red;
           margin-left: 0px;
-          font-size: 1.2rem;
+          font-size: 1rem;
 
-          @media (min-width: 384px) {font-size: 1.07rem;}
-          @media (min-width: 412px) {font-size: 1.2rem;}
-          @media (min-width: 576px) {font-size: 1.2rem;}
-          @media (min-width: 768px) {font-size: 1.5rem;}
-          @media (min-width: 992px) {font-size: 1.2rem;}
-          @media (min-width: 1200px) {font-size: 1.2rem;} /* HD (1080p) */
-          @media (min-width: 1920px) {font-size: 1.2rem;} /* FHD(2K/4K) */
+          @media (min-width: 384px) {font-size: 1rem;}
+          @media (min-width: 412px) {font-size: 1rem;}
+          @media (min-width: 576px) {font-size: 1rem;}
+          @media (min-width: 768px) {font-size: 1rem;}
+          @media (min-width: 992px) {font-size: 1rem;}
+          @media (min-width: 1200px) {font-size: 1rem;} /* HD (1080p) */
+          @media (min-width: 1920px) {font-size: 1rem;} /* FHD(2K/4K) */
         }
   
         .chord {
@@ -80,16 +88,16 @@
           padding: 0;
           margin: 0;
           text-align: right;
-          font-size: 1.2rem;
+          font-size: 1rem;
           margin-top: -3px;
   
-          @media (min-width: 384px) {font-size: 1.07rem;}
-          @media (min-width: 412px) {font-size: 1.2rem;}
-          @media (min-width: 576px) {font-size: 1.2rem;}
-          @media (min-width: 768px) {font-size: 1.2rem;}
-          @media (min-width: 992px) {font-size: 1.2rem;}
-          @media (min-width: 1200px) {font-size: 1.2rem;} /* HD (1080p) */
-          @media (min-width: 1920px) {font-size: 1.2rem;} /* FHD(2K/4K) */
+          @media (min-width: 384px) {font-size: 1rem;}
+          @media (min-width: 412px) {font-size: 1rem;}
+          @media (min-width: 576px) {font-size: 1rem;}
+          @media (min-width: 768px) {font-size: 1rem;}
+          @media (min-width: 992px) {font-size: 1rem;}
+          @media (min-width: 1200px) {font-size: 1rem;} /* HD (1080p) */
+          @media (min-width: 1920px) {font-size: 1rem;} /* FHD(2K/4K) */
       }
   
 
@@ -598,6 +606,7 @@
         border: none;
         appearance: none;
         font-size: 19PX;
+        text-align: center;
       }
 
       /* Estilo para las opciones del select */
