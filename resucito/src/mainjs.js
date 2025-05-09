@@ -347,7 +347,7 @@ document.getElementById('inputBusqueda').addEventListener('input', async functio
     const query = e.target.value.toLowerCase().trim();
     const resultadosDiv = document.getElementById('resultadosBusqueda');
     
-    if (query.length < 3) {
+    if (query.length < 1) {
         resultadosDiv.style.display = 'none';
         return;
     }
