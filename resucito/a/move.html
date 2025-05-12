@@ -1,89 +1,72 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Select Movible con Posición</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elemento Movible</title>
     <style>
-        #DavidMueveAcorde {
+        #mi-elemento {
             position: absolute;
-            cursor: move;
+            left: 50px;
+            top: 100px;
+            touch-action: none;
             user-select: none;
         }
-        
-        #xy-info_nota {
+        #posicion {
             position: fixed;
             top: 10px;
-            right: 10px;
-            background-color: rgba(0,0,0,0.7);
-            color: white;
-            padding: 10px;
-            border-radius: 5px;
-            font-family: Arial, sans-serif;
+            left: 10px;
+            font-family: Arial;
+            font-size: 14px;
         }
     </style>
 </head>
 <body>
-    <div id="xy-info_nota">Posición: X: 0, Y: 0</div>
-    
-    <b id="DavidMueveAcorde">Mi</b>
+    <div id="posicion">Posición: 50, 100</div>
+    <b id="mi-elemento">Mi</b>
 
     <script>
-        const select = document.getElementById('DavidMueveAcorde');
-        const posicionInfo = document.getElementById('xy-info_nota');
-        let isDragging = false;
-        let offsetX, offsetY;
-
-        // Posición inicial centrada
-        select.style.left = '50%';
-        select.style.top = '50%';
-        select.style.transform = 'translate(-50%, -50%)';
+        const elemento = document.getElementById('mi-elemento');
+        const posicion = document.getElementById('posicion');
         
-        // Actualizar la información de posición
-        function actualizarPosicion(x, y) {
-            posicionInfo.textContent = `Posición: X: ${x}, Y: ${y}`;
+        function actualizarPosicion() {
+            posicion.textContent = `Posición: ${parseInt(elemento.style.left)}, ${parseInt(elemento.style.top)}`;
         }
 
-        // Evento cuando se presiona el mouse
-        select.addEventListener('mousedown', (e) => {
-            isDragging = true;
-            offsetX = e.clientX - select.getBoundingClientRect().left;
-            offsetY = e.clientY - select.getBoundingClientRect().top;
-            select.style.opacity = '0.8';
-            select.style.transform = 'none'; // Remueve el transform centrado
+        function startDrag(e) {
             e.preventDefault();
-        });
-
-        // Evento cuando se mueve el mouse
-        document.addEventListener('mousemove', (e) => {
-            if (!isDragging) return;
+            const x = e.type.includes('touch') ? e.touches[0].clientX : e.clientX;
+            const y = e.type.includes('touch') ? e.touches[0].clientY : e.clientY;
             
-            const x = e.clientX - offsetX;
-            const y = e.clientY - offsetY;
+            const offsetX = x - elemento.getBoundingClientRect().left;
+            const offsetY = y - elemento.getBoundingClientRect().top;
             
-            select.style.left = x + 'px';
-            select.style.top = y + 'px';
-            
-            // Actualizar el mostrador de posición
-            actualizarPosicion(x, y);
-        });
-
-        // Evento cuando se suelta el mouse
-        document.addEventListener('mouseup', () => {
-            if (isDragging) {
-                isDragging = false;
-                select.style.opacity = '1';
+            function moveElement(e) {
+                const newX = (e.type.includes('touch') ? e.touches[0].clientX : e.clientX) - offsetX;
+                const newY = (e.type.includes('touch') ? e.touches[0].clientY : e.clientY) - offsetY;
                 
-                // Obtener posición final para actualizar
-                const x = parseInt(select.style.left);
-                const y = parseInt(select.style.top);
-                actualizarPosicion(x, y);
+                elemento.style.left = newX + 'px';
+                elemento.style.top = newY + 'px';
+                actualizarPosicion();
             }
-        });
-
+            
+            function endDrag() {
+                document.removeEventListener('mousemove', moveElement);
+                document.removeEventListener('touchmove', moveElement);
+                document.removeEventListener('mouseup', endDrag);
+                document.removeEventListener('touchend', endDrag);
+            }
+            
+            document.addEventListener('mousemove', moveElement);
+            document.addEventListener('touchmove', moveElement, { passive: false });
+            document.addEventListener('mouseup', endDrag);
+            document.addEventListener('touchend', endDrag);
+        }
+        
+        elemento.addEventListener('mousedown', startDrag);
+        elemento.addEventListener('touchstart', startDrag, { passive: false });
+        
         // Mostrar posición inicial
-        window.addEventListener('load', () => {
-            const rect = select.getBoundingClientRect();
-            actualizarPosicion(rect.left, rect.top);
-        });
+        actualizarPosicion();
     </script>
 </body>
 </html>

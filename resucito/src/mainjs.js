@@ -480,78 +480,8 @@ document.addEventListener('DOMContentLoaded', function() {
 ******************************************/
 
 
-/**********************************************************************
-            MOVER LOS ACORDES DE DERECHA A IZQUIERDA
-**********************************************************************/
-
-const select = document.getElementById('DavidMueveAcorde');
-const posicionInfo = document.getElementById('xy-info_nota');
-let isDragging = false;
-let offsetX, offsetY;
-
-// Posición inicial centrada
-select.style.left = '50%';
-select.style.top = '50%';
-select.style.transform = 'translate(-50%, -50%)';
-
-// Actualizar la información de posición
-function actualizarPosicion(x, y) {
-    posicionInfo.textContent = `Posición: X: ${x}, Y: ${y}`;
-}
-
-// Evento cuando se presiona el mouse
-select.addEventListener('mousedown', (e) => {
-    isDragging = true;
-    offsetX = e.clientX - select.getBoundingClientRect().left;
-    offsetY = e.clientY - select.getBoundingClientRect().top;
-    select.style.opacity = '0.8';
-    select.style.transform = 'none'; // Remueve el transform centrado
-    e.preventDefault();
-});
-
-// Evento cuando se mueve el mouse
-document.addEventListener('mousemove', (e) => {
-    if (!isDragging) return;
-    
-    const x = e.clientX - offsetX;
-    const y = e.clientY - offsetY;
-    
-    select.style.left = x + 'px';
-    select.style.top = y + 'px';
-    
-    // Actualizar el mostrador de posición
-    actualizarPosicion(x, y);
-});
-
-// Evento cuando se suelta el mouse
-document.addEventListener('mouseup', () => {
-    if (isDragging) {
-        isDragging = false;
-        select.style.opacity = '1';
-        
-        // Obtener posición final para actualizar
-        const x = parseInt(select.style.left);
-        const y = parseInt(select.style.top);
-        actualizarPosicion(x, y);
-    }
-});
-
-// Mostrar posición inicial
-window.addEventListener('load', () => {
-    const rect = select.getBoundingClientRect();
-    actualizarPosicion(rect.left, rect.top);
-});
-
-
-/**********************************************************************
-            MOVER LOS ACORDES DE DERECHA A IZQUIERDA
-**********************************************************************/
-
-
-
 /***********************
  * INICIO DE LA APLICACIÓN
  ***********************/
 document.addEventListener('DOMContentLoaded', inicializarAplicacion);
-
 

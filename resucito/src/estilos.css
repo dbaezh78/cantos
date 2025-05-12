@@ -164,7 +164,6 @@ Yo os he mandado a segar(Franklin Gothic Medium)
         white-space: nowrap;
         pointer-events: auto;
         top: -3px;        /* Este controla la posición del del acorde ↑↓ */
-        
       }
 
       .no-arrow {
@@ -406,9 +405,9 @@ Yo os he mandado a segar(Franklin Gothic Medium)
         margin-left: 0%;
 
         @media (min-width: 384px) {
-          max-width: 394px;
+          max-width: 357px;
           margin-top: 0%;
-          margin-left: 5%;
+          margin-left: 4%;
         }
 
         @media (min-width: 768px) and (max-width: 991px) {
@@ -427,7 +426,7 @@ Yo os he mandado a segar(Franklin Gothic Medium)
         margin-left: 25%;
 
         @media (min-width: 384px) {
-          max-width: 394px;
+          max-width: 357px;
           margin-top: 0%;
           margin-left: 2%;
         }
@@ -486,24 +485,12 @@ Yo os he mandado a segar(Franklin Gothic Medium)
 
           .piecategoria {
             background-color: white;
-            border: 1px solid #a9a9a969;
-            border-radius: 3px;
-            padding: 1px 2px 1px 2px;
+            border: 1px solid goldenrod;
+            display: contents; /*inline-block;*/
+            border-radius: 0px;
+            padding: 0px;
             margin: 0px;
-            display: table-cell;
-            /*display: inline-block;*/
         }
-
-        /* Efecto de Fondo
-        background: 
-            repeating-linear-gradient(
-              -45deg,
-              transparent,
-              transparent 5px,
-              red 5px,
-              #eee 6px
-            );
-        */
 
         .ppascua {color: #3dcef0;}
         .ppenteco {color: #f0433d;}
@@ -684,10 +671,10 @@ Yo os he mandado a segar(Franklin Gothic Medium)
 
 .notas-enlace {
   font-family: "Franklin Gothic Medium";
-  padding: 1px 2px 1px 2px;
-  border: 1px solid #a9a9a969;
-  display: table-cell;
-  margin: 0px;
+  padding: 2px;
+  border: 1px solid #f2e5e5;
+  display: inline-block;
+  margin: 2px;
   text-decoration: none;
   color: inherit;
 }
@@ -820,26 +807,3 @@ Yo os he mandado a segar(Franklin Gothic Medium)
   display: table-row;
   /*block !important;*/
 }
-
-
-
-/* MOVER ACORDES*/
-#DavidMueveAcorde {
-  position: absolute;
-  cursor: move;
-  user-select: none;
-}
-
-#xy-info_nota {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  background-color: rgba(0,0,0,0.7);
-  color: white;
-  padding: 10px;
-  border-radius: 5px;
-  font-family: Arial, sans-serif;
-}
-
-/* MOVER ACORDES*/
-
