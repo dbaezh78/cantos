@@ -338,20 +338,22 @@ function inicializarAplicacion() {
     }
 }
 
+
 /* ****************************************
-FUNCION DE BUSCADOR MEJORADA
+FUNCION DE BUSCADOR
 ******************************************/
+// Función de búsqueda corregida
 document.getElementById('inputBusqueda').addEventListener('input', async function(e) {
-    const query = normalizeText(e.target.value.trim());
+    const query = e.target.value.toLowerCase().trim();
     const resultadosDiv = document.getElementById('resultadosBusqueda');
     
     if (query.length < 1) {
         resultadosDiv.style.display = 'none';
-        resultadosDiv.innerHTML = '';
         return;
     }
 
     try {
+        // Ruta absoluta desde el origen /cantos/
         const response = await fetch(`/cantos/resucito/find/index.json?v=${Date.now()}`);
         
         if (!response.ok) {
@@ -359,15 +361,12 @@ document.getElementById('inputBusqueda').addEventListener('input', async functio
         }
         
         const cantos = await response.json();
+        console.log("Datos cargados:", cantos); // Para depuración
         
-        // Normalizar y buscar
-        const resultados = cantos.filter(canto => {
-            const tituloNormalizado = normalizeText(canto.titulo);
-            const letraNormalizada = normalizeText(canto.letra);
-            
-            return tituloNormalizado.includes(query) || 
-                   letraNormalizada.includes(query);
-        });
+        const resultados = cantos.filter(canto => 
+            canto.titulo.toLowerCase().includes(query) || 
+            canto.letra.includes(query)
+        ).slice(0, 8);
 
         mostrarResultados(resultados);
     } catch (error) {
@@ -381,102 +380,38 @@ document.getElementById('inputBusqueda').addEventListener('input', async functio
     }
 });
 
-// Función para normalizar texto (quitar acentos, comas, etc.)
-function normalizeText(text) {
-    return text.toLowerCase()
-        .normalize("NFD").replace(/[\u0300-\u036f]/g, "") // quita acentos
-        .replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, ""); // quita signos de puntuación
-}
-
-// Función para mostrar resultados con scroll lateral
+// Función para mostrar resultados (mejorada)
 function mostrarResultados(resultados) {
     const contenedor = document.getElementById('resultadosBusqueda');
     contenedor.innerHTML = '';
 
     if (resultados.length === 0) {
         contenedor.innerHTML = '<div class="resultado-item">No hay coincidencias</div>';
-        contenedor.style.display = 'block';
-        return;
+    } else {
+        resultados.forEach(canto => {
+            const div = document.createElement('div');
+            div.className = 'resultado-item';
+            div.innerHTML = `
+                <strong>${canto.titulo}</strong>
+                <br>
+                <small>${canto.salmo}</small>
+            `;
+            /* Esto se ha suprimido de la presentacion de la busqueda
+                            <br>
+                <small class="ruta-archivo">${canto.archivo}</small>
+
+
+            */
+            div.onclick = () => window.location.href = canto.archivo;
+            contenedor.appendChild(div);
+        });
     }
-
-    // Crear contenedor principal
-    const mainResults = document.createElement('div');
-    mainResults.className = 'main-results';
-    
-    // Mostrar todos los resultados en el contenedor principal con scroll
-    resultados.forEach(canto => {
-        const div = document.createElement('div');
-        div.className = 'resultado-item';
-        div.innerHTML = `
-            <strong>${canto.titulo}</strong>
-            <br>
-            <small>${canto.salmo}</small>
-        `;
-        div.onclick = () => window.location.href = canto.archivo;
-        mainResults.appendChild(div);
-    });
-
-    contenedor.appendChild(mainResults);
     contenedor.style.display = 'block';
 }
 
-// Cerrar resultados al hacer clic fuera
-document.addEventListener('click', function(e) {
-    const buscador = document.querySelector('.buscador-cantos');
-    const resultados = document.getElementById('resultadosBusqueda');
-    
-    if (!buscador.contains(e.target)) {
-        resultados.style.display = 'none';
-    }
-});
 
 /* ****************************************
-FIN FUNCION DE BUSCADOR
-******************************************/
-
-/******************************************
-    TOGGLE VISIBILITY - SOLUCIÓN CORRECTA
-******************************************/
-
-document.addEventListener('DOMContentLoaded', function() {
-    // 1. Selección correcta de elementos
-    const iconTop = document.querySelector('.home .mso'); // Ícono superior (sin clase odb en tu HTML)
-    const iconBottom = document.querySelector('.encabezado-columnas .mso.hline.bcoro'); // Ícono inferior
-    const headerRow = document.querySelector('tr.encabezado-columnas.odb'); // Fila del encabezado
-
-    // 2. Estado inicial
-    iconTop.style.display = 'none'; // Ocultar ícono superior al inicio
-    iconBottom.style.display = 'inline-block'; // Mostrar ícono inferior
-    headerRow.style.display = ''; // Mostrar encabezado (cambia a 'none' si quieres oculto al inicio)
-
-    // 3. Función mejorada de toggle
-    function toggleVisibility() {
-        // Alternar encabezado
-        headerRow.style.display = headerRow.style.display === 'none' ? '' : 'none';
-        
-        // Alternar íconos de forma cruzada
-        iconTop.style.display = iconTop.style.display === 'none' ? 'inline-block' : 'none';
-        iconBottom.style.display = iconBottom.style.display === 'none' ? 'inline-block' : 'none';
-        
-        // Guardar estado (opcional)
-        localStorage.setItem('headerVisible', headerRow.style.display !== 'none');
-    }
-
-    // 4. Eventos correctamente asignados
-    iconBottom.addEventListener('click', toggleVisibility);
-    iconTop.addEventListener('click', toggleVisibility);
-
-    // 5. Cargar estado guardado (opcional)
-    const savedState = localStorage.getItem('headerVisible');
-    if (savedState === 'false') {
-        headerRow.style.display = 'none';
-        iconTop.style.display = 'inline-block';
-        iconBottom.style.display = 'none';
-    }
-});
-
-/******************************************
-    TOGGLE VISIBILITY - SOLUCIÓN CORRECTA
+FUNCION DE BUSCADOR
 ******************************************/
 
 
@@ -484,4 +419,6 @@ document.addEventListener('DOMContentLoaded', function() {
  * INICIO DE LA APLICACIÓN
  ***********************/
 document.addEventListener('DOMContentLoaded', inicializarAplicacion);
+
+
 

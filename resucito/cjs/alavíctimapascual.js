@@ -14,7 +14,7 @@ function ac(nota, posicion, extension = "") {
         const partitura = {
             tituloc: NOMBREDELCANTO,
             titulo: NOMBREDELCANTO,
-            salmo: "Secuencia de Pascua",
+            salmo: "Secuencia de Pascua - Himno lat. «Vlctlmae paschall laudes» ",
             dbnos: "18",
       
             // Estructura para Cantor (texto)
@@ -40,22 +40,22 @@ function ac(nota, posicion, extension = "") {
       
             // Estructura para Cantor (acordes) - CON FUNCIÓN ac()
             cantorAcordes: [
-      /* 1*/      [ac("La", "cp6","m"), ac("Fa#","cp55","m")],
-      /* 2*/      [ac("", "cp500","")],
-      /* 3*/      [ac("Re", "cp20","m9")],
-      /* 4*/      [ac("Fa", "cp6","maj 7"), ac("Mi","cp50","")],
-      /* 5*/      [ac("Re", "cp6","m 9"), ac("Fa","cp60","")],
-      /* 6*/      [ac("Mi", "cp66","")],
-      /* 7*/      [ac("La", "cp6","m"), ac("La","cp20","7")],
-      /* 8*/      [ac("Re", "cp50","m9")],
-      /* 9*/      [ac("Fa", "cp6","maj 7"), ac("Mi","cp50","")],
-      /* 10*/      [ac("Re", "cp15","m 9"), ac("Fa","cp30","")],
-      /* 11*/      [ac("La", "cp6","7")],
-      /* 12*/      [ac("", "cp500","")],
-      /* 13*/      [ac("Fa", "cp6","maj 7"), ac("Mi","cp35","")],
-      /* 14*/      [ac("Re", "cp6","m 9"), ac("Fa","cp","")],
-      /* 15*/      [ac("Fa", "cp6",""), ac("Mi","cp56","")],
-      /* 16*/      [ac("Fa", "cp6",""), ac("Mi","cp56","")],
+/* 1*/      [ac("La", "cp2","m"), ac("La","cp43","7")],
+/* 2*/      [ac("", "cp500","")],
+/* 3*/      [ac("Re", "cp42","m9")],
+/* 4*/      [ac("Fa", "cp5","maj7"), ac("Mi","cp61","")],
+/* 5*/      [ac("Re", "cp0",""), ac("Fa","cp49","")],
+/* 6*/      [ac("Mi", "cp37","")],
+/* 7*/      [ac("La", "cp2","m"), ac("La","cp21","7")],
+/* 8*/      [ac("Re", "cp40","m9")],
+/* 9*/      [ac("Fa", "cp5","maj 7"), ac("Mi","cp62","")],
+/* 10*/      [ac("Re", "cp15","m 9"), ac("Fa","cp30",""),ac("Mi","cp49","")],
+/* 11*/      [ac("La", "cp1","7")],
+/* 12*/      [ac("", "cp500","")],
+/* 13*/      [ac("Fa", "cp6","maj 7"), ac("Mi","cp49","")],
+/* 14*/      [ac("Re", "cp4","m 9"), ac("Fa","cp34",""), ac("Mi","cp57","")],
+/* 15*/      [ac("Fa", "cp1",""), ac("Mi","cp65","")],
+/* 16*/      [ac("Fa", "cp1",""), ac("Mi","cp78","")],
             ],
             // Estructura para Asamblea (texto)
             asamblea: [
@@ -73,16 +73,16 @@ function ac(nota, posicion, extension = "") {
             ],
       
             asambleaAcordes: [
-      /* 1*/      [ac("Fa", "cp20","")],
-      /* 2*/      [ac("Mi", "cp22","")],
-      /* 3*/      [ac("Fa", "cp6",""), ac("Mi","cp62","")],
-      /* 4*/      [ac("Fa", "cp6",""), ac("Mi","cp78","")],
-      /* 5*/      [ac("Re", "cp6","m"), ac("Mi","cp40","")],
-      /* 6*/      [ac("Fa", "cp6","maj7"), ac("Fa","cp78",""), ac("Mi","cp90","")],
-      /* 7*/      [ac("Re", "cp6","m"), ac("Mi","cp65","")],
-      /* 8*/      [ac("Fa", "cp6",""), ac("Mi","cp45","")],
-      /* 9*/      [ac("Fa", "cp6",""), ac("Mi","cp62","")],
-      /* 10*/      [ac("Fa", "cp6",""), ac("Mi","cp78","")],
+      /* 1*/      [ac("Fa", "cp24","")],
+      /* 2*/      [ac("Mi", "cp27","")],
+      /* 3*/      [ac("Fa", "cp1",""), ac("Mi","cp55","")],
+      /* 4*/      [ac("Fa", "cp1",""), ac("Mi","cp55","")],
+      /* 5*/      [ac("Re", "cp3","m"), ac("Mi","cp27","")],
+      /* 6*/      [ac("Fa", "cp5","maj7"), ac("Fa","cp28",""), ac("Mi","cp43","")],
+      /* 7*/      [ac("Re", "cp3","m"), ac("Mi","cp27","")],
+      /* 8*/      [ac("Fa", "cp1",""), ac("Mi","cp45","")],
+      /* 9*/      [ac("Fa", "cp0",""), ac("Mi","cp55","")],
+      /* 10*/      [ac("Fa", "cp0",""), ac("Mi","cp55","")],
             ]
         };
         
