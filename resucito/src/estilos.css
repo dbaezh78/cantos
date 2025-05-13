@@ -439,13 +439,18 @@ Yo os he mandado a segar(Franklin Gothic Medium)
       }
 
       .dbtable {
-        max-width: max-content;
+        width: 1080px;
         border: 1px solid #ddd;
-        padding: 2% 2% 1% 2%;
+        padding: 2px 7px 2px 7px;
         border-radius: 10px;
         background: white;
         text-align: left;
+        /*max-width: max-content;*/
 
+        @media (min-width: 268px) and (max-width: 484px) {
+          width: 384px;
+
+        }
         @media (min-width: 768px) and (max-width: 991px) {
             width: 100%;
             max-width: 100%;
@@ -468,8 +473,17 @@ Yo os he mandado a segar(Franklin Gothic Medium)
             font-family: Franklin Gothic;
             color: black; 
             border: 1px solid black;
+            transition: all 0.7s ease;
+            cursor: pointer;
             /* width: 30%; */
           }
+
+        /* Efecto al pasar el mouse - solo elevación */
+    .precat:hover, .liturgia:hover, .cat:hover, .eleccion:hover 
+        {
+            box-shadow: 0 4px 8px rgba(0,0,0,60.00); /* Sombra más pronunciada */
+            transform: translateY(-1px); /* Movimiento sutil hacia arriba */
+        }
 
           .precat {background-color: white;}
           .liturgia {background-color: #FFFFCB;}
@@ -615,6 +629,7 @@ Yo os he mandado a segar(Franklin Gothic Medium)
         appearance: none;
         font-size: 19PX;
         text-align: center;
+        cursor: pointer;
       }
 
       /* Estilo para las opciones del select */
