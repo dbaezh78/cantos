@@ -21,15 +21,12 @@
     <div class="contenedor-tabla">
         
         <table class="dbtable">
-
             <tr>
-
+                
+<!-- A1 - PRIMERA FILA DEL CANTO DONDE ESTÁ EL HOME Y EL BUSCADOR -->
                 <td colspan="6" class="navegar">
-
                     <div>
-                        
                         <div align="left" style="float: left;"> 
-                            
                             <div class="home">
                                 <div><a href="/cantos/">				
                                     <svg height="24px" viewBox="0 0 24 24" width="24px" fill="#5f6368">
@@ -37,160 +34,136 @@
                                     <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8h5z"/>					
                                     </svg> </a></div>
                                     
-             <span class="mso" style="color: black; margin-left: 29px; margin-top: -52px">visibility</span>
-<!--             <span class="mso" style="color: black; margin-left: 29px; margin-top: -52px">visibility5°T</span>      -->
+                <span class="mso" style="color: black; margin-left: 29px; margin-top: -52px">visibility</span>
+<!--            <span class="mso" style="color: black; margin-left: 29px; margin-top: -52px">visibility5°T</span>      -->
 
                             </div>
-                            
                         </div>
 
+<!-- BUSCADOR DEL CANTO-->
                         <div align="right"  style="float: right;"> 
                             <div class="buscador-cantos" align="right"  style="float: right;">
                                 <input type="text" id="inputBusqueda" placeholder="🔍ver otro canto..." autocomplete="off">
                                 <div id="resultadosBusqueda"></div>
                             </div>
                         </div>
+<!-- BUSCADOR DEL CANTO-->                        
 
                         <div style="clear: both;"></div>
                     </div>
                 </td>
+<!-- A1 - PRIMERA FILA DEL CANTO DONDE ESTÁ EL HOME Y EL BUSCADOR-->
             </tr>
-                <tr>
 
-                    <td class="titulo" id="t1" colspan="6"></td>
-                </tr>
+            <tr>        <td class="titulo" id="t1" colspan="6"></td>        </tr>
             
             <!-- Fila 2: Subtítulo -->
-            <tr>
-                <td class="subtitulo" id="s1" colspan="6"></td>
-            </tr>
+            <tr>        <td class="subtitulo" id="s1" colspan="6"></td>     </tr>
             
-            <!-- Fila 3: Encabezado de 6 columnas -->
-            <tr class="encabezado-columnas odb">
+<!-- A2 - Fila 3: Encabezado de 6 columnas -->
+        <tr class="encabezado-columnas odb">
                 
-                <th class="precat">
-                    PreCatecumenado
-                </th>
+            <th class="precat">PreCatecumenado</th>
                 
-                <th>
-                        <select class="dbMiTraste" data-default=" "></select> <!-- Grado ° -->
-
-                </th>
+            <th>    <select class="dbMiTraste" data-default=" "></select> <!-- Grado ° -->
+            </th>
                 
-                <th>
-                    
-                    <a href="#" id="toggleVista">
-                        <span class="mso">menu_book</span>
-                    </a>
+            <th>    <a href="#" id="toggleVista"><span class="mso">menu_book</span></a>
+            </th>
 
-                </span></th>
-                <th>
+            <th>    <a href="#reproductor-audio" id="audio-control-btn" class="audio-control"><span class="mso audio-icon">play_circle</span></a>
+            </th>
+
+            <th>    <span class="mso hline bcoro">visibility</span>
+            </th>
+
+            <!-- Flecha para abajo ↓ -->
+            <th>    <a href="#" id="startScroll" data-velocidad="200" data-incremento="1"><span class="mso">south</span></a>
+            </th>
+
+        </tr>
+<!-- A2 - Fila 3: Encabezado de 6 columnas CIERRE-->
+
+<!-- A3 Fila 4 TODO EL CANTO -->
+
+        <tr>
+            <td colspan="6" style="padding: 22px 0 0 0;">
+                <div class="contenedordecolumnas" id="contenedorColumnas">
+
+<!-- A4 - Grupo Izquierdo -->
+    <div class="grupo-columnas grupo-izquierdo">
+
+<!-- A5 - LADO Izquierdo -->
+        <div class="izq">
+
+<!-- A6 - CONTENIDO DEL LADO Izquierdo -->
+            <div class="tc"></div>
+                <!-- Cantor -->
+                <div class="line"><div class="lyrics" id="c1"></div></div>
+                <div class="line"><div class="lyrics" id="c2"></div></div>
+                <div class="line"><div class="lyrics" id="c3"></div></div>
+                <div class="line"><div class="lyrics" id="c4"></div></div>
+                <div class="line"><div class="lyrics" id="c5"></div></div>
+                <div class="line"><div class="lyrics last" id="c6"></div></div>
+
+                <div class="line"><div class="lyrics" id="c7"></div></div>
+                <div class="line"><div class="lyrics" id="c8"></div></div>
+                <div class="line"><div class="lyrics" id="c9"></div></div>
+                <div class="line"><div class="lyrics last" id="c10"></div></div>
                 
-
-                    <a href="#reproductor-audio" id="audio-control-btn" class="audio-control">
-                        <span class="mso audio-icon">play_circle</span>  
-                    </a>
-
-                    
-                </th>
-                <th>
+                <div class="line"><div class="lyrics" id="c11"></div></div>
+                <div class="line"><div class="lyrics" id="c12"></div></div>
+                <div class="line"><div class="lyrics" id="c13"></div></div>
+                <div class="line"><div class="lyrics" id="c14"></div></div>
+                <div class="line"><div class="lyrics" id="c15"></div></div>
                                         
-                        <span class="mso hline bcoro">
-                            visibility</span>
-                                            
-                    </th>
+        </div>
+<!-- A5 - LADO Izquierdo -->
 
-                <th>
-                
-                    <!-- Flecha para abajo ↓ -->
-                    <a href="#" id="startScroll" data-velocidad="200" data-incremento="1">
-                        <span class="mso">south</span>
-                    </a>
-                
-                </th>
+    </div>
+<!-- A4 - Grupo Izquierdo -->
 
-            </tr>
+<!-- A6 - Grupo Izquierdo -->
+    <div class="grupo-columnas grupo-derecho">
 
+<!-- A7 - LADO DERECHO -->
+        <div class="der">
 
-            <!-- Fila 4:-->
-            <tr>
-                <td colspan="6" style="padding: 22px 0 0 0;">
-                    <div class="contenedordecolumnas" id="contenedorColumnas">
+<!-- A8 - CONTENIDO DEL LADO DERECHO -->
+                <div class="ta"></div>
+                <div class="line"><div class="alyrics" id="a1"></div></div>
+                <div class="line"><div class="alyrics" id="a2"></div></div>
+                <div class="line"><div class="alyrics" id="a3"></div></div>
+                <div class="line"><div class="alyrics last" id="a4"></div></div>
+                <div class="line"><div class="alyrics" id="a5"></div></div>
+                <div class="line"><div class="alyrics" id="a6"></div></div>
+                <div class="line"><div class="alyrics" id="a7"></div></div>
+                <div class="line"><div class="alyrics" id="a8"></div></div>
+                <div class="line"><div class="alyrics" id="a9"></div></div>
+                <div class="line"><div class="alyrics last" id="a10"></div></div>
 
-                        <!-- Grupo Izquierdo -->
-                        <div class="grupo-columnas grupo-izquierdo">
+                <div class="line"><div class="lyrics" id="c16"></div></div>
 
-<div class="izq">
+<!-- A7 - LADO DERECHO -->  </div>
+<!-- A6 - Grupo Izquierdo -->   </div>
+<!-- A3 Fila 4 TODO EL CANTO -->    </div>
+<!-- A3 Fila 4 TODO EL CANTO -->        </td>
+<!-- A3 Fila 4 TODO EL CANTO -->            </tr>
 
-<div class="tc"></div>
-    <!-- Cantor -->
-    <div class="line"><div class="lyrics" id="c1"></div></div>
-    <div class="line"><div class="lyrics" id="c2"></div></div>
-    <div class="line"><div class="lyrics" id="c3"></div></div>
-    <div class="line"><div class="lyrics" id="c4"></div></div>
-    <div class="line"><div class="lyrics" id="c5"></div></div>
-    <div class="line"><div class="lyrics last" id="c6"></div></div>
-
-    <div class="line"><div class="lyrics" id="c7"></div></div>
-    <div class="line"><div class="lyrics" id="c8"></div></div>
-    <div class="line"><div class="lyrics" id="c9"></div></div>
-    <div class="line"><div class="lyrics last" id="c10"></div></div>
-    
-    <div class="line"><div class="lyrics" id="c11"></div></div>
-    <div class="line"><div class="lyrics" id="c12"></div></div>
-    <div class="line"><div class="lyrics" id="c13"></div></div>
-    <div class="line"><div class="lyrics" id="c14"></div></div>
-    <div class="line"><div class="lyrics" id="c15"></div></div>
-                            
-                            </div>
-                        </div>
-                        
-<!-- Grupo Derecho  -->
-                        
-<div class="grupo-columnas grupo-derecho">
-    <div class="der">
-
-
-            <!-- Asamblea -->
-    <div class="ta"></div>
-    <div class="line"><div class="alyrics" id="a1"></div></div>
-    <div class="line"><div class="alyrics" id="a2"></div></div>
-    <div class="line"><div class="alyrics" id="a3"></div></div>
-    <div class="line"><div class="alyrics last" id="a4"></div></div>
-    <div class="line"><div class="alyrics" id="a5"></div></div>
-    <div class="line"><div class="alyrics" id="a6"></div></div>
-    <div class="line"><div class="alyrics" id="a7"></div></div>
-    <div class="line"><div class="alyrics" id="a8"></div></div>
-    <div class="line"><div class="alyrics" id="a9"></div></div>
-    <div class="line"><div class="alyrics last" id="a10"></div></div>
-
-    <div class="line"><div class="lyrics" id="c16"></div></div>
-
-
-                            </div>
-                        </div>
-                    </div>
-                </td>
-            </tr>
-            <!-- Fila 5: Flechas -->
-            <tr>
-                <td colspan="6" class="navegar">
-
-                    <div>
+<!-- Fila 5: Flechas -->
+            <tr>    <td colspan="6" class="navegar">
+                <div>
                         <a href="/cantos/src/chtml/a/alavictimapascual.html"            align="left"   style="float: left; color: red;">   <span class="mso1">arrow_left_alt   </span></a>
                         <a href="/cantos/resucito/a/anadiedemosocasiondetropiezo.html"  align="right"  style="float: right; color: red;">  <span class="mso1">arrow_right_alt  </span></a>
                     
-                        <div style="clear: both;"></div>
-                    </div>
+                    <div style="clear: both;"></div>
+                </div>
                     
-                </td>
-            </tr>
+            </td></tr>
+            
             <div style="height: 4%;"></div>
 
-            
-
-<tr class="pie-tres-columnas">
-    
+    <tr class="pie-tres-columnas">
     <td colspan="2">
         
                     <div style="overflow: hidden;">

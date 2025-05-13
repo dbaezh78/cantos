@@ -25,7 +25,7 @@ Yo os he mandado a segar(Franklin Gothic Medium)
       a {text-decoration: none;}
 
         .lyrics {
-        width: max-content;
+        width: 100%;
         position: relative;
         white-space: nowrap; /* Evita saltos de línea inesperados */
         font-size: 1rem; /* Tamaño consistente en todos los dispositivos */
@@ -692,6 +692,12 @@ Yo os he mandado a segar(Franklin Gothic Medium)
   margin: 2px;
   text-decoration: none;
   color: inherit;
+  transition: all 0.17s ease;
+}
+
+.notas-enlace:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.90); /* Sombra más pronunciada */
+    transform: translateY(-1px); /* Movimiento sutil hacia arriba */
 }
 
 .notas-columna {
@@ -718,13 +724,28 @@ Yo os he mandado a segar(Franklin Gothic Medium)
   width: fit-content; /* Ajusta el ancho al contenido */
   position: relative; /* Necesario para el dropdown */
 }
+
 #inputBusqueda {
   padding: 8px 12px;
   border: 1px solid #ddd;
   border-radius: 20px;
   width: 200px;
   text-align: left;
+  background-color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+#inputBusqueda:hover {
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.55);
+}
+
+#inputBusqueda:focus {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  outline: none;
+  border-color: goldenrod;
+}
+
 #resultadosBusqueda {
   position: absolute;
   right: 0;
@@ -733,7 +754,6 @@ Yo os he mandado a segar(Franklin Gothic Medium)
   margin-top: 5px;
   z-index: 1000;
   display: none; /* Oculto por defecto */
-  
 }
 
 /* UDPATE BUSCADOR*/
@@ -741,7 +761,6 @@ Yo os he mandado a segar(Franklin Gothic Medium)
 #resultadosBusqueda {
     /*position: relative;*/ /* NO ME GUSTA COMO LO HACE CON ESTO*/
     position: absolute;
-    
     max-height: 400px;
     overflow-y: auto;
     background-color: aliceblue;
@@ -776,6 +795,7 @@ Yo os he mandado a segar(Franklin Gothic Medium)
 }
 
 .resultado-item {
+  font-family: sans-serif;
   padding: 10px;
   border-bottom: 1px solid #eee;
   cursor: pointer;

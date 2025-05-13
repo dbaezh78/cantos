@@ -15,7 +15,7 @@ function ac(nota, posicion, extension = "") {
             tituloc: NOMBREDELCANTO,
             titulo: NOMBREDELCANTO,
             salmo: "Secuencia de Pascua - Himno lat. «Vlctlmae paschall laudes» ",
-            dbnos: "18",
+            dbnos: "1",
       
             // Estructura para Cantor (texto)
       
