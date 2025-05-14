@@ -118,8 +118,6 @@ Yo os he mandado a segar(Franklin Gothic Medium)
         -webkit-font-smoothing: antialiased;
         font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         color: white;
-        transition: transform 0.3s;
-
       }
 
       .mso {
@@ -129,8 +127,8 @@ Yo os he mandado a segar(Franklin Gothic Medium)
         transition: transform 0.3s;
       }
 
-      .mso:hover{
-      transform: translateY(3px);
+      .mso:hover {
+        transform: translateY(3px); /* Efecto sutil al hover */
       }
 
       #down .mso:hover {
@@ -196,9 +194,9 @@ Yo os he mandado a segar(Franklin Gothic Medium)
         transition: transform 0.3s;
         }
 
-      .home:hover{
-      transform: translateY(3px);
-      }
+        .home:hover {
+          transform: translateY(3px);
+        }
 
         .titulo {
           /* Estilo base (Mobile First) */
@@ -452,18 +450,20 @@ Yo os he mandado a segar(Franklin Gothic Medium)
         width: 1080px;
         border: 1px solid #ddd;
         padding: 2px 7px 2px 7px;
-        border-radius: 10px 10px 0px 0px;
+        border-radius: 10px;
         background: white;
         text-align: left;
         /*max-width: max-content;*/
 
-        @media (min-width: 268px) {width: 100%;}
-        /*@media (min-width: 369px) {width: 100%;}*/
-        @media (min-width: 384px) {width: 100%;}
-        @media (min-width: 576px) {width: 100%;}
-        @media (min-width: 768px) {width: 100%;}
-        @media (min-width: 992px) {width: 1080px;}
+        @media (min-width: 268px) and (max-width: 484px) {
+          width: 384px;
 
+        }
+        @media (min-width: 768px) and (max-width: 991px) {
+            width: 100%;
+            max-width: 100%;
+            padding: 2%;   
+        }
       }
 
           .dbtable:has(.precat) {background-color: white;}
@@ -533,13 +533,11 @@ Yo os he mandado a segar(Franklin Gothic Medium)
             display: table-cell;
             background-color: #f1f3f4;
             outline: none;
-            
+
             @media (max-width: 384px) {
               width: 100%;
-              padding: 1px 9px 1px 9px;
-
+              padding: 0px 9px 0px 9px;
             }
-
         }
 
         .cno {
@@ -688,10 +686,9 @@ Yo os he mandado a segar(Franklin Gothic Medium)
   direction: ltr;
   -webkit-font-feature-settings: 'liga';
   -webkit-font-smoothing: antialiased;
-  border: 1px solid goldenrod;
+  border: 1px solid #d7d8da;
   border-radius: 2em;
   cursor: pointer;
-  font-size: 20px;
 }
 
 /* MOSTRAR IMAGENES */
@@ -853,29 +850,4 @@ Yo os he mandado a segar(Franklin Gothic Medium)
 .odb {
   display: table-row;
   /*block !important;*/
-}
-
-.zboton {
-  font-size: 20px;
-  border: 1px solid darkgoldenrod !important;
-  color: red;
-}
-
-.fleft, .fright {
-  color: red;
-  transition: transform 0.3s;
-}
-
-
-.fleft {float: left;}
-.fright {float: right;}
-
-.fleft:hover {
-  transform: translateX(-5px); /* Desplaza hacia la izquierda */
-  transition: transform 0.3s ease; /* Agrega una transición suave */
-}
-
-.fright:hover {
-  transform: translateX(5px); /* Desplaza hacia la derecha */
-  transition: transform 0.3s ease; /* Agrega una transición suave */
 }
