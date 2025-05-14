@@ -612,6 +612,32 @@ document.addEventListener('DOMContentLoaded', () => {
 //************************* MOVER ACORDES ************************
 //****************************************************************
 
+//****************************************************************
+//*************** AJUSTE DE ACORDES A 800px TABLE ****************
+//****************************************************************
+
+function ajustarPosicion(posicionOriginal, anchoPantalla) {
+    // Si es móvil (384px), mantener posiciones originales
+    if (anchoPantalla <= 480) {
+      return posicionOriginal;
+    }
+    // Si es tablet (800px)
+    else if (anchoPantalla <= 800) {
+      // Aquí puedes definir cómo mapear las posiciones para tablet
+      // Por ejemplo, podrías multiplicar por un factor
+      const factorTablet = 1.5; // Ajusta este valor según necesites
+      const numero = parseInt(posicionOriginal.replace('cp', ''));
+      return `cp${Math.round(numero * factorTablet)}`;
+    }
+    // Para pantallas más grandes (1080px+)
+    else {
+      return posicionOriginal; // o ajustar con otro factor si es necesario
+    }
+  }
+
+//****************************************************************
+//*************** AJUSTE DE ACORDES A 800px TABLE ****************
+//****************************************************************
 
 
 

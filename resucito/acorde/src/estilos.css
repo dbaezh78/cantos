@@ -72,7 +72,7 @@ Yo os he mandado a segar(Franklin Gothic Medium)
           @media (min-width: 384px) {font-size: 1rem;}
           @media (min-width: 412px) {font-size: 1rem;}
           @media (min-width: 576px) {font-size: 1rem;}
-          @media (min-width: 768px) {font-size: 1rem;}
+          @media (min-width: 768px) {font-size: 1.3rem;}
           @media (min-width: 992px) {font-size: 1rem;}
           @media (min-width: 1200px) {font-size: 1rem;} /* HD (1080p) */
           @media (min-width: 1920px) {font-size: 1rem;} /* FHD(2K/4K) */
@@ -409,20 +409,24 @@ Yo os he mandado a segar(Franklin Gothic Medium)
 
       .izq {
         width: 100%;
-        max-width: max-content;
+        max-width: 96%;
         padding: 3% 0 0 0;
         margin-top: 0%;
-        margin-left: 0%;
+        margin-left: 4%;
 
         @media (min-width: 384px) {
-          max-width: 357px;
+          width: 100%;
+          max-width: 96%;
           margin-top: 0%;
           margin-left: 4%;
         }
 
         @media (min-width: 768px) and (max-width: 991px) {
-            width: 564px;
-            max-width: 100%;
+        width: 100%;
+        max-width: 98%;
+        margin-top: 0px;
+        margin-left: 2%;
+        
         }
       }
 
