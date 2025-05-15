@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../../TIC/PowerShell"
+		},
+		{
+			"path": "../../salterios"
+		},
+		{
+			"path": "../.."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "salterios"
+	}
+}

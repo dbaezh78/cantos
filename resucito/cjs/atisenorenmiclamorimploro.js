@@ -53,13 +53,13 @@ const pTablet = {
      * DATOS DEL CANTO
      ***********************/
     
-    const NOMBREDELCANTO = "A NADIE DEMOS OCASIÓN DE TROPIE";
+    const NOMBREDELCANTO = "A TI, SEÑOR, EN MI CLAMOR IMPLORO";
     
     const partitura = {
       tituloc: NOMBREDELCANTO,
       titulo: NOMBREDELCANTO,
-      salmo: "Salmo 116 (114-115)",
-      dbnos: "18",
+      salmo: "Salmo 142 (141)",
+      dbnos: "4",
     
       // Estructura para Cantor (texto)
       cantor: [

@@ -5,7 +5,7 @@ const songs = [
     {id:2,title: "A la víctima pascual", subtitle: "Secuencia de Pascua - Himno lat. «Victimae paschall laudes» ", category: "Precatecumenado", moments: ["Pascua","Pentecostés","Nuevo Testamento"], url: "/cantos/resucito/a/alavictimapascual.html"},
     {id:3,title: "A nadie demos ocasión de tropiezo", subtitle: "2ª Corintios 6,3ss", category: "Precatecumenado", moments: ["Nuevo Testamento"], url: "/cantos/resucito/a/anadiedemosocasiondetropiezo.html"},
     {id:4,title: "A ti levanto mis ojos", subtitle: "Salmo 123 (122)", category: "Precatecumenado", moments: ["Cuaresma","Antiguo Testamento"], url: "/cantos/src/chtml/a/atilevantomisojos.html"},
-    {id:5,title: "A ti, Señor, en mi clamor imploro", subtitle: "Salmo 142 (141)", category: "Precatecumenado", moments: ["Cuaresma","Antiguo Testamento"], url: "/cantos/src/chtml/a/atisenorenmiclamorimploro.html"},
+    {id:5,title: "A ti, Señor, en mi clamor imploro", subtitle: "Salmo 142 (141)", category: "Precatecumenado", moments: ["Cuaresma","Antiguo Testamento"], url: "/cantos/resucito/a/atisenorenmiclamorimploro.html"},
     {id:6,title: "A ti, Señor, levanto mi alma", subtitle: "Salmo 25 (24)", category: "Precatecumenado", moments: ["Cuaresma","Antiguo Testamento"], url: "/cantos/src/chtml/a/atisenorlevantomialma.html"},
     {id:7,title: "A ti, Señor, se debe la alabanza en Sión", subtitle: "Salmo 65 (64)", category: "Precatecumenado", moments: ["Cuaresma","Laudes","Antiguo Testamento"], url: "/cantos/src/chtml/a/atisenorsedebelaalabanzaension.html"},
     {id:8,title: "Abbá, Padre", subtitle: "Romanos 8,15–17", category: "Precatecumenado", moments: ["Pascua","Pentecostés","Entrada","Laudes","Nuevo Testamento"], url: "/cantos/src/chtml/a/abbapadre.html"},
