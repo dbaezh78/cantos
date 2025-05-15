@@ -3,7 +3,6 @@ NO DECÍS VOSOTROS…(Franklin Gothic Heavy)
 Yo os he mandado a segar(Franklin Gothic Medium)
 */
 
-
 /* CSS PARA LIBRO DE CANTOS*/
       @font-face {
         font-family: 'Libre Franklin';
@@ -20,9 +19,30 @@ Yo os he mandado a segar(Franklin Gothic Medium)
         src: url('/cantos/src/font/font.woff2') format('woff2'); /* Ajusta la ruta según tu estructura */
       }
 
+      @font-face {
+        font-family: 'Fave';
+        src: local('Fave Script Bold Pro'), local('Fave-Script-Bold-Pro'),
+            url('/cantos/src/font/Fave-ScriptBoldPro.woff2') format('woff2'),
+            url('/cantos/src/font/Fave-ScriptBoldPro.woff') format('woff'),
+            url('/cantos/src/font/Fave-ScriptBoldPro.ttf') format('truetype');
+        font-weight: 700;
+        font-style: normal;
+      }
+
+
       body {background-color: #f9f9f9;}
 
+      body:has(.precat) {background-color: #d7f0ff2b;}
+      body:has(.liturgia) {background-color: #ffffe4;}
+      body:has(.cat) {background-color: #ebf7fd;}
+      body:has(.eleccion) {background-color:#eaffea;}
+
       a {text-decoration: none;}
+
+      em {
+        font-family: Fave;
+        font-size: 1.6rem;
+      }
 
         .lyrics {
         width: 100%;
@@ -66,7 +86,6 @@ Yo os he mandado a segar(Franklin Gothic Medium)
         .csv {
           font-style: italic;
           color: red;
-          /*margin-left: 0px;*/
           font-size: 1rem;
 
           @media (min-width: 384px) {font-size: 1rem;}
@@ -359,11 +378,13 @@ Yo os he mandado a segar(Franklin Gothic Medium)
           width: 100%;
           max-width: 100%;
           }
-        @media (min-width: 768px) {
+
+        @media (min-width: 768px) and (max-width: 991px) {
             width: 100%;
             max-width: 100%;
             margin-left: 0;
           }
+
         @media (min-width: 992px) {
               width: 50%;
               max-width: 50%;
@@ -385,11 +406,8 @@ Yo os he mandado a segar(Franklin Gothic Medium)
 
         @media (min-width: 768px) and (max-width: 991px) {
           margin-top: -6%;
-          max-width: 50%;
+          max-width: 100%;}
       }
-
-      }
-
 
       .iflecha {
         font-size: 1.5em;
@@ -418,37 +436,34 @@ Yo os he mandado a segar(Franklin Gothic Medium)
           width: 100%;
           max-width: 96%;
           margin-top: 0%;
+          margin-left: 4%;}
+          
+        @media (min-width: 768px) and (max-width: 991px) {
+          width: 100%;
+          max-width: 98%;
+          margin-top: 0px;
+          margin-left: 1%;}}
+
+      .der {
+        width: 100%;
+        max-width: 96%;
+        padding: 3% 0 0 0;
+        margin-top: 0%;
+        margin-left: 4%;
+
+        @media (min-width: 384px) {
+          width: 100%;
+          max-width: 96%;
+          margin-top: 0%;
           margin-left: 4%;
         }
 
         @media (min-width: 768px) and (max-width: 991px) {
-        width: 100%;
-        max-width: 98%;
-        margin-top: 0px;
-        margin-left: 2%;
-        
-        }
-      }
-
-
-      .der {
-        max-width: max-content;
-        width: 100%;
-        max-width: 100%;
-        padding: 12px;
-        margin-top: 0%;
-        margin-left: 25%;
-
-        @media (min-width: 384px) {
-          max-width: 357px;
-          margin-top: 0%;
-          margin-left: 2%;
-        }
-
-        @media (min-width: 768px) and (max-width: 991px) {
-          max-width: 768px;
-          margin-top: 12%;
-          margin-left: 5%;
+          width: 100%;
+          max-width: 98%;
+          padding: 10% 0 0 0;
+          margin-top: 0px;
+          margin-left: 1%;
         }
       }
 
@@ -456,7 +471,7 @@ Yo os he mandado a segar(Franklin Gothic Medium)
         width: 1080px;
         border: 1px solid #ddd;
         padding: 2px 7px 2px 7px;
-        border-radius: 10px 10px 0px 0px;
+        border-radius: 0px 0px 0px 0px;
         background: white;
         text-align: left;
         /*max-width: max-content;*/
@@ -488,6 +503,9 @@ Yo os he mandado a segar(Franklin Gothic Medium)
             transition: all 0.7s ease;
             cursor: pointer;
             /* width: 30%; */
+          }
+          .cat{
+            color: white;
           }
 
         /* Efecto al pasar el mouse - solo elevación */
@@ -533,10 +551,12 @@ Yo os he mandado a segar(Franklin Gothic Medium)
 
 
           .saudio {
-            width: 100%;
+            width: 99.89%;
             display: table-cell;
             background-color: #f1f3f4;
             outline: none;
+            border-radius: 10px 10px 0px 0px;
+            margin-left: 1px;
             
             @media (max-width: 384px) {
               width: 100%;
@@ -551,7 +571,7 @@ Yo os he mandado a segar(Franklin Gothic Medium)
           text-align: center;
         }
 
-        .ta, .tc, .ta1, .ta2, .ta3, .niño, .hombre, .mujer {
+        .ta, .tc, .ta1, .ta2, .ta3, .niño, .hombres, .mujeres {
           position: relative;
           padding-left: 1.5em;
         }
@@ -559,7 +579,7 @@ Yo os he mandado a segar(Franklin Gothic Medium)
         .ta::before, .tc::before, 
         .ta1::before, .ta2::before, 
         .ta3::before, .niño::before, 
-        .hombre::before, .mujer::before {
+        .hombres::before, .mujeres::before {
           position: absolute;
           left: -6%;
           top: 0px;
@@ -568,8 +588,9 @@ Yo os he mandado a segar(Franklin Gothic Medium)
           font-family: Arial, sans-serif;
           line-height: 1.3;
           font-weight: bold;
-        
-          @media (min-width: 768px) {left: -8%;}
+
+          @media (min-width: 768px) and (max-width: 991px) {
+            left: -4%;}
         }
 
       .ta::before {content: "A.";}
@@ -578,8 +599,8 @@ Yo os he mandado a segar(Franklin Gothic Medium)
       .ta2::before {content: "A2.";}
       .ta3::before {content: "A3.";}
       .niño::before {content: "Niños:";}
-      .hombre::before {content: "Hombre:";}
-      .mujer::before {content: "Mujer:";}
+      .hombres::before {content: "Hombres:";}
+      .mujeres::before {content: "Mujeres:";}
 
       .navegar{
         padding: 0.5% 1% 2% 1%;  /* top, right, bottom, left*/
@@ -715,7 +736,6 @@ Yo os he mandado a segar(Franklin Gothic Medium)
 .notas-enlace {
   font-family: "Franklin Gothic Medium";
   padding: 2px;
-  border: 1px solid #f2e5e5;
   display: inline-block;
   margin: 2px;
   text-decoration: none;

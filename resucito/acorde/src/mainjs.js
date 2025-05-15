@@ -191,9 +191,10 @@ function configurarEventosDesplazamiento() {
     document.addEventListener('dblclick', detenerDesplazamiento);
 }
 
-/***********************
+/******************************
  * FUNCIONES DEL REPRODUCTOR
- ***********************/
+ ******************************/
+
 function configurarReproductor() {
     const audioBtn = document.getElementById('audio-control-btn');
     const audioPlayer = document.querySelector('.saudio');
@@ -202,6 +203,9 @@ function configurarReproductor() {
         console.error('Elementos del reproductor no encontrados');
         return;
     }
+    
+    // Ocultar el reproductor inicialmente
+    audioPlayer.style.display = 'none';
     
     const icon = audioBtn.querySelector('.audio-icon');
     
@@ -215,22 +219,24 @@ function configurarReproductor() {
             });
             
             if (audioPlayer.paused) {
+                // Mostrar el reproductor cuando se da play
+                audioPlayer.style.display = 'block';
                 await audioPlayer.play().catch(err => {
                     audioPlayer.controls = true;
                     throw err;
                 });
                 icon.textContent = 'pause_circle';
-                
-                setTimeout(() => {
-                    audioPlayer.removeAttribute('controls');
-                }, 9999999999999);
+                audioPlayer.setAttribute('controls', '');
             } else {
+                // Ocultar el reproductor cuando se pausa
+                audioPlayer.style.display = 'none';
                 audioPlayer.pause();
                 icon.textContent = 'play_circle';
-                audioPlayer.setAttribute('controls', '');
+                audioPlayer.removeAttribute('controls');
             }
         } catch (error) {
             console.error('Error en reproducción:', error);
+            audioPlayer.style.display = 'block'; // Mostrar en caso de error
             audioPlayer.setAttribute('controls', '');
             const originalIcon = icon.textContent;
             icon.textContent = 'error';
@@ -248,8 +254,15 @@ function configurarReproductor() {
     audioPlayer.addEventListener('ended', function() {
         const icon = document.querySelector('#audio-control-btn .audio-icon');
         if (icon) icon.textContent = 'play_circle';
+        audioPlayer.style.display = 'none'; // Ocultar cuando termina la reproducción
+        audioPlayer.removeAttribute('controls');
     });
 }
+
+/******************************
+ * FUNCIONES DEL REPRODUCTOR ULTIMA LINEA
+ ******************************/
+
 
 /***********************
  * FUNCIONES DE TRASTES
@@ -626,8 +639,8 @@ function ajustarPosicion(posicionOriginal, anchoPantalla) {
       // Aquí puedes definir cómo mapear las posiciones para tablet
       // Por ejemplo, podrías multiplicar por un factor
       const factorTablet = 1.5; // Ajusta este valor según necesites
-      const numero = parseInt(posicionOriginal.replace('cp', ''));
-      return `cp${Math.round(numero * factorTablet)}`;
+      const numero = parseInt(posicionOriginal.replace('db', ''));
+      return `db${Math.round(numero * factorTablet)}`;
     }
     // Para pantallas más grandes (1080px+)
     else {

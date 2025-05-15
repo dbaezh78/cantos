@@ -1,33 +1,44 @@
-/*********************** 
- * FUNCIÓN AUXILIAR MEJORADA
- ***********************/
+/*********************** FUNCIÓN AUXILIAR MEJORADA ***********************/
 
-// Mapeo para celulares
+// Mapeo para celulares 483px
 const pcelular = {
-      'cp2': 'cp3',
-      'cp10': 'cp15',
-      'cp14': 'cp21',
-      'cp70': 'cp90',
-      'cp99': 'cp149'
+      /*
+     'cp34': 'cp30',
+     'cp47': 'cp43',
+     'cp64': 'cp57',
+     'cp68': 'cp61',
+     'cp72': 'cp63',
+     'cp74': 'cp66',
+     'cp82': 'cp73',
+     'cp81': 'cp72',
+     'cp89': 'cp80',
+     'cp90': 'cp80',
+     'cp94': 'cp83',
+     'cp98': 'cp87',
+     'cp91': 'cp81',*/
     };
 
 
-     /*
-     
-     /* 6* [ac("Fa", "cp38", "")],
-     /* 7* [ac("Mi", "cp54", "")],
-     
-     /* 8* [ac("Re", "cp2", "m"), ac("Mi", "cp43", "")],
-     /* 9* [ac("Re", "cp2", "m"), ac("Mi", "cp27", "")],
-     /* 10/ [ac("Re", "cp11", "m"), ac("Mi", "cp49", "")],
-     /* 11/ [ac("Fa", "cp35", "")],
-     /* 12/ [ac("Mi", "cp36", "")], 
-     */
-                  // DERECHA
 // Mapeo específico para tablets (800px)
+
+        // 1 [ac("La", "cp2", "m"), ac("Re", "cp70", "m")],
+        // 2 [ac("Mi", "cp10", ""), ac("La", "cp71", "m")],
+        // 3 [ac("Re", "cp2", "m"), ac("Mi", "cp46", "")],
+        // 4 [ac("Re", "cp2", "m"), ac("Mi", "cp61", "")],
+        // 5 [ac("Fa", "cp23", ""), ac("Mi", "cp65", "")],
+        // 6 [ac("Fa", "cp38", "")],
+        // 7 [ac("Mi", "cp54", "")],
+
+      //  --cp1: 0.1%;
+      //  --cp18: 1.8%;
+      //  --cp486: 48.6%;
+      //  --cp1547: 154.7%;
+
+
 const pTablet = {
-      'cp1': 'cp2',     
-      'cp2': 'cp2',
+      /*
+      'cp1': 'cp0',     
+      'cp2': 'cp1',
       'cp3': 'cp4',
       'cp4': 'cp6',
       'cp5': 'cp8',
@@ -58,7 +69,7 @@ const pTablet = {
       'cp68': 'cp102',
       'cp69': 'cp104',
       'cp70': 'cp68',
-      'cp71': 'cp68',
+      'cp71': 'cp69',
       'cp74': 'cp111',
       'cp75': 'cp113',
       'cp77': 'cp116',
@@ -69,7 +80,8 @@ const pTablet = {
       'cp91': 'cp137',
       'cp94': 'cp141',
       'cp98': 'cp147',
-      'cp99': 'cp149'
+      'cp99': 'cp149',
+      */
     };
     
     function ac(nota, posicion, extension = "") {
@@ -83,7 +95,7 @@ const pTablet = {
         // Si no está en el mapeo, aplicamos un factor general más preciso
         if (!pTablet[posicion]) {
           const numero = parseInt(posicion.replace('cp', ''));
-          const factor = 1.47; // Factor más preciso para 800px
+          const factor = 0.971; // Factor más preciso para 800px
           posicionAjustada = `cp${Math.round(numero * factor)}`;
         }
       }
@@ -95,7 +107,7 @@ const pTablet = {
             // Si no está en el mapeo, aplicamos un factor general más preciso
             if (!pcelular[posicion]) {
               const numero = parseInt(posicion.replace('cp', ''));
-              const factor = 1.47; // Factor más preciso para 800px
+              const factor = 1.3; // Factor más preciso para 384px
               posicionAjustada = `cp${Math.round(numero * factor)}`;
             }
           }
@@ -148,38 +160,38 @@ const pTablet = {
     
       // Estructura para Cantor (acordes) - CON FUNCIÓN ac()
       cantorAcordes: [
-            // IZQUIERDA
-        /* 1*/ [ac("La", "cp2", "m"), ac("Re", "cp70", "m")],
-        /* 2*/ [ac("Mi", "cp10", ""), ac("La", "cp71", "m")],
-        /* 3*/ [ac("Re", "cp2", "m"), ac("Mi", "cp46", "")],
-        /* 4*/ [ac("Re", "cp2", "m"), ac("Mi", "cp61", "")],
-        /* 5*/ [ac("Fa", "cp23", ""), ac("Mi", "cp65", "")],
-        /* 6*/ [ac("Fa", "cp38", "")],
-        /* 7*/ [ac("Mi", "cp54", "")],
+// IZQUIERDA
+        /* 1*/ [ac("La", "cp18", "m"), ac("Re", "cp696", "m")],
+        /* 2*/ [ac("Mi", "cp76", ""),  ac("La", "cp710", "m")],
+        /* 3*/ [ac("Re", "cp18", "m"), ac("Mi", "cp464", "")],
+        /* 4*/ [ac("Re", "cp18", "m"), ac("Mi", "cp612", "")],
+        /* 5*/ [ac("Fa", "cp23", ""),  ac("Mi", "cp646", "")],
+        /* 6*/ [ac("Fa", "cp388", "")],
+        /* 7*/ [ac("Mi", "cp544", "")],
         
-        /* 8*/ [ac("Re", "cp2", "m"), ac("Mi", "cp43", "")],
-        /* 9*/ [ac("Re", "cp2", "m"), ac("Mi", "cp27", "")],
-        /* 10*/ [ac("Re", "cp11", "m"), ac("Mi", "cp49", "")],
-        /* 11*/ [ac("Fa", "cp35", "")],
-        /* 12*/ [ac("Mi", "cp36", "")],
-                  // DERECHA
-        /* 13*/ [ac("La", "cp2", "7"), ac("Re", "cp94", "m")],
-        /* 14*/ [ac("Mi", "cp72", "")],
-        /* 15*/ [ac("Re", "cp2", "m"), ac("Mi", "cp90", "")],
-        /* 16*/ [ac("Re", "cp2", "m"), ac("Mi", "cp98", "")],
-        /* 17*/ [ac("Fa", "cp82", "")],
-        /* 18*/ [ac("Mi", "cp47", "")],
-        /* 19*/ [ac("Re", "cp3", "m"), ac("Mi", "cp74", "")],
+        /* 8*/ [ac("Re", "cp18", "m"),  ac("Mi", "cp434", "")],
+        /* 9*/ [ac("Re", "cp18", "m"),  ac("Mi", "cp274", "")],
+        /* 10*/ [ac("Re", "cp11", "m"), ac("Mi", "cp500", "")],
+        /* 11*/ [ac("Fa", "cp348", "")],
+        /* 12*/ [ac("Mi", "cp360", "")],
+// DERECHA
+        /* 13*/ [ac("La", "cp18", "7"), ac("Re", "cp676", "m")],
+        /* 14*/ [ac("Mi", "cp516", "")],
+        /* 15*/ [ac("Re", "cp18", "m"), ac("Mi", "cp646", "")],
+        /* 16*/ [ac("Re", "cp18", "m"), ac("Mi", "cp700", "")],
+        /* 17*/ [ac("Fa", "cp584", "")],
+        /* 18*/ [ac("Mi", "cp340", "")],
+        /* 19*/ [ac("Re", "cp18", "m"), ac("Mi", "cp532", "")],
 
-        /* 20*/ [ac("La", "cp2", "7"), ac("Re", "cp74", "m")],
-        /* 21*/ [ac("Mi", "cp68", "")],
-        /* 22*/ [ac("Re", "cp2", "m"), ac("Mi", "cp91", "")],
-        /* 23*/ [ac("Re", "cp2", "m"), ac("Mi", "cp98", "")],
-        /* 24*/ [ac("Fa", "cp81", "")],
-        /* 25*/ [ac("Mi", "cp47", "")],
+        /* 20*/ [ac("La", "cp18", "7"), ac("Re", "cp534", "m")],
+        /* 21*/ [ac("Mi", "cp484", "")],
+        /* 22*/ [ac("Re", "cp18", "m"), ac("Mi", "cp650", "")],
+        /* 23*/ [ac("Re", "cp18", "m"), ac("Mi", "cp710", "")],
+        /* 24*/ [ac("Fa", "cp582", "")],
+        /* 25*/ [ac("Mi", "cp340", "")],
 
-        /* 26*/ [ac("Re", "cp2", "m"), ac("Mi", "cp64", "")],
-        /* 27*/ [ac("Fa", "cp34", ""), ac("Mi", "cp89", "")],
+        /* 26*/ [ac("Re", "cp18", "m"), ac("Mi", "cp458", "")],
+        /* 27*/ [ac("Fa", "cp238", ""), ac("Mi", "cp640", "")],
       ],
     
       // Estructura para Asamblea (texto)
@@ -207,26 +219,29 @@ const pTablet = {
       ],
     
       asambleaAcordes: [
-        /* 1*/ [ac("La", "cp2", "m")],
-        /* 2*/ [ac("Re", "cp31", "m")],
-        /* 3*/ [ac("Mi", "cp10", "")],
-        /* 4*/ [ac("La", "cp25", "m")],
-        /* 5*/ [ac("Re", "cp2", "m"), ac("Mi", "cp54", "")],
-        /* 6*/ [ac("La", "cp2", "m")],
-        /* 7*/ [ac("Re", "cp31", "m")],
-        /* 8*/ [ac("Mi", "cp10", "")],
-        /* 9*/ [ac("La", "cp25", "m")],
-        /* 10*/ [ac("Re", "cp2", "m"), ac("Mi", "cp54", "")],
-        /* 11*/ [ac("La", "cp2", "m")],
-        /* 12*/ [ac("Re", "cp31", "m")],
-        /* 13*/ [ac("Mi", "cp10", "")],
-        /* 14*/ [ac("La", "cp25", "m")],
-        /* 15*/ [ac("Re", "cp2", "m"), ac("Mi", "cp54", "")],
-        /* 16*/ [ac("La", "cp2", "m")],
-        /* 17*/ [ac("Re", "cp31", "m")],
-        /* 18*/ [ac("Mi", "cp10", "")],
-        /* 19*/ [ac("La", "cp25", "m")],
-        /* 20*/ [ac("Re", "cp2", "m"), ac("Mi", "cp54", "")],
+        /* 1*/  [ac("La", "cp16", "m")],
+        /* 2*/  [ac("Re", "cp316", "m")],
+        /* 3*/  [ac("Mi", "cp104", "")],
+        /* 4*/  [ac("La", "cp250", "m")],
+        /* 5*/  [ac("Re", "cp16", "m"), ac("Mi", "cp546", "")],
+
+        /* 6*/  [ac("La", "cp16", "m")],
+        /* 7*/  [ac("Re", "cp316", "m")],
+        /* 8*/  [ac("Mi", "cp104", "")],
+        /* 9*/  [ac("La", "cp250", "m")],
+        /* 10*/ [ac("Re", "cp16", "m"), ac("Mi", "cp546", "")],
+
+        /* 11*/ [ac("La", "cp16", "m")],
+        /* 12*/ [ac("Re", "cp316", "m")],
+        /* 13*/ [ac("Mi", "cp104", "")],
+        /* 14*/ [ac("La", "cp250", "m")],
+        /* 15*/ [ac("Re", "cp16", "m"), ac("Mi", "cp546", "")],
+
+        /* 16*/ [ac("La", "cp16", "m")],
+        /* 17*/ [ac("Re", "cp316", "m")],
+        /* 18*/ [ac("Mi", "cp104", "")],
+        /* 19*/ [ac("La", "cp250", "m")],
+        /* 20*/ [ac("Re", "cp16", "m"), ac("Mi", "cp546", "")],
       ]
     };
     

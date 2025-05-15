@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link type=text/css rel=stylesheet href="/cantos/resucito/acorde/src/estilos.css" >
-    <link type=text/css rel=stylesheet href="/cantos/resucito/acorde/cssCantos/anadiedemosocasiondetropiezo.css" >
+    <link type=text/css rel=stylesheet href="/cantos/resucito/acorde/cssCantos/canto.css" >
     
     <!--<meta http-equiv="refresh" content="1">    -->
 
@@ -19,6 +19,14 @@
    
     <!-- ABRIENDO DE CONTENEDOR DE TABLA -->
     <div class="contenedor-tabla">
+
+                <!-- SECCION DEL REPRODUCTOR-->
+                <div id="reproductor-audio">
+                    <audio class="saudio" controls controlslist="download" preload="metadata" loop>
+                        <source src="/audio/anadiedemosocasiondetropiezo.mp3" type="audio/mpeg">
+                    </audio>
+                </div>       
+        
         
         <table class="dbtable">
             <tr>
@@ -63,8 +71,8 @@
 <!-- A2 - Fila 3: Encabezado de 6 columnas -->
         <tr class="encabezado-columnas odb">
                 
-            <th class="precat">PreCatecumenado</th>
-                
+             <th class="precat">PreCatecumenado</th>
+            
             <th>    <select class="dbMiTraste" data-default=" "></select> <!-- Grado ° -->
             </th>
                 
@@ -252,12 +260,12 @@
     <div class="notas-columna">
 
         <!-- CONTENIDO DE LAS NOTAS DEL CANTO-->
-        <a href="#" class="notas-enlace" onclick="mostrarImagen('/cantos/src/ima/rem9.jpg'); return false;">Rem9</a>
-        <a href="#" class="notas-enlace" onclick="mostrarImagen('/cantos/src/ima/mi.jpg'); return false;">Mi</a>
-        <a href="#" class="notas-enlace" onclick="mostrarImagen('/cantos/src/ima/fa.jpg'); return false;">Fa</a>
-        <a href="#" class="notas-enlace" onclick="mostrarImagen('/cantos/src/ima/famaj7.jpg'); return false;">Famaj7</a>
-        <a href="#" class="notas-enlace" onclick="mostrarImagen('/cantos/src/ima/La7.jpg'); return false;">La7</a>
-        <a href="#" class="notas-enlace" onclick="mostrarImagen('/cantos/src/ima/Lam.jpg'); return false;">Lam</a>
+        <a href="#" class="notas-enlace" onclick="mostrarImagen('/cantos/src/ima/rem9.jpg'); return false;">RE<em>m</em>9</a>
+        <a href="#" class="notas-enlace" onclick="mostrarImagen('/cantos/src/ima/mi.jpg'); return false;">MI</a>
+        <a href="#" class="notas-enlace" onclick="mostrarImagen('/cantos/src/ima/fa.jpg'); return false;">FA</a>
+        <a href="#" class="notas-enlace" onclick="mostrarImagen('/cantos/src/ima/famaj7.jpg'); return false;">FA<em>maj</em>7</a>
+        <a href="#" class="notas-enlace" onclick="mostrarImagen('/cantos/src/ima/La7.jpg'); return false;">LA7</a>
+        <a href="#" class="notas-enlace" onclick="mostrarImagen('/cantos/src/ima/Lam.jpg'); return false;">LA<em>m</em></a>
 
     </div>
 
@@ -267,12 +275,6 @@
             </tr>
         </table>
 
-        <!-- SECCION DEL REPRODUCTOR-->
-        <div id="reproductor-audio">
-            <audio class="saudio" controls controlslist="download" preload="metadata" loop>
-                <source src="/audio/anadiedemosocasiondetropiezo.mp3" type="audio/mpeg">
-            </audio>
-        </div>       
 
         <!-- SECCION DE LA IMAGEN SELECCIONADA-->
         <div id="imagen-container">
