@@ -97,30 +97,6 @@ Yo os he mandado a segar(Franklin Gothic Medium)
           @media (min-width: 1920px) {font-size: 1rem;} /* FHD(2K/4K) */
         }
   
-        .chord {
-          background: none;
-          border: none;
-          appearance: none;
-          font-weight: bold;
-          color: red;
-          position: relative;
-          padding: 0;
-          margin: 0;
-          text-align: right;
-          font-size: 1rem;
-          margin-top: -3px;
-  
-          @media (min-width: 384px) {font-size: 1rem;}
-          @media (min-width: 412px) {font-size: 1rem;}
-          @media (min-width: 576px) {font-size: 1rem;}
-          @media (min-width: 768px) {font-size: 1.3rem;}
-          @media (min-width: 992px) {font-size: 1rem;}
-          @media (min-width: 1200px) {font-size: 1rem;} /* HD (1080p) */
-          @media (min-width: 1920px) {font-size: 1rem;} /* FHD(2K/4K) */
-      }
-  
-
-
       /* Clase renombrada a .mso */
       .mso {
         font-family: 'Material Symbols Outlined Local';
@@ -167,6 +143,28 @@ Yo os he mandado a segar(Franklin Gothic Medium)
         cursor: pointer;
         display: inline-block;
       }
+
+      .chord {
+        background: none;
+        border: none;
+        appearance: none;
+        font-weight: bold;
+        color: red;
+        position: relative;
+        padding: 0;
+        margin: 0;
+        text-align: right;
+        font-size: 1rem;
+        margin-top: -3px;
+
+        @media (min-width: 384px) {font-size: 1rem;}
+        @media (min-width: 412px) {font-size: 1rem;}
+        @media (min-width: 576px) {font-size: 1rem;}
+        @media (min-width: 768px) {font-size: 1.3rem;}
+        @media (min-width: 992px) {font-size: 1rem;}
+        @media (min-width: 1200px) {font-size: 1rem;} /* HD (1080p) */
+        @media (min-width: 1920px) {font-size: 1rem;} /* FHD(2K/4K) */
+    }
 
       .chords {
         position: absolute;
@@ -508,8 +506,33 @@ Yo os he mandado a segar(Franklin Gothic Medium)
             color: white;
           }
 
-        /* Efecto al pasar el mouse - solo elevación */
-    .precat:hover, .liturgia:hover, .cat:hover, .eleccion:hover 
+          .fup {
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        
+        .fup:hover {
+            animation: rebote 2.5s cubic-bezier(0.5, 0.05, 0.5, 1.5) 10; /* ¡10 repeticiones! */
+            transform-origin: bottom;
+        }
+        
+        @keyframes rebote {
+            0%, 100% { transform: translateY(0) scale(1, 1); }
+            /* Primer rebote (alto) */
+            10% { transform: translateY(-15px) scale(1.1, 0.9); }
+            20% { transform: translateY(0) scale(0.9, 1.1); }
+            /* Rebotes posteriores (altura decreciente) */
+            30% { transform: translateY(-10px) scale(1.05, 0.95); }
+            40% { transform: translateY(0) scale(0.95, 1.05); }
+            50% { transform: translateY(-7px) scale(1.03, 0.97); }
+            60% { transform: translateY(0) scale(0.97, 1.03); }
+            70% { transform: translateY(-5px) scale(1.02, 0.98); }
+            80% { transform: translateY(0) scale(0.98, 1.02); }
+            90% { transform: translateY(-2px) scale(1.01, 0.99); }
+        }        /* Efecto al pasar el mouse - solo elevación */
+
+
+    .precat:hover, .liturgia:hover, .cat:hover, .eleccion:hover
         {
             box-shadow: 0 4px 8px rgba(0,0,0,60.00); /* Sombra más pronunciada */
             transform: translateY(-1px); /* Movimiento sutil hacia arriba */
@@ -536,7 +559,7 @@ Yo os he mandado a segar(Franklin Gothic Medium)
             margin: 0px;
         }
 
-        .ppascua {color: #3dcef0;}
+        .ppascua {color: rgb(33 150 243);}
         .ppenteco {color: #f0433d;}
         .plaudes {color: rgb(56, 162, 6);}
         .pcuaresma {color: purple;}
@@ -711,7 +734,7 @@ Yo os he mandado a segar(Franklin Gothic Medium)
 
 /*  MSO1*/
 
-.mso1 {
+.mso1, .mso2 {
   font-family: 'Material Symbols Outlined Local';
   font-weight: normal;
   font-style: normal;
@@ -730,6 +753,12 @@ Yo os he mandado a segar(Franklin Gothic Medium)
   cursor: pointer;
   font-size: 20px;
 }
+
+.mso2 {
+  border: 0px solid goldenrod;
+  border-radius: 0em;
+}
+
 
 /* MOSTRAR IMAGENES */
 
@@ -897,11 +926,11 @@ Yo os he mandado a segar(Franklin Gothic Medium)
   color: red;
 }
 
+
 .fleft, .fright {
   color: red;
   transition: transform 0.3s;
 }
-
 
 .fleft {float: left;}
 .fright {float: right;}
