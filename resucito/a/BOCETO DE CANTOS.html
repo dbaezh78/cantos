@@ -7,15 +7,9 @@
     <link rel="icon" href="/cantos/src/ico.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<!--
-<link type=text/css rel=stylesheet href="/cantos/src/css/dbCSS.css" >
-<link type=text/css rel=stylesheet href="/cantos/src/css/cssc/dbcssCantos.css" >
--->    
-<link type=text/css rel=stylesheet href="/cantos/src/css/dbCSS.css" >
-<link type=text/css rel=stylesheet href="/cantos/src/css/cssc/dbcssCantos.css" >
-<link type=text/css rel=stylesheet href="/cantos/src/css/cssc/alacenadelcordero.css" >
-
-    
+    <link type=text/css rel=stylesheet href="/cantos/src/css/dbCSS.css" >
+    <link type=text/css rel=stylesheet href="/cantos/src/css/cssc/dbcssCantos.css" >
+        
     <!--<meta http-equiv="refresh" content="1">    -->
 
   <title id="tc"></title>
@@ -29,7 +23,7 @@
                 <!-- SECCION DEL REPRODUCTOR-->
                 <div id="reproductor-audio">
                     <audio class="saudio" controls controlslist="download" preload="metadata" loop>
-                        <source src="/audio/alacenadelcordero.mp3" type="audio/mpeg">
+                        <source src="/audio/alavictimapascual.mp3" type="audio/mpeg">
                     </audio>
                 </div>       
         
@@ -77,7 +71,7 @@
 <!-- A2 - Fila 3: Encabezado de 6 columnas -->
         <tr class="encabezado-columnas odb">
                 
-             <th class="eleccion">ELECCIÓN</th>
+             <th class="precat">PreCatecumenado</th>
             
             <th>    <select class="dbMiTraste" data-default=" "></select> <!-- Grado ° -->
             </th>
@@ -98,11 +92,10 @@
         </tr>
 <!-- A2 - Fila 3: Encabezado de 6 columnas CIERRE-->
 
-
-
-
 <!-- A3 Fila 4 TODO EL CANTO -->
-        <tr class="eleccion"><td colspan="6" style="padding: 22px 0 0 0;">
+
+        <tr>
+            <td colspan="6" style="padding: 22px 0 0 0;">
                 <div class="contenedordecolumnas" id="contenedorColumnas">
 
 <!-- A4 - Grupo Izquierdo -->
@@ -227,15 +220,14 @@
                         <!-- Columna 1 -->
                         <div style="float: left;"><a href="#">
                             <p class="fup mso2" href="#">north</p>
-                            <p class="dh piecategoria">PreCatecumenado</p>
-                            <p class="piecategoria">ELECCIÓN</p>
+                            <p class="piecategoria">PreCatecumenado</p>
                             <p class="dh piecategoria pentrada">Entrada</p>
                             <p class="dh piecategoria pcuaresma">Cuaresma</p>
                             <p class="piecategoria ppascua">Pascua</p>
                             <p class="dh piecategoria padviento">Adviento</p>
                             <p class="piecategoria ppenteco">Pentecostés</p>
-                            <p class="dh piecategoria">Comunión</p>
-                            <p class="piecategoria plaudes">Laudes</p>
+                            <p class="piecategoria">Comunión</p>
+                            <p class="dh piecategoria plaudes">Laudes</p>
                             <p class="dh piecategoria salida">Salida</p>
                             <p class="dh piecategoria ppenit">Penitencial</p></a>
 
@@ -272,8 +264,10 @@
 
         <!-- CERRANDO DE CONTENEDOR DE TABLA -->
     </div>
-  
+<!--    SCRIPT DEFINITIVO CUANDO SE HALLA COMPLETADO EL CANTO
 <script src="/cantos/src/js/dbMainJS.js"></script>
-<script src="/cantos/resucito/cjs/alacenadelcordero.js"></script>
+    -->  
+<script src="/cantos/resucito/acorde/src/mainjs.js"></script>
+<script src="/cantos/resucito/cjs/NOMBREDELCANTO.js"></script>
 </body>
 </html>

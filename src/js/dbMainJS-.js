@@ -12,6 +12,13 @@ let scrollInterval = null;
  * FUNCIONES DE ACORDES
  ***********************/
 function generarOpciones(defaultValue = "") {
+    // Si el valor por defecto está vacío, agregamos una opción vacía seleccionada
+    if (defaultValue === "") {
+        return `<option value="" selected></option>` + 
+               acordes.map(acorde => `<option value="${acorde}">${acorde}</option>`).join('');
+    }
+    
+    // Caso normal con valor por defecto
     return acordes.map(acorde => 
         `<option value="${acorde}"${acorde === defaultValue ? ' selected' : ''}>${acorde}</option>`
     ).join('');
@@ -19,26 +26,37 @@ function generarOpciones(defaultValue = "") {
 
 function configurarSelectores() {
     document.querySelectorAll('.chord').forEach(select => {
-        select.innerHTML = generarOpciones(select.dataset.default);
+        // Usamos empty string si dataset.default no está definido
+        const defaultValue = select.dataset.default || "";
+        select.innerHTML = generarOpciones(defaultValue);
     });
 }
 
 function obtenerIndiceAcorde(acorde) {
-    return acordes.indexOf(acorde);
+    // Devuelve -1 para acordes vacíos
+    return acorde === "" ? -1 : acordes.indexOf(acorde);
 }
 
 function calcularAcordeDesplazado(acorde, desplazamiento) {
     const indiceActual = obtenerIndiceAcorde(acorde);
+    // Mantiene el valor vacío si el acorde original estaba vacío
     return indiceActual === -1 ? acorde : acordes[(indiceActual + desplazamiento + acordes.length) % acordes.length];
 }
 
 function configurarEventosAcordes() {
     document.querySelectorAll('.chord').forEach(select => {
         select.addEventListener('change', function() {
-            const desplazamiento = obtenerIndiceAcorde(this.value) - obtenerIndiceAcorde(this.dataset.default || "");
+            const defaultAcorde = this.dataset.default || "";
+            const currentAcorde = this.value;
+            
+            // Solo calcular desplazamiento si ambos acordes no están vacíos
+            const desplazamiento = (defaultAcorde && currentAcorde) 
+                ? obtenerIndiceAcorde(currentAcorde) - obtenerIndiceAcorde(defaultAcorde)
+                : 0;
             
             document.querySelectorAll('.chord').forEach(otroSelect => {
-                otroSelect.value = calcularAcordeDesplazado(otroSelect.dataset.default || "", desplazamiento);
+                const otroDefault = otroSelect.dataset.default || "";
+                otroSelect.value = calcularAcordeDesplazado(otroDefault, desplazamiento);
             });
         });
     });
@@ -49,6 +67,9 @@ function renderizarAcordes(contenedor, acordesData) {
     divAcordes.className = 'chords';
     
     acordesData.forEach(acorde => {
+        // Verificamos si el acorde está vacío
+        const acordeValido = acorde.acorde && acorde.acorde.trim() !== "";
+        
         const grupo = document.createElement('div');
         grupo.className = 'chord-container';
         grupo.classList.add(acorde.posicion);
@@ -56,8 +77,9 @@ function renderizarAcordes(contenedor, acordesData) {
         const select = document.createElement('select');
         select.className = 'chord no-arrow';
         select.name = 'nMusic';
-        select.dataset.default = acorde.base;
-        select.innerHTML = generarOpciones(acorde.base);
+        // Usamos empty string si el acorde base está vacío
+        select.dataset.default = acordeValido ? acorde.base : "";
+        select.innerHTML = generarOpciones(select.dataset.default);
         
         grupo.appendChild(select);
         
@@ -492,145 +514,6 @@ document.addEventListener('DOMContentLoaded', function() {
     TOGGLE VISIBILITY - SOLUCIÓN CORRECTA
 ******************************************/
 
-
-
-
-//****************************************************************
-//************************* MOVER ACORDES ************************
-//****************************************************************
-// Modifica estas funciones en tu JS:
-
-// Variables globales
-let acordeSeleccionado = null;
-let posicionInicialX = 0;
-let posicionInicialLeft = 0;
-let indicadorPosicion = null;
-
-// Crear indicador de posición
-function crearIndicador() {
-    indicadorPosicion = document.createElement('div');
-    indicadorPosicion.id = 'indicador-posicion';
-    indicadorPosicion.style.position = 'fixed';
-    indicadorPosicion.style.bottom = '10px';
-    indicadorPosicion.style.left = '10px';
-    indicadorPosicion.style.background = 'rgba(0,0,0,0.7)';
-    indicadorPosicion.style.color = 'white';
-    indicadorPosicion.style.padding = '5px 10px';
-    indicadorPosicion.style.borderRadius = '3px';
-    indicadorPosicion.style.zIndex = '10000';
-    document.body.appendChild(indicadorPosicion);
-}
-
-// Habilitar arrastre para todos los dispositivos
-function habilitarArrastreAcordes() {
-    const acordes = document.querySelectorAll('.chord-container');
-    
-    acordes.forEach(acorde => {
-        acorde.addEventListener('mousedown', iniciarArrastre);
-        acorde.addEventListener('touchstart', iniciarArrastreTouch, { passive: false });
-    });
-}
-
-// Iniciar arrastre (mouse)
-function iniciarArrastre(e) {
-    e.preventDefault();
-    configurarArrastre(e.clientX, this);
-}
-
-// Iniciar arrastre (touch)
-function iniciarArrastreTouch(e) {
-    e.preventDefault();
-    if (e.touches.length === 1) {
-        configurarArrastre(e.touches[0].clientX, e.target.closest('.chord-container'));
-    }
-}
-
-// Configuración común para ambos tipos de eventos
-function configurarArrastre(clientX, acorde) {
-    acordeSeleccionado = acorde;
-    posicionInicialX = clientX;
-    
-    // Obtener posición real considerando el transform
-    const rect = acorde.getBoundingClientRect();
-    const parentRect = acorde.parentElement.getBoundingClientRect();
-    posicionInicialLeft = ((rect.left + rect.width/2 - parentRect.left) / parentRect.width) * 100;
-    
-    document.addEventListener('mousemove', arrastrarAcorde);
-    document.addEventListener('mouseup', soltarAcorde);
-    document.addEventListener('touchmove', arrastrarAcordeTouch, { passive: false });
-    document.addEventListener('touchend', soltarAcorde);
-    
-    actualizarIndicador(posicionInicialLeft);
-}
-
-// Arrastrar (mouse)
-function arrastrarAcorde(e) {
-    if (!acordeSeleccionado) return;
-    e.preventDefault();
-    calcularNuevaPosicion(e.clientX);
-}
-
-// Arrastrar (touch)
-function arrastrarAcordeTouch(e) {
-    if (!acordeSeleccionado || e.touches.length !== 1) return;
-    e.preventDefault();
-    calcularNuevaPosicion(e.touches[0].clientX);
-}
-
-// Cálculo común de posición
-function calcularNuevaPosicion(clientX) {
-    const desplazamientoX = clientX - posicionInicialX;
-    const parentRect = acordeSeleccionado.parentElement.getBoundingClientRect();
-    const desplazamientoPorcentaje = (desplazamientoX / parentRect.width) * 100;
-    const nuevoLeft = posicionInicialLeft + desplazamientoPorcentaje;
-    const posicionFinal = Math.max(0, Math.min(100, nuevoLeft));
-    
-    acordeSeleccionado.style.left = `${posicionFinal}%`;
-    actualizarIndicador(posicionFinal);
-}
-
-// Finalizar arrastre
-function soltarAcorde() {
-    if (!acordeSeleccionado) return;
-    
-    document.removeEventListener('mousemove', arrastrarAcorde);
-    document.removeEventListener('mouseup', soltarAcorde);
-    document.removeEventListener('touchmove', arrastrarAcordeTouch);
-    document.removeEventListener('touchend', soltarAcorde);
-    
-    acordeSeleccionado = null;
-}
-
-// Obtener posición de las clases CSS
-function obtenerValorDeClasePosicion(elemento) {
-    const clasePosicion = Array.from(elemento.classList).find(cls => cls.startsWith('cp'));
-    return clasePosicion ? parseInt(clasePosicion.replace('cp', '')) : 50; // 50% por defecto por el transform
-}
-
-// Actualizar indicador visual
-function actualizarIndicador(posicion) {
-    if (!indicadorPosicion) crearIndicador();
-    indicadorPosicion.textContent = `Posición: ${posicion.toFixed(1)}%`;
-}
-
-// Inicialización
-document.addEventListener('DOMContentLoaded', () => {
-    setTimeout(() => {
-        habilitarArrastreAcordes();
-        crearIndicador();
-    }, 500);
-});
-
-//****************************************************************
-//************************* MOVER ACORDES ************************
-//****************************************************************
-
-
-//****************************************************************
-//************************* MOVER ACORDES ************************
-//****************************************************************
-
-
 //****************************************************************
 //*************** AJUSTE DE ACORDES A 800px TABLE ****************
 //****************************************************************
@@ -665,142 +548,3 @@ function ajustarPosicion(posicionOriginal, anchoPantalla) {
  ***********************/
 document.addEventListener('DOMContentLoaded', inicializarAplicacion);
 
-
-
-
-
-
-
-
-
-
-
-/* Guardar Codigo cambiado*/
-/*
-
-
-// Variables globales
-let acordeSeleccionado = null;
-let posicionInicialX = 0;
-let posicionInicialLeft = 0;
-let indicadorPosicion = null;
-
-// Crear indicador de posición (sin estilos intrusivos)
-function crearIndicador() {
-    indicadorPosicion = document.createElement('div');
-    indicadorPosicion.id = 'indicador-posicion';
-    indicadorPosicion.style.position = 'fixed';
-    indicadorPosicion.style.bottom = '10px';
-    indicadorPosicion.style.left = '10px';
-    indicadorPosicion.style.background = 'rgba(0,0,0,0.7)';
-    indicadorPosicion.style.color = 'white';
-    indicadorPosicion.style.padding = '5px 10px';
-    indicadorPosicion.style.borderRadius = '3px';
-    indicadorPosicion.style.zIndex = '10000';
-    document.body.appendChild(indicadorPosicion);
-}
-
-// Habilitar arrastre para todos los dispositivos
-function habilitarArrastreAcordes() {
-    const acordes = document.querySelectorAll('.chord-container');
-    
-    acordes.forEach(acorde => {
-        // Para mouse
-        acorde.addEventListener('mousedown', iniciarArrastre);
-        // Para pantallas táctiles
-        acorde.addEventListener('touchstart', iniciarArrastreTouch, { passive: false });
-    });
-}
-
-// Iniciar arrastre (mouse)
-function iniciarArrastre(e) {
-    e.preventDefault();
-    configurarArrastre(e.clientX, this);
-}
-
-// Iniciar arrastre (touch)
-function iniciarArrastreTouch(e) {
-    e.preventDefault();
-    if (e.touches.length === 1) {
-        configurarArrastre(e.touches[0].clientX, e.target.closest('.chord-container'));
-    }
-}
-
-// Configuración común para ambos tipos de eventos
-function configurarArrastre(clientX, acorde) {
-    acordeSeleccionado = acorde;
-    posicionInicialX = clientX;
-    posicionInicialLeft = parseInt(acorde.style.left) || obtenerValorDeClasePosicion(acorde);
-    
-    // Eventos para mouse
-    document.addEventListener('mousemove', arrastrarAcorde);
-    document.addEventListener('mouseup', soltarAcorde);
-    
-    // Eventos para touch
-    document.addEventListener('touchmove', arrastrarAcordeTouch, { passive: false });
-    document.addEventListener('touchend', soltarAcorde);
-    
-    actualizarIndicador(posicionInicialLeft);
-}
-
-// Arrastrar (mouse)
-function arrastrarAcorde(e) {
-    if (!acordeSeleccionado) return;
-    e.preventDefault();
-    calcularNuevaPosicion(e.clientX);
-}
-
-// Arrastrar (touch)
-function arrastrarAcordeTouch(e) {
-    if (!acordeSeleccionado || e.touches.length !== 1) return;
-    e.preventDefault();
-    calcularNuevaPosicion(e.touches[0].clientX);
-}
-
-// Cálculo común de posición
-function calcularNuevaPosicion(clientX) {
-    const desplazamientoX = clientX - posicionInicialX;
-    const anchoContenedor = acordeSeleccionado.parentElement.offsetWidth;
-    const nuevoLeft = posicionInicialLeft + (desplazamientoX / anchoContenedor * 100);
-    const posicionFinal = Math.max(0, Math.min(100, nuevoLeft));
-    
-    acordeSeleccionado.style.left = `${posicionFinal}%`;
-    actualizarIndicador(posicionFinal);
-}
-
-// Finalizar arrastre
-function soltarAcorde() {
-    if (!acordeSeleccionado) return;
-    
-    // Limpiar eventos mouse
-    document.removeEventListener('mousemove', arrastrarAcorde);
-    document.removeEventListener('mouseup', soltarAcorde);
-    
-    // Limpiar eventos touch
-    document.removeEventListener('touchmove', arrastrarAcordeTouch);
-    document.removeEventListener('touchend', soltarAcorde);
-    
-    acordeSeleccionado = null;
-}
-
-// Obtener posición de las clases CSS
-function obtenerValorDeClasePosicion(elemento) {
-    const clasePosicion = Array.from(elemento.classList).find(cls => cls.startsWith('cp'));
-    return clasePosicion ? parseInt(clasePosicion.replace('cp', '')) : 0;
-}
-
-// Actualizar indicador visual
-function actualizarIndicador(posicion) {
-    if (!indicadorPosicion) crearIndicador();
-    indicadorPosicion.textContent = `Posición: ${posicion.toFixed(1)}%`;
-}
-
-// Inicialización
-document.addEventListener('DOMContentLoaded', () => {
-    setTimeout(() => {
-        habilitarArrastreAcordes();
-        crearIndicador();
-    }, 500);
-});
-
-*/

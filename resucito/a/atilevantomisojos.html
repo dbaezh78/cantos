@@ -7,15 +7,10 @@
     <link rel="icon" href="/cantos/src/ico.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<!--
-<link type=text/css rel=stylesheet href="/cantos/src/css/dbCSS.css" >
-<link type=text/css rel=stylesheet href="/cantos/src/css/cssc/dbcssCantos.css" >
--->    
-<link type=text/css rel=stylesheet href="/cantos/src/css/dbCSS.css" >
-<link type=text/css rel=stylesheet href="/cantos/src/css/cssc/dbcssCantos.css" >
-<link type=text/css rel=stylesheet href="/cantos/src/css/cssc/alacenadelcordero.css" >
-
-    
+    <link type=text/css rel=stylesheet href="/cantos/src/css/dbCSS.css" >
+    <link type=text/css rel=stylesheet href="/cantos/src/css/cssc/dbcssCantos.css" >
+    <link type=text/css rel=stylesheet href="/cantos/src/css/cssc/atilevantomisojos.css" >
+        
     <!--<meta http-equiv="refresh" content="1">    -->
 
   <title id="tc"></title>
@@ -29,7 +24,7 @@
                 <!-- SECCION DEL REPRODUCTOR-->
                 <div id="reproductor-audio">
                     <audio class="saudio" controls controlslist="download" preload="metadata" loop>
-                        <source src="/audio/alacenadelcordero.mp3" type="audio/mpeg">
+                        <source src="/audio/atilevantomisojos.mp3" type="audio/mpeg">
                     </audio>
                 </div>       
         
@@ -77,7 +72,7 @@
 <!-- A2 - Fila 3: Encabezado de 6 columnas -->
         <tr class="encabezado-columnas odb">
                 
-             <th class="eleccion">ELECCIÓN</th>
+             <th class="precat">PreCatecumenado</th>
             
             <th>    <select class="dbMiTraste" data-default=" "></select> <!-- Grado ° -->
             </th>
@@ -98,11 +93,10 @@
         </tr>
 <!-- A2 - Fila 3: Encabezado de 6 columnas CIERRE-->
 
-
-
-
 <!-- A3 Fila 4 TODO EL CANTO -->
-        <tr class="eleccion"><td colspan="6" style="padding: 22px 0 0 0;">
+
+        <tr>
+            <td colspan="6" style="padding: 22px 0 0 0;">
                 <div class="contenedordecolumnas" id="contenedorColumnas">
 
 <!-- A4 - Grupo Izquierdo -->
@@ -112,35 +106,48 @@
         <div class="izq">
 
 <!-- A6 - CONTENIDO DEL LADO Izquierdo -->
-            <div class="ta"></div>
-                <!-- Cantor -->
-                <div class="line"><div class="alyrics" id="a1"></div></div>
-                <div class="line"><div class="alyrics" id="a2"></div></div>
-                <div class="line"><div class="alyrics" id="a3"></div></div>
-                <div class="line"><div class="alyrics last" id="a4"></div></div>
-
+            <!-- Cantor -->
             <div class="tc"></div>
+                <div class="line"><div class="alyrics" id="a1"></div></div>
+                <div class="line"><div class="alyrics dbsp4" id="a2"></div></div>
+                
                 <div class="line"><div class="lyrics" id="c1"></div></div>
                 <div class="line"><div class="lyrics" id="c2"></div></div>
                 <div class="line"><div class="lyrics" id="c3"></div></div>
-                <div class="line"><div class="lyrics last" id="c4"></div></div>
+                <div class="line"><div class="lyrics dbsp3" id="c4"></div></div>
 
-                <div class="line"><div class="lyrics" id="c5"></div></div>
-                <div class="line"><div class="lyrics" id="c6"></div></div>
-                <div class="line"><div class="lyrics" id="c7"></div></div>
-                <div class="line"><div class="lyrics" id="c8"></div></div>
+                <div class="mujeres"></div>
+                <div class="line myh"><div class="alyrics" id="a3"></div></div>
+                <div class="hombres"></div>
+                <div class="line myh"><div class="alyrics dbsp4" id="a4"></div></div>
 
-            <!-- CONTENIDO DE LA ASAMBLEA-->
-                <div class="primer"></div>
+                <div class="mujeres"></div>
+                <div class="line myh"><div class="alyrics" id="a5"></div></div>
+                <div class="hombres"></div>
+                <div class="line myh"><div class="alyrics dbsp4" id="a6"></div></div>
+
+                <div class="mujeres"></div>
+                <div class="line myh"><div class="alyrics" id="a7"></div></div>
+                <div class="hombres"></div>
+                <div class="line myh"><div class="alyrics dbsp4" id="a8"></div></div>
+
+                <div class="mujeres"></div>
+                <div class="line myh"><div class="alyrics" id="a9"></div></div>
+                <div class="hombres"></div>
+                <div class="line myh"><div class="alyrics dbsp4" id="a10"></div></div>
+
+
+
                 <div class="ta"></div>
                 <div class="line hline bcoro">
-                <div class="line"><div class="alyrics" id="a5"></div></div></div>
-
+                    <div class="line"><div class="alyrics" id="a11"></div></div></div>
+    
                 <div class="hcoro dbhide">
-                <div class="line"><div class="alyrics" id="a6"></div></div>
-                <div class="line"><div class="alyrics" id="a7"></div></div>
-                <div class="line"><div class="alyrics" id="a8"></div></div>
+                    <div class="line"><div class="alyrics" id="a12"></div></div>
                 </div>
+    
+
+
             <!-- CONTENIDO DE LA ASAMBLEA-->
                                         
         </div>
@@ -158,49 +165,20 @@
 <!-- A8 - CONTENIDO DEL LADO DERECHO -->
 
             <!-- CONTENIDO DEL CANTOR -->
-                <div class="tc"></div>
-                <div class="line"><div class="lyrics" id="c9"></div></div>
-                <div class="line"><div class="lyrics" id="c10"></div></div>
-                <div class="line"><div class="lyrics" id="c11"></div></div>
-                <div class="line"><div class="lyrics last" id="c12"></div></div>
 
-                <div class="line"><div class="lyrics" id="c13"></div></div>
-                <div class="line"><div class="lyrics" id="c14"></div></div>
-                <div class="line"><div class="lyrics" id="c15"></div></div>
-                <div class="line"><div class="lyrics" id="c16"></div></div>
+
+            <!--    CONTENIDO NO NECESARIO
+    <div class="tc"></div>
+    <div class="line"><div class="lyrics" id="c16"></div></div>
+    
+    -->
 
             <!-- CONTENIDO DEL CANTOR -->
 
 
-            <!-- CONTENIDO DE LA ASAMBLEA-->
-                <div class="primer"></div>
-                <div class="ta"></div>
-                <div class="line hline bcoro">
-                <div class="line"><div class="alyrics" id="a9"></div></div></div>
 
-                <div class="hcoro dbhide">
-                <div class="line"><div class="alyrics" id="a10"></div></div>
-                <div class="line"><div class="alyrics" id="a11"></div></div>
-                <div class="line"><div class="alyrics" id="a12"></div></div>
-                </div>
-            <!-- CONTENIDO DE LA ASAMBLEA-->
 
-            <!-- CONTENIDO DEL CANTOR -->
-            <div class="primer"></div>
-            <div class="tc"></div>
-                <div class="line"><div class="lyrics" id="c17"></div></div>
-                <div class="line"><div class="lyrics" id="c18"></div></div>
-                <div class="line"><div class="lyrics" id="c19"></div></div>
-                <div class="line"><div class="lyrics" id="c20"></div></div>
-            <!-- CONTENIDO DEL CANTOR -->
-
-            <!-- CONTENIDO DE LA ASAMBLEA-->
-            <div class="primer"></div>
-            <div class="ta"></div>
-                <div class="line"><div class="alyrics" id="a13"></div></div>
-
-            <!-- CONTENIDO DE LA ASAMBLEA-->
-
+                <!-- CONTENIDO DE LA ASAMBLEA-->
 <!-- A7 - LADO DERECHO -->  </div>
 <!-- A6 - Grupo Izquierdo -->   </div>
 <!-- A3 Fila 4 TODO EL CANTO -->    </div>
@@ -210,7 +188,7 @@
 <!-- Fila 5: Flechas -->
             <tr>    <td colspan="6" class="navegar">
                 <div>
-                        <a href="/cantos/src/chtml/a/alavictimapascual.html"            align="left" class="fleft">    <span class="mso1">arrow_left_alt   </span></a>
+                   <!--     <a href="/cantos/src/chtml/a/alavictimapascual.html"            align="left" class="fleft">    <span class="mso1">arrow_left_alt   </span></a>  -->
                         <a href="/cantos/resucito/a/anadiedemosocasiondetropiezo.html"  align="right" class="fright">  <span class="mso1">arrow_right_alt  </span></a>
                     
                     <div style="clear: both;"></div>
@@ -227,15 +205,14 @@
                         <!-- Columna 1 -->
                         <div style="float: left;"><a href="#">
                             <p class="fup mso2" href="#">north</p>
-                            <p class="dh piecategoria">PreCatecumenado</p>
-                            <p class="piecategoria">ELECCIÓN</p>
+                            <p class="piecategoria">PreCatecumenado</p>
                             <p class="dh piecategoria pentrada">Entrada</p>
                             <p class="dh piecategoria pcuaresma">Cuaresma</p>
                             <p class="piecategoria ppascua">Pascua</p>
                             <p class="dh piecategoria padviento">Adviento</p>
                             <p class="piecategoria ppenteco">Pentecostés</p>
                             <p class="dh piecategoria">Comunión</p>
-                            <p class="piecategoria plaudes">Laudes</p>
+                            <p class="dh piecategoria plaudes">Laudes</p>
                             <p class="dh piecategoria salida">Salida</p>
                             <p class="dh piecategoria ppenit">Penitencial</p></a>
 
@@ -248,9 +225,13 @@
     <div class="notas-columna">
 
         <!-- CONTENIDO DE LAS NOTAS DEL CANTO-->
-<a href="#" class="notas-enlace" onclick="mostrarImagen('/cantos/src/ima/fa.jpg'); return false;">Fa</a>
-<a href="#" class="notas-enlace" onclick="mostrarImagen('/cantos/src/ima/sol.jpg'); return false;">Sol</a>
-<a href="#" class="notas-enlace" onclick="mostrarImagen('/cantos/src/ima/Lam.jpg'); return false;">La<em>m<em></a>
+        <a href="#" class="notas-enlace" onclick="mostrarImagen('/cantos/src/ima/rem9.jpg'); return false;">Re<em>m</em>9</a>
+        <a href="#" class="notas-enlace" onclick="mostrarImagen('/cantos/src/ima/mi.jpg'); return false;">Mi</a>
+        <a href="#" class="notas-enlace" onclick="mostrarImagen('/cantos/src/ima/fa.jpg'); return false;">Fa</a>
+        <a href="#" class="notas-enlace" onclick="mostrarImagen('/cantos/src/ima/famaj7.jpg'); return false;">Fa<em>maj</em>7</a>
+        <a href="#" class="notas-enlace" onclick="mostrarImagen('/cantos/src/ima/La7.jpg'); return false;">La7</a>
+        <a href="#" class="notas-enlace" onclick="mostrarImagen('/cantos/src/ima/Lam.jpg'); return false;">La<em>m</em></a>
+        
 
     </div>
 
@@ -272,8 +253,11 @@
 
         <!-- CERRANDO DE CONTENEDOR DE TABLA -->
     </div>
-  
-<script src="/cantos/src/js/dbMainJS.js"></script>
-<script src="/cantos/resucito/cjs/alacenadelcordero.js"></script>
+    <script src="/cantos/resucito/acorde/src/mainjs.js"></script>
+    <script src="/cantos/resucito/cjs/atilevantomisojos.js"></script>
 </body>
 </html>
+
+<!-- *********    CAMBIO DE SCRIPT ENTRE PRODUCCION Y DESARROLLO *********
+<script src="/cantos/src/js/dbMainJS.js"></script>
+-->  

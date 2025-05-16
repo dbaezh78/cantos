@@ -201,6 +201,7 @@
         margin: 20px auto;
         overflow-x: auto;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        scrollbar-width: none
       }
 
       .home {
@@ -591,10 +592,37 @@
           text-align: center;
         }
 
+
+
         .ta, .tc, .ta1, .ta2, .ta3, .niño, .hombres, .mujeres {
           position: relative;
           padding-left: 1.5em;
         }
+
+        .bis {
+          display: flex;
+          align-items: center;
+          border-left: 1px solid #868686;
+          height: 7%;
+          padding-left: 10px;
+          margin-left: 26%;
+          position: absolute;
+          margin-top: -2%;
+
+          @media (min-width: 384px) {
+              height: 9%;
+              margin-left: 67%;
+              /*margin-left: 26%;*/
+              margin-top: -1%;
+            }
+
+          @media (min-width: 768px) and (max-width: 991px)
+           {
+            height: 11%;
+            margin-left: 68%;
+            margin-top: -5%;
+        }
+      }
 
         .ta::before, .tc::before, 
         .ta1::before, .ta2::before, 
@@ -611,6 +639,15 @@
 
           @media (min-width: 768px) and (max-width: 991px) {
             left: -4%;}
+        }
+
+        .niño::before, .hombres::before, .mujeres::before {
+          left: 0%;
+
+        }
+
+        .myh {
+          margin-left: 19%
         }
 
       .ta::before {content: "A.";}
@@ -704,6 +741,14 @@
 
       */
 
+      /* ESTA CLASE dbsp1 David Baez Spance GENERA UN ESPACIO DONDE SE COLOQUE*/
+      .dbsp1 {padding-bottom: 1%;@media (min-width: 384px) {padding-bottom: 1%;}@media (min-width: 412px) {padding-bottom: 1%;}@media (min-width: 576px) {padding-bottom: 1%;}@media (min-width: 768px) {padding-bottom: 1%;}@media (min-width: 992px) {padding-bottom: 1%;}@media (min-width: 1200px) {padding-bottom: 1%;}@media (min-width: 1920px) {padding-bottom: 1%;}}
+      .dbsp2 {padding-bottom: 2%;@media (min-width: 384px)  {padding-bottom: 2%;}@media (min-width: 412px)  {padding-bottom: 2%;}@media (min-width: 576px)  {padding-bottom: 2%;}@media (min-width: 768px)  {padding-bottom: 2%;}@media (min-width: 992px)  {padding-bottom: 2%;}@media (min-width: 1200px) {padding-bottom: 2%;}@media (min-width: 1920px) {padding-bottom: 2%;}}
+      .dbsp3 {padding-bottom: 3%;@media (min-width: 384px)  {padding-bottom: 3%;}@media (min-width: 412px)  {padding-bottom: 3%;}@media (min-width: 576px)  {padding-bottom: 3%;}@media (min-width: 768px)  {padding-bottom: 3%;}@media (min-width: 992px)  {padding-bottom: 3%;}@media (min-width: 1200px) {padding-bottom: 3%;}@media (min-width: 1920px) {padding-bottom: 3%;}}
+      .dbsp4 {padding-bottom: 4%;@media (min-width: 384px)  {padding-bottom: 4%;}@media (min-width: 412px)  {padding-bottom: 4%;}@media (min-width: 576px)  {padding-bottom: 4%;}@media (min-width: 768px)  {padding-bottom: 4%;}@media (min-width: 992px)  {padding-bottom: 4%;}@media (min-width: 1200px) {padding-bottom: 4%;}@media (min-width: 1920px) {padding-bottom: 4%;}}
+      .dbsp5 {padding-bottom: 5%;@media (min-width: 384px)  {padding-bottom: 5%;}@media (min-width: 412px)  {padding-bottom: 5%;}@media (min-width: 576px)  {padding-bottom: 5%;}@media (min-width: 768px)  {padding-bottom: 5%;}@media (min-width: 992px)  {padding-bottom: 5%;}@media (min-width: 1200px) {padding-bottom: 5%;}@media (min-width: 1920px) {padding-bottom: 5%;}}
+      .dbsp4 {padding-bottom: 6%;@media (min-width: 384px)  {padding-bottom: 6%;}@media (min-width: 412px)  {padding-bottom: 6%;}@media (min-width: 576px)  {padding-bottom: 6%;}@media (min-width: 768px)  {padding-bottom: 6%;}@media (min-width: 992px)  {padding-bottom: 6%;}@media (min-width: 1200px) {padding-bottom: 6%;}@media (min-width: 1920px) {padding-bottom: 6%;}}
+      .dbsp4 {padding-bottom: 7%;@media (min-width: 384px)  {padding-bottom: 7%;}@media (min-width: 412px)  {padding-bottom: 7%;}@media (min-width: 576px)  {padding-bottom: 7%;}@media (min-width: 768px)  {padding-bottom: 7%;}@media (min-width: 992px)  {padding-bottom: 7%;}@media (min-width: 1200px) {padding-bottom: 7%;}@media (min-width: 1920px) {padding-bottom: 7%;}}
 
       .last {
         padding-bottom: 7%;
@@ -949,3 +994,4 @@
 
 
 /* OCULTAR CONTENIDO MENOS EL PRIMERO */
+
