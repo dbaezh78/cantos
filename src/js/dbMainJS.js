@@ -12,6 +12,13 @@ let scrollInterval = null;
  * FUNCIONES DE ACORDES
  ***********************/
 function generarOpciones(defaultValue = "") {
+    // Si el valor por defecto está vacío, agregamos una opción vacía seleccionada
+    if (defaultValue === "") {
+        return `<option value="" selected></option>` + 
+               acordes.map(acorde => `<option value="${acorde}">${acorde}</option>`).join('');
+    }
+    
+    // Caso normal con valor por defecto
     return acordes.map(acorde => 
         `<option value="${acorde}"${acorde === defaultValue ? ' selected' : ''}>${acorde}</option>`
     ).join('');
@@ -19,26 +26,37 @@ function generarOpciones(defaultValue = "") {
 
 function configurarSelectores() {
     document.querySelectorAll('.chord').forEach(select => {
-        select.innerHTML = generarOpciones(select.dataset.default);
+        // Usamos empty string si dataset.default no está definido
+        const defaultValue = select.dataset.default || "";
+        select.innerHTML = generarOpciones(defaultValue);
     });
 }
 
 function obtenerIndiceAcorde(acorde) {
-    return acordes.indexOf(acorde);
+    // Devuelve -1 para acordes vacíos
+    return acorde === "" ? -1 : acordes.indexOf(acorde);
 }
 
 function calcularAcordeDesplazado(acorde, desplazamiento) {
     const indiceActual = obtenerIndiceAcorde(acorde);
+    // Mantiene el valor vacío si el acorde original estaba vacío
     return indiceActual === -1 ? acorde : acordes[(indiceActual + desplazamiento + acordes.length) % acordes.length];
 }
 
 function configurarEventosAcordes() {
     document.querySelectorAll('.chord').forEach(select => {
         select.addEventListener('change', function() {
-            const desplazamiento = obtenerIndiceAcorde(this.value) - obtenerIndiceAcorde(this.dataset.default || "");
+            const defaultAcorde = this.dataset.default || "";
+            const currentAcorde = this.value;
+            
+            // Solo calcular desplazamiento si ambos acordes no están vacíos
+            const desplazamiento = (defaultAcorde && currentAcorde) 
+                ? obtenerIndiceAcorde(currentAcorde) - obtenerIndiceAcorde(defaultAcorde)
+                : 0;
             
             document.querySelectorAll('.chord').forEach(otroSelect => {
-                otroSelect.value = calcularAcordeDesplazado(otroSelect.dataset.default || "", desplazamiento);
+                const otroDefault = otroSelect.dataset.default || "";
+                otroSelect.value = calcularAcordeDesplazado(otroDefault, desplazamiento);
             });
         });
     });
@@ -49,6 +67,9 @@ function renderizarAcordes(contenedor, acordesData) {
     divAcordes.className = 'chords';
     
     acordesData.forEach(acorde => {
+        // Verificamos si el acorde está vacío
+        const acordeValido = acorde.acorde && acorde.acorde.trim() !== "";
+        
         const grupo = document.createElement('div');
         grupo.className = 'chord-container';
         grupo.classList.add(acorde.posicion);
@@ -56,8 +77,9 @@ function renderizarAcordes(contenedor, acordesData) {
         const select = document.createElement('select');
         select.className = 'chord no-arrow';
         select.name = 'nMusic';
-        select.dataset.default = acorde.base;
-        select.innerHTML = generarOpciones(acorde.base);
+        // Usamos empty string si el acorde base está vacío
+        select.dataset.default = acordeValido ? acorde.base : "";
+        select.innerHTML = generarOpciones(select.dataset.default);
         
         grupo.appendChild(select);
         

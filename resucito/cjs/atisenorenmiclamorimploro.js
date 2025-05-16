@@ -6,7 +6,6 @@ const pcelular = {
       //  --cp18: 1.8%;
       //  --cp486: 48.6%;
       //  --cp1547: 154.7%;
-
     };
 
 // Mapeo específico para tablets (800px)
@@ -15,7 +14,6 @@ const pTablet = {
       //  --cp18: 1.8%;
       //  --cp486: 48.6%;
       //  --cp1547: 154.7%;
-
     };
     
     function ac(nota, posicion, extension = "") {
@@ -179,9 +177,9 @@ const pTablet = {
       ]
     };
     
-    /***********************
+    /************************************************
      * MANEJO DE CARGA Y REDIMENSIONAMIENTO CORREGIDO
-     ***********************/
+     ************************************************/
     
     let cargando = false;
     
