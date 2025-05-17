@@ -1,20 +1,63 @@
 .myh {
-
-    @media (min-width: 384px) {}
-    @media (min-width: 768px) {
-        margin-left: 18%;
-    }
-    @media (min-width: 992px) {}
-    margin-left: 18%;
+    @media (min-width: 384px) {margin-left: 14%;}
+    @media (min-width: 768px) {margin-left: 14%;}
+    @media (min-width: 992px) {margin-left: 10%;}
 }
 
-.ta::before, .tc::before, .ta1::before, .ta2::before, .ta3::before, .niño::before, .hombres::before, .mujeres::before {
-    @media (min-width: 768px) {
-        font-size: 22px;
-    }
-    
-    @media (min-width: 992px) {
-        font-size: 18px;
 
+.hombres::before, .mujeres::before {
+    @media (min-width: 384px) {
+            font-size: 14px;
+
+    }
+    @media (min-width: 768px) {
+    font-size: 20px;
+    }
+
+    @media (min-width: 992px) {
+        position: absolute;
+        font-size: 18px;
+        left: 0% !important;
+    }
+}
+
+    .grupo-columnas {
+    @media (min-width: 384px) {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    @media (min-width: 768px) {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    @media (min-width: 992px) {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+.izq {
+    @media (min-width: 384px) {
+        width: 100%;
+        max-width: 96%;
+        margin-top: 0%;
+        margin-left: 5%;
+    }
+
+       @media (min-width: 768px) {
+           margin-left: 1%;;
+        }
+        @media (min-width: 992px) {
+            margin-left: 7%;;
+
+        }
+    }
+
+    .saudio {
+    @media (max-width: 384px) {
+        width: 128.5%;
+        padding: 1px 9px 1px 9px;
     }
 }
