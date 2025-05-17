@@ -1,0 +1,8 @@
+/*CSS*/
+
+.contenedordecolumnas {
+
+    @media (min-width: 384px) {margin-left: 1%;}
+    @media (min-width: 768px) {margin-left: 1%;}
+    @media (min-width: 992px) {margin-left: 7%;}
+}
