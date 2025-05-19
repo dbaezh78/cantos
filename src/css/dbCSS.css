@@ -542,7 +542,7 @@
           .eleccion {background-color: #CEFFCF;}
     
   .piecategoria, .ppascua, .ppenteco, 
-  .plaudes, .pcuaresma, .padviento, 
+  .plaudes, .pcuaresma, .padviento, .pnavidad,
   .pentrada, .ppenit {
   font-family: 'Franklin Gothic Medium';
   font-weight: bold;
@@ -559,6 +559,7 @@
 
         .ppascua {color: rgb(33 150 243);}
         .ppenteco {color: #f0433d;}
+        .pnavidad {color: #f0433d;}
         .plaudes {color: rgb(56, 162, 6);}
         .pcuaresma {color: purple;}
         .padviento {color: purple;}
