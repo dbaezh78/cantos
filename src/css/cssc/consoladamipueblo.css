@@ -1,0 +1,7 @@
+.chord {
+
+    @media (min-width: 384px) {margin-left: 3px;}
+    @media (min-width: 768px) {margin-left: 0px;}
+    @media (min-width: 992px) {margin-left: -5px;}
+}
+

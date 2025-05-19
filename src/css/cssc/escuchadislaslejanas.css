@@ -1,8 +1,0 @@
-.contenedordecolumnas {
-    margin-left: 55px;
-
-    @media (min-width: 384px) {margin-left: 3%;}
-    @media (min-width: 768px) {margin-left: 8%;}
-    @media (min-width: 992px) {margin-left: 7%;}
-}
-
