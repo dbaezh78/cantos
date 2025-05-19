@@ -1,0 +1,35 @@
+
+/* Color ROJO solo para .melisma */
+.bis::before {
+    left: 60%;
+    top: -16px;
+
+    @media (min-width: 384px) {}
+    @media (min-width: 800px) {}
+    @media (min-width: 992px) {}
+}
+
+.lyrics {
+    @media (min-width: 768px) {    }
+}
+
+.chord {
+
+    @media (min-width: 384px) {}
+    @media (min-width: 768px) {}
+    @media (min-width: 992px) {}
+}
+
+
+.alyrics {
+    @media (min-width: 768px) {
+        font-size: 1.52rem;
+    }
+}
+
+
+.lyrics {
+    @media (min-width: 768px) {
+        font-size: 1.5rem;
+    }
+}
