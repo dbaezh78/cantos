@@ -26,7 +26,7 @@ function ac(nota, posicion, extension = "") {
         // Si no está en el mapeo, aplicamos un factor general más preciso
         if (!pTablet[posicion]) {
           const numero = parseInt(posicion.replace('cp', ''));
-          const factor = 0.93; // Factor más preciso para 800px
+          const factor = 0.97; // Factor más preciso para 800px
           posicionAjustada = `cp${Math.round(numero * factor)}`;
         }
       }
@@ -86,28 +86,30 @@ cantor: [
       // Estructura para Cantor (acordes) - CON FUNCIÓN ac()
       cantorAcordes: [
 // IZQUIERDA
-/* 1*/      [ac("La", "cp14","m")],
-/* 2*/      [ac("Re", "cp14","m"), ac("Mi","cp490","")],
-/* 3*/      [ac("La", "cp436","m")],
-/* 4 */   [ac("", "cp0","")],
-/* 5*/      [ac("Re", "cp14","m"), ac("Mi","cp90","")],
-/* 6 */   [ac("", "cp0","")],
-/* 7*/      [ac("La", "cp14","m")],
-/* 8*/      [ac("Sol", "cp14",""), ac("Fa","cp327","")],
-/* 9*/      [ac("Mi", "cp14","")],
-/* 10*/      [ac("La", "cp14","m")],
-/* 11*/      [ac("Mi", "cp14","")],
-/* 12*/      [ac("La", "cp14","m")],
-/* 13*/      [ac("Sol", "cp14","")],
-/* 14*/      [ac("Fa", "cp14",""), ac("Mi","cp90","")],
-/* 15*/      [ac("La", "cp14","m"), ac("Mi","cp90","")],
-/* 16 */   [ac("", "cp0","")],
-/* 17*/      [ac("La", "cp14","m")],
-/* 18*/      [ac("Mi", "cp14","")],
-/* 19 */   [ac("", "cp0","")],
-/* 20*/      [ac("La", "cp14","m")],
-/* 21*/      [ac("Sol", "cp14","")],
-/* 22*/      [ac("Fa", "cp14",""), ac("Mi","cp90","")],
+/* 1*/       [ac("La", "cp14","m")],
+/* 2*/       [ac("Re", "cp31","m"), ac("Mi","cp224","")],
+/* 3*/       [ac("La", "cp526","m")],
+
+/* 4 */      [ac("", "cp0","")],
+/* 5*/       [ac("Re", "cp34","m"), ac("Mi","cp226","")],
+/* 6 */      [ac("", "cp0","")],
+/* 7*/       [ac("La", "cp450","m")],
+
+/* 8*/       [ac("Sol", "cp201",""), ac("Fa","cp339","")],
+/* 9*/       [ac("Mi", "cp332","")],
+/* 10*/      [ac("La", "cp196","m")],
+/* 11*/      [ac("Mi", "cp249","")],
+/* 12*/      [ac("La", "cp452","m")],
+/* 13*/      [ac("Sol", "cp204","")],
+/* 14*/      [ac("Fa", "cp235",""), ac("Mi","cp471","")],
+/* 15*/      [ac("La", "cp14","m"), ac("Mi","cp368","")],
+/* 16 */     [ac("", "cp0","")],
+/* 17*/      [ac("La", "cp296","m")],
+/* 18*/      [ac("Mi", "cp265","")],
+/* 19 */     [ac("", "cp0","")],
+/* 20*/      [ac("La", "cp360","m")],
+/* 21*/      [ac("Sol", "cp253","")],
+/* 22*/      [ac("Fa", "cp263",""), ac("Mi","cp528","")],
       ],
 
       // Estructura para Asamblea (texto)
@@ -123,15 +125,15 @@ cantor: [
 /* 9 */        "SIN DETENERTE, SIN DETENERTE».",
       ],
       asambleaAcordes: [
-/* 1*/      [ac("La", "cp14","m")],
-/* 2*/      [ac("Sol", "cp14","")],
-/* 3*/      [ac("Fa", "cp14",""), ac("Mi","cp290","")],
-/* 4*/      [ac("La", "cp14","m")],
-/* 5*/      [ac("Sol", "cp14","")],
-/* 6*/      [ac("Fa", "cp14",""), ac("Mi","cp90","")],
-/* 7*/      [ac("La", "cp14","m")],
-/* 8*/      [ac("Sol", "cp14","")],
-/* 9*/      [ac("Fa", "cp14",""), ac("Mi","cp90","")],
+/* 1*/      [ac("La", "cp186","m")],
+/* 2*/      [ac("Sol", "cp290","")],
+/* 3*/      [ac("Fa", "cp180",""), ac("Mi","cp468","")],
+/* 4*/      [ac("La", "cp290","m")],
+/* 5*/      [ac("Sol", "cp465","")],
+/* 6*/      [ac("Fa", "cp178",""), ac("Mi","cp461","")],
+/* 7*/      [ac("La", "cp178","m")],
+/* 8*/      [ac("Sol", "cp292","")],
+/* 9*/      [ac("Fa", "cp176",""), ac("Mi","cp469","")],
       ]
   };
 
