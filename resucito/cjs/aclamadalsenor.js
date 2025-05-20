@@ -26,7 +26,7 @@ function ac(nota, posicion, extension = "") {
         // Si no está en el mapeo, aplicamos un factor general más preciso
         if (!pTablet[posicion]) {
           const numero = parseInt(posicion.replace('cp', ''));
-          const factor = 0.93; // Factor más preciso para 800px
+          const factor = 0.97; // Factor más preciso para 800px
           posicionAjustada = `cp${Math.round(numero * factor)}`;
         }
       }
@@ -56,7 +56,7 @@ const partitura = {
       tituloc: NOMBREDELCANTO,
       titulo: NOMBREDELCANTO,
       salmo: "Salmo 100 (99)",
-      dbnos: "8",
+      dbnos: "9",
 
 // Estructura para Cantor (texto)
 
@@ -76,17 +76,17 @@ cantor: [
       // Estructura para Cantor (acordes) - CON FUNCIÓN ac()
       cantorAcordes: [
 // IZQUIERDA
-/* 1*/      [ac("Re", "cp14","m"), ac("La","cp90","7")],
-/* 2*/      [ac("Re", "cp14","m")],
-/* 3*/      [ac("Re", "cp14","m"), ac("La","cp90","7")],
-/* 4*/      [ac("Re", "cp14","m")],
-/* 5*/      [ac("Re", "cp14","m"), ac("La","cp90","7")],
-/* 6*/      [ac("Re", "cp14","m")],
-/* 7*/      [ac("Re", "cp14","m"), ac("La","cp90","7")],
-/* 8*/      [ac("Re", "cp14","m")],
-/* 9*/      [ac("Re", "cp14","m"), ac("La","cp90","7")],
+/* 1*/      [ac("Re", "cp79","m"), ac("La","cp226","7")],
+/* 2*/      [ac("Re", "cp292","m")],
+/* 3*/      [ac("Re", "cp213","m"), ac("La","cp534","7")],
+/* 4*/      [ac("Re", "cp316","m")],
+/* 5*/      [ac("Re", "cp57","m"), ac("La","cp382","7")],
+/* 6*/      [ac("Re", "cp342","m")],
+/* 7*/      [ac("Re", "cp107","m"), ac("La","cp345","7")],
+/* 8*/      [ac("Re", "cp214","m")],
+/* 9*/      [ac("Re", "cp2004","m"), ac("La","cp431","7")],
 /* 10 */   [ac("", "cp0","")],
-/* 11*/      [ac("Re", "cp14","m")],
+/* 11*/      [ac("Re", "cp166","m")],
       ],
 
       // Estructura para Asamblea (texto)
@@ -112,23 +112,23 @@ cantor: [
       ],
       asambleaAcordes: [
 /* 1*/      [ac("Re", "cp14","m")],
-/* 2*/      [ac("Sol", "cp23","m"), ac("Re","cp160","m"), ac("La","cp232","")],
-/* 3*/      [ac("Fa", "cp14",""), ac("Sol","cp90",""), ac("La","cp150","")],
+/* 2*/      [ac("Sol", "cp23","m"), ac("Re","cp165","m")],
+/* 3*/      [ac("Fa", "cp77",""), ac("Sol","cp252",""), ac("La","cp511","")],
 /* 4*/      [ac("Re", "cp14","m")],
-/* 5*/      [ac("Sol", "cp14","m"), ac("Re","cp90","m"), ac("La","cp150","")],
-/* 6*/      [ac("Fa", "cp14",""), ac("Sol","cp90",""), ac("La","cp150","")],
+/* 5*/      [ac("Sol", "cp23","m"), ac("Re","cp165","m")],
+/* 6*/      [ac("Fa", "cp77",""), ac("Sol","cp252",""), ac("La","cp511","")],
 /* 7*/      [ac("Re", "cp14","m")],
-/* 8*/      [ac("Sol", "cp14","m"), ac("Re","cp90","m"), ac("La","cp150","")],
-/* 9*/      [ac("Fa", "cp14",""), ac("Sol","cp90",""), ac("La","cp150","")],
-/* 10*/      [ac("Re", "cp14","m")],
-/* 11*/      [ac("Sol", "cp14","m"), ac("Re","cp90","m"), ac("La","cp150","")],
-/* 12*/      [ac("Fa", "cp14",""), ac("Sol","cp90",""), ac("La","cp150","")],
-/* 13*/      [ac("Re", "cp14","m")],
-/* 14*/      [ac("Sol", "cp14","m"), ac("Re","cp90","m"), ac("La","cp150","")],
-/* 15*/      [ac("Fa", "cp14",""), ac("Sol","cp90",""), ac("La","cp150","")],
-/* 16*/      [ac("Re", "cp14","m")],
-/* 17*/      [ac("Sol", "cp14","m"), ac("Re","cp90","m"), ac("La","cp150","")],
-/* 18*/      [ac("Fa", "cp14",""), ac("Sol","cp90",""), ac("La","cp150","")],
+/* 8*/      [ac("Sol", "cp23","m"), ac("Re","cp165","m")],
+/* 9*/      [ac("Fa", "cp77",""), ac("Sol","cp252",""), ac("La","cp511","")],
+/* 10*/     [ac("Re", "cp14","m")],
+/* 11*/     [ac("Sol", "cp23","m"), ac("Re","cp165","m")],
+/* 12*/     [ac("Fa", "cp77",""), ac("Sol","cp252",""), ac("La","cp511","")],
+/* 13*/     [ac("Re", "cp14","m")],
+/* 14*/     [ac("Sol", "cp23","m"), ac("Re","cp165","m")],
+/* 15*/     [ac("Fa", "cp77",""), ac("Sol","cp252",""), ac("La","cp511","")],
+/* 16*/     [ac("Re", "cp14","m")],
+/* 17*/     [ac("Sol", "cp23","m"), ac("Re","cp165","m")],
+/* 18*/     [ac("Fa", "cp77",""), ac("Sol","cp252",""), ac("La","cp511","")],
       ]
   };
 

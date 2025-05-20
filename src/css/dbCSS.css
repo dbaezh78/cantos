@@ -744,9 +744,9 @@
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         cursor: pointer;
 
-        @media (min-width: 384px) {font-size: 48%;}
-        @media (min-width: 768px) {font-size: 65%;}
-        @media (min-width: 992px) {font-size: 60%;}
+        @media (min-width: 384px) {font-size: 78%;}
+        @media (min-width: 768px) {font-size: 95%;}
+        @media (min-width: 992px) {font-size: 90%;}
       }
 
       .nav {

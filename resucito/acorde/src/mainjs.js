@@ -529,7 +529,7 @@ function crearIndicador() {
     indicadorPosicion = document.createElement('div');
     indicadorPosicion.id = 'indicador-posicion';
     indicadorPosicion.style.position = 'fixed';
-    indicadorPosicion.style.bottom = '10px';
+    indicadorPosicion.style.top = '10px';
     indicadorPosicion.style.left = '10px';
     indicadorPosicion.style.background = 'rgba(0,0,0,0.7)';
     indicadorPosicion.style.color = 'white';
@@ -638,11 +638,6 @@ document.addEventListener('DOMContentLoaded', () => {
         crearIndicador();
     }, 500);
 });
-
-//****************************************************************
-//************************* MOVER ACORDES ************************
-//****************************************************************
-
 
 //****************************************************************
 //************************* MOVER ACORDES ************************
