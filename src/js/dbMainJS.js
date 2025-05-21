@@ -264,7 +264,7 @@ function configurarReproductor() {
             icon.textContent = 'error';
             
             setTimeout(() => {
-                alert('Por favor haz clic en el botón de play del reproductor para iniciar la música.');
+                alert('La paz de Cristo Herman@, al parecer este canto aun no está disponible, estamos trabajando para ponerlo disponible lo más pronto posible....');
             }, 100);
             
             setTimeout(() => {
