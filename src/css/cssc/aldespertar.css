@@ -1,0 +1,6 @@
+
+.chord {
+    @media (min-width: 992px) {
+        bottom: -2px;
+    }
+}
