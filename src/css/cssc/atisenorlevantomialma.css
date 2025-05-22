@@ -1,4 +1,5 @@
-/*CSS*/
+/*
+
 
 .contenedordecolumnas {
 
@@ -10,3 +11,4 @@
 .ta::before, .tc::before {
     @media (min-width: 992px) {left: -9%;}   
 }
+*/

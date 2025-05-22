@@ -2,13 +2,35 @@
 
 // Mapeo para celulares 483px
 const pcelular = {
-//  --cp1: 0.1%;
+'cp475':'cp662',
+'cp438':'cp501',
+'cp368':'cp505',
+'cp291':'cp399',
+'cp576':'cp790',
+'cp113':'cp158',
+'cp633':'cp864',
+'cp483':'cp661',
+'cp627':'cp860',
+'cp79':'cp121',
+'cp163':'cp221',
+  //  --cp1: 0.1%;
       //  --cp18: 1.8%;
       //  --cp486: 48.6%;
       //  --cp1547: 154.7%;
     };
 // Mapeo específico para tablets (800px)
 const pTablet = {
+  'cp627':'cp862',
+  'cp541':'cp744',
+  'cp674':'cp768',
+  'cp695':'cp768',
+  'cp576':'cp786',
+  'cp113':'cp164',
+  'cp633':'cp864',
+  'cp483':'cp656',
+  'cp163':'cp232',
+  'cp475':'cp657',
+  
 //  --cp1: 0.1%;
       //  --cp18: 1.8%;
       //  --cp486: 48.6%;
@@ -26,7 +48,7 @@ function ac(nota, posicion, extension = "") {
         // Si no está en el mapeo, aplicamos un factor general más preciso
         if (!pTablet[posicion]) {
           const numero = parseInt(posicion.replace('cp', ''));
-          const factor = 0.98; // Factor más preciso para 800px
+          const factor = 1.207; // Factor más preciso para 800px
           posicionAjustada = `cp${Math.round(numero * factor)}`;
         }
       }
@@ -38,7 +60,7 @@ function ac(nota, posicion, extension = "") {
             // Si no está en el mapeo, aplicamos un factor general más preciso
             if (!pcelular[posicion]) {
               const numero = parseInt(posicion.replace('cp', ''));
-              const factor = 1.3; // Factor más preciso para 384px
+              const factor = 1.19; // Factor más preciso para 384px
               posicionAjustada = `cp${Math.round(numero * factor)}`;
             }
           }
@@ -100,41 +122,41 @@ cantor: [
       // Estructura para Cantor (acordes) - CON FUNCIÓN ac()
       cantorAcordes: [
 // IZQUIERDA
-/* 1*/      [ac("Mi", "cp14","m"), ac("Si","cp400","m")],
+/* 1*/      [ac("Mi", "cp14","m"), ac("Si","cp398","m")],
 /* 2*/      [ac("Mi", "cp14","m"), ac("Si","cp418","m")],
 /* 3*/      [ac("Sol", "cp14",""), ac("Fa#","cp317","")],
-/* 4*/      [ac("Sol", "cp196",""), ac("Fa#","cp560","")],
+/* 4*/      [ac("Sol", "cp156",""), ac("Fa#","cp556","")],
 /* 5*/      [ac("Sol", "cp14",""), ac("Fa#","cp306","")],
-/* 6*/      [ac("Mi", "cp197","m"), ac("Fa#","cp706","")],
+/* 6*/      [ac("Mi", "cp196","m"), ac("Fa#","cp702","")],
 
-/* 7*/      [ac("Mi", "cp14","m"), ac("Si","cp398","m")],
-/* 8*/      [ac("Mi", "cp50","m"), ac("Si","cp390","m")],
-/* 9*/      [ac("Sol", "cp14",""), ac("Fa#","cp394","")],
-/* 10*/      [ac("Sol", "cp188",""), ac("Fa#","cp690","")],
-/* 11*/      [ac("Sol", "cp144",""), ac("Fa#","cp702","")],
-/* 12*/      [ac("Mi", "cp217","m")],
-/* 13*/      [ac("Fa#", "cp659","")],
-/* 14*/      [ac("Sol", "cp207",""), ac("Fa#","cp601","")],
-/* 15*/      [ac("Mi", "cp79","m"), ac("Fa#","cp514","")],
+/* 7*/      [ac("Mi", "cp14","m"), ac("Si","cp394","m")],
+/* 8*/      [ac("Mi", "cp50","m"), ac("Si","cp386","m")],
+/* 9*/      [ac("Sol", "cp14",""), ac("Fa#","cp386","")],
+/* 10*/      [ac("Sol", "cp188",""), ac("Fa#","cp685","")],
+/* 11*/      [ac("Sol", "cp144",""), ac("Fa#","cp694","")],
+/* 12*/      [ac("Mi", "cp213","m")],
+/* 13*/      [ac("Fa#", "cp655","")],
+/* 14*/      [ac("Sol", "cp203",""), ac("Fa#","cp597","")],
+/* 15*/      [ac("Mi", "cp75","m"), ac("Fa#","cp510","")],
 
 /* 16*/      [ac("Mi", "cp14","m"), ac("Si","cp293","m")],
-/* 17*/      [ac("Mi", "cp75","m"), ac("Si","cp493","m")],
-/* 18*/      [ac("Sol", "cp14",""), ac("Fa#","cp341","")],
-/* 19*/      [ac("Sol", "cp192",""), ac("Fa#","cp625","")],
+/* 17*/      [ac("Mi", "cp75","m"), ac("Si","cp485","m")],
+/* 18*/      [ac("Sol", "cp14",""), ac("Fa#","cp337","")],
+/* 19*/      [ac("Sol", "cp188",""), ac("Fa#","cp621","")],
 /* 20*/      [ac("Sol", "cp203","")],
 /* 21*/      [ac("Fa#", "cp421","")],
 /* 22*/      [ac("Mi", "cp14","m"), ac("Fa#","cp503","")],
 /* 23*/      [ac("Mi", "cp77","m"), ac("Fa#","cp459","")],
-/* 24*/      [ac("Sol", "cp26",""), ac("Fa#","cp372","")],
+/* 24*/      [ac("Sol", "cp26",""), ac("Fa#","cp368","")],
 
-/* 25*/      [ac("Mi", "cp14","m"), ac("Si","cp542","m")],
+/* 25*/      [ac("Mi", "cp14","m"), ac("Si","cp541","m")],
 /* 26*/      [ac("Mi", "cp14","m"), ac("Si","cp558","m")],
 /* 27*/      [ac("Sol", "cp14",""), ac("Fa#","cp368","")],
 /* 28*/      [ac("Sol", "cp30",""), ac("Fa#","cp291","")],
 /* 29*/      [ac("Sol", "cp14",""), ac("Fa#","cp576","")],
 /* 30*/      [ac("Mi", "cp113","m"), ac("Fa#","cp633","")],
 /* 31*/      [ac("Sol", "cp14",""), ac("Fa#","cp483","")],
-/* 32*/      [ac("Sol", "cp14",""), ac("Fa#","cp629","")],
+/* 32*/      [ac("Sol", "cp14",""), ac("Fa#","cp627","")],
 /* 33*/      [ac("Mi", "cp79","m")],
 /* 34*/      [ac("Sol", "cp163",""), ac("Fa#","cp475","")],
       ],
@@ -164,29 +186,29 @@ cantor: [
       ],
       asambleaAcordes: [
 /* 1*/      [ac("Si", "cp0","m")],
-/* 2*/      [ac("Sol", "cp190",""), ac("Si","cp444","m")],
-/* 3*/      [ac("Mi", "cp207","m")],
-/* 4*/      [ac("Si", "cp444","m")],
+/* 2*/      [ac("Sol", "cp191",""), ac("Si","cp441","m")],
+/* 3*/      [ac("Mi", "cp204","m")],
+/* 4*/      [ac("Si", "cp437","m")],
 
 /* 5*/      [ac("Si", "cp0","m")],
-/* 6*/      [ac("Sol", "cp190",""), ac("Si","cp444","m")],
-/* 7*/      [ac("Mi", "cp207","m")],
-/* 8*/      [ac("Si", "cp444","m")],
+/* 6*/      [ac("Sol", "cp191",""), ac("Si","cp441","m")],
+/* 7*/      [ac("Mi", "cp204","m")],
+/* 8*/      [ac("Si", "cp437","m")],
 
 /* 9*/      [ac("Si", "cp0","m")],
-/* 10*/     [ac("Sol", "cp190",""), ac("Si","cp444","m")],
-/* 11*/     [ac("Mi", "cp207","m")],
-/* 12*/     [ac("Si", "cp444","m")],
+/* 10*/     [ac("Sol", "cp191",""), ac("Si","cp441","m")],
+/* 11*/     [ac("Mi", "cp204","m")],
+/* 12*/     [ac("Si", "cp437","m")],
 
 /* 13*/      [ac("Si", "cp0","m")],
-/* 14*/      [ac("Sol", "cp190",""), ac("Si","cp444","m")],
-/* 15*/      [ac("Mi", "cp207","m")],
-/* 16*/      [ac("Si", "cp444","m")],
+/* 14*/      [ac("Sol", "cp191",""), ac("Si","cp441","m")],
+/* 15*/      [ac("Mi", "cp204","m")],
+/* 16*/      [ac("Si", "cp437","m")],
 
 /* 17*/      [ac("Si", "cp0","m")],
-/* 18*/      [ac("Sol", "cp190",""), ac("Si","cp444","m")],
-/* 19*/      [ac("Mi", "cp207","m")],
-/* 20*/      [ac("Si", "cp444","m")],
+/* 18*/      [ac("Sol", "cp191",""), ac("Si","cp441","m")],
+/* 19*/      [ac("Mi", "cp204","m")],
+/* 20*/      [ac("Si", "cp437","m")],
       ]
   };
 
