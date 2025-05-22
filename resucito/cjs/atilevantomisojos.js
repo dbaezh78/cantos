@@ -110,6 +110,7 @@ const pcelular = {
           titulo: NOMBREDELCANTO,
           salmo: "Salmo 123 (122)",
           dbnos: "1",
+          catg: "PRECATECUMENADO",
     
     // Estructura para Cantor (texto)
     
@@ -123,10 +124,10 @@ const pcelular = {
           // Estructura para Cantor (acordes) - CON FUNCIÓN ac()
           cantorAcordes: [
     // IZQUIERDA
-    /* 1*/      [ac("Re", "cp14","m"), ac("La","cp485","7")],
-    /* 2*/      [ac("Sol", "cp92","m"), ac("La","cp416","7")],
-    /* 3*/      [ac("Si♭", "cp11","7"), ac("La","cp249","7")],
-    /* 4*/      [ac("Si♭", "cp47","7"), ac("La","cp220","7"), ac("Si♭","cp295","7"), ac("La","cp467","7")],
+    /* 1*/      [ac("Re", "cp14","m"), ac("La","cp636","7")],
+    /* 2*/      [ac("Sol", "cp116","m"), ac("La","cp544","7")],
+    /* 3*/      [ac("Si♭", "cp11","7"), ac("La","cp323","7")],
+    /* 4*/      [ac("Si♭", "cp52","7"), ac("La","cp287","7"), ac("Si♭","cp384","7"), ac("La","cp613","7")],
           ],
     
           // Estructura para Asamblea (texto)
@@ -147,23 +148,23 @@ const pcelular = {
     //457-385% =  72% diferencia
           ],
           asambleaAcordes: [
-    /* 1*/      [ac("Re", "cp11","m"), ac("La","cp159","7")],
-    /* 2*/      [ac("Sol", "cp48","m"), ac("La","cp223","7")],
+    /* 1*/      [ac("Re", "cp11","m"), ac("La","cp212","7")],
+    /* 2*/      [ac("Sol", "cp26","m"), ac("La","cp298","7")],
     
-    /* 3*/      [ac("Re", "cp49","m"), ac("La","cp265","7")],
-    /* 4*/      [ac("Si♭", "cp49","7"), ac("La","cp265","7")],
+    /* 3*/      [ac("Re", "cp54","m"), ac("La","cp326","7")],
+    /* 4*/      [ac("Si♭", "cp54","7"), ac("La","cp326","7")],
 
-    /* 5*/      [ac("Re", "cp124","m"), ac("La","cp415","7")],
-    /* 6*/      [ac("Si♭", "cp149","7"), ac("La","cp438","7")],
+    /* 5*/      [ac("Re", "cp143","m"), ac("La","cp506","7")],
+    /* 6*/      [ac("Si♭", "cp172","7"), ac("La","cp529","7")],
 
-    /* 7*/      [ac("Re", "cp91","m"), ac("La","cp297","7")],
-    /* 8*/      [ac("Si♭", "cp104","7"), ac("La","cp264","7")],
+    /* 7*/      [ac("Re", "cp105","m"), ac("La","cp358","7")],
+    /* 8*/      [ac("Si♭", "cp123","7"), ac("La","cp320","7")],
 
-    /* 9*/      [ac("Re", "cp49","m"), ac("La","cp266","7")],
-    /* 10*/      [ac("Si♭", "cp52","7"), ac("La","cp266","7")],
+    /* 9*/      [ac("Re", "cp55","m"), ac("La","cp327","7")],
+    /* 10*/      [ac("Si♭", "cp55","7"), ac("La","cp327","7")],
 
-    /* 11*/      [ac("Re", "cp11","m"), ac("La","cp159","7")],
-    /* 12*/      [ac("Sol", "cp48","m"), ac("La","cp223","7")],
+    /* 11*/      [ac("Re", "cp11","m"), ac("La","cp212","7")],
+    /* 12*/      [ac("Sol", "cp26","m"), ac("La","cp298","7")],
 
           ]
       };

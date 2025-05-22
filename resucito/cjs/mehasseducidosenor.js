@@ -57,6 +57,7 @@ const pcelular = {
           titulo: NOMBREDELCANTO,
           salmo: "Jeremias 20,7-18",
           dbnos: "115",
+          catg: "PRECATECUMENADO",
     
     // Estructura para Cantor (texto)
     

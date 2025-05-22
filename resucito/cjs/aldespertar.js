@@ -79,6 +79,7 @@ const partitura = {
       titulo: NOMBREDELCANTO,
       salmo: "Salmo 17 (16) ",
       dbnos: "10",
+      catg: "PRECATECUMENADO",
 
 // Estructura para Cantor (texto)
 

@@ -57,6 +57,7 @@ const pcelular = {
           titulo: NOMBREDELCANTO,
           salmo: "Secuencia de Pascua - Himno lat. «Victimae paschall laudes» ",
           dbnos: "1",
+          catg: "PRECATECUMENADO",
     
     // Estructura para Cantor (texto)
     

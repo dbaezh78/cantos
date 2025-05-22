@@ -57,6 +57,7 @@ const partitura = {
       titulo: NOMBREDELCANTO,
       salmo: "Romanos 8,15–17",
       dbnos: "7",
+      catg: "PRECATECUMENADO",
 
 // Estructura para Cantor (texto)
 

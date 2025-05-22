@@ -57,6 +57,7 @@ const partitura = {
       titulo: NOMBREDELCANTO,
       salmo: "Salmo 65 (64)",
       dbnos: "6",
+      catg: "PRECATECUMENADO",
 
 // Estructura para Cantor (texto)
 

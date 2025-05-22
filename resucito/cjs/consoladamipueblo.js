@@ -58,6 +58,7 @@ const pcelular = {
           titulo: NOMBREDELCANTO,
           salmo: "Isaías 40,1-11 - Melodía hebraica ",
           dbnos: "41",
+          catg: "PRECATECUMENADO",
     
     // Estructura para Cantor (texto)
     

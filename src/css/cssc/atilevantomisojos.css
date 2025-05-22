@@ -1,14 +1,30 @@
+.ta::before, .tc::before {
+
+    @media (min-width: 384px) {
+        left: -6%;
+    }
+
+    @media (min-width: 768px) {
+        left: -5%;
+    }
+
+    @media (min-width: 992px) {
+        left: -6%;
+    }
+}
+
+
 .line {
         position: relative;
         margin-bottom: 20px;
         min-height: 0px;
 
         @media (min-width: 384px) {
-          width: 384px;
+          width: 404px;
         }
 
         @media (min-width: 768px) {
-        width: 668px;
+        width: 1032px;
         }
 
         @media (min-width: 992px) {
@@ -18,70 +34,97 @@
 
       }
 
+    .bis {
+        top: 17%;
+        left: 45%;
+        border-left: 1px solid #868686;
+        height: 7%;
+        position: absolute;
+        
+        @media (min-width: 384px) {
+            top: 27%;
+            left: 65%;
+        }
+        @media (min-width: 768px) {
+            top: 22%;
+            left: 56%;
+        }
+        @media (min-width: 992px) {
+            top: 17%;
+            left: 47%;
+        }
+}
 
-/* 
+.bis::before {
+  left: 59%;
+  width: max-content;
+
+  @media (min-width: 384px) {
+    font-size: 100%;
+    top: 35%;
+  }
+
+  @media (min-width:  768px) {
+    font-size: 140%;
+    top: 33%;
+  }
+  
+  @media (min-width: 992px) {
+    left: 59%;
+    top: 35%;
+  }
+}
+
+/* Color GRIS para la mayoría */
+.bis::before {
+  color: #80808082; /* Gris semitransparente */
+}
+
+.lyrics {
+    @media (min-width: 384px) {
+        font-size: 0.86rem;
+    }
+
+    @media (min-width: 768px) {
+        font-size: 1.6rem;
+    }
+}
+
+.alyrics {
+        @media (min-width: 384px) {
+        font-size: 0.88rem;
+    }
+
+    @media (min-width: 768px) {
+        font-size: 1.659rem;
+    }
+}
 
 .myh {
     @media (min-width: 384px) {margin-left: 14%;}
-    @media (min-width: 768px) {margin-left: 14%;}
-    @media (min-width: 992px) {margin-left: 10%;}
+    @media (min-width: 768px) {margin-left: 13%;}
+    @media (min-width: 992px) {margin-left: 17%;}
 }
-
 
 .hombres::before, .mujeres::before {
-    @media (min-width: 384px) {
-            font-size: 14px;
-
-    }
-    @media (min-width: 768px) {
-    font-size: 20px;
-    }
-
-    @media (min-width: 992px) {
-        position: absolute;
-        font-size: 18px;
-        left: 0% !important;
-    }
-}
-
-    .grupo-columnas {
-    @media (min-width: 384px) {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    @media (min-width: 768px) {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    @media (min-width: 992px) {
-        width: 100%;
-        max-width: 100%;
-    }
+    left: 0%;
+    @media (min-width: 384px) {font-size: 68%;}
+    @media (min-width: 768px) {font-size: 100%;}
+    @media (min-width: 992px) {font-size: 100%;}
 }
 
 .izq {
-    @media (min-width: 384px) {
+    @media (min-width: 768px) {
         width: 100%;
-        max-width: 96%;
-        margin-top: 0%;
-        margin-left: 5%;
+        max-width: 768px;
+        margin-top: 0px;
+        margin-left: 0%;
     }
 
-       @media (min-width: 768px) {
-           margin-left: 1%;;
-        }
-        @media (min-width: 992px) {
-            margin-left: 7%;;
-
-        }
-    }
-
-    .saudio {
-    @media (max-width: 384px) {
-        width: 128.5%;
-        padding: 1px 9px 1px 9px;
+    @media (min-width: 992px) {
+        width: 100%;
+        max-width: 768px;
+        margin-top: 0px;
+        margin-left: 3%;
     }
 }
-*/

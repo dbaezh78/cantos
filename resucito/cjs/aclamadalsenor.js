@@ -57,6 +57,7 @@ const partitura = {
       titulo: NOMBREDELCANTO,
       salmo: "Salmo 100 (99)",
       dbnos: "9",
+      catg: "PRECATECUMENADO",
 
 // Estructura para Cantor (texto)
 

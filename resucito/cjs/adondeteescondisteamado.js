@@ -57,6 +57,7 @@ const partitura = {
       titulo: NOMBREDELCANTO,
       salmo: "Cántico espiritual (San Juan de la Cruz) ",
       dbnos: "238",
+      catg: "ELECCIÓN",
 
 // Estructura para Cantor (texto)
 

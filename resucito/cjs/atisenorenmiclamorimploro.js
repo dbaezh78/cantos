@@ -1,33 +1,32 @@
-/*********************** FUNCIÓN AUXILIAR MEJORADA ***********************/
+/*********************** FUENTE DEL CANTO ***********************/
 
 // Mapeo para celulares 483px
 const pcelular = {
-      //  --cp1: 0.1%;
+//  --cp1: 0.1%;
+      //  --cp18: 1.8%;
+      //  --cp486: 48.6%;
+      //  --cp1547: 154.7%;
+    };
+// Mapeo específico para tablets (800px)
+const pTablet = {
+//  --cp1: 0.1%;
       //  --cp18: 1.8%;
       //  --cp486: 48.6%;
       //  --cp1547: 154.7%;
     };
 
-// Mapeo específico para tablets (800px)
-const pTablet = {
-      //  --cp1: 0.1%;
-      //  --cp18: 1.8%;
-      //  --cp486: 48.6%;
-      //  --cp1547: 154.7%;
-    };
-    
-    function ac(nota, posicion, extension = "") {
+function ac(nota, posicion, extension = "") {
       const anchoPantalla = window.innerWidth;
       let posicionAjustada = posicion;
-      
-      // Solo ajustamos para tablets (601px a 900px)
+
+// Solo ajustamos para tablets (601px a 900px)
       if (anchoPantalla > 600 && anchoPantalla <= 900) {
         posicionAjustada = pTablet[posicion] || posicion;
-        
+
         // Si no está en el mapeo, aplicamos un factor general más preciso
         if (!pTablet[posicion]) {
           const numero = parseInt(posicion.replace('cp', ''));
-          const factor = 0.971; // Factor más preciso para 800px
+          const factor = 0.98; // Factor más preciso para 800px
           posicionAjustada = `cp${Math.round(numero * factor)}`;
         }
       }
@@ -46,141 +45,105 @@ const pTablet = {
       
       return { acorde: nota, posicion: posicionAjustada, base: nota, extension };
     }
-    
+  
     /***********************
      * DATOS DEL CANTO
      ***********************/
-    
-    const NOMBREDELCANTO = "A TI, SEÑOR, EN MI CLAMOR IMPLORO";
-    
-    const partitura = {
+
+const NOMBREDELCANTO = "A TI, SEÑOR, EN MI CLAMOR IMPLORO";
+
+const partitura = {
       tituloc: NOMBREDELCANTO,
       titulo: NOMBREDELCANTO,
       salmo: "Salmo 142 (141)",
       dbnos: "4",
-    
-      // Estructura para Cantor (texto)
-      cantor: [
-        /* 1 */ "Hermanos, a nadie demos ocasión de tropiezo,",
-        /* 2 */ "hermanos, vivamos aceptando las tribulaciones,",
-        /* 3 */ "necesidades, angustias y fatigas,",
-        /* 4 */ "viviendo en pureza, paciencia y bondad,",
-        /* 5 */ "en el Espíritu Santo, y en el poder de Dios,",
-        /* 6 */ "con las armas de la justicia,",
-        /* 7 */ "las de la derecha y las de la izquierda.",
-        /* 8 */ "En calumnias y en buena fama,",
-        /* 9 */ "en gloria e ignominia,",
-        /* 10 */ "como pobres, aunque enriqueciendo a muchos;",
-        /* 11 */ "como quienes nada tienen,",
-        /* 12 */ "aunque lo poseemos todo.",
-        /* 13 */ "Hermanos, os hemos hablado con franqueza,",
-        /* 14 */ "os hemos hablado en toda verdad.",
-        /* 15 */ "No unciros al yugo desigual con los paganos.",
-        /* 16 */ "¿Qué participación hay entre el fiel y el infiel?",
-        /* 17 */ "¿Qué unión entre el santuario de Dios",
-        /* 18 */ "y el santuario de los ídolos?",
-        /* 19 */ "Porque somos el santuario de Dios.",
-        /* 20 */ "Tengo plena confianza en el hablaros,",
-        /* 21 */ "porque estoy orgulloso de vosotros.",
-        /* 22 */ "No unciros al yugo desigual con los paganos.",
-        /* 23 */ "¿Qué participación hay entre el fiel y el infiel?",
-        /* 24 */ "¿Qué unión entre el santuario de Dios",
-        /* 25 */ "y el santuario de los ídolos?",
-        /* 26 */ "En pureza, paciencia y bondad,",
-        /* 27 */ "en el Espíritu Santo, y en el poder de Dios.",
-      ],
-    
+      catg: "PRECATECUMENADO",
+
+// Estructura para Cantor (texto)
+
+cantor: [
+/* 1 */        "Siento que el espíritu en mí se apaga,",
+/* 2 */        "más tú conoces mi sendero.",
+/* 3 */        "Mira, Señor, que en el camino,",
+/* 4 */        "mira, Señor, que me han tendido un lazo.",
+/* 5 */        "Mira, Señor, que a la derecha no hay ninguno,",
+/* 6 */        "ninguno que me conozca.",
+/* 7 */        "Que huye de mí todo consuelo,",
+/* 8 */        "que no hay nadie que se cuide de mi alma.",
+/* 9 */        "Escúchame, Señor, que estoy llorando,",
+/* 10 */        "estoy tan deprimido.",
+/* 11 */        "¡Líbrame tú de estos enemigos",
+/* 12 */        "que son más fuertes que yo!",
+/* 13 */        "¡Saca mi alma de esta cárcel",
+/* 14 */        "y yo daré gracias a tu Nombre!",
+/* 15 */        "En torno a mí los santos harán corro,",
+/* 16 */        "me felicitarán por tu favor hacia mí.",
+],
       // Estructura para Cantor (acordes) - CON FUNCIÓN ac()
       cantorAcordes: [
 // IZQUIERDA
-        /* 1*/ [ac("La", "cp18", "m"), ac("Re", "cp696", "m")],
-        /* 2*/ [ac("Mi", "cp76", ""),  ac("La", "cp710", "m")],
-        /* 3*/ [ac("Re", "cp18", "m"), ac("Mi", "cp464", "")],
-        /* 4*/ [ac("Re", "cp18", "m"), ac("Mi", "cp612", "")],
-        /* 5*/ [ac("Fa", "cp23", ""),  ac("Mi", "cp646", "")],
-        /* 6*/ [ac("Fa", "cp388", "")],
-        /* 7*/ [ac("Mi", "cp544", "")],
-        
-        /* 8*/ [ac("Re", "cp18", "m"),  ac("Mi", "cp434", "")],
-        /* 9*/ [ac("Re", "cp18", "m"),  ac("Mi", "cp274", "")],
-        /* 10*/ [ac("Re", "cp11", "m"), ac("Mi", "cp500", "")],
-        /* 11*/ [ac("Fa", "cp348", "")],
-        /* 12*/ [ac("Mi", "cp360", "")],
-// DERECHA
-        /* 13*/ [ac("La", "cp18", "7"), ac("Re", "cp676", "m")],
-        /* 14*/ [ac("Mi", "cp516", "")],
-        /* 15*/ [ac("Re", "cp18", "m"), ac("Mi", "cp646", "")],
-        /* 16*/ [ac("Re", "cp18", "m"), ac("Mi", "cp700", "")],
-        /* 17*/ [ac("Fa", "cp584", "")],
-        /* 18*/ [ac("Mi", "cp340", "")],
-        /* 19*/ [ac("Re", "cp18", "m"), ac("Mi", "cp532", "")],
+/* 1*/      [ac("Re", "cp14","m")],
+/* 2*/      [ac("Mi", "cp395","7")],
+/* 3*/      [ac("La", "cp14","m"), ac("Re","cp419","m")],
+/* 4*/      [ac("La", "cp617","m")],
+/* 5*/      [ac("Mi", "cp14",""), ac("Mi","cp675","7")],
+/* 6*/      [ac("Fa", "cp14",""), ac("Mi","cp336","")],
+/* 7*/      [ac("Re", "cp14","m")],
+/* 8*/      [ac("Fa", "cp199",""), ac("Mi","cp624","7")],
 
-        /* 20*/ [ac("La", "cp18", "7"), ac("Re", "cp534", "m")],
-        /* 21*/ [ac("Mi", "cp484", "")],
-        /* 22*/ [ac("Re", "cp18", "m"), ac("Mi", "cp650", "")],
-        /* 23*/ [ac("Re", "cp18", "m"), ac("Mi", "cp710", "")],
-        /* 24*/ [ac("Fa", "cp582", "")],
-        /* 25*/ [ac("Mi", "cp340", "")],
-
-        /* 26*/ [ac("Re", "cp18", "m"), ac("Mi", "cp458", "")],
-        /* 27*/ [ac("Fa", "cp238", ""), ac("Mi", "cp640", "")],
+/* 9*/      [ac("Re", "cp14","m"), ac("Mi","cp534","")],
+/* 10*/      [ac("Fa", "cp36",""), ac("Mi","cp263","")],
+/* 11*/      [ac("Fa", "cp14","")],
+/* 12*/      [ac("Sol", "cp85",""), ac("Mi","cp425","")],
+/* 13*/      [ac("La", "cp14","m")],
+/* 14*/      [ac("Sol", "cp14",""), ac("Mi","cp376","")],
+/* 15*/      [ac("Re", "cp56","m")],
+/* 16*/      [ac("Fa", "cp179",""), ac("Mi","cp560","")],
       ],
-    
+
       // Estructura para Asamblea (texto)
       asamblea: [
-        /* 1 */ "HERMANOS, A NADIE DEMOS",
-        /* 2 */ "OCASIÓN DE TROPIEZO,",
-        /* 3 */ "HERMANOS, VIVAMOS ACEPTANDO",
-        /* 4 */ "LAS TRIBULACIONES,",
-        /* 5 */ "NECESIDADES, ANGUSTIAS Y FATIGAS.",
-        /* 6 */ "HERMANOS, A NADIE DEMOS",
-        /* 7 */ "OCASIÓN DE TROPIEZO,",
-        /* 8 */ "HERMANOS, VIVAMOS ACEPTANDO",
-        /* 9 */ "LAS TRIBULACIONES,",
-        /* 10 */ "NECESIDADES, ANGUSTIAS Y FATIGAS.",
-        /* 11 */ "HERMANOS, A NADIE DEMOS",
-        /* 12 */ "OCASIÓN DE TROPIEZO,",
-        /* 13 */ "HERMANOS, VIVAMOS ACEPTANDO",
-        /* 14 */ "LAS TRIBULACIONES,",
-        /* 15 */ "NECESIDADES, ANGUSTIAS Y FATIGAS.",
-        /* 16 */ "HERMANOS, A NADIE DEMOS",
-        /* 17 */ "OCASIÓN DE TROPIEZO,",
-        /* 18 */ "HERMANOS, VIVAMOS ACEPTANDO",
-        /* 19 */ "LAS TRIBULACIONES,",
-        /* 20 */ "NECESIDADES, ANGUSTIAS Y FATIGAS.",
+/* 1 */        "A TI, SEÑOR, EN MI CLAMOR IMPLORO,",
+/* 2 */        "A TI, SEÑOR, EN MI CLAMOR SUPLICO,",
+/* 3 */        "A TI DERRAMO MI LAMENTO,",
+/* 4 */        "A TI MI ANGUSTIA EXPONGO.",
+/* 5 */        "A TI, YO CLAMO SEÑOR,",
+/* 6 */        "A TI, YO DIGO: TÚ SOLO ERES MI REFUGIO,",
+/* 7 */        "TÚ ERES MI PORCIÓN EN ESTA TIERRA,",
+/* 8 */        "MI ÚNICA FELICIDAD.",
+/* 9 */        "A TI, SEÑOR, EN MI CLAMOR IMPLORO,",
+/* 10 */        "A TI, SEÑOR, EN MI CLAMOR SUPLICO,",
+/* 11 */        "A TI DERRAMO MI LAMENTO,",
+/* 12 */        "A TI MI ANGUSTIA EXPONGO.",
+/* 13 */        "A TI, YO CLAMO SEÑOR,",
+/* 14 */        "A TI, YO DIGO: TÚ SOLO ERES MI REFUGIO,",
+/* 15 */        "TÚ ERES MI PORCIÓN EN ESTA TIERRA,",
+/* 16 */        "MI ÚNICA FELICIDAD.",
       ],
-    
       asambleaAcordes: [
-        /* 1*/  [ac("La", "cp16", "m")],
-        /* 2*/  [ac("Re", "cp316", "m")],
-        /* 3*/  [ac("Mi", "cp104", "")],
-        /* 4*/  [ac("La", "cp250", "m")],
-        /* 5*/  [ac("Re", "cp16", "m"), ac("Mi", "cp546", "")],
-
-        /* 6*/  [ac("La", "cp16", "m")],
-        /* 7*/  [ac("Re", "cp316", "m")],
-        /* 8*/  [ac("Mi", "cp104", "")],
-        /* 9*/  [ac("La", "cp250", "m")],
-        /* 10*/ [ac("Re", "cp16", "m"), ac("Mi", "cp546", "")],
-
-        /* 11*/ [ac("La", "cp16", "m")],
-        /* 12*/ [ac("Re", "cp316", "m")],
-        /* 13*/ [ac("Mi", "cp104", "")],
-        /* 14*/ [ac("La", "cp250", "m")],
-        /* 15*/ [ac("Re", "cp16", "m"), ac("Mi", "cp546", "")],
-
-        /* 16*/ [ac("La", "cp16", "m")],
-        /* 17*/ [ac("Re", "cp316", "m")],
-        /* 18*/ [ac("Mi", "cp104", "")],
-        /* 19*/ [ac("La", "cp250", "m")],
-        /* 20*/ [ac("Re", "cp16", "m"), ac("Mi", "cp546", "")],
+/* 1*/      [ac("La", "cp14","m"), ac("Re","cp570","m")],
+/* 2*/      [ac("La", "cp570","m")],
+/* 3*/      [ac("Mi", "cp30","7")],
+/* 4*/      [ac("Fa", "cp30",""), ac("Mi","cp368","")],
+/* 5*/      [ac("La", "cp14","m"), ac("Sol","cp344","")],
+/* 6*/      [ac("Mi", "cp607","7")],
+/* 7*/      [ac("Fa", "cp48","")],
+/* 8*/      [ac("Mi", "cp290","")],
+/* 9*/      [ac("La", "cp14","m"), ac("Re","cp570","m")],
+/* 10*/     [ac("La", "cp570","m")],
+/* 11*/     [ac("Mi", "cp30","7")],
+/* 12*/     [ac("Fa", "cp30",""), ac("Mi","cp368","")],
+/* 13*/     [ac("La", "cp14","m"), ac("Sol","cp344","")],
+/* 14*/     [ac("Mi", "cp607","7")],
+/* 15*/     [ac("Fa", "cp48","")],
+/* 16*/     [ac("Mi", "cp290","")],
       ]
-    };
-    
-    /************************************************
-     * MANEJO DE CARGA Y REDIMENSIONAMIENTO CORREGIDO
-     ************************************************/
-    
+  };
+
+/************************************************
+ * MANEJO DE CARGA Y REDIMENSIONAMIENTO CORREGIDO
+************************************************/
+
     let cargando = false;
     
     function cargarCantoSeguro(partitura) {

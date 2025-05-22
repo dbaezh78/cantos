@@ -103,7 +103,7 @@
         }
   
         .csv {
-          font-style: italic;
+/*          font-style: italic;*/
           color: red;
           font-size: 1rem;
 
@@ -290,6 +290,7 @@
           background-color: transparent;
         
           @media (min-width: 384px) {
+            font-size: 1.45rem; 
           }
 
           /* Tablets pequeñas (≥576px) */
@@ -300,7 +301,7 @@
 
               /* Tablets (≥ 768px) */
           @media (min-width:  768px) {
-            font-size: 1.5rem; /* Tu tamaño original */
+            font-size: 2.176rem; /* Tu tamaño original */
             max-width: 100%;
             border-radius: 6px;
           }

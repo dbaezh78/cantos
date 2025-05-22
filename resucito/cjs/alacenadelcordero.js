@@ -57,6 +57,7 @@ const partitura = {
       titulo: NOMBREDELCANTO,
       salmo: "Himno lat. «Ad cenam Agni providi»",
       dbnos: "237",
+      catg: "ELECCIÓN",
 
 // Estructura para Cantor (texto)
 

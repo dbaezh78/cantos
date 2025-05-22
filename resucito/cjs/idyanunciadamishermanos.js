@@ -57,6 +57,7 @@ const pcelular = {
           titulo: NOMBREDELCANTO,
           salmo: "Mateo 28,10.16-20",
           dbnos: "92",
+          catg: "PRECATECUMENADO",
     
     // Estructura para Cantor (texto)
     

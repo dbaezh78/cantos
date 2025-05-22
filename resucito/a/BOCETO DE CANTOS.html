@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/cantos/src/ico.ico" type="image/x-icon">
@@ -9,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link type=text/css rel=stylesheet href="/cantos/src/css/dbCSS.css" >
     <link type=text/css rel=stylesheet href="/cantos/src/css/cssc/dbcssCantos.css" >
+    <link type=text/css rel=stylesheet href="/cantos/src/css/cssc/NOMBREDELCANTO.css" >
         
   <title id="tc"></title>
 </head>
@@ -57,11 +57,13 @@
 <!-- A1 - PRIMERA FILA DEL CANTO DONDE ESTÁ EL HOME Y EL BUSCADOR-->
             </tr>
 
-                            <tr>        <td class="titulo" id="t1" colspan="6"></td>        </tr>
-<!-- Fila 2: Subtítulo -->  <tr>        <td class="subtitulo" id="s1" colspan="6"></td>     </tr>
+            <!-- Fila 2: Titulo y Subtítulo -->  
+            <tr><td class="titulo" id="t1" colspan="6"></td></tr>
+            <tr><td class="subtitulo" id="s1" colspan="6"></td></tr>
+            
 <!-- A2 - Fila 3: Encabezado de 6 columnas -->
         <tr class="encabezado-columnas odb">
-             <th class="precat">PreCatecumenado</th>
+             <th class="precat" id="catg"></th>
             <th>    <select class="dbMiTraste" data-default=" "></select> <!-- Grado ° --></th>
             <th>    <a href="#" id="toggleVista"><span class="mso">menu_book</span></a></th>
             <th>    <a href="#reproductor-audio" id="audio-control-btn" class="audio-control"><span class="mso audio-icon">play_circle</span></a></th>

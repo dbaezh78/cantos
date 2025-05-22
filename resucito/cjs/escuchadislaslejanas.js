@@ -57,6 +57,7 @@ const partitura = {
       titulo: NOMBREDELCANTO,
       salmo: "Isaias 49,1-16 - Segundo canto de Siervo de Yahveh",
       dbnos: "70",
+      catg: "PRECATECUMENADO",
 
 // Estructura para Cantor (texto)
 

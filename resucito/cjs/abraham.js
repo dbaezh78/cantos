@@ -57,6 +57,7 @@ const partitura = {
       titulo: NOMBREDELCANTO,
       salmo: "Génesis 18,1–5 – Teofanía de Mambré",
       dbnos: "8",
+      catg: "PRECATECUMENADO",
 
 // Estructura para Cantor (texto)
 cantor: [

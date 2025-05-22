@@ -60,6 +60,7 @@ const pTablet = {
       titulo: NOMBREDELCANTO,
       salmo: "Salmo 116 (114-115)",
       dbnos: "18",
+      catg: "PRECATECUMENADO",
     
       // Estructura para Cantor (texto)
       cantor: [

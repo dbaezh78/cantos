@@ -276,6 +276,7 @@ function cargarCanto(partitura) {
     document.getElementById('t1').textContent = partitura.titulo;
     document.getElementById('s1').textContent = partitura.salmo;
     document.getElementById('dbno').textContent = partitura.dbnos;
+    document.getElementById('catg').textContent = partitura.catg;
 
     // Asamblea
     partitura.asamblea.forEach((texto, i) => {
