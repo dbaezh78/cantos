@@ -6,6 +6,10 @@
     @media (min-width: 384px) {
         margin-left: 2%;
     }
+
+    @media (min-width: 992px) {
+        margin-left: 8%;
+    }
 }
 
 /*
@@ -27,5 +31,13 @@
 .ta::before, .tc::before {
     @media (min-width: 384px) {
     left: -5%;
+    }
+
+    @media (min-width: 768px) {
+    left: -8%;
+    }
+
+    @media (min-width: 992px) {
+    left: -7%;
     }
 }

@@ -1,12 +1,12 @@
 .izq {
     @media (min-width: 768px) {
-        margin-left: 6%;
+        margin-left: 8%;
     }
 }
 
 .der {
     @media (min-width: 768px) {
-        margin-left: 6%;
+        margin-left: 8%;
     }
 }
 
