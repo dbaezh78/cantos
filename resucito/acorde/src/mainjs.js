@@ -67,6 +67,9 @@ function renderizarAcordes(contenedor, acordesData) {
     divAcordes.className = 'chords';
     
     acordesData.forEach(acorde => {
+        // Verificamos si el acorde está vacío
+        const acordeValido = acorde.acorde && acorde.acorde.trim() !== "";
+        
         const grupo = document.createElement('div');
         grupo.className = 'chord-container';
         grupo.classList.add(acorde.posicion);
@@ -74,8 +77,9 @@ function renderizarAcordes(contenedor, acordesData) {
         const select = document.createElement('select');
         select.className = 'chord no-arrow';
         select.name = 'nMusic';
-        select.dataset.default = acorde.base;
-        select.innerHTML = generarOpciones(acorde.base);
+        // Usamos empty string si el acorde base está vacío
+        select.dataset.default = acordeValido ? acorde.base : "";
+        select.innerHTML = generarOpciones(select.dataset.default);
         
         grupo.appendChild(select);
         
