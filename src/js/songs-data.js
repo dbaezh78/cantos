@@ -170,7 +170,7 @@ const songs = [
     {id:167,title: "Por qué las gentes conjuran", subtitle: "Salmo 2", category: "Precatecumenado", moments: ["Cuaresma","Laudes","Antiguo Testamento"], url: "/cantos/resucito/p/porquelasgentesconjuran.html"},
     {id:168,title: "Porque mi yugo es suave", subtitle: "Mateo 11,28ss", category: "Precatecumenado", moments: ["Laudes","Nuevo Testamento"], url: "/cantos/resucito/p/porquemiyugoessuave.html"},
     {id:169,title: "Prefacio para Adviento y Navidad", subtitle: "Prefacio IV de Adviento*", category: "Liturgia", moments: [""], url: "/cantos/resucito/p/prefacioparaadvientoynavidad.html"},
-    {id:170,title: "Prefacio para el tiempo Pascual", subtitle: "Prefacio I de Pascua*", category: "Liturgia", moments: [""], url: "/cantos/resucito/p/prefacioparaeltiempopascual.html"},
+    {id:170,title: "Prefacio para el tiempo Pascual", subtitle: "Prefacio I de Pascua*", category: "Liturgia", moments: [""], url: "/cantos/resucito/l/prefacioparaeltiempopascual.html"},
     {id:171,title: "Pregón Pascual", subtitle: "«Exsultet»", category: "Liturgia", moments: [""], url: "/cantos/resucito/p/pregonpascual.html"},
     {id:172,title: "Qué amables son tus moradas", subtitle: "Sal 84 (83)", category: "Precatecumenado", moments: ["Cuaresma","Entrada","Antiguo Testamento"], url: "/cantos/resucito/q/queamablessontusmoradas.html"},
     {id:173,title: "Qué estupendo, qué alegría", subtitle: "Sal 133 (132)", category: "Precatecumenado", moments: ["Paz","Antiguo Testamento"], url: "/cantos/resucito/q/queestupendoquealegria.html"},

@@ -1,0 +1,82 @@
+.izq, .der {
+    @media (min-width: 768px) {
+        margin-left: 5%;
+    }
+}
+
+
+
+.l1 {
+    left: 16rem;
+}
+
+.l2 {
+    left: 20rem;
+}
+
+.bis1, .bis2 {
+    position: relative;
+    padding-left: 1.5em;}
+
+.bis1::before {
+          position: absolute;
+          top: 0px;
+          font-family: Arial, sans-serif;
+          line-height: 1.3;
+          font-weight: bold;
+
+          @media (min-width: 384px) {
+            font-size: 100%;
+            left: -3rem;
+          }
+
+          @media (min-width:  768px) {
+            font-size: 140%;
+            left: 3rem;
+          }
+          
+          @media (min-width: 992px) {
+            font-size: 100%;
+            left: -7%;
+          }
+        }
+        
+
+        .bis1::before {
+          color: #80808082; /* Gris semitransparente */
+        }
+
+        .bis1::before {content: "BIS A.";}
+
+        /*BIS 2*/
+
+        .bis2::before {
+          position: absolute;
+          left: -8%;
+          top: 0px;
+          font-family: Arial, sans-serif;
+          line-height: 1.3;
+          font-weight: bold;
+
+          @media (min-width: 384px) {
+            font-size: 100%;
+            left: -4rem;
+          }
+
+          @media (min-width:  768px) {
+            font-size: 140%;
+            left: 5rem;
+          }
+          
+          @media (min-width: 992px) {
+            font-size: 100%;
+            left: -7%;
+          }
+        }
+        
+
+        .bis2::before {
+          color: #80808082; /* Gris semitransparente */
+        }
+
+        .bis2::before {content: "BIS A.";}
