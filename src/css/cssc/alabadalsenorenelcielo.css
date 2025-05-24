@@ -11,160 +11,159 @@
 }
 
 .solyluna {
-    @media (min-width: 384px) {left: 70px;}
-    @media (min-width: 768px) {left: 210px;}
-    @media (min-width: 992px) {left: 92px;}
+    @media (min-width: 384px) {left: 70px;font-size: 0.9rem;}
+    @media (min-width: 768px) {left: 210px;font-size: 1.6rem;}
+    @media (min-width: 992px) {left: 92px;font-size: 1.23rem;}
 }
 
 .estrellaslucientes {
-    @media (min-width: 384px) {left: 31px;}
-    @media (min-width: 768px) {left: 138px;}
-    @media (min-width: 992px) {left: 44px;}
+    @media (min-width: 384px) {left: 31px;font-size: 0.9rem;}
+    @media (min-width: 768px) {left: 138px;font-size: 1.6rem;}
+    @media (min-width: 992px) {left: 44px;font-size: 1.23rem;}
 }
 
 .espacioscelestes {
-    @media (min-width: 384px) {left: 38px;}
-    @media (min-width: 768px) {left: 151px;}
-    @media (min-width: 992px) {left: 52px;}
+    @media (min-width: 384px) {left: 38px;font-size: 0.9rem;}
+    @media (min-width: 768px) {left: 151px;font-size: 1.6rem;}
+    @media (min-width: 992px) {left: 52px;font-size: 1.23rem;}
 }
 
 .aguascuelgancielo {
-    @media (min-width: 384px) {left: 11px;}
-    @media (min-width: 768px) {left: 110px;}
-    @media (min-width: 992px) {left: 22px;}
+    @media (min-width: 384px) {left: 11px;font-size: 0.9rem;}
+    @media (min-width: 768px) {left: 110px;font-size: 1.6rem;}
+    @media (min-width: 992px) {left: 22px;font-size: 1.23rem;}
  }
 
  .alabennombreSeñor1 {
-    @media (min-width: 384px) {left: 32px;}
-    @media (min-width: 768px) {left: 140px;}
-    @media (min-width: 992px) {left: 45px;}
+    @media (min-width: 384px) {left: 32px;font-size: 0.9rem;}
+    @media (min-width: 768px) {left: 140px;font-size: 1.6rem;}
+    @media (min-width: 992px) {left: 45px;font-size: 1.23rem;}
  }
 
  .Élmandóexistieron {
-    @media (min-width: 384px) {left: 2px;}
-    @media (min-width: 768px) {left: 94px;}
-    @media (min-width: 992px) {left: 11px;}
+    @media (min-width: 384px) {left: 2px;font-size: 0.9rem;}
+    @media (min-width: 768px) {left: 94px;font-size: 1.6rem;}
+    @media (min-width: 992px) {left: 11px;font-size: 1.23rem;}
  }
 
 .dioconsistenciaperpetua {
-    @media (min-width: 384px) {left: 22px;}
-    @media (min-width: 768px) {left: 125px;}
-    @media (min-width: 992px) {left: 34px;}
+    @media (min-width: 384px) {left: 22px;font-size: 0.9rem;}
+    @media (min-width: 768px) {left: 125px;font-size: 1.6rem;}
+    @media (min-width: 992px) {left: 34px;font-size: 1.23rem;}
 }
 
 .leynopasará {
-    @media (min-width: 384px) {left: 62px;}
-    @media (min-width: 768px) {left: 187px;}
-    @media (min-width: 992px) {left: 80px;}
-
+    @media (min-width: 384px) {left: 62px;font-size: 0.9rem;}
+    @media (min-width: 768px) {left: 187px;font-size: 1.6rem;}
+    @media (min-width: 992px) {left: 80px;font-size: 1.23rem;}
 }
 
 .alabadSeñortierra {
-    @media (min-width: 384px) {left: 12px;}
-    @media (min-width: 768px) {left: 123px;}
-    @media (min-width: 992px) {left: 25px;}
+    @media (min-width: 384px) {left: 12px;font-size: 0.9rem;}
+    @media (min-width: 768px) {left: 123px;font-size: 1.6rem;}
+    @media (min-width: 992px) {left: 25px;font-size: 1.23rem;}
 }
 
 .cetáceosabismosmar {
-    @media (min-width: 384px) {left: 34px;}
-    @media (min-width: 768px) {left: 138px;}
-    @media (min-width: 992px) {left: 44px;}
+    @media (min-width: 384px) {left: 34px;font-size: 0.9rem;}
+    @media (min-width: 768px) {left: 138px;font-size: 1.6rem;}
+    @media (min-width: 992px) {left: 44px;font-size: 1.23rem;}
 }
 
 .rayosgranizonievebruma{
-    @media (min-width: 384px) {left: 24px;}
-    @media (min-width: 768px) {left: 125px;}
-    @media (min-width: 992px) {left: 34px;}
+    @media (min-width: 384px) {left: 24px;font-size: 0.9rem;}
+    @media (min-width: 768px) {left: 125px;font-size: 1.6rem;}
+    @media (min-width: 992px) {left: 34px;font-size: 1.23rem;}
 }
 
 .vientohuracanado {
-    @media (min-width: 384px) {left: 58px;}
-    @media (min-width: 768px) {left: 179px;}
-    @media (min-width: 992px) {left: 73px;}
+    @media (min-width: 384px) {left: 58px;font-size: 0.9rem;}
+    @media (min-width: 768px) {left: 179px;font-size: 1.6rem;}
+    @media (min-width: 992px) {left: 73px;font-size: 1.23rem;}
 }
 
 .montestodassierras {
-    @media (min-width: 384px) {left: 46px;}
-    @media (min-width: 768px) {left: 157px;}
-    @media (min-width: 992px) {left: 58px;}
+    @media (min-width: 384px) {left: 46px;font-size: 0.9rem;}
+    @media (min-width: 768px) {left: 157px;font-size: 1.6rem;}
+    @media (min-width: 992px) {left: 58px;font-size: 1.23rem;}
 }
 
 .árbolesfrutalescedros {
-    @media (min-width: 384px) {left: 58px;}
-    @media (min-width: 768px) {left: 174px;}
-    @media (min-width: 992px) {left: 71px;}
+    @media (min-width: 384px) {left: 58px;font-size: 0.9rem;}
+    @media (min-width: 768px) {left: 174px;font-size: 1.6rem;}
+    @media (min-width: 992px) {left: 71px;font-size: 1.23rem;}
 }
 
 .fierasanimalesdomésticos {
-    @media (min-width: 384px) {left: 23px;}
-    @media (min-width: 768px) {left: 123px;}
-    @media (min-width: 992px) {left: 32px;}
+    @media (min-width: 384px) {left: 23px;font-size: 0.9rem;}
+    @media (min-width: 768px) {left: 123px;font-size: 1.6rem;}
+    @media (min-width: 992px) {left: 32px;font-size: 1.23rem;}
 }
 
 .reptilespájarosvuelan {
-    @media (min-width: 384px) {left: 27px;}
-    @media (min-width: 768px) {left: 129px;}
-    @media (min-width: 992px) {left: 37px;}
+    @media (min-width: 384px) {left: 27px;font-size: 0.9rem;}
+    @media (min-width: 768px) {left: 129px;font-size: 1.6rem;}
+    @media (min-width: 992px) {left: 37px;font-size: 1.23rem;}
 }
 
 .reyespueblosorbe {
-    @media (min-width: 384px) {left: 55px;}
-    @media (min-width: 768px) {left: 170px;}
-    @media (min-width: 992px) {left: 71px;}
+    @media (min-width: 384px) {left: 55px;font-size: 0.9rem;}
+    @media (min-width: 768px) {left: 170px;font-size: 1.6rem;}
+    @media (min-width: 992px) {left: 71px;font-size: 1.23rem;}
 }
 
 .príncipesjefesmundo {
-    @media (min-width: 384px) {left: 36px;}
-    @media (min-width: 768px) {left: 141px;}
-    @media (min-width: 992px) {left: 48px;}
+    @media (min-width: 384px) {left: 36px;font-size: 0.9rem;}
+    @media (min-width: 768px) {left: 141px;font-size: 1.6rem;}
+    @media (min-width: 992px) {left: 48px;font-size: 1.23rem;}
 }
 
 .jóvenesdoncellas {
-    @media (min-width: 384px) {left: 64px;}
-    @media (min-width: 768px) {left: 183px;}
-    @media (min-width: 992px) {left: 79px;}
+    @media (min-width: 384px) {left: 64px;font-size: 0.9rem;}
+    @media (min-width: 768px) {left: 183px;font-size: 1.6rem;}
+    @media (min-width: 992px) {left: 79px;font-size: 1.23rem;}
 }
 
 .viejosniños {
-    @media (min-width: 384px) {left: 25px;}
-    @media (min-width: 768px) {left: 125px;}
-    @media (min-width: 992px) {left: 34px;}
+    @media (min-width: 384px) {left: 25px;font-size: 0.9rem;}
+    @media (min-width: 768px) {left: 125px;font-size: 1.6rem;}
+    @media (min-width: 992px) {left: 34px;font-size: 1.23rem;}
 }
 
 .alabennombreSeñor2 {
-    @media (min-width: 384px) {left: 34px;}
-    @media (min-width: 768px) {left: 139px;}
-    @media (min-width: 992px) {left: 46px;}
+    @media (min-width: 384px) {left: 34px;font-size: 0.9rem;}
+    @media (min-width: 768px) {left: 139px;font-size: 1.6rem;}
+    @media (min-width: 992px) {left: 46px;font-size: 1.23rem;}
 }
 
 .úniconombresublime {
-    @media (min-width: 384px) {left: 55px;}
-    @media (min-width: 768px) {left: 170px;}
-    @media (min-width: 992px) {left: 69px;}
+    @media (min-width: 384px) {left: 55px;font-size: 0.9rem;}
+    @media (min-width: 768px) {left: 170px;font-size: 1.6rem;}
+    @media (min-width: 992px) {left: 69px;font-size: 1.23rem;}
 }
 
 .majestadcielotierra {
-    @media (min-width: 384px) {left: 66px;}
-    @media (min-width: 768px) {left: 187px;}
-    @media (min-width: 992px) {left: 82px;}
+    @media (min-width: 384px) {left: 66px;font-size: 0.9rem;}
+    @media (min-width: 768px) {left: 187px;font-size: 1.6rem;}
+    @media (min-width: 992px) {left: 82px;font-size: 1.23rem;}
 }
 
 .Éldafuerzavigorsupueblo {
-    @media (min-width: 384px) {left: 10px;}
-    @media (min-width: 768px) {left: 103px;}
-    @media (min-width: 992px) {left: 17px;}
+    @media (min-width: 384px) {left: 10px;font-size: 0.9rem;}
+    @media (min-width: 768px) {left: 103px;font-size: 1.6rem;}
+    @media (min-width: 992px) {left: 17px;font-size: 1.23rem;}
 }
 
 .alabanzatodosfieles {
-    @media (min-width: 384px) {left: 29px;}
-    @media (min-width: 768px) {left: 130px;}
-    @media (min-width: 992px) {left: 39px;}
+    @media (min-width: 384px) {left: 29px;font-size: 0.9rem;}
+    @media (min-width: 768px) {left: 130px;font-size: 1.6rem;}
+    @media (min-width: 992px) {left: 39px;font-size: 1.23rem;}
 }
 
 .israelpuebloelegido {
-    @media (min-width: 384px) {left: 36px;}
-    @media (min-width: 768px) {left: 143px;}
-    @media (min-width: 992px) {left: 48px;}
+    @media (min-width: 384px) {left: 36px;font-size: 0.9rem;}
+    @media (min-width: 768px) {left: 143px;font-size: 1.6rem;}
+    @media (min-width: 992px) {left: 48px;font-size: 1.23rem;}
 }
 
 .a1 {
@@ -177,5 +176,13 @@
     @media (min-width: 384px) {left: 10px;}
     @media (min-width: 768px) {left: 105px;}
     @media (min-width: 992px) {left: 23px;}
+
+}
+
+
+.sz {
+    @media (min-width: 384px) {font-size: 14.5px;}
+    @media (min-width: 768px) {font-size: 1.6rem;}
+    @media (min-width: 992px) {font-size: 1.22rem;}
 
 }
