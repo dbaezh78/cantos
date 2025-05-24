@@ -1,10 +1,11 @@
 .izq, .der {
+    @media (min-width: 384px) {
+        margin-left: 5%;
+    }
     @media (min-width: 768px) {
         margin-left: 5%;
     }
 }
-
-
 
 .l1 {
     left: 16rem;
