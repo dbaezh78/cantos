@@ -2,18 +2,12 @@
 
 // Mapeo para celulares 483px
 const pcelular = {
-    //  --cp1: 0.1%;
-          //  --cp18: 1.8%;
-          //  --cp486: 48.6%;
-          //  --cp1547: 154.7%;
-        };
+
+};
     // Mapeo específico para tablets (800px)
     const pTablet = {
-    //  --cp1: 0.1%;
-          //  --cp18: 1.8%;
-          //  --cp486: 48.6%;
-          //  --cp1547: 154.7%;
-        };
+      
+    };
     
     function ac(nota, posicion, extension = "") {
           const anchoPantalla = window.innerWidth;
