@@ -55,7 +55,7 @@ const NOMBREDELCANTO = "PLEGARIA EUCARÍSTICA II";
 const partitura = {
       tituloc: NOMBREDELCANTO,
       titulo: NOMBREDELCANTO,
-      salmo: "Plegaria Eucarística II",
+      salmo: "PModelo I (Página 1)",
       dbnos: "194",
       catg: "LITÚRGICOS",
 // Estructura para Cantor (texto)
@@ -84,8 +84,7 @@ cantor: [
 /* 21 */        "un pueblo santo.",
 /* 22 */        "Por eso, con los ángeles y los santos,",
 /* 23 */        "cantamos tu gloria diciendo:",
-/* 24 */        "• Me lodía adaptable para los prefacios de solemnidade s o de varios tiempos litúrgicos.",
-
+/* 24 */        "• Melodía adaptable para los prefacios de solemnidades o de varios tiempos litúrgicos.",
 ],
       // Estructura para Cantor (acordes) - CON FUNCIÓN ac()
       cantorAcordes: [

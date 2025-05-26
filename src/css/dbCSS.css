@@ -627,7 +627,7 @@
     
   .piecategoria, .ppascua, .ppenteco, 
   .plaudes, .pcuaresma, .padviento, .pnavidad,
-  .pentrada, .ppenit .final, .paz {
+  .pentrada, .ppenit .final, .paz, .ordinario {
   font-family: 'Franklin Gothic Medium';
   font-weight: bold;
   }
@@ -645,6 +645,7 @@
         .ppenteco {color: #f0433d;}
         .pnavidad {color: #f0433d;}
         .plaudes {color: rgb(56, 162, 6);}
+        .ordinario {color: rgb(56, 162, 6);}
         .pcuaresma {color: purple;}
         .padviento {color: purple;}
         .pentrada {color: #3dcef0;}
@@ -866,6 +867,9 @@
       .dbsp6 {padding-bottom: 6%;@media (min-width: 384px)  {padding-bottom: 6%;}@media (min-width: 412px)  {padding-bottom: 6%;}@media (min-width: 576px)  {padding-bottom: 6%;}@media (min-width:  768px)  {padding-bottom: 6%;}@media (min-width: 992px)  {padding-bottom: 6%;}@media (min-width: 1200px) {padding-bottom: 6%;}@media (min-width: 1920px) {padding-bottom: 6%;}}
       .dbsp7 {padding-bottom: 7%;@media (min-width: 384px)  {padding-bottom: 7%;}@media (min-width: 412px)  {padding-bottom: 7%;}@media (min-width: 576px)  {padding-bottom: 7%;}@media (min-width:  768px)  {padding-bottom: 7%;}@media (min-width: 992px)  {padding-bottom: 7%;}@media (min-width: 1200px) {padding-bottom: 7%;}@media (min-width: 1920px) {padding-bottom: 7%;}}
       .dbsp8 {padding-bottom: 8%;@media (min-width: 384px)  {padding-bottom: 8%;}@media (min-width: 412px)  {padding-bottom: 8%;}@media (min-width: 586px)  {padding-bottom: 8%;}@media (min-width:  7868px)  {padding-bottom: 8%;}@media (min-width: 992px)  {padding-bottom: 8%;}@media (min-width: 1200px) {padding-bottom: 8%;}@media (min-width: 1920px) {padding-bottom: 8%;}}
+      .dbsp9 {padding-bottom: 9%;@media (min-width: 384px)  {padding-bottom: 9%;}@media (min-width: 412px)  {padding-bottom: 9%;}@media (min-width: 586px)  {padding-bottom: 9%;}@media (min-width:  7868px)  {padding-bottom: 9%;}@media (min-width: 992px)  {padding-bottom: 9%;}@media (min-width: 1200px) {padding-bottom: 9%;}@media (min-width: 1920px) {padding-bottom: 9%;}}
+      .dbsp16 {padding-bottom: 16%;@media (min-width: 384px)  {padding-bottom: 16%;}@media (min-width: 412px)  {padding-bottom: 16%;}@media (min-width: 586px)  {padding-bottom: 9%;}@media (min-width:  7868px)  {padding-bottom: 16%;}@media (min-width: 992px)  {padding-bottom: 16%;}@media (min-width: 1200px) {padding-bottom: 16%;}@media (min-width: 1920px) {padding-bottom: 16%;}}
+      .dbsp21 {padding-bottom: 21%;@media (min-width: 384px)  {padding-bottom: 21%;}@media (min-width: 412px)  {padding-bottom: 21%;}@media (min-width: 586px)  {padding-bottom: 9%;}@media (min-width:  7868px)  {padding-bottom: 21%;}@media (min-width: 992px)  {padding-bottom: 21%;}@media (min-width: 1200px) {padding-bottom: 21%;}@media (min-width: 1920px) {padding-bottom: 21%;}}
 
       .dbtop1  { padding-top: 1%; }
       .dbtop2  { padding-top: 2%; }

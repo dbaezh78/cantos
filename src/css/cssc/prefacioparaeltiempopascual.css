@@ -7,17 +7,11 @@
     }
 }
 
-.l1 {
-    left: 16rem;
-}
-
-.l2 {
-    left: 20rem;
-}
 
 .bis1, .bis2 {
     position: relative;
-    padding-left: 1.5em;}
+    width: inherit;
+  }
 
 .bis1::before {
           position: absolute;
@@ -28,21 +22,20 @@
 
           @media (min-width: 384px) {
             font-size: 100%;
-            left: -3rem;
+            /*left: -3rem;*/
           }
 
           @media (min-width:  768px) {
             font-size: 140%;
-            left: 3rem;
+            /*left: 3rem;*/
           }
           
           @media (min-width: 992px) {
             font-size: 100%;
-            left: -7%;
+            padding-left: 14rem;
           }
         }
         
-
         .bis1::before {
           color: #80808082; /* Gris semitransparente */
         }
@@ -53,28 +46,26 @@
 
         .bis2::before {
           position: absolute;
-          left: -8%;
           top: 0px;
           font-family: Arial, sans-serif;
-          line-height: 1.3;
           font-weight: bold;
+          line-height: 1.3;
 
           @media (min-width: 384px) {
             font-size: 100%;
-            left: -4rem;
+            /*padding-left: -4rem;*/
           }
 
           @media (min-width:  768px) {
             font-size: 140%;
-            left: 5rem;
+            /*left: 5rem;*/
           }
           
           @media (min-width: 992px) {
             font-size: 100%;
-            left: -7%;
-          }
+            padding-left: 18rem;
+            }
         }
-        
 
         .bis2::before {
           color: #80808082; /* Gris semitransparente */
