@@ -56,7 +56,9 @@
       body:has(.cat) {background-color: #ebf7fd;}
       body:has(.eleccion) {background-color:#eaffea;}
 
-      a {text-decoration: none;}
+      a {
+        text-decoration: none;
+      }
 
       em {
         font-family: Fave;
@@ -627,7 +629,7 @@
     
   .piecategoria, .ppascua, .ppenteco, 
   .plaudes, .pcuaresma, .padviento, .pnavidad,
-  .pentrada, .ppenit .final, .paz, .ordinario {
+  .pentrada, .ppenit .final, .paz, .ordinario, .pliturgia {
   font-family: 'Franklin Gothic Medium';
   font-weight: bold;
   }
@@ -641,6 +643,7 @@
             margin: 0px;
         }
 
+        .pliturgia {color: rgb(223, 198, 12);}
         .ppascua {color: rgb(33 150 243);}
         .ppenteco {color: #f0433d;}
         .pnavidad {color: #f0433d;}
@@ -653,11 +656,9 @@
         .final {color: #3dcef0;}
         .ppenit {color:purple;}
       
-
         .dh {
           display: none;
       }
-
 
           .saudio {
             width: 99.89%;
@@ -735,6 +736,10 @@
           margin-left: 19%
         }
 
+.rojo {
+  color: red;
+  font-weight: bold;
+}
       /* Color ROJO solo para .melisma */
 .melisma::before {
   color: red;
