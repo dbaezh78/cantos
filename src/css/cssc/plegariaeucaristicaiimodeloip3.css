@@ -35,6 +35,11 @@
             font-size: 1.3rem;
             margin-left: -25px;
         }
+        @media (min-width: 992px) {
+            width: 100%;
+            font-size: 1rem;
+        }
+
     }
 
 
@@ -54,6 +59,7 @@
         }
         @media (min-width: 992px) {
         width: 100%;
+        font-size: 1rem;
         }
     }
 
@@ -73,6 +79,11 @@
             margin-left: -25px;
             width: 78%;
         }
+        @media (min-width: 992px) {
+            width: 90%;
+            font-size: 1.2rem;
+        }
+
 
 }
 
