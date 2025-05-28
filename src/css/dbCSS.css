@@ -644,6 +644,8 @@
             margin: 0px;
         }
 
+        .vmaria {color: rgb(84 167 216);}
+        .pprecatec {color: rgb(81, 83, 84);}
         .pliturgia {color: rgb(223, 198, 12);}
         .ppascua {color: rgb(33 150 243);}
         .ppenteco {color: #f0433d;}
@@ -1196,3 +1198,38 @@
 }
 
 */
+
+/* CSS en clase MENU REDES SOCIALES*/
+  .menu-trigger {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .social-menu {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background: white;
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 100;
+    min-width: 120px;
+  }
+  
+  .social-menu a {
+    display: block;
+    padding: 5px 0;
+    color: black;
+    text-decoration: none;
+  }
+  
+  .social-menu a:hover {
+    color: #555;
+  }
+  
+  .show-menu {
+    display: block !important;
+  }

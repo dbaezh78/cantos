@@ -2,7 +2,7 @@
 const songs = [
 
         {id:1,title: "A la cena del Cordero", subtitle: "Himno lat. «Ad cenam Agni providi»", category: "Eleccion", moments: ["Pascua", "Pentecostés", "Entrada", ""], url: "/cantos/resucito/a/alacenadelcordero.html"},
-        {id:2,title: "A la víctima pascual", subtitle: "Secuencia de Pascua - Himno lat. «Victimae paschall laudes» ", category: "Precatecumenado", moments: ["Pascua", "Pentecostés", "Entrada", "Comunión", "Final", "Nuevo Testamento"], url: "/cantos/resucito/a/alavictimapascual.html"},
+        {id:2,title: "A la víctima pascual", subtitle: "Secuencia de Pascua - Himno lat. «Victimae paschall laudes» ", category: "Precatecumenado", moments: ["Pascua", "Pentecostés", "Comunión"], url: "/cantos/resucito/a/alavictimapascual.html"},
         {id:3,title: "A nadie demos ocasión de tropiezo", subtitle: "2ª Corintios 6,3ss", category: "Precatecumenado", moments: ["Nuevo Testamento"], url: "/cantos/resucito/a/anadiedemosocasiondetropiezo.html"},
         {id:4,title: "A ti levanto mis ojos", subtitle: "Salmo 123 (122)", category: "Precatecumenado", moments: ["Cuaresma", "Antiguo Testamento"], url: "/cantos/resucito/a/atilevantomisojos.html"},
         {id:5,title: "A ti, Señor, en mi clamor imploro", subtitle: "Salmo 142 (141)", category: "Precatecumenado", moments: ["Cuaresma", "Antiguo Testamento"], url: "/cantos/resucito/a/atisenorenmiclamorimploro.html"},
@@ -25,7 +25,7 @@ const songs = [
         {id:22,title: "Amén, amén, amén", subtitle: "Apocalipsis 7,12-14 ", category: "Precatecumenado", moments: ["Cuaresma", "Laudes", "Antiguo Testamento", ""], url: "/cantos/resucito/a/amenamenamen.html"},
         {id:23,title: "Amo al Señor", subtitle: "Salmo 116 (114-115)", category: "Precatecumenado", moments: ["Cuaresma"], url: "/cantos/resucito/a/amoalsenor.html"},
         {id:24,title: "Antífona para el Evangelio", subtitle: "Tiempo de Cuaresma", category: "Liturgia", moments: ["Pascua", "Niños", "Fracción del Fracción del Pan", "Antiguo Testamento"], url: "/cantos/resucito/liturgia/antifonaparaelevangelio.html"},
-        {id:25,title: "Aquedah", subtitle: "Gn 22,1-19 - Del Targum Neofiti sobre el sacrificio de Isaac", category: "Precatecumenado", moments: ["Cuaresma"], url: "/cantos/resucito/a/aquedah.html"},
+        {id:25,title: "Aquedah", subtitle: "Gn 22,1-19 - Del Targum Neofiti sobre el sacrificio de Isaac", category: "Precatecumenado", moments: ["Pascua", "Pentecostés", "Comunión"], url: "/cantos/resucito/a/aquedah.html"},
         {id:26,title: "Así habla el amén", subtitle: "Ap 3,14-20", category: "Precatecumenado", moments: ["Virgen", "Nuevo Testamento"], url: "/cantos/resucito/a/asihablaelamen.html"},
         {id:27,title: "Ave María I", subtitle: "Lc 1,28ss", category: "Precatecumenado", moments: ["Virgen", "Final", "Nuevo Testamento"], url: "/cantos/resucito/a/avemariai.html"},
         {id:28,title: "Ave María II (1984)", subtitle: "Lc 1,28ss - 1984 ", category: "Precatecumenado", moments: ["Cuaresma", "Laudes", "Antiguo Testamento"], url: "/cantos/resucito/a/avemariaii(1984).html"},
@@ -233,6 +233,6 @@ const songs = [
         {id:232,title: "Yo vengo a reunir", subtitle: "Isaías 66,18-21", category: "Precatecumenado", moments: ["Nuevo Testamento"], url: "/cantos/resucito/y/yovengoareunir.html"},
         {id:233,title: "Zaqueo", subtitle: "Lucas 19,1-10", category: "Precatecumenado", moments: ["Navidad", "Niños"], url: "/cantos/resucito/z/zaqueo.html"},
         {id:234,title: "Prountuario de Acordes", subtitle: "Notas", category: "Precatecumenado", moments: ["Cuaresma", "Laudes", "Antiguo Testamento"], url: "/cantos/resucito/p/prountuariodeacordes.html"},
-        {id:235,title: "Libro de Canto en PDF", subtitle: "Libro de Canto del Camino Neo Catecumenal", category: "Catecumenado", moments: [""], url: "/cantos/src/doc/resucito.pdf", targetBlank: true }
+        {id:235,title: "Libro de Canto en PDF", subtitle: "Libro de Canto del Camino Neo Catecumenal", category: "Precatecumenado", moments: [""], url: "/cantos/src/doc/resucito.pdf", targetBlank: true }
   
     ];

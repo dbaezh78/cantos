@@ -1,0 +1,115 @@
+    .raya1, .raya2 {
+        position: relative;
+        min-height: 0px;
+    }
+
+            .raya1::before {
+                content: "";
+                position: absolute;
+                border-left: 2px solid #c6c5c5;
+                
+                /* Media queries para raya1 */
+                @media (min-width: 384px) {
+                    height: 71px;
+                    margin-left: 54%;
+                    margin-top: -14%;
+                }
+
+                @media (min-width: 768px) {
+                    height: 90px;
+                    margin-left: 41%;
+                    margin-top: -8%;
+                }
+
+                @media (min-width: 992px) {
+                    height: 68px;
+                    margin-left: 43%;
+                    margin-top: -9%
+
+                }
+            }
+            .raya2::before {
+                content: "";
+                position: absolute;
+                border-left: 2px solid #c6c5c5;
+                
+                /* Media queries para raya1 */
+                @media (min-width: 384px) {
+                    height: 70px;
+                    margin-left: 83%;
+                    margin-top: -14%;
+                }
+
+                @media (min-width: 768px) {
+                    height: 88px;
+                    margin-left: 63%;
+                    margin-top: -8%;
+                }
+
+                @media (min-width: 992px) {
+                    height: 70px;
+                    margin-left: 67%;
+                    margin-top: -9%;
+
+                }
+            }
+
+        .bis1, .bis2 {
+            position: relative;
+            padding-left: 1.5em;
+        }
+        
+        .bis1::before {
+            position: absolute;
+            font-family: Arial, sans-serif;
+            line-height: 1.3;
+            font-weight: bold;
+
+            @media (min-width: 384px) {
+                font-size: 100%;
+                margin-top: -6%;
+                margin-left: 50%;
+            }
+
+            @media (min-width:  768px) {
+                font-size: 140%;
+                margin-top: -3.5%;
+                margin-left: 40%;
+              }
+          
+            @media (min-width: 992px) {
+                font-size: 1.4rem;
+                margin-top: -5%;
+                margin-left: 40%;
+            }
+        }
+
+                .bis2::before {
+            position: absolute;
+            font-family: Arial, sans-serif;
+            line-height: 1.3;
+            font-weight: bold;
+
+            @media (min-width: 384px) {
+                font-size: 100%;
+                margin-top: -6%;
+                margin-left: 78%;
+            }
+
+            @media (min-width:  768px) {
+                font-size: 140%;
+                margin-top: -3.5%;
+                margin-left: 62%;
+              }
+          
+            @media (min-width: 992px) {
+                font-size: 1.4rem;
+                margin-top: -5%;
+                margin-left: 64%;
+            }
+        }
+
+        .bis1::before, .bis2::before {
+            color: #80808082;
+            content: "BIS A.";
+        }

@@ -822,3 +822,37 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 */
+
+// *****************************************************************************
+/* MENU PARA REDES SOCIALES */
+// *****************************************************************************
+
+  // Crear el menú dinámicamente
+  const menuTrigger = document.querySelector('.menu-trigger');
+  const socialMenu = document.createElement('div');
+  socialMenu.className = 'social-menu';
+  
+  socialMenu.innerHTML = `
+    <a href="https://www.youtube.com/@CantosdelCamino" target="_blank">YouTube</a>
+    <a href="https://facebook.com" target="_blank">Facebook</a>
+    <a href="https://instagram.com" target="_blank">Instagram</a>
+    <a href="#" target="_blank">Otros</a>
+  `;
+  
+  menuTrigger.parentNode.insertBefore(socialMenu, menuTrigger.nextSibling);
+  
+  // Controlar clics
+  menuTrigger.addEventListener('click', function(e) {
+    e.stopPropagation();
+    socialMenu.classList.toggle('show-menu');
+  });
+  
+  // Cerrar al hacer clic fuera
+  document.addEventListener('click', function() {
+    socialMenu.classList.remove('show-menu');
+  });
+  
+  // Evitar que se cierre al hacer clic en el menú
+  socialMenu.addEventListener('click', function(e) {
+    e.stopPropagation();
+  });
