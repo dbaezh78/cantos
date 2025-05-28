@@ -497,54 +497,55 @@
         border-radius: 2em;
       }
 
+      .izq, .der {
+        @media (min-width: 384px) {margin-left: 5%;}
+        @media (min-width: 768px) {margin-left: 5%;}
+        @media (min-width: 992px) {margin-left: 8%;}
+
+      }
+
       .izq {
         padding: 3% 0 0 0;
         margin-top: 0%;
-        margin-left: 4%;
 
         @media (min-width: 384px) {
           width: 100%;
           max-width: 384px;
           margin-top: 0%;
-          margin-left: 4%;}
+        }
           
         @media (min-width:  768px) {
           width: 100%;
           max-width: 768px;
           margin-top: 0px;
-          margin-left: 1%;
         }
 
         @media (min-width: 992px) {
           width: 100%;
           min-width: 496px;
-          margin-left: 8%;
         }
       }
 
             .der {
         padding: 3% 0 0 0;
         margin-top: 0%;
-        margin-left: 4%;
 
         @media (min-width: 384px) {
           width: 100%;
           max-width: 384px;
           margin-top: 0%;
-          margin-left: 4%;}
+        }
           
         @media (min-width:  768px) {
           width: 100%;
           max-width: 768px;
           margin-top: 55px;
-          margin-left: 1%;
         }
 
         @media (min-width: 992px) {
           width: 100%;
           min-width: 496px;
           margin-top: 0px;
-          margin-left: 8%;
         }
       }
 
@@ -737,7 +738,7 @@
         }
 
 .rojo {
-  color: red;
+  color: rgb(196 76 75);
   font-weight: bold;
 }
       /* Color ROJO solo para .melisma */

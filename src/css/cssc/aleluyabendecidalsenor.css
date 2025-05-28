@@ -1,0 +1,62 @@
+.mayusc {
+    text-transform: uppercase;
+}
+
+    .niño {
+        @media (min-width: 384px) {
+            font-size: 75%;
+            margin-left: -39px;
+        }
+        
+        @media (min-width: 768px) {
+            font-size: 1rem;
+            margin-left: -12%;
+        }
+        @media (min-width: 992px) {
+            font-size: 100%;
+            margin-left: -55px;
+        }
+    }
+
+.izq {
+    @media (min-width: 384px) {
+        margin-left: 28px;
+    }
+    
+    @media (min-width: 768px) {
+        margin-left: 10%;
+    }
+    
+    @media (min-width: 992px) {
+        margin-left: 16%;
+    }
+}
+
+    .bis1 {
+        position: relative;
+        color: #c6c5c5;
+    }
+    
+    .bis1::before {
+        content: "BIS A.";
+        position: absolute;
+        border-left: 1px solid #868686;
+        height: 7%;
+        
+        @media (min-width: 384px) {
+            margin-left: 64%;
+            margin-top: -5%;
+        }
+        
+        @media (min-width: 768px) {
+            font-size: 1.8rem;
+            margin-left: 54%;
+            margin-top: -4%;
+        }
+        
+        @media (min-width: 992px) {
+            font-size: 1.28rem;
+            margin-left: 55%;
+            margin-top: -4%;
+        }
+    }
