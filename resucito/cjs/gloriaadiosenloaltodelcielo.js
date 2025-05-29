@@ -1,28 +1,20 @@
-/*********************** FUENTE DEL CANTO ***********************/
-
+ /*********************** FUENTE DEL CANTO ***********************/
+// ════════════════════════════
 // Mapeo para celulares 483px
 const pcelular = {
-//  --cp1: 0.1%;
-      //  --cp18: 1.8%;
-      //  --cp486: 48.6%;
-      //  --cp1547: 154.7%;
     };
 // Mapeo específico para tablets (800px)
 const pTablet = {
-//  --cp1: 0.1%;
-      //  --cp18: 1.8%;
-      //  --cp486: 48.6%;
-      //  --cp1547: 154.7%;
     };
-
+// Función de Posición
 function ac(nota, posicion, extension = "") {
       const anchoPantalla = window.innerWidth;
       let posicionAjustada = posicion;
-
+// Ajustes de la table y el celular
 // Solo ajustamos para tablets (601px a 900px)
       if (anchoPantalla > 600 && anchoPantalla <= 900) {
         posicionAjustada = pTablet[posicion] || posicion;
-
+// ════════════════════════════════════════════════════════════════════════════════════
         // Si no está en el mapeo, aplicamos un factor general más preciso
         if (!pTablet[posicion]) {
           const numero = parseInt(posicion.replace('cp', ''));
@@ -30,7 +22,7 @@ function ac(nota, posicion, extension = "") {
           posicionAjustada = `cp${Math.round(numero * factor)}`;
         }
       }
-
+// ════════════════════════════════════════════════════════════════════════════════════
       // Solo ajustamos para tablets (284px a 384px)
       if (anchoPantalla > 284 && anchoPantalla <= 411) {
             posicionAjustada = pcelular[posicion] || posicion;
@@ -46,12 +38,12 @@ function ac(nota, posicion, extension = "") {
       return { acorde: nota, posicion: posicionAjustada, base: nota, extension };
     }
   
-    /***********************
-     * DATOS DEL CANTO
-     ***********************/
-
+// ════════════════════════════════════════════════════════════════════════════════════
+//     * DATOS DEL CANTO
+// ════════════════════════════════════════════════════════════════════════════════════
+// 
 const NOMBREDELCANTO = "GLORIA A DIOS EN LO ALTO DEL CIELO";
-
+// 
 const partitura = {
       tituloc: NOMBREDELCANTO,
       titulo: NOMBREDELCANTO,
@@ -59,7 +51,7 @@ const partitura = {
       dbnos: "188",
       catg: "LITÚRGICOS",
 // Estructura para Cantor (texto)
-
+// 
 cantor: [
 /* 1 */        "Señor Dios, Rey celestial,",
 /* 2 */        "Dios Padre todopoderoso.",
@@ -73,80 +65,24 @@ cantor: [
 /* 10 */        "a la derecha del Padre,",
 /* 11 */        "con el Espíritu Santo",
 /* 12 */        "en la gloria de Dios Padre.",
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ],
       // Estructura para Cantor (acordes) - CON FUNCIÓN ac()
       cantorAcordes: [
 // IZQUIERDA
-/* 1*/      [ac("Sol", "cp14","")],
-/* 2*/      [ac("Fa#", "cp14","m")],
-/* 3*/      [ac("Mi", "cp14","m")],
-/* 4*/      [ac("Sol", "cp14","")],
-/* 5*/      [ac(" ", "cp","m")],
-/* 6*/      [ac("Mi", "cp14","m")],
-/* 7*/      [ac("Sol", "cp14","")],
-/* 8*/      [ac("Fa#", "cp14","m")],
+/* 1*/      [ac("Sol", "cp139","")],
+/* 2*/      [ac("Fa#", "cp375","m")],
+/* 3*/      [ac("Mi", "cp195","m")],
+/* 4*/      [ac("Sol", "cp141","")],
+/* 5*/      [ac("Fa#", "cp167","m")],
+/* 6*/      [ac("Mi", "cp484","m")],
+/* 7*/      [ac("Sol", "cp155","")],
+/* 8*/      [ac("Fa#", "cp331","m")],
 /* 9 */   [ac("", "cp0","")],
-/* 10*/      [ac("Mi", "cp14","m")],
+/* 10*/      [ac("Mi", "cp286","m")],
 /* 11 */   [ac("", "cp0","")],
-/* 12*/      [ac("Re", "cp14","")],
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* 12*/      [ac("Re", "cp353","")],
       ],
-
+// ════════════════════════════════════════════════════════════════════════════════════
       // Estructura para Asamblea (texto)
       asamblea: [
 /* 1 */        "GLORIA DIOS EN LO ALTO DEL CIELO,",
@@ -163,82 +99,30 @@ cantor: [
 /* 12 */        "SOLO TÚ ALTÍSIMO,",
 /* 13 */        "JESUCRISTO,",
 /* 14 */        "AMÉN, AMÉN.",
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       ],
       asambleaAcordes: [
-/* 1*/      [ac("Re", "cp14",""), ac("La","cp90","")],
-/* 2*/      [ac("Sol", "cp14","")],
-/* 3*/      [ac("La", "cp14","")],
-/* 4*/      [ac("Re", "cp14",""), ac("La","cp90","")],
-/* 5*/      [ac("Sol", "cp14","")],
-/* 6*/      [ac("La", "cp14","")],
-/* 7*/      [ac("La", "cp14","")],
-/* 8*/      [ac("La", "cp14","")],
-/* 9*/      [ac("La", "cp14","")],
-/* 10*/      [ac("Sol", "cp14","")],
-/* 11*/      [ac("Fa#", "cp14","m")],
-/* 12*/      [ac("Mi", "cp14","m")],
-/* 13*/      [ac("La", "cp14","")],
-/* 14*/      [ac("Sol", "cp14",""), ac("Re","cp90","")],
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* 1*/      [ac("Re", "cp4",""), ac("La","cp548","")],
+/* 2*/      [ac("Sol", "cp50","")],
+/* 3*/      [ac("La", "cp587","")],
+/* 4*/      [ac("Re", "cp131",""), ac("La","cp473","")],
+/* 5*/      [ac("Sol", "cp137","")],
+/* 6*/      [ac("La", "cp351","")],
+/* 7*/      [ac("La", "cp115","")],
+/* 8*/      [ac("La", "cp341","")],
+/* 9*/      [ac("La", "cp338","")],
+/* 10*/      [ac("Sol", "cp176","")],
+/* 11*/      [ac("Fa#", "cp226","m")],
+/* 12*/      [ac("Mi", "cp199","m")],
+/* 13*/      [ac("La", "cp115","")],
+/* 14*/      [ac("Sol", "cp14",""), ac("Re","cp130","")],
+// ════════════════════════════════════════════════════════════════════════════════════
       ]
   };
-
-/************************************************
- * MANEJO DE CARGA Y REDIMENSIONAMIENTO CORREGIDO
-************************************************/
-
+// 
+// ════════════════════════════════════════════════════════════════════════════════════
+// * MANEJO DE CARGA Y REDIMENSIONAMIENTO CORREGIDO
+// ════════════════════════════════════════════════════════════════════════════════════
+// 
     let cargando = false;
     
     function cargarCantoSeguro(partitura) {
