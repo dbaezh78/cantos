@@ -769,7 +769,7 @@
 
         @media (min-width: 384px) {font-size: 78%;}
         @media (min-width: 768px) {font-size: 95%;}
-        @media (min-width: 992px) {font-size: 90%;}
+        @media (min-width: 992px) {font-size: 70%;}
       }
 
               .ast1, .ast2, .ast3, .ast4, .ast5, .ast6, .ast7, .ast8 {
@@ -1232,4 +1232,9 @@
   
   .show-menu {
     display: block !important;
+  }
+
+
+  .PowerOff{
+    display: none;
   }

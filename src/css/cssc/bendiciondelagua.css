@@ -1,0 +1,158 @@
+            
+        .ast1 {
+            @media (min-width: 384px) {left: 5%;}
+            @media (min-width: 768px) {left: 8%;}
+            @media (min-width: 992px) {
+                left: 9%;
+                top: -5%;
+            }}
+        .ast2 {
+            @media (min-width: 384px) {left: 13.5%;}
+            @media (min-width: 768px) {left: 21%;}
+            @media (min-width: 992px) {
+                left: 35%;
+            }
+        }
+        .ast3 {
+            @media (min-width: 384px) {left: 9.2%;}
+            @media (min-width: 768px) {left: 14.5%;}
+            @media (min-width: 992px) {
+                left: 38%;
+            }
+        }
+
+        .ast4 {
+            @media (min-width: 384px) {left: 8.3%;}
+            @media (min-width: 768px) {left: 13%;}
+            @media (min-width: 992px) {
+                left: 35%;
+            }
+        }
+
+        .ast5 {
+            @media (min-width: 384px) {left: 11%;}
+            @media (min-width: 768px) {left: 16.5%;}
+            @media (min-width: 992px) {left: 12.5%;}}
+
+        .ast6 {
+            @media (min-width: 384px) {left: 7.2%;}
+            @media (min-width: 768px) {left: 11.5%;}
+            @media (min-width: 992px) {left: 8.5%;}}
+
+            
+                .raya1, .raya2 {
+        position: relative;
+        min-height: 0px;
+    }
+
+            .raya1::before {
+                content: "";
+                position: absolute;
+                border-left: 2px solid #c6c5c5;
+                
+                /* Media queries para raya1 */
+                @media (min-width: 384px) {
+                    height: 105px;
+                    margin-left: 58%;
+                    margin-top: -13%;
+                }
+
+                @media (min-width: 768px) {
+                    height: 134px;
+                    margin-left: 45%;
+                    margin-top: -8%;
+                }
+
+                @media (min-width: 992px) {
+                    height: 111px;
+                    margin-left: 45%;
+                    margin-top: -9%
+
+                }
+            }
+            .raya2::before {
+                content: "";
+                position: absolute;
+                border-left: 2px solid #c6c5c5;
+                
+                /* Media queries para raya1 */
+                @media (min-width: 384px) {
+                    height: 140px;
+                    margin-left: 65%;
+                    margin-top: -25%;
+                }
+
+                @media (min-width: 768px) {
+                    height: 182px;
+                    margin-left: 49%;
+                    margin-top: -15%;
+                }
+
+                @media (min-width: 992px) {
+                    height: 149px;
+                    margin-left: 51%;
+                    margin-top: -17%
+
+                }
+            }
+
+        .bis1, .bis2 {
+            position: relative;
+            padding-left: 1.5em;
+        }
+        
+        .bis1::before {
+            position: absolute;
+            font-family: Arial, sans-serif;
+            line-height: 1.3;
+            font-weight: bold;
+
+            @media (min-width: 384px) {
+                font-size: 100%;
+                margin-top: 0%;
+                margin-left: 54%;
+            }
+
+            @media (min-width:  768px) {
+                font-size: 140%;
+                margin-top: 0%;
+                margin-left: 45%;
+              }
+          
+            @media (min-width: 992px) {
+                font-size: 1.4rem;
+                margin-top: -1%;
+                margin-left: 43%;
+            }
+        }
+
+                .bis2::before {
+            position: absolute;
+            font-family: Arial, sans-serif;
+            line-height: 1.3;
+            font-weight: bold;
+
+            @media (min-width: 384px) {
+                font-size: 100%;
+                margin-top: -6%;
+                margin-left: 61%;
+            }
+
+            @media (min-width:  768px) {
+                font-size: 140%;
+                margin-top: -4%;
+                margin-left: 49%;
+              }
+          
+            @media (min-width: 992px) {
+                font-size: 1.4rem;
+                margin-top: -5%;
+                margin-left: 49%;
+            }
+        }
+
+
+        .bis1::before, .bis2::before {
+            color: #80808082;
+            content: "BIS A.";
+        }

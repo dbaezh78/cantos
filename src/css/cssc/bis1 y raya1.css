@@ -11,19 +11,19 @@
                 /* Media queries para raya1 */
                 @media (min-width: 384px) {
                     height: 140px;
-                    left: 76%;
-                    top: -5rem;
+                    margin-left: 76%;
+                    margin-top: -5rem;
                 }
 
                 @media (min-width: 768px) {
                     height: 197px;
-                    left: 54%;
-                    top: -7rem;
+                    margin-left: 54%;
+                    margin-top: -7rem;
                 }
 
                 @media (min-width: 992px) {
-                    height: 160px;
-                    left: 60%;
+                    margin-height: 160px;
+                    margin-left: 60%;
                     margin-top: 4%
 
                 }

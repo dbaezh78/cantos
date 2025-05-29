@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESUCITÓ - Cantos Neocatecumenales</title>
+    <link rel="icon" href="/src/ico.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/cantos/src/css/styles.css">
+    <link rel="stylesheet" href="/cantos/src/css/mensajekiko.css">
+    
+</head>
+<body>
+    <header>
+        <a href="#" id="cantoLink">
+        <b class="dblink dblink-ac">
+            <span class="marquee-text">Amad a vuestros enemigos, vengo pronto!, No resistais al mal, el cantor no está llamado a cocechar humildad en los hermanos, sino a sembrarla, dejar a Dios actuar y dejarse amar por Dios.
+            </span>
+        </b>
+    </a>
+    <div style="margin-left: auto;" >
+        <img class="sRD" src="/cantos/img/rd.png" oncontextmenu="return false;" draggable="false" alt="Camino neocatecumenal">
+    </div>
+
+    <div id="Inicio"> </div>
+    <a href="/cantos">
+        <div class="tResucito">
+            RESUCITÓ 
+            <br>
+                    <img class="cima" src="/cantos/img/logo_cantos.png" alt="Camino neocatecumenal">
+              </div>
+            </a>
+    </header>
+<!--
+    <div>
+        <label><input class=""  type="checkbox" id="toggleView"><span>Ver como lista</span></label>
+        <label><input class=""  type="checkbox" id="kikomsg-tv"><span>Kiko Argüello</span></label>
+    </div>
+-->
+
+<div>
+    <label for="toggleView">
+        <input type="checkbox" id="toggleView">
+        <span>Lista</span>
+    </label>
+    
+    <input type="checkbox" id="mostrar-mensaje">
+        <label for="mostrar-mensaje">Kiko Argüello</label>
+
+    <input type="checkbox" id="mostrar-mensaje-jp2">
+        <label for="mostrar-mensaje-jp2">Juan Pablo II</label>
+
+        <a href="/cantos/src/chtml/intro.html" style="color: red;">Intro</a>
+
+<!-- Mensaje Kiko oculto inicialmente -->
+<div class="mensaje-kiko">
+    <span class="MsgClass">Cantos del Camino Neocatecumenal</span>
+    <p style="text-align: justify;">
+        En el CAMINO NEOCATECUMENAL vemos aparecer hoy un servicio humilde y esencial, cual es el del CANTOR.<br>
+
+        El cantor, en este itinerario de educación de la fe, tiene la misión de ayudar a crear la comunidad litúrgica o, mejor, de recrearla; de convertir tantas veces una pluralidad en una unidad de culto: <i>«A una sola voz, con un solo corazón y con una sola alma».</i><br>
+
+        Culto espiritual que se expresa en la acción litúrgica de la comunidad, fuente constante, en nuestro caminar histórico, de lo más profundamente inocente: el sentimiento de nuestra maldad iluminado por lo inefable del amor de ALGUIEN que nos ama así, que nos ama aunque hayamos sido sus enemigos; fuente de la conversión, fuente de la FE. 
+        <br><b><i>Kiko Argüello</i></b>
+    </p>
+</div>
+
+<!-- Mensaje Kiko oculto inicialmente -->
+<div class="msg-jp2">
+    <span class="MsgClass">A LOS CANTORES</span>
+    <p style="text-align: justify;">
+        «Dirijo un saludo cordial a los cantores-salmistas de las Comunidades Neocatecumenales. Queridísimos: el misterio de Cristo Resucitado, que os disponéis a celebrar con vuestros cantos, sea testimoniado también con vuestra vida, de manera que quede exaltado ante el mundo por el acorde armonioso de las palabras y de las obras de Aquel que "muriendo destruyó la muerte, y resucitando, restauró la vida".
+        <br>
+        A todos vosotros y a vuestros seres queridos, mi Bendición Apostólica».
+        <br><b><i>S. JUAN PABLO II</i></b>
+    </p>
+</div>
+
+</div>
+
+    
+    <div class="controls">
+        <div class="search-container">
+            <button id="toggleFilters" class="filter-toggle-button"></button>
+            <input type="text" id="searchInput" placeholder="Buscar Canto...">
+            <button id="clearSearch" title="Limpiar búsqueda"></button>
+        </div>
+        
+        <div class="filters-container hidden">
+            <div class="filters">
+
+                <div class="dbboton">
+                    <a href="/salterios/" target="_blank" class="dblink dblink-laudes">Laudes</a>
+                    <a href="/ev/index.html" target="_blank" class="dblink dblink-ev">Evangelio</a>
+                    <a href="https://www.youtube.com/@CristoJesusReydereyes" target="_blank" class="dblink dblink-yt">youtube</a>
+                    <a href="https://www.facebook.com/groups/evangelios" target="_blank" class="dblink dblink-fb">facebook</a>
+                    <a href="#" class="dblink dblink-fb">Kiko Arguello</a>
+                    </div>
+
+                    <!-- Agrega este nuevo div para el toggle de vista -->
+                    <!-- antes→ <div class="view-toggle">-->
+                
+                <h3>Etapas del Camino</h3>
+                <div class="category-filters">
+                    <button class="category-filter" data-category="Precatecumenado">Precatecumenado</button>
+                    <button class="category-filter" data-category="Catecumenado">Catecumenado</button>
+                    <button class="category-filter" data-category="Eleccion">Elección</button>
+                    <button class="category-filter" data-category="Liturgia">Liturgia</button>
+                </div>
+
+                <h3>Filtros de los Cantos</h3>
+                <div class="moment-filters">
+                    <button class="moment-filter" data-moment="Entrada">Entrada</button>
+                    <button class="moment-filter" data-moment="Paz">Paz</button>
+                    <button class="moment-filter" data-moment="Fracción del Pan">Fracción del Pan</button>
+                    <button class="moment-filter" data-moment="Comunión">Comunión</button>
+                    <button class="moment-filter" data-moment="Final">Final</button>
+                    <button class="moment-filter" data-moment="Adviento">Adviento</button>
+                    <button class="moment-filter" data-moment="Navidad">Navidad</button>
+                    <button class="moment-filter" data-moment="Pascua">Pascua</button>
+                    <button class="moment-filter" data-moment="Pentecostés">Pentecostés</button>
+                    <button class="moment-filter" data-moment="Virgen">Vírgen María</button>
+                    <button class="moment-filter" data-moment="Aclamación">Aclamación</button>
+                    <button class="moment-filter" data-moment="Laudes/Visperas">Laudes</button>
+                    <button class="moment-filter" data-moment="Penitencial">Penitencial</button>
+                    <button class="moment-filter" data-moment="Salmodia">Salmodia</button>
+                    <button class="moment-filter" data-moment="Nuevo Testamento">Nuevo Testamento</button>
+                    <button class="moment-filter" data-moment="Antiguo Testamento">Antiguo Testamento</button>
+                </div>
+                <a style="font-size: small;" href="/cantos/src/doc/resucito.pdf" target="_blank">Libro en PDF</a>
+                <a style="font-size: small;" href="/cantos/src/chtml/pantalla.html" target="_blank">Medir pantalla</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="songs-list">
+        <!-- Los cantos se cargarán aquí dinámicamente -->
+    </div>
+
+    <div id="final"> </div>
+
+    <footer style="background-color: #f1f1f1; padding: 20px; text-align: center; margin-top: 30px;">
+        <h5><a href="#Inicio" style="text-decoration: none; color: #333;">Ir Arriba ↑</a></h5>
+        <p style="margin: 10px 0; color: #666;">Guia replicada de los cantos del camino Neo Catecumental.</p>
+        <p style="margin: 5px 0; color: #666;">Creada por un siervo inútil de Yahveh</p>
+    </footer>
+
+    <script src="/cantos/src/js/songs-data-faltantes.js"></script>
+    <script src="/cantos/src/js/app.js"></script>
+    <script src="/cantos/src/js/mensajekiko.js"></script>
+
+    
+</body>
+</html>
