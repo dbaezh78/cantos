@@ -261,9 +261,9 @@
         width: 100%;
         max-width: max-content;
         margin: 20px auto;
-        overflow-x: auto;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
         scrollbar-width: none
+        /*overflow-x: auto;*/ /* NO USAR*/
       }
 
       .home {
@@ -769,7 +769,7 @@
 
         @media (min-width: 384px) {font-size: 78%;}
         @media (min-width: 768px) {font-size: 95%;}
-        @media (min-width: 992px) {font-size: 70%;}
+        @media (min-width: 992px) {font-size: 85%;}
       }
 
               .ast1, .ast2, .ast3, .ast4, .ast5, .ast6, .ast7, .ast8 {

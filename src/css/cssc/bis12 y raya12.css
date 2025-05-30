@@ -10,15 +10,15 @@
                 
                 /* Media queries para raya1 */
                 @media (min-width: 384px) {
-                    margin-height: 140px;
+                    height: 140px;
                     margin-left: 76%;
-                    top: -5rem;
+                    margin-top: -5%;
                 }
 
                 @media (min-width: 768px) {
                     height: 197px;
                     margin-left: 54%;
-                    margin-top: -7rem;
+                    margin-top: -7%;
                 }
 
                 @media (min-width: 992px) {
@@ -37,13 +37,13 @@
                 @media (min-width: 384px) {
                     height: 140px;
                     margin-left: 76%;
-                    margin-top: -5rem;
+                    margin-top: -5%;
                 }
 
                 @media (min-width: 768px) {
                     height: 197px;
                     margin-left: 54%;
-                    margin-top: -7rem;
+                    margin-top: -7%;
                 }
 
                 @media (min-width: 992px) {
