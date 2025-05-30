@@ -69,19 +69,14 @@
         width: 100%;
         position: relative;
         white-space: nowrap; /* Evita saltos de línea inesperados */
-        font-size: 1rem; /* Tamaño consistente en todos los dispositivos */
         font-family: 'Franklin Gothic Medium', Arial, sans-serif;  /* Fuente fija */
         letter-spacing: normal; /* Evita espaciado variable */
         font-style: normal;
         z-index: 1;
 
         @media (min-width: 384px) {font-size: 1.07rem;}
-        @media (min-width: 412px) {font-size: 1.22rem;}
-        @media (min-width: 576px) {font-size: 1.23rem;}
         @media (min-width: 768px) {font-size: 1.612rem;}
         @media (min-width: 992px) {font-size: 1.22rem;}
-        @media (min-width: 1200px) {font-size: 1.22rem;} /* HD (1080p) */
-        @media (min-width: 1920px) {font-size: 1.22rem;} /* FHD(2K/4K) */
         }
 
         .alyrics {
@@ -89,19 +84,14 @@
         position: relative;
         white-space: nowrap; /* Evita saltos de línea inesperados */
         font-family: 'Franklin Gothic Medium', 'Franklin Gothic', Arial, sans-serif; /* Fuente fija */
-        font-size: 1.2rem; /* Tamaño consistente en todos los dispositivos */
         font-weight: bold;
         font-weight: 900;
         letter-spacing: normal; /* Evita espaciado variable */
         z-index: 1;
 
         @media (min-width: 384px) {font-size: 1.07rem;}
-        @media (min-width: 412px) {font-size: 1.23rem;}
-        @media (min-width: 576px) {font-size: 1.23rem;}
         @media (min-width: 768px) {font-size: 1.62rem;}
         @media (min-width: 992px) {font-size: 1.23rem;}
-        @media (min-width: 1200px) {font-size: 1.23rem;} /* HD (1080p) */
-        @media (min-width: 1920px) {font-size: 1.23rem;} /* FHD(2K/4K) */
         }
   
         .csv {

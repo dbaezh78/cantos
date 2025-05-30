@@ -1,63 +1,42 @@
  /*********************** FUENTE DEL CANTO ***********************/
 // ════════════════════════════
-// Mapeo para celulares 483px
-const pcelular = {
-    };
-// Mapeo específico para tablets (800px)
-const pTablet = {
-    'cp53':'cp18',
-    'cp765':'cp288',
-    'cp765':'cp288',
-    'cp106':'cp36',
-    'cp109':'cp37',
-    'cp153':'cp52',
-    'cp157':'cp53',
-    'cp248':'cp84',
-    'cp257':'cp87',
-    'cp293':'cp100',
-    'cp31':'cp11',
-    'cp53':'cp18',
-    'cp761':'cp258',
-    'cp796':'cp270',
-    'cp800':'cp272',
-    'cp838':'cp285',
-    'cp845':'cp287',
-    'cp849':'cp288',
-    'cp863':'cp293',
-    'cp884':'cp300',
 
+    // Mapeo para celulares (hasta 480px)
+const pcelular = {
+};
+
+const pTablet = {
     };
-// Función de Posición
+
+// Función de Posición modificada
 function ac(nota, posicion, extension = "") {
-      const anchoPantalla = window.innerWidth;
-      let posicionAjustada = posicion;
-// Ajustes de la table y el celular
-// Solo ajustamos para tablets (601px a 900px)
-      if (anchoPantalla > 600 && anchoPantalla <= 900) {
-        posicionAjustada = pTablet[posicion] || posicion;
-// ════════════════════════════════════════════════════════════════════════════════════
-        // Si no está en el mapeo, aplicamos un factor general más preciso
-        if (!pTablet[posicion]) {
-          const numero = parseInt(posicion.replace('cp', ''));
-          const factor = 0.93; // Factor más preciso para 800px
-          posicionAjustada = `cp${Math.round(numero * factor)}`;
-        }
-      }
-// ════════════════════════════════════════════════════════════════════════════════════
-      // Solo ajustamos para tablets (284px a 384px)
-      if (anchoPantalla > 284 && anchoPantalla <= 411) {
-            posicionAjustada = pcelular[posicion] || posicion;
-            
-            // Si no está en el mapeo, aplicamos un factor general más preciso
-            if (!pcelular[posicion]) {
-              const numero = parseInt(posicion.replace('cp', ''));
-              const factor = 1.3; // Factor más preciso para 384px
-              posicionAjustada = `cp${Math.round(numero * factor)}`;
-            }
-          }
-      
-      return { acorde: nota, posicion: posicionAjustada, base: nota, extension };
+  const anchoPantalla = window.innerWidth;
+  let posicionAjustada = posicion;
+
+  // Primero verificar móviles (hasta 480px)
+  if (anchoPantalla <= 480) {
+    posicionAjustada = pcelular[posicion] || posicion;
+    
+    // Si no está en el mapeo, aplicamos factor
+    if (!pcelular[posicion]) {
+      const numero = parseInt(posicion.replace('cp', ''));
+      const factor = 1.89; // Ajustar según necesidad
+      posicionAjustada = `cp${Math.round(numero * factor)}`;
     }
+  } 
+  // Luego verificar tablets (601px a 900px)
+  else if (anchoPantalla > 600 && anchoPantalla <= 900) {
+    posicionAjustada = pTablet[posicion] || posicion;
+    
+    if (!pTablet[posicion]) {
+      const numero = parseInt(posicion.replace('cp', ''));
+      const factor = 1.77;
+      posicionAjustada = `cp${Math.round(numero * factor)}`;
+    }
+  }
+
+  return { acorde: nota, posicion: posicionAjustada, base: nota, extension };
+}
   
 // ════════════════════════════════════════════════════════════════════════════════════
 //     * DATOS DEL CANTO
@@ -78,172 +57,49 @@ cantor: [
 /* 2 */        "como los ojos de la esclava a las manos de su señora,",
 /* 3 */        "así nuestros ojos miran al Señor,",
 /* 4 */        "esperando que tenga piedad, esperando que tenga piedad.",
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ],
       // Estructura para Cantor (acordes) - CON FUNCIÓN ac()
       cantorAcordes: [
 // IZQUIERDA
-/* 1*/      [ac("Re", "cp20","m"), ac("La","cp914","7")],
-/* 2*/      [ac("Sol", "cp208","m"), ac("La","cp919","7")],
-/* 3*/      [ac("Si", "cp14","7"), ac("La","cp909","7")],
-/* 4*/      [ac("Si♭", "cp99","7"), ac("La","cp445","7"), ac("Si♭","cp604","7"), ac("La","cp946","7")],
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* 1*/      [ac("Re", "cp14","m"), ac("La","cp539","7")],
+/* 2*/      [ac("Sol", "cp101","m"), ac("La","cp460","7")],
+/* 3*/      [ac("Si", "cp3","7"), ac("La","cp274","7")],
+/* 4*/      [ac("Si♭", "cp53","7"), ac("La","cp242","7"), ac("Si♭","cp325","7"), ac("La","cp518","7")],
       ],
 // ════════════════════════════════════════════════════════════════════════════════════
       // Estructura para Asamblea (texto)
       asamblea: [
 /* 1 */        "A TI LEVANTO MIS OJOS,",
 /* 2 */        "A TI QUE HABITAS EN EL CIELO.",
-/* 3 */        "Mujeres:   ",
+/* 3 */        "¡PIEDAD DE NOSOTROS, SEÑOR!",
 /* 4 */        "¡PIEDAD DE NOSOTROS, SEÑOR!",
-/* 5 */        "Hombres: ",
-/* 6 */        "¡PIEDAD DE NOSOTROS, SEÑOR!",
-/* 7 */        "Mujeres:   ",
-/* 8 */        "¡QUE DEMASIADO SE HAN BURLADO DE NOSOTROS,",
-/* 9 */        "Hombres: ",
-/* 10 */        "QUE NUESTRA ALMA ESTÁ SACIADA DE DESPRECIOS!",
-/* 11 */        "Mujeres:   ",
-/* 12 */        "¡DE LAS BURLAS DE LOS SATISFECHOS,",
-/* 13 */        "Hombres: ",
-/* 14 */        "DEL DESPRECIO DE LOS SOBERBIOS!",
-/* 15 */        "Mujeres:   ",
-/* 16 */        "¡PIEDAD DE NOSOTROS, SEÑOR!",
-/* 17 */        "Hombres: ",
-/* 18 */        "¡PIEDAD DE NOSOTROS, SEÑOR!",
-/* 19 */        "A TI LEVANTO MIS OJOS,",
-/* 20 */        "A TI QUE HABITAS EN EL CIELO.",
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* 5 */        "¡QUE DEMASIADO SE HAN BURLADO DE NOSOTROS,",
+/* 6 */        "QUE NUESTRA ALMA ESTÁ SACIADA DE DESPRECIOS!",
+/* 7 */        "¡DE LAS BURLAS DE LOS SATISFECHOS,",
+/* 8 */        "DEL DESPRECIO DE LOS SOBERBIOS!",
+/* 9 */        "¡PIEDAD DE NOSOTROS, SEÑOR!",
+/* 10 */        "¡PIEDAD DE NOSOTROS, SEÑOR!",
+/* 11 */        "A TI LEVANTO MIS OJOS,",
+/* 12 */        "A TI QUE HABITAS EN EL CIELO.",
       ],
       asambleaAcordes: [
-/* 1*/      [ac("Re", "cp53","m"), ac("La","cp765","7")],
-/* 2*/      [ac("Sol", "cp106","m"), ac("La","cp838","7")],
-/* 3 */     [ac("", "cp0","")],
-/* 4*/      [ac("Re", "cp157","m"), ac("La","cp884","7")],
-/* 5 */   [ac("", "cp0","")],
-/* 6*/      [ac("Si♭", "cp157","7"), ac("La","cp884","7")],
-/* 7 */   [ac("", "cp0","")],
-/* 8*/      [ac("Re", "cp257","m"), ac("La","cp863","7")],
-/* 9 */   [ac("", "cp0","")],
-/* 10*/      [ac("Si♭", "cp293","7"), ac("La","cp845","7")],
-/* 11 */   [ac("", "cp0","")],
-/* 12*/      [ac("Re", "cp248","m"), ac("La","cp800","7")],
-/* 13 */   [ac("", "cp0","")],
-/* 14*/      [ac("Si♭", "cp31","7"), ac("La","cp761","7")],
-/* 15 */   [ac("", "cp0","")],
-/* 16*/      [ac("Re", "cp153","m"), ac("La","cp884","7")],
-/* 17 */   [ac("", "cp0","")],
-/* 18*/      [ac("Si♭", "cp153","7"), ac("La","cp884","7")],
-/* 19*/      [ac("Re", "cp53","m"), ac("La","cp796","7")],
-/* 20*/      [ac("Sol", "cp109","m"), ac("La","cp849","7")],
+/* 1*/      [ac("Re", "cp7","m"), ac("La","cp175","7")],
+/* 2*/      [ac("Sol", "cp26","m"), ac("La","cp247","7")],
 
+/* 3*/      [ac("Re", "cp45","m"), ac("La","cp269","7")],
+/* 4*/      [ac("Si♭", "cp45","7"), ac("La","cp265","7")],
 
+/* 5*/      [ac("Re", "cp120","m"), ac("La","cp416","7")],
+/* 6*/      [ac("Si♭", "cp146","7"), ac("La","cp436","7")],
 
+/* 7*/      [ac("Re", "cp90","m"), ac("La","cp295","7")],
+/* 8*/      [ac("Si♭", "cp106","7"), ac("La","cp293","7")],
 
+/* 9*/      [ac("Re", "cp46","m"), ac("La","cp269","7")],
+/* 10*/      [ac("Si♭", "cp45","7"), ac("La","cp267","7")],
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* 11*/      [ac("Re", "cp10","m"), ac("La","cp175","7")],
+/* 12*/      [ac("Sol", "cp26","m"), ac("La","cp247","7")],
 // ════════════════════════════════════════════════════════════════════════════════════
       ]
   };

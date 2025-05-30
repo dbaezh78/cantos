@@ -1,193 +1,138 @@
 .line {
-        @media (min-width: 992px) {
-            width: max-content;
+    @media (min-width: 768px){
+        min-height: 2.rem;
         }
+    @media (min-width: 992px) {
+        width: 896px;
+    }
+}
+
+.ta, .tc {
+    @media (min-width: 384px){
+        font-size: 0.9rem;
+        left: 3%;
+        top: 0.5%;
+    }
+    @media (min-width: 768px){
+        left: 4%;
+        top: 0.5%;
+    }
+    @media (min-width: 992px){
+        font-size: 1rem;
+        left: 3%;
+        top: 0.5%;
+
+    }
+}
+
+.hombres::before, .mujeres::before {
+    @media (min-width: 384px){
+        font-size: 0.6rem;
+
+    }
+    @media (min-width: 768px){
+        font-size: 1.1rem;
+
+
+    }
+    @media (min-width: 992px){
+        font-size: 1.1rem;
+    }
+}
+
+
+    .lhym {
+        @media (min-width: 384px){
+            margin-left: 48px;
+
     }
 
-    .gris {
-        width: 10px;
-        color: #989696
-    }
+        @media (min-width: 768px){
+            font-size: 0.8rem;
+            margin-left: 110px;
 
-    .lyrics {
-        @media (min-width: 384px) {
-            font-size: 75%;
+    }
+        @media (min-width: 992px){
+            font-size: 0.8rem;
+            margin-left: 110px;
+
+    }
+}
+
+
+.izq {
+            @media (min-width: 384px) {
+            width: 100%;
+            min-width: 384px;
+            margin-left: 2%;
         }
 
         @media (min-width: 768px) {
-            font-size: 1.65rem;
+            width: 100%;
+            min-width: 768px;
+            margin-left: 0%;
         }
 
         @media (min-width: 992px) {
-            font-size: 1.23rem;
+            width: 100%;
+            min-width: 992px;
+            margin-left: 10%;
+
+        }
+    }
+    
+    .lyrics {
+        @media (min-width: 384px) {
+            font-size: 0.86rem;
+        }
+
+        @media (min-width: 768px) {
+            font-size: 1.612rem;
+        }
+        
+        @media (min-width: 992px) {
+            font-size: 1.22rem;
         }
     }
 
     .alyrics {
         @media (min-width: 384px) {
-            font-size: 74%;
+            font-size: 0.86rem;
         }
 
         @media (min-width: 768px) {
-            font-size: 1.5rem;
+            font-size: 1.62rem;
         }
-
+        
         @media (min-width: 992px) {
             font-size: 1.23rem;
         }
     }
 
-    .ta::before, .tc::before {
-        @media (min-width: 384px) {
-            font-size: 75%;
-            left: -5%;
-            top: -1%;
-        }
-        @media (min-width: 768px) {
-            font-size: 1.6rem;
-            left: -5%;
-            top: -1%;
-        }
-        @media (min-width: 992px) {
-            font-size: 100%;
-            left: -5%;
-            top: -1%;
-        }
-    }
-
-
-    .izq {
-        @media (min-width: 384px) {
-            margin-left: 2%;
-        }
-        @media (min-width: 768px) {
-            margin-left: 0%;
-        }
-    }
-
     .chord {
         @media (min-width: 384px) {
-            font-size: 0.56rem;
-
-        }
-        @media (min-width: 768px) {
-            font-size: 1.28rem;
-        }
-
-        @media (min-width: 992px) {
-            font-size: 1.22rem;
-        }
-
+            font-size: 0.8rem;
     }
 
-    .chords {
-        @media (min-width: 384px) {
-            font-size: 0.56rem;
-
-        }
-        @media (min-width: 768px) {
-            font-size: 100%;
-        }
-
-        @media (min-width: 992px) {
-            font-size: 1.22rem;
-
-        }
-
+    @media (min-width: 768px) {
+            font-size: 1.3rem;
     }
 
-    .csv {
-        @media (min-width: 384px) {
-            font-size: 0.56rem;
-
-        }
-
-        @media (min-width: 768px) {
-            font-size: 100%;
-        }
-
-        @media (min-width: 992px) {
-            font-size: 1.22rem;
-        }
+    @media (min-width: 992px) {
+            font-size: 1rem;
     }
+}
 
-        .raya1 {
-        position: relative;
-        min-height: 0px;
-    }
-
-            .raya1::before {
-                content: "";
-                position: absolute;
-                border-left: 2px solid #c6c5c5;
-                
-                /* Media queries para raya1 */
-                @media (min-width: 384px) {
-                    height: 54px;
-                    margin-left: 51%;
-                    margin-top: -11%;
-                }
-
-                @media (min-width: 768px) {
-                    height: 74px;
-                    margin-left: 51%;
-                    margin-top: -7%;
-                }
-
-                @media (min-width: 992px) {
-                    height: 69px;
-                    margin-left: 54%;
-                    margin-top: -9%
-
-                }
-            }
-
-        .bis1 {
-            position: relative;
-            padding-left: 1.5em;
-        }
-        
-        .bis1::before {
-            position: absolute;
-            font-family: Arial, sans-serif;
-            line-height: 1.3;
-            font-weight: bold;
-
+        .csv {
             @media (min-width: 384px) {
-                font-size: 100%;
-                margin-top: -6%;
-                margin-left: 48%;
-            }
-
-            @media (min-width: 768px) {
-                font-size: 140%;
-                margin-top: -4%;
-                margin-left: 50%;
-              }
-          
-            @media (min-width: 992px) {
-                font-size: 1.4rem;
-                margin-top: -4%;
-                margin-left: 52%;
-            }
+                font-size: 0.8rem;
         }
 
-        .bis1::before {
-            color: #80808082;
+        @media (min-width: 768px) {
+                font-size: 1.3rem;
         }
 
-        .bis1::before {content: "BIS A.";}
-
-
-        .chord-container {
-            @media (min-width: 384px) {
-                top: 5px;
-            }
-            @media (min-width: 768px) {
-                top: -7px;
-            }
-            @media (min-width: 992px) {
-                top: -6px;
-            }
-
+        @media (min-width: 992px) {
+                font-size: 1rem;
         }
+    }
