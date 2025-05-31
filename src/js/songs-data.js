@@ -28,7 +28,7 @@ const songs = [
         {id:25,title: "Aquedah", subtitle: "Gn 22,1-19 - Del Targum Neofiti sobre el sacrificio de Isaac", category: "Precatecumenado", moments: ["Pascua", "Pentecostés", "Comunión"], url: "/cantos/resucito/a/aquedah.html"},
         {id:26,title: "Así habla el amén", subtitle: "Ap 3,14-20", category: "Precatecumenado", moments: ["Virgen", "Nuevo Testamento"], url: "/cantos/resucito/a/asihablaelamen.html"},
         {id:27,title: "Ave María I", subtitle: "Lc 1,28ss", category: "Precatecumenado", moments: ["Virgen", "Final", "Nuevo Testamento"], url: "/cantos/resucito/a/avemariai.html"},
-        {id:28,title: "Ave María II (1984)", subtitle: "Lc 1,28ss - 1984 ", category: "Precatecumenado", moments: ["Cuaresma", "Laudes", "Antiguo Testamento"], url: "/cantos/resucito/a/avemariaii(1984).html"},
+        {id:28,title: "Ave María II (1984)", subtitle: "Lc 1,28ss - 1984 ", category: "Precatecumenado", moments: ["Cuaresma", "Laudes", "Antiguo Testamento"], url: "/cantos/resucito/a/avemariaii.html"},
         {id:29,title: "Babilonia criminal", subtitle: "Sal 137 (136)", category: "Precatecumenado", moments: ["Paz", "Comunión", "Final", "Antiguo Testamento"], url: "/cantos/resucito/b/babiloniacriminal.html"},
         {id:30,title: "Balaam", subtitle: "Nm 23,7-24", category: "Precatecumenado", moments: ["Cuaresma", "Laudes", "Antiguo Testamento"], url: "/cantos/resucito/b/balaam.html"},
         {id:31,title: "Bendeciré al Señor en todo tiempo", subtitle: "Sal 34 (33)", category: "Precatecumenado", moments: ["Cuaresma", "Laudes", "Antiguo Testamento"], url: "/cantos/resucito/b/bendecirealsenorentodotiempo.html"},
