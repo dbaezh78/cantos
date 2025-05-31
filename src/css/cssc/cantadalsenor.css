@@ -1,0 +1,11 @@
+    .chord-container {
+        @media (min-width: 384px) {
+            top: -7px;
+        }
+        @media (min-width: 768px) {
+            top: -7px;
+        }
+        @media (min-width: 992px) {
+            top: -3px;
+        }                
+    }

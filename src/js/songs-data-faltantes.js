@@ -1,8 +1,5 @@
     // Datos de los cantos
 const songs = [
-        {id:33,title: "Bendición del agua", subtitle: "De la liturgia bautismal de la Vigilia pascual", category: "Liturgia", moments: [""], url: "/cantos/resucito/liturgia/bendiciondelagua.html"},
-        {id:34,title: "Bendita eres tú, María", subtitle: "Lucas 1,42-45", category: "Precatecumenado", moments: ["Penitencial"], url: "/cantos/resucito/b/benditaerestumaria.html"},
-        {id:35,title: "Bendito eres, Señor", subtitle: "Daniel 3,52-57", category: "Precatecumenado", moments: ["Virgen", "Entrada", "Final", "Nuevo Testamento"], url: "/cantos/resucito/b/benditoeressenor.html"},
         {id:36,title: "Bendito sea Dios", subtitle: "Efesios 1,3-13", category: "Precatecumenado", moments: ["Laudes/Visperas", "Antiguo Testamento"], url: "/cantos/resucito/b/benditoseadios.html"},
         {id:37,title: "Benedictus", subtitle: "Lucas 1,67-80", category: "Precatecumenado", moments: [""], url: "/cantos/resucito/b/benedictus.html"},
         {id:38,title: "Cantad a Dios", subtitle: "Salmo 67 (68) 2.4-7", category: "Precatecumenado", moments: ["Laudes/Visperas", "Nuevo Testamento"], url: "/cantos/resucito/c/cantadadios.html"},
