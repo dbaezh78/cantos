@@ -1,4 +1,25 @@
+/*pizq = Posicion Izquierda */
+.pizq {
+    position: sticky;
 
-.left50 {
-    left: 10%;
+    @media (min-width: 384px) {}
+    @media (min-width: 768px) {
+        left: 60%;
+    }
+    @media (min-width: 992px) {
+        left: 35%;
+    }
+}
+
+/*pder = Posicion Derecha*/
+.pder {
+    position: absolute;
+
+    @media (min-width: 384px) {}
+    @media (min-width: 768px) {
+        left: 60%;
+    }
+    @media (min-width: 992px) {
+        left: 74%;
+    }
 }
