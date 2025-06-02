@@ -1,6 +1,5 @@
     // Datos de los cantos
 const songs = [
-        {id:41,title: "Canto de Moisés", subtitle: "Éxodo 15,1-18", category: "Precatecumenado", moments: ["Laudes/Visperas", "Antiguo Testamento"], url: "/cantos/resucito/c/cantodemoises.html"},
         {id:42,title: "Caritas Christi urget nos", subtitle: "2ª Corintios 5,14.15.17.21", category: "Precatecumenado", moments: ["Pascua", "Antiguo Testamento"], url: "/cantos/resucito/c/caritaschristiurgetnos.html"},
         {id:43,title: "Carmen 63 - (ESTÁN ROTAS MIS ATADURAS )", subtitle: "(Rabindranath Tagore)*", category: "Precatecumenado", moments: ["Nuevo Testamento"], url: "/cantos/resucito/c/carmen63-(estanrotasmisataduras).html"},
         {id:44,title: "Celebración penitencial (Bendición penitencial )", subtitle: "Acción de gracias", category: "Liturgia", moments: ["Nuevo Testamento"], url: "/cantos/resucito/liturgia/celebracionpenitencial(bendicionpenitencial).html"},
