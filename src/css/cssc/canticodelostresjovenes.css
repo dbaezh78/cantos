@@ -2,24 +2,72 @@
 .pizq {
     position: sticky;
 
-    @media (min-width: 384px) {}
+    @media (min-width: 384px) {
+        left: 64%;
+    }
     @media (min-width: 768px) {
         left: 60%;
     }
     @media (min-width: 992px) {
-        left: 35%;
+        left: 42%;
     }
 }
 
 /*pder = Posicion Derecha*/
 .pder {
-    position: absolute;
+    position: sticky;
 
-    @media (min-width: 384px) {}
+    @media (min-width: 384px) {
+        left: 64%;
+
+    }
     @media (min-width: 768px) {
         left: 60%;
     }
     @media (min-width: 992px) {
-        left: 74%;
+        left: 73%;
     }
 }
+
+
+.der, .izq {
+    @media (min-width: 992px) {
+        width: 465px;
+        min-width: 465px;
+        /*min-width: 470px;*/
+        margin-top: 0px;
+    }
+}
+
+        .ta1, .ta2 {
+                position: relative;
+                padding-left: 1.5em;
+                }
+
+        .ta1::before, .ta2::before {
+                position: absolute;
+                top: 0px;
+                font-family: Arial, sans-serif;
+                line-height: 1.3;
+                font-weight: bold;
+                color: #80808082;
+            }
+            
+        .ta1::before {
+            @media (min-width: 384px){left: 55%}
+            @media (min-width: 768px){left: 54%}
+            @media (min-width: 992px){left: 71%;}
+        }
+
+        .ta2::before {
+            @media (min-width: 384px){left: 55%}
+            @media (min-width: 768px){left: 54%;}
+            @media (min-width: 992px){left: 42%;}
+
+        }
+
+        .ta1::before, .ta2::before, .ta3::before {
+            content: "A.";
+        }
+
+

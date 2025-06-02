@@ -200,7 +200,6 @@
         margin: 0;
         text-align: right;
         font-size: 1rem;
-        margin-top: -3px;
 
         @media (min-width: 384px) {
           font-size: 1rem;
@@ -1101,6 +1100,7 @@
 /* Agrega esto a tu hoja de estilos */
 .odb {
   display: table-row;
+  /*display: block;*/
   /*block !important;*/
 }
 

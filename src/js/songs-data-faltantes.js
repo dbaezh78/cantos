@@ -1,10 +1,5 @@
     // Datos de los cantos
 const songs = [
-        {id:36,title: "Bendito sea Dios", subtitle: "Efesios 1,3-13", category: "Precatecumenado", moments: ["Laudes/Visperas", "Antiguo Testamento"], url: "/cantos/resucito/b/benditoseadios.html"},
-        {id:37,title: "Benedictus", subtitle: "Lucas 1,67-80", category: "Precatecumenado", moments: [""], url: "/cantos/resucito/b/benedictus.html"},
-        {id:38,title: "Cantad a Dios", subtitle: "Salmo 67 (68) 2.4-7", category: "Precatecumenado", moments: ["Laudes/Visperas", "Nuevo Testamento"], url: "/cantos/resucito/c/cantadadios.html"},
-        {id:39,title: "Cantad al Señor", subtitle: "Salmo 117 (116)", category: "Precatecumenado", moments: ["Cuaresma", "Laudes", "Antiguo Testamento"], url: "/cantos/resucito/c/cantadalsenor.html"},
-        {id:40,title: "Cántico de los tres jóvenes", subtitle: "Daniel 3,57-58", category: "Precatecumenado", moments: ["Laudes/Visperas", "Entrada", "Final", "Antiguo Testamento"], url: "/cantos/resucito/c/canticodelostresjovenes.html"},
         {id:41,title: "Canto de Moisés", subtitle: "Éxodo 15,1-18", category: "Precatecumenado", moments: ["Laudes/Visperas", "Antiguo Testamento"], url: "/cantos/resucito/c/cantodemoises.html"},
         {id:42,title: "Caritas Christi urget nos", subtitle: "2ª Corintios 5,14.15.17.21", category: "Precatecumenado", moments: ["Pascua", "Antiguo Testamento"], url: "/cantos/resucito/c/caritaschristiurgetnos.html"},
         {id:43,title: "Carmen 63 - (ESTÁN ROTAS MIS ATADURAS )", subtitle: "(Rabindranath Tagore)*", category: "Precatecumenado", moments: ["Nuevo Testamento"], url: "/cantos/resucito/c/carmen63-(estanrotasmisataduras).html"},
