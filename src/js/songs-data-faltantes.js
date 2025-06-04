@@ -1,6 +1,6 @@
     // Datos de los cantos
 const songs = [
-        {id:44,title: "Celebración penitencial (Bendición penitencial )", subtitle: "Acción de gracias", category: "Liturgia", moments: ["Nuevo Testamento"], url: "/cantos/resucito/liturgia/celebracionpenitencial(bendicionpenitencial).html"},
+        {id:44,title: "Celebración penitencial", subtitle: "Acción de gracias", category: "Liturgia", moments: ["Nuevo Testamento"], url: "/cantos/resucito/liturgia/celebracionpenitencial.html"},
         {id:45,title: "Como condenados a muerte", subtitle: "1ª Corintios 4,9-13", category: "Precatecumenado", moments: ["Pascua", "Comunión"], url: "/cantos/resucito/c/comocondenadosamuerte.html"},
         {id:46,title: "Como destila la miel", subtitle: "Oda XL de Salomón", category: "Eleccion", moments: ["Laudes/Visperas", "Entrada", "Comunión"], url: "/cantos/resucito/c/comodestilalamiel.html"},
         {id:47,title: "Como el impulso que siente la ira", subtitle: "Oda VII de Salomón", category: "Catecumenado", moments: ["Paz", "Antiguo Testamento"], url: "/cantos/resucito/c/comoelimpulsoquesientelaira.html"},

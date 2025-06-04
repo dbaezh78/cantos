@@ -44,7 +44,7 @@ const songs = [
         {id:41,title: "Canto de Moisés", subtitle: "Éxodo 15,1-18", category: "Precatecumenado", moments: ["Laudes/Visperas", "Antiguo Testamento"], url: "/cantos/resucito/c/cantodemoises.html"},
         {id:42,title: "Caritas Christi urget nos", subtitle: "2ª Corintios 5,14.15.17.21", category: "Precatecumenado", moments: ["Pascua", "Antiguo Testamento"], url: "/cantos/resucito/c/caritaschristiurgetnos.html"},
         {id:43,title: "Carmen 63 - (Están rotas mis ataduras )", subtitle: "(Rabindranath Tagore)*", category: "Precatecumenado", moments: ["Nuevo Testamento"], url: "/cantos/resucito/c/carmen63.html"},
-        {id:44,title: "Celebración penitencial (Bendición penitencial )", subtitle: "Acción de gracias", category: "Liturgia", moments: ["Nuevo Testamento"], url: "/cantos/resucito/liturgia/celebracionpenitencial(bendicionpenitencial).html"},
+        {id:44,title: "Celebración penitencial", subtitle: "Acción de gracias", category: "Liturgia", moments: ["Nuevo Testamento"], url: "/cantos/resucito/liturgia/celebracionpenitencial.html"},
         {id:45,title: "Como condenados a muerte", subtitle: "1ª Corintios 4,9-13", category: "Precatecumenado", moments: ["Pascua", "Comunión"], url: "/cantos/resucito/c/comocondenadosamuerte.html"},
         {id:46,title: "Como destila la miel", subtitle: "Oda XL de Salomón", category: "Eleccion", moments: ["Laudes/Visperas", "Entrada", "Comunión"], url: "/cantos/resucito/c/comodestilalamiel.html"},
         {id:47,title: "Como el impulso que siente la ira", subtitle: "Oda VII de Salomón", category: "Catecumenado", moments: ["Paz", "Antiguo Testamento"], url: "/cantos/resucito/c/comoelimpulsoquesientelaira.html"},
