@@ -194,7 +194,7 @@
         border: none;
         appearance: none;
         font-weight: bold;
-        color: rgb(196 76 75);;
+        color: rgb(196 76 75);
         position: relative;
         padding: 0;
         margin: 0;
@@ -269,7 +269,7 @@
         .titulo {
           /* Estilo base (Mobile First) */
           font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
-          color: red;
+          color: #c41529;/* red;*/
           padding: 12px 15px;
           margin: 0 auto;
           text-align: center;
@@ -552,8 +552,8 @@
         @media (min-width: 268px) {width: 100%;}
         @media (min-width: 384px) {width: 100%;}
         @media (min-width: 576px) {width: 100%;}
-        @media (min-width:  768px) {width: 100%;}
-        @media (min-width: 992px) {width: 1080px;}
+        @media (min-width: 768px) {width: 100%;}
+        @media (min-width: 992px) {width: 1024px;} /* antes 1080px*/
 
       }
 
@@ -635,6 +635,8 @@
 
         .vmaria {color: rgb(84 167 216);}
         .pprecatec {color: rgb(81, 83, 84);}
+        .pcat {color: #CBECFE;}
+        .peleccion {color: #17ed86};
         .pliturgia {color: rgb(223, 198, 12);}
         .ppascua {color: rgb(33 150 243);}
         .ppenteco {color: #f0433d;}
