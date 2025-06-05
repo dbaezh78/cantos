@@ -1,0 +1,66 @@
+.melismax {
+                position: relative;
+                min-height: 0px;
+            }
+
+            .melismax::before {
+                content: "[melisma]";
+                position: absolute;
+                align-content: center;
+                color: rgb(196 76 75);
+                font-style: italic;
+                font-size: 1rem;
+
+                /* Media queries para melismax */
+                @media (min-width: 384px) {
+                    height: 0px;
+                    margin-left: 12%;
+                    margin-top: 0%;
+                }
+
+                @media (min-width: 768px) {
+                    height: 0px;
+                    margin-left: 9%;
+                    margin-top: 1%;
+                }
+
+                @media (min-width: 992px) {
+                    height: 0px;
+                    margin-left: 9%;
+                    margin-top: 0%
+
+                }
+            }
+
+
+            .r1 {
+        position: relative;
+        min-height: 0px;
+    }
+
+            .r1::before {
+                content: " BIS A.";
+                position: absolute;
+                align-content: center;
+                border-left: 2px solid #c6c5c5;
+                
+                /* Media queries para r1 */
+                @media (min-width: 384px) {
+                    height: 29px;
+                    margin-left: 67%;
+                    margin-top: -2%;
+                }
+
+                @media (min-width: 768px) {
+                    height: 29px;
+                    margin-left: 50%;
+                    margin-top: 0%;
+                }
+
+                @media (min-width: 992px) {
+                    height: 29px;
+                    margin-left: 52%;
+                    margin-top: -1%
+
+                }
+            }
