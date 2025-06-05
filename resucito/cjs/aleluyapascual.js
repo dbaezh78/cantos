@@ -47,7 +47,7 @@ const partitura = {
       titulo: NOMBREDELCANTO,
       salmo: "Apropiado para el tiempo Pascual",
       dbnos: "181",
-      catg: "LITÚRGICOS",
+      catg: "LITÚRGIA",
 // Estructura para Cantor (texto)
         // ************************************** \\
 cantor: [

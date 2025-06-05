@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link type=text/css rel=stylesheet href="/cantos/src/css/dbCSS.css" >
     <link type=text/css rel=stylesheet href="/cantos/src/css/cssc/dbcssCantos.css" >
-    <link type=text/css rel=stylesheet href="/cantos/src/css/cssc/NOMBREDELCANTO.css" >
+    <link type=text/css rel=stylesheet href="/cantos/src/css/cssc/corderodedios.css" >
         
   <title id="tc"></title>
 </head>
@@ -20,7 +20,7 @@
                 <!-- SECCION DEL REPRODUCTOR-->
                 <div id="reproductor-audio">
                     <audio class="saudio" controls controlslist="download" preload="metadata" loop>
-                        <source src="/audio/NOMBREDELCANTO.mp3" type="audio/mpeg">
+                        <source src="/audio/corderodedios.mp3" type="audio/mpeg">
                     </audio>
                 </div>       
         
@@ -67,10 +67,10 @@
 <!--╔═══════════════════════════════════════════════════════════════════════════════╗-->
 <!--║  [ SECCION DE CATEGORIA ]    precat - liturgia - cat - eleccion               ║-->
 <!--╠═══════════════════════════════════════════════════════════════════════════════╣-->
-<!--║-->   <th class="precat" id="catg"></th>                                   <!--║-->
+<!--║-->   <th class="liturgia" id="catg"></th>                                   <!--║-->
 <!--╚═══════════════════════════════════════════════════════════════════════════════╝-->
 
-            <th>    <select class="dbMiTraste" data-default=" "></select> <!-- Grado ° --></th>
+            <th>    <select class="dbMiTraste" data-default="2°"></select> <!-- Grado ° --></th>
             <th>    <a href="#" id="toggleVista"><span class="mso">menu_book</span></a></th>
             <th>    <a href="#reproductor-audio" id="audio-control-btn" class="audio-control"><span class="mso audio-icon">play_circle</span></a></th>
             <th>    <span class="mso hline bcoro">visibility</span></th>
@@ -97,39 +97,33 @@
 
 <!-- A6 - CONTENIDO DEL LADO IZQUIERDO -->
 
-            <div class="ta"></div>
-                <div class="line"><div class="alyrics" id="a1"></div></div>
-                <div class="line"><div class="alyrics" id="a2"></div></div>
-                <div class="line"><div class="alyrics" id="a3"></div></div>
-                <div class="line"><div class="alyrics dbsp3" id="a4"></div></div>
-
             <div class="tc"></div>
                 <div class="line"><div class="lyrics" id="c1"></div></div>
                 <div class="line"><div class="lyrics" id="c2"></div></div>
-                <div class="line"><div class="lyrics" id="c3"></div></div>
-                <div class="line"><div class="lyrics dbsp4" id="c4"></div></div>
+                <div class="line"><div class="lyrics dbsp7" id="c3"></div></div>
 
-                <!-- ASTERISTICO PARA CUANDO SEA NECESARIO PARA EL MELISMA-->
-                <div class="asterisco" style="left: 19%;"></div>
-                
-                <!-- CONTENIDO DE LA ASAMBLEA-->
-                <div class="dbtop4"></div>
                 <div class="ta"></div>
-                <div class="line hline bcoro">
-                <div class="line"><div class="alyrics" id="a5"></div></div></div>
+                <div class="line"><div class="alyrics" id="c4"></div></div>
+                <div class="line"><div class="alyrics" id="c5"></div></div>
+                <div class="line"><div class="alyrics dbsp7" id="c6"></div></div>
 
-                <div class="hcoro dbhide">
-                <div class="line"><div class="alyrics" id="a6"></div></div>
-                <div class="line"><div class="alyrics" id="a7"></div></div>
-                <div class="line"><div class="alyrics" id="a8"></div></div>
-            </div>
-            <!-- CONTENIDO DE LA ASAMBLEA-->
+                <div class="line"><div class="alyrics" id="c7"></div></div>
+                <div class="line"><div class="alyrics" id="c8"></div></div>
+                <div class="line"><div class="alyrics" id="c9"></div></div>
+                <div class="line"><div class="alyrics dbsp7" id="c10"></div></div>
+                
 
 <!--╔═══════════════════════════════════════════════════════════════════════════════╗-->
 <!--║                        CONTENIDO DEL LADO IZQUIERDO                           ║-->
 <!--╠═══════════════════════════════════════════════════════════════════════════════╣-->
 <!--║ A5 - Cierre LADO Izquierdo -->    </div>                                  <!--║-->
 <!--║ A5 - grupo-columnas/-izquierdo -->    </div>                              <!--║-->
+<!--╚═══════════════════════════════════════════════════════════════════════════════╝-->
+
+<!--╔═══════════════════════════════════════════════════════════════════════════════╗-->
+<!--║               DESHABILITAR LADO DERECHO POR FALTA DE CONTENIDO                ║-->
+<!--╠═══════════════════════════════════════════════════════════════════════════════╣-->
+<!--║ INICIO PARA DESHABILITAR LADO DERECHO -- >    <div class="PowerOff">       < !--║-->
 <!--╚═══════════════════════════════════════════════════════════════════════════════╝-->
 
 <!--╔═══════════════════════════════════════════════════════════════════════════════╗-->
@@ -140,33 +134,20 @@
 <!--╚═══════════════════════════════════════════════════════════════════════════════╝-->
 
 <!-- A6 - CONTENIDO DEL LADO IZQUIERDO -->
-            <div class="ta"></div>
-                <!-- Cantor -->
-                <div class="line"><div class="alyrics" id="a9"></div></div>
-                <div class="line"><div class="alyrics" id="a10"></div></div>
-                <div class="line"><div class="alyrics" id="a11"></div></div>
-                <div class="line"><div class="alyrics dbsp3" id="a12"></div></div>
-
             <div class="tc"></div>
-                <div class="line"><div class="lyrics" id="c5"></div></div>
-                <div class="line"><div class="lyrics" id="c6"></div></div>
-                <div class="line"><div class="lyrics" id="c7"></div></div>
-                <div class="line"><div class="lyrics dbsp4" id="c8"></div></div>
+                <div class="line"><div class="lyrics" id="c11"></div></div>
+                <div class="line"><div class="lyrics" id="c12"></div></div>
+                <div class="line"><div class="lyrics dbsp7" id="c13"></div></div>
 
-            <!-- CONTENIDO DE LA ASAMBLEA-->
-                <div class="dbtop4"></div>
                 <div class="ta"></div>
-                <div class="line hline bcoro">
-                <div class="line"><div class="alyrics" id="a12"></div></div></div>
+                <div class="line"><div class="alyrics" id="c14"></div></div>
+                <div class="line"><div class="alyrics" id="c15"></div></div>
+                <div class="line"><div class="alyrics dbsp7" id="c16"></div></div>
 
-                <div class="hcoro dbhide">
-                <div class="line"><div class="alyrics" id="a13"></div></div>
-                <div class="line"><div class="alyrics" id="a14"></div></div>
-                <div class="line"><div class="alyrics" id="a15"></div></div>
-                </div>
-
-            <!-- CONTENIDO DE LA ASAMBLEA-->
-
+                <div class="line"><div class="alyrics" id="c17"></div></div>
+                <div class="line"><div class="alyrics" id="c18"></div></div>
+                <div class="line"><div class="alyrics" id="c19"></div></div>
+                <div class="line"><div class="alyrics" id="c20"></div></div>
 
 <!--╔═══════════════════════════════════════════════════════════════════════════════╗-->
 <!--║                           CONTENIDO DEL LADO DERECHO                          ║-->
@@ -178,7 +159,7 @@
 <!--╔═══════════════════════════════════════════════════════════════════════════════╗-->
 <!--║                           CIERRE CONTENEDOR COLUMNAS                          ║-->
 <!--╠═══════════════════════════════════════════════════════════════════════════════╣-->
-<!--║-->   </div>                                                               <!--║-->
+<!--║-- >   </div>                                                               < !--║-->
 <!--╚═══════════════════════════════════════════════════════════════════════════════╝-->
 
 <!--╔═══════════════════════════════════════════════════════════════════════════════╗-->
@@ -190,8 +171,8 @@
 <!-- Fila 5: Flechas -->
             <tr><td colspan="6" class="navegar">
                 <div>
-                        <a href="/cantos/resucito/b/alabadalsenorenelcielo.html" align="left" class="fleft">    <span class="mso1">arrow_left_alt   </span></a>
-                        <a href="/cantos/resucito/b/aleluyaalabadalsenor.html" align="right" class="fright"> <span class="mso1">arrow_right_alt </span></a>
+                        <a href="/cantos/resucito/liturgia/celebracionpenitencial.html" align="left" class="fleft">    <span class="mso1">arrow_left_alt   </span></a>
+                        <a href="/cantos/resucito/liturgia/credo.html" align="right" class="fright"> <span class="mso1">arrow_right_alt </span></a>
                     <div style="clear: both;"></div>
                 </div>
                     
@@ -215,7 +196,7 @@
                             <p class="dh piecategoria ppascua">Pascua</p>
                             <p class="dh piecategoria ppenteco">Pentecostés</p>
                             <p class="dh piecategoria pentrada">Entrada</p>
-                            <p class="dh piecategoria pliturgia">Liturgia</p>
+                            <p class="piecategoria pliturgia">Liturgia</p>
                             <p class="dh piecategoria">Comunión</p>
                             <p class="dh piecategoria paz">Paz</p>
                             <p class="dh piecategoria Final">Final</p>
@@ -230,9 +211,10 @@
     <div class="notas-columna">
 
         <!-- CONTENIDO DE LAS NOTAS DEL CANTO-->
+<a href="#" class="notas-enlace" onclick="mostrarImagen('/cantos/src/ima/mi.jpg'); return false;">Mi</a>
 <a href="#" class="notas-enlace" onclick="mostrarImagen('/cantos/src/ima/fa.jpg'); return false;">Fa</a>
 <a href="#" class="notas-enlace" onclick="mostrarImagen('/cantos/src/ima/sol.jpg'); return false;">Sol</a>
-<a href="#" class="notas-enlace" onclick="mostrarImagen('/cantos/src/ima/Lam.jpg'); return false;">La<em>m<em></a>
+<a href="#" class="notas-enlace" onclick="mostrarImagen('/cantos/src/ima/lam.jpg'); return false;">La<em>m</em></a>
 
     </div>
 
@@ -258,6 +240,6 @@
     <script src="/cantos/src/js/dbMainJS.js"></script>
     -->  
 <script src="/cantos/resucito/acorde/src/mainjs.js"></script>
-<script src="/cantos/resucito/cjs/NOMBREDELCANTO.js"></script>
+<script src="/cantos/resucito/cjs/corderodedios.js"></script>
 </body>
 </html>

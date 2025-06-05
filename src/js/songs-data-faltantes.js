@@ -1,7 +1,5 @@
     // Datos de los cantos
 const songs = [
-        {id:51,title: "Como oveja que ve", subtitle: "Kontáklon (Romano el Meloda)", category: "Precatecumenado", moments: ["Fracción del Pan"], url: "/cantos/resucito/c/comoovejaqueve.html"},
-        {id:52,title: "Consolad a mi pueblo", subtitle: "Isaías 40,1-11 - Melodía hebraica ", category: "Precatecumenado", moments: [""], url: "/cantos/resucito/c/consoladamipueblo.html"},
         {id:53,title: "Cordero de Dios", subtitle: "Después de la consagración", category: "Liturgia", moments: ["Entrada"], url: "/cantos/resucito/liturgia/corderodedios.html"},
         {id:54,title: "Credo", subtitle: "Símbolo Apostólico", category: "Liturgia", moments: ["Pascua", "Laudes", "Comunión", "Antiguo Testamento"], url: "/cantos/resucito/liturgia/credo.html"},
         {id:55,title: "Cristo es la luz", subtitle: "Himno - Juan 8,12; 14,6", category: "Precatecumenado", moments: ["Cuaresma", "Entrada", "Final", "Antiguo Testamento"], url: "/cantos/resucito/c/cristoeslaluz.html"},

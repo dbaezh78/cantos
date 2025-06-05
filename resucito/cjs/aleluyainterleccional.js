@@ -58,7 +58,7 @@ const partitura = {
       titulo: NOMBREDELCANTO,
       salmo: "Modelo I, II, III",
       dbnos: "180",
-      catg: "LITÚRGICOS",
+      catg: "LITÚRGIA",
 // Estructura para Cantor (texto)
 
 cantor: [

@@ -57,8 +57,7 @@ const partitura = {
       titulo: NOMBREDELCANTO,
       salmo: "Respuestas a las oraciones de los fieles, Modelo I, II, III, IV",
       dbnos: "179",
-      catg: "LITÚRGICOS",
-      
+      catg: "LITÚRGIA",      
 // Estructura para Cantor (texto)
 
 cantor: [

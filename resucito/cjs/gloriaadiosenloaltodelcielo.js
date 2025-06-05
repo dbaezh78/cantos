@@ -49,7 +49,7 @@ const partitura = {
       titulo: NOMBREDELCANTO,
       salmo: "Himno Litúrgico",
       dbnos: "188",
-      catg: "LITÚRGICOS",
+      catg: "LITÚRGIA",
 // Estructura para Cantor (texto)
 // 
 cantor: [
