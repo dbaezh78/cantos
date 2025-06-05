@@ -541,20 +541,21 @@
 
 
       .dbtable {
-        width: 1080px;
         border: 1px solid #ddd;
         padding: 2px 7px 2px 7px;
         border-radius: 0px 0px 0px 0px;
         background: white;
         text-align: left;
-        /*max-width: max-content;*/
+        /*max-width: max-content;
+        width: 1080px;
+        */
 
-        @media (min-width: 268px) {width: 100%;}
-        @media (min-width: 384px) {width: 100%;}
-        @media (min-width: 576px) {width: 100%;}
+        @media (min-width: 384px) {width: 80%;}
         @media (min-width: 768px) {width: 100%;}
         @media (min-width: 992px) {width: 1024px;} /* antes 1080px*/
-
+        /*
+        @media (min-width: 576px) {width: 100%;}
+        @media (min-width: 268px) {width: 100%;}*/
       }
 
           .dbtable:has(.precat) {background-color: white;}

@@ -1,0 +1,7 @@
+.odb {
+    @media (min-width: 384px) {
+        display: block;
+
+    }
+    
+}
