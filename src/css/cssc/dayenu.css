@@ -1,7 +1,22 @@
 .odb {
     @media (min-width: 384px) {
-        display: block;
-
+        display: table-row;
     }
+
+        @media (min-width: 768px) {
+        display:table-row;
+        }
+
+        @media (min-width: 992px) {
+        display:table-row;
+        }
     
+}
+
+
+.contenedor-tabla {
+        @media (min-width: 384px) {
+            width: 384px;
+            max-width: 100%;
+        }
 }
