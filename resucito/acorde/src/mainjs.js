@@ -734,11 +734,15 @@ document.addEventListener('DOMContentLoaded', function() {
       "Si♭m": "/cantos/src/ima/sibm.jpg",
       "Si7": "/cantos/src/ima/si7.jpg",
       "Sim": "/cantos/src/ima/Sim.jpg"
-        // Puedes agregar más acordes aquí
     };
     
     const selector = document.getElementById('acorde-selector');
     const imagenAcorde = document.getElementById('acorde-imagen');
+
+    // 🔽 Agregado: cerrar imagen con doble clic
+    imagenAcorde.addEventListener('dblclick', function() {
+        imagenAcorde.style.display = 'none';
+    });
     
     // Llenar el select con las opciones de acordes
     for (const acorde in acordes) {
@@ -763,6 +767,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+
+
+
 
 /**************************************************************************
 LLAMADA DE ACORDE Y SU IMAGEN

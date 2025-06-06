@@ -15,8 +15,19 @@
 
 
 .contenedor-tabla {
-        @media (min-width: 384px) {
-            width: 384px;
-            max-width: 100%;
-        }
+    @media (min-width: 384px) {
+        width: 384px;
+        max-width: 100%;
+    }
+
+        @media (min-width: 768px) {
+        width: 768px;
+        max-width: 100%;
+    }
+
+        @media (min-width: 992px) {
+        width: 992px;
+        max-width: 100%;
+    }
+
 }
