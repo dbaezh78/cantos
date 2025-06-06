@@ -211,8 +211,7 @@
     <div class="notas-columna">
 
         <!-- CONTENIDO DE LAS NOTAS DEL CANTO-->
-<a href="#" class="notas-enlace" onclick="mostrarImagen('/cantos/src/ima/rem9.jpg'); return false;">Re<em>m</em>9</a>
-<a href="#" class="notas-enlace" onclick="mostrarImagen('/cantos/src/ima/mi.jpg'); return false;">Mi</a>
+        <select id="acorde-selector"><option value="">♪♫</option></select>
 
     </div>
 
@@ -224,14 +223,9 @@
             <hr class="dbhr">
         </table>
 
-        <!-- SECCION DE LA IMAGEN SELECCIONADA-->
-        <div id="imagen-container">
-            <div class="dbpict">
-                <img id="imagen-nota" src="" alt="Nota musical">
-                <button class="cerrar-btn" onclick="document.getElementById('imagen-container').style.display='none'">×</button>
-            </div>
-        </div>
-        <!-- CERRANDO DE CONTENEDOR DE TABLA -->
+        <!-- SECCION DEL ACORDE Y LA IMAGEN CORRESPONDIENTE -->
+        <div id="acorde-display"><img id="acorde-imagen" src="" alt="Acorde seleccionado"></div>
+		<!-- CERRANDO DE CONTENEDOR DE TABLA -->
     </div>
 
     <!--    SCRIPT DEFINITIVO CUANDO SE HALLA COMPLETADO EL CANTO

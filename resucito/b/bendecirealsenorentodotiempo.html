@@ -244,11 +244,7 @@
     <div class="notas-columna">
 
         <!-- CONTENIDO DE LAS NOTAS DEL CANTO-->
-<a href="#" class="notas-enlace" onclick="mostrarImagen('/cantos/src/ima/do.jpg'); return false;">Do</a>
-<a href="#" class="notas-enlace" onclick="mostrarImagen('/cantos/src/ima/rem.jpg'); return false;">Re<em>m</em></a>
-<a href="#" class="notas-enlace" onclick="mostrarImagen('/cantos/src/ima/la.jpg'); return false;">La</a>
-<a href="#" class="notas-enlace" onclick="mostrarImagen('/cantos/src/ima/la7.jpg'); return false;">La7</a>
-<a href="#" class="notas-enlace" onclick="mostrarImagen('/cantos/src/ima/sib.jpg'); return false;">Si♭</a>
+        <select id="acorde-selector"><option value="">♪♫</option></select>
 
     </div>
 
@@ -260,14 +256,9 @@
             <hr class="dbhr">
         </table>
 
-        <!-- SECCION DE LA IMAGEN SELECCIONADA-->
-        <div id="imagen-container">
-            <div class="dbpict">
-                <img id="imagen-nota" src="" alt="Nota musical">
-                <button class="cerrar-btn" onclick="document.getElementById('imagen-container').style.display='none'">×</button>
-            </div>
-        </div>
-        <!-- CERRANDO DE CONTENEDOR DE TABLA -->
+        <!-- SECCION DEL ACORDE Y LA IMAGEN CORRESPONDIENTE -->
+        <div id="acorde-display"><img id="acorde-imagen" src="" alt="Acorde seleccionado"></div>
+		<!-- CERRANDO DE CONTENEDOR DE TABLA -->
     </div>
 
     <!--    SCRIPT DEFINITIVO CUANDO SE HALLA COMPLETADO EL CANTO

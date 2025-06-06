@@ -262,12 +262,7 @@
     <div class="notas-columna">
 
         <!-- CONTENIDO DE LAS NOTAS DEL CANTO-->
-        <a href="#" class="notas-enlace" onclick="mostrarImagen('/cantos/src/ima/rem9.jpg'); return false;">RE<em>m</em>9</a>
-        <a href="#" class="notas-enlace" onclick="mostrarImagen('/cantos/src/ima/mi.jpg'); return false;">MI</a>
-        <a href="#" class="notas-enlace" onclick="mostrarImagen('/cantos/src/ima/fa.jpg'); return false;">FA</a>
-        <a href="#" class="notas-enlace" onclick="mostrarImagen('/cantos/src/ima/famaj7.jpg'); return false;">FA<em>maj</em>7</a>
-        <a href="#" class="notas-enlace" onclick="mostrarImagen('/cantos/src/ima/La7.jpg'); return false;">LA7</a>
-        <a href="#" class="notas-enlace" onclick="mostrarImagen('/cantos/src/ima/Lam.jpg'); return false;">LA<em>m</em></a>
+        <select id="acorde-selector"><option value="">♪♫</option></select>
 
     </div>
 
@@ -279,16 +274,10 @@
             </tr>
         </table>
 
-        <!-- SECCION DE LA IMAGEN SELECCIONADA-->
-        <div id="imagen-container">
-            <div class="dbpict">
-                <img id="imagen-nota" src="" alt="Nota musical">
-                <button class="cerrar-btn" onclick="document.getElementById('imagen-container').style.display='none'">×</button>
+        <!-- SECCION DEL ACORDE Y LA IMAGEN CORRESPONDIENTE -->
+        <div id="acorde-display"><img id="acorde-imagen" src="" alt="Acorde seleccionado"></div>
+		<!-- CERRANDO DE CONTENEDOR DE TABLA -->
             </div>
-        </div>
-
-        <!-- CERRANDO DE CONTENEDOR DE TABLA -->
-    </div>
   
 <script src="/cantos/src/js/dbMainJS.js"></script>
 <script src="/cantos/resucito/cjs/anadiedemosocasiondetropiezo.js"></script>

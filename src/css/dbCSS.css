@@ -1233,3 +1233,59 @@
   .PowerOff{
     display: none;
   }
+
+
+
+  /****************************************
+  CONTROL DE IMAGEN PARA ACORDES
+*******************************************/
+    /* Estilos básicos */
+
+.acorde-container {
+    padding: 30px;
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#acorde-selector {
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border-color: goldenrod;
+    border: 0px solid #ddd;
+    width: auto;
+    margin-bottom: 20px;
+    -webkit-appearance: none;
+    color: red;
+    font-weight: bold;
+    outline: none;
+    background-color: transparent;
+}
+
+#acorde-imagen {
+    width: 992px;           /* Limita el ancho a un 50% del contenedor */
+    max-width: 70%;      /* Asegura que no se desborde */
+    height: auto;
+    display: none;        /* Oculto inicialmente */
+    margin: 0 auto;       /* Centrado horizontal */
+    border: 1px solid #eee;
+    border-radius: 5px;
+}
+
+/* Aquí puedes ajustar el tamaño de la imagen como necesites */
+#acorde-imagen {
+  
+  height: auto;
+  margin-left: initial;
+}
+
+
+  /****************************************
+  CONTROL DE IMAGEN PARA ACORDES
+*******************************************/

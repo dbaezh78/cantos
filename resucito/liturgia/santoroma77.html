@@ -246,10 +246,7 @@
     <div class="notas-columna">
 
         <!-- CONTENIDO DE LAS NOTAS DEL CANTO-->
-<a href="#" class="notas-enlace" onclick="mostrarImagen('/cantos/src/ima/mi.jpg'); return false;">Mi</a>
-<a href="#" class="notas-enlace" onclick="mostrarImagen('/cantos/src/ima/fa.jpg'); return false;">Fa</a>
-<a href="#" class="notas-enlace" onclick="mostrarImagen('/cantos/src/ima/sol.jpg'); return false;">Sol</a>
-<a href="#" class="notas-enlace" onclick="mostrarImagen('/cantos/src/ima/lam.jpg'); return false;">La<em>m</em></a>
+        <select id="acorde-selector"><option value="">♪♫</option></select>
 
     </div>
 
@@ -261,14 +258,9 @@
             <hr class="dbhr">
         </table>
 
-        <!-- SECCION DE LA IMAGEN SELECCIONADA-->
-        <div id="imagen-container">
-            <div class="dbpict">
-                <img id="imagen-nota" src="" alt="Nota musical">
-                <button class="cerrar-btn" onclick="document.getElementById('imagen-container').style.display='none'">×</button>
-            </div>
-        </div>
-        <!-- CERRANDO DE CONTENEDOR DE TABLA -->
+        <!-- SECCION DEL ACORDE Y LA IMAGEN CORRESPONDIENTE -->
+        <div id="acorde-display"><img id="acorde-imagen" src="" alt="Acorde seleccionado"></div>
+		<!-- CERRANDO DE CONTENEDOR DE TABLA -->
     </div>
 
     <script src="/cantos/src/js/dbMainJS.js"></script>

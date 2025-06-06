@@ -550,3 +550,86 @@ function ajustarPosicion(posicionOriginal, anchoPantalla) {
  ***********************/
 document.addEventListener('DOMContentLoaded', inicializarAplicacion);
 
+
+/**************************************************************************
+LLAMADA DE ACORDE Y SU IMAGEN
+**************************************************************************/
+document.addEventListener('DOMContentLoaded', function() {
+    // Objeto con los acordes y sus rutas
+    const acordes = {
+        "Do": "/cantos/src/ima/do.jpg",
+      "Do7": "/cantos/src/ima/do7.jpg",
+      "Dom": "/cantos/src/ima/dom.jpg",
+      "Do#": "/cantos/src/ima/dos.jpg",
+      "Do#7": "/cantos/src/ima/dos7.jpg",
+      "Do#m": "/cantos/src/ima/dosm.jpg",
+      "Re": "/cantos/src/ima/re.jpg",
+      "Re7": "/cantos/src/ima/re7.jpg",
+      "Rem": "/cantos/src/ima/rem.jpg",
+      "Rem9": "/cantos/src/ima/rem9.jpg",
+      "Re#": "/cantos/src/ima/res.jpg",
+      "Re#m": "/cantos/src/ima/resm.jpg",
+      "Mi": "/cantos/src/ima/mi.jpg",
+      "Mimaj7": "/cantos/src/ima/mimaj7.jpg",
+      "Mi7": "/cantos/src/ima/mi7.jpg",
+      "Mi6": "/cantos/src/ima/mi6.jpg",
+      "Mim": "/cantos/src/ima/mim.jpg",
+      "Mim6": "/cantos/src/ima/mim6.jpg",
+      "Fa": "/cantos/src/ima/fa.jpg",
+      "Famaj7": "/cantos/src/ima/famaj7.jpg",
+      "Famaj713": "/cantos/src/ima/famaj713.jpg",
+      "Fa7": "/cantos/src/ima/fa7.jpg",
+      "Fam": "/cantos/src/ima/fam.jpg",
+      "Fa#": "/cantos/src/ima/fas.jpg",
+      "Fa#m": "/cantos/src/ima/fasm.jpg",
+      "Sol": "/cantos/src/ima/sol.jpg",
+      "Sol7": "/cantos/src/ima/sol7.jpg",
+      "Solm": "/cantos/src/ima/solm.jpg",
+      "Sol#": "/cantos/src/ima/sols.jpg",
+      "Sol#7": "/cantos/src/ima/sols7.jpg",
+      "Sol#m": "/cantos/src/ima/solsm.jpg",
+      "La": "/cantos/src/ima/la.jpg",
+      "La7": "/cantos/src/ima/la7.jpg",
+      "La6": "/cantos/src/ima/la6.jpg",
+      "Lam": "/cantos/src/ima/lam.jpg",
+      "Lam7": "/cantos/src/ima/lam7.jpg",
+      "Lam6": "/cantos/src/ima/lam6.jpg",
+      "Si": "/cantos/src/ima/si.jpg",
+      "Si♭": "/cantos/src/ima/sib.jpg",
+      "Si♭7": "/cantos/src/ima/sib7.jpg",
+      "Si♭m": "/cantos/src/ima/sibm.jpg",
+      "Si7": "/cantos/src/ima/si7.jpg",
+      "Sim": "/cantos/src/ima/Sim.jpg"
+        // Puedes agregar más acordes aquí
+    };
+    
+    const selector = document.getElementById('acorde-selector');
+    const imagenAcorde = document.getElementById('acorde-imagen');
+    
+    // Llenar el select con las opciones de acordes
+    for (const acorde in acordes) {
+        const option = document.createElement('option');
+        option.value = acorde;
+        option.textContent = acorde;
+        selector.appendChild(option);
+    }
+    
+    // Manejar el cambio de selección
+    selector.addEventListener('change', function() {
+        const acordeSeleccionado = this.value;
+        
+        if (acordeSeleccionado && acordes[acordeSeleccionado]) {
+            imagenAcorde.src = acordes[acordeSeleccionado];
+            imagenAcorde.alt = `Acorde ${acordeSeleccionado}`;
+            imagenAcorde.style.display = 'block';
+        } else {
+            imagenAcorde.src = '';
+            imagenAcorde.alt = '';
+            imagenAcorde.style.display = 'none';
+        }
+    });
+});
+
+/**************************************************************************
+LLAMADA DE ACORDE Y SU IMAGEN
+**************************************************************************/
