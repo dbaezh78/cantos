@@ -1,15 +1,5 @@
     // Datos de los cantos
 const songs = [
-        {id:53,title: "Cordero de Dios", subtitle: "Después de la consagración", category: "Liturgia", moments: ["Entrada"], url: "/cantos/resucito/liturgia/corderodedios.html"},
-        {id:54,title: "Credo", subtitle: "Símbolo Apostólico", category: "Liturgia", moments: ["Pascua", "Laudes", "Comunión", "Antiguo Testamento"], url: "/cantos/resucito/liturgia/credo.html"},
-        {id:55,title: "Cristo es la luz", subtitle: "Himno - Juan 8,12; 14,6", category: "Precatecumenado", moments: ["Cuaresma", "Entrada", "Final", "Antiguo Testamento"], url: "/cantos/resucito/c/cristoeslaluz.html"},
-        {id:56,title: "Cuando dormía", subtitle: "Cantar de los Cantares 5,2ss ", category: "Catecumenado", moments: ["Pascua", "Laudes", "Antiguo Testamento"], url: "/cantos/resucito/c/cuandodormia.html"},
-        {id:57,title: "Cuando el Señor", subtitle: "Salmo 126 (125)", category: "Precatecumenado", moments: ["Pascua", "Paz", "Final"], url: "/cantos/resucito/c/cuandoelsenor.html"},
-        {id:58,title: "Cuando Israel salió de Egipto", subtitle: "Salmo 114 (113)", category: "Precatecumenado", moments: ["Pascua", "Paz"], url: "/cantos/resucito/c/cuandoisraelsaliodeegipto.html"},
-        {id:59,title: "Dayenú", subtitle: "De la Hagadá de Pésaj hebrea", category: "Precatecumenado", moments: ["Cuaresma", "Antiguo Testamento"], url: "/cantos/resucito/d/dayenu.html"},
-        {id:60,title: "De Profundis", subtitle: "Salmo 130 (129)", category: "Precatecumenado", moments: ["Adviento", "Virgen", "Antiguo Testamento"], url: "/cantos/resucito/d/deprofundis.html"},
-        {id:61,title: "Débora", subtitle: "Jueces 5", category: "Catecumenado", moments: ["Cuaresma", "Entrada", "Antiguo Testamento"], url: "/cantos/resucito/d/debora.html"},
-        {id:62,title: "Decidle a los de corazón cansado", subtitle: "Isaías 35,4ss", category: "Precatecumenado", moments: ["Laudes/Visperas", "Antiguo Testamento"], url: "/cantos/resucito/d/decidlealosdecorazoncansado.html"},
         {id:63,title: "Delante de los ángeles", subtitle: "Salmo 138 (137)", category: "Precatecumenado", moments: ["Final", "Nuevo Testamento"], url: "/cantos/resucito/d/delantedelosangeles.html"},
         {id:64,title: "Día de reposo", subtitle: "Juan 8,52", category: "Precatecumenado", moments: ["Laudes/Visperas", "Antiguo Testamento"], url: "/cantos/resucito/d/diadereposo.html"},
         {id:65,title: "Dice el Señor a mi Señor", subtitle: "Salmo 110 (109)", category: "Precatecumenado", moments: ["Antiguo Testamento"], url: "/cantos/resucito/d/diceelsenoramisenor.html"},

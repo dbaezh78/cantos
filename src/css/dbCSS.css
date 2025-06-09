@@ -1254,9 +1254,10 @@ h1 {
     margin-bottom: 20px;
 }
 
-#acorde-selector {
-    padding: 10px 15px;
-    font-size: 1rem;
+    #acorde-selector {
+    text-align: center;
+    padding: 2px;
+    font-size: 1.5rem;
     border-radius: 5px;
     border-color: goldenrod;
     border: 0px solid #ddd;
@@ -1269,24 +1270,36 @@ h1 {
     background-color: transparent;
 }
 
-#acorde-imagen {
-    width: 992px;           /* Limita el ancho a un 50% del contenedor */
-    max-width: 70%;      /* Asegura que no se desborde */
-    height: auto;
-    display: none;        /* Oculto inicialmente */
-    margin: 0 auto;       /* Centrado horizontal */
-    border: 1px solid #eee;
-    border-radius: 5px;
+#acorde-display {
+    background-color: #ffffff;
+    min-height: auto;
+    height: auto; /* Altura fija */
 }
 
-/* Aquí puedes ajustar el tamaño de la imagen como necesites */
 #acorde-imagen {
-  
+  border: 0px solid #ffffff;
   height: auto;
-  margin-left: initial;
+  display: none;
+  object-fit: contain;
+  margin: 0 auto;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-touch-callout: none;
+
+  /*  margin-left: auto;
+      margin-left: initial;   */
+
+    @media (min-width: 384px) {
+      width: 364px;
+    }
+    @media (min-width: 768px) {
+      width: 768px;
+      max-width: 70%;
+    }
+    @media (min-width: 992px) {
+      width: 992px;
+      max-width: 60%;
+    }
 }
 
-
-  /****************************************
-  CONTROL DE IMAGEN PARA ACORDES
-*******************************************/

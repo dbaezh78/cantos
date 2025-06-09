@@ -1,0 +1,49 @@
+#acorde-imagen {
+  border: 0px solid #ffffff;
+  height: auto;
+  display: none;        /* Oculto inicialmente */
+  margin-left: auto;
+  object-fit: contain;
+  /*  margin: 0 auto;       /* Centrado horizontal */
+    /*margin-left: initial;*/
+
+    @media (min-width: 384px) {
+      width: 384px;
+    }
+    @media (min-width: 768px) {
+      width: 768px;
+    }
+    @media (min-width: 384px) {
+      width: 992px;
+      max-width: 70%;
+    }
+}
+
+
+
+
+
+
+
+#acorde-imagen {
+    width: 992px;           /* Limita el ancho a un 50% del contenedor */
+    max-width: 70%;      /* Asegura que no se desborde */
+    height: auto;
+    display: none;        /* Oculto inicialmente */
+    margin: 0 auto;       /* Centrado horizontal */
+    border: 1px solid #eee;
+    border-radius: 5px;
+}
+
+/* Aquí puedes ajustar el tamaño de la imagen como necesites */
+#acorde-imagen {
+  height: auto;
+  margin-left: auto;
+  /*margin-left: initial;*/
+}
+
+#acorde-imagen {
+    object-fit: contain; /* Para que la imagen se ajuste manteniendo proporciones */
+    border: 0px solid #ffffff;
+}
+
