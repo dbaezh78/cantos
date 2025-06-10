@@ -4,10 +4,11 @@
     }
 
             .raya1::before {
-                content: "BIS A.";
+                content: "  BIS A.";
                 position: absolute;
                 align-content: center;
                 border-left: 2px solid #c6c5c5;
+                color: #c6c5c5;
                 
                 /* Media queries para raya1 */
                 @media (min-width: 384px) {

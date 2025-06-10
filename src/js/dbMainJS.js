@@ -594,6 +594,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		"Lam7": "/cantos/src/ima/lam7.jpg",
 		"La6": "/cantos/src/ima/la6.jpg",
 		"Lam6": "/cantos/src/ima/lam6.jpg",
+        "La♭": "/cantos/src/ima/lab.jpg",
 		"Si": "/cantos/src/ima/si.jpg",
 		"Sim": "/cantos/src/ima/Sim.jpg",
 		"Si7": "/cantos/src/ima/si7.jpg",

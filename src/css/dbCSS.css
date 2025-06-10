@@ -1303,3 +1303,38 @@ h1 {
     }
 }
 
+
+
+        .r1 {
+            position: relative;
+            min-height: 0px;
+        }
+
+        .r1::before {
+            content: "  BIS A.";
+            position: absolute;
+            align-content: center;
+            border-left: 2px solid #c6c5c5;
+            color: #c6c5c5;
+            
+            /* Media queries para r1 */
+            @media (min-width: 384px) {
+                height: 223px;
+                margin-left: 76%;
+                margin-top: 0%;
+            }
+
+            @media (min-width: 768px) {
+              height: 281px;
+              margin-left: 57%;
+              font-size: 1.5rem;
+              margin-top: 0%;
+            }
+
+            @media (min-width: 992px) {
+                height: 234px;
+                margin-left: 60%;
+                margin-top: 0%
+
+            }
+        }

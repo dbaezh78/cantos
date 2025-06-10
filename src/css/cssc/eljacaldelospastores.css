@@ -1,0 +1,32 @@
+    .r1 {
+        position: relative;
+        min-height: 0px;
+    }
+
+            .r1::before {
+                content: "  BIS A.";
+                position: absolute;
+                align-content: center;
+                border-left: 2px solid #c6c5c5;
+                color: #c6c5c5;
+                
+                /* Media queries para r1 */
+                @media (min-width: 384px) {
+                    height: 140px;
+                    margin-left: 84%;
+                    margin-top: 0%;
+                }
+
+                @media (min-width: 768px) {
+                    height: 175px;
+                    margin-left: 67%;
+                    margin-top: 0%;
+                }
+
+                @media (min-width: 992px) {
+                    height: 151px;
+                    margin-left: 67%;
+                    margin-top: 0%
+
+                }
+            }

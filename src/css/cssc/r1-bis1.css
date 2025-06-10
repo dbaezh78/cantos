@@ -1,15 +1,16 @@
-    .raya1 {
+    .r1 {
         position: relative;
         min-height: 0px;
     }
 
-            .raya1::before {
-                content: "BIS A.";
+            .r1::before {
+                content: "  BIS A.";
                 position: absolute;
                 align-content: center;
                 border-left: 2px solid #c6c5c5;
+                color: #c6c5c5;
                 
-                /* Media queries para raya1 */
+                /* Media queries para r1 */
                 @media (min-width: 384px) {
                     height: 140px;
                     margin-left: 76%;
