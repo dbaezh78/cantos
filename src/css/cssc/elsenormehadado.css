@@ -1,0 +1,15 @@
+.r1::before {
+    @media (min-width: 384px) {
+        height: 60px;
+        margin-left: 84%;
+    }
+    @media (min-width: 768px) {
+        height: 74px;
+        margin-left: 62%;
+    }
+    @media (min-width: 992px) {
+        height: 64px;
+        margin-left: 64%;
+        margin-top: 0%;
+    }
+}
