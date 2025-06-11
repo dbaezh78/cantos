@@ -2,7 +2,8 @@
  * CONFIGURACIÓN GENERAL
  ***********************/
 const acordes = ["Do", "Do#", "Re", "Re#", "Mi", "Fa", "Fa#", "Sol", "Sol#", "La", "Si♭", "Si"];
-const dbTrastes = ["♫", "1°", "2°", "3°", "4°", "5°", "6°", "7°", "8°", "9°", "10°"];
+const dbTrastes = ["♫ Traste", "1°T", "2°T", "3°T", "4°T", "5°T", "6°T", "7°T", "8°T", "9°T", "10°T"];
+//const dbTrastes = ["♫", "1°", "2°", "3°", "4°", "5°", "6°", "7°", "8°", "9°", "10°"];
 
 // Variables de estado global
 let scrolling = false;

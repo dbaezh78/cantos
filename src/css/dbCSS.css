@@ -252,8 +252,13 @@
         max-width: max-content;
         margin: 20px auto;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        scrollbar-width: none
+        scrollbar-width: none;
         /*overflow-x: auto;*/ /* NO USAR*/
+            @media (min-width: 384px) {
+              width: 126%; 
+              max-width: max-content;
+
+        }
       }
 
       .home {
@@ -647,6 +652,7 @@
         .plaudes {color: rgb(56, 162, 6);}
         .ordinario {color: rgb(56, 162, 6);}
         .pcuaresma {color: purple;}
+        .pcomunion {color: purple;}
         .padviento {color: purple;}
         .pentrada {color: #3dcef0;}
         .paz {color: #3dcef0;}
@@ -1293,6 +1299,7 @@ h1 {
 
     @media (min-width: 384px) {
       width: 364px;
+      max-width: 60%;
     }
     @media (min-width: 768px) {
       width: 768px;
@@ -1315,26 +1322,27 @@ h1 {
             content: "  BIS A.";
             position: absolute;
             align-content: center;
-            border-left: 2px solid #c6c5c5;
-            color: #c6c5c5;
+            border-left: 2px solid #c6c5c59e;
+            color: #c6c5c59e;
+            width: max-content;
             
             /* Media queries para r1 */
             @media (min-width: 384px) {
-                height: 223px;
+                height: 330px;
                 margin-left: 76%;
                 margin-top: 0%;
             }
 
             @media (min-width: 768px) {
               height: 281px;
-              margin-left: 57%;
+              margin-left: 80%;
               font-size: 1.5rem;
               margin-top: 0%;
             }
 
             @media (min-width: 992px) {
                 height: 234px;
-                margin-left: 60%;
+                margin-left: 80%;
                 margin-top: 0%
 
             }

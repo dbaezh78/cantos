@@ -1,0 +1,23 @@
+.r1::before {
+    @media (min-width: 384px) {
+        height: 204px;
+        margin-left: 115%;
+        margin-top: 0%;
+        }
+    @media (min-width: 768px) {
+            height: 260px;
+        margin-left: 88%;
+        margin-top: 0%;
+    }
+    @media (min-width: 992px) {
+        height: 191px;
+        margin-left: 69%;
+        margin-top: 0%;
+    }
+}
+/*
+.alyrics, .lyrics {
+    @media (min-width: 384px){font-size: 1.36rem;}
+    @media (min-width: 768px){font-size: 2rem;}
+    @media (min-width: 992px){font-size: 1.23rem;}
+}*/

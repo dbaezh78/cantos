@@ -58,8 +58,8 @@ const pTablet = {
     const partitura = {
       tituloc: NOMBREDELCANTO,
       titulo: NOMBREDELCANTO,
-      salmo: "Salmo 116 (114-115)",
-      dbnos: "18",
+      salmo: "2da Corintios 6,3ss",
+      dbnos: "2",
       catg: "PRECATECUMENADO",
     
       // Estructura para Cantor (texto)
