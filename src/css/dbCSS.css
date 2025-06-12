@@ -95,17 +95,20 @@
         }
   
         .csv {
-/*          font-style: italic;*/
           color: rgb(196 76 75);;
-          font-size: 1rem;
-
           @media (min-width: 384px) {font-size: 1rem;}
+          @media (min-width: 768px) {
+            font-size: 1.4rem;
+          }
+          @media (min-width: 992px) {font-size: 1rem;}
+
+          /*
+          font-style: italic;
           @media (min-width: 412px) {font-size: 1rem;}
           @media (min-width: 576px) {font-size: 1rem;}
-          @media (min-width: 768px) {font-size: 1.3rem;}
-          @media (min-width: 992px) {font-size: 1rem;}
-          @media (min-width: 1200px) {font-size: 1rem;} /* HD (1080p) */
-          @media (min-width: 1920px) {font-size: 1rem;} /* FHD(2K/4K) */
+          @media (min-width: 1200px) {font-size: 1rem;}  HD (1080p) 
+          @media (min-width: 1920px) {font-size: 1rem;}  FHD(2K/4K) 
+          */
         }
   
       /* Clase renombrada a .mso */

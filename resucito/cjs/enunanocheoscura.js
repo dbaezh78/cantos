@@ -4,44 +4,44 @@
 ╠════════════════════════════════════════════════════════════════╣
 ║                Mapeo para celulares menor a 700px              ║
 ╚════════════════════════════════════════════════════════════════╝  */
-const pcelular = {      };
 /*
 ╔════════════════════════════════════════════════════════════════╗
-║                Mapeo para celulares menor a 900px              ║
-╚════════════════════════════════════════════════════════════════╝  */
-const pTablet = {       };
+║                Mapeo para tabletas (701px a 900px)             ║
+╚════════════════════════════════════════════════════════════════╝ */
+const pTablet = {}; // Deliberadamente vacío para usar solo el factor
+
 /*
 ╔════════════════════════════════════════════════════════════════╗
-║            Función de Posición con factor ajustable            ║
-╚════════════════════════════════════════════════════════════════╝  */
+║            Función de Posición con factor corregido           ║
+╚════════════════════════════════════════════════════════════════╝ */
 function ac(nota, posicion, extension = "") {
   const anchoPantalla = window.innerWidth;
   let posicionAjustada = posicion;
-/*
-╔════════════════════════════════════════════════════════════════╗
-║           1. Primero verificar celulares (estricto)            ║
-╚════════════════════════════════════════════════════════════════╝  */
-if (anchoPantalla <= 700) {
-posicionAjustada = pcelular[posicion] || posicion;
-if (!pcelular[posicion]) {
-const numero = parseInt(posicion.replace('cp', '')) || 0;
-const factor = 0.86; // Factor diferente para móviles
-posicionAjustada = `cp${Math.round(numero * factor)}`;
-  }
-}/*
-╔════════════════════════════════════════════════════════════════╗
-║        2. Luego verificar tablets (solo si no es móvil)        ║
-╚════════════════════════════════════════════════════════════════╝  */
-  else if (anchoPantalla <= 900) {
-    posicionAjustada = pTablet[posicion] || posicion;
-    if (!pTablet[posicion]) {
+
+  if (anchoPantalla <= 700) {
+    // Lógica para móviles (existente)
+    posicionAjustada = pcelular[posicion] || posicion;
+    if (!pcelular[posicion]) {
       const numero = parseInt(posicion.replace('cp', '')) || 0;
-      const factor = 0.9;
+      const factor = 0.86;
       posicionAjustada = `cp${Math.round(numero * factor)}`;
     }
+  } 
+  else if (anchoPantalla <= 900) {
+    // Lógica CORREGIDA para tablets
+    const numero = parseInt(posicion.replace('cp', '')) || 0;
+    const factor = 1.815;
+    posicionAjustada = `cp${Math.round(numero * factor)}`;
+    
+    // Opcional: mantener mapeos específicos si existen
+    if (pTablet[posicion]) {
+      posicionAjustada = pTablet[posicion];
+    }
   }
+
   return { acorde: nota, posicion: posicionAjustada, base: nota, extension };
 }/*
+
 ╔════════════════════════════════════════════════════════════════╗
 ║                         DATOS DEL CANTO                        ║
 ╚════════════════════════════════════════════════════════════════╝  */
@@ -111,7 +111,7 @@ cantorAcordes: [
 /* 12*/      [ac("Re", "cp14","m"), ac("Fa","cp90","")],
 /* 13*/      [ac("Re", "cp14","m")],
 /* 14*/      [ac("Mi", "cp14","")],
-/* 15 */   [ac("", "cp0","")],
+/* 15 */     [ac("", "cp0","")],
 /* 16*/      [ac("La", "cp14","m"), ac("Re","cp90","m"), ac("9","cp150","")],
 /* 17*/      [ac("La", "cp14","m")],
 /* 18*/      [ac("Mi", "cp14","")],
