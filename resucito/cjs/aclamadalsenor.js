@@ -1,144 +1,152 @@
-/*********************** FUENTE DEL CANTO ***********************/
-
-// Mapeo para celulares 483px
-const pcelular = {
-//  --cp1: 0.1%;
-      //  --cp18: 1.8%;
-      //  --cp486: 48.6%;
-      //  --cp1547: 154.7%;
-    };
-// Mapeo específico para tablets (800px)
-const pTablet = {
-//  --cp1: 0.1%;
-      //  --cp18: 1.8%;
-      //  --cp486: 48.6%;
-      //  --cp1547: 154.7%;
-    };
-
+/*
+╔════════════════════════════════════════════════════════════════╗
+║                         FUENTE DEL CANTO                       ║
+╠════════════════════════════════════════════════════════════════╣
+║                Mapeo para celulares menor a 700px              ║
+╚════════════════════════════════════════════════════════════════╝  */
+const pcelular = {      };
+/*
+╔════════════════════════════════════════════════════════════════╗
+║                Mapeo para celulares menor a 900px              ║
+╚════════════════════════════════════════════════════════════════╝  */
+const pTablet = {       };
+/*
+╔════════════════════════════════════════════════════════════════╗
+║            Función de Posición con factor ajustable            ║
+╚════════════════════════════════════════════════════════════════╝  */
 function ac(nota, posicion, extension = "") {
-      const anchoPantalla = window.innerWidth;
-      let posicionAjustada = posicion;
-
-// Solo ajustamos para tablets (601px a 900px)
-      if (anchoPantalla > 600 && anchoPantalla <= 900) {
-        posicionAjustada = pTablet[posicion] || posicion;
-
-        // Si no está en el mapeo, aplicamos un factor general más preciso
-        if (!pTablet[posicion]) {
-          const numero = parseInt(posicion.replace('cp', ''));
-          const factor = 0.97; // Factor más preciso para 800px
-          posicionAjustada = `cp${Math.round(numero * factor)}`;
-        }
-      }
-
-      // Solo ajustamos para tablets (284px a 384px)
-      if (anchoPantalla > 284 && anchoPantalla <= 411) {
-            posicionAjustada = pcelular[posicion] || posicion;
-            
-            // Si no está en el mapeo, aplicamos un factor general más preciso
-            if (!pcelular[posicion]) {
-              const numero = parseInt(posicion.replace('cp', ''));
-              const factor = 1.3; // Factor más preciso para 384px
-              posicionAjustada = `cp${Math.round(numero * factor)}`;
-            }
-          }
-      
-      return { acorde: nota, posicion: posicionAjustada, base: nota, extension };
+  const anchoPantalla = window.innerWidth;
+  let posicionAjustada = posicion;
+/*
+╔════════════════════════════════════════════════════════════════╗
+║           1. Primero verificar celulares (estricto)            ║
+╚════════════════════════════════════════════════════════════════╝  */
+if (anchoPantalla <= 700) {
+posicionAjustada = pcelular[posicion] || posicion;
+if (!pcelular[posicion]) {
+const numero = parseInt(posicion.replace('cp', '')) || 0;
+const factor = 0.86; // Factor diferente para móviles
+posicionAjustada = `cp${Math.round(numero * factor)}`;
+  }
+}/*
+╔════════════════════════════════════════════════════════════════╗
+║        2. Luego verificar tablets (solo si no es móvil)        ║
+╚════════════════════════════════════════════════════════════════╝  */
+  else if (anchoPantalla >= 768 && anchoPantalla <= 1024) {
+    posicionAjustada = pTablet[posicion] || posicion;
+    if (!pTablet[posicion]) {
+      const numero = parseInt(posicion.replace('cp', '')) || 0;
+      const factor = 0.9;
+      posicionAjustada = `cp${Math.round(numero * factor)}`;
     }
-  
-    /***********************
-     * DATOS DEL CANTO
-     ***********************/
-
-const NOMBREDELCANTO = "ACLAMAD AL SEÑOR ";
-
+  }
+  return { acorde: nota, posicion: posicionAjustada, base: nota, extension };
+}/*
+╔════════════════════════════════════════════════════════════════╗
+║                         DATOS DEL CANTO                        ║
+╚════════════════════════════════════════════════════════════════╝  */
+const NOMBREDELCANTO = "ACLAMAD AL SEÑOR";
 const partitura = {
       tituloc: NOMBREDELCANTO,
       titulo: NOMBREDELCANTO,
       salmo: "Salmo 100 (99)",
       dbnos: "9",
       catg: "PRECATECUMENADO",
-
-// Estructura para Cantor (texto)
-
+/*
+╔════════════════════════════════════════════════════════════════╗
+║                 Estructura para Cantor (texto)                 ║
+╚════════════════════════════════════════════════════════════════╝  */
 cantor: [
-/* 1 */        "Acercaos a Él",
-/* 2 */        "con gritos de júbilo.",
-/* 3 */        "Porque el Señor es nuestro Dios",
-/* 4 */        "y nosotros su pueblo.",
-/* 5 */        "Entrad por sus puertas",
-/* 6 */        "con himnos de alegría.",
-/* 7 */        "Bendecid su nombre",
-/* 8 */        "dándole gracias.",
-/* 9 */        "Porque es bueno el Señor,",
-/* 10 */        "es eterno su amor",
-/* 11 */        "con nosotros.",
-],
-      // Estructura para Cantor (acordes) - CON FUNCIÓN ac()
-      cantorAcordes: [
-// IZQUIERDA
-/* 1*/      [ac("Re", "cp79","m"), ac("La","cp226","7")],
-/* 2*/      [ac("Re", "cp292","m")],
-/* 3*/      [ac("Re", "cp213","m"), ac("La","cp534","7")],
-/* 4*/      [ac("Re", "cp316","m")],
-/* 5*/      [ac("Re", "cp57","m"), ac("La","cp382","7")],
-/* 6*/      [ac("Re", "cp342","m")],
-/* 7*/      [ac("Re", "cp107","m"), ac("La","cp345","7")],
-/* 8*/      [ac("Re", "cp214","m")],
-/* 9*/      [ac("Re", "cp2004","m"), ac("La","cp431","7")],
-/* 10 */   [ac("", "cp0","")],
-/* 11*/      [ac("Re", "cp166","m")],
-      ],
-
-      // Estructura para Asamblea (texto)
-      asamblea: [
 /* 1 */        "ACLAMAD AL SEÑOR",
 /* 2 */        "TODA LA TIERRA,",
 /* 3 */        "SERVID AL SEÑOR CON ALEGRÍA.",
-/* 4 */        "ACLAMAD AL SEÑOR",
-/* 5 */        "TODA LA TIERRA,",
-/* 6 */        "SERVID AL SEÑOR CON ALEGRÍA.",
-/* 7 */        "ACLAMAD AL SEÑOR",
+/* 4 */        "Acercaos a Él",
+/* 5 */        "*",
+/* 6 */        "con gritos de júbilo.",
+/* 7 */        "ACLAMAD AL SEÑOR...",
 /* 8 */        "TODA LA TIERRA,",
 /* 9 */        "SERVID AL SEÑOR CON ALEGRÍA.",
-/* 10 */        "ACLAMAD AL SEÑOR",
-/* 11 */        "TODA LA TIERRA,",
-/* 12 */        "SERVID AL SEÑOR CON ALEGRÍA.",
-/* 13 */        "ACLAMAD AL SEÑOR",
+/* 10 */        "Porque el Señor es nuestro Dios",
+/* 11 */        "*",
+/* 12 */        "y nosotros su pueblo.",
+/* 13 */        "ACLAMAD AL SEÑOR...",
 /* 14 */        "TODA LA TIERRA,",
 /* 15 */        "SERVID AL SEÑOR CON ALEGRÍA.",
-/* 16 */        "ACLAMAD AL SEÑOR",
-/* 17 */        "TODA LA TIERRA,",
-/* 18 */        "SERVID AL SEÑOR CON ALEGRÍA.",
+/* 16 */        "Entrad por sus puertas",
+/* 17 */        "*",
+/* 18 */        "con himnos de alegría.",
+/* 19 */        "ACLAMAD AL SEÑOR...",
+/* 20 */        "TODA LA TIERRA,",
+/* 21 */        "SERVID AL SEÑOR CON ALEGRÍA.",
+/* 22 */        "Bendecid su nombre",
+/* 23 */        "*",
+/* 24 */        "dándole gracias.",
+/* 25 */        "ACLAMAD AL SEÑOR...",
+/* 26 */        "TODA LA TIERRA,",
+/* 27 */        "SERVID AL SEÑOR CON ALEGRÍA.",
+/* 28 */        "Porque es bueno el Señor,",
+/* 29 */        "*",
+/* 30 */        "es eterno su amor",
+/* 31 */        "*",
+/* 32 */        "con nosotros.",
+/* 33 */        "ACLAMAD AL SEÑOR...",
+/* 34 */        "TODA LA TIERRA,",
+/* 35 */        "SERVID AL SEÑOR CON ALEGRÍA.",
+],/*
+╔════════════════════════════════════════════════════════════════╗
+║       Estructura para Cantor (acordes) - CON FUNCIÓN ac()      ║
+╚════════════════════════════════════════════════════════════════╝  */
+cantorAcordes: [
+/* 1*/      [ac("Re", "cp14","m")],
+/* 2*/      [ac("Sol", "cp23","m"), ac("Re","cp167","m"), ac("La","cp250","")],
+/* 3*/      [ac("Fa", "cp79",""), ac("Sol","cp255",""), ac("La","cp513","")],
+/* 4*/      [ac("Re", "cp353","m"), ac("La","cp1000","7")],
+/* 5 */     [ac("", "cp0","")],
+/* 6*/      [ac("Re", "cp894","m")],
+/* 7*/      [ac("Re", "cp14","m")],
+/* 8*/      [ac("Sol", "cp23","m"), ac("Re","cp167","m"), ac("La","cp250","")],
+/* 9*/      [ac("Fa", "cp79",""), ac("Sol","cp255",""), ac("La","cp513","")],
+/* 10*/     [ac("Re", "cp353","m"), ac("La","cp1000","7")],
+/* 11 */    [ac("", "cp0","")],
+/* 12*/     [ac("Re", "cp894","m")],
+/* 13*/     [ac("Re", "cp14","m")],
+/* 14*/     [ac("Sol", "cp23","m"), ac("Re","cp167","m"), ac("La","cp250","")],
+/* 15*/     [ac("Fa", "cp79",""), ac("Sol","cp255",""), ac("La","cp513","")],
+/* 16*/     [ac("Re", "cp353","m"), ac("La","cp1000","7")],
+/* 17 */    [ac("", "cp0","")],
+/* 18*/     [ac("Re", "cp894","m")],
+/* 19*/     [ac("Re", "cp14","m")],
+/* 20*/     [ac("Sol", "cp23","m"), ac("Re","cp167","m"), ac("La","cp250","")],
+/* 21*/     [ac("Fa", "cp79",""), ac("Sol","cp255",""), ac("La","cp513","")],
+/* 22*/     [ac("Re", "cp353","m"), ac("La","cp1000","7")],
+/* 23 */    [ac("", "cp0","")],
+/* 24*/     [ac("Re", "cp894","m")],
+
+/* 25*/     [ac("Re", "cp14","m")],
+/* 26*/     [ac("Sol", "cp23","m"), ac("Re","cp167","m"), ac("La","cp250","")],
+/* 27*/     [ac("Fa", "cp79",""), ac("Sol","cp255",""), ac("La","cp513","")],
+
+/* 28*/     [ac("Re", "cp478","m"), ac("La","cp1000","7")],
+/* 29 */    [ac("", "cp0","")],
+/* 30 */    [ac("", "cp0","")],
+/* 31 */    [ac("", "cp0","")],
+/* 32*/     [ac("Re", "cp173","m")],
+
+/* 33*/     [ac("Re", "cp14","m")],
+/* 34*/     [ac("Sol", "cp23","m"), ac("Re","cp167","m"), ac("La","cp250","")],
+/* 35*/     [ac("Fa", "cp79",""), ac("Sol","cp255",""), ac("La","cp513","")],
+],/*
+╔════════════════════════════════════════════════════════════════╗
+║                Estructura para Asamblea (texto)                ║
+╚════════════════════════════════════════════════════════════════╝  */
+      asamblea: [
       ],
       asambleaAcordes: [
-/* 1*/      [ac("Re", "cp14","m")],
-/* 2*/      [ac("Sol", "cp23","m"), ac("Re","cp165","m")],
-/* 3*/      [ac("Fa", "cp77",""), ac("Sol","cp252",""), ac("La","cp511","")],
-/* 4*/      [ac("Re", "cp14","m")],
-/* 5*/      [ac("Sol", "cp23","m"), ac("Re","cp165","m")],
-/* 6*/      [ac("Fa", "cp77",""), ac("Sol","cp252",""), ac("La","cp511","")],
-/* 7*/      [ac("Re", "cp14","m")],
-/* 8*/      [ac("Sol", "cp23","m"), ac("Re","cp165","m")],
-/* 9*/      [ac("Fa", "cp77",""), ac("Sol","cp252",""), ac("La","cp511","")],
-/* 10*/     [ac("Re", "cp14","m")],
-/* 11*/     [ac("Sol", "cp23","m"), ac("Re","cp165","m")],
-/* 12*/     [ac("Fa", "cp77",""), ac("Sol","cp252",""), ac("La","cp511","")],
-/* 13*/     [ac("Re", "cp14","m")],
-/* 14*/     [ac("Sol", "cp23","m"), ac("Re","cp165","m")],
-/* 15*/     [ac("Fa", "cp77",""), ac("Sol","cp252",""), ac("La","cp511","")],
-/* 16*/     [ac("Re", "cp14","m")],
-/* 17*/     [ac("Sol", "cp23","m"), ac("Re","cp165","m")],
-/* 18*/     [ac("Fa", "cp77",""), ac("Sol","cp252",""), ac("La","cp511","")],
-      ]
-  };
-
-/************************************************
- * MANEJO DE CARGA Y REDIMENSIONAMIENTO CORREGIDO
-************************************************/
-
+      ]};/*
+╔════════════════════════════════════════════════════════════════╗
+║        MANEJO DE CARGA Y REDIMENSIONAMIENTO CORREGIDO          ║
+╚════════════════════════════════════════════════════════════════╝  */
     let cargando = false;
-    
     function cargarCantoSeguro(partitura) {
       if (!cargando) {
         cargando = true;
@@ -146,21 +154,24 @@ cantor: [
         setTimeout(() => { cargando = false; }, 300);
       }
     }
-    
-    let timeoutRedimension;
-    function manejarRedimensionamiento() {
-      clearTimeout(timeoutRedimension);
-      timeoutRedimension = setTimeout(() => {
-        cargarCantoSeguro(partitura);
-      }, 200);
-    }
-    
-    // Iniciar carga del canto y configurar eventos
+        let timeoutRedimension;
+        function manejarRedimensionamiento() {
+        clearTimeout(timeoutRedimension);
+        timeoutRedimension = setTimeout(() => {
+            cargarCantoSeguro(partitura);
+        }, 200);
+    }/*
+╔════════════════════════════════════════════════════════════════╗
+║          Iniciar carga del canto y configurar eventos          ║
+╚════════════════════════════════════════════════════════════════╝  */
     document.addEventListener('DOMContentLoaded', () => {
-      // Limpiar contenido existente primero para evitar duplicados
-      const contenedor = document.getElementById('contenedor-partitura'); // Asegúrate de tener este ID
+/*
+╔════════════════════════════════════════════════════════════════╗
+║   Limpiar contenido existente primero para evitar duplicados   ║
+╚════════════════════════════════════════════════════════════════╝  */
+      const contenedor = document.getElementById('contenedor-partitura');
       if (contenedor) contenedor.innerHTML = '';
-      
-      cargarCantoSeguro(partitura);
-      window.addEventListener('resize', manejarRedimensionamiento);
-    });
+            cargarCantoSeguro(partitura);
+            window.addEventListener('resize', manejarRedimensionamiento);
+        }
+    );

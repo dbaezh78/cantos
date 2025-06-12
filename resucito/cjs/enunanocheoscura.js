@@ -4,44 +4,44 @@
 ╠════════════════════════════════════════════════════════════════╣
 ║                Mapeo para celulares menor a 700px              ║
 ╚════════════════════════════════════════════════════════════════╝  */
+const pcelular = {      };
 /*
 ╔════════════════════════════════════════════════════════════════╗
-║                Mapeo para tabletas (701px a 900px)             ║
-╚════════════════════════════════════════════════════════════════╝ */
-const pTablet = {}; // Deliberadamente vacío para usar solo el factor
-
+║                Mapeo para celulares menor a 900px              ║
+╚════════════════════════════════════════════════════════════════╝  */
+const pTablet = {       };
 /*
 ╔════════════════════════════════════════════════════════════════╗
-║            Función de Posición con factor corregido           ║
-╚════════════════════════════════════════════════════════════════╝ */
+║            Función de Posición con factor ajustable            ║
+╚════════════════════════════════════════════════════════════════╝  */
 function ac(nota, posicion, extension = "") {
   const anchoPantalla = window.innerWidth;
   let posicionAjustada = posicion;
-
-  if (anchoPantalla <= 700) {
-    // Lógica para móviles (existente)
-    posicionAjustada = pcelular[posicion] || posicion;
-    if (!pcelular[posicion]) {
+/*
+╔════════════════════════════════════════════════════════════════╗
+║           1. Primero verificar celulares (estricto)            ║
+╚════════════════════════════════════════════════════════════════╝  */
+if (anchoPantalla <= 700) {
+posicionAjustada = pcelular[posicion] || posicion;
+if (!pcelular[posicion]) {
+const numero = parseInt(posicion.replace('cp', '')) || 0;
+const factor = 0.86; // Factor diferente para móviles
+posicionAjustada = `cp${Math.round(numero * factor)}`;
+  }
+}/*
+╔════════════════════════════════════════════════════════════════╗
+║        2. Luego verificar tablets (solo si no es móvil)        ║
+╚════════════════════════════════════════════════════════════════╝  */
+  else if (anchoPantalla > 768 && anchoPantalla <= 1024) {
+    posicionAjustada = pTablet[posicion] || posicion;
+    if (!pTablet[posicion]) {
       const numero = parseInt(posicion.replace('cp', '')) || 0;
-      const factor = 0.86;
+      const factor = 1.27;
       posicionAjustada = `cp${Math.round(numero * factor)}`;
     }
-  } 
-  else if (anchoPantalla <= 900) {
-    // Lógica CORREGIDA para tablets
-    const numero = parseInt(posicion.replace('cp', '')) || 0;
-    const factor = 1.815;
-    posicionAjustada = `cp${Math.round(numero * factor)}`;
-    
-    // Opcional: mantener mapeos específicos si existen
-    if (pTablet[posicion]) {
-      posicionAjustada = pTablet[posicion];
-    }
   }
-
   return { acorde: nota, posicion: posicionAjustada, base: nota, extension };
 }/*
-
 ╔════════════════════════════════════════════════════════════════╗
 ║                         DATOS DEL CANTO                        ║
 ╚════════════════════════════════════════════════════════════════╝  */
@@ -82,7 +82,7 @@ cantor: [
 /* 23 */        "¡oh noche que juntaste,",
 /* 24 */        "amado con amada,",
 /* 25 */        "amada en el amado transformada!",
-/* 26 */        "¡OH NOCHE QUE GUIASTE!,",
+/* 26 */        "¡OH NOCHE QUE GUIASTE!,...",
 /* 27 */        "¡OH NOCHE AMABLE MÁS QUE LA ALBORADA!,",
 /* 28 */        "¡OH NOCHE QUE JUNTASTE,",
 /* 29 */        "AMADO CON AMADA,",
@@ -111,7 +111,7 @@ cantorAcordes: [
 /* 12*/      [ac("Re", "cp14","m"), ac("Fa","cp90","")],
 /* 13*/      [ac("Re", "cp14","m")],
 /* 14*/      [ac("Mi", "cp14","")],
-/* 15 */     [ac("", "cp0","")],
+/* 15 */   [ac("", "cp0","")],
 /* 16*/      [ac("La", "cp14","m"), ac("Re","cp90","m"), ac("9","cp150","")],
 /* 17*/      [ac("La", "cp14","m")],
 /* 18*/      [ac("Mi", "cp14","")],

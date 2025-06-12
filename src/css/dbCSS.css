@@ -1,38 +1,10 @@
 /*  Creado por Carlos David */
 
 /* CSS PARA LIBRO DE CANTOS*/
-      @font-face {
-        font-family: 'Libre Franklin';
-        src: url('cantos/src/fonts/LibreFranklin-Bold.ttf') format('truetype');
-        font-weight: 700; /* Bold */
-        font-style: normal;
-        font-display: swap; /* Mejor experiencia de carga */
-      }
-
-      @font-face {
-        font-family: 'Material Symbols Outlined Local';
-        font-style: normal;
-        font-weight: 100 700;
-        src: url('/cantos/src/font/font.woff2') format('woff2'); /* Ajusta la ruta según tu estructura */
-      }
-
-      @font-face {
-        font-family: 'Fave';
-        src: local('Fave Script Bold Pro'), local('Fave-Script-Bold-Pro'),
-            url('/cantos/src/font/Fave-ScriptBoldPro.woff2') format('woff2'),
-            url('/cantos/src/font/Fave-ScriptBoldPro.woff') format('woff'),
-            url('/cantos/src/font/Fave-ScriptBoldPro.ttf') format('truetype');
-        font-weight: 700;
-        font-style: normal;
-      }
-
-      @font-face {
-        font-family: 'Franklin Gothic Medium';
-        src: url('/cantos/src/font/FranklinGothicMedium.ttf') format('truetype');
-        font-weight: normal;
-        font-style: normal;
-        font-display: swap;
-    }
+      @font-face {font-family: 'Libre Franklin';src: url('cantos/src/fonts/LibreFranklin-Bold.ttf') format('truetype');font-weight: 700; /* Bold */font-style: normal;font-display: swap; /* Mejor experiencia de carga */}
+      @font-face {font-family: 'Material Symbols Outlined Local';font-style: normal;font-weight: 100 700;src: url('/cantos/src/font/font.woff2') format('woff2'); /* Ajusta la ruta según tu estructura */}
+      @font-face {font-family: 'Fave';src: local('Fave Script Bold Pro'), local('Fave-Script-Bold-Pro'),url('/cantos/src/font/Fave-ScriptBoldPro.woff2') format('woff2'),url('/cantos/src/font/Fave-ScriptBoldPro.woff') format('woff'),url('/cantos/src/font/Fave-ScriptBoldPro.ttf') format('truetype');font-weight: 700;font-style: normal;}
+      @font-face {font-family: 'Franklin Gothic Medium';src: url('/cantos/src/font/FranklinGothicMedium.ttf') format('truetype');font-weight: normal;font-style: normal;font-display: swap;}
     
       body {
         background-color: #f9f9f9;
@@ -43,15 +15,10 @@
         display: none;
         }
 
-        /*
-        ::-webkit-scrollbar {
-        width: 2px;   /* Grosor vertical  * /
-        height: 2px;  /* Grosor horizontal (si hay scroll horizontal)  * /
-        
-      }
-      */
+        /*  ::-webkit-scrollbar { width: 2px;   /* Grosor vertical  * / height: 2px;  /* Grosor horizontal (si hay scroll horizontal)  * /}*/
 
-      body:has(.precat) {background-color: #d7f0ff2b;}
+      /*body:has(.precat) {background-color: #d7f0ff2b;}*/
+      body:has(.precat) {background-color: #282828;}
       body:has(.liturgia) {background-color: #ffffe4;}
       body:has(.cat) {background-color: #ebf7fd;}
       body:has(.eleccion) {background-color:#eaffea;}
@@ -74,9 +41,9 @@
         font-style: normal;
         z-index: 1;
 
-        @media (min-width: 384px) {font-size: 1.07rem;}
+        /*@media (min-width: 384px) {font-size: 1.07rem;}
         @media (min-width: 768px) {font-size: 1.612rem;}
-        @media (min-width: 992px) {font-size: 1.22rem;}
+        @media (min-width: 992px) {font-size: 1.22rem;}*/
         }
 
         .alyrics {
@@ -89,28 +56,122 @@
         letter-spacing: normal; /* Evita espaciado variable */
         z-index: 1;
 
-        @media (min-width: 384px) {font-size: 1.07rem;}
+        /*@media (min-width: 384px) {font-size: 1.07rem;}
         @media (min-width: 768px) {font-size: 1.62rem;}
-        @media (min-width: 992px) {font-size: 1.23rem;}
+        @media (min-width: 992px) {font-size: 1.23rem;}*/
         }
-  
-        .csv {
-          color: rgb(196 76 75);;
-          @media (min-width: 384px) {font-size: 1rem;}
-          @media (min-width: 768px) {
-            font-size: 1.4rem;
-          }
-          @media (min-width: 992px) {font-size: 1rem;}
 
-          /*
-          font-style: italic;
-          @media (min-width: 412px) {font-size: 1rem;}
-          @media (min-width: 576px) {font-size: 1rem;}
-          @media (min-width: 1200px) {font-size: 1rem;}  HD (1080p) 
-          @media (min-width: 1920px) {font-size: 1rem;}  FHD(2K/4K) 
-          */
+        .alyrics, .lyrics {
+          @media (min-width: 384px){font-size: 1.3rem;}
+          @media (min-width: 768px){font-size: 2.5rem;}
+          @media (min-width: 992px){font-size: 1.23rem;}
         }
+
+        .chord-container {
+        position: absolute;
+        display: inline-block;
+        white-space: nowrap;
+        pointer-events: auto; /* Permite interactuar con los selects */
+
+        position: absolute;
+        transform: translateX(-50%); /* Centra el acorde en la posición */
+        white-space: nowrap;
+        pointer-events: auto;
+        top: -3px;        /* Este controla la posición del del acorde ↑↓ */
+      }
+
+        .chord {
+        background: none;
+        border: none;
+        appearance: none;
+        font-weight: bold;
+        color: rgb(196 76 75);
+        position: relative;
+        padding: 0;
+        margin: 0;
+        text-align: right;
+        outline: none;
+
+        @media (min-width: 384px) {
+          font-size: 1rem;
+          margin-left: 5px;
+        }
+        @media (min-width: 768px) {font-size: 1.83rem;}
+        @media (min-width: 992px) {font-size: 1rem;}
+        /* 
+        @media (min-width: 576px) {font-size: 1rem;}
+        @media (min-width: 1200px) {font-size: 1rem;}   // HD (1080p) 
+        @media (min-width: 1920px) {font-size: 1rem;}   // FHD(2K/4K) 
+        @media (min-width: 412px) {font-size: 1rem;} */
+    }
+
+      .chords {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 20px;
+        pointer-events: none; /* Permite clics en el texto debajo */
+        @media (min-width: 384px) {top: -14px;}
+        @media (min-width: 768px) {top: -17px;}
+        @media (min-width: 992px) {top: -14px;}
+      }
+
+      .csv {
+        color: rgb(196 76 75);;
+        @media (min-width: 384px) {font-size: 1rem;}
+        @media (min-width: 768px) {font-size: 1.7rem;}
+        @media (min-width: 992px) {font-size: 1rem;}
+
+        /*
+        font-style: italic;
+        @media (min-width: 412px) {font-size: 1rem;}
+        @media (min-width: 576px) {font-size: 1rem;}
+        @media (min-width: 1200px) {font-size: 1rem;}  HD (1080p) 
+        @media (min-width: 1920px) {font-size: 1rem;}  FHD(2K/4K) 
+        */
+      }
   
+      .line {
+        position: relative;
+        margin-bottom: 20px;
+        min-height: 10px;
+
+        @media (min-width: 384px) {
+          width: 332px;
+        }
+
+        @media (min-width: 768px) {
+        width: 800px; /* antes: width: 671px;*/
+        min-height: 50px;
+        }
+
+        @media (min-width: 992px) {
+            width: 496px;
+            min-height: 10px;
+        }
+      }
+
+/*
+      .line {
+        position: relative;
+        margin-bottom: 20px;
+        min-height: 0px;
+
+        @media (min-width: 384px) {
+          width: 100%;
+        }
+
+        @media (min-width: 768px) {
+            width: 100%;
+        }
+
+        @media (min-width: 992px) {
+            width: 100%;
+        }
+      }
+        */
+
+
       /* Clase renombrada a .mso */
       .mso {
         font-family: 'Material Symbols Outlined Local';
@@ -146,98 +207,9 @@
         transform: translateY(3px); /* Efecto sutil al hover */
       }
 
-.line {
-        position: relative;
-        margin-bottom: 20px;
-        min-height: 0px;
-
-        @media (min-width: 384px) {
-          width: 332px;
-        }
-
-        @media (min-width: 768px) {
-        width: 671px;
-        }
-
-        @media (min-width: 992px) {
-            width: 496px;
-
-        }
-
-      }
-
-
-/*
-      .line {
-        position: relative;
-        margin-bottom: 20px;
-        min-height: 0px;
-
-        @media (min-width: 384px) {
-          width: 100%;
-        }
-
-        @media (min-width: 768px) {
-            width: 100%;
-        }
-
-        @media (min-width: 992px) {
-            width: 100%;
-        }
-      }
-        */
-
       #down {
         cursor: pointer;
         display: inline-block;
-      }
-
-      .chord {
-        background: none;
-        border: none;
-        appearance: none;
-        font-weight: bold;
-        color: rgb(196 76 75);
-        position: relative;
-        padding: 0;
-        margin: 0;
-        text-align: right;
-        font-size: 1rem;
-        outline: none;
-
-        @media (min-width: 384px) {
-          font-size: 1rem;
-          margin-left: 5px;
-        }
-
-        @media (min-width: 412px) {font-size: 1rem;}
-        @media (min-width: 576px) {font-size: 1rem;}
-        @media (min-width: 768px) {font-size: 1.3rem;}
-        @media (min-width: 992px) {font-size: 1rem;}
-        @media (min-width: 1200px) {font-size: 1rem;} /* HD (1080p) */
-        @media (min-width: 1920px) {font-size: 1rem;} /* FHD(2K/4K) */
-    }
-
-      .chords {
-        position: absolute;
-        top: -14px;
-        left: 0;
-        width: 100%;
-        height: 20px;
-        pointer-events: none; /* Permite clics en el texto debajo */
-      }
-
-      .chord-container {
-        position: absolute;
-        display: inline-block;
-        white-space: nowrap;
-        pointer-events: auto; /* Permite interactuar con los selects */
-
-        position: absolute;
-        transform: translateX(-50%); /* Centra el acorde en la posición */
-        white-space: nowrap;
-        pointer-events: auto;
-        top: -3px;        /* Este controla la posición del del acorde ↑↓ */
       }
 
       .no-arrow {
@@ -661,6 +633,10 @@
         .paz {color: #3dcef0;}
         .final {color: #3dcef0;}
         .ppenit {color:purple;}
+        .pmelisma {
+          color: #f0433d;
+          font-style: italic;
+        }
       
         .dh {
           display: none;

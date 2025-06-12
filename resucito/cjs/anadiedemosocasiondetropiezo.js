@@ -1,50 +1,35 @@
-/*********************** FUNCIÓN AUXILIAR MEJORADA ***********************/
+/*********************** FUENTE DEL CANTO ***********************/
 
 // Mapeo para celulares 483px
-const pcelular = {
-      //  --cp1: 0.1%;
-      //  --cp18: 1.8%;
-      //  --cp486: 48.6%;
-      //  --cp1547: 154.7%;
-
-    };
-
-// Mapeo específico para tablets (800px)
-const pTablet = {
-      //  --cp1: 0.1%;
-      //  --cp18: 1.8%;
-      //  --cp486: 48.6%;
-      //  --cp1547: 154.7%;
-
-    };
+const pcelular = { };
+    // Mapeo específico para tablets (800px)
+    const pTablet = { };
     
     function ac(nota, posicion, extension = "") {
       const anchoPantalla = window.innerWidth;
       let posicionAjustada = posicion;
       
-      // Solo ajustamos para tablets (601px a 900px)
-      if (anchoPantalla > 600 && anchoPantalla <= 900) {
-        posicionAjustada = pTablet[posicion] || posicion;
-        
-        // Si no está en el mapeo, aplicamos un factor general más preciso
-        if (!pTablet[posicion]) {
+// Solo ajustamos para tablets (284px a 384px)
+    if (anchoPantalla <= 700) {
+      posicionAjustada = pcelular[posicion] || posicion;
+      // Si no está en el mapeo, aplicamos un factor general más preciso
+        if (!pcelular[posicion]) {
           const numero = parseInt(posicion.replace('cp', ''));
-          const factor = 0.971; // Factor más preciso para 800px
+          const factor = 1.58; // Factor más preciso para 384px
           posicionAjustada = `cp${Math.round(numero * factor)}`;
         }
       }
-
-      // Solo ajustamos para tablets (284px a 384px)
-      if (anchoPantalla > 284 && anchoPantalla <= 411) {
-            posicionAjustada = pcelular[posicion] || posicion;
-            
-            // Si no está en el mapeo, aplicamos un factor general más preciso
-            if (!pcelular[posicion]) {
-              const numero = parseInt(posicion.replace('cp', ''));
-              const factor = 1.3; // Factor más preciso para 384px
-              posicionAjustada = `cp${Math.round(numero * factor)}`;
-            }
-          }
+      // Solo ajustamos para tablets (601px a 900px)
+      else if (anchoPantalla > 768 && anchoPantalla <= 1024) {
+        posicionAjustada = pTablet[posicion] || posicion;
+        
+        // Si no está en el mapeo, aplicamos un factor general más preciso
+      if (!pTablet[posicion]) {
+        const numero = parseInt(posicion.replace('cp', ''));
+        const factor = 1.26; // Factor más preciso para 800px
+        posicionAjustada = `cp${Math.round(numero * factor)}`;
+      }
+    }
       
       return { acorde: nota, posicion: posicionAjustada, base: nota, extension };
     }
@@ -96,11 +81,11 @@ const pTablet = {
       // Estructura para Cantor (acordes) - CON FUNCIÓN ac()
       cantorAcordes: [
 // IZQUIERDA
-        /* 1*/ [ac("La", "cp18", "m"), ac("Re", "cp696", "m")],
-        /* 2*/ [ac("Mi", "cp76", ""),  ac("La", "cp710", "m")],
+        /* 1*/ [ac("La", "cp10", "m"), ac("Re", "cp710", "m")],
+        /* 2*/ [ac("Mi", "cp79", ""),  ac("La", "cp715", "m")],
         /* 3*/ [ac("Re", "cp18", "m"), ac("Mi", "cp464", "")],
         /* 4*/ [ac("Re", "cp18", "m"), ac("Mi", "cp612", "")],
-        /* 5*/ [ac("Fa", "cp23", ""),  ac("Mi", "cp646", "")],
+        /* 5*/ [ac("Fa", "cp250", ""),  ac("Mi", "cp646", "")],
         /* 6*/ [ac("Fa", "cp388", "")],
         /* 7*/ [ac("Mi", "cp544", "")],
         

@@ -14,23 +14,23 @@ function ac(nota, posicion, extension = "") {
   let posicionAjustada = posicion;
 
   // Primero verificar móviles (hasta 480px)
-  if (anchoPantalla <= 480) {
+  if (anchoPantalla <= 700) {
     posicionAjustada = pcelular[posicion] || posicion;
     
     // Si no está en el mapeo, aplicamos factor
     if (!pcelular[posicion]) {
       const numero = parseInt(posicion.replace('cp', ''));
-      const factor = 1.89; // Ajustar según necesidad
+      const factor = 2.209; // Ajustar según necesidad
       posicionAjustada = `cp${Math.round(numero * factor)}`;
     }
   } 
   // Luego verificar tablets (601px a 900px)
-  else if (anchoPantalla > 600 && anchoPantalla <= 900) {
+  else if (anchoPantalla > 768 && anchoPantalla <= 1024) {
     posicionAjustada = pTablet[posicion] || posicion;
     
     if (!pTablet[posicion]) {
       const numero = parseInt(posicion.replace('cp', ''));
-      const factor = 1.77;
+      const factor = 1.92;
       posicionAjustada = `cp${Math.round(numero * factor)}`;
     }
   }
