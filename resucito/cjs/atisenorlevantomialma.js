@@ -56,7 +56,7 @@ const partitura = {
       tituloc: NOMBREDELCANTO,
       titulo: NOMBREDELCANTO,
       salmo: "Salmo 25 (24)",
-      dbnos: "1",
+      dbnos: "5",
       catg: "PRECATECUMENADO",
 
 // Estructura para Cantor (texto)

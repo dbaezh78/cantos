@@ -1292,12 +1292,12 @@ h1 {
 
 
 
-        .r1 {
+        .r1, .r2 {
             position: relative;
             min-height: 0px;
         }
 
-        .r1::before {
+        .r1::before, .r2::before {
             content: "  BIS A.";
             position: absolute;
             align-content: center;

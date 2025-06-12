@@ -564,6 +564,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		"Do#": "/cantos/src/ima/dos.jpg",
 		"Do#m": "/cantos/src/ima/dosm.jpg",
 		"Do#7": "/cantos/src/ima/dos7.jpg",
+		"Re♭": "/cantos/src/ima/dos.jpg",
 		"Re": "/cantos/src/ima/re.jpg",
 		"Rem": "/cantos/src/ima/rem.jpg",
 		"Re7": "/cantos/src/ima/re7.jpg",

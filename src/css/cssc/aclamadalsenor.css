@@ -1,0 +1,108 @@
+.a1, .a2, .a3, .a4, .a5, .a6 {
+    width: min-content;
+    position: inherit;
+    color: red;
+}
+
+.a1 {
+    @media (min-width: 384px){
+        margin-top: -13%;
+        left: 37%;
+    }
+    @media (min-width: 768px){
+        margin-top: -8%;
+        left: 31%;
+    }
+    @media (min-width: 992px){
+        margin-top: -8%;
+        left: 24%;
+    }
+}
+
+.a2 {
+    @media (min-width: 384px){
+        margin-top: -13%;
+        left: 87%;
+    }
+    @media (min-width: 768px){
+        margin-top: -8%;
+        left: 70%;
+    }
+    @media (min-width: 992px){
+        margin-top: -8%;
+        left: 56%;
+    }
+}
+
+.a3 {
+    @media (min-width: 384px){
+        margin-top: -13%;
+        left: 63%;
+    }
+    @media (min-width: 768px){
+        margin-top: -8%;
+        left: 50%;
+    }
+    @media (min-width: 992px){
+        margin-top: -8%;
+        left: 39%;
+    }
+}
+
+.a4 {
+    @media (min-width: 384px){
+        margin-top: -13%;
+        left: 56%;
+    }
+    @media (min-width: 768px){
+        margin-top: -8%;
+        left: 45%;
+    }
+    @media (min-width: 992px){
+        margin-top: -8%;
+        left: 36%;
+    }
+}
+
+.a5 {
+    @media (min-width: 384px){
+        margin-top: -13%;
+        left: 71%;
+    }
+    @media (min-width: 768px){
+        margin-top: -8%;
+        left: 57%;
+    }
+    @media (min-width: 992px){
+        margin-top: -8%;
+        left: 45%;
+    }
+}
+
+.a6 {
+    @media (min-width: 384px){
+        margin-top: -13%;
+        left: 50%;
+    }
+    @media (min-width: 768px){
+        margin-top: -7%;
+        left: 41%;
+    }
+    @media (min-width: 992px){
+        margin-top: -8%;
+        left: 32%;
+    }
+}
+
+
+
+.line {
+    @media (min-width: 768px) {
+        width: 800px;
+        min-height: 0px;
+    }
+    @media (min-width: 992px) {
+        width: 496px;
+        min-height: 0px;
+    }
+}

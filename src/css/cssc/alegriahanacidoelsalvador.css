@@ -13,6 +13,27 @@
         min-height: 0px;
     }
 
+    .r1::before, .r2::before {
+            font-size: 1.3rem;
+        }
+
+    .r1::before {
+        @media (min-width: 992px) {
+            height: 58px;
+            margin-left: 59%;
+            margin-top: 0%;
+        }
+    }
+
+    .r2::before {
+        @media (min-width: 992px) {
+            height: 150px;
+            margin-left: 59%;
+            margin-top: -9%;
+        }
+    }
+
+
             .raya1::before {
                 content: "";
                 position: absolute;
