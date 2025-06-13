@@ -6,14 +6,14 @@
 .a1 {
     @media (min-width: 384px){
         margin-top: -13%;
-        left: 37%;
+        left: 50%;
     }
     @media (min-width: 768px){
-        margin-top: -8%;
-        left: 31%;
+        margin-top: -9%;
+        left: 39%;
     }
     @media (min-width: 992px){
-        margin-top: -8%;
+        margin-top: -8.79%;
         left: 33%;
     }
 }
@@ -21,11 +21,11 @@
 .a2 {
     @media (min-width: 384px){
         margin-top: -13%;
-        left: 37%;
+        left: 33%;
     }
     @media (min-width: 768px){
         margin-top: -8%;
-        left: 31%;
+        left: 27%;
     }
     @media (min-width: 992px){
         margin-top: -8%;
@@ -37,11 +37,11 @@
 .a3 {
     @media (min-width: 384px){
         margin-top: -13%;
-        left: 37%;
+        left: 23%;
     }
     @media (min-width: 768px){
         margin-top: -8%;
-        left: 31%;
+        left: 22%;
     }
     @media (min-width: 992px){
         margin-top: -8%;
@@ -52,11 +52,11 @@
 .a4 {
     @media (min-width: 384px){
         margin-top: -13%;
-        left: 37%;
+        left: 79%;
     }
     @media (min-width: 768px){
         margin-top: -8%;
-        left: 31%;
+        left: 64%;
     }
     @media (min-width: 992px){
         margin-top: -8%;
@@ -66,12 +66,12 @@
 
 .a5 {
     @media (min-width: 384px){
-        margin-top: -13%;
-        left: 37%;
+        margin-top: -7%;
+        left: 79%;
     }
     @media (min-width: 768px){
-        margin-top: -8%;
-        left: 31%;
+        margin-top: -4%;
+        left: 64%;
     }
     @media (min-width: 992px){
         margin-top: -4%;
@@ -82,11 +82,11 @@
 .a6 {
     @media (min-width: 384px){
         margin-top: -13%;
-        left: 37%;
+        left: 89%;
     }
     @media (min-width: 768px){
         margin-top: -8%;
-        left: 31%;
+        left: 72%;
     }
     @media (min-width: 992px){
         margin-top: -8%;
@@ -96,12 +96,12 @@
 
 .a7 {
     @media (min-width: 384px){
-        margin-top: -13%;
-        left: 37%;
+        margin-top: -7%;
+        left: 80%;
     }
     @media (min-width: 768px){
-        margin-top: -8%;
-        left: 31%;
+        margin-top: -4%;
+        left: 72%;
     }
     @media (min-width: 992px){
         margin-top: -4%;
@@ -112,7 +112,7 @@
 .a8 {
     @media (min-width: 384px){
         margin-top: -13%;
-        left: 37%;
+        left: 39%;
     }
     @media (min-width: 768px){
         margin-top: -8%;
@@ -127,11 +127,11 @@
 .a9 {
     @media (min-width: 384px){
         margin-top: -13%;
-        left: 37%;
+        left: 65%;
     }
     @media (min-width: 768px){
         margin-top: -8%;
-        left: 31%;
+        left: 52%;
     }
     @media (min-width: 992px){
         margin-top: -9%;
@@ -142,11 +142,11 @@
 .a10 {
     @media (min-width: 384px){
         margin-top: -13%;
-        left: 37%;
+        left: 44%;
     }
     @media (min-width: 768px){
         margin-top: -8%;
-        left: 31%;
+        left: 35%;
     }
     @media (min-width: 992px){
         margin-top: -9%;
@@ -172,14 +172,14 @@
 .a12 {
     @media (min-width: 384px){
         margin-top: -13%;
-        left: 37%;
+        left: 50%;
     }
     @media (min-width: 768px){
-        margin-top: -8%;
-        left: 31%;
+        margin-top: -9%;
+        left: 39%;
     }
     @media (min-width: 992px){
-        margin-top: -9%;
+        margin-top: -8.7%;
         left: 33%;
     }
 }
@@ -203,17 +203,43 @@
     width: auto !important;
 }
 
-.ta {
-
-}
-
-.ta::before {
-    @media (min-width: 384px) {}
-    @media (min-width: 768px) {}
+.tc::before {
+    @media (min-width: 768px) {
+        left: -6%;
+        top: 0.9%;
+        font-size: 1.7rem;
+    }
     @media (min-width: 992px) {
-        left: 29%;
+        font-size: 1.345rem;
+        margin-top: -0.431%;
     }
 }
 
 
+.ta::before {
+    @media (min-width: 384px) {
+        left: 44%;
+    }
+    @media (min-width: 768px) {
+        left: 36%;
+        margin-top: 0.9%;
+        font-size: 1.7rem;
+    }
+    @media (min-width: 992px) {
+        left: 28%;
+        font-size: 1.345rem;
+        margin-top: -0.431%;
+    }
+}
 
+
+        /* Estilos base para los contenedores */
+    .hdb1 {
+        display: block; /* Visible por defecto */
+        cursor: pointer; /* Indica que es clicable */
+    }
+
+    .hdb2 {
+        display: none; /* Oculto por defecto */
+        cursor: pointer; /* Indica que es clicable */
+    }

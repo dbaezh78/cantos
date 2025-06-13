@@ -25,7 +25,7 @@ if (anchoPantalla <= 700) {
 posicionAjustada = pcelular[posicion] || posicion;
 if (!pcelular[posicion]) {
 const numero = parseInt(posicion.replace('cp', '')) || 0;
-const factor = 0.86; // Factor diferente para móviles
+const factor = 1.58; // Factor diferente para móviles
 posicionAjustada = `cp${Math.round(numero * factor)}`;
   }
 }/*
@@ -36,7 +36,7 @@ posicionAjustada = `cp${Math.round(numero * factor)}`;
     posicionAjustada = pTablet[posicion] || posicion;
     if (!pTablet[posicion]) {
       const numero = parseInt(posicion.replace('cp', '')) || 0;
-      const factor = 0.9;
+      const factor = 1.267;
       posicionAjustada = `cp${Math.round(numero * factor)}`;
     }
   }
@@ -99,7 +99,7 @@ cantor: [
 /* 40 */        "Escuchad: hay cantos de victoria",
 /* 41 */        "EN LAS TIENDAS DE LOS JUSTOS:",
 /* 42 */        "La diestra del Señor es poderosa,",
-/* 43 */        "ES EXCELSA LA DIESTRA DEL SEÑOR•.",
+/* 43 */        "ES EXCELSA LA DIESTRA DEL SEÑOR».",
 /* 44 */        "No he de morir...",
 /* 45 */        "...EN LA MUERTE.",
 /* 46 */        "No he de morir,",
@@ -143,87 +143,87 @@ cantor: [
 ║       Estructura para Cantor (acordes) - CON FUNCIÓN ac()      ║
 ╚════════════════════════════════════════════════════════════════╝  */
 cantorAcordes: [
-/* 1*/      [ac("La", "cp14","m")],
-/* 2 */   [ac("", "cp0","")],
-/* 3 */   [ac("", "cp0","")],
-/* 4 */   [ac("", "cp0","")],
-/* 5*/      [ac("Fa", "cp","")],
-/* 6*/      [ac("Mi", "cp14","")],
-/* 7*/      [ac("La", "cp14","m")],
-/* 8 */   [ac("", "cp0","")],
-/* 9 */   [ac("", "cp0","")],
+/* 1*/     [ac("La", "cp14","m")],
+/* 2 */    [ac("", "cp0","")],
+/* 3 */    [ac("", "cp0","")],
+/* 4 */    [ac("", "cp0","")],
+/* 5*/     [ac("Fa", "cp151","")],
+/* 6*/     [ac("Mi", "cp601","")],
+/* 7*/     [ac("La", "cp14","m")],
+/* 8 */    [ac("", "cp0","")],
+/* 9 */    [ac("", "cp0","")],
 /* 10 */   [ac("", "cp0","")],
-/* 11*/      [ac("Fa", "cp14","")],
-/* 12*/      [ac("Mi", "cp14","")],
-/* 13*/      [ac("La", "cp14","m")],
-/* 14*/      [ac("Fa", "cp14",""), ac("Mi","cp90","")],
-/* 15*/      [ac("La", "cp14","m"), ac("Fa","cp90","")],
+/* 11*/    [ac("Fa", "cp83","")],
+/* 12*/    [ac("Mi", "cp453","")],
+/* 13*/    [ac("La", "cp14","m")],
+/* 14*/    [ac("Fa", "cp248",""), ac("Mi","cp554","")],
+/* 15*/    [ac("La", "cp14","m"), ac("Fa","cp594","")],
 /* 16 */   [ac("", "cp0","")],
 /* 17 */   [ac("", "cp0","")],
-/* 18*/      [ac("La", "cp14","m"), ac("Fa","cp90","")],
+/* 18*/    [ac("La", "cp14","m"), ac("Fa","cp594","")],
 /* 19 */   [ac("", "cp0","")],
 /* 20 */   [ac("", "cp0","")],
-/* 21*/      [ac("La", "cp14","m"), ac("Fa","cp90","")],
+/* 21*/    [ac("La", "cp14","m"), ac("Fa","cp650","")],
 /* 22 */   [ac("", "cp0","")],
 /* 23 */   [ac("", "cp0","")],
-/* 24*/      [ac("Do", "cp14","")],
-/* 25*/      [ac("Fa", "cp14",""), ac("Mi","cp90","")],
-/* 26*/      [ac("Do", "cp14","")],
-/* 27*/      [ac("Fa", "cp14",""), ac("Mi","cp90","")],
-/* 28*/      [ac("La", "cp14","m")],
+/* 24*/    [ac("Do", "cp14","")],
+/* 25*/    [ac("Fa", "cp103",""), ac("Mi","cp366","")],
+/* 26*/    [ac("Do", "cp4","")],
+/* 27*/    [ac("Fa", "cp183",""), ac("Mi","cp507","")],
+/* 28*/    [ac("La", "cp14","m")],
 /* 29 */   [ac("", "cp0","")],
 /* 30 */   [ac("", "cp0","")],
 /* 31 */   [ac("", "cp0","")],
-/* 32*/      [ac("Fa", "cp14","")],
-/* 33*/      [ac("Mi", "cp14","")],
-/* 34*/      [ac("Lam", "cp14","")],
+/* 32*/    [ac("Fa", "cp107","")],
+/* 33*/    [ac("Mi", "cp609","")],
+/* 34*/    [ac("La", "cp14","m")],
 /* 35 */   [ac("", "cp0","")],
-/* 36 */   [ac("", "cp0","")],
+/* 36 */   [ac("La", "cp12","m")],
 /* 37 */   [ac("", "cp0","")],
-/* 38*/      [ac("Fa", "cp14","")],
-/* 39*/      [ac("Mi", "cp14","")],
-/* 40*/      [ac("Do", "cp14","")],
-/* 41*/      [ac("Fa", "cp14",""), ac("Mi","cp90","")],
-/* 42*/      [ac("Do", "cp14","")],
-/* 43*/      [ac("Fa", "cp14",""), ac("Mi","cp90","")],
-/* 44*/      [ac("La", "cp14","m")],
-/* 45*/      [ac("Mi", "cp14","")],
-/* 46*/      [ac("La", "cp14","m")],
+/* 38*/    [ac("Fa", "cp0","")],
+/* 39*/    [ac("Mi", "cp387","")],
+/* 40*/    [ac("Do", "cp0","")],
+/* 41*/    [ac("Fa", "cp161",""), ac("Mi","cp443","")],
+/* 42*/    [ac("Do", "cp4","")],
+/* 43*/    [ac("Fa", "cp123",""), ac("Mi","cp572","")],
+/* 44*/    [ac("La", "cp14","m")],
+/* 45*/    [ac("Mi", "cp520","")],
+/* 46*/    [ac("La", "cp14","m")],
 /* 47 */   [ac("", "cp0","")],
 /* 48 */   [ac("", "cp0","")],
 /* 49 */   [ac("", "cp0","")],
-/* 50*/      [ac("Fa", "cp14","")],
-/* 51*/      [ac("Mi", "cp14","")],
-/* 52*/      [ac("La", "cp14","m")],
+/* 50*/    [ac("Fa", "cp151","")],
+/* 51*/    [ac("Mi", "cp601","")],
+/* 52*/    [ac("La", "cp14","m")],
 /* 53 */   [ac("", "cp0","")],
 /* 54 */   [ac("", "cp0","")],
 /* 55 */   [ac("", "cp0","")],
-/* 56*/      [ac("Fa", "cp14","")],
-/* 57*/      [ac("Mi", "cp14","")],
-/* 58*/      [ac("La", "cp14","m")],
-/* 59*/      [ac("Fa", "cp14",""), ac("Mi","cp90","")],
-/* 60*/      [ac("Fa", "cp14",""), ac("Mi","cp90","")],
-/* 61*/      [ac("Fa", "cp14",""), ac("Mi","cp90","")],
-/* 62*/      [ac("Do", "cp14","")],
-/* 63*/      [ac("Fa", "cp14",""), ac("Mi","cp90","")],
-/* 64*/      [ac("Fa", "cp14",""), ac("Mi","cp90","")],
-/* 65*/      [ac("Fa", "cp14",""), ac("Mi","cp90","")],
-/* 66*/      [ac("Do", "cp14","")],
-/* 67*/      [ac("Fa", "cp14",""), ac("Mi","cp90","")],
-/* 68*/      [ac("La", "cp14","m")],
-/* 69*/      [ac("Mi", "cp14","")],
-/* 70*/      [ac("La", "cp14","m")],
+/* 56*/    [ac("Fa", "cp83","")],
+/* 57*/    [ac("Mi", "cp453","")],
+/* 58*/    [ac("La", "cp14","m")],
+/* 59*/    [ac("Fa", "cp141",""), ac("Mi","cp673","")],
+/* 60*/    [ac("La", "cp14","m")],
+/* 61*/    [ac("Fa", "cp214",""), ac("Mi","cp602","")],
+/* 62*/    [ac("Do", "cp4","")],
+/* 63*/    [ac("Fa", "cp103",""), ac("Mi","cp495","")],
+/* 64*/    [ac("Fa", "cp0",""), ac("Mi","cp413","")],
+/* 65*/    [ac("Fa", "cp14",""), ac("Mi","cp439","")],
+/* 66*/    [ac("Do", "cp14","")],
+/* 67*/    [ac("Fa", "cp14",""), ac("Mi","cp631","")],
+/* 68*/    [ac("La", "cp14","m")],
+/* 69*/    [ac("Mi", "cp512","")],
+/* 70*/    [ac("La", "cp14","m")],
 /* 71 */   [ac("", "cp0","")],
 /* 72 */   [ac("", "cp0","")],
 /* 73 */   [ac("", "cp0","")],
-/* 74*/      [ac("Fa", "cp14","")],
-/* 75*/      [ac("Mi", "cp14","")],
-/* 76*/      [ac("La", "cp14","m")],
+/* 74*/    [ac("Fa", "cp14","")],
+/* 75*/    [ac("Mi", "cp603","")],
+/* 76*/    [ac("La", "cp14","m")],
 /* 77 */   [ac("", "cp0","")],
 /* 78 */   [ac("", "cp0","")],
 /* 79 */   [ac("", "cp0","")],
-/* 80*/      [ac("Fa", "cp14","")],
-/* 81*/      [ac("Mi", "cp14","")],
+/* 80*/    [ac("Fa", "cp87","")],
+/* 81*/    [ac("Mi", "cp458","")],
 ],/*
 ╔════════════════════════════════════════════════════════════════╗
 ║                Estructura para Asamblea (texto)                ║
@@ -264,3 +264,50 @@ cantorAcordes: [
             window.addEventListener('resize', manejarRedimensionamiento);
         }
     );
+
+
+/*
+╔════════════════════════════════════════════════════════════════╗
+║   Ocultando contenido especial                                 ║
+╚════════════════════════════════════════════════════════════════╝  */
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Seleccionamos todos los elementos que actúan como "activadores" del toggle
+    const hdb1Elements = document.querySelectorAll('.hdb1.toggle-container');
+
+    // Iteramos sobre cada elemento 'hdb1' encontrado para darle su propia funcionalidad
+    hdb1Elements.forEach(hdb1Div => {
+        // El elemento 'hdb2' asociado es el siguiente hermano en el DOM.
+        const hdb2Div = hdb1Div.nextElementSibling;
+
+        // Creamos un contador de clics específico para cada bloque hdb2
+        let clickCount = 0;
+
+        // Verificamos que hemos encontrado un elemento .hdb2 y que tiene la clase 'toggle-target'
+        if (hdb2Div && hdb2Div.classList.contains('hdb2') && hdb2Div.classList.contains('toggle-target')) {
+
+            // Establecemos el estado inicial para este par (aunque el CSS ya lo hace, es una buena práctica)
+            hdb1Div.style.display = 'block'; // Aseguramos que hdb1 esté visible
+            hdb2Div.style.display = 'none';  // Aseguramos que hdb2 esté oculto
+
+            // Añadimos el "escuchador de eventos" para el clic en el bloque hdb1
+            hdb1Div.addEventListener('click', function() {
+                hdb1Div.style.display = 'none';  // Oculta el hdb1 actual
+                hdb2Div.style.display = 'block'; // Muestra el hdb2 asociado
+                clickCount = 0; // Reiniciamos el contador de clics de hdb2 al mostrarlo
+            });
+
+            // Añadimos el "escuchador de eventos" para el clic en el bloque hdb2
+            hdb2Div.addEventListener('click', function() {
+                clickCount++; // Incrementamos el contador de clics
+
+                // Si el contador llega a 3, ocultamos hdb2 y mostramos hdb1
+                if (clickCount === 3) {
+                    hdb2Div.style.display = 'none';  // Oculta el hdb2 actual
+                    hdb1Div.style.display = 'block'; // Muestra el hdb1 asociado
+                    clickCount = 0; // Reiniciamos el contador para futuros toggles
+                }
+            });
+        }
+    });
+});

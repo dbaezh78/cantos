@@ -686,7 +686,8 @@
           }
           
           @media (min-width: 992px) {
-            font-size: 100%;
+            font-size: 1.23rem;
+            margin-top: 0%;
             left: -7%;
           }
         }
@@ -695,7 +696,7 @@
         .ta::before, .tc::before, .ta1::before, .ta2::before, .ta3::before, 
         .niño::before, .hombres::before, .mujeres::before, .bis::before,
         .pa::before {
-          color: #80808082; /* Gris semitransparente */
+          color: #80808065; /* Gris semitransparente */
         }
 
       .ta::before {content: "A.";}
