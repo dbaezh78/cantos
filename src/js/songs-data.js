@@ -87,7 +87,7 @@ const songs = [
         {id:84,title: "Es paciente", subtitle: "Himno al Espíritu Santo (Kiko Argüello) ", category: "Precatecumenado", moments: [""], url: "/cantos/resucito/e/espaciente.html"},
         {id:85,title: "Escóndeme en lo oculto de tu tienda", subtitle: "Salmo 27 (26)", category: "Precatecumenado", moments: ["Antiguo Testamento"], url: "/cantos/resucito/e/escondemeenloocultodetutienda.html"},
         {id:86,title: "Escuchad, islas lejanas", subtitle: "Isaias 49,1-16 - Segundo canto de Siervo de Yahveh", category: "Precatecumenado", moments: ["Pascua", "Fracción del Fracción del Pan", "Comunión", "Nuevo Testamento"], url: "/cantos/resucito/e/escuchadislaslejanas.html"},
-        {id:87,title: "Éste es el día en que actuó el Señor", subtitle: "Sal 118 (117)", category: "Precatecumenado", moments: ["Paz"], url: "/cantos/resucito/é/esteeseldiaenqueactuoelsenor.html"},
+        {id:87,title: "Éste es el día en que actuó el Señor", subtitle: "Sal 118 (117)", category: "Precatecumenado", moments: ["Paz"], url: "/cantos/resucito/e/esteeseldiaenqueactuoelsenor.html"},
         {id:88,title: "Este es el mandamiento mío", subtitle: "Jn 15,12ss", category: "Precatecumenado", moments: ["Cuaresma", "Fracción del Pan"], url: "/cantos/resucito/e/esteeselmandamientomio.html"},
         {id:89,title: "Evenu shalom alejem", subtitle: "Melodía hebraica", category: "Precatecumenado", moments: ["Antiguo Testamento"], url: "/cantos/resucito/e/evenushalomalejem.html"},
         {id:90,title: "Extiendo mis manos", subtitle: "Oda XXVII de Salomón", category: "Precatecumenado", moments: ["Antiguo Testamento"], url: "/cantos/resucito/e/extiendomismanos.html"},

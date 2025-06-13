@@ -2,14 +2,15 @@
 const songs = [
         {id:72,title: "El mismo Dios", subtitle: "2 Corintios 4,6-12", category: "Catecumenado", moments: ["Navidad", "Antiguo Testamento"], url: "/cantos/resucito/e/elmismodios.html"},
         {id:75,title: "El sembrador", subtitle: "Marcos 4,3ss", category: "Catecumenado", moments: ["Comunión", "Antiguo Testamento"], url: "/cantos/resucito/e/elsembrador.html"},
-        {id:80,title: "En medio de aquel gentío", subtitle: "Lucas 8,42b-48", category: "Precatecumenado", moments: ["Laudes/Visperas", "Fracción del Pan", "Nuevo Testamento"], url: "/cantos/resucito/e/enmediodeaquelgentio.html"},
+
         {id:81,title: "En una noche oscura", subtitle: "Subida al Monte Carmelo – San Juan de la Cruz", category: "Precatecumenado", moments: ["Entrada", "Final", "Antiguo Testamento"], url: "/cantos/resucito/e/enunanocheoscura.html"},
         {id:82,title: "Eres digno de tomar el libro", subtitle: "Apocalipsis 5,9ss", category: "Precatecumenado", moments: ["Laudes/Visperas", "Antiguo Testamento"], url: "/cantos/resucito/e/eresdignodetomarellibro.html"},
         {id:83,title: "Eres hermoso", subtitle: "Salmo 45 (44) ", category: "Precatecumenado", moments: ["Entrada", "Fracción del Pan", "Antiguo Testamento"], url: "/cantos/resucito/e/ereshermoso.html"},
         {id:84,title: "Es paciente", subtitle: "Himno al Espíritu Santo (Kiko Argüello) ", category: "Precatecumenado", moments: [""], url: "/cantos/resucito/e/espaciente.html"},
         {id:85,title: "Escóndeme en lo oculto de tu tienda", subtitle: "Salmo 27 (26)", category: "Precatecumenado", moments: ["Antiguo Testamento"], url: "/cantos/resucito/e/escondemeenloocultodetutienda.html"},
         {id:86,title: "Escuchad, islas lejanas", subtitle: "Isaias 49,1-16 - Segundo canto de Siervo de Yahveh", category: "Precatecumenado", moments: ["Pascua", "Fracción del Fracción del Pan", "Comunión", "Nuevo Testamento"], url: "/cantos/resucito/e/escuchadislaslejanas.html"},
-        {id:87,title: "Éste es el día en que actuó el Señor", subtitle: "Sal 118 (117)", category: "Precatecumenado", moments: ["Paz"], url: "/cantos/resucito/é/esteeseldiaenqueactuoelsenor.html"},
+        
+        {id:87,title: "Éste es el día en que actuó el Señor", subtitle: "Sal 118 (117)", category: "Precatecumenado", moments: ["Paz"], url: "/cantos/resucito/e/esteeseldiaenqueactuoelsenor.html"},
         {id:88,title: "Este es el mandamiento mío", subtitle: "Jn 15,12ss", category: "Precatecumenado", moments: ["Cuaresma", "Fracción del Pan"], url: "/cantos/resucito/e/esteeselmandamientomio.html"},
         {id:89,title: "Evenu shalom alejem", subtitle: "Melodía hebraica", category: "Precatecumenado", moments: ["Antiguo Testamento"], url: "/cantos/resucito/e/evenushalomalejem.html"},
         {id:90,title: "Extiendo mis manos", subtitle: "Oda XXVII de Salomón", category: "Precatecumenado", moments: ["Antiguo Testamento"], url: "/cantos/resucito/e/extiendomismanos.html"},
@@ -21,14 +22,18 @@ const songs = [
         {id:96,title: "Hacia ti, morada santa", subtitle: "Himno procesional eucarístico (Kiko Argüello)", category: "Precatecumenado", moments: ["Fracción del Pan", "Antiguo Testamento"], url: "/cantos/resucito/h/haciatimoradasanta.html"},
         {id:97,title: "Hasta cuándo", subtitle: "Sal 13 (12)", category: "Precatecumenado", moments: ["Cuaresma", "Pascua", "Laudes/Visperas"], url: "/cantos/resucito/h/hastacuando.html"},
         {id:98,title: "He aquí mi siervo", subtitle: "Isaías 42,1-4; Mateo 12,18-21 - Primer canto de Siervo de Yahveh", category: "Precatecumenado", moments: ["Adviento", "Nuevo Testamento"], url: "/cantos/resucito/h/heaquimisiervo.html"},
+        
         {id:99,title: "He aquí que nuestro espejo es el Señor", subtitle: "Oda XIII de Salomón", category: "Catecumenado", moments: ["Adviento", "Cuaresma", "Antiguo Testamento"], url: "/cantos/resucito/h/heaquiquenuestroespejoeselsenor.html"},
+        
         {id:100,title: "He aquí que vengo presto", subtitle: "Apocalipsis 22,12-16", category: "Precatecumenado", moments: ["Pascua", "Comunión", "Antiguo Testamento"], url: "/cantos/resucito/h/heaquiquevengopresto.html"},
         {id:101,title: "He esperado en el Señor", subtitle: "Salmo 40 (39)", category: "Precatecumenado", moments: ["Cuaresma", "Nuevo Testamento"], url: "/cantos/resucito/h/heesperadoenelsenor.html"},
         {id:102,title: "Hermosa eres, amiga mía", subtitle: "Cantar de los cantares 6-7", category: "Eleccion", moments: ["Pascua"], url: "/cantos/resucito/h/hermosaeresamigamia.html"},
         {id:103,title: "Hijas de Jerusalén", subtitle: "Lucas 23,28-46", category: "Precatecumenado", moments: ["Pentecostés", "Comunión", "Nuevo Testamento"], url: "/cantos/resucito/h/hijasdejerusalen.html"},
         {id:104,title: "Himno a Cristo luz", subtitle: "Himno vespertino (San Gregorio Nacianceno)", category: "Precatecumenado", moments: ["Laudes/Visperas", "Entrada"], url: "/cantos/resucito/h/himnoacristoluz.html"},
         {id:105,title: "Himno a la caridad", subtitle: "1 Corintios 13,1-7", category: "Precatecumenado", moments: ["Cuaresma", "Fracción del Fracción del Pan", "Nuevo Testamento"], url: "/cantos/resucito/h/himnoalacaridad.html"},
+        
         {id:106,title: "Himno a la cruz gloriosa", subtitle: "Homilía La Santa Pascua (Anónimo s. II)", category: "Catecumenado", moments: ["Adviento"], url: "/cantos/resucito/h/himnoalacruzgloriosa.html"},
+        
         {id:107,title: "Himno a la kenosis", subtitle: "Filipenses 2,1-11", category: "Precatecumenado", moments: ["Laudes/Visperas"], url: "/cantos/resucito/h/himnoalakenosis.html"},
         {id:108,title: "Himno de Adviento", subtitle: "Himno lat. «Vox clara ecce Intonat»", category: "Precatecumenado", moments: ["Pascua", "Laudes"], url: "/cantos/resucito/h/himnodeadviento.html"},
         {id:109,title: "Himno de la Ascensión", subtitle: "Himno de Laudes del tiempo Pascual, de la Ascensión a Pentecostés  / Himno de la liturgia de las horas ", category: "Precatecumenado", moments: ["Pascua", "Comunión", "Final", "Antiguo Testamento"], url: "/cantos/resucito/h/himnodelaascension.html"},
@@ -36,7 +41,9 @@ const songs = [
         {id:111,title: "Huye, amado mío", subtitle: "Cantar de los Cantares 8,10-14", category: "Precatecumenado", moments: ["Cuaresma"], url: "/cantos/resucito/h/huyeamadomio.html"},
         {id:112,title: "Id y anunciad a mis hermanos", subtitle: "Mateo 28,10.16-20", category: "Precatecumenado", moments: ["Antiguo Testamento"], url: "/cantos/resucito/i/idyanunciadamishermanos.html"},
         {id:113,title: "Improperios", subtitle: "Adoración de la santa Cruz el Viernes santo", category: "Precatecumenado", moments: ["Cuaresma", "Paz", "Antiguo Testamento"], url: "/cantos/resucito/i/improperios.html"},
+        
         {id:114,title: "Jacob", subtitle: "Genesis 32,23-29 ", category: "Catecumenado", moments: ["Nuevo Testamento"], url: "/cantos/resucito/j/jacob.html"},
+        
         {id:115,title: "Jerusalén reconstruida", subtitle: "Tobias 13,11-17", category: "Precatecumenado", moments: ["Navidad", "Virgen", "Nuevo Testamento"], url: "/cantos/resucito/j/jerusalenreconstruida.html"},
         {id:116,title: "Jesús recorría todas las ciudades", subtitle: "Mateo 9,35ss; 10 ", category: "Precatecumenado", moments: ["Cuaresma"], url: "/cantos/resucito/j/jesusrecorriatodaslasciudades.html"},
         {id:117,title: "La cordera de Dios", subtitle: "Mateo 1,18s; 2,13s.18", category: "Precatecumenado", moments: ["Laudes/Visperas", "Comunión"], url: "/cantos/resucito/l/lacorderadedios.html"},
@@ -67,18 +74,24 @@ const songs = [
         {id:143,title: "Misericordia mía, misericordia", subtitle: "Sal 51 (50)", category: "Precatecumenado", moments: ["Pascua", "Comunión", "Nuevo Testamento"], url: "/cantos/resucito/m/misericordiamiamisericordia.html"},
         {id:144,title: "Misericordia, Dios mío", subtitle: "Sal 51(50)", category: "Precatecumenado", moments: ["Nuevo Testamento"], url: "/cantos/resucito/m/misericordiadiosmio.html"},
         {id:145,title: "Mucho me han perseguido", subtitle: "Sal 129 (128)", category: "Precatecumenado", moments: ["Fracción del Pan", "Antiguo Testamento"], url: "/cantos/resucito/m/muchomehanperseguido.html"},
+        
         {id:146,title: "Ninguno puede servir a dos señores", subtitle: "Mateo 6,24-33 ", category: "Catecumenado", moments: ["Comunión", "Nuevo Testamento"], url: "/cantos/resucito/n/ningunopuedeserviradossenores.html"},
+        
         {id:147,title: "No está aquí, resucitó", subtitle: "Mateo 28,1-8", category: "Precatecumenado", moments: ["Cuaresma", "Antiguo Testamento"], url: "/cantos/resucito/n/noestaaquiresucito.html"},
         {id:148,title: "No hay en él parecer", subtitle: "Isaías 53,2ss - Cuarto canto del Siervo de Yahveh", category: "Precatecumenado", moments: ["Pascua", "Nuevo Testamento"], url: "/cantos/resucito/n/nohayenelparecer.html"},
+        
         {id:149,title: "No resistáis al mal", subtitle: "Mateo 5,38ss", category: "Catecumenado", moments: ["Adviento"], url: "/cantos/resucito/n/noresistaisalmal.html"},
         {id:150,title: "No sufras por los malvados", subtitle: "Sal 37 (36)", category: "Catecumenado", moments: ["Antiguo Testamento"], url: "/cantos/resucito/n/nosufrasporlosmalvados.html"},
+        
         {id:151,title: "Noli me tangere", subtitle: "Juan 20,15-17", category: "Precatecumenado", moments: ["Adviento", "Laudes", "Antiguo Testamento"], url: "/cantos/resucito/n/nolimetangere.html"},
         {id:152,title: "Oh cielos, lloved de lo alto", subtitle: "Isaías 45,8", category: "Precatecumenado", moments: ["Cuaresma", "Fracción del Pan", "Comunión"], url: "/cantos/resucito/o/ohcieloslloveddeloalto.html"},
         {id:153,title: "Oh Dios, por tu nombre sálvame", subtitle: "Sal 54 (53)", category: "Precatecumenado", moments: ["Pascua", "Nuevo Testamento"], url: "/cantos/resucito/o/ohdiosportunombresalvame.html"},
         {id:154,title: "Oh Dios, tú eres mi Dios", subtitle: "Sal 63 (62)", category: "Precatecumenado", moments: ["Antiguo Testamento"], url: "/cantos/resucito/o/ohdiostueresmidios.html"},
         {id:155,title: "Oh Jesús, amor mío", subtitle: "(Kiko Argüello)", category: "Precatecumenado", moments: ["Laudes/Visperas", "Entrada", "Comunión", "Antiguo Testamento"], url: "/cantos/resucito/o/ohjesusamormio.html"},
         {id:156,title: "Oh muerte, ¿dónde está tu victoria?", subtitle: "1 Corintios 15", category: "Precatecumenado", moments: ["Entrada", "Antiguo Testamento"], url: "/cantos/resucito/o/ohmuerte¿dondeestatuvictoria?.html"},
+        
         {id:157,title: "Oh Señor, mi corazón ya no es ambicioso", subtitle: "Sal 131 (130)", category: "Catecumenado", moments: [""], url: "/cantos/resucito/o/ohsenormicorazonyanoesambicioso.html"},
+        
         {id:158,title: "Oh Señor, nuestro Dios", subtitle: "Salmo 8", category: "Precatecumenado", moments: ["Virgen"], url: "/cantos/resucito/o/ohsenornuestrodios.html"},
         {id:159,title: "Os tomaré de entre las naciones", subtitle: "Ezequiel 36,24-28", category: "Precatecumenado", moments: ["Pentecostés", "Comunión"], url: "/cantos/resucito/o/ostomaredeentrelasnaciones.html"},
         {id:160,title: "Padre nuestro", subtitle: "Tiempo de la Elección", category: "Liturgia", moments: [""], url: "/cantos/resucito/liturgia/padrenuestro.html"},
@@ -117,15 +130,21 @@ const songs = [
         {id:194,title: "Se encontraron dos ángeles", subtitle: "Melodía hebraica", category: "Precatecumenado", moments: [""], url: "/cantos/resucito/s/seencontrarondosangeles.html"},
         {id:195,title: "Señor, ayúdame a no dudar de ti", subtitle: "(Kiko Argüello)", category: "Precatecumenado", moments: ["Ordinario"], url: "/cantos/resucito/s/senorayudameanodudardeti.html"},
         {id:196,title: "Señor, no me corrijas en tu cólera", subtitle: "Salmo 6", category: "Precatecumenado", moments: ["Niños", "Paz"], url: "/cantos/resucito/s/senornomecorrijasentucolera.html"},
+        
         {id:197,title: "Señor, tú me escrutas y conoces", subtitle: "Sal 139 (138)", category: "Catecumenado", moments: ["Pentecostés", "Entrada"], url: "/cantos/resucito/s/senortumeescrutasyconoces.html"},
+        
         {id:198,title: "Sermón de la montaña", subtitle: "Lucas 6,20-38", category: "Precatecumenado", moments: [""], url: "/cantos/resucito/s/sermondelamontana.html"},
+        
         {id:199,title: "Shemá Israel", subtitle: "Dt 6,4-9", category: "Catecumenado", moments: ["Cuaresma", "Laudes", "Comunión"], url: "/cantos/resucito/s/shemaisrael.html"},
+        
         {id:200,title: "Shlom lej Mariam", subtitle: "Ave María en arameo antiguo", category: "Precatecumenado", moments: ["Laudes/Visperas", "Antiguo Testamento"], url: "/cantos/resucito/s/shlomlejmariam.html"},
         {id:201,title: "Si el Señor no construye la casa", subtitle: "Sal 127 (126)", category: "Precatecumenado", moments: ["Antiguo Testamento"], url: "/cantos/resucito/s/sielsenornoconstruyelacasa.html"},
         {id:202,title: "Si habéis resucitado con Cristo", subtitle: "Colosense 3,1-4", category: "Precatecumenado", moments: ["Comunión", "Nuevo Testamento"], url: "/cantos/resucito/s/sihabeisresucitadoconcristo.html"},
         {id:203,title: "Si hoy escucháis su voz", subtitle: "Sal 95 (94)", category: "Precatecumenado", moments: ["Pentecostés", "Antiguo Testamento"], url: "/cantos/resucito/s/sihoyescuchaissuvoz.html"},
         {id:204,title: "Si me he refugiado en el Señor", subtitle: "Sal 11(10)", category: "Precatecumenado", moments: ["Virgen", "Final"], url: "/cantos/resucito/s/simeherefugiadoenelsenor.html"},
+        
         {id:205,title: "Siéntate solitario y silencioso", subtitle: "Lamentaciones 3", category: "Catecumenado", moments: ["Entrada", "Antiguo Testamento"], url: "/cantos/resucito/s/sientatesolitarioysilencioso.html"},
+        
         {id:206,title: "Sión, madre de todos los pueblos", subtitle: "Sal 87 (86)", category: "Precatecumenado", moments: ["Adviento", "Pascua"], url: "/cantos/resucito/s/sionmadredetodoslospueblos.html"},
         {id:207,title: "Sola a Solo", subtitle: "(Kiko Argüello)", category: "Precatecumenado", moments: ["Antiguo Testamento"], url: "/cantos/resucito/s/solaasolo.html"},
         {id:208,title: "Stabat Mater dolorosa", subtitle: "Himno latin", category: "Precatecumenado", moments: ["Cuaresma", "Antiguo Testamento"], url: "/cantos/resucito/s/stabatmaterdolorosa.html"},
@@ -134,7 +153,9 @@ const songs = [
         {id:211,title: "Te Deum", subtitle: "Himno", category: "Liturgia", moments: ["Virgen"], url: "/cantos/resucito/liturgia/tedeum.html"},
         {id:212,title: "Te estoy llamando, Señor", subtitle: "Sal 141 (140)", category: "Precatecumenado", moments: ["Cuaresma", "Virgen"], url: "/cantos/resucito/t/teestoyllamandosenor.html"},
         {id:213,title: "Te he manifestado mi pecado", subtitle: "Sal 32 (31)", category: "Precatecumenado", moments: ["Pascua"], url: "/cantos/resucito/t/tehemanifestadomipecado.html"},
+        
         {id:214,title: "Tú eres mi esperanza, Señor", subtitle: "Oda XXIX de Salomón", category: "Catecumenado", moments: ["Pascua", "Pentecostés", "Paz"], url: "/cantos/resucito/t/tueresmiesperanzasenor.html"},
+        
         {id:215,title: "Tú has cubierto de vergüenza la muerte", subtitle: "Homilía Pascual (Melltón de Sardes)", category: "Precatecumenado", moments: ["Laudes/Visperas"], url: "/cantos/resucito/t/tuhascubiertodevergüenzalamuerte.html"},
         {id:216,title: "Tú que eres fiel", subtitle: "Sal 143 (142)", category: "Precatecumenado", moments: ["Antiguo Testamento"], url: "/cantos/resucito/t/tuqueeresfiel.html"},
         {id:217,title: "Un retoño brota del tronco de Jesé", subtitle: "Isaías 11,1-11", category: "Precatecumenado", moments: ["Cuaresma", "Antiguo Testamento"], url: "/cantos/resucito/u/unretonobrotadeltroncodejese.html"},
