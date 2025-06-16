@@ -1,7 +1,6 @@
     // Datos de los cantos
 const songs = [
     
-        {id:94,title: "Gracias a Yahveh", subtitle: "Sal 136 (135) - Melodía hebraica", category: "Precatecumenado", moments: ["Entrada"], url: "/cantos/resucito/g/graciasayahveh.html"},
         {id:95,title: "Gritad jubilosos", subtitle: "Isaías 12,1ss", category: "Precatecumenado", moments: ["Cuaresma", "Antiguo Testamento"], url: "/cantos/resucito/g/gritadjubilosos.html"},
         {id:96,title: "Hacia ti, morada santa", subtitle: "Himno procesional eucarístico (Kiko Argüello)", category: "Precatecumenado", moments: ["Fracción del Pan", "Antiguo Testamento"], url: "/cantos/resucito/h/haciatimoradasanta.html"},
         {id:97,title: "Hasta cuándo", subtitle: "Sal 13 (12)", category: "Precatecumenado", moments: ["Cuaresma", "Pascua", "Laudes/Visperas"], url: "/cantos/resucito/h/hastacuando.html"},
