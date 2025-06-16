@@ -1,3 +1,4 @@
+/*
 .izq {
     @media (min-width: 768px) {
         margin-left: 5%;
@@ -25,7 +26,7 @@
 .ta::before, .tc::before {
     @media (min-width: 992px) {left: -9%;}   
 }
-*/
+
 
 
 .ta::before, .tc::before {
@@ -34,10 +35,12 @@
     }
 
     @media (min-width: 768px) {
-    left: -8%;
+    left: 4%;
     }
 
     @media (min-width: 992px) {
-    left: -7%;
+    left: 4%;
     }
 }
+
+*/

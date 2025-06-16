@@ -684,7 +684,9 @@
           font-weight: bold;
 
           @media (min-width: 384px) {
-            font-size: 100%;
+            font-size: 1.1rem;
+            margin-left: -14%;
+            top: 2px;
           }
 
           @media (min-width:  768px) {
@@ -696,7 +698,7 @@
           @media (min-width: 992px) {
             font-size: 1.23rem;
             margin-top: 0%;
-            left: -7%;
+            margin-left: -12%;
           }
         }
 

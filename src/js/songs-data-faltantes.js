@@ -1,9 +1,6 @@
     // Datos de los cantos
 const songs = [
     
-        {id:90,title: "Extiendo mis manos", subtitle: "Oda XXVII de Salomón", category: "Precatecumenado", moments: ["Antiguo Testamento"], url: "/cantos/resucito/e/extiendomismanos.html"},
-        {id:91,title: "Exultad, justos, en el Señor", subtitle: "Sal 33 (32)", category: "Precatecumenado", moments: ["Pascua"], url: "/cantos/resucito/e/exultadjustosenelsenor.html"},
-        {id:92,title: "Felicidad para el hombre", subtitle: "Sal 128 (127)", category: "Precatecumenado", moments: ["Paz", "Comunión", "Final", "Antiguo Testamento"], url: "/cantos/resucito/f/felicidadparaelhombre.html"},
         {id:94,title: "Gracias a Yahveh", subtitle: "Sal 136 (135) - Melodía hebraica", category: "Precatecumenado", moments: ["Entrada"], url: "/cantos/resucito/g/graciasayahveh.html"},
         {id:95,title: "Gritad jubilosos", subtitle: "Isaías 12,1ss", category: "Precatecumenado", moments: ["Cuaresma", "Antiguo Testamento"], url: "/cantos/resucito/g/gritadjubilosos.html"},
         {id:96,title: "Hacia ti, morada santa", subtitle: "Himno procesional eucarístico (Kiko Argüello)", category: "Precatecumenado", moments: ["Fracción del Pan", "Antiguo Testamento"], url: "/cantos/resucito/h/haciatimoradasanta.html"},

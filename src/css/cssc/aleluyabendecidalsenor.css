@@ -2,25 +2,27 @@
     text-transform: uppercase;
 }
 
-    .niño {
+    .niño::before {
         @media (min-width: 384px) {
-            font-size: 75%;
-            margin-left: -39px;
+            font-size: 0.9rem;
+            margin-left: -14%;
         }
         
         @media (min-width: 768px) {
-            font-size: 1rem;
-            margin-left: -12%;
+            font-size: 1.5rem;
+            margin-left: -14%;
+            margin-top: 1.5%;
         }
         @media (min-width: 992px) {
-            font-size: 100%;
-            margin-left: -55px;
+            font-size: 1.1rem;
+            margin-left: -14%;
+            margin-top: 0%;
         }
     }
 
 .izq {
     @media (min-width: 384px) {
-        margin-left: 28px;
+        margin-left: 40px;
     }
     
     @media (min-width: 768px) {
@@ -36,7 +38,7 @@
 .r1::before {
     @media (min-width: 384px) {
         height: 64px;
-        margin-left: 64%;
+        margin-left: 76%;
         margin-top: 0%;
     }
     @media (min-width: 768px) {
@@ -50,3 +52,20 @@
         margin-top: 0%;
     }
 }
+
+
+    .melisma::before {
+    @media (min-width: 384px) {
+        margin-left: -38%;
+        margin-top: -12%;
+    }
+    @media (min-width: 768px) {
+        margin-left: -20%;
+        margin-top: -7.5%;
+        font-size: 1.3rem;
+    }
+    @media (min-width: 992px) {
+        margin-left: -30%;
+        margin-top: -9%;
+    }
+    }

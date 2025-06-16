@@ -1,4 +1,18 @@
-        .bis1 {
+    .r1::before, .r2::before {
+      @media (min-width: 384px) {}
+      @media (min-width: 768px) {
+          height: 65px;
+          margin-left: 53%;
+      }
+      @media (min-width: 992px) {
+          height: 65px;
+          margin-left: 53%;
+          margin-top: 0%;
+        }
+    }
+
+
+.bis1 {
             position: relative;
             padding-left: 1.5em;
         }

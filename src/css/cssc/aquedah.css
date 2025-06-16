@@ -1,4 +1,42 @@
-    .raya1, .raya2 {
+    .r1::before {
+        @media (min-width: 384px) {
+            height: 70px;
+            margin-left: 70%;
+            margin-top: -14%;
+        }
+        @media (min-width: 768px) {
+            height: 101px;
+            margin-left: 57%;
+            font-size: 1.5rem;
+            margin-top: -7%;
+        }
+        @media (min-width: 992px) {
+            height: 66px;
+            margin-left: 43%;
+            margin-top: -8%;
+            }
+        }
+    .r2::before {
+        @media (min-width: 384px) {
+            height: 73px;
+            margin-left: 107%;
+            margin-top: -14%;
+    }
+        @media (min-width: 768px) {
+            height: 111px;
+            margin-left: 86%;
+            font-size: 1.5rem;
+            margin-top: -9%;
+    }
+        @media (min-width: 992px) {
+            height: 66px;
+            margin-left: 67%;
+            margin-top: -8%;
+    }
+}
+
+
+.raya1, .raya2 {
         position: relative;
         min-height: 0px;
     }
