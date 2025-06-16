@@ -16,6 +16,7 @@
     @media (min-width: 768px){
         left: 4%;
         top: 0.5%;
+        font-size: 1.5rem;
     }
     @media (min-width: 992px){
         font-size: 1rem;

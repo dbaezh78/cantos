@@ -111,9 +111,17 @@
         width: 100%;
         height: 20px;
         pointer-events: none; /* Permite clics en el texto debajo */
-        @media (min-width: 384px) {top: -14px;}
-        @media (min-width: 768px) {top: -17px;}
-        @media (min-width: 992px) {top: -14px;}
+
+        @media (min-width: 384px) {
+          top: -10px;
+        }
+        @media (min-width: 768px) {
+          margin-top: -12px;
+        /*  top: -17px;*/
+        }
+        @media (min-width: 992px) {
+          margin-top: -3px;
+        }
       }
 
       .csv {
@@ -670,7 +678,6 @@
         .ta::before, .tc::before, .ta1::before, .ta2::before, .ta3::before, .niño::before, 
         .hombres::before, .mujeres::before, .melisma::before, .bis::before, .pa::before {
           position: absolute;
-          left: -8%;
           top: 0px;
           font-family: Arial, sans-serif;
           line-height: 1.3;
@@ -681,8 +688,9 @@
           }
 
           @media (min-width:  768px) {
-            font-size: 140%;
-            /* left: -8%;*/
+            font-size: 1.8rem;
+            margin-left: -10%;
+            top: -1px;
           }
           
           @media (min-width: 992px) {
@@ -1327,3 +1335,21 @@ h1 {
 
             }
         }
+
+        .pnota {
+          display: flex;
+
+        }
+
+        .pnota1 {
+          color: red;
+          margin-top: 19px;
+      }
+
+      .pnota2 {
+        text-align: justify;
+      }
+
+      .QUITARPARAMOSTRAR {
+        display: none;
+      }

@@ -1,0 +1,6 @@
+.r1::before, .r2::before {
+    @media (min-width: 992px) {
+        height: 150px;
+        margin-left: 59%;
+    }
+}

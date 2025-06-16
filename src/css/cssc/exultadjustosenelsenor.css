@@ -1,0 +1,28 @@
+.melisma::before {
+    @media (min-width: 384px) {
+        font-size: 1rem;
+        left: 84%;
+        margin-top: -13%;
+    }
+    @media (min-width: 768px) {
+        font-size: 1.2rem;
+        left: 70%;
+        margin-top: -7%;
+    }
+    @media (min-width: 992px) {
+        left: 54%;
+        margin-top: -8%;
+    }
+}
+
+.pleft {
+    @media (min-width: 384px) {
+        left: -24%;
+    }
+    @media (min-width: 768px) {
+        left: -20%;
+    }
+    @media (min-width: 992px) {
+        left: -16%;
+    }
+}

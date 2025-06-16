@@ -1,28 +1,18 @@
     // Datos de los cantos
 const songs = [
-        {id:72,title: "El mismo Dios", subtitle: "2 Corintios 4,6-12", category: "Catecumenado", moments: ["Navidad", "Antiguo Testamento"], url: "/cantos/resucito/e/elmismodios.html"},
-        {id:75,title: "El sembrador", subtitle: "Marcos 4,3ss", category: "Catecumenado", moments: ["Comunión", "Antiguo Testamento"], url: "/cantos/resucito/e/elsembrador.html"},
-
-        {id:81,title: "En una noche oscura", subtitle: "Subida al Monte Carmelo – San Juan de la Cruz", category: "Precatecumenado", moments: ["Entrada", "Final", "Antiguo Testamento"], url: "/cantos/resucito/e/enunanocheoscura.html"},
-        {id:82,title: "Eres digno de tomar el libro", subtitle: "Apocalipsis 5,9ss", category: "Precatecumenado", moments: ["Laudes/Visperas", "Antiguo Testamento"], url: "/cantos/resucito/e/eresdignodetomarellibro.html"},
-        {id:83,title: "Eres hermoso", subtitle: "Salmo 45 (44) ", category: "Precatecumenado", moments: ["Entrada", "Fracción del Pan", "Antiguo Testamento"], url: "/cantos/resucito/e/ereshermoso.html"},
-        {id:84,title: "Es paciente", subtitle: "Himno al Espíritu Santo (Kiko Argüello) ", category: "Precatecumenado", moments: [""], url: "/cantos/resucito/e/espaciente.html"},
-        {id:85,title: "Escóndeme en lo oculto de tu tienda", subtitle: "Salmo 27 (26)", category: "Precatecumenado", moments: ["Antiguo Testamento"], url: "/cantos/resucito/e/escondemeenloocultodetutienda.html"},
-        {id:86,title: "Escuchad, islas lejanas", subtitle: "Isaias 49,1-16 - Segundo canto de Siervo de Yahveh", category: "Precatecumenado", moments: ["Pascua", "Fracción del Fracción del Pan", "Comunión", "Nuevo Testamento"], url: "/cantos/resucito/e/escuchadislaslejanas.html"},
-        
-        {id:87,title: "Éste es el día en que actuó el Señor", subtitle: "Sal 118 (117)", category: "Precatecumenado", moments: ["Paz"], url: "/cantos/resucito/e/esteeseldiaenqueactuoelsenor.html"},
-        {id:88,title: "Este es el mandamiento mío", subtitle: "Jn 15,12ss", category: "Precatecumenado", moments: ["Cuaresma", "Fracción del Pan"], url: "/cantos/resucito/e/esteeselmandamientomio.html"},
-        {id:89,title: "Evenu shalom alejem", subtitle: "Melodía hebraica", category: "Precatecumenado", moments: ["Antiguo Testamento"], url: "/cantos/resucito/e/evenushalomalejem.html"},
+    
         {id:90,title: "Extiendo mis manos", subtitle: "Oda XXVII de Salomón", category: "Precatecumenado", moments: ["Antiguo Testamento"], url: "/cantos/resucito/e/extiendomismanos.html"},
         {id:91,title: "Exultad, justos, en el Señor", subtitle: "Sal 33 (32)", category: "Precatecumenado", moments: ["Pascua"], url: "/cantos/resucito/e/exultadjustosenelsenor.html"},
         {id:92,title: "Felicidad para el hombre", subtitle: "Sal 128 (127)", category: "Precatecumenado", moments: ["Paz", "Comunión", "Final", "Antiguo Testamento"], url: "/cantos/resucito/f/felicidadparaelhombre.html"},
-        {id:93,title: "Gloria a Dios en lo alto del cielo", subtitle: "Himno Litúrgico", category: "Liturgia", moments: ["Entrada", "Antiguo Testamento"], url: "/cantos/resucito/liturgia/gloriaadiosenloaltodelcielo.html"},
         {id:94,title: "Gracias a Yahveh", subtitle: "Sal 136 (135) - Melodía hebraica", category: "Precatecumenado", moments: ["Entrada"], url: "/cantos/resucito/g/graciasayahveh.html"},
         {id:95,title: "Gritad jubilosos", subtitle: "Isaías 12,1ss", category: "Precatecumenado", moments: ["Cuaresma", "Antiguo Testamento"], url: "/cantos/resucito/g/gritadjubilosos.html"},
         {id:96,title: "Hacia ti, morada santa", subtitle: "Himno procesional eucarístico (Kiko Argüello)", category: "Precatecumenado", moments: ["Fracción del Pan", "Antiguo Testamento"], url: "/cantos/resucito/h/haciatimoradasanta.html"},
         {id:97,title: "Hasta cuándo", subtitle: "Sal 13 (12)", category: "Precatecumenado", moments: ["Cuaresma", "Pascua", "Laudes/Visperas"], url: "/cantos/resucito/h/hastacuando.html"},
         {id:98,title: "He aquí mi siervo", subtitle: "Isaías 42,1-4; Mateo 12,18-21 - Primer canto de Siervo de Yahveh", category: "Precatecumenado", moments: ["Adviento", "Nuevo Testamento"], url: "/cantos/resucito/h/heaquimisiervo.html"},
         
+        {id:72,title: "El mismo Dios", subtitle: "2 Corintios 4,6-12", category: "Catecumenado", moments: ["Navidad", "Antiguo Testamento"], url: "/cantos/resucito/e/elmismodios.html"},
+        {id:75,title: "El sembrador", subtitle: "Marcos 4,3ss", category: "Catecumenado", moments: ["Comunión", "Antiguo Testamento"], url: "/cantos/resucito/e/elsembrador.html"},
+        {id:93,title: "Gloria a Dios en lo alto del cielo", subtitle: "Himno Litúrgico", category: "Liturgia", moments: ["Entrada", "Antiguo Testamento"], url: "/cantos/resucito/liturgia/gloriaadiosenloaltodelcielo.html"},
         {id:99,title: "He aquí que nuestro espejo es el Señor", subtitle: "Oda XIII de Salomón", category: "Catecumenado", moments: ["Adviento", "Cuaresma", "Antiguo Testamento"], url: "/cantos/resucito/h/heaquiquenuestroespejoeselsenor.html"},
         
         {id:100,title: "He aquí que vengo presto", subtitle: "Apocalipsis 22,12-16", category: "Precatecumenado", moments: ["Pascua", "Comunión", "Antiguo Testamento"], url: "/cantos/resucito/h/heaquiquevengopresto.html"},
