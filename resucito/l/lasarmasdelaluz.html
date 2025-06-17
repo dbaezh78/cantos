@@ -8,96 +8,76 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link type=text/css rel=stylesheet href="/cantos/src/css/dbCSS.css" >
     <link type=text/css rel=stylesheet href="/cantos/src/css/cssc/dbcssCantos.css" >
-    <link type=text/css rel=stylesheet href="/cantos/src/css/cssc/NOMBREDELCANTO.css" >
-        
+    <link type=text/css rel=stylesheet href="/cantos/src/css/cssc/lasarmasdelaluz.css" >
+<!-- Titulo del Canto-->
   <title id="tc"></title>
 </head>
 <body>
-   
-    <!-- ABRIENDO DE CONTENEDOR DE TABLA -->
+<!-- ABRIENDO CONTENEDOR DE LA TABLA -->
     <div class="contenedor-tabla">
-
-                <!-- SECCION DEL REPRODUCTOR-->
+                 <!-- REPRODUCTOR DEL CANTO-->
                 <div id="reproductor-audio">
                     <audio class="saudio" controls controlslist="download" preload="metadata" loop>
-                        <source src="/audio/NOMBREDELCANTO.mp3" type="audio/mpeg">
+                            <source src="/audio/lasarmasdelaluz.mp3" type="audio/mpeg">
                     </audio>
-                </div>       
-        
+                </div>
+                 <!-- ABRIENDO TABLET DEL CANTO-->
         <table class="dbtable">
             <tr>
-                
-<!-- A1 - PRIMERA FILA DEL CANTO DONDE ESTÁ EL HOME Y EL BUSCADOR -->
+                 <!-- HOME DEL CANTO-->
                 <td colspan="6" class="navegar">
                     <div>
                         <div align="left" style="float: left;"> 
                             <div class="home">
-                                <div><a href="/cantos/">				
-                                    <svg height="24px" viewBox="0 0 24 24" width="24px" fill="#5f6368">
-                                    <path d="M0 0h24v24H0V0z" fill="none"/>							
-                                    <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8h5z"/>					
+                                <div><a href="/cantos/">
+                                     <svg height="24px" viewBox="0 0 24 24" width="24px" fill="#5f6368">
+                                    <path d="M0 0h24v24H0V0z" fill="none"/>
+                                    <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8h5z"/>
                                     </svg> </a></div>
-                                    
-                <span class="mso" style="color: black; margin-left: 29px; margin-top: -52px">visibility</span>
-<!--            <span class="mso" style="color: black; margin-left: 29px; margin-top: -52px">visibility5°T</span>      -->
-
-                            </div></div>
-
-<!-- BUSCADOR DEL CANTO-->
-                        <div align="right"  style="float: right;"> 
-                            <div class="buscador-cantos" align="right"  style="float: right;">
+                  <span class="mso" style="color: black; margin-left: 29px; margin-top: -52px">visibility</span>
+                        </div></div>
+                        <!-- ZONA BUSCADOR DEL CANTO-->
+                        <div align="right" style="float: right;"> 
+                            <div class="buscador-cantos" align="right" style="float: right;">
                                 <input type="text" id="inputBusqueda" placeholder="🔍ver otro canto..." autocomplete="off">
                                 <div id="resultadosBusqueda"></div>
                             </div></div>
-<!-- BUSCADOR DEL CANTO-->                        
-
-                        <div style="clear: both;"></div>
-                    </div>
-                </td>
-<!-- A1 - PRIMERA FILA DEL CANTO DONDE ESTÁ EL HOME Y EL BUSCADOR-->
-            </tr>
-
-            <!-- Fila 2: Titulo y Subtítulo -->  
-            <tr><td class="titulo" id="t1" colspan="6"></td></tr>
-            <tr><td class="subtitulo" id="s1" colspan="6"></td></tr>
-            
-<!-- A2 - Fila 3: Encabezado de 6 columnas -->
-        <tr class="encabezado-columnas odb">
-
+                 <!-- ZONA BUSCADOR DEL CANTO-->
+                 <div style="clear: both;"></div>
+           </div></td></tr>
+                <!-- ZONA TITUTO Y SUBTITULO-->
+                <tr><td class="titulo" id="t1" colspan="6"></td></tr>
+                <tr><td class="subtitulo" id="s1" colspan="6"></td></tr>
+                <!-- ZONA INICIO CANTO -->
+                <tr class="encabezado-columnas odb">
 <!--╔═══════════════════════════════════════════════════════════════════════════════╗-->
-<!--║  [ SECCION DE CATEGORIA ]    precat - liturgia - cat - eleccion               ║-->
+<!--║  [ SECCION DE CATEGORIA ]    precat - liturgia - cat - eleccion               ║-->
 <!--╠═══════════════════════════════════════════════════════════════════════════════╣-->
 <!--║-->   <th class="precat" id="catg"></th>                                   <!--║-->
 <!--╚═══════════════════════════════════════════════════════════════════════════════╝-->
-
-            <th>    <select class="dbMiTraste" data-default=" "></select> <!-- Grado ° --></th>
-            <th>    <a href="#" id="toggleVista"><span class="mso">menu_book</span></a></th>
-            <th>    <a href="#reproductor-audio" id="audio-control-btn" class="audio-control"><span class="mso audio-icon">play_circle</span></a></th>
-            <th>    <span class="mso hline bcoro">visibility</span></th>
+            <!-- ZONA CEJILLA -->
+            <th>    <select class="dbMiTraste" data-default=""></select> <!-- Grado ° --></th>
+            <th>     <a href="#" id="toggleVista"><span class="mso">menu_book</span></a></th>
+            <th>     <a href="#reproductor-audio" id="audio-control-btn" class="audio-control"><span class="mso audio-icon">play_circle</span></a></th>
+            <th>     <span class="mso hline bcoro">visibility</span></th>
             <!-- Flecha para abajo ↓ -->
-            <th>    <a href="#" id="startScroll" data-velocidad="200" data-incremento="1"><span class="mso">south</span></a></th>
-        </tr>
-<!-- A2 - Fila 3: Encabezado de 6 columnas CIERRE-->
-<!-- A3 Fila 4 TODO EL CANTO -->
-
-        <tr><td colspan="6" style="padding: 22px 0 0 0;">
-
+            <th>     <a href="#" id="startScroll" data-velocidad="200" data-incremento="1"><span class="mso">south</span></a></th>
+            </tr>
+            <!-- ZONA DE LAS ESTROFAS  -->
+            <tr><td colspan="6" style="padding: 22px 0 0 0;">
 <!--╔═══════════════════════════════════════════════════════════════════════════════╗-->
 <!--║                              CONTENEDOR COLUMNAS                              ║-->
 <!--╠═══════════════════════════════════════════════════════════════════════════════╣-->
 <!--║-->   <div class="contenedordecolumnas" id="contenedorColumnas">           <!--║-->
 <!--╚═══════════════════════════════════════════════════════════════════════════════╝-->
-
 <!--╔═══════════════════════════════════════════════════════════════════════════════╗-->
 <!--║                        CONTENIDO DEL LADO IZQUIERDO                           ║-->
 <!--╠═══════════════════════════════════════════════════════════════════════════════╣-->
 <!--║-->   <div class="grupo-columnas grupo-izquierdo">                         <!--║-->
-<!--║ A5 - INICIO LADO Izquierdo -->    <div class="izq">                       <!--║-->
+<!--║  INICIO LADO Izquierdo -->    <div class="izq">                           <!--║-->
 <!--╚═══════════════════════════════════════════════════════════════════════════════╝-->
-
-<!-- A6 - CONTENIDO DEL LADO IZQUIERDO -->
-
-            <div class="tc"></div>
+<!-- CONTENIDO DEL LADO IZQUIERDO -->
+                <div class="tc"></div>
                 <div class="line"><div class="lyrics" id="c1"></div></div>
                 <div class="line"><div class="lyrics" id="c2"></div></div>
                 <div class="line"><div class="lyrics" id="c3"></div></div>
@@ -118,127 +98,126 @@
                 <div class="line"><div class="lyrics" id="c18"></div></div>
                 <div class="line"><div class="lyrics" id="c19"></div></div>
                 <div class="line"><div class="lyrics" id="c20"></div></div>
-
+                <div class="line"><div class="lyrics" id="c21"></div></div>
+                <div class="line"><div class="lyrics" id="c22"></div></div>
+                <div class="line"><div class="lyrics" id="c23"></div></div>
+                <div class="line"><div class="lyrics" id="c24"></div></div>
+                <div class="line"><div class="lyrics" id="c25"></div></div>
+                <div class="line"><div class="lyrics" id="c26"></div></div>
+                <div class="line"><div class="lyrics" id="c27"></div></div>
+                <div class="line"><div class="lyrics" id="c28"></div></div>
+                <div class="line"><div class="lyrics" id="c29"></div></div>
+                <div class="line"><div class="lyrics" id="c30"></div></div>
                 <!-- ASTERISTICO PARA CUANDO SEA NECESARIO PARA EL MELISMA-->
                 <div class="asterisco" style="left: 19%;"></div>
-                
                 <!-- CONTENIDO DE LA ASAMBLEA-->
                 <div class="dbtop4"></div>
                 <div class="ta"></div>
                 <div class="line hline bcoro">
-                <div class="line"><div class="alyrics" id="a5"></div></div></div>
-
-                <div class="hcoro dbhide">
-                <div class="line"><div class="alyrics" id="a6"></div></div>
-                <div class="line"><div class="alyrics" id="a7"></div></div>
-                <div class="line"><div class="alyrics" id="a8"></div></div>
-            </div>
-            <!-- CONTENIDO DE LA ASAMBLEA-->
-
+                <div class="line"><div class="alyrics" id="x"></div></div>
+                </div><div class="hcoro dbhide">
+                <div class="line"><div class="alyrics" id="x"></div></div>
+                <div class="line"><div class="alyrics" id="x"></div></div>
+                <div class="line"><div class="alyrics" id="x"></div></div>
+                </div>
 <!--╔═══════════════════════════════════════════════════════════════════════════════╗-->
 <!--║                        CONTENIDO DEL LADO IZQUIERDO                           ║-->
 <!--╠═══════════════════════════════════════════════════════════════════════════════╣-->
-<!--║ A5 - Cierre LADO Izquierdo -->    </div>                                  <!--║-->
-<!--║ A5 - grupo-columnas/-izquierdo -->    </div>                              <!--║-->
+<!--║      Cierre LADO Izquierdo -->    </div>                                  <!--║-->
+<!--║       Grupo-columnas/-izquierdo -->    </div>                             <!--║-->
 <!--╚═══════════════════════════════════════════════════════════════════════════════╝-->
-
 <!--╔═══════════════════════════════════════════════════════════════════════════════╗-->
 <!--║               DESHABILITAR LADO DERECHO POR FALTA DE CONTENIDO                ║-->
 <!--╠═══════════════════════════════════════════════════════════════════════════════╣-->
 <!--║ INICIO PARA DESHABILITAR LADO DERECHO -- >    <div class="PowerOff">       < !--║-->
 <!--╚═══════════════════════════════════════════════════════════════════════════════╝-->
-
 <!--╔═══════════════════════════════════════════════════════════════════════════════╗-->
 <!--║                           CONTENIDO DEL LADO DERECHO                          ║-->
 <!--╠═══════════════════════════════════════════════════════════════════════════════╣-->
 <!--║-->   <div class="grupo-columnas grupo-derecho">                           <!--║-->
-<!--║ A5 - INICIO LADO DERECHO -->      <div class="der">                       <!--║-->
+<!--║      INICIO LADO DERECHO -->      <div class="der">                       <!--║-->
 <!--╚═══════════════════════════════════════════════════════════════════════════════╝-->
-
-<!-- A6 - CONTENIDO DEL LADO IZQUIERDO -->
-            <div class="tc"></div>
-                <div class="line"><div class="lyrics" id="c1"></div></div>
-                <div class="line"><div class="lyrics" id="c2"></div></div>
-                <div class="line"><div class="lyrics" id="c3"></div></div>
-                <div class="line"><div class="lyrics" id="c4"></div></div>
-                <div class="line"><div class="lyrics" id="c5"></div></div>
-                <div class="line"><div class="lyrics" id="c6"></div></div>
-                <div class="line"><div class="lyrics" id="c7"></div></div>
-                <div class="line"><div class="lyrics" id="c8"></div></div>
-                <div class="line"><div class="lyrics" id="c9"></div></div>
-                <div class="line"><div class="lyrics" id="c10"></div></div>
-                <div class="line"><div class="lyrics" id="c11"></div></div>
-                <div class="line"><div class="lyrics" id="c12"></div></div>
-                <div class="line"><div class="lyrics" id="c13"></div></div>
-                <div class="line"><div class="lyrics" id="c14"></div></div>
-                <div class="line"><div class="lyrics" id="c15"></div></div>
-                <div class="line"><div class="lyrics" id="c16"></div></div>
-                <div class="line"><div class="lyrics" id="c17"></div></div>
-                <div class="line"><div class="lyrics" id="c18"></div></div>
-                <div class="line"><div class="lyrics" id="c19"></div></div>
-                <div class="line"><div class="lyrics" id="c20"></div></div>
-
+<!-- CONTENIDO DEL LADO IZQUIERDO -->
+                <div class="tc"></div>
+                <div class="line"><div class="lyrics" id="c31"></div></div>
+                <div class="line"><div class="lyrics" id="c32"></div></div>
+                <div class="line"><div class="lyrics" id="c33"></div></div>
+                <div class="line"><div class="lyrics" id="c34"></div></div>
+                <div class="line"><div class="lyrics" id="c35"></div></div>
+                <div class="line"><div class="lyrics" id="c36"></div></div>
+                <div class="line"><div class="lyrics" id="c37"></div></div>
+                <div class="line"><div class="lyrics" id="c38"></div></div>
+                <div class="line"><div class="lyrics" id="c39"></div></div>
+                <div class="line"><div class="lyrics" id="c40"></div></div>
+                <div class="line"><div class="lyrics" id="c41"></div></div>
+                <div class="line"><div class="lyrics" id="c42"></div></div>
+                <div class="line"><div class="lyrics" id="c43"></div></div>
+                <div class="line"><div class="lyrics" id="c44"></div></div>
+                <div class="line"><div class="lyrics" id="c45"></div></div>
+                <div class="line"><div class="lyrics" id="c46"></div></div>
+                <div class="line"><div class="lyrics" id="c47"></div></div>
+                <div class="line"><div class="lyrics" id="c48"></div></div>
+                <div class="line"><div class="lyrics" id="c49"></div></div>
+                <div class="line"><div class="lyrics" id="c50"></div></div>
+                <div class="line"><div class="lyrics" id="c51"></div></div>
+                <div class="line"><div class="lyrics" id="c52"></div></div>
+                <div class="line"><div class="lyrics" id="c53"></div></div>
+                <div class="line"><div class="lyrics" id="c54"></div></div>
+                <div class="line"><div class="lyrics" id="c55"></div></div>
+                <div class="line"><div class="lyrics" id="c56"></div></div>
+                <div class="line"><div class="lyrics" id="c57"></div></div>
+                <div class="line"><div class="lyrics" id="c58"></div></div>
+                <div class="line"><div class="lyrics" id="c59"></div></div>
+                <div class="line"><div class="lyrics" id="c60"></div></div>
                 <!-- CODIGO PARA TEXTO SPAN tienes que poner esto donde pones los codigos de abajo
-                 .chord-container {
-                 top: -7px;}
-                  -->
-                <span class="line"><span class="lyrics" id="c4"></span></span>
-                <span class="line"><span class="lyrics rojo" id="c5"></span></span>
-                <div class="dbsp3"></div>                
-
-
-            <!-- CONTENIDO DE LA ASAMBLEA-->
+                .chord-container {
+                top: -7px;}
+                -->
+                <span class="line"><span class="lyrics" id="x"></span></span>
+                <span class="line"><span class="lyrics rojo" id="x"></span></span>
+                <div class="dbsp3"></div>
+         <!-- CONTENIDO DE LA ASAMBLEA-->
                 <div class="dbtop4"></div>
                 <div class="ta"></div>
                 <div class="line hline bcoro">
-                <div class="line"><div class="alyrics" id="a12"></div></div></div>
-
-                <div class="hcoro dbhide">
-                <div class="line"><div class="alyrics" id="a13"></div></div>
-                <div class="line"><div class="alyrics" id="a14"></div></div>
-                <div class="line"><div class="alyrics" id="a15"></div></div>
+                <div class="line"><div class="alyrics" id="x"></div></div>
+                </div><div class="hcoro dbhide">
+                <div class="line"><div class="alyrics" id="x"></div></div>
+                <div class="line"><div class="alyrics" id="x"></div></div>
+                <div class="line"><div class="alyrics" id="x"></div></div>
+                <div class="line"><div class="alyrics" id="x"></div></div>
                 </div>
-
-            <!-- CONTENIDO DE LA ASAMBLEA-->
-
-
+                <!-- CONTENIDO DE LA ASAMBLEA-->
 <!--╔═══════════════════════════════════════════════════════════════════════════════╗-->
 <!--║                           CONTENIDO DEL LADO DERECHO                          ║-->
 <!--╠═══════════════════════════════════════════════════════════════════════════════╣-->
-<!--║ A5 - CIERRE LADO IZQUIERDO -->    </div>                                  <!--║-->
-<!--║ A5 - grupo-columnas/-izquierdo -->    </div>                              <!--║-->
+<!--║       CIERRE LADO IZQUIERDO -->    </div>                                 <!--║-->
+<!--║       Grupo-columnas/-izquierdo -->     </div>                            <!--║-->
 <!--╚═══════════════════════════════════════════════════════════════════════════════╝-->
-
 <!--╔═══════════════════════════════════════════════════════════════════════════════╗-->
 <!--║                           CIERRE CONTENEDOR COLUMNAS                          ║-->
 <!--╠═══════════════════════════════════════════════════════════════════════════════╣-->
-<!--║-- >   </div>                                                               < !--║-->
+<!--║-- >    </div>                                                              < !--║-->
 <!--╚═══════════════════════════════════════════════════════════════════════════════╝-->
-
 <!--╔═══════════════════════════════════════════════════════════════════════════════╗-->
 <!--║                          CERRANDO FILAS DE LA TABLA                           ║-->
 <!--╠═══════════════════════════════════════════════════════════════════════════════╣-->
 <!--║-->   </td></tr>                                                           <!--║-->
 <!--╚═══════════════════════════════════════════════════════════════════════════════╝-->
-
-<!-- Fila 5: Flechas -->
-            <tr><td colspan="6" class="navegar">
+<!-- ZONA DE NAVEGACIÓN -->
+             <tr><td colspan="6" class="navegar">
                 <div>
-                        <a href="/cantos/resucito/l/lavozdemiamado.html" align="left" class="fleft"> <span class="mso1">arrow_left_alt </span></a> 
-                        <a href="/cantos/resucito/l/laudasion.html" align="right" class="fright"> <span class="mso1">arrow_right_alt </span></a>
-
-                    <div style="clear: both;"></div>
-                </div>
-                    
-            </td></tr>
-            
-            <div style="height: 4%;"></div>
-
-    <tr class="pie-tres-columnas">
-    <td colspan="2">
-        
-                    <div style="overflow: hidden;">
-                        <!-- Columna 1 -->
+             <a href="/cantos/resucito/l/lavozdemiamado.html" align="left" class="fleft">    <span class="mso1">arrow_left_alt   </span></a>
+             <a href="/cantos/resucito/l/laudasion.html" align="right" class="fright">    <span class="mso1">arrow_right_alt   </span></a>
+                     <div style="clear: both;"></div>
+<!-- NOTAS Y PIE DEL CANTO -->
+<div class="pnota QUITARPARAMOSTRAR"> <span class="pnota1">*</span> <p class="pnota2"> Este espacio es para notas.</p></div>
+</div></td></tr>
+<div style="height: 4%;"></div>
+<tr class="pie-tres-columnas">
+<td colspan="2">
+<div style="overflow: hidden;">
+                        <!-- ZONA CATEGORIAS -->
                         <div style="float: left;"><a href="#">
                             <p class="fup mso2" href="#">north</p>
                             <p class="dh piecategoria vmaria">Virgen Maria</p>
@@ -257,17 +236,13 @@
                             <p class="dh piecategoria Final">Final</p>
                             <p class="dh piecategoria plaudes">Laudes</p>
                             <p class="dh piecategoria ppenit">Penitencial</p></a>
-
                         </div>
                 </td>
-                
-<!-- Columna 2 - Notas musicales -->
+<!-- ZONAS DE LAS NOTAS O ACORDES -->
 <td colspan="2">
     <div class="notas-columna">
-
         <!-- CONTENIDO DE LAS NOTAS DEL CANTO-->
         <select id="acorde-selector"><option value="">♪♫</option></select>
-
     </div>
             <!-- VENTANA DE IAMGEN -->
                 </td><td colspan="2">
@@ -277,13 +252,12 @@
         </table>
         <!-- SECCION DEL ACORDE Y LA IMAGEN CORRESPONDIENTE -->
         <div id="acorde-display"><img id="acorde-imagen" src="" alt="Acorde seleccionado"></div>
-		<!-- CERRANDO DE CONTENEDOR DE TABLA -->
+        <!-- CERRANDO DE CONTENEDOR DE TABLA -->
         </div>
-
-    <!--    SCRIPT DEFINITIVO CUANDO SE HALLA COMPLETADO EL CANTO
-    <script src="/cantos/src/js/dbMainJS.js"></script>
-    -->  
+   <!--    SCRIPT DEFINITIVO CUANDO SE HALLA COMPLETADO EL CANTO
+   <script src="/cantos/src/js/dbMainJS.js"></script>
+   -->
 <script src="/cantos/resucito/acorde/src/mainjs.js"></script>
-<script src="/cantos/resucito/cjs/NOMBREDELCANTO.js"></script>
+<script src="/cantos/resucito/cjs/lasarmasdelaluz.js"></script>
 </body>
 </html>
