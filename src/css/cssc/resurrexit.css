@@ -1,0 +1,29 @@
+    .atop {
+        @media (min-width: 384px){
+            max-width:fit-content;
+            margin-top: -13%;
+            left: 50%;
+        }
+        @media (min-width: 768px){
+            margin-top: -9%;
+            margin-left: -140px;
+            max-width:fit-content;
+        }
+        @media (min-width: 992px){
+            margin-top: -8.7%;
+            margin-left: -23%;
+        }
+    }
+
+
+        /* Estilos base para los contenedores */
+    .hdb1 {
+        display: block; /* Visible por defecto */
+        cursor: pointer; /* Indica que es clicable */
+    }
+
+    .hdb2 {
+        display: none; /* Oculto por defecto */
+        cursor: pointer; /* Indica que es clicable */
+        user-select: none;
+    }

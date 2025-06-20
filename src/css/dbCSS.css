@@ -1355,3 +1355,49 @@ h1 {
       .QUITARPARAMOSTRAR {
         display: none;
       }
+
+      .dbcej1 {
+        color: black;
+        margin-left: 29px;
+        margin-top: -52px;
+        font-size: small;
+      }
+
+      .dbcej2 {
+        font-size: small;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      }
+
+
+.ojo {
+  position: relative;
+  width: 50px;  /* Ajusta al tamaño de tu ojo */
+  height: 30px;
+  animation: guiño-natural 3s ease-in-out infinite;
+  
+  border-radius: 50%;
+}
+
+@keyframes guiño-natural {
+  0%, 70% {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); /* Ojo abierto */
+  }
+  80% {
+    clip-path: polygon(0% 50%, 100% 50%, 100% 50%, 0% 50%); /* Ojo cerrado */
+  }
+  90%, 100% {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); /* Ojo abierto */
+  }
+}
+
+    /* Efecto de ojos Cerrado*/
+    .ojoh:hover {
+      animation: guiño-natural 1.6s ease-in-out infinite;
+      animation-delay: 0s, 3s; /* Versión alternativa */
+    }
+
+    @keyframes guiño-natural {
+      0%, 70% {clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); /* Abierto */}
+      80% {clip-path: polygon(0% 50%, 100% 50%, 100% 50%, 0% 50%); /* Cerrado */}
+      90%, 100% {clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); /* Abierto */}
+    }
