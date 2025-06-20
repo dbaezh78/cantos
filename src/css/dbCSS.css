@@ -1252,20 +1252,20 @@ h1 {
 }
 
     #acorde-selector {
-    text-align: center;
-    padding: 2px;
-    font-size: 1.5rem;
-    border-radius: 5px;
-    border-color: goldenrod;
-    border: 0px solid #ddd;
-    width: auto;
-    margin-bottom: 20px;
-    -webkit-appearance: none;
-    color: red;
-    font-weight: bold;
-    outline: none;
-    background-color: transparent;
-}
+      text-align: center;
+      padding: 2px;
+      font-size: 1.5rem;
+      border-radius: 5px;
+      border-color: goldenrod;
+      border: 0px solid #ddd;
+      width: auto;
+      margin-bottom: 20px;
+      -webkit-appearance: none;
+      color: red;
+      font-weight: bold;
+      outline: none;
+      background-color: transparent;
+    }
 
 #acorde-display {
     background-color: #ffffff;
