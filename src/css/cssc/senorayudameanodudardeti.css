@@ -1,0 +1,10 @@
+            /* Estilos base para los contenedores */
+    .hdb1 {
+        display: block; /* Visible por defecto */
+        cursor: pointer; /* Indica que es clicable */
+    }
+
+    .hdb2 {
+        display: none; /* Oculto por defecto */
+        cursor: pointer; /* Indica que es clicable */
+    }
