@@ -1,0 +1,19 @@
+.ta::before {
+    @media (min-width: 384px) {}
+    @media (min-width: 768px) {}
+    @media (min-width: 992px) {
+        font-size: 1.23rem;
+        margin-top: 0%;
+        margin-left: -11%;
+    }
+}
+
+.tc::before {
+    @media (min-width: 384px) {}
+    @media (min-width: 768px) {}
+    @media (min-width: 992px) {
+        font-size: 1.23rem;
+        margin-top: 0%;
+        margin-left: -16%;
+    }
+}

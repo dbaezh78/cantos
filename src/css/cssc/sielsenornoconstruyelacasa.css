@@ -1,0 +1,9 @@
+.r1::before, .r2::before {
+    @media (min-width: 992px) {
+        font-size: 1.3rem;
+        font-weight: bold;
+        height: 148px;
+        margin-left: 48%;
+        margin-top: -9%;
+    }
+}

@@ -1324,16 +1324,18 @@ h1 {
             }
 
             @media (min-width: 768px) {
+              font-size: 1.5rem;
               height: 281px;
               margin-left: 80%;
-              font-size: 1.5rem;
               margin-top: 0%;
             }
 
             @media (min-width: 992px) {
-                height: 234px;
-                margin-left: 80%;
-                margin-top: 0%
+              font-size: 1.3rem;
+              font-weight: bold;
+              height: 234px;
+              margin-left: 80%;
+              margin-top: 0%
 
             }
         }
@@ -1360,12 +1362,15 @@ h1 {
         color: black;
         margin-left: 29px;
         margin-top: -52px;
-        font-size: small;
+        font-size: 25px;
+        color: #87CEEB;
       }
 
       .dbcej2 {
         font-size: small;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        bottom: 15%;
+        color: black;
       }
 
 

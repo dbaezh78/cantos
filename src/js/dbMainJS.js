@@ -2,8 +2,7 @@
  * CONFIGURACIÓN GENERAL
  ***********************/
 const acordes = ["Do", "Do#", "Re", "Re#", "Mi", "Fa", "Fa#", "Sol", "Sol#", "La", "Si♭", "Si"];
-const dbTrastes = ["♫ Traste", "1°T", "2°T", "3°T", "4°T", "5°T", "6°T", "7°T", "8°T", "9°T", "10°T"];
-//const dbTrastes = ["♫", "1°", "2°", "3°", "4°", "5°", "6°", "7°", "8°", "9°", "10°"];
+const dbTrastes = ["♫ Traste", "1ᵉʳ traste", "2ᵒ traste", "3ᵉʳ traste", "4ᵒ traste", "5ᵒ traste", "6ᵒ traste", "7ᵒ traste", "8ᵒ traste", "9ᵒ traste", "10ᵒ traste"];
 
 // Variables de estado global
 let scrolling = false;
@@ -584,6 +583,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		"Famaj713": "/cantos/src/ima/famaj713.jpg",
 		"Fa#": "/cantos/src/ima/fas.jpg",
 		"Fa#m": "/cantos/src/ima/fasm.jpg",
+        "Fa# 5/9 dim": "/cantos/src/ima/fas5-9dim.jpg",
 		"Sol": "/cantos/src/ima/sol.jpg",
 		"Solm": "/cantos/src/ima/solm.jpg",
 		"Sol7": "/cantos/src/ima/sol7.jpg",

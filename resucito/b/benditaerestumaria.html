@@ -9,93 +9,74 @@
     <link type=text/css rel=stylesheet href="/cantos/src/css/dbCSS.css" >
     <link type=text/css rel=stylesheet href="/cantos/src/css/cssc/dbcssCantos.css" >
     <link type=text/css rel=stylesheet href="/cantos/src/css/cssc/benditaerestumaria.css" >
-        
+<!-- Titulo del Canto-->
   <title id="tc"></title>
 </head>
 <body>
-   
-    <!-- ABRIENDO DE CONTENEDOR DE TABLA -->
+<!-- ABRIENDO CONTENEDOR DE LA TABLA -->
     <div class="contenedor-tabla">
-
-                <!-- SECCION DEL REPRODUCTOR-->
+                 <!-- REPRODUCTOR DEL CANTO-->
                 <div id="reproductor-audio">
                     <audio class="saudio" controls controlslist="download" preload="metadata" loop>
-                        <source src="/audio/benditaerestumaria.mp3" type="audio/mpeg">
+                            <source src="/audio/benditaerestumaria.mp3" type="audio/mpeg">
                     </audio>
-                </div>       
-        
+                </div>
+                 <!-- ABRIENDO TABLET DEL CANTO-->
         <table class="dbtable">
             <tr>
-                
-<!-- A1 - PRIMERA FILA DEL CANTO DONDE ESTÁ EL HOME Y EL BUSCADOR -->
+                 <!-- HOME DEL CANTO-->
                 <td colspan="6" class="navegar">
                     <div>
                         <div align="left" style="float: left;"> 
                             <div class="home">
-                                <div><a href="/cantos/">				
-                                    <svg height="24px" viewBox="0 0 24 24" width="24px" fill="#5f6368">
-                                    <path d="M0 0h24v24H0V0z" fill="none"/>							
-                                    <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8h5z"/>					
+                                <div><a href="/cantos/">
+                                     <svg height="24px" viewBox="0 0 24 24" width="24px" fill="#5f6368">
+                                    <path d="M0 0h24v24H0V0z" fill="none"/>
+                                    <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8h5z"/>
                                     </svg> </a></div>
-                                    
-                <span class="mso" style="color: black; margin-left: 29px; margin-top: -52px">visibility 3°T </span>
-<!--            <span class="mso" style="color: black; margin-left: 29px; margin-top: -52px">visibility5°T</span>      -->
-
-                            </div></div>
-
-<!-- BUSCADOR DEL CANTO-->
-                        <div align="right"  style="float: right;"> 
-                            <div class="buscador-cantos" align="right"  style="float: right;">
+                  <span class="mso dbcej1"><ojo class="ojo">visibility</ojo><span class="dbcej2"> Cejilla 3ᵉʳ traste</span></span>
+                        </div></div>
+                        <!-- ZONA BUSCADOR DEL CANTO-->
+                        <div align="right" style="float: right;"> 
+                            <div class="buscador-cantos" align="right" style="float: right;">
                                 <input type="text" id="inputBusqueda" placeholder="🔍ver otro canto..." autocomplete="off">
                                 <div id="resultadosBusqueda"></div>
                             </div></div>
-<!-- BUSCADOR DEL CANTO-->                        
-
-                        <div style="clear: both;"></div>
-                    </div>
-                </td>
-<!-- A1 - PRIMERA FILA DEL CANTO DONDE ESTÁ EL HOME Y EL BUSCADOR-->
-            </tr>
-
-            <!-- Fila 2: Titulo y Subtítulo -->  
-            <tr><td class="titulo" id="t1" colspan="6"></td></tr>
-            <tr><td class="subtitulo" id="s1" colspan="6"></td></tr>
-            
-<!-- A2 - Fila 3: Encabezado de 6 columnas -->
-        <tr class="encabezado-columnas odb">
-
+                 <!-- ZONA BUSCADOR DEL CANTO-->
+                 <div style="clear: both;"></div>
+           </div></td></tr>
+                <!-- ZONA TITUTO Y SUBTITULO-->
+                <tr><td class="titulo" id="t1" colspan="6"></td></tr>
+                <tr><td class="subtitulo" id="s1" colspan="6"></td></tr>
+                <!-- ZONA INICIO CANTO -->
+                <tr class="encabezado-columnas odb">
 <!--╔═══════════════════════════════════════════════════════════════════════════════╗-->
-<!--║  [ SECCION DE CATEGORIA ]    precat - liturgia - cat - eleccion               ║-->
+<!--║  [ SECCION DE CATEGORIA ]    precat - liturgia - cat - eleccion               ║-->
 <!--╠═══════════════════════════════════════════════════════════════════════════════╣-->
 <!--║-->   <th class="precat" id="catg"></th>                                   <!--║-->
 <!--╚═══════════════════════════════════════════════════════════════════════════════╝-->
-
-            <th>    <select class="dbMiTraste" data-default="3°T"></select> <!-- Grado ° --></th>
-            <th>    <a href="#" id="toggleVista"><span class="mso">menu_book</span></a></th>
-            <th>    <a href="#reproductor-audio" id="audio-control-btn" class="audio-control"><span class="mso audio-icon">play_circle</span></a></th>
-            <th>    <span class="mso hline bcoro">visibility</span></th>
+            <!-- ZONA CEJILLA -->
+            <th>     <select class="dbMiTraste" data-default="3ᵉʳ traste"></select> <!-- Grado ° --></th>
+            <th>     <a href="#" id="toggleVista"><span class="mso">menu_book</span></a></th>
+            <th>     <a href="#reproductor-audio" id="audio-control-btn" class="audio-control"><span class="mso audio-icon">play_circle</span></a></th>
+            <th>     <span class="mso hline bcoro ojoh">visibility</span></th>
             <!-- Flecha para abajo ↓ -->
-            <th>    <a href="#" id="startScroll" data-velocidad="200" data-incremento="1"><span class="mso">south</span></a></th>
-        </tr>
-<!-- A2 - Fila 3: Encabezado de 6 columnas CIERRE-->
-<!-- A3 Fila 4 TODO EL CANTO -->
-
-        <tr><td colspan="6" style="padding: 22px 0 0 0;">
-
+            <th>    <a href="#" id="startScroll" data-velocidad="200" data-incremento="1"><span class="mso">south</span></a></th></tr>
+            <!-- ZONA DE LAS ESTROFAS  -->
+            <tr><td colspan="6" style="padding: 22px 0 0 0;">
 <!--╔═══════════════════════════════════════════════════════════════════════════════╗-->
 <!--║                              CONTENEDOR COLUMNAS                              ║-->
 <!--╠═══════════════════════════════════════════════════════════════════════════════╣-->
 <!--║-->   <div class="contenedordecolumnas" id="contenedorColumnas">           <!--║-->
 <!--╚═══════════════════════════════════════════════════════════════════════════════╝-->
-
 <!--╔═══════════════════════════════════════════════════════════════════════════════╗-->
 <!--║                        CONTENIDO DEL LADO IZQUIERDO                           ║-->
 <!--╠═══════════════════════════════════════════════════════════════════════════════╣-->
 <!--║-->   <div class="grupo-columnas grupo-izquierdo">                         <!--║-->
-<!--║ A5 - INICIO LADO Izquierdo -->    <div class="izq">                       <!--║-->
+<!--║  INICIO LADO Izquierdo -->    <div class="izq">                           <!--║-->
 <!--╚═══════════════════════════════════════════════════════════════════════════════╝-->
+<!-- CONTENIDO DEL LADO IZQUIERDO -->
 
-<!-- A6 - CONTENIDO DEL LADO IZQUIERDO -->
 
             <div class="tc"></div>
                 <div class="line"><div class="lyrics" id="c1"></div></div>

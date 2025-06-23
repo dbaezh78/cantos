@@ -1,0 +1,25 @@
+.r1::before, .r2::before {
+    @media (min-width: 992px) {
+        height: 147px;
+        margin-left: 45%;
+        margin-top: 0%;
+    }
+}
+
+.r2::before {
+    @media (min-width: 992px) {
+        height: 147px;
+        margin-left: 71%;
+        margin-top: 0%;
+    }
+}
+
+.melisma {
+    margin-left: -85%;
+    top: 0.5%;
+}
+
+.dbleft {
+    margin-left: -56%;
+    top: 1%;
+}
