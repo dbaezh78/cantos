@@ -656,12 +656,14 @@
             background-color: #f1f3f4;
             outline: none;
             border-radius: 10px 10px 0px 0px;
-            margin-left: 1px;
-            
+            margin-left: 0px;
+
             @media (max-width: 384px) {
-              width: 100%;
-              padding: 1px 9px 1px 9px;
+              /*padding: 1px 9px 1px 9px;*/
+              width: 498px;
+              margin-left: 0px;
             }
+
         }
 
         .cno {
