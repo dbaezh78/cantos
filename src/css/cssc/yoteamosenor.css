@@ -13,7 +13,9 @@
         margin-top: -8%;
         margin-left: -4%;
     }
-    @media (min-width: 768px){}
+    @media (min-width: 768px){
+        margin-top: -11%;
+    }
     @media (min-width: 992px){
         width: 93%;
         margin-left: -6%;
@@ -27,4 +29,21 @@
         margin-left: 5%
     }
 
+}
+
+
+.violin {
+    font-style: italic;
+    color: red;
+    @media (min-width: 384px){
+        font-size: 1.2rem;
+    }
+    @media (min-width: 768px){
+        font-size: 1.6rem;
+    }
+    @media (min-width: 992px){
+        font-size: 1.2rem;
+    }
+
+    
 }
