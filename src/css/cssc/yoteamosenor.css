@@ -1,0 +1,5 @@
+.melisma::before {
+    @media (min-width: 992px) {
+        left: 68%;
+    }
+}
