@@ -3,3 +3,28 @@
         left: 68%;
     }
 }
+
+  .nocopy {
+    user-select: none;
+    pointer-events: none;
+    
+    @media (min-width: 384px){
+        width: 100%;
+        margin-top: -8%;
+        margin-left: -4%;
+    }
+    @media (min-width: 768px){}
+    @media (min-width: 992px){
+        width: 93%;
+        margin-left: -6%;
+        margin-top: -8%;
+    }
+  }
+
+
+.imaleft {
+    @media (min-width: 384px){
+        margin-left: 5%
+    }
+
+}

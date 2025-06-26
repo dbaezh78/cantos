@@ -4,12 +4,30 @@
 ╠════════════════════════════════════════════════════════════════╣
 ║                Mapeo para celulares menor a 700px              ║
 ╚════════════════════════════════════════════════════════════════╝  */
-const pcelular = {      };
+const pcelular = { 
+  'cp617':'cp862',
+  'cp447':'cp643',
+  'cp631':'cp895',
+  'cp265':'cp390',
+  'cp374':'cp528',
+  'cp758':'cp1050',
+  'cp366':'cp531',
+  'cp659':'cp924',
+  'cp290':'cp422',
+  'cp502':'cp710',
+  'cp732':'cp1015',
+      };
 /*
 ╔════════════════════════════════════════════════════════════════╗
 ║                Mapeo para celulares menor a 900px              ║
 ╚════════════════════════════════════════════════════════════════╝  */
-const pTablet = {       };
+const pTablet = {
+  'cp143':'cp201',
+  'cp37':'cp86',
+  'cp61':'cp104',
+  'cp129':'cp183',
+  'cp41':'cp91',
+      };
 /*
 ╔════════════════════════════════════════════════════════════════╗
 ║            Función de Posición con factor ajustable            ║
@@ -25,7 +43,7 @@ if (anchoPantalla <= 700) {
 posicionAjustada = pcelular[posicion] || posicion;
 if (!pcelular[posicion]) {
 const numero = parseInt(posicion.replace('cp', '')) || 0;
-const factor = 0.86; // Factor diferente para móviles
+const factor = 1.57; // Factor diferente para móviles
 posicionAjustada = `cp${Math.round(numero * factor)}`;
   }
 }/*
@@ -36,7 +54,7 @@ posicionAjustada = `cp${Math.round(numero * factor)}`;
     posicionAjustada = pTablet[posicion] || posicion;
     if (!pTablet[posicion]) {
       const numero = parseInt(posicion.replace('cp', '')) || 0;
-      const factor = 0.9;
+      const factor = 1.243;
       posicionAjustada = `cp${Math.round(numero * factor)}`;
     }
   }
@@ -128,11 +146,11 @@ cantorAcordes: [
 /* 24*/      [ac("La", "cp159",""), ac("Sol","cp584","")],
 /* 25*/      [ac("Re", "cp649","")],
 
-/* 26*/      [ac("Si", "cp91","m"), ac("La","cp540","")],
-/* 27*/      [ac("Si", "cp91","m"), ac("La","cp417",""), ac("Si","cp571","m")],
-/* 28*/      [ac("Sol", "cp95",""), ac("Fa#","cp257",""), ac("Sol","cp364",""), ac("Fa#","cp661","")],
-/* 29*/      [ac("Si", "cp149","m"), ac("Sol","cp338",""), ac("La","cp579","")],
-/* 30*/      [ac("Sol", "cp79",""), ac("Fa#","cp280",""), ac("Sol","cp446",""), ac("Fa#","cp637","")],
+/* 26*/      [ac("Si", "cp143","m"), ac("La","cp617","")],
+/* 27*/      [ac("Si", "cp37","m"), ac("La","cp447",""), ac("Si","cp631","m")],
+/* 28*/      [ac("Sol", "cp61",""), ac("Fa#","cp265",""), ac("Sol","cp374",""), ac("Fa#","cp758","")],
+/* 29*/      [ac("Si", "cp129","m"), ac("Sol","cp366",""), ac("La","cp659","")],
+/* 30*/      [ac("Sol", "cp41",""), ac("Fa#","cp290",""), ac("Sol","cp502",""), ac("Fa#","cp732","")],
 /* 31 */     [ac("", "cp0","")],
 ],/*
 ╔════════════════════════════════════════════════════════════════╗
