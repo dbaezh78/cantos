@@ -1,0 +1,29 @@
+.cruz {
+  position: relative;
+  padding-left: 1.5em;
+}
+
+.cruz::before {
+  color: red;
+  font-size: 1.3rem;
+  font-weight: bold;
+  content: "✠";
+  margin-top: 13%;
+
+  @media (min-width: 384px) {
+      margin-left: 19%;
+
+  }
+  @media (min-width: 768px) {
+    font-size: 2rem;
+    margin-left: 19%;
+    top: 10%;
+
+  }
+  @media (min-width: 992px) {
+    font-size: 1.2rem;
+    margin-left: 12%;
+    top: 123px;
+
+  }
+}
