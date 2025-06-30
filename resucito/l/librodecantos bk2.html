@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Libro de Cantos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            /*--primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            */
+            --sidebar-width: 280px;
+            --header-height: 60px;
+            --primary-color: #7f2829;
+            --secondary-color: #591b1c;
+            --accent-color: #3498db;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        /* Header superior */
+        #main-header {
+            height: var(--header-height);
+            background: var(--primary-color);
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 0 15px;
+            position: relative;
+            z-index: 100;
+        }
+        
+        #home-btn {
+            color: white;
+            font-size: 20px;
+            margin-right: 15px;
+            text-decoration: none;
+        }
+        
+        #current-title {
+            font-size: 180%;
+            flex-grow: 1;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-align: center;
+        }
+        
+        #toggle-btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        
+        /* Contenedor principal */
+        #app-container {
+            display: flex;
+            flex: 1;
+            overflow: hidden;
+        }
+        
+        /* Sidebar - Oculto por defecto en todos los dispositivos */
+        #sidebar {
+            width: var(--sidebar-width);
+            background: var(--primary-color);
+            color: white;
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            top: var(--header-height);
+            left: 0;
+            bottom: 0;
+            z-index: 90;
+        }
+        
+        #sidebar.visible {
+            transform: translateX(0);
+        }
+        
+        #sidebar-header {
+            padding: 15px;
+            background: var(--secondary-color);
+            font-weight: bold;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            border: 1px solid goldenrod;
+        }
+        
+        #pdf-list {
+            list-style: none;
+            overflow-y: auto;
+            flex: 1;
+            padding-bottom: 20px;
+        }
+        
+        #pdf-list li {
+            padding: 12px 15px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        
+        #pdf-list li:hover, 
+        #pdf-list li.active {
+            background: var(--secondary-color);
+        }
+        
+        /* Visor PDF */
+        #pdf-viewer-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            transition: margin-left 0.3s ease;
+        }
+        
+        #pdf-frame {
+            flex: 1;
+            border: none;
+            width: 100%;
+            height: 100%;
+        }
+        
+        /* Overlay */
+        #overlay {
+            position: fixed;
+            top: var(--header-height);
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 80;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+        }
+        
+        #overlay.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        /* Desktop - comportamiento diferente */
+        @media (min-width: 769px) {
+            #sidebar {
+                position: fixed;
+                transform: translateX(0);
+            }
+            
+            #pdf-viewer-container {
+                margin-left: var(--sidebar-width);
+            }
+            
+            #overlay {
+                display: none;
+            }
+            
+            /* Botón para ocultar/mostrar sidebar en desktop */
+            #toggle-desktop-sidebar {
+                display: block;
+                position: fixed;
+                left: var(--sidebar-width);
+                top: calc(var(--header-height) + 10px);
+                z-index: 110;
+                background: var(--accent-color);
+                color: white;
+                border: none;
+                width: 24px;
+                height: 40px;
+                border-radius: 0 4px 4px 0;
+                cursor: pointer;
+                transition: left 0.3s ease;
+            }
+            
+            #toggle-desktop-sidebar.collapsed {
+                left: 0;
+            }
+            
+            body.sidebar-collapsed #sidebar {
+                transform: translateX(-100%);
+            }
+            
+            body.sidebar-collapsed #pdf-viewer-container {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header con botón home -->
+    <header id="main-header">
+        <a href="/cantos/" id="home-btn"><i class="fas fa-home"></i></a>
+        <div id="current-title">Libros de Cantos</div>
+        <button id="toggle-btn"><i class="fas fa-bars"></i></button>
+    </header>
+    
+    <!-- Contenedor principal -->
+    <div id="app-container">
+        <!-- Sidebar -->
+        <aside id="sidebar">
+            <div id="sidebar-header">Listado de Cantos</div>
+            <ul id="pdf-list">
+                <li data-pdf="/cantos/src/doc/resucito.pdf" class="active">Resucitó 2023</li>
+                <li data-pdf="/cantos/src/doc/resucito2019.pdf">Resucitó 2019</li>
+                <li data-pdf="/cantos/src/doc/resucito2014.pdf">Resucitó 2014</li>
+                <li data-pdf="/cantos/src/doc/Risuscitò2010.pdf">Risuscitò 2010</li>
+                <li data-pdf="#">Sitios del Camino Neo Catecumenal</li>
+                <li data-pdf="https://neocatechumenaleiter.org/">Sitios Web Camino Neo Catecumenal</li>
+                <li data-pdf="/cantos/">Cantos y Documentos del Camino Neo Catecumenal</li>
+            </ul>
+        </aside>
+        
+        <!-- Botón para desktop -->
+        <button id="toggle-desktop-sidebar"><i class="fas fa-chevron-left"></i></button>
+        
+        <!-- Overlay para móviles -->
+        <div id="overlay"></div>
+        
+        <!-- Visor PDF -->
+        <main id="pdf-viewer-container">
+            <iframe id="pdf-frame" src="http://localhost/cantos/src/doc/resucito.pdf"></iframe>
+        </main>
+    </div>
+
+    <script>
+        // Elementos del DOM
+        const toggleBtn = document.getElementById('toggle-btn');
+        const desktopToggleBtn = document.getElementById('toggle-desktop-sidebar');
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+        const pdfItems = document.querySelectorAll('#pdf-list li');
+        const pdfFrame = document.getElementById('pdf-frame');
+        const currentTitle = document.getElementById('current-title');
+        const sidebarHeader = document.getElementById('sidebar-header');
+        const appContainer = document.getElementById('app-container');
+        
+        // Estado del sidebar
+        let sidebarCollapsed = false;
+        
+        // Mostrar/ocultar sidebar en móviles
+        function toggleMobileSidebar() {
+            sidebar.classList.toggle('visible');
+            overlay.classList.toggle('visible');
+            document.body.style.overflow = sidebar.classList.contains('visible') ? 'hidden' : '';
+        }
+        
+        // Mostrar/ocultar sidebar en desktop
+        function toggleDesktopSidebar() {
+            sidebarCollapsed = !sidebarCollapsed;
+            document.body.classList.toggle('sidebar-collapsed', sidebarCollapsed);
+            desktopToggleBtn.classList.toggle('collapsed', sidebarCollapsed);
+            desktopToggleBtn.innerHTML = sidebarCollapsed ? '<i class="fas fa-chevron-right"></i>' : '<i class="fas fa-chevron-left"></i>';
+            
+            // Guardar preferencia
+            localStorage.setItem('sidebarCollapsed', sidebarCollapsed);
+        }
+        
+        // Cargar PDF seleccionado
+        function loadPDF(item) {
+            const pdfUrl = item.getAttribute('data-pdf');
+            const pdfName = item.textContent;
+            
+            // Cargar PDF
+            pdfFrame.src = pdfUrl;
+            
+            // Actualizar estados
+            pdfItems.forEach(i => i.classList.remove('active'));
+            item.classList.add('active');
+            
+            // Actualizar títulos
+            currentTitle.textContent = pdfName;
+            sidebarHeader.textContent = pdfName;
+            
+            // Ocultar sidebar en móviles
+            if (window.innerWidth < 769) {
+                toggleMobileSidebar();
+            }
+        }
+        
+        // Event listeners
+        toggleBtn.addEventListener('click', toggleMobileSidebar);
+        desktopToggleBtn.addEventListener('click', toggleDesktopSidebar);
+        overlay.addEventListener('click', toggleMobileSidebar);
+        
+        pdfItems.forEach(item => {
+            item.addEventListener('click', function() {
+                loadPDF(this);
+            });
+        });
+        
+        // Cargar preferencia de sidebar
+        if (window.innerWidth >= 769) {
+            const savedState = localStorage.getItem('sidebarCollapsed') === 'true';
+            if (savedState) {
+                toggleDesktopSidebar();
+            }
+        }
+        
+        // Cargar el primer PDF por defecto
+        if (pdfItems.length > 0) {
+            loadPDF(pdfItems[0]);
+        }
+        
+        // Redimensionar el iframe
+        function resizeFrame() {
+            const headerHeight = document.getElementById('main-header').offsetHeight;
+            pdfFrame.style.height = `calc(100vh - ${headerHeight}px)`;
+        }
+        
+        window.addEventListener('resize', resizeFrame);
+        resizeFrame();
+    </script>
+</body>
+</html>

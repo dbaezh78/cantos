@@ -1279,6 +1279,15 @@ h1 {
     background-color: #ffffff;
     min-height: auto;
     height: auto; /* Altura fija */
+    @media (min-width: 384px) {
+      /*width: 106.72%;*/
+      width: 108%;
+    }
+    @media (min-width: 768px) {
+      width: 100%;
+    }
+    @media (min-width: 992px) {}
+      
 }
 
 #acorde-imagen {

@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Visor de PDF Responsive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js">
+    <style>
+        :root {
+            --sidebar-width: 250px;
+            --header-height: 60px;
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --accent-color: #3498db;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+            touch-action: pan-y;
+        }
+        
+        /* Header fijo */
+        #header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: var(--header-height);
+            background: var(--primary-color);
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 0 15px;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        
+        #toggle-btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            margin-right: 15px;
+        }
+        
+        #header-title {
+            font-size: 18px;
+        }
+        
+        /* Sidebar mejorado */
+        #sidebar {
+            width: var(--sidebar-width);
+            background: var(--primary-color);
+            color: white;
+            transition: transform 0.3s ease;
+            position: fixed;
+            top: var(--header-height);
+            left: 0;
+            bottom: 0;
+            overflow-y: auto;
+            z-index: 900;
+            transform: translateX(-100%);
+            padding-top: 10px;
+        }
+        
+        #sidebar.visible {
+            transform: translateX(0);
+        }
+        
+        #sidebar h2 {
+            padding: 15px 20px;
+            margin: 0;
+            background: var(--secondary-color);
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+        
+        #pdf-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        #pdf-list li {
+            padding: 15px 20px;
+            border-bottom: 1px solid var(--secondary-color);
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        
+        #pdf-list li:hover, #pdf-list li.active {
+            background: var(--secondary-color);
+        }
+        
+        /* Contenedor principal */
+        #main-content {
+            flex: 1;
+            margin-top: var(--header-height);
+            height: calc(100vh - var(--header-height));
+            transition: margin-left 0.3s ease;
+            position: relative;
+        }
+        
+        #pdf-viewer-container {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        #pdf-controls {
+            padding: 10px;
+            background: #ecf0f1;
+            display: flex;
+            gap: 10px;
+        }
+        
+        #pdf-frame {
+            flex: 1;
+            border: none;
+            background: #eee;
+        }
+        
+        .fullscreen-btn {
+            margin-left: auto;
+            background: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        
+        /* Overlay para móviles */
+        #overlay {
+            position: fixed;
+            top: var(--header-height);
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 800;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+        }
+        
+        #overlay.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        /* Responsive */
+        @media (min-width: 768px) {
+            #sidebar {
+                transform: translateX(0);
+                position: static;
+                top: 0;
+            }
+            
+            #main-content {
+                margin-left: var(--sidebar-width);
+            }
+            
+            #toggle-btn {
+                display: none;
+            }
+            
+            #overlay {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 767px) {
+            :root {
+                --sidebar-width: 85%;
+            }
+            
+            #pdf-list li {
+                padding: 12px 15px;
+                font-size: 14px;
+            }
+            
+            .fullscreen-btn {
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header fijo -->
+    <div id="header">
+        <button id="toggle-btn">☰</button>
+        <div id="header-title">Visor de Documentos</div>
+    </div>
+    
+    <!-- Panel lateral -->
+    <div id="sidebar">
+        <h2>Documentos PDF</h2>
+        <ul id="pdf-list">
+            <li data-pdf="http://localhost/cantos/src/doc/resucito.pdf" class="active">Resucitó (Actual)</li>
+            <li data-pdf="http://localhost/cantos/src/doc/resucito2019.pdf">Resucitó 2019</li>
+            <li data-pdf="http://localhost/cantos/src/doc/resucito2014.pdf">Resucitó 2014</li>
+            <li data-pdf="http://localhost/cantos/src/doc/Risuscitò2010.pdf">Risuscitò 2010</li>
+        </ul>
+    </div>
+    
+    <!-- Overlay para móviles -->
+    <div id="overlay"></div>
+    
+    <!-- Contenido principal -->
+    <div id="main-content">
+        <div id="pdf-viewer-container">
+            <div id="pdf-controls">
+                <button class="fullscreen-btn" id="fullscreen">Pantalla Completa</button>
+            </div>
+            <iframe id="pdf-frame" src="http://localhost/cantos/src/doc/resucito.pdf"></iframe>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+    <script>
+        // Elementos del DOM
+        const toggleBtn = document.getElementById('toggle-btn');
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+        const pdfItems = document.querySelectorAll('#pdf-list li');
+        const pdfFrame = document.getElementById('pdf-frame');
+        const headerTitle = document.getElementById('header-title');
+        
+        // Estado del sidebar
+        let sidebarVisible = false;
+        
+        // Función para alternar el sidebar
+        function toggleSidebar() {
+            sidebarVisible = !sidebarVisible;
+            sidebar.classList.toggle('visible', sidebarVisible);
+            overlay.classList.toggle('visible', sidebarVisible);
+            
+            // Bloquear scroll del body cuando el sidebar está abierto
+            document.body.style.overflow = sidebarVisible ? 'hidden' : '';
+        }
+        
+        // Evento del botón toggle
+        toggleBtn.addEventListener('click', toggleSidebar);
+        
+        // Cerrar sidebar al hacer clic en el overlay
+        overlay.addEventListener('click', toggleSidebar);
+        
+        // Cargar PDF al hacer clic en el listado
+        pdfItems.forEach(item => {
+            item.addEventListener('click', function() {
+                const pdfUrl = this.getAttribute('data-pdf');
+                pdfFrame.src = pdfUrl;
+                
+                // Actualizar estado activo
+                pdfItems.forEach(i => i.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Actualizar título del documento en el header
+                headerTitle.textContent = this.textContent;
+                
+                // Cerrar sidebar en móviles
+                if (window.innerWidth < 768) {
+                    toggleSidebar();
+                }
+            });
+        });
+        
+        // Pantalla completa
+        document.getElementById('fullscreen').addEventListener('click', function() {
+            const viewer = document.getElementById('pdf-viewer-container');
+            
+            if (viewer.requestFullscreen) {
+                viewer.requestFullscreen();
+            } else if (viewer.webkitRequestFullscreen) {
+                viewer.webkitRequestFullscreen();
+            } else if (viewer.msRequestFullscreen) {
+                viewer.msRequestFullscreen();
+            }
+        });
+        
+        // Gestos táctiles para abrir/cerrar el panel
+        if (window.innerWidth < 768) {
+            const mainContent = document.getElementById('main-content');
+            const mcHammer = new Hammer(mainContent);
+            
+            mcHammer.on('swiperight', function() {
+                if (!sidebarVisible) {
+                    toggleSidebar();
+                }
+            });
+            
+            mcHammer.on('swipeleft', function() {
+                if (sidebarVisible) {
+                    toggleSidebar();
+                }
+            });
+        }
+        
+        // Ajustar altura del iframe al cambiar tamaño
+        window.addEventListener('resize', function() {
+            pdfFrame.style.height = window.innerHeight - document.getElementById('pdf-controls').offsetHeight - document.getElementById('header').offsetHeight + 'px';
+        });
+        
+        // Inicializar altura del iframe
+        window.dispatchEvent(new Event('resize'));
+    </script>
+</body>
+</html>
+
+version 2
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visor de PDF con Listado</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+        
+        #sidebar {
+            width: 250px;
+            background: #2c3e50;
+            color: white;
+            transition: all 0.3s;
+            overflow-y: auto;
+        }
+        
+        #sidebar.hidden {
+            margin-left: -250px;
+        }
+        
+        #toggle-btn {
+            position: fixed;
+            left: 10px;
+            top: 10px;
+            z-index: 100;
+            background: #34495e;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        
+        #sidebar h2 {
+            padding: 20px;
+            margin: 0;
+            background: #34495e;
+            text-align: center;
+        }
+        
+        #pdf-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        #pdf-list li {
+            padding: 12px 20px;
+            border-bottom: 1px solid #34495e;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        
+        #pdf-list li:hover {
+            background: #34495e;
+        }
+        
+        #pdf-viewer-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        
+        #pdf-controls {
+            padding: 10px;
+            background: #ecf0f1;
+            display: flex;
+            gap: 10px;
+        }
+        
+        #pdf-frame {
+            flex: 1;
+            border: none;
+            background: #eee;
+        }
+        
+        .fullscreen-btn {
+            margin-left: auto;
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button id="toggle-btn">☰ Mostrar Listado</button>
+    
+    <div id="sidebar" class="hidden">
+        <h4>Versiones Resucitó</h4>
+        <ul id="pdf-list">
+            <li data-pdf="/cantos/src/doc/resucito.pdf">Resucitó 2023</li>
+            <li data-pdf="/cantos/src/doc/resucito2019.pdf">Resucitó 2019</li>
+            <li data-pdf="/cantos/src/doc/resucito2014.pdf">Resucitó 2014</li>
+            <li data-pdf="/cantos/src/doc/Risuscitò2010.pdf">Risuscitò 2010</li>
+        </ul>
+    </div>
+    
+    <div id="pdf-viewer-container">
+        <div id="pdf-controls">
+            <button class="fullscreen-btn" id="fullscreen">Pantalla Completa</button>
+        </div>
+        <iframe id="pdf-frame" src="about:blank"></iframe>
+    </div>
+
+    <script>
+        // Toggle sidebar
+        const toggleBtn = document.getElementById('toggle-btn');
+        const sidebar = document.getElementById('sidebar');
+        
+        toggleBtn.addEventListener('click', function() {
+            sidebar.classList.toggle('hidden');
+            toggleBtn.textContent = sidebar.classList.contains('hidden') ? '☰ Mostrar Listado' : '✖ Ocultar';
+        });
+        
+        // Cargar PDF al hacer clic en el listado
+        const pdfItems = document.querySelectorAll('#pdf-list li');
+        
+        pdfItems.forEach(item => {
+            item.addEventListener('click', function() {
+                const pdfUrl = this.getAttribute('data-pdf');
+                document.getElementById('pdf-frame').src = pdfUrl;
+                
+                // Resaltar elemento seleccionado
+                pdfItems.forEach(i => i.style.background = 'transparent');
+                this.style.background = '#34495e';
+            });
+        });
+        
+        // Cargar el primer PDF por defecto
+        if (pdfItems.length > 0) {
+            pdfItems[0].click();
+        }
+        
+        // Pantalla completa
+        document.getElementById('fullscreen').addEventListener('click', function() {
+            const frame = document.getElementById('pdf-frame');
+            
+            if (frame.requestFullscreen) {
+                frame.requestFullscreen();
+            } else if (frame.webkitRequestFullscreen) {
+                frame.webkitRequestFullscreen();
+            } else if (frame.msRequestFullscreen) {
+                frame.msRequestFullscreen();
+            }
+        });
+    </script>
+</body>
+</html>

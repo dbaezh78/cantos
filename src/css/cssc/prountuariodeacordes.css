@@ -1,0 +1,21 @@
+.pima {
+    display: block;
+    /*max-width: 100%; /* Add this line */
+    height: auto;    /* Add this line to maintain aspect ratio */
+    
+    @media (min-width: 384px) {
+        width: 129%;
+        margin-left: -34px;
+    }
+
+    @media (min-width: 768px) {
+        /* You might not need min-width if max-width: 100% is effective */
+        width: 126%;
+        margin-left: -73px;
+    }
+
+    @media (min-width: 992px) {
+        width: 200%;
+        margin-left: -63px;
+    }
+}
