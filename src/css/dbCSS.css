@@ -425,7 +425,10 @@
 
         @media (min-width: 992px) {
             flex-direction: row;
+            margin-left: 62px;
+            /*
             margin-left: 33px;
+            */
           }
       }
 
@@ -445,7 +448,8 @@
             }
                 
                 @media (min-width: 992px) {
-            margin-left: 33px;
+            /*margin-left: 33px;*/
+            margin-left: 60px;
               }
             }
             

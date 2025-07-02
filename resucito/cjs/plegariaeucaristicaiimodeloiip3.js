@@ -25,7 +25,7 @@ if (anchoPantalla <= 700) {
 posicionAjustada = pcelular[posicion] || posicion;
 if (!pcelular[posicion]) {
 const numero = parseInt(posicion.replace('cp', '')) || 0;
-const factor = 0.86; // Factor diferente para móviles
+const factor = 1.576; // Factor diferente para móviles
 posicionAjustada = `cp${Math.round(numero * factor)}`;
   }
 }/*
@@ -36,7 +36,7 @@ posicionAjustada = `cp${Math.round(numero * factor)}`;
     posicionAjustada = pTablet[posicion] || posicion;
     if (!pTablet[posicion]) {
       const numero = parseInt(posicion.replace('cp', '')) || 0;
-      const factor = 0.9;
+      const factor = 1.272;
       posicionAjustada = `cp${Math.round(numero * factor)}`;
     }
   }

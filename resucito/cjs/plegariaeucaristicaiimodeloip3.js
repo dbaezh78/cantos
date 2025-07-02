@@ -1,54 +1,50 @@
-/*********************** FUENTE DEL CANTO ***********************/
-
-// Mapeo para celulares 483px
-const pcelular = {
-//  --cp1: 0.1%;
-      //  --cp18: 1.8%;
-      //  --cp486: 48.6%;
-      //  --cp1547: 154.7%;
-    };
-// Mapeo específico para tablets (800px)
-const pTablet = {
-//  --cp1: 0.1%;
-      //  --cp18: 1.8%;
-      //  --cp486: 48.6%;
-      //  --cp1547: 154.7%;
-    };
-
+/*
+╔════════════════════════════════════════════════════════════════╗
+║                         FUENTE DEL CANTO                       ║
+╠════════════════════════════════════════════════════════════════╣
+║                Mapeo para celulares menor a 700px              ║
+╚════════════════════════════════════════════════════════════════╝  */
+const pcelular = {      };
+/*
+╔════════════════════════════════════════════════════════════════╗
+║                Mapeo para celulares menor a 900px              ║
+╚════════════════════════════════════════════════════════════════╝  */
+const pTablet = {       };
+/*
+╔════════════════════════════════════════════════════════════════╗
+║            Función de Posición con factor ajustable            ║
+╚════════════════════════════════════════════════════════════════╝  */
 function ac(nota, posicion, extension = "") {
-      const anchoPantalla = window.innerWidth;
-      let posicionAjustada = posicion;
-
-// Solo ajustamos para tablets (601px a 900px)
-      if (anchoPantalla > 600 && anchoPantalla <= 900) {
-        posicionAjustada = pTablet[posicion] || posicion;
-
-        // Si no está en el mapeo, aplicamos un factor general más preciso
-        if (!pTablet[posicion]) {
-          const numero = parseInt(posicion.replace('cp', ''));
-          const factor = 0.93; // Factor más preciso para 800px
-          posicionAjustada = `cp${Math.round(numero * factor)}`;
-        }
-      }
-
-      // Solo ajustamos para tablets (284px a 384px)
-      if (anchoPantalla > 284 && anchoPantalla <= 411) {
-            posicionAjustada = pcelular[posicion] || posicion;
-            
-            // Si no está en el mapeo, aplicamos un factor general más preciso
-            if (!pcelular[posicion]) {
-              const numero = parseInt(posicion.replace('cp', ''));
-              const factor = 1.3; // Factor más preciso para 384px
-              posicionAjustada = `cp${Math.round(numero * factor)}`;
-            }
-          }
-      
-      return { acorde: nota, posicion: posicionAjustada, base: nota, extension };
+  const anchoPantalla = window.innerWidth;
+  let posicionAjustada = posicion;
+/*
+╔════════════════════════════════════════════════════════════════╗
+║           1. Primero verificar celulares (estricto)            ║
+╚════════════════════════════════════════════════════════════════╝  */
+if (anchoPantalla <= 700) {
+posicionAjustada = pcelular[posicion] || posicion;
+if (!pcelular[posicion]) {
+const numero = parseInt(posicion.replace('cp', '')) || 0;
+const factor = 1.576; // Factor diferente para móviles
+posicionAjustada = `cp${Math.round(numero * factor)}`;
+  }
+}/*
+╔════════════════════════════════════════════════════════════════╗
+║        2. Luego verificar tablets (solo si no es móvil)        ║
+╚════════════════════════════════════════════════════════════════╝  */
+  else if (anchoPantalla >= 768 && anchoPantalla <= 1024) {
+    posicionAjustada = pTablet[posicion] || posicion;
+    if (!pTablet[posicion]) {
+      const numero = parseInt(posicion.replace('cp', '')) || 0;
+      const factor = 1.272;
+      posicionAjustada = `cp${Math.round(numero * factor)}`;
     }
-  
-    /***********************
-     * DATOS DEL CANTO
-     ***********************/
+  }
+  return { acorde: nota, posicion: posicionAjustada, base: nota, extension };
+}/*
+╔════════════════════════════════════════════════════════════════╗
+║                         DATOS DEL CANTO                        ║
+╚════════════════════════════════════════════════════════════════╝  */
 
 const NOMBREDELCANTO = "PLEGARIA EUCARÍSTICA II";
 

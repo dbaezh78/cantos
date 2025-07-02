@@ -1,118 +1,131 @@
-/*********************** FUENTE DEL CANTO ***********************/
-// ════════════════════════════
-// Mapeo para celulares 483px
-const pcelular = {
-    };
-// Mapeo específico para tablets (800px)
-const pTablet = {
-    };
-// Función de Posición
+/*
+╔════════════════════════════════════════════════════════════════╗
+║                         FUENTE DEL CANTO                       ║
+╠════════════════════════════════════════════════════════════════╣
+║                Mapeo para celulares menor a 700px              ║
+╚════════════════════════════════════════════════════════════════╝  */
+const pcelular = {      };
+/*
+╔════════════════════════════════════════════════════════════════╗
+║                Mapeo para celulares menor a 900px              ║
+╚════════════════════════════════════════════════════════════════╝  */
+const pTablet = {       };
+/*
+╔════════════════════════════════════════════════════════════════╗
+║            Función de Posición con factor ajustable            ║
+╚════════════════════════════════════════════════════════════════╝  */
 function ac(nota, posicion, extension = "") {
-      const anchoPantalla = window.innerWidth;
-      let posicionAjustada = posicion;
-// Ajustes de la table y el celular
-// Solo ajustamos para tablets (601px a 900px)
-      if (anchoPantalla > 600 && anchoPantalla <= 900) {
-        posicionAjustada = pTablet[posicion] || posicion;
-// ════════════════════════════════════════════════════════════════════════════════════
-        // Si no está en el mapeo, aplicamos un factor general más preciso
-        if (!pTablet[posicion]) {
-          const numero = parseInt(posicion.replace('cp', ''));
-          const factor = 0.93; // Factor más preciso para 800px
-          posicionAjustada = `cp${Math.round(numero * factor)}`;
-        }
-      }
-// ════════════════════════════════════════════════════════════════════════════════════
-      // Solo ajustamos para tablets (284px a 384px)
-      if (anchoPantalla > 284 && anchoPantalla <= 411) {
-            posicionAjustada = pcelular[posicion] || posicion;
-            
-            // Si no está en el mapeo, aplicamos un factor general más preciso
-            if (!pcelular[posicion]) {
-              const numero = parseInt(posicion.replace('cp', ''));
-              const factor = 1.3; // Factor más preciso para 384px
-              posicionAjustada = `cp${Math.round(numero * factor)}`;
-            }
-          }
-      
-      return { acorde: nota, posicion: posicionAjustada, base: nota, extension };
+  const anchoPantalla = window.innerWidth;
+  let posicionAjustada = posicion;
+/*
+╔════════════════════════════════════════════════════════════════╗
+║           1. Primero verificar celulares (estricto)            ║
+╚════════════════════════════════════════════════════════════════╝  */
+if (anchoPantalla <= 700) {
+posicionAjustada = pcelular[posicion] || posicion;
+if (!pcelular[posicion]) {
+const numero = parseInt(posicion.replace('cp', '')) || 0;
+const factor = 1.576; // Factor diferente para móviles
+posicionAjustada = `cp${Math.round(numero * factor)}`;
+  }
+}/*
+╔════════════════════════════════════════════════════════════════╗
+║        2. Luego verificar tablets (solo si no es móvil)        ║
+╚════════════════════════════════════════════════════════════════╝  */
+  else if (anchoPantalla >= 768 && anchoPantalla <= 1024) {
+    posicionAjustada = pTablet[posicion] || posicion;
+    if (!pTablet[posicion]) {
+      const numero = parseInt(posicion.replace('cp', '')) || 0;
+      const factor = 1.272;
+      posicionAjustada = `cp${Math.round(numero * factor)}`;
     }
-  
-// ════════════════════════════════════════════════════════════════════════════════════
-//     * DATOS DEL CANTO
-// ════════════════════════════════════════════════════════════════════════════════════
-// 
+  }
+  return { acorde: nota, posicion: posicionAjustada, base: nota, extension };
+}/*
+╔════════════════════════════════════════════════════════════════╗
+║                         DATOS DEL CANTO                        ║
+╚════════════════════════════════════════════════════════════════╝  */
 const NOMBREDELCANTO = "AQUEDAH";
-// 
 const partitura = {
       tituloc: NOMBREDELCANTO,
       titulo: NOMBREDELCANTO,
       salmo: "Gn 22,1-19 - Del Targum Neofiti sobre el sacrificio de Isaac",
       dbnos: "19",
       catg: "PRECATECUMENADO",
-// Estructura para Cantor (texto)
-// 
+/*
+╔════════════════════════════════════════════════════════════════╗
+║                 Estructura para Cantor (texto)                 ║
+╚════════════════════════════════════════════════════════════════╝  */
 cantor: [
 /* 1 */        "Era todavía de noche cuando Abraham",
 /* 2 */        "se disponía a sacrificar a su hijo;",
 /* 3 */        "los dos se miraban fijamente",
 /* 4 */        "cuando le dijo su hijo Isaac:",
-/* 5 */        "«Átame, átame fuerte, padre mío,",
-/* 6 */        "no sea que por el miedo me resista",
-/* 7 */        "y no sea válido tu sacrificio",
-/* 8 */        "y los dos seamos rechazados.",
-/* 9 */        "Venid y ved la fe sobre la tierra,",
-/* 10 */        "venid y ved la fe sobre la tierra,",
-/* 11 */        "el padre que sacrifica a su hijo,",
-/* 12 */        "y el hijo querido que le ofrece su cuello.",
-],
-      // Estructura para Cantor (acordes) - CON FUNCIÓN ac()
-      cantorAcordes: [
-// IZQUIERDA
-/* 1*/      [ac("La", "cp14","m"), ac("Re","cp90","m9")],
-/* 2*/      [ac("La", "cp14","m")],
-/* 3*/      [ac("Re", "cp14","m9")],
-/* 4*/      [ac("Mi", "cp14","")],
-/* 5*/      [ac("La", "cp","m"), ac("Re","cp90","m9")],
-/* 6*/      [ac("La", "cp14","m")],
-/* 7*/      [ac("Re", "cp14","m9")],
-/* 8*/      [ac("Mi", "cp14","")],
-/* 9*/      [ac("La", "cp14","m")],
-/* 10*/      [ac("Re", "cp14","m")],
-/* 11*/      [ac("Re", "cp14","m9")],
-/* 12*/      [ac("Mi", "cp14","7")],
-      ],
-// ════════════════════════════════════════════════════════════════════════════════════
-      // Estructura para Asamblea (texto)
+
+/* 5 */        "«AQUEDAH, AQUEDAH,",
+/* 6 */        "AQUEDAH, AQUEDAH»",
+
+/* 7 */        "«Átame, átame fuerte, padre mío,",
+/* 8 */        "no sea que por el miedo me resista",
+/* 9 */        "y no sea válido tu sacrificio",
+/* 10 */        "y los dos seamos rechazados.",
+
+/* 11 */        "«AQUEDAH, AQUEDAH...",
+/* 12 */        "AQUEDAH, AQUEDAH»",
+
+/* 13 */        "«ÁTAME, ÁTAME FUERTE,",
+/* 14 */        "PADRE MÍO, QUE YO NO ME RESISTA».",
+
+/* 15 */        "Venid y ved la fe sobre la tierra,",
+/* 16 */        "venid y ved la fe sobre la tierra,",
+/* 17 */        "el padre que sacrifica a su hijo,",
+/* 18 */        "y el hijo querido que le ofrece su cuello.",
+
+/* 19 */        "«AQUEDAH, AQUEDAH...",
+/* 20 */        "AQUEDAH, AQUEDAH»",
+],/*
+╔════════════════════════════════════════════════════════════════╗
+║       Estructura para Cantor (acordes) - CON FUNCIÓN ac()      ║
+╚════════════════════════════════════════════════════════════════╝  */
+cantorAcordes: [
+/* 1*/      [ac("La", "cp0","m"), ac("Re","cp600","m9")],
+/* 2*/      [ac("La", "cp490","m")],
+/* 3*/      [ac("Re", "cp415","m9")],
+/* 4*/      [ac("Mi", "cp411","")],
+
+/* 5*/      [ac("La", "cp121","m"), ac("Re","cp320","m9")],
+/* 6*/      [ac("La", "cp294","m")],
+
+/* 7*/      [ac("La", "cp0","m"), ac("Re","cp515","m9")],
+/* 8*/      [ac("La", "cp528","m")],
+/* 9*/      [ac("Re", "cp401","m9")],
+/* 10*/      [ac("Mi", "cp409","")],
+
+/* 11*/      [ac("La", "cp121","m"), ac("Re","cp320","m9")],
+/* 12*/      [ac("La", "cp294","m")],
+
+/* 13*/      [ac("La", "cp14","m"), ac("Re","cp308","m9")],
+/* 14*/      [ac("La", "cp534","m")],
+
+/* 15*/      [ac("La", "cp0","m")],
+/* 16*/      [ac("Re", "cp443","m")],
+/* 17*/      [ac("Re", "cp474","m9")],
+/* 18*/      [ac("Mi", "cp581","7")],
+
+/* 19*/      [ac("La", "cp121","m"), ac("Re","cp320","m9")],
+/* 20*/      [ac("La", "cp294","m")],
+],/*
+╔════════════════════════════════════════════════════════════════╗
+║                Estructura para Asamblea (texto)                ║
+╚════════════════════════════════════════════════════════════════╝  */
       asamblea: [
-/* 1 */        "«AQUEDAH, AQUEDAH,",
-/* 2 */        "«AQUEDAH, AQUEDAH».",
-/* 3 */        "«AQUEDAH, AQUEDAH...",
-/* 4 */        "«AQUEDAH, AQUEDAH».",
-/* 5 */        "«ÁTAME, ÁTAME FUERTE,",
-/* 6 */        "PADRE MÍO, QUE YO NO ME RESISTA.",
-/* 7 */        "«AQUEDAH, AQUEDAH...",
-/* 8 */        "«AQUEDAH, AQUEDAH».",
       ],
       asambleaAcordes: [
-/* 1*/      [ac("La", "cp14","m"), ac("Re","cp90","m9")],
-/* 2*/      [ac("La", "cp14","m")],
-/* 3*/      [ac("La", "cp14","m"), ac("Re","cp90","m9")],
-/* 4*/      [ac("La", "cp14","m")],
-/* 5*/      [ac("La", "cp14","m"), ac("Re","cp305","m9")],
-/* 6*/      [ac("La", "cp14","m")],
-/* 7*/      [ac("La", "cp14","m"), ac("Re","cp90","m9")],
-/* 8*/      [ac("La", "cp14","m")],
-// ════════════════════════════════════════════════════════════════════════════════════
-      ]
-  };
-// 
-// ════════════════════════════════════════════════════════════════════════════════════
-// * MANEJO DE CARGA Y REDIMENSIONAMIENTO CORREGIDO
-// ════════════════════════════════════════════════════════════════════════════════════
-// 
+      ]};/*
+╔════════════════════════════════════════════════════════════════╗
+║        MANEJO DE CARGA Y REDIMENSIONAMIENTO CORREGIDO          ║
+╚════════════════════════════════════════════════════════════════╝  */
     let cargando = false;
-    
     function cargarCantoSeguro(partitura) {
       if (!cargando) {
         cargando = true;
@@ -120,21 +133,24 @@ cantor: [
         setTimeout(() => { cargando = false; }, 300);
       }
     }
-    
-    let timeoutRedimension;
-    function manejarRedimensionamiento() {
-      clearTimeout(timeoutRedimension);
-      timeoutRedimension = setTimeout(() => {
-        cargarCantoSeguro(partitura);
-      }, 200);
-    }
-    
-    // Iniciar carga del canto y configurar eventos
+        let timeoutRedimension;
+        function manejarRedimensionamiento() {
+        clearTimeout(timeoutRedimension);
+        timeoutRedimension = setTimeout(() => {
+            cargarCantoSeguro(partitura);
+        }, 200);
+    }/*
+╔════════════════════════════════════════════════════════════════╗
+║          Iniciar carga del canto y configurar eventos          ║
+╚════════════════════════════════════════════════════════════════╝  */
     document.addEventListener('DOMContentLoaded', () => {
-      // Limpiar contenido existente primero para evitar duplicados
-      const contenedor = document.getElementById('contenedor-partitura'); // Asegúrate de tener este ID
+/*
+╔════════════════════════════════════════════════════════════════╗
+║   Limpiar contenido existente primero para evitar duplicados   ║
+╚════════════════════════════════════════════════════════════════╝  */
+      const contenedor = document.getElementById('contenedor-partitura');
       if (contenedor) contenedor.innerHTML = '';
-      
-      cargarCantoSeguro(partitura);
-      window.addEventListener('resize', manejarRedimensionamiento);
-    });
+            cargarCantoSeguro(partitura);
+            window.addEventListener('resize', manejarRedimensionamiento);
+        }
+    );

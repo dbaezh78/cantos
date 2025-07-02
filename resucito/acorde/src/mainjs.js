@@ -1,6 +1,19 @@
 /***********************
  * CONFIGURACIÓN GENERAL
  ***********************/
+
+// CARGA DEL ARCHIVO manifest.json 
+(function() {
+  // Crear dinámicamente el link al manifest
+  const link = document.createElement('link');
+  link.rel = 'manifest';
+  link.href = '/cantos/src/js/manifest.json';
+  
+  // Insertar en el head (o al inicio del body si no hay head)
+  (document.head || document.getElementsByTagName('body')[0]).appendChild(link); 
+})();
+
+
 const acordes = ["Do", "Do#", "Re", "Re#", "Mi", "Fa", "Fa#", "Sol", "Sol#", "La", "Si♭", "Si"];
 const dbTrastes = ["♫ Traste", "1ᵉʳ traste", "2ᵒ traste", "3ᵉʳ traste", "4ᵒ traste", "5ᵒ traste", "6ᵒ traste", "7ᵒ traste", "8ᵒ traste", "9ᵒ traste", "10ᵒ traste"];
 //const dbTrastes = ["♫", "1°", "2°", "3°", "4°", "5°", "6°", "7°", "8°", "9°", "10°"];
@@ -344,6 +357,11 @@ function cargarCanto(partitura) {
 
     configurarEventosAcordes();
 }
+
+// En tu archivo JS principal (dbMainJS.js o similar)
+document.getElementById('catg').addEventListener('click', () => {
+  window.location.reload();
+});
 
 /***********************
  * CONFIGURACIÓN INICIAL
@@ -957,6 +975,133 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
+/**************************************************************************
+            MANEJADOR DE CACHE PARA CANTOS - VERSIÓN 4.0
+           (Optimizado para offline, actualizaciones y rendimiento)
+**************************************************************************/
 
+// Configuración global
+const SW_CONFIG = {
+  swPath: '/cantos/src/js/cachecantos.js',
+  scope: '/cantos/',
+  cacheName: 'cache-cantos-v4',
+  enableDebug: false
+};
 
+// Detección de ambiente
+const isLocalhost = () => 
+  ['localhost', '[::1]', /^127\.\d+\.\d+\.\d+$/].some(item => 
+    typeof item === 'string' 
+      ? window.location.hostname === item
+      : item.test(window.location.hostname)
+  );
+
+// Registrar Service Worker
+const registerServiceWorker = async () => {
+  if (!('serviceWorker' in navigator)) {
+    handleUnsupportedBrowser();
+    return;
+  }
+
+  try {
+    const registration = await navigator.serviceWorker.register(SW_CONFIG.swPath, {
+      scope: SW_CONFIG.scope,
+      updateViaCache: 'none'
+    });
+
+    setupUpdateHandlers(registration);
+    logRegistrationSuccess(registration);
+    
+  } catch (error) {
+    handleRegistrationError(error);
+  }
+};
+
+// Manejadores de eventos
+const setupUpdateHandlers = (registration) => {
+  registration.addEventListener('updatefound', () => {
+    const newWorker = registration.installing;
+    
+    newWorker.addEventListener('statechange', () => {
+      if (newWorker.state === 'installed') {
+        handleWorkerInstallation(registration);
+      }
+    });
+  });
+
+  navigator.serviceWorker.addEventListener('controllerchange', () => {
+    window.location.reload();
+  });
+};
+
+const handleWorkerInstallation = (registration) => {
+  if (navigator.serviceWorker.controller) {
+    showUpdateNotification(registration);
+  } else {
+    logDebug('[SW] Aplicación lista para uso offline');
+  }
+};
+
+const showUpdateNotification = (registration) => {
+  const showDialog = () => {
+    if (confirm('Nueva versión disponible. ¿Deseas actualizar ahora?')) {
+      registration.waiting.postMessage({ type: 'SKIP_WAITING' });
+    }
+  };
+
+  if (isLocalhost()) {
+    registration.waiting.postMessage({ type: 'SKIP_WAITING' });
+  } else if (Notification.permission === 'granted') {
+    showDialog();
+  } else if (Notification.permission !== 'denied') {
+    Notification.requestPermission().then(permission => {
+      if (permission === 'granted') showDialog();
+    });
+  }
+};
+
+// Manejo de errores
+const handleUnsupportedBrowser = () => {
+  console.warn('[SW] Navegador no compatible');
+  document.documentElement.classList.add('no-serviceworker');
   
+  if (!window.caches) {
+    document.body.classList.add('no-offline');
+  }
+};
+
+const handleRegistrationError = (error) => {
+  console.error('[SW] Error en el registro:', error);
+  
+  if (isLocalhost()) {
+    console.info('[SW] ¿Estás usando un servidor local? Los SW requieren HTTPS o localhost');
+  }
+};
+
+// Helpers
+const logRegistrationSuccess = (registration) => {
+  logDebug(`[SW] Registrado correctamente en ámbito: ${registration.scope}`);
+};
+
+const logDebug = (message) => {
+  if (SW_CONFIG.enableDebug) console.log(message);
+};
+
+// Inicialización optimizada
+const initServiceWorker = () => {
+  if (document.readyState === 'complete') {
+    registerServiceWorker();
+  } else {
+    window.addEventListener('load', registerServiceWorker);
+    
+    // Registro temprano para navegadores modernos
+    if ('requestIdleCallback' in window) {
+      window.requestIdleCallback(registerServiceWorker, { timeout: 2000 });
+    } else {
+      window.addEventListener('DOMContentLoaded', registerServiceWorker);
+    }
+  }
+};
+
+// Iniciar
+initServiceWorker();
