@@ -84,7 +84,12 @@ const urlsToCache = [
     '/cantos/src/ima/sib7.jpg',
 
     // JSON de búsqueda
-    '/cantos/resucito/find/index.json'
+    '/cantos/resucito/find/index.json',
+    '/cantos/src/js/songs-data.js',
+    '/cantos/src/js/dbMainJS.js',
+    '/cantos/src/js/app.js',
+    '/cantos/src/js/mensajekiko.js'
+
 ];
 
 // Evento 'install': Se dispara cuando el Service Worker se instala.
