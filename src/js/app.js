@@ -1,5 +1,3 @@
-
-
 document.addEventListener('DOMContentLoaded', function() {
     const songsList = document.querySelector('.songs-list');
     const searchInput = document.getElementById('searchInput');
@@ -216,5 +214,3 @@ toggleView.addEventListener('change', function() {
         });
     });
 });
-
-

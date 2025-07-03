@@ -1,12 +1,12 @@
 // Define el nombre de la caché. Es buena práctica versionar tu caché.
-const CACHE_NAME = 'cantos-cache-v1.5'; // Versión actualizada para forzar reinstalación
+const CACHE_NAME = 'cantos-cache-v1.4'; // Versión actualizada para forzar reinstalación
 
 // Define la URL de la página offline. Asegúrate de que esta página exista.
 const OFFLINE_URL = '/cantos/resucito/offline.html';
 
 // Lista de URLs estáticas que se deben cachear durante la instalación del Service Worker.
 const urlsToCache = [
-    '/cantos/', // Asegura que la raíz sea precacheada
+    '/cantos/',
     '/cantos/index.html',
     '/cantos/src/js/manifest.json',
     OFFLINE_URL, // Asegúrate de que esta página exista para el modo offline
@@ -132,39 +132,8 @@ self.addEventListener('fetch', (event) => {
 
     const requestUrl = new URL(event.request.url);
     const isIndexJsonRequest = requestUrl.pathname === '/cantos/resucito/find/index.json';
-    // Nueva verificación para la URL raíz o index.html
-    const isRootOrIndexHtmlRequest = requestUrl.pathname === '/cantos/' || requestUrl.pathname === '/cantos/index.html';
 
-    // Estrategia para la URL raíz o index.html
-    if (isRootOrIndexHtmlRequest) {
-        event.respondWith(
-            caches.match('/cantos/index.html') // Intenta encontrar index.html en caché
-                .then(cachedResponse => {
-                    if (cachedResponse) {
-                        console.log('[Service Worker] Sirviendo index.html desde caché para solicitud de raíz:', event.request.url);
-                        return cachedResponse;
-                    }
-                    // Si no está en caché, va a la red
-                    return fetch(event.request).then(networkResponse => {
-                        if (!networkResponse || networkResponse.status !== 200 || networkResponse.type !== 'basic') {
-                            return networkResponse;
-                        }
-                        const responseToCache = networkResponse.clone();
-                        caches.open(CACHE_NAME).then(cache => {
-                            // Cachea la respuesta de index.html con la clave explícita
-                            cache.put('/cantos/index.html', responseToCache);
-                        });
-                        return networkResponse;
-                    }).catch(() => {
-                        console.log('[Service Worker] Red offline para index.html, intentando servir página offline.');
-                        return caches.match(OFFLINE_URL); // Si todo falla, sirve la página offline
-                    });
-                })
-        );
-        return; // Termina el evento fetch para esta solicitud
-    }
-
-    // Estrategia para index.json (ignorando parámetros de búsqueda)
+    // Para solicitudes a index.json, siempre intentamos primero la caché ignorando los parámetros de búsqueda.
     if (isIndexJsonRequest) {
         event.respondWith(
             caches.match(event.request, { ignoreSearch: true }) // Intenta encontrar index.json en caché, ignorando parámetros
@@ -193,7 +162,9 @@ self.addEventListener('fetch', (event) => {
                         })
                         .catch(() => {
                             // Si la red falla y no se encontró en caché, no hay un fallback HTML para un JSON.
+                            // Podrías devolver una respuesta de error o un JSON vacío aquí si lo deseas.
                             console.error('[Service Worker] Fallo al obtener index.json de red y no en caché.');
+                            // Devolver un Response vacío o con un mensaje de error JSON
                             return new Response(JSON.stringify({ error: 'No se pudo cargar el buscador sin conexión.' }), {
                                 headers: { 'Content-Type': 'application/json' },
                                 status: 503, // Service Unavailable
@@ -205,7 +176,7 @@ self.addEventListener('fetch', (event) => {
         return; // Termina el evento fetch para index.json
     }
 
-    // Para todas las demás solicitudes (general cache-first, network-fallback)
+    // Para todas las demás solicitudes (no index.json)
     event.respondWith(
         caches.match(event.request) // Intenta obtener de la caché primero
             .then((cachedResponse) => {

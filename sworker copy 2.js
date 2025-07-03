@@ -1,12 +1,11 @@
 // Define el nombre de la caché. Es buena práctica versionar tu caché.
-const CACHE_NAME = 'cantos-cache-v1.5'; // Versión actualizada para forzar reinstalación
+const CACHE_NAME = 'cantos-cache-v1.2'; // Versión actualizada para forzar reinstalación
 
 // Define la URL de la página offline. Asegúrate de que esta página exista.
 const OFFLINE_URL = '/cantos/resucito/offline.html';
 
 // Lista de URLs estáticas que se deben cachear durante la instalación del Service Worker.
 const urlsToCache = [
-    '/cantos/', // Asegura que la raíz sea precacheada
     '/cantos/index.html',
     '/cantos/src/js/manifest.json',
     OFFLINE_URL, // Asegúrate de que esta página exista para el modo offline
@@ -100,9 +99,9 @@ self.addEventListener('install', (event) => {
                 // si alguno de los recursos no se puede cachear.
                 return Promise.allSettled(
                     urlsToCache.map(url => {
-                        // Para precachear index.json, asegúrate de que se cachee sin parámetros de consulta
-                        const requestToCache = (url === '/cantos/resucito/find/index.json') ? new Request(url, { ignoreSearch: true }) : url;
-                        return cache.add(requestToCache).catch(error => {
+                        // Para precachear, no necesitamos ignorar los parámetros de búsqueda aquí,
+                        // ya que las URLs en urlsToCache no deberían tenerlos.
+                        return cache.add(url).catch(error => {
                             console.warn(`[Service Worker] Fallo al cachear ${url}:`, error);
                             // No lanzamos el error para que Promise.allSettled continúe
                             // y el Service Worker se instale.
@@ -130,93 +129,39 @@ self.addEventListener('fetch', (event) => {
         return;
     }
 
-    const requestUrl = new URL(event.request.url);
-    const isIndexJsonRequest = requestUrl.pathname === '/cantos/resucito/find/index.json';
-    // Nueva verificación para la URL raíz o index.html
-    const isRootOrIndexHtmlRequest = requestUrl.pathname === '/cantos/' || requestUrl.pathname === '/cantos/index.html';
+    // Clonar la solicitud para poder modificarla si es necesario (ej. ignorar parámetros de búsqueda)
+    let requestToCache = event.request;
 
-    // Estrategia para la URL raíz o index.html
-    if (isRootOrIndexHtmlRequest) {
-        event.respondWith(
-            caches.match('/cantos/index.html') // Intenta encontrar index.html en caché
-                .then(cachedResponse => {
-                    if (cachedResponse) {
-                        console.log('[Service Worker] Sirviendo index.html desde caché para solicitud de raíz:', event.request.url);
-                        return cachedResponse;
-                    }
-                    // Si no está en caché, va a la red
-                    return fetch(event.request).then(networkResponse => {
-                        if (!networkResponse || networkResponse.status !== 200 || networkResponse.type !== 'basic') {
-                            return networkResponse;
-                        }
-                        const responseToCache = networkResponse.clone();
-                        caches.open(CACHE_NAME).then(cache => {
-                            // Cachea la respuesta de index.html con la clave explícita
-                            cache.put('/cantos/index.html', responseToCache);
-                        });
-                        return networkResponse;
-                    }).catch(() => {
-                        console.log('[Service Worker] Red offline para index.html, intentando servir página offline.');
-                        return caches.match(OFFLINE_URL); // Si todo falla, sirve la página offline
-                    });
-                })
-        );
-        return; // Termina el evento fetch para esta solicitud
+    // Si la solicitud es para index.json y tiene parámetros de búsqueda,
+    // creamos una nueva solicitud que los ignore para buscar en la caché.
+    if (event.request.url.includes('/cantos/resucito/find/index.json') && event.request.url.includes('?')) {
+        const url = new URL(event.request.url);
+        url.search = ''; // Elimina los parámetros de búsqueda
+        requestToCache = new Request(url.toString(), {
+            headers: event.request.headers,
+            mode: event.request.mode,
+            credentials: event.request.credentials,
+            cache: event.request.cache,
+            redirect: event.request.redirect,
+            referrer: event.request.referrer,
+            integrity: event.request.integrity,
+            keepalive: event.request.keepalive,
+            signal: event.request.signal
+        });
     }
 
-    // Estrategia para index.json (ignorando parámetros de búsqueda)
-    if (isIndexJsonRequest) {
-        event.respondWith(
-            caches.match(event.request, { ignoreSearch: true }) // Intenta encontrar index.json en caché, ignorando parámetros
-                .then((cachedResponse) => {
-                    if (cachedResponse) {
-                        console.log('[Service Worker] Sirviendo index.json desde caché (ignorando parámetros):', event.request.url);
-                        return cachedResponse;
-                    }
 
-                    // Si no está en caché, intenta obtener de la red.
-                    console.log('[Service Worker] Obteniendo index.json de la red:', event.request.url);
-                    return fetch(event.request)
-                        .then((networkResponse) => {
-                            // Verifica si la respuesta de la red es válida.
-                            if (!networkResponse || networkResponse.status !== 200 || networkResponse.type !== 'basic') {
-                                return networkResponse;
-                            }
-                            // Clona la respuesta para cachearla.
-                            const responseToCache = networkResponse.clone();
-                            caches.open(CACHE_NAME)
-                                .then((cache) => {
-                                    // Cachea index.json con la URL base (sin parámetros)
-                                    cache.put(new Request(requestUrl.origin + requestUrl.pathname), responseToCache);
-                                });
-                            return networkResponse;
-                        })
-                        .catch(() => {
-                            // Si la red falla y no se encontró en caché, no hay un fallback HTML para un JSON.
-                            console.error('[Service Worker] Fallo al obtener index.json de red y no en caché.');
-                            return new Response(JSON.stringify({ error: 'No se pudo cargar el buscador sin conexión.' }), {
-                                headers: { 'Content-Type': 'application/json' },
-                                status: 503, // Service Unavailable
-                                statusText: 'Service Unavailable (Offline)'
-                            });
-                        });
-                })
-        );
-        return; // Termina el evento fetch para index.json
-    }
-
-    // Para todas las demás solicitudes (general cache-first, network-fallback)
     event.respondWith(
-        caches.match(event.request) // Intenta obtener de la caché primero
+        caches.match(requestToCache) // Intentar obtener de la caché primero (usando la solicitud modificada si aplica)
             .then((cachedResponse) => {
                 if (cachedResponse) {
                     console.log('[Service Worker] Sirviendo desde caché:', event.request.url);
                     return cachedResponse;
                 }
 
-                // Si no está en caché, intenta obtener de la red.
+                // Si no está en caché, intentar obtener de la red.
                 console.log('[Service Worker] Obteniendo de la red:', event.request.url);
-                return fetch(event.request)
+                return fetch(event.request) // Usar la solicitud original para la red
                     .then((networkResponse) => {
                         // Verificar si la respuesta de la red es válida.
                         if (!networkResponse || networkResponse.status !== 200 || networkResponse.type !== 'basic') {
@@ -246,9 +191,17 @@ self.addEventListener('fetch', (event) => {
                         return networkResponse; // Devolver la respuesta de la red al navegador
                     })
                     .catch(() => {
-                        // Si la red falla y no hay nada en caché, intenta servir la página offline.
-                        console.log('[Service Worker] Red offline, intentando servir página offline.');
-                        return caches.match(OFFLINE_URL);
+                        // Si la red falla (ej. sin conexión), intentar obtener el recurso original de la caché.
+                        // Esto es un fallback para cualquier recurso que no se encontró en el primer caches.match.
+                        console.log('[Service Worker] Red offline, intentando servir recurso original desde caché:', event.request.url);
+                        return caches.match(event.request).then(responseFromFallbackCache => {
+                            if (responseFromFallbackCache) {
+                                return responseFromFallbackCache;
+                            }
+                            // Si aún no se encuentra, entonces servir la página offline.
+                            console.log('[Service Worker] Recurso original no encontrado en caché, sirviendo página offline.');
+                            return caches.match(OFFLINE_URL);
+                        });
                     });
             })
     );

@@ -681,12 +681,10 @@ h2 {
 .installApp {
     background-color: #4CAF50; /* Color verde */
     color: white;
-    padding: 10px 20px;
+    padding: auto;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    margin: 20px auto; /* Centrar y dar espacio */
     display: block; /* Para que margin auto funcione */
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
