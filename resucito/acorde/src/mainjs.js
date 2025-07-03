@@ -289,7 +289,7 @@ function configurarReproductor() {
             icon.textContent = 'error';
             
             setTimeout(() => {
-                alert('Por favor haz clic en el botón de play del reproductor para iniciar la música.');
+                alert('Por favor haz clic en el botón de play del reproductor para iniciar la canto.');
             }, 100);
             
             setTimeout(() => {
@@ -367,6 +367,7 @@ function cargarCanto(partitura) {
 document.getElementById('catg').addEventListener('click', () => {
   window.location.reload();
 });
+
 
 /***********************
  * CONFIGURACIÓN INICIAL
