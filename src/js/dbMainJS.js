@@ -7,7 +7,7 @@ if ('serviceWorker' in navigator) {
         // Registra el Service Worker. La ruta debe ser relativa a la raíz del dominio.
         // Ahora apunta a la ubicación actual del sworker.js en /cantos/src/js/.
         // Ten en cuenta que el scope predeterminado será /cantos/src/js/.
-        navigator.serviceWorker.register('/cantos/src/js/sworker.js') // <--- RUTA ACTUALIZADA AQUÍ
+        navigator.serviceWorker.register('/cantos/sworker.js') // <--- RUTA ACTUALIZADA AQUÍ
             .then((registration) => {
                 console.log('Service Worker registrado con éxito. Alcance:', registration.scope);
             })
