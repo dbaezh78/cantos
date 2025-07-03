@@ -1,9 +1,19 @@
 /* Estilo del enlace original */
 .dblink {
+    display: inline-table;
+    text-decoration: none;
+    margin-top: -5px;
+    padding: 11px 10px;
+    /* color: inherit; */
+    /*    
     display: block;
     text-decoration: none;
     margin-top: -11px;
-    /*    color: inherit;*/
+    color: inherit;*/
+}
+
+.border {
+    border: 1px solid goldenrod;
 }
 
 .marquee-text {
@@ -12,6 +22,16 @@
     animation: marquee 70s linear infinite;
     color: darkgoldenrod;
     margin-top: 15px;
+
+    @media (min-width: 384px){
+        width: 364px;
+    }
+    @media (min-width: 768px){
+        width: 768px;
+    }
+    @media (min-width: 992px){
+        width: 990px;
+    }
 }
 
 @keyframes marquee {

@@ -309,14 +309,34 @@ h2 {
     */
 
 /* Asegurar que los otros estilos permanezcan igual */
+
+/*  DESCONTINUADO ***************************
 .dbboton {
-    width: max-content;
-    padding: 1px;
-    display: flex; /* Para mejor alineación de los elementos */
-    align-items: center; /* Centra verticalmente los botones */
-    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
-    justify-content: center;
+    display: flex;
+    padding: 0px 6px;
+    margin: 0px;
+    text-decoration: none;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 89%;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+    flex-wrap: wrap;
 }
+
+.dbboton:hover {
+    background-color: #3367d6; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transform: translateY(-1px);
+}
+
+.dbboton:active {
+    transform: translateY(1px);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+*****************************/
+
 .dblink-yt{
     background-color: rgb(249, 12, 12);
     color: white;
@@ -352,7 +372,7 @@ h2 {
     color: #0f0f02;
 }
 
-.dblink-install{
+.dblink-install {
     background-color: black;
     color: white;
 }
@@ -385,11 +405,13 @@ h2 {
 }
 
 .dblink, .dblink-rojo, .dblink-fb {
-    /*font-weight: bold;*/
-    padding: 3px 7px;
-    margin: 1px; /* Pequeño margen entre botones */
-    display: inline-block; /* Cambiado para mejor comportamiento */
-}    
+
+    display: flex;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
 
 /* Nuevos estilos para los botones de filtro y limpiar */
 #clearSearch {
@@ -679,6 +701,7 @@ h2 {
 }
 
 .installApp {
+    display:none; /* Oculto por defecto */
     background-color: #4CAF50; /* Color verde */
     color: white;
     padding: auto;
@@ -688,5 +711,3 @@ h2 {
     display: block; /* Para que margin auto funcione */
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
-
-    /* style="display:none; /* Oculto por defecto */ 
