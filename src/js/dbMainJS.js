@@ -2,23 +2,22 @@
  * CONFIGURACIÓN GENERAL
  ***********************/
 
-if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-        // Registra el Service Worker. La ruta debe ser relativa a la raíz del dominio.
-        // Ahora apunta a la ubicación actual del sworker.js en /cantos/src/js/.
-        // Ten en cuenta que el scope predeterminado será /cantos/src/js/.
-        navigator.serviceWorker.register('/cantos/sworker.js') // <--- RUTA ACTUALIZADA AQUÍ
-            .then((registration) => {
-                console.log('Service Worker registrado con éxito. Alcance:', registration.scope);
-            })
-            .catch((error) => {
-                console.error('Fallo el registro del Service Worker:', error);
-            });
-    });
-} else {
-    console.log('Tu navegador no soporta Service Workers.');
-}
-
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            // Registra el Service Worker. La ruta debe ser relativa a la raíz del dominio.
+            // Si has movido sworker.js a /cantos/sworker.js, esta ruta es correcta
+            // para que el scope sea /cantos/.
+            navigator.serviceWorker.register('/cantos/sworker.js') // <--- RUTA CORRECTA SI EL ARCHIVO ESTÁ EN /cantos/sworker.js
+                .then((registration) => {
+                    console.log('Service Worker registrado con éxito. Alcance:', registration.scope);
+                })
+                .catch((error) => {
+                    console.error('Fallo el registro del Service Worker:', error);
+                });
+        });
+    } else {
+        console.log('Tu navegador no soporta Service Workers.');
+    }
 const acordes = ["Do", "Do#", "Re", "Re#", "Mi", "Fa", "Fa#", "Sol", "Sol#", "La", "Si♭", "Si"];
 const dbTrastes = ["♫ Traste", "1ᵉʳ traste", "2ᵒ traste", "3ᵉʳ traste", "4ᵒ traste", "5ᵒ traste", "6ᵒ traste", "7ᵒ traste", "8ᵒ traste", "9ᵒ traste", "10ᵒ traste"];
 

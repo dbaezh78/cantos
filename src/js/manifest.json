@@ -10,17 +10,6 @@
       "src": "/cantos/src/ico.ico",
       "sizes": "64x64",
       "type": "image/x-icon"
-    },
-    {
-      "src": "/cantos/src/ima/icon-192x192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "/cantos/src/icons/icon-512x512.png",
-      "sizes": "512x512",
-      "type": "image/png"
     }
   ],
   "scope": "/cantos/",

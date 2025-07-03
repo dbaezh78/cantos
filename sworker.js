@@ -77,11 +77,11 @@ const urlsToCache = [
     '/cantos/src/ima/lam6.jpg',
     '/cantos/src/ima/lab.jpg',
     '/cantos/src/ima/si.jpg',
-    '/cantos/src/ima/Sim.jpg",
-    "/cantos/src/ima/si7.jpg",
-    "/cantos/src/ima/sib.jpg",
-    "/cantos/src/ima/sibm.jpg",
-    "/cantos/src/ima/sib7.jpg",
+    '/cantos/src/ima/Sim.jpg',
+    '/cantos/src/ima/si7.jpg',
+    '/cantos/src/ima/sib.jpg',
+    '/cantos/src/ima/sibm.jpg',
+    '/cantos/src/ima/sib7.jpg',
 
     // JSON de búsqueda
     '/cantos/resucito/find/index.json'
