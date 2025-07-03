@@ -1,20 +1,3 @@
-
-if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-        // Registra el Service Worker. La ruta debe ser relativa a la raíz del dominio,
-        // no a la ubicación de dbMainJS.js.
-        navigator.serviceWorker.register('/cantos/src/js/sworker.js')
-            .then((registration) => {
-                console.log('Service Worker registrado con éxito. Alcance:', registration.scope);
-            })
-            .catch((error) => {
-                console.error('Fallo el registro del Service Worker:', error);
-            });
-    });
-} else {
-    console.log('Tu navegador no soporta Service Workers.');
-}
-
 document.addEventListener('DOMContentLoaded', function() {
     const songsList = document.querySelector('.songs-list');
     const searchInput = document.getElementById('searchInput');
@@ -231,5 +214,3 @@ toggleView.addEventListener('change', function() {
         });
     });
 });
-
-
