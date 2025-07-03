@@ -701,6 +701,7 @@ h2 {
 }
 
 .installApp {
+    width: auto;
     display:none; /* Oculto por defecto */
     background-color: #4CAF50; /* Color verde */
     color: white;
