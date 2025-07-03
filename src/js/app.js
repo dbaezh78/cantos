@@ -1,9 +1,12 @@
 
+// Variable para almacenar el evento beforeinstallprompt (global para app.js)
+let deferredPrompt;
+
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
-        // Registra el Service Worker. La ruta debe ser relativa a la raíz del dominio,
-        // no a la ubicación de dbMainJS.js.
-        navigator.serviceWorker.register('/cantos/src/js/sworker.js')
+        // Registra el Service Worker. La ruta debe ser relativa a la raíz del dominio.
+        // Se mantiene la ruta /cantos/sworker.js según tu confirmación de que el archivo está allí.
+        navigator.serviceWorker.register('/cantos/sworker.js')
             .then((registration) => {
                 console.log('Service Worker registrado con éxito. Alcance:', registration.scope);
             })
@@ -14,6 +17,32 @@ if ('serviceWorker' in navigator) {
 } else {
     console.log('Tu navegador no soporta Service Workers.');
 }
+
+// Evento para capturar el 'beforeinstallprompt'
+window.addEventListener('beforeinstallprompt', (e) => {
+    // Previene que el mini-infobar aparezca automáticamente
+    e.preventDefault();
+    // Guarda el evento para poder dispararlo más tarde.
+    deferredPrompt = e;
+    console.log('Evento beforeinstallprompt capturado.');
+    // Si el botón ya existe, asegúrate de que se muestre.
+    const installButton = document.getElementById('installButton');
+    if (installButton) {
+        installButton.style.display = 'block'; // O 'flex', dependiendo de tu diseño CSS
+    }
+});
+
+// Evento que se dispara después de que el usuario acepta o cancela la instalación
+window.addEventListener('appinstalled', () => {
+    console.log('PWA instalada con éxito.');
+    // Oculta el botón de instalación si ya no es necesario
+    const installButton = document.getElementById('installButton');
+    if (installButton) {
+        installButton.style.display = 'none';
+    }
+    // Limpia el evento guardado
+    deferredPrompt = null;
+});
 
 document.addEventListener('DOMContentLoaded', function() {
     const songsList = document.querySelector('.songs-list');

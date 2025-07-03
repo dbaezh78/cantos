@@ -2,14 +2,15 @@
  * CONFIGURACIÓN GENERAL
  ***********************/
 
-// Variable para almacenar el evento beforeinstallprompt (global para app.js)
+// Variable para almacenar el evento beforeinstallprompt
 let deferredPrompt;
 
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
         // Registra el Service Worker. La ruta debe ser relativa a la raíz del dominio.
-        // Se mantiene la ruta /cantos/sworker.js según tu confirmación de que el archivo está allí.
-        navigator.serviceWorker.register('/cantos/sworker.js')
+        // Si has movido sworker.js a /cantos/sworker.js, esta ruta es correcta
+        // para que el scope sea /cantos/.
+        navigator.serviceWorker.register('/cantos/sworker.js') // <--- RUTA CORRECTA SI EL ARCHIVO ESTÁ EN /cantos/sworker.js
             .then((registration) => {
                 console.log('Service Worker registrado con éxito. Alcance:', registration.scope);
             })
@@ -28,7 +29,7 @@ window.addEventListener('beforeinstallprompt', (e) => {
     // Guarda el evento para poder dispararlo más tarde.
     deferredPrompt = e;
     console.log('Evento beforeinstallprompt capturado.');
-    // Si el botón ya existe, asegúrate de que se muestre.
+    // Muestra tu botón de instalación personalizado (si está oculto)
     const installButton = document.getElementById('installButton');
     if (installButton) {
         installButton.style.display = 'block'; // O 'flex', dependiendo de tu diseño CSS
@@ -455,7 +456,49 @@ function inicializarAplicacion() {
         divsOffBtn.addEventListener('click', divsOff);
     }
 
-    // La configuración del botón de instalación se ha movido a app.js
+    // Configurar el botón de instalación
+    const installButton = document.getElementById('installButton');
+    if (installButton) {
+        installButton.addEventListener('click', async () => {
+            if (deferredPrompt) {
+                // Muestra el prompt de instalación
+                deferredPrompt.prompt();
+                // Espera a que el usuario responda al prompt
+                const { outcome } = await deferredPrompt.userChoice;
+                console.log(`El usuario ${outcome} el prompt de instalación.`);
+                // Limpia el evento guardado
+                deferredPrompt = null;
+                // Oculta el botón después de la interacción
+                installButton.style.display = 'none';
+            } else {
+                console.log('No hay un evento beforeinstallprompt disponible.');
+                // Puedes mostrar un mensaje al usuario para indicar que ya está instalada
+                // o que no se puede instalar en este momento.
+                // Por ejemplo, un modal:
+                const infoModal = document.createElement('div');
+                infoModal.style.cssText = `
+                    position: fixed;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background-color: white;
+                    padding: 20px;
+                    border-radius: 8px;
+                    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+                    z-index: 1000;
+                    text-align: center;
+                    max-width: 80%;
+                    font-family: sans-serif;
+                `;
+                infoModal.innerHTML = `<p>La aplicación ya está instalada o tu navegador no soporta la instalación directa.</p><button onclick="this.parentNode.remove()" style="margin-top: 10px; padding: 8px 15px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;">Cerrar</button>`;
+                document.body.appendChild(infoModal);
+            }
+        });
+        // Inicialmente ocultar el botón si no hay un prompt disponible al cargar
+        if (!deferredPrompt) {
+            installButton.style.display = 'none';
+        }
+    }
 }
 
 /* ****************************************

@@ -351,6 +351,17 @@ h2 {
     background-color: #ffffcc;
     color: #0f0f02;
 }
+
+.dblink-install{
+    background-color: black;
+    color: white;
+}
+
+.dblink-install:hover{
+    background-color: white;
+    color: black;
+}
+
 .dblink-laudes:hover{
     background-color: #2196f3;
     color: #ffffcc;
@@ -666,3 +677,18 @@ h2 {
         margin-top: 1px;
     }
 }
+
+.installApp {
+    background-color: #4CAF50; /* Color verde */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 20px auto; /* Centrar y dar espacio */
+    display: block; /* Para que margin auto funcione */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+    /* style="display:none; /* Oculto por defecto */ 

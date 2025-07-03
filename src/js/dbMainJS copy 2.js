@@ -2,52 +2,22 @@
  * CONFIGURACIÓN GENERAL
  ***********************/
 
-// Variable para almacenar el evento beforeinstallprompt (global para app.js)
-let deferredPrompt;
-
-if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-        // Registra el Service Worker. La ruta debe ser relativa a la raíz del dominio.
-        // Se mantiene la ruta /cantos/sworker.js según tu confirmación de que el archivo está allí.
-        navigator.serviceWorker.register('/cantos/sworker.js')
-            .then((registration) => {
-                console.log('Service Worker registrado con éxito. Alcance:', registration.scope);
-            })
-            .catch((error) => {
-                console.error('Fallo el registro del Service Worker:', error);
-            });
-    });
-} else {
-    console.log('Tu navegador no soporta Service Workers.');
-}
-
-// Evento para capturar el 'beforeinstallprompt'
-window.addEventListener('beforeinstallprompt', (e) => {
-    // Previene que el mini-infobar aparezca automáticamente
-    e.preventDefault();
-    // Guarda el evento para poder dispararlo más tarde.
-    deferredPrompt = e;
-    console.log('Evento beforeinstallprompt capturado.');
-    // Si el botón ya existe, asegúrate de que se muestre.
-    const installButton = document.getElementById('installButton');
-    if (installButton) {
-        installButton.style.display = 'block'; // O 'flex', dependiendo de tu diseño CSS
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            // Registra el Service Worker. La ruta debe ser relativa a la raíz del dominio.
+            // Si has movido sworker.js a /cantos/sworker.js, esta ruta es correcta
+            // para que el scope sea /cantos/.
+            navigator.serviceWorker.register('/cantos/sworker.js') // <--- RUTA CORRECTA SI EL ARCHIVO ESTÁ EN /cantos/sworker.js
+                .then((registration) => {
+                    console.log('Service Worker registrado con éxito. Alcance:', registration.scope);
+                })
+                .catch((error) => {
+                    console.error('Fallo el registro del Service Worker:', error);
+                });
+        });
+    } else {
+        console.log('Tu navegador no soporta Service Workers.');
     }
-});
-
-// Evento que se dispara después de que el usuario acepta o cancela la instalación
-window.addEventListener('appinstalled', () => {
-    console.log('PWA instalada con éxito.');
-    // Oculta el botón de instalación si ya no es necesario
-    const installButton = document.getElementById('installButton');
-    if (installButton) {
-        installButton.style.display = 'none';
-    }
-    // Limpia el evento guardado
-    deferredPrompt = null;
-});
-
-
 const acordes = ["Do", "Do#", "Re", "Re#", "Mi", "Fa", "Fa#", "Sol", "Sol#", "La", "Si♭", "Si"];
 const dbTrastes = ["♫ Traste", "1ᵉʳ traste", "2ᵒ traste", "3ᵉʳ traste", "4ᵒ traste", "5ᵒ traste", "6ᵒ traste", "7ᵒ traste", "8ᵒ traste", "9ᵒ traste", "10ᵒ traste"];
 
@@ -378,7 +348,6 @@ function cargarCanto(partitura) {
     document.getElementById('dbno').textContent = partitura.dbnos;
     document.getElementById('catg').textContent = partitura.catg;
 
-
     // Asamblea
     partitura.asamblea.forEach((texto, i) => {
         const elemento = document.getElementById(`a${i+1}`);
@@ -408,7 +377,6 @@ function cargarCanto(partitura) {
 document.getElementById('catg').addEventListener('click', () => {
   window.location.reload();
 });
-
 
 /***********************
  * CONFIGURACIÓN INICIAL
@@ -454,8 +422,6 @@ function inicializarAplicacion() {
     if (divsOffBtn) {
         divsOffBtn.addEventListener('click', divsOff);
     }
-
-    // La configuración del botón de instalación se ha movido a app.js
 }
 
 /* ****************************************
