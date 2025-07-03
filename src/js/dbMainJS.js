@@ -2,16 +2,22 @@
  * CONFIGURACIÓN GENERAL
  ***********************/
 
-// CARGA DEL ARCHIVO manifest.json 
-(function() {
-  // Crear dinámicamente el link al manifest
-  const link = document.createElement('link');
-  link.rel = 'manifest';
-  link.href = '/cantos/src/js/manifest.json';
-  
-  // Insertar en el head (o al inicio del body si no hay head)
-  (document.head || document.getElementsByTagName('body')[0]).appendChild(link); 
-})();
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        // Registra el Service Worker. La ruta debe ser relativa a la raíz del dominio.
+        // Ahora apunta a la ubicación actual del sworker.js en /cantos/src/js/.
+        // Ten en cuenta que el scope predeterminado será /cantos/src/js/.
+        navigator.serviceWorker.register('/cantos/src/js/sworker.js') // <--- RUTA ACTUALIZADA AQUÍ
+            .then((registration) => {
+                console.log('Service Worker registrado con éxito. Alcance:', registration.scope);
+            })
+            .catch((error) => {
+                console.error('Fallo el registro del Service Worker:', error);
+            });
+    });
+} else {
+    console.log('Tu navegador no soporta Service Workers.');
+}
 
 
 const acordes = ["Do", "Do#", "Re", "Re#", "Mi", "Fa", "Fa#", "Sol", "Sol#", "La", "Si♭", "Si"];
@@ -27,12 +33,12 @@ let scrollInterval = null;
 function generarOpciones(defaultValue = "") {
     // Si el valor por defecto está vacío, agregamos una opción vacía seleccionada
     if (defaultValue === "") {
-        return `<option value="" selected></option>` + 
+        return `<option value="" selected></option>` +
                acordes.map(acorde => `<option value="${acorde}">${acorde}</option>`).join('');
     }
-    
+
     // Caso normal con valor por defecto
-    return acordes.map(acorde => 
+    return acordes.map(acorde =>
         `<option value="${acorde}"${acorde === defaultValue ? ' selected' : ''}>${acorde}</option>`
     ).join('');
 }
@@ -61,12 +67,12 @@ function configurarEventosAcordes() {
         select.addEventListener('change', function() {
             const defaultAcorde = this.dataset.default || "";
             const currentAcorde = this.value;
-            
+
             // Solo calcular desplazamiento si ambos acordes no están vacíos
-            const desplazamiento = (defaultAcorde && currentAcorde) 
+            const desplazamiento = (defaultAcorde && currentAcorde)
                 ? obtenerIndiceAcorde(currentAcorde) - obtenerIndiceAcorde(defaultAcorde)
                 : 0;
-            
+
             document.querySelectorAll('.chord').forEach(otroSelect => {
                 const otroDefault = otroSelect.dataset.default || "";
                 otroSelect.value = calcularAcordeDesplazado(otroDefault, desplazamiento);
@@ -78,33 +84,33 @@ function configurarEventosAcordes() {
 function renderizarAcordes(contenedor, acordesData) {
     const divAcordes = document.createElement('div');
     divAcordes.className = 'chords';
-    
+
     acordesData.forEach(acorde => {
         // Verificamos si el acorde está vacío
         const acordeValido = acorde.acorde && acorde.acorde.trim() !== "";
-        
+
         const grupo = document.createElement('div');
         grupo.className = 'chord-container';
         grupo.classList.add(acorde.posicion);
-        
+
         const select = document.createElement('select');
         select.className = 'chord no-arrow';
         select.name = 'nMusic';
         // Usamos empty string si el acorde base está vacío
         select.dataset.default = acordeValido ? acorde.base : "";
         select.innerHTML = generarOpciones(select.dataset.default);
-        
+
         grupo.appendChild(select);
-        
+
         if (acorde.extension) {
             const ext = document.createElement('i');
             ext.innerHTML = `<b class="csv">${acorde.extension}</b>`;
             grupo.appendChild(ext);
         }
-        
+
         divAcordes.appendChild(grupo);
     });
-    
+
     contenedor.insertBefore(divAcordes, contenedor.querySelector('.lyrics'));
 }
 
@@ -153,18 +159,18 @@ function toggleDesplazamiento() {
 
 function iniciarDesplazamiento() {
     if (scrolling) return;
-    
+
     scrolling = true;
     const btn = document.getElementById('startScroll');
     if (!btn) return;
-    
+
     const velocidad = parseInt(btn.getAttribute('data-velocidad')) || 50;
     const incremento = parseFloat(btn.getAttribute('data-incremento')) || 0.7;
 
     // Cambiar ícono del botón
     const icon = btn.querySelector('span');
     if (icon) icon.textContent = 'pause';
-    
+
     scrollInterval = setInterval(() => {
         if (window.scrollY + window.innerHeight < document.body.scrollHeight) {
             window.scrollBy(0, incremento);
@@ -176,11 +182,11 @@ function iniciarDesplazamiento() {
 
 function detenerDesplazamiento() {
     if (!scrolling) return;
-    
+
     clearInterval(scrollInterval);
     scrollInterval = null;
     scrolling = false;
-    
+
     // Restaurar ícono del botón
     const btn = document.getElementById('startScroll');
     if (btn) {
@@ -191,7 +197,7 @@ function detenerDesplazamiento() {
 
 function configurarEventosDesplazamiento() {
     const scrollBtn = document.getElementById('startScroll');
-    
+
     // Evento para el botón (toggle)
     if (scrollBtn) {
         scrollBtn.addEventListener('click', function(e) {
@@ -199,14 +205,14 @@ function configurarEventosDesplazamiento() {
             toggleDesplazamiento();
         });
     }
-    
+
     // Evento para detener al hacer clic en cualquier parte
     document.addEventListener('click', function(e) {
         if (!scrolling) return;
-        
+
         let target = e.target;
         let isScrollButton = false;
-        
+
         // Verificar si el clic fue en el botón o sus hijos
         while (target && target !== document) {
             if (target.id === 'startScroll') {
@@ -215,13 +221,13 @@ function configurarEventosDesplazamiento() {
             }
             target = target.parentNode;
         }
-        
+
         // Detener solo si no fue en el botón
         if (!isScrollButton) {
             detenerDesplazamiento();
         }
     });
-    
+
     // También detener al hacer doble clic
     document.addEventListener('dblclick', detenerDesplazamiento);
 }
@@ -233,26 +239,26 @@ function configurarEventosDesplazamiento() {
 function configurarReproductor() {
     const audioBtn = document.getElementById('audio-control-btn');
     const audioPlayer = document.querySelector('.saudio');
-    
+
     if (!audioBtn || !audioPlayer) {
         console.error('Elementos del reproductor no encontrados');
         return;
     }
-    
+
     // Ocultar el reproductor inicialmente
     audioPlayer.style.display = 'none';
-    
+
     const icon = audioBtn.querySelector('.audio-icon');
-    
+
     audioBtn.addEventListener('click', async function(e) {
         e.preventDefault();
-        
+
         try {
-            document.getElementById('reproductor-audio').scrollIntoView({ 
+            document.getElementById('reproductor-audio').scrollIntoView({
                 behavior: 'smooth',
                 block: 'center'
             });
-            
+
             if (audioPlayer.paused) {
                 // Mostrar el reproductor cuando se da play
                 audioPlayer.style.display = 'block';
@@ -275,17 +281,35 @@ function configurarReproductor() {
             audioPlayer.setAttribute('controls', '');
             const originalIcon = icon.textContent;
             icon.textContent = 'error';
-            
+
             setTimeout(() => {
-                alert('La paz de Cristo Herman@, al parecer este canto aun no está disponible, estamos trabajando para ponerlo disponible lo más pronto posible....');
+                // Usar un modal en lugar de alert()
+                const errorMessage = 'La paz de Cristo Herman@, al parecer este canto aun no está disponible, estamos trabajando para ponerlo disponible lo más pronto posible....';
+                const modal = document.createElement('div');
+                modal.style.cssText = `
+                    position: fixed;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background-color: white;
+                    padding: 20px;
+                    border-radius: 8px;
+                    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+                    z-index: 1000;
+                    text-align: center;
+                    max-width: 80%;
+                    font-family: sans-serif;
+                `;
+                modal.innerHTML = `<p>${errorMessage}</p><button onclick="this.parentNode.remove()" style="margin-top: 10px; padding: 8px 15px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;">Cerrar</button>`;
+                document.body.appendChild(modal);
             }, 100);
-            
+
             setTimeout(() => {
                 icon.textContent = originalIcon;
             }, 2000);
         }
     });
-    
+
     audioPlayer.addEventListener('ended', function() {
         const icon = document.querySelector('#audio-control-btn .audio-icon');
         if (icon) icon.textContent = 'play_circle';
@@ -362,12 +386,22 @@ document.getElementById('catg').addEventListener('click', () => {
  * CONFIGURACIÓN INICIAL
  ***********************/
 function inicializarAplicacion() {
+    // Añadir dinámicamente la etiqueta link para el manifest.json
+    // Solo si no existe ya para evitar duplicados
+    if (!document.querySelector('link[rel="manifest"]')) {
+        const linkManifest = document.createElement('link');
+        linkManifest.rel = 'manifest';
+        linkManifest.href = '/cantos/src/js/manifest.json';
+        document.head.appendChild(linkManifest);
+        console.log('Manifiesto añadido dinámicamente al head.');
+    }
+
     configurarSelectores();
     configurarEventosAcordes();
     configurarEventosDesplazamiento();
     configurarTrastes();
     configurarReproductor();
-    
+
     // Evento para alternar vista
     document.getElementById('toggleVista')?.addEventListener('click', function(e) {
         e.preventDefault();
@@ -400,7 +434,7 @@ FUNCION DE BUSCADOR MEJORADA
 document.getElementById('inputBusqueda').addEventListener('input', async function(e) {
     const query = normalizeText(e.target.value.trim());
     const resultadosDiv = document.getElementById('resultadosBusqueda');
-    
+
     if (query.length < 1) {
         resultadosDiv.style.display = 'none';
         resultadosDiv.innerHTML = '';
@@ -409,19 +443,19 @@ document.getElementById('inputBusqueda').addEventListener('input', async functio
 
     try {
         const response = await fetch(`/cantos/resucito/find/index.json?v=${Date.now()}`);
-        
+
         if (!response.ok) {
             throw new Error(`Error HTTP ${response.status}`);
         }
-        
+
         const cantos = await response.json();
-        
+
         // Normalizar y buscar
         const resultados = cantos.filter(canto => {
             const tituloNormalizado = normalizeText(canto.titulo);
             const letraNormalizada = normalizeText(canto.letra);
-            
-            return tituloNormalizado.includes(query) || 
+
+            return tituloNormalizado.includes(query) ||
                    letraNormalizada.includes(query);
         });
 
@@ -458,7 +492,7 @@ function mostrarResultados(resultados) {
     // Crear contenedor principal
     const mainResults = document.createElement('div');
     mainResults.className = 'main-results';
-    
+
     // Mostrar todos los resultados en el contenedor principal con scroll
     resultados.forEach(canto => {
         const div = document.createElement('div');
@@ -480,7 +514,7 @@ function mostrarResultados(resultados) {
 document.addEventListener('click', function(e) {
     const buscador = document.querySelector('.buscador-cantos');
     const resultados = document.getElementById('resultadosBusqueda');
-    
+
     if (!buscador.contains(e.target)) {
         resultados.style.display = 'none';
     }
@@ -509,11 +543,11 @@ document.addEventListener('DOMContentLoaded', function() {
     function toggleVisibility() {
         // Alternar encabezado
         headerRow.style.display = headerRow.style.display === 'none' ? '' : 'none';
-        
+
         // Alternar íconos de forma cruzada
         iconTop.style.display = iconTop.style.display === 'none' ? 'inline-block' : 'none';
         iconBottom.style.display = iconBottom.style.display === 'none' ? 'inline-block' : 'none';
-        
+
         // Guardar estado (opcional)
         localStorage.setItem('headerVisible', headerRow.style.display !== 'none');
     }
@@ -623,7 +657,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		"Si♭m": "/cantos/src/ima/sibm.jpg",
 		"Si♭7": "/cantos/src/ima/sib7.jpg",
     };
-    
+
     const selector = document.getElementById('acorde-selector');
     const imagenAcorde = document.getElementById('acorde-imagen');
 
@@ -631,7 +665,7 @@ document.addEventListener('DOMContentLoaded', function() {
     imagenAcorde.addEventListener('dblclick', function() {
         imagenAcorde.style.display = 'none';
     });
-    
+
     // Llenar el select con las opciones de acordes
     for (const acorde in acordes) {
         const option = document.createElement('option');
@@ -639,11 +673,11 @@ document.addEventListener('DOMContentLoaded', function() {
         option.textContent = acorde;
         selector.appendChild(option);
     }
-    
+
     // Manejar el cambio de selección
     selector.addEventListener('change', function() {
         const acordeSeleccionado = this.value;
-        
+
         if (acordeSeleccionado && acordes[acordeSeleccionado]) {
             imagenAcorde.src = acordes[acordeSeleccionado];
             imagenAcorde.alt = `Acorde ${acordeSeleccionado}`;
@@ -659,134 +693,3 @@ document.addEventListener('DOMContentLoaded', function() {
 /**************************************************************************
 LLAMADA DE ACORDE Y SU IMAGEN
 **************************************************************************/
-
-/**************************************************************************
-            MANEJADOR DE CACHE PARA CANTOS - VERSIÓN 4.0
-           (Optimizado para offline, actualizaciones y rendimiento)
-**************************************************************************/
-
-// Configuración global
-const SW_CONFIG = {
-  swPath: '/cantos/src/js/cachecantos.js',
-  scope: '/cantos/',
-  cacheName: 'cache-cantos-v4',
-  enableDebug: false
-};
-
-// Detección de ambiente
-const isLocalhost = () => 
-  ['localhost', '[::1]', /^127\.\d+\.\d+\.\d+$/].some(item => 
-    typeof item === 'string' 
-      ? window.location.hostname === item
-      : item.test(window.location.hostname)
-  );
-
-// Registrar Service Worker
-const registerServiceWorker = async () => {
-  if (!('serviceWorker' in navigator)) {
-    handleUnsupportedBrowser();
-    return;
-  }
-
-  try {
-    const registration = await navigator.serviceWorker.register(SW_CONFIG.swPath, {
-      scope: SW_CONFIG.scope,
-      updateViaCache: 'none'
-    });
-
-    setupUpdateHandlers(registration);
-    logRegistrationSuccess(registration);
-    
-  } catch (error) {
-    handleRegistrationError(error);
-  }
-};
-
-// Manejadores de eventos
-const setupUpdateHandlers = (registration) => {
-  registration.addEventListener('updatefound', () => {
-    const newWorker = registration.installing;
-    
-    newWorker.addEventListener('statechange', () => {
-      if (newWorker.state === 'installed') {
-        handleWorkerInstallation(registration);
-      }
-    });
-  });
-
-  navigator.serviceWorker.addEventListener('controllerchange', () => {
-    window.location.reload();
-  });
-};
-
-const handleWorkerInstallation = (registration) => {
-  if (navigator.serviceWorker.controller) {
-    showUpdateNotification(registration);
-  } else {
-    logDebug('[SW] Aplicación lista para uso offline');
-  }
-};
-
-const showUpdateNotification = (registration) => {
-  const showDialog = () => {
-    if (confirm('Nueva versión disponible. ¿Deseas actualizar ahora?')) {
-      registration.waiting.postMessage({ type: 'SKIP_WAITING' });
-    }
-  };
-
-  if (isLocalhost()) {
-    registration.waiting.postMessage({ type: 'SKIP_WAITING' });
-  } else if (Notification.permission === 'granted') {
-    showDialog();
-  } else if (Notification.permission !== 'denied') {
-    Notification.requestPermission().then(permission => {
-      if (permission === 'granted') showDialog();
-    });
-  }
-};
-
-// Manejo de errores
-const handleUnsupportedBrowser = () => {
-  console.warn('[SW] Navegador no compatible');
-  document.documentElement.classList.add('no-serviceworker');
-  
-  if (!window.caches) {
-    document.body.classList.add('no-offline');
-  }
-};
-
-const handleRegistrationError = (error) => {
-  console.error('[SW] Error en el registro:', error);
-  
-  if (isLocalhost()) {
-    console.info('[SW] ¿Estás usando un servidor local? Los SW requieren HTTPS o localhost');
-  }
-};
-
-// Helpers
-const logRegistrationSuccess = (registration) => {
-  logDebug(`[SW] Registrado correctamente en ámbito: ${registration.scope}`);
-};
-
-const logDebug = (message) => {
-  if (SW_CONFIG.enableDebug) console.log(message);
-};
-
-// Inicialización optimizada
-const initServiceWorker = () => {
-  if (document.readyState === 'complete') {
-    registerServiceWorker();
-  } else {
-    window.addEventListener('load', registerServiceWorker);
-    
-    // Registro temprano para navegadores modernos
-    if ('requestIdleCallback' in window) {
-      window.requestIdleCallback(registerServiceWorker, { timeout: 2000 });
-    } else {
-      window.addEventListener('DOMContentLoaded', registerServiceWorker);
-    }
-  }
-};
-
-// Iniciar
-initServiceWorker();

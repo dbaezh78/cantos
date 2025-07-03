@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/cantos/src/ico.ico" type="image/x-icon">
+    <title>Modo Offline | Cantos</title>
+    <style>
+        body {
+            font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        h1 {
+            color: #c44c4b;
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: #03527a;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #023047;
+        }
+    </style>
+</head>
+<body>
+    <h1>Estás en modo offline</h1>
+    <p>Este canto nunca ha sido cargado, para usar offline debe primero cargarlo.</p>
+    <p>No tienes conexión a internet en este momento.</p>
+    <p>Los cantos que ya has visitado estarán disponibles.</p>
+    <button onclick="window.location.href='/cantos/'">Volver al inicio</button>
+</body>
+</html>

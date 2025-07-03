@@ -14,16 +14,10 @@ if ('serviceWorker' in navigator) {
     });
 }
 
+
 const acordes = ["Do", "Do#", "Re", "Re#", "Mi", "Fa", "Fa#", "Sol", "Sol#", "La", "Si♭", "Si"];
 const dbTrastes = ["♫ Traste", "1ᵉʳ traste", "2ᵒ traste", "3ᵉʳ traste", "4ᵒ traste", "5ᵒ traste", "6ᵒ traste", "7ᵒ traste", "8ᵒ traste", "9ᵒ traste", "10ᵒ traste"];
-//const dbTrastes = ["♫", "1°", "2°", "3°", "4°", "5°", "6°", "7°", "8°", "9°", "10°"];
-/*
-const dbTrastes = ["♫ Traste", "1°T", "2°T", "3°T", "4°T", "5°T", "6°T", "7°T", "8°T", "9°T", "10°T"];
-//const dbTrastes = ["♫", "1°", "2°", "3°", "4°", "5°", "6°", "7°", "8°", "9°", "10°"];
-⁰¹²³⁴⁵⁶⁷⁸⁹ ᵃ ᵇ ᶜ ᵈ ᵉ ᶠ ᵍ ʰ ⁱ ʲ ᵏ ˡ ᵐ ⁿ ᵒ ᵖ ʳ ˢ ᵗ ᵘ ᵛ ʷ ˣ ʸ ᶻ
-1ᵉʳ 2ᵒ  3ᵉʳ 4ᵒ  5ᵒ
 
-*/
 // Variables de estado global
 let scrolling = false;
 let scrollInterval = null;
@@ -284,7 +278,7 @@ function configurarReproductor() {
             icon.textContent = 'error';
             
             setTimeout(() => {
-                alert('Por favor haz clic en el botón de play del reproductor para iniciar la música.');
+                alert('La paz de Cristo Herman@, al parecer este canto aun no está disponible, estamos trabajando para ponerlo disponible lo más pronto posible....');
             }, 100);
             
             setTimeout(() => {
@@ -333,6 +327,7 @@ function cargarCanto(partitura) {
     document.getElementById('dbno').textContent = partitura.dbnos;
     document.getElementById('catg').textContent = partitura.catg;
 
+
     // Asamblea
     partitura.asamblea.forEach((texto, i) => {
         const elemento = document.getElementById(`a${i+1}`);
@@ -362,6 +357,7 @@ function cargarCanto(partitura) {
 document.getElementById('catg').addEventListener('click', () => {
   window.location.reload();
 });
+
 
 /***********************
  * CONFIGURACIÓN INICIAL
@@ -540,140 +536,6 @@ document.addEventListener('DOMContentLoaded', function() {
     TOGGLE VISIBILITY - SOLUCIÓN CORRECTA
 ******************************************/
 
-
-
-
-//****************************************************************
-//************************* MOVER ACORDES ************************
-//****************************************************************
-// Modifica estas funciones en tu JS:
-
-// Variables globales
-let acordeSeleccionado = null;
-let posicionInicialX = 0;
-let posicionInicialLeft = 0;
-let indicadorPosicion = null;
-
-// Crear indicador de posición
-function crearIndicador() {
-    indicadorPosicion = document.createElement('div');
-    indicadorPosicion.id = 'indicador-posicion';
-    indicadorPosicion.style.position = 'fixed';
-    indicadorPosicion.style.top = '10px';
-    indicadorPosicion.style.left = '10px';
-    indicadorPosicion.style.background = 'rgba(0,0,0,0.7)';
-    indicadorPosicion.style.color = 'white';
-    indicadorPosicion.style.padding = '5px 10px';
-    indicadorPosicion.style.borderRadius = '3px';
-    indicadorPosicion.style.zIndex = '10000';
-    document.body.appendChild(indicadorPosicion);
-}
-
-// Habilitar arrastre para todos los dispositivos
-function habilitarArrastreAcordes() {
-    const acordes = document.querySelectorAll('.chord-container');
-    
-    acordes.forEach(acorde => {
-        acorde.addEventListener('mousedown', iniciarArrastre);
-        acorde.addEventListener('touchstart', iniciarArrastreTouch, { passive: false });
-    });
-}
-
-// Iniciar arrastre (mouse)
-function iniciarArrastre(e) {
-    e.preventDefault();
-    configurarArrastre(e.clientX, this);
-}
-
-// Iniciar arrastre (touch)
-function iniciarArrastreTouch(e) {
-    e.preventDefault();
-    if (e.touches.length === 1) {
-        configurarArrastre(e.touches[0].clientX, e.target.closest('.chord-container'));
-    }
-}
-
-// Configuración común para ambos tipos de eventos
-function configurarArrastre(clientX, acorde) {
-    acordeSeleccionado = acorde;
-    posicionInicialX = clientX;
-    
-    // Obtener posición real considerando el transform
-    const rect = acorde.getBoundingClientRect();
-    const parentRect = acorde.parentElement.getBoundingClientRect();
-    posicionInicialLeft = ((rect.left + rect.width/2 - parentRect.left) / parentRect.width) * 100;
-    
-    document.addEventListener('mousemove', arrastrarAcorde);
-    document.addEventListener('mouseup', soltarAcorde);
-    document.addEventListener('touchmove', arrastrarAcordeTouch, { passive: false });
-    document.addEventListener('touchend', soltarAcorde);
-    
-    actualizarIndicador(posicionInicialLeft);
-}
-
-// Arrastrar (mouse)
-function arrastrarAcorde(e) {
-    if (!acordeSeleccionado) return;
-    e.preventDefault();
-    calcularNuevaPosicion(e.clientX);
-}
-
-// Arrastrar (touch)
-function arrastrarAcordeTouch(e) {
-    if (!acordeSeleccionado || e.touches.length !== 1) return;
-    e.preventDefault();
-    calcularNuevaPosicion(e.touches[0].clientX);
-}
-
-// Cálculo común de posición
-function calcularNuevaPosicion(clientX) {
-    const desplazamientoX = clientX - posicionInicialX;
-    const parentRect = acordeSeleccionado.parentElement.getBoundingClientRect();
-    const desplazamientoPorcentaje = (desplazamientoX / parentRect.width) * 100;
-    const nuevoLeft = posicionInicialLeft + desplazamientoPorcentaje;
-    const posicionFinal = Math.max(0, Math.min(100, nuevoLeft));
-    
-    acordeSeleccionado.style.left = `${posicionFinal}%`;
-    actualizarIndicador(posicionFinal);
-}
-
-// Finalizar arrastre
-function soltarAcorde() {
-    if (!acordeSeleccionado) return;
-    
-    document.removeEventListener('mousemove', arrastrarAcorde);
-    document.removeEventListener('mouseup', soltarAcorde);
-    document.removeEventListener('touchmove', arrastrarAcordeTouch);
-    document.removeEventListener('touchend', soltarAcorde);
-    
-    acordeSeleccionado = null;
-}
-
-// Obtener posición de las clases CSS
-function obtenerValorDeClasePosicion(elemento) {
-    const clasePosicion = Array.from(elemento.classList).find(cls => cls.startsWith('cp'));
-    return clasePosicion ? parseInt(clasePosicion.replace('cp', '')) : 50; // 50% por defecto por el transform
-}
-
-// Actualizar indicador visual
-function actualizarIndicador(posicion) {
-    if (!indicadorPosicion) crearIndicador();
-    indicadorPosicion.textContent = `Posición: ${posicion.toFixed(1)}%`;
-}
-
-// Inicialización
-document.addEventListener('DOMContentLoaded', () => {
-    setTimeout(() => {
-        habilitarArrastreAcordes();
-        crearIndicador();
-    }, 500);
-});
-
-//****************************************************************
-//************************* MOVER ACORDES ************************
-//****************************************************************
-
-
 //****************************************************************
 //*************** AJUSTE DE ACORDES A 800px TABLE ****************
 //****************************************************************
@@ -709,58 +571,58 @@ function ajustarPosicion(posicionOriginal, anchoPantalla) {
 document.addEventListener('DOMContentLoaded', inicializarAplicacion);
 
 
-
 /**************************************************************************
 LLAMADA DE ACORDE Y SU IMAGEN
 **************************************************************************/
 document.addEventListener('DOMContentLoaded', function() {
     // Objeto con los acordes y sus rutas
     const acordes = {
-        "Do": "/cantos/src/ima/do.jpg",
-        "Dom": "/cantos/src/ima/dom.jpg",
-        "Do7": "/cantos/src/ima/do7.jpg",
-        "Do#": "/cantos/src/ima/dos.jpg",
-        "Do#m": "/cantos/src/ima/dosm.jpg",
-        "Do#7": "/cantos/src/ima/dos7.jpg",
-        "Re": "/cantos/src/ima/re.jpg",
-        "Rem": "/cantos/src/ima/rem.jpg",
-        "Re7": "/cantos/src/ima/re7.jpg",
-        "Rem9": "/cantos/src/ima/rem9.jpg",
-        "Re#": "/cantos/src/ima/res.jpg",
-        "Re#m": "/cantos/src/ima/resm.jpg",
-        "Mi": "/cantos/src/ima/mi.jpg",
-        "Mim": "/cantos/src/ima/mim.jpg",
-        "Mi7": "/cantos/src/ima/mi7.jpg",
-        "Mimaj7": "/cantos/src/ima/mimaj7.jpg",
-        "Mi6": "/cantos/src/ima/mi6.jpg",
-        "Mim6": "/cantos/src/ima/mim6.jpg",
-        "Fa": "/cantos/src/ima/fa.jpg",
-        "Fam": "/cantos/src/ima/fam.jpg",
-        "Fa7": "/cantos/src/ima/fa7.jpg",
-        "Famaj7": "/cantos/src/ima/famaj7.jpg",
-        "Famaj713": "/cantos/src/ima/famaj713.jpg",
-        "Fa#": "/cantos/src/ima/fas.jpg",
-        "Fa#m": "/cantos/src/ima/fasm.jpg",
+		"Do": "/cantos/src/ima/do.jpg",
+		"Dom": "/cantos/src/ima/dom.jpg",
+		"Do7": "/cantos/src/ima/do7.jpg",
+		"Do#": "/cantos/src/ima/dos.jpg",
+		"Do#m": "/cantos/src/ima/dosm.jpg",
+		"Do#7": "/cantos/src/ima/dos7.jpg",
+		"Re♭": "/cantos/src/ima/dos.jpg",
+		"Re": "/cantos/src/ima/re.jpg",
+		"Rem": "/cantos/src/ima/rem.jpg",
+		"Re7": "/cantos/src/ima/re7.jpg",
+		"Rem9": "/cantos/src/ima/rem9.jpg",
+		"Re#": "/cantos/src/ima/res.jpg",
+		"Re#m": "/cantos/src/ima/resm.jpg",
+		"Mi": "/cantos/src/ima/mi.jpg",
+		"Mim": "/cantos/src/ima/mim.jpg",
+		"Mi7": "/cantos/src/ima/mi7.jpg",
+		"Mimaj7": "/cantos/src/ima/mimaj7.jpg",
+		"Mi6": "/cantos/src/ima/mi6.jpg",
+		"Mim6": "/cantos/src/ima/mim6.jpg",
+		"Fa": "/cantos/src/ima/fa.jpg",
+		"Fam": "/cantos/src/ima/fam.jpg",
+		"Fa7": "/cantos/src/ima/fa7.jpg",
+		"Famaj7": "/cantos/src/ima/famaj7.jpg",
+		"Famaj713": "/cantos/src/ima/famaj713.jpg",
+		"Fa#": "/cantos/src/ima/fas.jpg",
+		"Fa#m": "/cantos/src/ima/fasm.jpg",
         "Fa# 5/9 dim": "/cantos/src/ima/fas5-9dim.jpg",
-        "Sol": "/cantos/src/ima/sol.jpg",
-        "Solm": "/cantos/src/ima/solm.jpg",
-        "Sol7": "/cantos/src/ima/sol7.jpg",
-        "Sol#": "/cantos/src/ima/sols.jpg",
-        "Sol#m": "/cantos/src/ima/solsm.jpg",
-        "Sol#7": "/cantos/src/ima/sols7.jpg",
-        "La": "/cantos/src/ima/la.jpg",
-        "Lam": "/cantos/src/ima/lam.jpg",
-        "La7": "/cantos/src/ima/la7.jpg",
-        "Lam7": "/cantos/src/ima/lam7.jpg",
-        "La6": "/cantos/src/ima/la6.jpg",
-        "Lam6": "/cantos/src/ima/lam6.jpg",
+		"Sol": "/cantos/src/ima/sol.jpg",
+		"Solm": "/cantos/src/ima/solm.jpg",
+		"Sol7": "/cantos/src/ima/sol7.jpg",
+		"Sol#": "/cantos/src/ima/sols.jpg",
+		"Sol#m": "/cantos/src/ima/solsm.jpg",
+		"Sol#7": "/cantos/src/ima/sols7.jpg",
+		"La": "/cantos/src/ima/la.jpg",
+		"Lam": "/cantos/src/ima/lam.jpg",
+		"La7": "/cantos/src/ima/la7.jpg",
+		"Lam7": "/cantos/src/ima/lam7.jpg",
+		"La6": "/cantos/src/ima/la6.jpg",
+		"Lam6": "/cantos/src/ima/lam6.jpg",
         "La♭": "/cantos/src/ima/lab.jpg",
-        "Si": "/cantos/src/ima/si.jpg",
-        "Sim": "/cantos/src/ima/Sim.jpg",
-        "Si7": "/cantos/src/ima/si7.jpg",
-        "Si♭": "/cantos/src/ima/sib.jpg",
-        "Si♭m": "/cantos/src/ima/sibm.jpg",
-        "Si♭7": "/cantos/src/ima/sib7.jpg",
+		"Si": "/cantos/src/ima/si.jpg",
+		"Sim": "/cantos/src/ima/Sim.jpg",
+		"Si7": "/cantos/src/ima/si7.jpg",
+		"Si♭": "/cantos/src/ima/sib.jpg",
+		"Si♭m": "/cantos/src/ima/sibm.jpg",
+		"Si♭7": "/cantos/src/ima/sib7.jpg",
     };
     
     const selector = document.getElementById('acorde-selector');
@@ -795,313 +657,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-
-
-
-
 /**************************************************************************
 LLAMADA DE ACORDE Y SU IMAGEN
 **************************************************************************/
 
-
-/**************************************************************************
-LLAMADA DE ACORDE Y SU IMAGEN
-**************************************************************************/
-
-
-
-/* Guardar Codigo cambiado*/
-/*
-
-
-// Variables globales
-let acordeSeleccionado = null;
-let posicionInicialX = 0;
-let posicionInicialLeft = 0;
-let indicadorPosicion = null;
-
-// Crear indicador de posición (sin estilos intrusivos)
-function crearIndicador() {
-    indicadorPosicion = document.createElement('div');
-    indicadorPosicion.id = 'indicador-posicion';
-    indicadorPosicion.style.position = 'fixed';
-    indicadorPosicion.style.bottom = '10px';
-    indicadorPosicion.style.left = '10px';
-    indicadorPosicion.style.background = 'rgba(0,0,0,0.7)';
-    indicadorPosicion.style.color = 'white';
-    indicadorPosicion.style.padding = '5px 10px';
-    indicadorPosicion.style.borderRadius = '3px';
-    indicadorPosicion.style.zIndex = '10000';
-    document.body.appendChild(indicadorPosicion);
-}
-
-// Habilitar arrastre para todos los dispositivos
-function habilitarArrastreAcordes() {
-    const acordes = document.querySelectorAll('.chord-container');
-    
-    acordes.forEach(acorde => {
-        // Para mouse
-        acorde.addEventListener('mousedown', iniciarArrastre);
-        // Para pantallas táctiles
-        acorde.addEventListener('touchstart', iniciarArrastreTouch, { passive: false });
-    });
-}
-
-// Iniciar arrastre (mouse)
-function iniciarArrastre(e) {
-    e.preventDefault();
-    configurarArrastre(e.clientX, this);
-}
-
-// Iniciar arrastre (touch)
-function iniciarArrastreTouch(e) {
-    e.preventDefault();
-    if (e.touches.length === 1) {
-        configurarArrastre(e.touches[0].clientX, e.target.closest('.chord-container'));
-    }
-}
-
-// Configuración común para ambos tipos de eventos
-function configurarArrastre(clientX, acorde) {
-    acordeSeleccionado = acorde;
-    posicionInicialX = clientX;
-    posicionInicialLeft = parseInt(acorde.style.left) || obtenerValorDeClasePosicion(acorde);
-    
-    // Eventos para mouse
-    document.addEventListener('mousemove', arrastrarAcorde);
-    document.addEventListener('mouseup', soltarAcorde);
-    
-    // Eventos para touch
-    document.addEventListener('touchmove', arrastrarAcordeTouch, { passive: false });
-    document.addEventListener('touchend', soltarAcorde);
-    
-    actualizarIndicador(posicionInicialLeft);
-}
-
-// Arrastrar (mouse)
-function arrastrarAcorde(e) {
-    if (!acordeSeleccionado) return;
-    e.preventDefault();
-    calcularNuevaPosicion(e.clientX);
-}
-
-// Arrastrar (touch)
-function arrastrarAcordeTouch(e) {
-    if (!acordeSeleccionado || e.touches.length !== 1) return;
-    e.preventDefault();
-    calcularNuevaPosicion(e.touches[0].clientX);
-}
-
-// Cálculo común de posición
-function calcularNuevaPosicion(clientX) {
-    const desplazamientoX = clientX - posicionInicialX;
-    const anchoContenedor = acordeSeleccionado.parentElement.offsetWidth;
-    const nuevoLeft = posicionInicialLeft + (desplazamientoX / anchoContenedor * 100);
-    const posicionFinal = Math.max(0, Math.min(100, nuevoLeft));
-    
-    acordeSeleccionado.style.left = `${posicionFinal}%`;
-    actualizarIndicador(posicionFinal);
-}
-
-// Finalizar arrastre
-function soltarAcorde() {
-    if (!acordeSeleccionado) return;
-    
-    // Limpiar eventos mouse
-    document.removeEventListener('mousemove', arrastrarAcorde);
-    document.removeEventListener('mouseup', soltarAcorde);
-    
-    // Limpiar eventos touch
-    document.removeEventListener('touchmove', arrastrarAcordeTouch);
-    document.removeEventListener('touchend', soltarAcorde);
-    
-    acordeSeleccionado = null;
-}
-
-// Obtener posición de las clases CSS
-function obtenerValorDeClasePosicion(elemento) {
-    const clasePosicion = Array.from(elemento.classList).find(cls => cls.startsWith('cp'));
-    return clasePosicion ? parseInt(clasePosicion.replace('cp', '')) : 0;
-}
-
-// Actualizar indicador visual
-function actualizarIndicador(posicion) {
-    if (!indicadorPosicion) crearIndicador();
-    indicadorPosicion.textContent = `Posición: ${posicion.toFixed(1)}%`;
-}
-
-// Inicialización
-document.addEventListener('DOMContentLoaded', () => {
-    setTimeout(() => {
-        habilitarArrastreAcordes();
-        crearIndicador();
-    }, 500);
-});
-
-*/
-
-// *****************************************************************************
-/* MENU PARA REDES SOCIALES */
-// *****************************************************************************
-
-  // Crear el menú dinámicamente
-  const menuTrigger = document.querySelector('.menu-trigger');
-  const socialMenu = document.createElement('div');
-  socialMenu.className = 'social-menu';
-  
-  socialMenu.innerHTML = `
-    <a href="https://www.youtube.com/@CantosdelCamino" target="_blank">YouTube</a>
-    <a href="https://facebook.com" target="_blank">Facebook</a>
-    <a href="https://instagram.com" target="_blank">Instagram</a>
-    <a href="#" target="_blank">Otros</a>
-  `;
-  
-  menuTrigger.parentNode.insertBefore(socialMenu, menuTrigger.nextSibling);
-  
-  // Controlar clics
-  menuTrigger.addEventListener('click', function(e) {
-    e.stopPropagation();
-    socialMenu.classList.toggle('show-menu');
-  });
-  
-  // Cerrar al hacer clic fuera
-  document.addEventListener('click', function() {
-    socialMenu.classList.remove('show-menu');
-  });
-  
-  // Evitar que se cierre al hacer clic en el menú
-  socialMenu.addEventListener('click', function(e) {
-    e.stopPropagation();
-  });
-
-
-/**************************************************************************
-            MANEJADOR DE CACHE PARA CANTOS - VERSIÓN 4.0
-           (Optimizado para offline, actualizaciones y rendimiento)
-**************************************************************************/
-
-// Configuración global
-const SW_CONFIG = {
-  swPath: '/cantos/src/js/cachecantos.js',
-  scope: '/cantos/',
-  cacheName: 'cache-cantos-v4',
-  enableDebug: false
-};
-
-// Detección de ambiente
-const isLocalhost = () => 
-  ['localhost', '[::1]', /^127\.\d+\.\d+\.\d+$/].some(item => 
-    typeof item === 'string' 
-      ? window.location.hostname === item
-      : item.test(window.location.hostname)
-  );
-
-// Registrar Service Worker
-const registerServiceWorker = async () => {
-  if (!('serviceWorker' in navigator)) {
-    handleUnsupportedBrowser();
-    return;
-  }
-
-  try {
-    const registration = await navigator.serviceWorker.register(SW_CONFIG.swPath, {
-      scope: SW_CONFIG.scope,
-      updateViaCache: 'none'
-    });
-
-    setupUpdateHandlers(registration);
-    logRegistrationSuccess(registration);
-    
-  } catch (error) {
-    handleRegistrationError(error);
-  }
-};
-
-// Manejadores de eventos
-const setupUpdateHandlers = (registration) => {
-  registration.addEventListener('updatefound', () => {
-    const newWorker = registration.installing;
-    
-    newWorker.addEventListener('statechange', () => {
-      if (newWorker.state === 'installed') {
-        handleWorkerInstallation(registration);
-      }
-    });
-  });
-
-  navigator.serviceWorker.addEventListener('controllerchange', () => {
-    window.location.reload();
-  });
-};
-
-const handleWorkerInstallation = (registration) => {
-  if (navigator.serviceWorker.controller) {
-    showUpdateNotification(registration);
-  } else {
-    logDebug('[SW] Aplicación lista para uso offline');
-  }
-};
-
-const showUpdateNotification = (registration) => {
-  const showDialog = () => {
-    if (confirm('Nueva versión disponible. ¿Deseas actualizar ahora?')) {
-      registration.waiting.postMessage({ type: 'SKIP_WAITING' });
-    }
-  };
-
-  if (isLocalhost()) {
-    registration.waiting.postMessage({ type: 'SKIP_WAITING' });
-  } else if (Notification.permission === 'granted') {
-    showDialog();
-  } else if (Notification.permission !== 'denied') {
-    Notification.requestPermission().then(permission => {
-      if (permission === 'granted') showDialog();
-    });
-  }
-};
-
-// Manejo de errores
-const handleUnsupportedBrowser = () => {
-  console.warn('[SW] Navegador no compatible');
-  document.documentElement.classList.add('no-serviceworker');
-  
-  if (!window.caches) {
-    document.body.classList.add('no-offline');
-  }
-};
-
-const handleRegistrationError = (error) => {
-  console.error('[SW] Error en el registro:', error);
-  
-  if (isLocalhost()) {
-    console.info('[SW] ¿Estás usando un servidor local? Los SW requieren HTTPS o localhost');
-  }
-};
-
-// Helpers
-const logRegistrationSuccess = (registration) => {
-  logDebug(`[SW] Registrado correctamente en ámbito: ${registration.scope}`);
-};
-
-const logDebug = (message) => {
-  if (SW_CONFIG.enableDebug) console.log(message);
-};
-
-// Inicialización optimizada
-const initServiceWorker = () => {
-  if (document.readyState === 'complete') {
-    registerServiceWorker();
-  } else {
-    window.addEventListener('load', registerServiceWorker);
-    
-    // Registro temprano para navegadores modernos
-    if ('requestIdleCallback' in window) {
-      window.requestIdleCallback(registerServiceWorker, { timeout: 2000 });
-    } else {
-      window.addEventListener('DOMContentLoaded', registerServiceWorker);
-    }
-  }
-};
-
-// Iniciar
-initServiceWorker();

@@ -1,3 +1,20 @@
+
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        // Registra el Service Worker. La ruta debe ser relativa a la raíz del dominio,
+        // no a la ubicación de dbMainJS.js.
+        navigator.serviceWorker.register('/cantos/src/js/sworker.js')
+            .then((registration) => {
+                console.log('Service Worker registrado con éxito. Alcance:', registration.scope);
+            })
+            .catch((error) => {
+                console.error('Fallo el registro del Service Worker:', error);
+            });
+    });
+} else {
+    console.log('Tu navegador no soporta Service Workers.');
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     const songsList = document.querySelector('.songs-list');
     const searchInput = document.getElementById('searchInput');
@@ -216,134 +233,3 @@ toggleView.addEventListener('change', function() {
 });
 
 
-
-/**************************************************************************
-            MANEJADOR DE CACHE PARA CANTOS - VERSIÓN 4.0
-           (Optimizado para offline, actualizaciones y rendimiento)
-**************************************************************************/
-
-// Configuración global
-const SW_CONFIG = {
-  swPath: '/cantos/src/js/cachecantos.js',
-  scope: '/cantos/',
-  cacheName: 'cache-cantos-v4',
-  enableDebug: false
-};
-
-// Detección de ambiente
-const isLocalhost = () => 
-  ['localhost', '[::1]', /^127\.\d+\.\d+\.\d+$/].some(item => 
-    typeof item === 'string' 
-      ? window.location.hostname === item
-      : item.test(window.location.hostname)
-  );
-
-// Registrar Service Worker
-const registerServiceWorker = async () => {
-  if (!('serviceWorker' in navigator)) {
-    handleUnsupportedBrowser();
-    return;
-  }
-
-  try {
-    const registration = await navigator.serviceWorker.register(SW_CONFIG.swPath, {
-      scope: SW_CONFIG.scope,
-      updateViaCache: 'none'
-    });
-
-    setupUpdateHandlers(registration);
-    logRegistrationSuccess(registration);
-    
-  } catch (error) {
-    handleRegistrationError(error);
-  }
-};
-
-// Manejadores de eventos
-const setupUpdateHandlers = (registration) => {
-  registration.addEventListener('updatefound', () => {
-    const newWorker = registration.installing;
-    
-    newWorker.addEventListener('statechange', () => {
-      if (newWorker.state === 'installed') {
-        handleWorkerInstallation(registration);
-      }
-    });
-  });
-
-  navigator.serviceWorker.addEventListener('controllerchange', () => {
-    window.location.reload();
-  });
-};
-
-const handleWorkerInstallation = (registration) => {
-  if (navigator.serviceWorker.controller) {
-    showUpdateNotification(registration);
-  } else {
-    logDebug('[SW] Aplicación lista para uso offline');
-  }
-};
-
-const showUpdateNotification = (registration) => {
-  const showDialog = () => {
-    if (confirm('Nueva versión disponible. ¿Deseas actualizar ahora?')) {
-      registration.waiting.postMessage({ type: 'SKIP_WAITING' });
-    }
-  };
-
-  if (isLocalhost()) {
-    registration.waiting.postMessage({ type: 'SKIP_WAITING' });
-  } else if (Notification.permission === 'granted') {
-    showDialog();
-  } else if (Notification.permission !== 'denied') {
-    Notification.requestPermission().then(permission => {
-      if (permission === 'granted') showDialog();
-    });
-  }
-};
-
-// Manejo de errores
-const handleUnsupportedBrowser = () => {
-  console.warn('[SW] Navegador no compatible');
-  document.documentElement.classList.add('no-serviceworker');
-  
-  if (!window.caches) {
-    document.body.classList.add('no-offline');
-  }
-};
-
-const handleRegistrationError = (error) => {
-  console.error('[SW] Error en el registro:', error);
-  
-  if (isLocalhost()) {
-    console.info('[SW] ¿Estás usando un servidor local? Los SW requieren HTTPS o localhost');
-  }
-};
-
-// Helpers
-const logRegistrationSuccess = (registration) => {
-  logDebug(`[SW] Registrado correctamente en ámbito: ${registration.scope}`);
-};
-
-const logDebug = (message) => {
-  if (SW_CONFIG.enableDebug) console.log(message);
-};
-
-// Inicialización optimizada
-const initServiceWorker = () => {
-  if (document.readyState === 'complete') {
-    registerServiceWorker();
-  } else {
-    window.addEventListener('load', registerServiceWorker);
-    
-    // Registro temprano para navegadores modernos
-    if ('requestIdleCallback' in window) {
-      window.requestIdleCallback(registerServiceWorker, { timeout: 2000 });
-    } else {
-      window.addEventListener('DOMContentLoaded', registerServiceWorker);
-    }
-  }
-};
-
-// Iniciar
-initServiceWorker();

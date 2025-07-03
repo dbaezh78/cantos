@@ -1,7 +1,7 @@
 {
   "name": "Cristo ha Resucitó",
   "short_name": "Resucitó",
-  "start_url": "/cantos/",
+  "start_url": "/cantos/index.html",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#000000",
@@ -12,7 +12,7 @@
       "type": "image/x-icon"
     },
     {
-      "src": "/cantos/src/ima/icon-192x192.png",
+      "src": "/cantos/src/icons/icon-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"

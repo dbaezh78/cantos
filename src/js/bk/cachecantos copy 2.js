@@ -1,4 +1,4 @@
-// cachecantos.js - Versión 4.5 (Corregido rutas de fuentes y optimizado)
+// cachecantos.js - Versión 4.4 (Completamente optimizado)
 const CACHE_NAME = 'cache-cantos-v4.5';
 const OFFLINE_URL = '/cantos/resucito/offline.html';
 const AUDIO_CACHE = 'audio-cache-v1';
@@ -7,6 +7,7 @@ const AUDIO_CACHE = 'audio-cache-v1';
 const CORE_ASSETS = [
   '/cantos/index.html',
   '/cantos/src/js/manifest.json',
+
   OFFLINE_URL,
   
   // CSS
@@ -21,7 +22,7 @@ const CORE_ASSETS = [
   '/cantos/src/js/app.js',
   '/cantos/src/js/mensajekiko.js',
 
-  // Fuentes (corregido a /font/ sin 's')
+  // Fuentes
   '/cantos/src/font/LibreFranklin-Bold.ttf',
   '/cantos/src/font/font.woff2',
   '/cantos/src/font/Fave-ScriptBoldPro.woff2',
@@ -35,27 +36,39 @@ const CORE_ASSETS = [
   '/cantos/src/icons/icon-192x192.png',
   '/cantos/src/icons/icon-512x512.png',
 
-  // JSON de búsqueda
+    // JSON de búsqueda
   '/cantos/resucito/find/index.json'
+
 ];
 
 // Audio que debe cachearse durante la instalación
 const AUDIO_ASSETS = [
-  // Se cachearán dinámicamente cuando se accedan
+  // Agrega aquí las rutas de tus archivos de audio importantes
+  '/audio/ejemplo.mp3'
 ];
 
-// Instalación: Cachear recursos esenciales
+// Instalación: Cachear recursos esenciales y audio
 self.addEventListener('install', (event) => {
   event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then(cache => {
-        console.log('[SW] Cacheando recursos esenciales');
-        return cache.addAll(CORE_ASSETS);
-      })
-      .then(() => self.skipWaiting())
-      .catch(error => {
-        console.error('[SW] Error durante la instalación:', error);
-      })
+    Promise.all([
+      caches.open(CACHE_NAME)
+        .then(cache => {
+          console.log('[SW] Cacheando recursos esenciales');
+          return cache.addAll(CORE_ASSETS);
+        }),
+      caches.open(AUDIO_CACHE)
+        .then(cache => {
+          console.log('[SW] Cacheando archivos de audio');
+          return cache.addAll(AUDIO_ASSETS);
+        })
+    ])
+    .then(() => {
+      console.log('[SW] Todos los recursos fueron cacheados');
+      return self.skipWaiting();
+    })
+    .catch(error => {
+      console.error('[SW] Error durante la instalación:', error);
+    })
   );
 });
 
@@ -122,22 +135,21 @@ self.addEventListener('message', (event) => {
  * FUNCIONES AUXILIARES
  ***********************/
 
-// Estrategia para archivos de audio mejorada
+// Estrategia para archivos de audio
 function serveAudio(request) {
-  // Primero intentar servir desde cache
   return caches.match(request)
     .then(cachedResponse => {
-      // Actualizar cache en segundo plano si existe versión cacheada
+      // Intentar actualizar el cache en segundo plano
       if (cachedResponse) {
         updateAudioCache(request);
         return cachedResponse;
       }
       
-      // Si no está en cache, buscar en la red y cachear
+      // Si no está en cache, buscar en la red
       return fetch(request)
         .then(response => {
-          // Solo cachear respuestas válidas
           if (response.ok) {
+            // Cachear la respuesta
             const responseToCache = response.clone();
             caches.open(AUDIO_CACHE)
               .then(cache => cache.put(request, responseToCache));
@@ -145,7 +157,7 @@ function serveAudio(request) {
           return response;
         })
         .catch(() => {
-          // Respuesta de fallback para audio offline
+          // Respuesta de audio vacía para offline
           return new Response('', {
             status: 404,
             headers: { 'Content-Type': 'audio/mpeg' }
