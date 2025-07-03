@@ -6,9 +6,10 @@ const OFFLINE_URL = '/cantos/resucito/offline.html';
 
 // Lista de URLs estáticas que se deben cachear durante la instalación del Service Worker.
 const urlsToCache = [
-    '/cantos/index.html',
+    '/cantos/',
     '/cantos/src/js/manifest.json',
     OFFLINE_URL, // Asegúrate de que esta página exista para el modo offline
+    // '/cantos/resucito/a/asihablaelamen.html', // Este se cacheará dinámicamente ahora
 
     // Archivos CSS
     '/cantos/src/css/dbCSS.css',
@@ -18,11 +19,12 @@ const urlsToCache = [
     '/cantos/src/css/cssc/asihablaelamen.css', // CSS específico para asihablaelamen.html
 
     // Archivos JavaScript
+    '/cantos/src/js/mainjs.js',
     '/cantos/src/js/dbMainJS.js',
     '/cantos/src/js/songs-data.js',
     '/cantos/src/js/app.js',
     '/cantos/src/js/mensajekiko.js',
-    '/cantos/resucito/cjs/asihablaelamen.js', // ¡Este archivo está incluido aquí para precacheo!
+    '/cantos/resucito/cjs/asihablaelamen.js', // JS específico para asihablaelamen.html
 
     // Fuentes
     '/cantos/src/font/LibreFranklin-Bold.ttf',
@@ -77,11 +79,11 @@ const urlsToCache = [
     '/cantos/src/ima/lam6.jpg',
     '/cantos/src/ima/lab.jpg',
     '/cantos/src/ima/si.jpg',
-    '/cantos/src/ima/Sim.jpg",
-    "/cantos/src/ima/si7.jpg",
-    "/cantos/src/ima/sib.jpg",
-    "/cantos/src/ima/sibm.jpg",
-    "/cantos/src/ima/sib7.jpg",
+    '/cantos/src/ima/Sim.jpg',
+    '/cantos/src/ima/si7.jpg',
+    '/cantos/src/ima/sib.jpg',
+    '/cantos/src/ima/sibm.jpg',
+    '/cantos/src/ima/sib7.jpg',
 
     // JSON de búsqueda
     '/cantos/resucito/find/index.json'
@@ -152,21 +154,18 @@ self.addEventListener('fetch', (event) => {
 
                         // Verificar si la solicitud es para un archivo de audio (.mp3)
                         // o para una página de canto HTML (ej. /cantos/resucito/a/asihablaelamen.html)
-                        // O cualquier otro archivo JS que no haya sido precacheado
                         const url = event.request.url;
                         const isAudio = url.endsWith('.mp3');
                         const isSongHtml = url.startsWith(self.location.origin + '/cantos/resucito/') && url.endsWith('.html');
-                        const isCjsJs = url.startsWith(self.location.origin + '/cantos/resucito/cjs/') && url.endsWith('.js');
 
-
-                        if (isAudio || isSongHtml || isCjsJs) { // <-- Agregado isCjsJs aquí
+                        if (isAudio || isSongHtml) {
                             caches.open(CACHE_NAME)
                                 .then((cache) => {
-                                    console.log(`[Service Worker] Cacheando dinámicamente ${isAudio ? 'audio' : isSongHtml ? 'HTML de canto' : 'JS de cjs'}:`, url);
+                                    console.log(`[Service Worker] Cacheando dinámicamente ${isAudio ? 'audio' : 'HTML de canto'}:`, url);
                                     cache.put(event.request, responseToCache);
                                 })
                                 .catch((error) => {
-                                    console.error(`[Service Worker] Fallo al cachear ${isAudio ? 'audio' : isSongHtml ? 'HTML de canto' : 'JS de cjs'}:`, error);
+                                    console.error(`[Service Worker] Fallo al cachear ${isAudio ? 'audio' : 'HTML de canto'}:`, error);
                                 });
                         } else {
                             // Para otros recursos, también los cacheamos si no estaban ya y son válidos.

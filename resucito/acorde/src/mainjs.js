@@ -4,14 +4,19 @@
 
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/cantos/src/js/sworker.js')
+        // Registra el Service Worker. La ruta debe ser relativa a la raíz del dominio.
+        // Ahora apunta a la ubicación actual del sworker.js en /cantos/src/js/.
+        // Ten en cuenta que el scope predeterminado será /cantos/src/js/.
+        navigator.serviceWorker.register('/cantos/src/js/sworker.js') // <--- RUTA ACTUALIZADA AQUÍ
             .then((registration) => {
-                console.log('Service Worker registrado con éxito:', registration);
+                console.log('Service Worker registrado con éxito. Alcance:', registration.scope);
             })
             .catch((error) => {
-                console.log('Fallo el registro del Service Worker:', error);
+                console.error('Fallo el registro del Service Worker:', error);
             });
     });
+} else {
+    console.log('Tu navegador no soporta Service Workers.');
 }
 
 const acordes = ["Do", "Do#", "Re", "Re#", "Mi", "Fa", "Fa#", "Sol", "Sol#", "La", "Si♭", "Si"];
