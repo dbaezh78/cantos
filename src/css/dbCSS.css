@@ -531,7 +531,11 @@
         }
       }
 
-
+      table {
+        @media (min-width: 384px) {margin-left: -1.6%;}
+        @media (min-width: 768px) {margin-left: -0.4%;}
+        @media (min-width: 992px) {margin-left: 0%;}
+      }
 
       .dbtable {
         border: 1px solid #ddd;
@@ -543,7 +547,7 @@
         width: 1080px;
         */
 
-        @media (min-width: 384px) {width: 100%;}
+        @media (min-width: 384px) {width: 108%;}
         @media (min-width: 768px) {width: 100%;}
         @media (min-width: 992px) {width: 1024px;} /* antes 1080px*/
         /*
@@ -664,6 +668,7 @@
 
             @media (max-width: 384px) {
               width: 501px;
+              margin-left: -7px;
             }
             
 /*            @media (max-width: 768px) {

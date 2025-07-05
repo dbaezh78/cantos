@@ -1,0 +1,18 @@
+.r1::before, .r2::before {
+    @media (min-width: 384px) {
+        height: 115px;
+        margin-left: 104%;
+        margin-top: 0%;
+    }
+    @media (min-width: 768px) {
+
+    }
+    @media (min-width: 992px) {
+        font-size: 1.3rem;
+        height: 106px;
+        margin-left: 65%;
+        margin-top: 0%;
+
+    }
+}
+
