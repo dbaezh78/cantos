@@ -1,3 +1,15 @@
+.aloleft {
+    @media (min-width: 384px){
+        margin-left: 19%;
+    }
+    @media (min-width: 768px){
+        margin-left: 15%;
+    }
+    @media (min-width: 992px){
+        margin-left: 9%;
+    }
+}
+
 .line {
     @media (min-width: 768px){
         min-height: 2.rem;
@@ -7,17 +19,16 @@
     }
 }
 
-
 .ta::before, .tc::before {
     @media (min-width: 384px){
         font-size: 0.9rem;
-        margin-left: -9%;
-        margin-top: 0.6%;
+        margin-left: -11%;
+        margin-top: -0.4%;
     }
     @media (min-width: 768px){
         font-size: 2rem;
-        top: -6px;
-        left: 4%;
+        top: 4px;
+        left: 6%;
     }
     @media (min-width: 992px){
         font-size: 1rem;
@@ -29,16 +40,17 @@
 
 .hombres::before, .mujeres::before {
     @media (min-width: 384px){
-        font-size: 0.6rem;
-
+        margin-left: -22%;
+        font-size: 0.9rem;
     }
     @media (min-width: 768px){
         font-size: 1.5rem;
-        margin-left: 0%;
+        margin-left: -17%;
     }
     
     @media (min-width: 992px){
         font-size: 1.1rem;
+        margin-left: -10%;
     }
 }
 
@@ -66,13 +78,13 @@
             @media (min-width: 384px) {
             width: 100%;
             min-width: 384px;
-            margin-left: 2%;
+            margin-left: 5%;
         }
 
         @media (min-width: 768px) {
             width: 100%;
             min-width: 768px;
-            margin-left: 0%;
+            margin-left: 1%;
         }
 
         @media (min-width: 992px) {
@@ -140,3 +152,20 @@
         margin-left: 29%;
     }
 }
+
+
+.saudio {
+    @media (min-width: 384px) {
+        margin-left: -1.6%;
+        width: 107.93%;
+    }
+    @media (min-width: 768px) {
+        margin-left: -0.4%;
+        width: 100%;
+    }
+    @media (min-width: 992px) {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+

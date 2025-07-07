@@ -1,0 +1,154 @@
+.niño::before, .hombres::before, .mujeres::before {
+        @media (min-width: 384px){
+            left: 14%;
+        }
+}
+
+.line {
+    @media (min-width: 768px){
+        min-height: 2.rem;
+        }
+    @media (min-width: 992px) {
+        width: 896px;
+    }
+}
+
+.ta::before, .tc::before {
+    @media (min-width: 384px){
+        font-size: 0.9rem;
+        margin-left: -11%;
+        margin-top: -0.4%;
+    }
+    @media (min-width: 768px){
+        font-size: 2rem;
+        top: 4px;
+        left: 6%;
+    }
+    @media (min-width: 992px){
+        font-size: 1rem;
+        left: 3%;
+        top: 0.5%;
+
+    }
+}
+
+.hombres::before, .mujeres::before {
+    @media (min-width: 384px){
+        font-size: 0.6rem;
+    }
+    @media (min-width: 768px){
+        font-size: 1.5rem;
+        margin-left: -14%;
+    }
+    
+    @media (min-width: 992px){
+        font-size: 1.1rem;
+    }
+}
+
+
+    .lhym {
+        @media (min-width: 384px){
+            margin-left: 48px;
+
+    }
+
+        @media (min-width: 768px){
+            font-size: 0.8rem;
+            margin-left: 110px;
+
+    }
+        @media (min-width: 992px){
+            font-size: 0.8rem;
+            margin-left: 110px;
+
+    }
+}
+
+
+.izq {
+            @media (min-width: 384px) {
+            width: 100%;
+            min-width: 384px;
+            margin-left: 2%;
+        }
+
+        @media (min-width: 768px) {
+            width: 100%;
+            min-width: 768px;
+            margin-left: 0%;
+        }
+
+        @media (min-width: 992px) {
+            width: 100%;
+            min-width: 992px;
+            margin-left: 10%;
+
+        }
+    }
+    
+    .lyrics, .alyrics {
+        @media (min-width: 384px) {
+            font-size: 1.0rem;
+        }
+
+        @media (min-width: 768px) {
+            font-size: 2.1rem;
+        }
+        
+        @media (min-width: 992px) {
+            font-size: 1.22rem;
+        }
+    }
+
+    
+    .chord {
+        @media (min-width: 384px) {
+            font-size: 0.8rem;
+    }
+
+    @media (min-width: 768px) {
+            font-size: 1.3rem;
+    }
+
+    @media (min-width: 992px) {
+            font-size: 1rem;
+    }
+}
+
+        .csv {
+            @media (min-width: 384px) {
+                font-size: 0.8rem;
+        }
+
+        @media (min-width: 768px) {
+                font-size: 1.3rem;
+        }
+
+        @media (min-width: 992px) {
+                font-size: 1rem;
+        }
+    }
+
+    .r1::before {
+    @media (min-width: 384px) {
+        height: 57px;
+        margin-left: 60%;
+    }
+    @media (min-width: 768px) {
+        height: 108px;
+        margin-left: 63%;
+    }
+    @media (min-width: 992px) {
+        height: 67px;
+        margin-left: 29%;
+    }
+}
+
+
+.saudio {
+    @media (min-width: 768px) {
+        margin-left: -4%px;
+        width: 100.1%;
+    }
+}
