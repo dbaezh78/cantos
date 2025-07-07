@@ -658,28 +658,24 @@
           display: none;
       }
 
-          .saudio {
-            width: -webkit-fill-available;
-            display: table-cell;
-            background-color: #f1f3f4;
-            outline: none;
-            border-radius: 10px 10px 0px 0px;
+.saudio {
+    width: -webkit-fill-available;
+    display: table-cell;
+    background-color: #f1f3f4;
+    outline: none;
+    border-radius: 10px 10px 0px 0px;
 
-            @media (min-width: 384px) {
-              width: 107.836%;
-              margin-left: -1.512%;
-            }
-            
-            @media (min-width: 768px) {
-              margin-left: -0.4%;
-              width: 100.1%;
-            }
+    @media (min-width: 384px) { margin-left: -1.6%; width: 107.93%; }
+    @media (min-width: 768px) { margin-left: -0.4%; width: 100%; }
+    @media (min-width: 992px) { margin-left: 0%; width: 100%; }
+    
+    /*@media (min-width: 384px) { margin-left: -1.512%; width: 107.836%; }
+    @media (min-width: 768px) { margin-left: -0.4%; width: 100.1%; }
+    @media (min-width: 992px) { margin-left: -0.4%; width: 988px; }*/
 
-            @media (min-width: 992px) {
-              margin-left: -0.4%;
-              width: 988px;
-            }
         }
+
+
 
         .cno {
           font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;

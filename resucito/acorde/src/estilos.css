@@ -1,0 +1,954 @@
+/*
+NO DECÍS VOSOTROS…(Franklin Gothic Heavy)
+Yo os he mandado a segar(Franklin Gothic Medium)
+*/
+
+/* CSS PARA LIBRO DE CANTOS*/
+      @font-face {
+        font-family: 'Libre Franklin';
+        src: url('cantos/src/fonts/LibreFranklin-Bold.ttf') format('truetype');
+        font-weight: 700; /* Bold */
+        font-style: normal;
+        font-display: swap; /* Mejor experiencia de carga */
+      }
+
+      @font-face {
+        font-family: 'Material Symbols Outlined Local';
+        font-style: normal;
+        font-weight: 100 700;
+        src: url('/cantos/src/font/font.woff2') format('woff2'); /* Ajusta la ruta según tu estructura */
+      }
+
+      @font-face {
+        font-family: 'Fave';
+        src: local('Fave Script Bold Pro'), local('Fave-Script-Bold-Pro'),
+            url('/cantos/src/font/Fave-ScriptBoldPro.woff2') format('woff2'),
+            url('/cantos/src/font/Fave-ScriptBoldPro.woff') format('woff'),
+            url('/cantos/src/font/Fave-ScriptBoldPro.ttf') format('truetype');
+        font-weight: 700;
+        font-style: normal;
+      }
+
+
+      body {background-color: #f9f9f9;}
+
+      body:has(.precat) {background-color: #d7f0ff2b;}
+      body:has(.liturgia) {background-color: #ffffe4;}
+      body:has(.cat) {background-color: #ebf7fd;}
+      body:has(.eleccion) {background-color:#eaffea;}
+
+      a {text-decoration: none;}
+
+      em {
+        font-family: Fave;
+        font-size: 1.6rem;
+      }
+
+        .lyrics {
+        width: 100%;
+        position: relative;
+        white-space: nowrap; /* Evita saltos de línea inesperados */
+        font-size: 1rem; /* Tamaño consistente en todos los dispositivos */
+        font-family: 'Franklin Gothic Medium', Arial, sans-serif;  /* Fuente fija */
+        letter-spacing: normal; /* Evita espaciado variable */
+        font-style: normal;
+        z-index: 1;
+
+        @media (min-width: 384px) {font-size: 1.07rem;}
+        @media (min-width: 412px) {font-size: 1.2rem;}
+        @media (min-width: 576px) {font-size: 1.2rem;}
+        @media (min-width: 768px) {font-size: 1.7rem;}
+        @media (min-width: 992px) {font-size: 1.2rem;}
+        @media (min-width: 1200px) {font-size: 1.2rem;} /* HD (1080p) */
+        @media (min-width: 1920px) {font-size: 1.2rem;} /* FHD(2K/4K) */
+        }
+
+        .alyrics {
+        width: max-content;
+        position: relative;
+        white-space: nowrap; /* Evita saltos de línea inesperados */
+        font-family: 'Franklin Gothic Medium', 'Franklin Gothic', Arial, sans-serif; /* Fuente fija */
+        font-size: 1.2rem; /* Tamaño consistente en todos los dispositivos */
+        font-weight: bold;
+        font-weight: 900;
+        letter-spacing: normal; /* Evita espaciado variable */
+        z-index: 1;
+
+        @media (min-width: 384px) {font-size: 1.07rem;}
+        @media (min-width: 412px) {font-size: 1.2rem;}
+        @media (min-width: 576px) {font-size: 1.2rem;}
+        @media (min-width: 768px) {font-size: 1.7rem;}
+        @media (min-width: 992px) {font-size: 1.2rem;}
+        @media (min-width: 1200px) {font-size: 1.2rem;} /* HD (1080p) */
+        @media (min-width: 1920px) {font-size: 1.2rem;} /* FHD(2K/4K) */
+        }
+  
+        .csv {
+          font-style: italic;
+          color: red;
+          font-size: 1rem;
+
+          @media (min-width: 384px) {font-size: 1rem;}
+          @media (min-width: 412px) {font-size: 1rem;}
+          @media (min-width: 576px) {font-size: 1rem;}
+          @media (min-width: 768px) {font-size: 1.3rem;}
+          @media (min-width: 992px) {font-size: 1rem;}
+          @media (min-width: 1200px) {font-size: 1rem;} /* HD (1080p) */
+          @media (min-width: 1920px) {font-size: 1rem;} /* FHD(2K/4K) */
+        }
+  
+      /* Clase renombrada a .mso */
+      .mso {
+        font-family: 'Material Symbols Outlined Local';
+        font-weight: normal;
+        font-style: normal;
+        font-size: 24px;
+        letter-spacing: normal;
+        text-transform: none;
+        display: inline-block;
+        white-space: nowrap;
+        word-wrap: normal;
+        direction: ltr;
+        -webkit-font-feature-settings: 'liga';
+        -webkit-font-smoothing: antialiased;
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        color: white;
+        transition: transform 0.3s;
+
+      }
+
+      .mso {
+        vertical-align: middle;
+        cursor: pointer;
+        user-select: none;
+        transition: transform 0.3s;
+      }
+
+      .mso:hover{
+      transform: translateY(3px);
+      }
+
+      #down .mso:hover {
+        transform: translateY(3px); /* Efecto sutil al hover */
+      }
+
+
+      .line {
+        position: relative;
+        margin-bottom: 20px;
+        min-height: 0px;
+      }
+
+      #down {
+        cursor: pointer;
+        display: inline-block;
+      }
+
+      .chord {
+        background: none;
+        border: none;
+        appearance: none;
+        font-weight: bold;
+        color: red;
+        position: relative;
+        padding: 0;
+        margin: 0;
+        text-align: right;
+        font-size: 1rem;
+        margin-top: -3px;
+
+        @media (min-width: 384px) {font-size: 1rem;}
+        @media (min-width: 412px) {font-size: 1rem;}
+        @media (min-width: 576px) {font-size: 1rem;}
+        @media (min-width: 768px) {font-size: 1.3rem;}
+        @media (min-width: 992px) {font-size: 1rem;}
+        @media (min-width: 1200px) {font-size: 1rem;} /* HD (1080p) */
+        @media (min-width: 1920px) {font-size: 1rem;} /* FHD(2K/4K) */
+    }
+
+      .chords {
+        position: absolute;
+        top: -14px;
+        left: 0;
+        width: 100%;
+        height: 20px;
+        pointer-events: none; /* Permite clics en el texto debajo */
+      }
+
+      .chord-container {
+        position: absolute;
+        display: inline-block;
+        white-space: nowrap;
+        pointer-events: auto; /* Permite interactuar con los selects */
+
+        position: absolute;
+        transform: translateX(-50%); /* Centra el acorde en la posición */
+        white-space: nowrap;
+        pointer-events: auto;
+        top: -3px;        /* Este controla la posición del del acorde ↑↓ */
+      }
+
+      .no-arrow {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+      }
+
+      .asamblea {
+        font-weight: bold;
+        color: #2c3e50;
+      }
+
+      .contenedor-tabla {
+        width: 100%;
+        max-width: max-content;
+        margin: 20px auto;
+        overflow-x: auto;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .home {
+        width: 28%;
+        background-color: transparent;
+        color: black;
+        transition: transform 0.3s;
+        }
+
+      .home:hover{
+      transform: translateY(3px);
+      }
+
+        .titulo {
+          /* Estilo base (Mobile First) */
+          font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
+          color: red;
+          padding: 12px 15px;
+          margin: 0 auto;
+          text-align: center;
+          font-size: 1.5rem; 
+          background-color: white;
+          font-weight: bold;
+          box-sizing: border-box;
+          padding:  0px 12px 0px 12px;
+          background-color: transparent;
+        
+          @media (min-width: 384px) {
+          }
+
+          /* Tablets pequeñas (≥576px) */
+          @media (min-width: 576px) {
+            font-size: 1.35rem;
+            padding: 14px 20px;
+          }
+
+              /* Tablets (≥768px) */
+          @media (min-width: 768px) {
+            font-size: 1.5rem; /* Tu tamaño original */
+            max-width: 100%;
+            border-radius: 6px;
+          }
+
+          /* Laptops (≥992px) */
+          @media (min-width: 992px) {
+            max-width: 100%;
+            font-size: 1.7rem;
+            padding:  0px 12px 0px 12px;
+          }
+        
+          /* Pantallas grandes (≥1200px) */
+          @media (min-width: 1200px) {
+            max-width: 100%; /* Mismo ancho que .subtitulo */
+            font-size: 1.8rem;
+            padding:  0px 12px 0px 12px;
+          }
+        
+          /* Pantallas extra grandes (≥1920px) */
+          @media (min-width: 1201px) {
+            min-width: 100%;
+            font-size: 2rem;
+          }
+        }
+
+
+        .subtitulo {
+          /* Estilo base (móviles pequeños) */
+          width: 75%;
+          max-width: 75%;
+          padding: 0% 1% 1% 1%;
+          box-sizing: border-box;
+          margin: 0 auto;
+          text-align: center;
+          font-size: 0.9rem;
+          background-color: white;
+          color: #605C5F;
+          font-weight: bold;
+          background-color: transparent;
+
+          @media (min-width: 384px) {
+            width: 100%;
+            font-size: 1.1rem;
+          }
+        
+          /* Tablets pequeñas (vertical) */
+          @media (min-width: 576px) {
+            width: 540px;
+            font-size: 1.1rem;
+          }
+        
+          /* Tablets (horizontal) */
+          @media (min-width: 768px) {
+            width: 100%;
+            font-size: 1.5rem;
+          }
+          
+          /* Laptops pequeñas */
+          @media (min-width: 992px) {
+            width: 75%;
+            font-size: 1.3rem;
+            
+          }
+          
+          /* Pantallas HD (1080p) */
+          @media (min-width: 1200px) {
+            width: 75%;
+            font-size: 1.2rem;
+          }
+          
+          /* Pantallas grandes (2K/4K) */
+          @media (min-width: 1920px) {
+            width: 75%;
+            font-size: 0.9rem;
+          }
+        }
+
+
+        .encabezado-columnas {
+          background-color: #03527a;
+          color: white;
+      }
+
+
+      .enlace-columna {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+
+      .enlace-columna:hover {
+        text-decoration: underline;
+      }
+
+
+      /* Modifica el contenedor de columnas para tablet */
+      .contenedordecolumnas {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-left: 20px;
+
+        @media (min-width: 268px) and (max-width: 394px) {
+            margin-left: 0px;
+          }
+
+        @media (min-width: 768px) and (max-width: 991px) {
+            flex-direction: column;
+          }
+
+        @media (min-width: 992px) {
+            flex-direction: row;
+          }
+
+      }
+
+      .grupo-columnas {
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content:flex-start;
+        margin: 0 auto;
+        margin-left: 0px;
+        /*margin-top: 30px;*/
+
+        @media (min-width: 268px) and (max-width: 394px) {
+          width: 100%;
+          max-width: 100%;
+          }
+
+        @media (min-width: 768px) and (max-width: 991px) {
+            width: 100%;
+            max-width: 100%;
+            margin-left: 0;
+          }
+
+        @media (min-width: 992px) {
+              width: 50%;
+              max-width: 50%;
+          }
+        }
+
+        .columnas-apiladas {
+          width: 100% !important;
+          max-width: 100% !important;
+          margin: 0 auto;
+          margin-left: 21px;
+          flex-direction: column;
+        }
+
+        /* Estado apilado */
+
+      .grupo-derecho {
+        margin-top: 0px;
+
+        @media (min-width: 768px) and (max-width: 991px) {
+          margin-top: -6%;
+          max-width: 100%;}
+      }
+
+      .iflecha {
+        font-size: 1.5em;
+        padding: 5px 15px;
+        cursor: pointer;
+        border: 1px solid #d7d8da;
+        border-radius: 2em;
+      }
+
+      .dflecha {
+        font-size: 1.5em;
+        padding: 5px 15px;
+        cursor: pointer;
+        border: 1px solid #d7d8da;
+        border-radius: 2em;
+      }
+
+      .izq {
+        width: 100%;
+        max-width: 96%;
+        padding: 3% 0 0 0;
+        margin-top: 0%;
+        margin-left: 4%;
+
+        @media (min-width: 384px) {
+          width: 100%;
+          max-width: 96%;
+          margin-top: 0%;
+          margin-left: 4%;}
+          
+        @media (min-width: 768px) and (max-width: 991px) {
+          width: 100%;
+          max-width: 98%;
+          margin-top: 0px;
+          margin-left: 1%;}}
+
+      .der {
+        width: 100%;
+        max-width: 96%;
+        padding: 3% 0 0 0;
+        margin-top: 0%;
+        margin-left: 4%;
+
+        @media (min-width: 384px) {
+          width: 100%;
+          max-width: 96%;
+          margin-top: 0%;
+          margin-left: 4%;
+        }
+
+        @media (min-width: 768px) and (max-width: 991px) {
+          width: 100%;
+          max-width: 98%;
+          padding: 10% 0 0 0;
+          margin-top: 0px;
+          margin-left: 1%;
+        }
+      }
+
+      .dbtable {
+        width: 1080px;
+        border: 1px solid #ddd;
+        padding: 2px 7px 2px 7px;
+        border-radius: 0px 0px 0px 0px;
+        background: white;
+        text-align: left;
+        /*max-width: max-content;*/
+
+        @media (min-width: 268px) {width: 100%;}
+        /*@media (min-width: 369px) {width: 100%;}*/
+        @media (min-width: 384px) {width: 100%;}
+        @media (min-width: 576px) {width: 100%;}
+        @media (min-width: 768px) {width: 100%;}
+        @media (min-width: 992px) {width: 1080px;}
+
+      }
+
+          .dbtable:has(.precat) {background-color: white;}
+          .dbtable:has(.liturgia) {background-color: #FFFFCB;}
+          .dbtable:has(.cat) {background-color: #bde9ff;}
+          .dbtable:has(.eleccion) {background-color:#CEFFCF;}
+
+          th {
+            text-align: center;
+            /* min-width: auto;*/
+          }
+
+          .precat, .liturgia, .cat, .eleccion {
+            font-size: larger;
+            font-family: Franklin Gothic;
+            color: black; 
+            border: 1px solid black;
+            transition: all 0.7s ease;
+            cursor: pointer;
+            /* width: 30%; */
+          }
+          .cat{
+            color: white;
+          }
+
+          .fup {
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        
+        .fup:hover {
+            animation: rebote 2.5s cubic-bezier(0.5, 0.05, 0.5, 1.5) 10; /* ¡10 repeticiones! */
+            transform-origin: bottom;
+        }
+        
+        @keyframes rebote {
+            0%, 100% { transform: translateY(0) scale(1, 1); }
+            /* Primer rebote (alto) */
+            10% { transform: translateY(-15px) scale(1.1, 0.9); }
+            20% { transform: translateY(0) scale(0.9, 1.1); }
+            /* Rebotes posteriores (altura decreciente) */
+            30% { transform: translateY(-10px) scale(1.05, 0.95); }
+            40% { transform: translateY(0) scale(0.95, 1.05); }
+            50% { transform: translateY(-7px) scale(1.03, 0.97); }
+            60% { transform: translateY(0) scale(0.97, 1.03); }
+            70% { transform: translateY(-5px) scale(1.02, 0.98); }
+            80% { transform: translateY(0) scale(0.98, 1.02); }
+            90% { transform: translateY(-2px) scale(1.01, 0.99); }
+        }        /* Efecto al pasar el mouse - solo elevación */
+
+
+    .precat:hover, .liturgia:hover, .cat:hover, .eleccion:hover
+        {
+            box-shadow: 0 4px 8px rgba(0,0,0,60.00); /* Sombra más pronunciada */
+            transform: translateY(-1px); /* Movimiento sutil hacia arriba */
+        }
+
+          .precat {background-color: white;}
+          .liturgia {background-color: #FFFFCB;}
+          .cat {background-color: rgb(33 150 243);}
+          .eleccion {background-color: #CEFFCF;}
+    
+  .piecategoria, .ppascua, .ppenteco, 
+  .plaudes, .pcuaresma, .padviento, 
+  .pentrada, .ppenit {
+  font-family: 'Franklin Gothic Medium';
+  font-weight: bold;
+  }
+
+          .piecategoria {
+            background-color: white;
+            border: 1px solid goldenrod;
+            display: contents; /*inline-block;*/
+            border-radius: 0px;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .ppascua {color: rgb(33 150 243);}
+        .ppenteco {color: #f0433d;}
+        .plaudes {color: rgb(56, 162, 6);}
+        .pcuaresma {color: purple;}
+        .padviento {color: purple;}
+        .pentrada {color: #3dcef0;}
+        .ppenit {color:purple;}
+      
+
+        .dh {
+          display: none;
+      }
+
+
+          .saudio {
+            width: 99.89%;
+            display: table-cell;
+            background-color: #f1f3f4;
+            outline: none;
+            border-radius: 10px 10px 0px 0px;
+            margin-left: 1px;
+            
+            @media (max-width: 384px) {
+              width: 100%;
+              padding: 1px 9px 1px 9px;
+
+            }
+
+        }
+
+        .cno {
+          font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+          text-align: center;
+        }
+
+        .ta, .tc, .ta1, .ta2, .ta3, .niño, .hombres, .mujeres {
+          position: relative;
+          padding-left: 1.5em;
+        }
+
+        .ta::before, .tc::before, 
+        .ta1::before, .ta2::before, 
+        .ta3::before, .niño::before, 
+        .hombres::before, .mujeres::before {
+          position: absolute;
+          left: -6%;
+          top: 0px;
+          font-size: 18px;
+          color: #80808082;
+          font-family: Arial, sans-serif;
+          line-height: 1.3;
+          font-weight: bold;
+
+          @media (min-width: 768px) and (max-width: 991px) {
+            left: -4%;}
+        }
+
+      .ta::before {content: "A.";}
+      .tc::before {content: "C.";}
+      .ta1::before {content: "A1.";}
+      .ta2::before {content: "A2.";}
+      .ta3::before {content: "A3.";}
+      .niño::before {content: "Niños:";}
+      .hombres::before {content: "Hombres:";}
+      .mujeres::before {content: "Mujeres:";}
+
+      .navegar{
+        padding: 0.5% 1% 2% 1%;  /* top, right, bottom, left*/
+        text-align: center;
+      }
+
+      .nav {
+        display: inline-block; 
+        margin: 0 20px;
+        cursor: pointer;
+      }
+
+      /* ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ OCULTAR CONTENIDO ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ */
+      .hline {
+          cursor: pointer;
+        }
+        
+        .dbhide {
+          visibility: hidden;
+          opacity: 0;
+          height: 0;
+          overflow: hidden;
+        }
+        /* ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ OCULTAR CONTENIDO ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ */
+
+        /* ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ CSS PARA REPRODUCTOR ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ */
+
+      /* Estilos para el reproductor */
+      #reproductor-audio {
+        background: rgba(0,0,0,0.05);
+        transition: all 0.3s ease;
+      }
+
+      /* Estilos para el botón de control */
+      .audio-control {
+        cursor: pointer;
+        display: inline-block;
+        transition: transform 0.2s ease;
+      }
+
+      .audio-control:hover {
+        transform: scale(1.05);
+      }
+
+      .audio-icon {
+        font-size: 28px;
+        vertical-align: middle;
+        color: white;
+        transition: all 0.3s ease;
+      }
+      /* ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ CSS PARA REPRODUCTOR ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ */
+
+
+      /* ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ CSS TRASTE ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ */
+
+      select.dbMiTraste {
+        background-color: transparent;
+        color: white;
+        padding: 5px;
+        font-weight: bold;
+        border: none;
+        appearance: none;
+        font-size: 19PX;
+        text-align: center;
+        cursor: pointer;
+      }
+
+      /* Estilo para las opciones del select */
+      select.dbMiTraste option {
+        background-color: #333;
+        color: white;
+      }
+
+      /* ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ CSS TRASTE ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ */
+
+
+      /* ACLARACIONES
+
+      /* !important; 
+      Es una propiedad CSS que da máxima prioridad, anulando cualquier otra declaración que pueda estar afectando al mismo elemento.
+
+      */
+
+
+      .last {
+        padding-bottom: 7%;
+
+        @media (min-width: 384px) {padding-bottom: 5%;}
+        @media (min-width: 412px) {padding-bottom: 5%;}
+        @media (min-width: 576px) {padding-bottom: 4%;}
+        @media (min-width: 768px) {padding-bottom: 4%;}
+        @media (min-width: 992px) {padding-bottom: 7%;}
+        @media (min-width: 1200px) {padding-bottom: 7%;} /* HD (1080p) */
+        @media (min-width: 1920px) {padding-bottom: 7%;} /* FHD(2K/4K) */
+      }
+
+            .primer {
+        padding-top: 7%;
+
+        @media (min-width: 384px) {padding-top: 5%;}
+        @media (min-width: 412px) {padding-top: 5%;}
+        @media (min-width: 576px) {padding-top: 4%;}
+        @media (min-width: 768px) {padding-top: 4%;}
+        @media (min-width: 992px) {padding-top: 7%;}
+        @media (min-width: 1200px) {padding-top: 7%;} /* HD (1080p) */
+        @media (min-width: 1920px) {padding-top: 7%;} /* FHD(2K/4K) */
+      }
+
+/*  MSO1*/
+
+.mso1, .mso2 {
+  font-family: 'Material Symbols Outlined Local';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+  border: 1px solid goldenrod;
+  border-radius: 2em;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.mso2 {
+  border: 0px solid goldenrod;
+  border-radius: 0em;
+}
+
+
+/* MOSTRAR IMAGENES */
+
+.notas-enlace {
+  font-family: "Franklin Gothic Medium";
+  padding: 2px;
+  display: inline-block;
+  margin: 2px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.17s ease;
+}
+
+.notas-enlace:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.90); /* Sombra más pronunciada */
+    transform: translateY(-1px); /* Movimiento sutil hacia arriba */
+}
+
+.notas-columna {
+  float: left;
+  color: red;
+}
+
+#imagen-container {
+  display: none;
+  position: relative;  /* Cambiado de 'relative' a 'fixed' */
+  background: white;
+  border: 1px solid #f2e5e5;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  z-index: 1000;
+  align-items: center;
+  box-sizing: border-box;
+  /*  width: 15%;*/
+}
+
+/*****************  BUSCADOR EN EL CANTO ******************/
+
+.buscador-cantos {
+  margin-left: auto;  /* Esto empuja el div a la derecha */
+  width: fit-content; /* Ajusta el ancho al contenido */
+  position: relative; /* Necesario para el dropdown */
+}
+
+#inputBusqueda {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  width: 200px;
+  text-align: left;
+  background-color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#inputBusqueda:hover {
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.55);
+}
+
+#inputBusqueda:focus {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  outline: none;
+  border-color: goldenrod;
+}
+
+#resultadosBusqueda {
+  position: absolute;
+  right: 0;
+  background: white;
+  border: 1px solid #ddd;
+  margin-top: 5px;
+  z-index: 1000;
+  display: none; /* Oculto por defecto */
+}
+
+/* UDPATE BUSCADOR*/
+
+#resultadosBusqueda {
+    /*position: relative;*/ /* NO ME GUSTA COMO LO HACE CON ESTO*/
+    position: absolute;
+    max-height: 400px;
+    overflow-y: auto;
+    background-color: aliceblue;
+}
+
+.resultados-sidebar {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 250px;
+    background: white;
+    border-left: 1px solid #ddd;
+    padding: 10px;
+    max-height: 400px;
+    overflow-y: auto;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+    display: none;
+}
+
+#resultadosBusqueda:hover .resultados-sidebar {
+    display: block;
+}
+
+.resultado-item {
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
+
+.resultado-item:hover {
+    background-color: #03527a;
+}
+
+.resultado-item {
+  font-family: sans-serif;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  text-align: left;
+}
+
+.resultado-item:hover {
+  background: #03527a;
+  color: white;
+}
+
+
+/*****************  BUSCADOR EN EL CANTO ******************/
+
+.dbright {
+  display: flex;
+  justify-content: flex-end; /* Alinea todo en la celda a la derecha */
+}
+
+
+#imagen-nota {
+  max-width: 29em;
+  width: max-content;
+  object-fit: contain;
+  align-content: center;
+  position: relative;
+  height: 7em;
+}
+
+.dbpict {
+
+  max-width: 7em;
+  width: max-content;
+  object-fit: contain;
+  align-content: center;
+  position: relative;
+  height: 7em;
+}
+
+/* OCULTAR OPCIONES*/
+
+/* Agrega esto a tu hoja de estilos */
+.odb {
+  display: table-row;
+  /*block !important;*/
+}
+
+.zboton {
+  font-size: 20px;
+  border: 1px solid darkgoldenrod !important;
+  color: red;
+}
+
+
+.fleft, .fright {
+  color: red;
+  transition: transform 0.3s;
+}
+
+.fleft {float: left;}
+.fright {float: right;}
+
+.fleft:hover {
+  transform: translateX(-5px); /* Desplaza hacia la izquierda */
+  transition: transform 0.3s ease; /* Agrega una transición suave */
+}
+
+.fright:hover {
+  transform: translateX(5px); /* Desplaza hacia la derecha */
+  transition: transform 0.3s ease; /* Agrega una transición suave */
+}
+
+
+
+/* OCULTAR CONTENIDO MENOS EL PRIMERO */
+
+
+
+/* OCULTAR CONTENIDO MENOS EL PRIMERO */
