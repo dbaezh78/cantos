@@ -47,7 +47,6 @@ window.addEventListener('appinstalled', () => {
     deferredPrompt = null;
 });
 
-
 const acordes = ["Do", "Do#", "Re", "Re#", "Mi", "Fa", "Fa#", "Sol", "Sol#", "La", "Si♭", "Si"];
 const dbTrastes = ["♫ Traste", "1ᵉʳ traste", "2ᵒ traste", "3ᵉʳ traste", "4ᵒ traste", "5ᵒ traste", "6ᵒ traste", "7ᵒ traste", "8ᵒ traste", "9ᵒ traste", "10ᵒ traste"];
 
@@ -91,19 +90,42 @@ function calcularAcordeDesplazado(acorde, desplazamiento) {
 }
 
 function configurarEventosAcordes() {
+    // Escucha cambios en cualquier selector de acorde
     document.querySelectorAll('.chord').forEach(select => {
         select.addEventListener('change', function() {
-            const defaultAcorde = this.dataset.default || "";
-            const currentAcorde = this.value;
+            // El acorde seleccionado es el "nuevo tono base" para todos los acordes.
+            const nuevoTonoBase = this.value; // El acorde que el usuario seleccionó en ESTE selector.
+            
+            // Si el nuevo tono base está vacío, no hacemos nada o reseteamos.
+            if (nuevoTonoBase === "") {
+                // Aquí podrías decidir resetear todos los acordes a su valor original
+                // o simplemente no hacer nada si el usuario selecciona una opción vacía.
+                // Por ahora, vamos a mantener la lógica de transposición solo con acordes válidos.
+                return; 
+            }
 
-            // Solo calcular desplazamiento si ambos acordes no están vacíos
-            const desplazamiento = (defaultAcorde && currentAcorde)
-                ? obtenerIndiceAcorde(currentAcorde) - obtenerIndiceAcorde(defaultAcorde)
-                : 0;
+            // Encontrar el acorde original que representa este selector de "tono base".
+            // Para esto, necesitamos una forma de saber qué acorde "original" representa el select.
+            // Actualmente, dataset.default es el acorde original.
+            const acordeOriginalDeEsteSelector = this.dataset.default;
 
+            // Calcular el desplazamiento global desde el acorde original a la nueva selección.
+            const indiceOriginal = obtenerIndiceAcorde(acordeOriginalDeEsteSelector);
+            const indiceNuevo = obtenerIndiceAcorde(nuevoTonoBase);
+
+            if (indiceOriginal === -1 || indiceNuevo === -1) {
+                // Si alguno de los acordes no es válido, no podemos calcular el desplazamiento.
+                return;
+            }
+
+            const desplazamientoGlobal = indiceNuevo - indiceOriginal;
+
+            // Aplicar el desplazamiento global a TODOS los selectores de acorde.
             document.querySelectorAll('.chord').forEach(otroSelect => {
-                const otroDefault = otroSelect.dataset.default || "";
-                otroSelect.value = calcularAcordeDesplazado(otroDefault, desplazamiento);
+                const otroAcordeOriginal = otroSelect.dataset.default;
+                if (otroAcordeOriginal) { // Solo si tiene un acorde original definido
+                    otroSelect.value = calcularAcordeDesplazado(otroAcordeOriginal, desplazamientoGlobal);
+                }
             });
         });
     });
