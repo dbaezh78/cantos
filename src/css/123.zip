@@ -1,0 +1,5735 @@
+{
+    "chunks": [
+        {
+            "type": "txt",
+            "chunk_number": 1,
+            "lines": [
+                {
+                    "line_number": 1,
+                    "text": "/*  Creado por Carlos David */"
+                },
+                {
+                    "line_number": 2,
+                    "text": ""
+                },
+                {
+                    "line_number": 3,
+                    "text": "/* CSS PARA LIBRO DE CANTOS*/"
+                },
+                {
+                    "line_number": 4,
+                    "text": "@font-face {font-family: 'Libre Franklin';src: url('cantos/src/fonts/LibreFranklin-Bold.ttf') format('truetype');font-weight: 700; /* Bold */font-style: normal;font-display: swap; /* Mejor experiencia de carga */}"
+                },
+                {
+                    "line_number": 5,
+                    "text": "@font-face {font-family: 'Material Symbols Outlined Local';font-style: normal;font-weight: 100 700;src: url('/cantos/src/font/font.woff2') format('woff2'); /* Ajusta la ruta seg\u00fan tu estructura */}"
+                },
+                {
+                    "line_number": 6,
+                    "text": "@font-face {font-family: 'Fave';src: local('Fave Script Bold Pro'), local('Fave-Script-Bold-Pro'),url('/cantos/src/font/Fave-ScriptBoldPro.woff2') format('woff2'),url('/cantos/src/font/Fave-ScriptBoldPro.woff') format('woff'),url('/cantos/src/font/Fave-ScriptBoldPro.ttf') format('truetype');font-weight: 700;font-style: normal;}"
+                },
+                {
+                    "line_number": 7,
+                    "text": "@font-face {font-family: 'Franklin Gothic Medium';src: url('/cantos/src/font/FranklinGothicMedium.ttf') format('truetype');font-weight: normal;font-style: normal;font-display: swap;}"
+                },
+                {
+                    "line_number": 8,
+                    "text": ""
+                },
+                {
+                    "line_number": 9,
+                    "text": "body {"
+                },
+                {
+                    "line_number": 10,
+                    "text": "background-color: #f9f9f9;"
+                },
+                {
+                    "line_number": 11,
+                    "text": "font-family: 'Franklin Gothic Medium', Arial, sans-serif !important;"
+                },
+                {
+                    "line_number": 12,
+                    "text": "}"
+                },
+                {
+                    "line_number": 13,
+                    "text": ""
+                },
+                {
+                    "line_number": 14,
+                    "text": "body::-webkit-scrollbar {"
+                },
+                {
+                    "line_number": 15,
+                    "text": "display: none;"
+                },
+                {
+                    "line_number": 16,
+                    "text": "}"
+                },
+                {
+                    "line_number": 17,
+                    "text": ""
+                },
+                {
+                    "line_number": 18,
+                    "text": "/*  ::-webkit-scrollbar { width: 2px;   /* Grosor vertical  * / height: 2px;  /* Grosor horizontal (si hay scroll horizontal)  * /}*/"
+                },
+                {
+                    "line_number": 19,
+                    "text": ""
+                },
+                {
+                    "line_number": 20,
+                    "text": "/*body:has(.precat) {background-color: #d7f0ff2b;}*/"
+                },
+                {
+                    "line_number": 21,
+                    "text": "body:has(.precat) {background-color: #282828;}"
+                },
+                {
+                    "line_number": 22,
+                    "text": "body:has(.liturgia) {background-color: #ffffe4;}"
+                },
+                {
+                    "line_number": 23,
+                    "text": "body:has(.cat) {background-color: #ebf7fd;}"
+                },
+                {
+                    "line_number": 24,
+                    "text": "body:has(.eleccion) {background-color:#eaffea;}"
+                },
+                {
+                    "line_number": 25,
+                    "text": ""
+                },
+                {
+                    "line_number": 26,
+                    "text": "a {"
+                },
+                {
+                    "line_number": 27,
+                    "text": "text-decoration: none;"
+                },
+                {
+                    "line_number": 28,
+                    "text": "}"
+                },
+                {
+                    "line_number": 29,
+                    "text": ""
+                },
+                {
+                    "line_number": 30,
+                    "text": "em {"
+                },
+                {
+                    "line_number": 31,
+                    "text": "font-family: Fave;"
+                },
+                {
+                    "line_number": 32,
+                    "text": "font-size: 1.6rem;"
+                },
+                {
+                    "line_number": 33,
+                    "text": "}"
+                },
+                {
+                    "line_number": 34,
+                    "text": ""
+                },
+                {
+                    "line_number": 35,
+                    "text": ".lyrics {"
+                },
+                {
+                    "line_number": 36,
+                    "text": "width: 100%;"
+                },
+                {
+                    "line_number": 37,
+                    "text": "position: relative;"
+                },
+                {
+                    "line_number": 38,
+                    "text": "white-space: nowrap; /* Evita saltos de l\u00ednea inesperados */"
+                },
+                {
+                    "line_number": 39,
+                    "text": "font-family: 'Franklin Gothic Medium', Arial, sans-serif;  /* Fuente fija */"
+                },
+                {
+                    "line_number": 40,
+                    "text": "letter-spacing: normal; /* Evita espaciado variable */"
+                },
+                {
+                    "line_number": 41,
+                    "text": "font-style: normal;"
+                },
+                {
+                    "line_number": 42,
+                    "text": "z-index: 1;"
+                },
+                {
+                    "line_number": 43,
+                    "text": ""
+                },
+                {
+                    "line_number": 44,
+                    "text": "/*@media (min-width: 384px) {font-size: 1.07rem;}"
+                },
+                {
+                    "line_number": 45,
+                    "text": "@media (min-width: 768px) {font-size: 1.612rem;}"
+                },
+                {
+                    "line_number": 46,
+                    "text": "@media (min-width: 992px) {font-size: 1.22rem;}*/"
+                },
+                {
+                    "line_number": 47,
+                    "text": "}"
+                },
+                {
+                    "line_number": 48,
+                    "text": ""
+                },
+                {
+                    "line_number": 49,
+                    "text": ".alyrics {"
+                },
+                {
+                    "line_number": 50,
+                    "text": "width: max-content;"
+                },
+                {
+                    "line_number": 51,
+                    "text": "position: relative;"
+                },
+                {
+                    "line_number": 52,
+                    "text": "white-space: nowrap; /* Evita saltos de l\u00ednea inesperados */"
+                },
+                {
+                    "line_number": 53,
+                    "text": "font-family: 'Franklin Gothic Medium', 'Franklin Gothic', Arial, sans-serif; /* Fuente fija */"
+                },
+                {
+                    "line_number": 54,
+                    "text": "font-weight: bold;"
+                },
+                {
+                    "line_number": 55,
+                    "text": "font-weight: 900;"
+                },
+                {
+                    "line_number": 56,
+                    "text": "letter-spacing: normal; /* Evita espaciado variable */"
+                },
+                {
+                    "line_number": 57,
+                    "text": "z-index: 1;"
+                },
+                {
+                    "line_number": 58,
+                    "text": ""
+                },
+                {
+                    "line_number": 59,
+                    "text": "/*@media (min-width: 384px) {font-size: 1.07rem;}"
+                },
+                {
+                    "line_number": 60,
+                    "text": "@media (min-width: 768px) {font-size: 1.62rem;}"
+                },
+                {
+                    "line_number": 61,
+                    "text": "@media (min-width: 992px) {font-size: 1.23rem;}*/"
+                },
+                {
+                    "line_number": 62,
+                    "text": "}"
+                },
+                {
+                    "line_number": 63,
+                    "text": ""
+                },
+                {
+                    "line_number": 64,
+                    "text": ".alyrics, .lyrics {"
+                },
+                {
+                    "line_number": 65,
+                    "text": "@media (min-width: 384px){font-size: 1.3rem;}"
+                },
+                {
+                    "line_number": 66,
+                    "text": "@media (min-width: 768px){font-size: 2.5rem;}"
+                },
+                {
+                    "line_number": 67,
+                    "text": "@media (min-width: 992px){font-size: 1.23rem;}"
+                },
+                {
+                    "line_number": 68,
+                    "text": "}"
+                },
+                {
+                    "line_number": 69,
+                    "text": ""
+                },
+                {
+                    "line_number": 70,
+                    "text": ".chord-container {"
+                },
+                {
+                    "line_number": 71,
+                    "text": "position: absolute;"
+                },
+                {
+                    "line_number": 72,
+                    "text": "display: inline-block;"
+                },
+                {
+                    "line_number": 73,
+                    "text": "white-space: nowrap;"
+                },
+                {
+                    "line_number": 74,
+                    "text": "pointer-events: auto; /* Permite interactuar con los selects */"
+                },
+                {
+                    "line_number": 75,
+                    "text": ""
+                },
+                {
+                    "line_number": 76,
+                    "text": "position: absolute;"
+                },
+                {
+                    "line_number": 77,
+                    "text": "transform: translateX(-50%); /* Centra el acorde en la posici\u00f3n */"
+                },
+                {
+                    "line_number": 78,
+                    "text": "white-space: nowrap;"
+                },
+                {
+                    "line_number": 79,
+                    "text": "pointer-events: auto;"
+                },
+                {
+                    "line_number": 80,
+                    "text": "top: -3px;        /* Este controla la posici\u00f3n del del acorde \u2191\u2193 */"
+                },
+                {
+                    "line_number": 81,
+                    "text": "}"
+                },
+                {
+                    "line_number": 82,
+                    "text": ""
+                },
+                {
+                    "line_number": 83,
+                    "text": ".chord {"
+                },
+                {
+                    "line_number": 84,
+                    "text": "background: none;"
+                },
+                {
+                    "line_number": 85,
+                    "text": "border: none;"
+                },
+                {
+                    "line_number": 86,
+                    "text": "appearance: none;"
+                },
+                {
+                    "line_number": 87,
+                    "text": "font-weight: bold;"
+                },
+                {
+                    "line_number": 88,
+                    "text": "color: rgb(196 76 75);"
+                },
+                {
+                    "line_number": 89,
+                    "text": "position: relative;"
+                },
+                {
+                    "line_number": 90,
+                    "text": "padding: 0;"
+                },
+                {
+                    "line_number": 91,
+                    "text": "margin: 0;"
+                },
+                {
+                    "line_number": 92,
+                    "text": "text-align: right;"
+                },
+                {
+                    "line_number": 93,
+                    "text": "outline: none;"
+                },
+                {
+                    "line_number": 94,
+                    "text": ""
+                },
+                {
+                    "line_number": 95,
+                    "text": "@media (min-width: 384px) {"
+                },
+                {
+                    "line_number": 96,
+                    "text": "font-size: 1rem;"
+                },
+                {
+                    "line_number": 97,
+                    "text": "margin-left: 5px;"
+                },
+                {
+                    "line_number": 98,
+                    "text": "}"
+                },
+                {
+                    "line_number": 99,
+                    "text": "@media (min-width: 768px) {font-size: 1.83rem;}"
+                },
+                {
+                    "line_number": 100,
+                    "text": "@media (min-width: 992px) {font-size: 1rem;}"
+                },
+                {
+                    "line_number": 101,
+                    "text": "/*"
+                },
+                {
+                    "line_number": 102,
+                    "text": "@media (min-width: 576px) {font-size: 1rem;}"
+                },
+                {
+                    "line_number": 103,
+                    "text": "@media (min-width: 1200px) {font-size: 1rem;}   // HD (1080p)"
+                },
+                {
+                    "line_number": 104,
+                    "text": "@media (min-width: 1920px) {font-size: 1rem;}   // FHD(2K/4K)"
+                },
+                {
+                    "line_number": 105,
+                    "text": "@media (min-width: 412px) {font-size: 1rem;} */"
+                },
+                {
+                    "line_number": 106,
+                    "text": "}"
+                },
+                {
+                    "line_number": 107,
+                    "text": ""
+                },
+                {
+                    "line_number": 108,
+                    "text": ".chords {"
+                },
+                {
+                    "line_number": 109,
+                    "text": "position: absolute;"
+                },
+                {
+                    "line_number": 110,
+                    "text": "left: 0;"
+                },
+                {
+                    "line_number": 111,
+                    "text": "width: 100%;"
+                },
+                {
+                    "line_number": 112,
+                    "text": "height: 20px;"
+                },
+                {
+                    "line_number": 113,
+                    "text": "pointer-events: none; /* Permite clics en el texto debajo */"
+                },
+                {
+                    "line_number": 114,
+                    "text": ""
+                },
+                {
+                    "line_number": 115,
+                    "text": "@media (min-width: 384px) {"
+                },
+                {
+                    "line_number": 116,
+                    "text": "top: -10px;"
+                },
+                {
+                    "line_number": 117,
+                    "text": "}"
+                },
+                {
+                    "line_number": 118,
+                    "text": "@media (min-width: 768px) {"
+                },
+                {
+                    "line_number": 119,
+                    "text": "margin-top: -12px;"
+                },
+                {
+                    "line_number": 120,
+                    "text": "/*  top: -17px;*/"
+                },
+                {
+                    "line_number": 121,
+                    "text": "}"
+                },
+                {
+                    "line_number": 122,
+                    "text": "@media (min-width: 992px) {"
+                },
+                {
+                    "line_number": 123,
+                    "text": "margin-top: -3px;"
+                },
+                {
+                    "line_number": 124,
+                    "text": "}"
+                },
+                {
+                    "line_number": 125,
+                    "text": "}"
+                },
+                {
+                    "line_number": 126,
+                    "text": ""
+                },
+                {
+                    "line_number": 127,
+                    "text": ".csv {"
+                },
+                {
+                    "line_number": 128,
+                    "text": "color: rgb(196 76 75);;"
+                },
+                {
+                    "line_number": 129,
+                    "text": "@media (min-width: 384px) {font-size: 1rem;}"
+                },
+                {
+                    "line_number": 130,
+                    "text": "@media (min-width: 768px) {font-size: 1.7rem;}"
+                },
+                {
+                    "line_number": 131,
+                    "text": "@media (min-width: 992px) {font-size: 1rem;}"
+                },
+                {
+                    "line_number": 132,
+                    "text": ""
+                },
+                {
+                    "line_number": 133,
+                    "text": "/*"
+                },
+                {
+                    "line_number": 134,
+                    "text": "font-style: italic;"
+                },
+                {
+                    "line_number": 135,
+                    "text": "@media (min-width: 412px) {font-size: 1rem;}"
+                },
+                {
+                    "line_number": 136,
+                    "text": "@media (min-width: 576px) {font-size: 1rem;}"
+                },
+                {
+                    "line_number": 137,
+                    "text": "@media (min-width: 1200px) {font-size: 1rem;}  HD (1080p)"
+                },
+                {
+                    "line_number": 138,
+                    "text": "@media (min-width: 1920px) {font-size: 1rem;}  FHD(2K/4K)"
+                },
+                {
+                    "line_number": 139,
+                    "text": "*/"
+                },
+                {
+                    "line_number": 140,
+                    "text": "}"
+                },
+                {
+                    "line_number": 141,
+                    "text": ""
+                },
+                {
+                    "line_number": 142,
+                    "text": ".line {"
+                },
+                {
+                    "line_number": 143,
+                    "text": "position: relative;"
+                },
+                {
+                    "line_number": 144,
+                    "text": "margin-bottom: 20px;"
+                },
+                {
+                    "line_number": 145,
+                    "text": "min-height: 10px;"
+                },
+                {
+                    "line_number": 146,
+                    "text": ""
+                },
+                {
+                    "line_number": 147,
+                    "text": "@media (min-width: 384px) {"
+                },
+                {
+                    "line_number": 148,
+                    "text": "width: 332px;"
+                },
+                {
+                    "line_number": 149,
+                    "text": "}"
+                },
+                {
+                    "line_number": 150,
+                    "text": ""
+                },
+                {
+                    "line_number": 151,
+                    "text": "@media (min-width: 768px) {"
+                },
+                {
+                    "line_number": 152,
+                    "text": "width: 800px; /* antes: width: 671px;*/"
+                },
+                {
+                    "line_number": 153,
+                    "text": "min-height: 50px;"
+                },
+                {
+                    "line_number": 154,
+                    "text": "}"
+                },
+                {
+                    "line_number": 155,
+                    "text": ""
+                },
+                {
+                    "line_number": 156,
+                    "text": "@media (min-width: 992px) {"
+                },
+                {
+                    "line_number": 157,
+                    "text": "width: 496px;"
+                },
+                {
+                    "line_number": 158,
+                    "text": "min-height: 10px;"
+                },
+                {
+                    "line_number": 159,
+                    "text": "}"
+                },
+                {
+                    "line_number": 160,
+                    "text": "}"
+                },
+                {
+                    "line_number": 161,
+                    "text": ""
+                },
+                {
+                    "line_number": 162,
+                    "text": "/*"
+                },
+                {
+                    "line_number": 163,
+                    "text": ".line {"
+                },
+                {
+                    "line_number": 164,
+                    "text": "position: relative;"
+                },
+                {
+                    "line_number": 165,
+                    "text": "margin-bottom: 20px;"
+                },
+                {
+                    "line_number": 166,
+                    "text": "min-height: 0px;"
+                },
+                {
+                    "line_number": 167,
+                    "text": ""
+                },
+                {
+                    "line_number": 168,
+                    "text": "@media (min-width: 384px) {"
+                },
+                {
+                    "line_number": 169,
+                    "text": "width: 100%;"
+                },
+                {
+                    "line_number": 170,
+                    "text": "}"
+                },
+                {
+                    "line_number": 171,
+                    "text": ""
+                },
+                {
+                    "line_number": 172,
+                    "text": "@media (min-width: 768px) {"
+                },
+                {
+                    "line_number": 173,
+                    "text": "width: 100%;"
+                },
+                {
+                    "line_number": 174,
+                    "text": "}"
+                },
+                {
+                    "line_number": 175,
+                    "text": ""
+                },
+                {
+                    "line_number": 176,
+                    "text": "@media (min-width: 992px) {"
+                },
+                {
+                    "line_number": 177,
+                    "text": "width: 100%;"
+                },
+                {
+                    "line_number": 178,
+                    "text": "}"
+                },
+                {
+                    "line_number": 179,
+                    "text": "}"
+                },
+                {
+                    "line_number": 180,
+                    "text": "*/"
+                },
+                {
+                    "line_number": 181,
+                    "text": ""
+                },
+                {
+                    "line_number": 182,
+                    "text": ""
+                },
+                {
+                    "line_number": 183,
+                    "text": "/* Clase renombrada a .mso */"
+                },
+                {
+                    "line_number": 184,
+                    "text": ".mso {"
+                },
+                {
+                    "line_number": 185,
+                    "text": "font-family: 'Material Symbols Outlined Local';"
+                },
+                {
+                    "line_number": 186,
+                    "text": "font-weight: normal;"
+                },
+                {
+                    "line_number": 187,
+                    "text": "font-style: normal;"
+                },
+                {
+                    "line_number": 188,
+                    "text": "font-size: 24px;"
+                },
+                {
+                    "line_number": 189,
+                    "text": "letter-spacing: normal;"
+                },
+                {
+                    "line_number": 190,
+                    "text": "text-transform: none;"
+                },
+                {
+                    "line_number": 191,
+                    "text": "display: inline-block;"
+                },
+                {
+                    "line_number": 192,
+                    "text": "white-space: nowrap;"
+                },
+                {
+                    "line_number": 193,
+                    "text": "word-wrap: normal;"
+                },
+                {
+                    "line_number": 194,
+                    "text": "direction: ltr;"
+                },
+                {
+                    "line_number": 195,
+                    "text": "-webkit-font-feature-settings: 'liga';"
+                },
+                {
+                    "line_number": 196,
+                    "text": "-webkit-font-smoothing: antialiased;"
+                },
+                {
+                    "line_number": 197,
+                    "text": "font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;"
+                },
+                {
+                    "line_number": 198,
+                    "text": "color: white;"
+                },
+                {
+                    "line_number": 199,
+                    "text": "transition: transform 0.3s;"
+                },
+                {
+                    "line_number": 200,
+                    "text": ""
+                },
+                {
+                    "line_number": 201,
+                    "text": "}"
+                },
+                {
+                    "line_number": 202,
+                    "text": ""
+                },
+                {
+                    "line_number": 203,
+                    "text": ".mso {"
+                },
+                {
+                    "line_number": 204,
+                    "text": "vertical-align: middle;"
+                },
+                {
+                    "line_number": 205,
+                    "text": "cursor: pointer;"
+                },
+                {
+                    "line_number": 206,
+                    "text": "user-select: none;"
+                },
+                {
+                    "line_number": 207,
+                    "text": "transition: transform 0.3s;"
+                },
+                {
+                    "line_number": 208,
+                    "text": "}"
+                },
+                {
+                    "line_number": 209,
+                    "text": ""
+                },
+                {
+                    "line_number": 210,
+                    "text": ".mso:hover{"
+                },
+                {
+                    "line_number": 211,
+                    "text": "transform: translateY(3px);"
+                },
+                {
+                    "line_number": 212,
+                    "text": "}"
+                },
+                {
+                    "line_number": 213,
+                    "text": ""
+                },
+                {
+                    "line_number": 214,
+                    "text": "#down .mso:hover {"
+                },
+                {
+                    "line_number": 215,
+                    "text": "transform: translateY(3px); /* Efecto sutil al hover */"
+                },
+                {
+                    "line_number": 216,
+                    "text": "}"
+                },
+                {
+                    "line_number": 217,
+                    "text": ""
+                },
+                {
+                    "line_number": 218,
+                    "text": "#down {"
+                },
+                {
+                    "line_number": 219,
+                    "text": "cursor: pointer;"
+                },
+                {
+                    "line_number": 220,
+                    "text": "display: inline-block;"
+                },
+                {
+                    "line_number": 221,
+                    "text": "}"
+                },
+                {
+                    "line_number": 222,
+                    "text": ""
+                },
+                {
+                    "line_number": 223,
+                    "text": ".no-arrow {"
+                },
+                {
+                    "line_number": 224,
+                    "text": "-webkit-appearance: none;"
+                },
+                {
+                    "line_number": 225,
+                    "text": "-moz-appearance: none;"
+                },
+                {
+                    "line_number": 226,
+                    "text": "}"
+                },
+                {
+                    "line_number": 227,
+                    "text": ""
+                },
+                {
+                    "line_number": 228,
+                    "text": ".asamblea {"
+                },
+                {
+                    "line_number": 229,
+                    "text": "font-weight: bold;"
+                },
+                {
+                    "line_number": 230,
+                    "text": "color: #2c3e50;"
+                },
+                {
+                    "line_number": 231,
+                    "text": "}"
+                },
+                {
+                    "line_number": 232,
+                    "text": ""
+                },
+                {
+                    "line_number": 233,
+                    "text": ".contenedor-tabla {"
+                },
+                {
+                    "line_number": 234,
+                    "text": "width: 100%;"
+                },
+                {
+                    "line_number": 235,
+                    "text": "max-width: max-content;"
+                },
+                {
+                    "line_number": 236,
+                    "text": "margin: 20px auto;"
+                },
+                {
+                    "line_number": 237,
+                    "text": "box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);"
+                },
+                {
+                    "line_number": 238,
+                    "text": "scrollbar-width: none;"
+                },
+                {
+                    "line_number": 239,
+                    "text": "/*overflow-x: auto;*/ /* NO USAR*/"
+                },
+                {
+                    "line_number": 240,
+                    "text": "@media (min-width: 384px) {"
+                },
+                {
+                    "line_number": 241,
+                    "text": "width: 126%;"
+                },
+                {
+                    "line_number": 242,
+                    "text": "max-width: max-content;"
+                },
+                {
+                    "line_number": 243,
+                    "text": ""
+                },
+                {
+                    "line_number": 244,
+                    "text": "}"
+                },
+                {
+                    "line_number": 245,
+                    "text": "}"
+                },
+                {
+                    "line_number": 246,
+                    "text": ""
+                },
+                {
+                    "line_number": 247,
+                    "text": ".home {"
+                },
+                {
+                    "line_number": 248,
+                    "text": "width: 28%;"
+                },
+                {
+                    "line_number": 249,
+                    "text": "background-color: transparent;"
+                },
+                {
+                    "line_number": 250,
+                    "text": "color: black;"
+                },
+                {
+                    "line_number": 251,
+                    "text": "transition: transform 0.3s;"
+                },
+                {
+                    "line_number": 252,
+                    "text": "}"
+                },
+                {
+                    "line_number": 253,
+                    "text": ""
+                },
+                {
+                    "line_number": 254,
+                    "text": ".home:hover{"
+                },
+                {
+                    "line_number": 255,
+                    "text": "transform: translateY(3px);"
+                },
+                {
+                    "line_number": 256,
+                    "text": "}"
+                },
+                {
+                    "line_number": 257,
+                    "text": ""
+                },
+                {
+                    "line_number": 258,
+                    "text": ".titulo {"
+                },
+                {
+                    "line_number": 259,
+                    "text": "/* Estilo base (Mobile First) */"
+                },
+                {
+                    "line_number": 260,
+                    "text": "font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;"
+                },
+                {
+                    "line_number": 261,
+                    "text": "color: #c41529;/* red;*/"
+                },
+                {
+                    "line_number": 262,
+                    "text": "padding: 12px 15px;"
+                },
+                {
+                    "line_number": 263,
+                    "text": "margin: 0 auto;"
+                },
+                {
+                    "line_number": 264,
+                    "text": "text-align: center;"
+                },
+                {
+                    "line_number": 265,
+                    "text": "font-size: 1.5rem;"
+                },
+                {
+                    "line_number": 266,
+                    "text": "background-color: white;"
+                },
+                {
+                    "line_number": 267,
+                    "text": "font-weight: bold;"
+                },
+                {
+                    "line_number": 268,
+                    "text": "box-sizing: border-box;"
+                },
+                {
+                    "line_number": 269,
+                    "text": "padding:  0px 12px 0px 12px;"
+                },
+                {
+                    "line_number": 270,
+                    "text": "background-color: transparent;"
+                },
+                {
+                    "line_number": 271,
+                    "text": ""
+                },
+                {
+                    "line_number": 272,
+                    "text": "@media (min-width: 384px) {"
+                },
+                {
+                    "line_number": 273,
+                    "text": "font-size: 1.45rem;"
+                },
+                {
+                    "line_number": 274,
+                    "text": "}"
+                },
+                {
+                    "line_number": 275,
+                    "text": ""
+                },
+                {
+                    "line_number": 276,
+                    "text": "/* Tablets peque\u00f1as (\u2265576px) */"
+                },
+                {
+                    "line_number": 277,
+                    "text": "@media (min-width: 576px) {"
+                },
+                {
+                    "line_number": 278,
+                    "text": "font-size: 1.35rem;"
+                },
+                {
+                    "line_number": 279,
+                    "text": "padding: 14px 20px;"
+                },
+                {
+                    "line_number": 280,
+                    "text": "}"
+                },
+                {
+                    "line_number": 281,
+                    "text": ""
+                },
+                {
+                    "line_number": 282,
+                    "text": "/* Tablets (\u2265 768px) */"
+                },
+                {
+                    "line_number": 283,
+                    "text": "@media (min-width:  768px) {"
+                },
+                {
+                    "line_number": 284,
+                    "text": "font-size: 2.176rem; /* Tu tama\u00f1o original */"
+                },
+                {
+                    "line_number": 285,
+                    "text": "max-width: 100%;"
+                },
+                {
+                    "line_number": 286,
+                    "text": "border-radius: 6px;"
+                },
+                {
+                    "line_number": 287,
+                    "text": "}"
+                },
+                {
+                    "line_number": 288,
+                    "text": ""
+                },
+                {
+                    "line_number": 289,
+                    "text": "/* Laptops (\u2265992px) */"
+                },
+                {
+                    "line_number": 290,
+                    "text": "@media (min-width: 992px) {"
+                },
+                {
+                    "line_number": 291,
+                    "text": "max-width: 100%;"
+                },
+                {
+                    "line_number": 292,
+                    "text": "font-size: 1.7rem;"
+                },
+                {
+                    "line_number": 293,
+                    "text": "padding:  0px 12px 0px 12px;"
+                },
+                {
+                    "line_number": 294,
+                    "text": "}"
+                },
+                {
+                    "line_number": 295,
+                    "text": ""
+                },
+                {
+                    "line_number": 296,
+                    "text": "/* Pantallas grandes (\u22651200px) */"
+                },
+                {
+                    "line_number": 297,
+                    "text": "@media (min-width: 1200px) {"
+                },
+                {
+                    "line_number": 298,
+                    "text": "max-width: 100%; /* Mismo ancho que .subtitulo */"
+                },
+                {
+                    "line_number": 299,
+                    "text": "font-size: 1.8rem;"
+                },
+                {
+                    "line_number": 300,
+                    "text": "padding:  0px 12px 0px 12px;"
+                },
+                {
+                    "line_number": 301,
+                    "text": "}"
+                },
+                {
+                    "line_number": 302,
+                    "text": ""
+                },
+                {
+                    "line_number": 303,
+                    "text": "/* Pantallas extra grandes (\u22651920px) */"
+                },
+                {
+                    "line_number": 304,
+                    "text": "@media (min-width: 1201px) {"
+                },
+                {
+                    "line_number": 305,
+                    "text": "min-width: 100%;"
+                },
+                {
+                    "line_number": 306,
+                    "text": "font-size: 2rem;"
+                },
+                {
+                    "line_number": 307,
+                    "text": "}"
+                },
+                {
+                    "line_number": 308,
+                    "text": "}"
+                },
+                {
+                    "line_number": 309,
+                    "text": ""
+                },
+                {
+                    "line_number": 310,
+                    "text": ""
+                },
+                {
+                    "line_number": 311,
+                    "text": ".subtitulo {"
+                },
+                {
+                    "line_number": 312,
+                    "text": "/* Estilo base (m\u00f3viles peque\u00f1os) */"
+                },
+                {
+                    "line_number": 313,
+                    "text": "width: 75%;"
+                },
+                {
+                    "line_number": 314,
+                    "text": "max-width: 75%;"
+                },
+                {
+                    "line_number": 315,
+                    "text": "padding: 0% 1% 1% 1%;"
+                },
+                {
+                    "line_number": 316,
+                    "text": "box-sizing: border-box;"
+                },
+                {
+                    "line_number": 317,
+                    "text": "margin: 0 auto;"
+                },
+                {
+                    "line_number": 318,
+                    "text": "text-align: center;"
+                },
+                {
+                    "line_number": 319,
+                    "text": "font-size: 0.9rem;"
+                },
+                {
+                    "line_number": 320,
+                    "text": "background-color: white;"
+                },
+                {
+                    "line_number": 321,
+                    "text": "color: #605C5F;"
+                },
+                {
+                    "line_number": 322,
+                    "text": "font-weight: bold;"
+                },
+                {
+                    "line_number": 323,
+                    "text": "background-color: transparent;"
+                },
+                {
+                    "line_number": 324,
+                    "text": ""
+                },
+                {
+                    "line_number": 325,
+                    "text": "@media (min-width: 384px) {"
+                },
+                {
+                    "line_number": 326,
+                    "text": "width: 100%;"
+                },
+                {
+                    "line_number": 327,
+                    "text": "font-size: 1.1rem;"
+                },
+                {
+                    "line_number": 328,
+                    "text": "}"
+                },
+                {
+                    "line_number": 329,
+                    "text": ""
+                },
+                {
+                    "line_number": 330,
+                    "text": "/* Tablets peque\u00f1as (vertical) */"
+                },
+                {
+                    "line_number": 331,
+                    "text": "@media (min-width: 576px) {"
+                },
+                {
+                    "line_number": 332,
+                    "text": "width: 540px;"
+                },
+                {
+                    "line_number": 333,
+                    "text": "font-size: 1.1rem;"
+                },
+                {
+                    "line_number": 334,
+                    "text": "}"
+                },
+                {
+                    "line_number": 335,
+                    "text": ""
+                },
+                {
+                    "line_number": 336,
+                    "text": "/* Tablets (horizontal) */"
+                },
+                {
+                    "line_number": 337,
+                    "text": "@media (min-width:  768px) {"
+                },
+                {
+                    "line_number": 338,
+                    "text": "width: 100%;"
+                },
+                {
+                    "line_number": 339,
+                    "text": "font-size: 1.5rem;"
+                },
+                {
+                    "line_number": 340,
+                    "text": "}"
+                },
+                {
+                    "line_number": 341,
+                    "text": ""
+                },
+                {
+                    "line_number": 342,
+                    "text": "/* Laptops peque\u00f1as */"
+                },
+                {
+                    "line_number": 343,
+                    "text": "@media (min-width: 992px) {"
+                },
+                {
+                    "line_number": 344,
+                    "text": "width: 75%;"
+                },
+                {
+                    "line_number": 345,
+                    "text": "font-size: 1.3rem;"
+                },
+                {
+                    "line_number": 346,
+                    "text": ""
+                },
+                {
+                    "line_number": 347,
+                    "text": "}"
+                },
+                {
+                    "line_number": 348,
+                    "text": ""
+                },
+                {
+                    "line_number": 349,
+                    "text": "/* Pantallas HD (1080p) */"
+                },
+                {
+                    "line_number": 350,
+                    "text": "@media (min-width: 1200px) {"
+                },
+                {
+                    "line_number": 351,
+                    "text": "width: 75%;"
+                },
+                {
+                    "line_number": 352,
+                    "text": "font-size: 1.2rem;"
+                },
+                {
+                    "line_number": 353,
+                    "text": "}"
+                },
+                {
+                    "line_number": 354,
+                    "text": ""
+                },
+                {
+                    "line_number": 355,
+                    "text": "/* Pantallas grandes (2K/4K) */"
+                },
+                {
+                    "line_number": 356,
+                    "text": "@media (min-width: 1920px) {"
+                },
+                {
+                    "line_number": 357,
+                    "text": "width: 75%;"
+                },
+                {
+                    "line_number": 358,
+                    "text": "font-size: 0.9rem;"
+                },
+                {
+                    "line_number": 359,
+                    "text": "}"
+                },
+                {
+                    "line_number": 360,
+                    "text": "}"
+                },
+                {
+                    "line_number": 361,
+                    "text": ""
+                },
+                {
+                    "line_number": 362,
+                    "text": ""
+                },
+                {
+                    "line_number": 363,
+                    "text": ".encabezado-columnas {"
+                },
+                {
+                    "line_number": 364,
+                    "text": "background-color: #03527a;"
+                },
+                {
+                    "line_number": 365,
+                    "text": "color: white;"
+                },
+                {
+                    "line_number": 366,
+                    "text": "}"
+                },
+                {
+                    "line_number": 367,
+                    "text": ""
+                },
+                {
+                    "line_number": 368,
+                    "text": ""
+                },
+                {
+                    "line_number": 369,
+                    "text": ".enlace-columna {"
+                },
+                {
+                    "line_number": 370,
+                    "text": "color: white;"
+                },
+                {
+                    "line_number": 371,
+                    "text": "text-decoration: none;"
+                },
+                {
+                    "line_number": 372,
+                    "text": "font-weight: bold;"
+                },
+                {
+                    "line_number": 373,
+                    "text": "cursor: pointer;"
+                },
+                {
+                    "line_number": 374,
+                    "text": "}"
+                },
+                {
+                    "line_number": 375,
+                    "text": ""
+                },
+                {
+                    "line_number": 376,
+                    "text": ""
+                },
+                {
+                    "line_number": 377,
+                    "text": ".enlace-columna:hover {"
+                },
+                {
+                    "line_number": 378,
+                    "text": "text-decoration: underline;"
+                },
+                {
+                    "line_number": 379,
+                    "text": "}"
+                },
+                {
+                    "line_number": 380,
+                    "text": ""
+                },
+                {
+                    "line_number": 381,
+                    "text": ".grupo-columnas {"
+                },
+                {
+                    "line_number": 382,
+                    "text": "/*width: 100%;*/"
+                },
+                {
+                    "line_number": 383,
+                    "text": "max-width: 100%;"
+                },
+                {
+                    "line_number": 384,
+                    "text": "display: flex;"
+                },
+                {
+                    "line_number": 385,
+                    "text": "flex-wrap: wrap;"
+                },
+                {
+                    "line_number": 386,
+                    "text": "flex-direction: column;"
+                },
+                {
+                    "line_number": 387,
+                    "text": "justify-content:flex-start;"
+                },
+                {
+                    "line_number": 388,
+                    "text": "margin: 0 auto;"
+                },
+                {
+                    "line_number": 389,
+                    "text": "margin-left: 0px;"
+                },
+                {
+                    "line_number": 390,
+                    "text": "/*margin-top: 30px;*/"
+                },
+                {
+                    "line_number": 391,
+                    "text": ""
+                },
+                {
+                    "line_number": 392,
+                    "text": "@media (min-width: 268px) and (max-width: 394px) {"
+                },
+                {
+                    "line_number": 393,
+                    "text": "/*width: 100%;*/"
+                },
+                {
+                    "line_number": 394,
+                    "text": "max-width: 100%;"
+                },
+                {
+                    "line_number": 395,
+                    "text": "}"
+                },
+                {
+                    "line_number": 396,
+                    "text": ""
+                },
+                {
+                    "line_number": 397,
+                    "text": "@media (min-width:  768px) and (max-width: 991px) {"
+                },
+                {
+                    "line_number": 398,
+                    "text": "/*width: 100%;*/"
+                },
+                {
+                    "line_number": 399,
+                    "text": "max-width: 100%;"
+                },
+                {
+                    "line_number": 400,
+                    "text": "margin-left: 0;"
+                },
+                {
+                    "line_number": 401,
+                    "text": "}"
+                },
+                {
+                    "line_number": 402,
+                    "text": ""
+                },
+                {
+                    "line_number": 403,
+                    "text": "@media (min-width: 992px) {"
+                },
+                {
+                    "line_number": 404,
+                    "text": "/*width: 50%;*/"
+                },
+                {
+                    "line_number": 405,
+                    "text": "max-width: 50%;"
+                },
+                {
+                    "line_number": 406,
+                    "text": "}"
+                },
+                {
+                    "line_number": 407,
+                    "text": "}"
+                },
+                {
+                    "line_number": 408,
+                    "text": ""
+                },
+                {
+                    "line_number": 409,
+                    "text": ""
+                },
+                {
+                    "line_number": 410,
+                    "text": "/* Modifica el contenedor de columnas para tablet */"
+                },
+                {
+                    "line_number": 411,
+                    "text": ".contenedordecolumnas {"
+                },
+                {
+                    "line_number": 412,
+                    "text": "display: flex;"
+                },
+                {
+                    "line_number": 413,
+                    "text": "flex-wrap: wrap;"
+                },
+                {
+                    "line_number": 414,
+                    "text": "justify-content: space-around;"
+                },
+                {
+                    "line_number": 415,
+                    "text": "margin-left: 20px;"
+                },
+                {
+                    "line_number": 416,
+                    "text": ""
+                },
+                {
+                    "line_number": 417,
+                    "text": "@media (max-width: 394px) {"
+                },
+                {
+                    "line_number": 418,
+                    "text": "margin-left: 5px;"
+                },
+                {
+                    "line_number": 419,
+                    "text": "}"
+                },
+                {
+                    "line_number": 420,
+                    "text": ""
+                },
+                {
+                    "line_number": 421,
+                    "text": "@media (min-width:  768px) {"
+                },
+                {
+                    "line_number": 422,
+                    "text": "/*flex-direction: column;*/"
+                },
+                {
+                    "line_number": 423,
+                    "text": "margin-left: 33px;"
+                },
+                {
+                    "line_number": 424,
+                    "text": "}"
+                },
+                {
+                    "line_number": 425,
+                    "text": ""
+                },
+                {
+                    "line_number": 426,
+                    "text": "@media (min-width: 992px) {"
+                },
+                {
+                    "line_number": 427,
+                    "text": "flex-direction: row;"
+                },
+                {
+                    "line_number": 428,
+                    "text": "margin-left: 62px;"
+                },
+                {
+                    "line_number": 429,
+                    "text": "/*"
+                },
+                {
+                    "line_number": 430,
+                    "text": "margin-left: 33px;"
+                },
+                {
+                    "line_number": 431,
+                    "text": "*/"
+                },
+                {
+                    "line_number": 432,
+                    "text": "}"
+                },
+                {
+                    "line_number": 433,
+                    "text": "}"
+                },
+                {
+                    "line_number": 434,
+                    "text": ""
+                },
+                {
+                    "line_number": 435,
+                    "text": ".columnas-apiladas {"
+                },
+                {
+                    "line_number": 436,
+                    "text": "width: 100% !important;"
+                },
+                {
+                    "line_number": 437,
+                    "text": "max-width: 100% !important;"
+                },
+                {
+                    "line_number": 438,
+                    "text": "margin: 0 auto;"
+                },
+                {
+                    "line_number": 439,
+                    "text": "margin-left: 20px;"
+                },
+                {
+                    "line_number": 440,
+                    "text": "flex-direction: column;"
+                },
+                {
+                    "line_number": 441,
+                    "text": ""
+                },
+                {
+                    "line_number": 442,
+                    "text": "@media (max-width: 394px) {"
+                },
+                {
+                    "line_number": 443,
+                    "text": "margin-left: 5px;"
+                },
+                {
+                    "line_number": 444,
+                    "text": "}"
+                },
+                {
+                    "line_number": 445,
+                    "text": ""
+                },
+                {
+                    "line_number": 446,
+                    "text": "@media (min-width:  768px) {"
+                },
+                {
+                    "line_number": 447,
+                    "text": "margin-left: 33px;"
+                },
+                {
+                    "line_number": 448,
+                    "text": "}"
+                },
+                {
+                    "line_number": 449,
+                    "text": ""
+                },
+                {
+                    "line_number": 450,
+                    "text": "@media (min-width: 992px) {"
+                },
+                {
+                    "line_number": 451,
+                    "text": "/*margin-left: 33px;*/"
+                },
+                {
+                    "line_number": 452,
+                    "text": "margin-left: 60px;"
+                },
+                {
+                    "line_number": 453,
+                    "text": "}"
+                },
+                {
+                    "line_number": 454,
+                    "text": "}"
+                },
+                {
+                    "line_number": 455,
+                    "text": ""
+                },
+                {
+                    "line_number": 456,
+                    "text": "/* Estado apilado */"
+                },
+                {
+                    "line_number": 457,
+                    "text": ""
+                },
+                {
+                    "line_number": 458,
+                    "text": ".grupo-derecho {"
+                },
+                {
+                    "line_number": 459,
+                    "text": "margin-top: 0px;"
+                },
+                {
+                    "line_number": 460,
+                    "text": ""
+                },
+                {
+                    "line_number": 461,
+                    "text": "@media (min-width:  768px) and (max-width: 991px) {"
+                },
+                {
+                    "line_number": 462,
+                    "text": "margin-top: -6%;"
+                },
+                {
+                    "line_number": 463,
+                    "text": "max-width: 100%;}"
+                },
+                {
+                    "line_number": 464,
+                    "text": "}"
+                },
+                {
+                    "line_number": 465,
+                    "text": ""
+                },
+                {
+                    "line_number": 466,
+                    "text": ".iflecha {"
+                },
+                {
+                    "line_number": 467,
+                    "text": "font-size: 1.5em;"
+                },
+                {
+                    "line_number": 468,
+                    "text": "padding: 5px 15px;"
+                },
+                {
+                    "line_number": 469,
+                    "text": "cursor: pointer;"
+                },
+                {
+                    "line_number": 470,
+                    "text": "border: 1px solid #d7d8da;"
+                },
+                {
+                    "line_number": 471,
+                    "text": "border-radius: 2em;"
+                },
+                {
+                    "line_number": 472,
+                    "text": "}"
+                },
+                {
+                    "line_number": 473,
+                    "text": ""
+                },
+                {
+                    "line_number": 474,
+                    "text": ".dflecha {"
+                },
+                {
+                    "line_number": 475,
+                    "text": "font-size: 1.5em;"
+                },
+                {
+                    "line_number": 476,
+                    "text": "padding: 5px 15px;"
+                },
+                {
+                    "line_number": 477,
+                    "text": "cursor: pointer;"
+                },
+                {
+                    "line_number": 478,
+                    "text": "border: 1px solid #d7d8da;"
+                },
+                {
+                    "line_number": 479,
+                    "text": "border-radius: 2em;"
+                },
+                {
+                    "line_number": 480,
+                    "text": "}"
+                },
+                {
+                    "line_number": 481,
+                    "text": ""
+                },
+                {
+                    "line_number": 482,
+                    "text": ".izq, .der {"
+                },
+                {
+                    "line_number": 483,
+                    "text": "@media (min-width: 384px) {margin-left: 5%;}"
+                },
+                {
+                    "line_number": 484,
+                    "text": "@media (min-width: 768px) {margin-left: 5%;}"
+                },
+                {
+                    "line_number": 485,
+                    "text": "@media (min-width: 992px) {margin-left: 8%;}"
+                },
+                {
+                    "line_number": 486,
+                    "text": ""
+                },
+                {
+                    "line_number": 487,
+                    "text": "}"
+                },
+                {
+                    "line_number": 488,
+                    "text": ""
+                },
+                {
+                    "line_number": 489,
+                    "text": ".izq {"
+                },
+                {
+                    "line_number": 490,
+                    "text": "padding: 3% 0 0 0;"
+                },
+                {
+                    "line_number": 491,
+                    "text": "margin-top: 0%;"
+                },
+                {
+                    "line_number": 492,
+                    "text": ""
+                },
+                {
+                    "line_number": 493,
+                    "text": "@media (min-width: 384px) {"
+                },
+                {
+                    "line_number": 494,
+                    "text": "width: 100%;"
+                },
+                {
+                    "line_number": 495,
+                    "text": "max-width: 384px;"
+                },
+                {
+                    "line_number": 496,
+                    "text": "margin-top: 0%;"
+                },
+                {
+                    "line_number": 497,
+                    "text": "}"
+                },
+                {
+                    "line_number": 498,
+                    "text": ""
+                },
+                {
+                    "line_number": 499,
+                    "text": "@media (min-width:  768px) {"
+                },
+                {
+                    "line_number": 500,
+                    "text": "width: 100%;"
+                },
+                {
+                    "line_number": 501,
+                    "text": "max-width: 768px;"
+                },
+                {
+                    "line_number": 502,
+                    "text": "margin-top: 0px;"
+                },
+                {
+                    "line_number": 503,
+                    "text": "}"
+                },
+                {
+                    "line_number": 504,
+                    "text": ""
+                },
+                {
+                    "line_number": 505,
+                    "text": "@media (min-width: 992px) {"
+                },
+                {
+                    "line_number": 506,
+                    "text": "width: 100%;"
+                },
+                {
+                    "line_number": 507,
+                    "text": "min-width: 496px;"
+                },
+                {
+                    "line_number": 508,
+                    "text": "}"
+                },
+                {
+                    "line_number": 509,
+                    "text": "}"
+                },
+                {
+                    "line_number": 510,
+                    "text": ""
+                },
+                {
+                    "line_number": 511,
+                    "text": ".der {"
+                },
+                {
+                    "line_number": 512,
+                    "text": "padding: 3% 0 0 0;"
+                },
+                {
+                    "line_number": 513,
+                    "text": "margin-top: 0%;"
+                },
+                {
+                    "line_number": 514,
+                    "text": ""
+                },
+                {
+                    "line_number": 515,
+                    "text": "@media (min-width: 384px) {"
+                },
+                {
+                    "line_number": 516,
+                    "text": "width: 100%;"
+                },
+                {
+                    "line_number": 517,
+                    "text": "max-width: 384px;"
+                },
+                {
+                    "line_number": 518,
+                    "text": "margin-top: 0%;"
+                },
+                {
+                    "line_number": 519,
+                    "text": "}"
+                },
+                {
+                    "line_number": 520,
+                    "text": ""
+                },
+                {
+                    "line_number": 521,
+                    "text": "@media (min-width:  768px) {"
+                },
+                {
+                    "line_number": 522,
+                    "text": "width: 100%;"
+                },
+                {
+                    "line_number": 523,
+                    "text": "max-width: 768px;"
+                },
+                {
+                    "line_number": 524,
+                    "text": "margin-top: 55px;"
+                },
+                {
+                    "line_number": 525,
+                    "text": "}"
+                },
+                {
+                    "line_number": 526,
+                    "text": ""
+                },
+                {
+                    "line_number": 527,
+                    "text": "@media (min-width: 992px) {"
+                },
+                {
+                    "line_number": 528,
+                    "text": "width: 100%;"
+                },
+                {
+                    "line_number": 529,
+                    "text": "min-width: 496px;"
+                },
+                {
+                    "line_number": 530,
+                    "text": "margin-top: 0px;"
+                },
+                {
+                    "line_number": 531,
+                    "text": "}"
+                },
+                {
+                    "line_number": 532,
+                    "text": "}"
+                },
+                {
+                    "line_number": 533,
+                    "text": ""
+                },
+                {
+                    "line_number": 534,
+                    "text": "table {"
+                },
+                {
+                    "line_number": 535,
+                    "text": "@media (min-width: 384px) {margin-left: -1.6%;}"
+                },
+                {
+                    "line_number": 536,
+                    "text": "@media (min-width: 768px) {margin-left: -0.4%;}"
+                },
+                {
+                    "line_number": 537,
+                    "text": "@media (min-width: 992px) {margin-left: 0%;}"
+                },
+                {
+                    "line_number": 538,
+                    "text": "}"
+                },
+                {
+                    "line_number": 539,
+                    "text": ""
+                },
+                {
+                    "line_number": 540,
+                    "text": ".dbtable {"
+                },
+                {
+                    "line_number": 541,
+                    "text": "border: 1px solid #ddd;"
+                },
+                {
+                    "line_number": 542,
+                    "text": "padding: 2px 7px 2px 7px;"
+                },
+                {
+                    "line_number": 543,
+                    "text": "border-radius: 0px 0px 0px 0px;"
+                },
+                {
+                    "line_number": 544,
+                    "text": "background: white;"
+                },
+                {
+                    "line_number": 545,
+                    "text": "text-align: left;"
+                },
+                {
+                    "line_number": 546,
+                    "text": "/*max-width: max-content;"
+                },
+                {
+                    "line_number": 547,
+                    "text": "width: 1080px;"
+                },
+                {
+                    "line_number": 548,
+                    "text": "*/"
+                },
+                {
+                    "line_number": 549,
+                    "text": ""
+                },
+                {
+                    "line_number": 550,
+                    "text": "@media (min-width: 384px) {width: 108%;}"
+                },
+                {
+                    "line_number": 551,
+                    "text": "@media (min-width: 768px) {width: 100%;}"
+                },
+                {
+                    "line_number": 552,
+                    "text": "@media (min-width: 992px) {width: 1024px;} /* antes 1080px*/"
+                },
+                {
+                    "line_number": 553,
+                    "text": "/*"
+                },
+                {
+                    "line_number": 554,
+                    "text": "@media (min-width: 576px) {width: 100%;}"
+                },
+                {
+                    "line_number": 555,
+                    "text": "@media (min-width: 268px) {width: 100%;}*/"
+                },
+                {
+                    "line_number": 556,
+                    "text": "}"
+                },
+                {
+                    "line_number": 557,
+                    "text": ""
+                },
+                {
+                    "line_number": 558,
+                    "text": ".dbtable:has(.precat) {background-color: white;}"
+                },
+                {
+                    "line_number": 559,
+                    "text": ".dbtable:has(.liturgia) {background-color: #FFFFCB;}"
+                },
+                {
+                    "line_number": 560,
+                    "text": ".dbtable:has(.cat) {background-color: #bde9ff;}"
+                },
+                {
+                    "line_number": 561,
+                    "text": ".dbtable:has(.eleccion) {background-color:#CEFFCF;}"
+                },
+                {
+                    "line_number": 562,
+                    "text": ""
+                },
+                {
+                    "line_number": 563,
+                    "text": "th {"
+                },
+                {
+                    "line_number": 564,
+                    "text": "text-align: center;"
+                },
+                {
+                    "line_number": 565,
+                    "text": "/* min-width: auto;*/"
+                },
+                {
+                    "line_number": 566,
+                    "text": "}"
+                },
+                {
+                    "line_number": 567,
+                    "text": ""
+                },
+                {
+                    "line_number": 568,
+                    "text": ".precat, .liturgia, .cat, .eleccion {"
+                },
+                {
+                    "line_number": 569,
+                    "text": "font-size: larger;"
+                },
+                {
+                    "line_number": 570,
+                    "text": "font-family: Franklin Gothic;"
+                },
+                {
+                    "line_number": 571,
+                    "text": "color: black;"
+                },
+                {
+                    "line_number": 572,
+                    "text": "border: 1px solid black;"
+                },
+                {
+                    "line_number": 573,
+                    "text": "transition: all 0.7s ease;"
+                },
+                {
+                    "line_number": 574,
+                    "text": "cursor: pointer;"
+                },
+                {
+                    "line_number": 575,
+                    "text": "/* width: 30%; */"
+                },
+                {
+                    "line_number": 576,
+                    "text": "}"
+                },
+                {
+                    "line_number": 577,
+                    "text": ".cat{"
+                },
+                {
+                    "line_number": 578,
+                    "text": "color: white;"
+                },
+                {
+                    "line_number": 579,
+                    "text": "}"
+                },
+                {
+                    "line_number": 580,
+                    "text": ""
+                },
+                {
+                    "line_number": 581,
+                    "text": ".fup {"
+                },
+                {
+                    "line_number": 582,
+                    "text": "display: inline-block;"
+                },
+                {
+                    "line_number": 583,
+                    "text": "transition: all 0.3s ease;"
+                },
+                {
+                    "line_number": 584,
+                    "text": "}"
+                },
+                {
+                    "line_number": 585,
+                    "text": ""
+                },
+                {
+                    "line_number": 586,
+                    "text": ".fup:hover {"
+                },
+                {
+                    "line_number": 587,
+                    "text": "animation: rebote 2.5s cubic-bezier(0.5, 0.05, 0.5, 1.5) 10; /* \u00a110 repeticiones! */"
+                },
+                {
+                    "line_number": 588,
+                    "text": "transform-origin: bottom;"
+                },
+                {
+                    "line_number": 589,
+                    "text": "}"
+                },
+                {
+                    "line_number": 590,
+                    "text": ""
+                },
+                {
+                    "line_number": 591,
+                    "text": "@keyframes rebote {"
+                },
+                {
+                    "line_number": 592,
+                    "text": "0%, 100% { transform: translateY(0) scale(1, 1); }"
+                },
+                {
+                    "line_number": 593,
+                    "text": "/* Primer rebote (alto) */"
+                },
+                {
+                    "line_number": 594,
+                    "text": "10% { transform: translateY(-15px) scale(1.1, 0.9); }"
+                },
+                {
+                    "line_number": 595,
+                    "text": "20% { transform: translateY(0) scale(0.9, 1.1); }"
+                },
+                {
+                    "line_number": 596,
+                    "text": "/* Rebotes posteriores (altura decreciente) */"
+                },
+                {
+                    "line_number": 597,
+                    "text": "30% { transform: translateY(-10px) scale(1.05, 0.95); }"
+                },
+                {
+                    "line_number": 598,
+                    "text": "40% { transform: translateY(0) scale(0.95, 1.05); }"
+                },
+                {
+                    "line_number": 599,
+                    "text": "50% { transform: translateY(-7px) scale(1.03, 0.97); }"
+                },
+                {
+                    "line_number": 600,
+                    "text": "60% { transform: translateY(0) scale(0.97, 1.03); }"
+                },
+                {
+                    "line_number": 601,
+                    "text": "70% { transform: translateY(-5px) scale(1.02, 0.98); }"
+                },
+                {
+                    "line_number": 602,
+                    "text": "80% { transform: translateY(0) scale(0.98, 1.02); }"
+                },
+                {
+                    "line_number": 603,
+                    "text": "90% { transform: translateY(-2px) scale(1.01, 0.99); }"
+                },
+                {
+                    "line_number": 604,
+                    "text": "}        /* Efecto al pasar el mouse - solo elevaci\u00f3n */"
+                },
+                {
+                    "line_number": 605,
+                    "text": ""
+                },
+                {
+                    "line_number": 606,
+                    "text": ""
+                },
+                {
+                    "line_number": 607,
+                    "text": ".precat:hover, .liturgia:hover, .cat:hover, .eleccion:hover"
+                },
+                {
+                    "line_number": 608,
+                    "text": "{"
+                },
+                {
+                    "line_number": 609,
+                    "text": "box-shadow: 0 4px 8px rgba(0,0,0,60.00); /* Sombra m\u00e1s pronunciada */"
+                },
+                {
+                    "line_number": 610,
+                    "text": "transform: translateY(-1px); /* Movimiento sutil hacia arriba */"
+                },
+                {
+                    "line_number": 611,
+                    "text": "}"
+                },
+                {
+                    "line_number": 612,
+                    "text": ""
+                },
+                {
+                    "line_number": 613,
+                    "text": ".precat {background-color: white;}"
+                },
+                {
+                    "line_number": 614,
+                    "text": ".liturgia {background-color: #FFFFCB;}"
+                },
+                {
+                    "line_number": 615,
+                    "text": ".cat {background-color: rgb(33 150 243);}"
+                },
+                {
+                    "line_number": 616,
+                    "text": ".eleccion {background-color: #CEFFCF;}"
+                },
+                {
+                    "line_number": 617,
+                    "text": ""
+                },
+                {
+                    "line_number": 618,
+                    "text": ".piecategoria, .ppascua, .ppenteco,"
+                },
+                {
+                    "line_number": 619,
+                    "text": ".plaudes, .pcuaresma, .padviento, .pnavidad,"
+                },
+                {
+                    "line_number": 620,
+                    "text": ".pentrada, .ppenit .final, .paz, .ordinario, .pliturgia {"
+                },
+                {
+                    "line_number": 621,
+                    "text": "font-family: 'Franklin Gothic Medium';"
+                },
+                {
+                    "line_number": 622,
+                    "text": "font-weight: bold;"
+                },
+                {
+                    "line_number": 623,
+                    "text": "}"
+                },
+                {
+                    "line_number": 624,
+                    "text": ""
+                },
+                {
+                    "line_number": 625,
+                    "text": ".piecategoria {"
+                },
+                {
+                    "line_number": 626,
+                    "text": "background-color: white;"
+                },
+                {
+                    "line_number": 627,
+                    "text": "border: 1px solid goldenrod;"
+                },
+                {
+                    "line_number": 628,
+                    "text": "display: contents; /*inline-block;*/"
+                },
+                {
+                    "line_number": 629,
+                    "text": "border-radius: 0px;"
+                },
+                {
+                    "line_number": 630,
+                    "text": "padding: 0px;"
+                },
+                {
+                    "line_number": 631,
+                    "text": "margin: 0px;"
+                },
+                {
+                    "line_number": 632,
+                    "text": "}"
+                },
+                {
+                    "line_number": 633,
+                    "text": ""
+                },
+                {
+                    "line_number": 634,
+                    "text": ".vmaria {color: rgb(84 167 216);}"
+                },
+                {
+                    "line_number": 635,
+                    "text": ".pprecatec {color: rgb(81, 83, 84);}"
+                },
+                {
+                    "line_number": 636,
+                    "text": ".pcatec {color: rgb(33 150 243);}"
+                },
+                {
+                    "line_number": 637,
+                    "text": ".pcat {color: rgb(33 150 243);}"
+                },
+                {
+                    "line_number": 638,
+                    "text": ".peleccion {color: #17ed86};"
+                },
+                {
+                    "line_number": 639,
+                    "text": ".pliturgia {color: rgb(223, 198, 12);}"
+                },
+                {
+                    "line_number": 640,
+                    "text": ".ppascua {color: rgb(33 150 243);}"
+                },
+                {
+                    "line_number": 641,
+                    "text": ".ppenteco {color: #f0433d;}"
+                },
+                {
+                    "line_number": 642,
+                    "text": ".pnavidad {color: #f0433d;}"
+                },
+                {
+                    "line_number": 643,
+                    "text": ".plaudes {color: rgb(56, 162, 6);}"
+                },
+                {
+                    "line_number": 644,
+                    "text": ".ordinario {color: rgb(56, 162, 6);}"
+                },
+                {
+                    "line_number": 645,
+                    "text": ".pcuaresma {color: purple;}"
+                },
+                {
+                    "line_number": 646,
+                    "text": ".pcomunion {color: purple;}"
+                },
+                {
+                    "line_number": 647,
+                    "text": ".padviento {color: purple;}"
+                },
+                {
+                    "line_number": 648,
+                    "text": ".pentrada {color: #3dcef0;}"
+                },
+                {
+                    "line_number": 649,
+                    "text": ".paz {color: #3dcef0;}"
+                },
+                {
+                    "line_number": 650,
+                    "text": ".final {color: #3dcef0;}"
+                },
+                {
+                    "line_number": 651,
+                    "text": ".ppenit {color:purple;}"
+                },
+                {
+                    "line_number": 652,
+                    "text": ".pmelisma {"
+                },
+                {
+                    "line_number": 653,
+                    "text": "color: #f0433d;"
+                },
+                {
+                    "line_number": 654,
+                    "text": "font-style: italic;"
+                },
+                {
+                    "line_number": 655,
+                    "text": "}"
+                },
+                {
+                    "line_number": 656,
+                    "text": ""
+                },
+                {
+                    "line_number": 657,
+                    "text": ".dh {"
+                },
+                {
+                    "line_number": 658,
+                    "text": "display: none;"
+                },
+                {
+                    "line_number": 659,
+                    "text": "}"
+                },
+                {
+                    "line_number": 660,
+                    "text": ""
+                },
+                {
+                    "line_number": 661,
+                    "text": ".saudio {"
+                },
+                {
+                    "line_number": 662,
+                    "text": "width: -webkit-fill-available;"
+                },
+                {
+                    "line_number": 663,
+                    "text": "display: table-cell;"
+                },
+                {
+                    "line_number": 664,
+                    "text": "background-color: #f1f3f4;"
+                },
+                {
+                    "line_number": 665,
+                    "text": "outline: none;"
+                },
+                {
+                    "line_number": 666,
+                    "text": "border-radius: 10px 10px 0px 0px;"
+                },
+                {
+                    "line_number": 667,
+                    "text": ""
+                },
+                {
+                    "line_number": 668,
+                    "text": "@media (min-width: 384px) { margin-left: -1.6%; width: 107.93%; }"
+                },
+                {
+                    "line_number": 669,
+                    "text": "@media (min-width: 768px) { margin-left: -0.4%; width: 100%; }"
+                },
+                {
+                    "line_number": 670,
+                    "text": "@media (min-width: 992px) { margin-left: 0%; width: 100%; }"
+                },
+                {
+                    "line_number": 671,
+                    "text": ""
+                },
+                {
+                    "line_number": 672,
+                    "text": "/*@media (min-width: 384px) { margin-left: -1.512%; width: 107.836%; }"
+                },
+                {
+                    "line_number": 673,
+                    "text": "@media (min-width: 768px) { margin-left: -0.4%; width: 100.1%; }"
+                },
+                {
+                    "line_number": 674,
+                    "text": "@media (min-width: 992px) { margin-left: -0.4%; width: 988px; }*/"
+                },
+                {
+                    "line_number": 675,
+                    "text": ""
+                },
+                {
+                    "line_number": 676,
+                    "text": "}"
+                },
+                {
+                    "line_number": 677,
+                    "text": ""
+                },
+                {
+                    "line_number": 678,
+                    "text": ""
+                },
+                {
+                    "line_number": 679,
+                    "text": ""
+                },
+                {
+                    "line_number": 680,
+                    "text": ".cno {"
+                },
+                {
+                    "line_number": 681,
+                    "text": "font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"
+                },
+                {
+                    "line_number": 682,
+                    "text": "text-align: center;"
+                },
+                {
+                    "line_number": 683,
+                    "text": "}"
+                },
+                {
+                    "line_number": 684,
+                    "text": ""
+                },
+                {
+                    "line_number": 685,
+                    "text": ".ta, .tc, .ta1, .ta2, .ta3, .ni\u00f1o, .hombres, .mujeres, .melisma, .bis, .pa {"
+                },
+                {
+                    "line_number": 686,
+                    "text": "position: relative;"
+                },
+                {
+                    "line_number": 687,
+                    "text": "padding-left: 1.5em;"
+                },
+                {
+                    "line_number": 688,
+                    "text": "}"
+                },
+                {
+                    "line_number": 689,
+                    "text": ""
+                },
+                {
+                    "line_number": 690,
+                    "text": "/* Estilos COMPARTIDOS por todos los ::before */"
+                },
+                {
+                    "line_number": 691,
+                    "text": ".ta::before, .tc::before, .ta1::before, .ta2::before, .ta3::before, .ni\u00f1o::before,"
+                },
+                {
+                    "line_number": 692,
+                    "text": ".hombres::before, .mujeres::before, .melisma::before, .bis::before, .pa::before {"
+                },
+                {
+                    "line_number": 693,
+                    "text": "position: absolute;"
+                },
+                {
+                    "line_number": 694,
+                    "text": "top: 0px;"
+                },
+                {
+                    "line_number": 695,
+                    "text": "font-family: Arial, sans-serif;"
+                },
+                {
+                    "line_number": 696,
+                    "text": "line-height: 1.3;"
+                },
+                {
+                    "line_number": 697,
+                    "text": "font-weight: bold;"
+                },
+                {
+                    "line_number": 698,
+                    "text": ""
+                },
+                {
+                    "line_number": 699,
+                    "text": "@media (min-width: 384px) {"
+                },
+                {
+                    "line_number": 700,
+                    "text": "font-size: 1.1rem;"
+                },
+                {
+                    "line_number": 701,
+                    "text": "margin-left: -14%;"
+                },
+                {
+                    "line_number": 702,
+                    "text": "top: 2px;"
+                },
+                {
+                    "line_number": 703,
+                    "text": "}"
+                },
+                {
+                    "line_number": 704,
+                    "text": ""
+                },
+                {
+                    "line_number": 705,
+                    "text": "@media (min-width:  768px) {"
+                },
+                {
+                    "line_number": 706,
+                    "text": "font-size: 1.8rem;"
+                },
+                {
+                    "line_number": 707,
+                    "text": "margin-left: -10%;"
+                },
+                {
+                    "line_number": 708,
+                    "text": "top: -1px;"
+                },
+                {
+                    "line_number": 709,
+                    "text": "}"
+                },
+                {
+                    "line_number": 710,
+                    "text": ""
+                },
+                {
+                    "line_number": 711,
+                    "text": "@media (min-width: 992px) {"
+                },
+                {
+                    "line_number": 712,
+                    "text": "font-size: 1.23rem;"
+                },
+                {
+                    "line_number": 713,
+                    "text": "margin-top: 0%;"
+                },
+                {
+                    "line_number": 714,
+                    "text": "margin-left: -12%;"
+                },
+                {
+                    "line_number": 715,
+                    "text": "}"
+                },
+                {
+                    "line_number": 716,
+                    "text": "}"
+                },
+                {
+                    "line_number": 717,
+                    "text": ""
+                },
+                {
+                    "line_number": 718,
+                    "text": "/* Color GRIS para la mayor\u00eda */"
+                },
+                {
+                    "line_number": 719,
+                    "text": ".ta::before, .tc::before, .ta1::before, .ta2::before, .ta3::before,"
+                },
+                {
+                    "line_number": 720,
+                    "text": ".ni\u00f1o::before, .hombres::before, .mujeres::before, .bis::before,"
+                },
+                {
+                    "line_number": 721,
+                    "text": ".pa::before {"
+                },
+                {
+                    "line_number": 722,
+                    "text": "color: #80808065; /* Gris semitransparente */"
+                },
+                {
+                    "line_number": 723,
+                    "text": "}"
+                },
+                {
+                    "line_number": 724,
+                    "text": ""
+                },
+                {
+                    "line_number": 725,
+                    "text": ".ta::before {content: \"A.\";}"
+                },
+                {
+                    "line_number": 726,
+                    "text": ".tc::before {content: \"C.\";}"
+                },
+                {
+                    "line_number": 727,
+                    "text": ".ta1::before {content: \"A1.\";}"
+                },
+                {
+                    "line_number": 728,
+                    "text": ".ta2::before {content: \"A2.\";}"
+                },
+                {
+                    "line_number": 729,
+                    "text": ".ta3::before {content: \"A3.\";}"
+                },
+                {
+                    "line_number": 730,
+                    "text": ".ni\u00f1o::before {content: \"Ni\u00f1os:\";}"
+                },
+                {
+                    "line_number": 731,
+                    "text": ".hombres::before {content: \"Hombres:\";}"
+                },
+                {
+                    "line_number": 732,
+                    "text": ".mujeres::before {content: \"Mujeres:\";}"
+                },
+                {
+                    "line_number": 733,
+                    "text": ".melisma::before {content: \"[melisma]\";}"
+                },
+                {
+                    "line_number": 734,
+                    "text": ".bis::before {content: \"BIS A.\";}"
+                },
+                {
+                    "line_number": 735,
+                    "text": ".pa::before {content: \"P\";}"
+                },
+                {
+                    "line_number": 736,
+                    "text": ""
+                },
+                {
+                    "line_number": 737,
+                    "text": ".ni\u00f1o::before, .hombres::before, .mujeres::before {"
+                },
+                {
+                    "line_number": 738,
+                    "text": "left: 0%;"
+                },
+                {
+                    "line_number": 739,
+                    "text": "}"
+                },
+                {
+                    "line_number": 740,
+                    "text": ""
+                },
+                {
+                    "line_number": 741,
+                    "text": ".myh {"
+                },
+                {
+                    "line_number": 742,
+                    "text": "margin-left: 19%"
+                },
+                {
+                    "line_number": 743,
+                    "text": "}"
+                },
+                {
+                    "line_number": 744,
+                    "text": ""
+                },
+                {
+                    "line_number": 745,
+                    "text": ".rojo {"
+                },
+                {
+                    "line_number": 746,
+                    "text": "color: rgb(196 76 75);"
+                },
+                {
+                    "line_number": 747,
+                    "text": "font-weight: bold;"
+                },
+                {
+                    "line_number": 748,
+                    "text": "}"
+                },
+                {
+                    "line_number": 749,
+                    "text": ""
+                },
+                {
+                    "line_number": 750,
+                    "text": "/* Color ROJO solo para .melisma */"
+                },
+                {
+                    "line_number": 751,
+                    "text": ".melisma::before {"
+                },
+                {
+                    "line_number": 752,
+                    "text": "color: red;"
+                },
+                {
+                    "line_number": 753,
+                    "text": "font-size: 90%;"
+                },
+                {
+                    "line_number": 754,
+                    "text": "font-style: italic;"
+                },
+                {
+                    "line_number": 755,
+                    "text": "left: 78%;"
+                },
+                {
+                    "line_number": 756,
+                    "text": ""
+                },
+                {
+                    "line_number": 757,
+                    "text": "@media (min-width: 384px) {"
+                },
+                {
+                    "line_number": 758,
+                    "text": "left: 101%;"
+                },
+                {
+                    "line_number": 759,
+                    "text": "}"
+                },
+                {
+                    "line_number": 760,
+                    "text": ""
+                },
+                {
+                    "line_number": 761,
+                    "text": "@media (min-width:  768px) {"
+                },
+                {
+                    "line_number": 762,
+                    "text": "left: 78%;"
+                },
+                {
+                    "line_number": 763,
+                    "text": "}"
+                },
+                {
+                    "line_number": 764,
+                    "text": ""
+                },
+                {
+                    "line_number": 765,
+                    "text": "@media (min-width: 992px) {"
+                },
+                {
+                    "line_number": 766,
+                    "text": "left: 76%;"
+                },
+                {
+                    "line_number": 767,
+                    "text": "}"
+                },
+                {
+                    "line_number": 768,
+                    "text": ""
+                },
+                {
+                    "line_number": 769,
+                    "text": "}"
+                },
+                {
+                    "line_number": 770,
+                    "text": ".amelisma {"
+                },
+                {
+                    "line_number": 771,
+                    "text": "font-style: italic;"
+                },
+                {
+                    "line_number": 772,
+                    "text": "font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"
+                },
+                {
+                    "line_number": 773,
+                    "text": "cursor: pointer;"
+                },
+                {
+                    "line_number": 774,
+                    "text": ""
+                },
+                {
+                    "line_number": 775,
+                    "text": "@media (min-width: 384px) {font-size: 78%;}"
+                },
+                {
+                    "line_number": 776,
+                    "text": "@media (min-width: 768px) {font-size: 95%;}"
+                },
+                {
+                    "line_number": 777,
+                    "text": "@media (min-width: 992px) {font-size: 85%;}"
+                },
+                {
+                    "line_number": 778,
+                    "text": "}"
+                },
+                {
+                    "line_number": 779,
+                    "text": ""
+                },
+                {
+                    "line_number": 780,
+                    "text": ".ast1, .ast2, .ast3, .ast4, .ast5, .ast6, .ast7, .ast8 {"
+                },
+                {
+                    "line_number": 781,
+                    "text": "position: relative; /* Cambiado de absolute a relative para mejor control */"
+                },
+                {
+                    "line_number": 782,
+                    "text": "margin-bottom: 1px;"
+                },
+                {
+                    "line_number": 783,
+                    "text": "padding-left: 1.5em;"
+                },
+                {
+                    "line_number": 784,
+                    "text": "}"
+                },
+                {
+                    "line_number": 785,
+                    "text": ""
+                },
+                {
+                    "line_number": 786,
+                    "text": ".ast1::before, .ast2::before, .ast3::before, .ast4::before, .ast5::before, .ast6::before, .ast7::before, .ast8::before {"
+                },
+                {
+                    "line_number": 787,
+                    "text": "content: \"*\";"
+                },
+                {
+                    "line_number": 788,
+                    "text": "color: red;"
+                },
+                {
+                    "line_number": 789,
+                    "text": "font-size: 110%;"
+                },
+                {
+                    "line_number": 790,
+                    "text": "font-style: italic;"
+                },
+                {
+                    "line_number": 791,
+                    "text": "position: absolute;"
+                },
+                {
+                    "line_number": 792,
+                    "text": "}"
+                },
+                {
+                    "line_number": 793,
+                    "text": ".navegar{"
+                },
+                {
+                    "line_number": 794,
+                    "text": "padding: 0.5% 1% 2% 1%;  /* top, right, bottom, left*/"
+                },
+                {
+                    "line_number": 795,
+                    "text": "text-align: center;"
+                },
+                {
+                    "line_number": 796,
+                    "text": "}"
+                },
+                {
+                    "line_number": 797,
+                    "text": ".nav {"
+                },
+                {
+                    "line_number": 798,
+                    "text": "display: inline-block;"
+                },
+                {
+                    "line_number": 799,
+                    "text": "margin: 0 20px;"
+                },
+                {
+                    "line_number": 800,
+                    "text": "cursor: pointer;"
+                },
+                {
+                    "line_number": 801,
+                    "text": "}"
+                },
+                {
+                    "line_number": 802,
+                    "text": ""
+                },
+                {
+                    "line_number": 803,
+                    "text": "/* \u2193\u2193\u2193\u2193\u2193\u2193\u2193\u2193\u2193\u2193\u2193\u2193\u2193\u2193\u2193\u2193\u2193\u2193 OCULTAR CONTENIDO \u2193\u2193\u2193\u2193\u2193\u2193\u2193\u2193\u2193\u2193\u2193\u2193\u2193\u2193\u2193\u2193\u2193\u2193 */"
+                },
+                {
+                    "line_number": 804,
+                    "text": ".hline {"
+                },
+                {
+                    "line_number": 805,
+                    "text": "cursor: pointer;"
+                },
+                {
+                    "line_number": 806,
+                    "text": "}"
+                },
+                {
+                    "line_number": 807,
+                    "text": ""
+                },
+                {
+                    "line_number": 808,
+                    "text": ".dbhide {"
+                },
+                {
+                    "line_number": 809,
+                    "text": "visibility: hidden;"
+                },
+                {
+                    "line_number": 810,
+                    "text": "opacity: 0;"
+                },
+                {
+                    "line_number": 811,
+                    "text": "height: 0;"
+                },
+                {
+                    "line_number": 812,
+                    "text": "overflow: hidden;"
+                },
+                {
+                    "line_number": 813,
+                    "text": "}"
+                },
+                {
+                    "line_number": 814,
+                    "text": "/* \u2191\u2191\u2191\u2191\u2191\u2191\u2191\u2191\u2191\u2191\u2191\u2191\u2191\u2191\u2191\u2191\u2191 OCULTAR CONTENIDO \u2191\u2191\u2191\u2191\u2191\u2191\u2191\u2191\u2191\u2191\u2191\u2191\u2191\u2191\u2191\u2191\u2191 */"
+                },
+                {
+                    "line_number": 815,
+                    "text": ""
+                },
+                {
+                    "line_number": 816,
+                    "text": "/* \u2193\u2193\u2193\u2193\u2193\u2193\u2193\u2193\u2193\u2193\u2193\u2193\u2193\u2193\u2193\u2193\u2193\u2193 CSS PARA REPRODUCTOR \u2193\u2193\u2193\u2193\u2193\u2193\u2193\u2193\u2193\u2193\u2193\u2193\u2193\u2193\u2193\u2193\u2193\u2193 */"
+                },
+                {
+                    "line_number": 817,
+                    "text": ""
+                },
+                {
+                    "line_number": 818,
+                    "text": "/* Estilos para el reproductor */"
+                },
+                {
+                    "line_number": 819,
+                    "text": "#reproductor-audio {"
+                },
+                {
+                    "line_number": 820,
+                    "text": "background: rgba(0,0,0,0.05);"
+                },
+                {
+                    "line_number": 821,
+                    "text": "transition: all 0.3s ease;"
+                },
+                {
+                    "line_number": 822,
+                    "text": "}"
+                },
+                {
+                    "line_number": 823,
+                    "text": ""
+                },
+                {
+                    "line_number": 824,
+                    "text": "/* Estilos para el bot\u00f3n de control */"
+                },
+                {
+                    "line_number": 825,
+                    "text": ".audio-control {"
+                },
+                {
+                    "line_number": 826,
+                    "text": "cursor: pointer;"
+                },
+                {
+                    "line_number": 827,
+                    "text": "display: inline-block;"
+                },
+                {
+                    "line_number": 828,
+                    "text": "transition: transform 0.2s ease;"
+                },
+                {
+                    "line_number": 829,
+                    "text": "}"
+                },
+                {
+                    "line_number": 830,
+                    "text": ""
+                },
+                {
+                    "line_number": 831,
+                    "text": ".audio-control:hover {"
+                },
+                {
+                    "line_number": 832,
+                    "text": "transform: scale(1.05);"
+                },
+                {
+                    "line_number": 833,
+                    "text": "}"
+                },
+                {
+                    "line_number": 834,
+                    "text": ""
+                },
+                {
+                    "line_number": 835,
+                    "text": ".audio-icon {"
+                },
+                {
+                    "line_number": 836,
+                    "text": "font-size: 28px;"
+                },
+                {
+                    "line_number": 837,
+                    "text": "vertical-align: middle;"
+                },
+                {
+                    "line_number": 838,
+                    "text": "color: white;"
+                },
+                {
+                    "line_number": 839,
+                    "text": "transition: all 0.3s ease;"
+                },
+                {
+                    "line_number": 840,
+                    "text": "}"
+                },
+                {
+                    "line_number": 841,
+                    "text": "/* \u2191\u2191\u2191\u2191\u2191\u2191\u2191\u2191\u2191\u2191\u2191\u2191\u2191\u2191\u2191\u2191\u2191 CSS PARA REPRODUCTOR \u2191\u2191\u2191\u2191\u2191\u2191\u2191\u2191\u2191\u2191\u2191\u2191\u2191\u2191\u2191\u2191\u2191 */"
+                },
+                {
+                    "line_number": 842,
+                    "text": ""
+                },
+                {
+                    "line_number": 843,
+                    "text": ""
+                },
+                {
+                    "line_number": 844,
+                    "text": "/* \u2193\u2193\u2193\u2193\u2193\u2193\u2193\u2193\u2193\u2193\u2193\u2193\u2193\u2193\u2193\u2193\u2193\u2193 CSS TRASTE \u2193\u2193\u2193\u2193\u2193\u2193\u2193\u2193\u2193\u2193\u2193\u2193\u2193\u2193\u2193\u2193\u2193\u2193 */"
+                },
+                {
+                    "line_number": 845,
+                    "text": ""
+                },
+                {
+                    "line_number": 846,
+                    "text": "select.dbMiTraste {"
+                },
+                {
+                    "line_number": 847,
+                    "text": "background-color: transparent;"
+                },
+                {
+                    "line_number": 848,
+                    "text": "color: white;"
+                },
+                {
+                    "line_number": 849,
+                    "text": "padding: 5px;"
+                },
+                {
+                    "line_number": 850,
+                    "text": "font-weight: bold;"
+                },
+                {
+                    "line_number": 851,
+                    "text": "border: none;"
+                },
+                {
+                    "line_number": 852,
+                    "text": "appearance: none;"
+                },
+                {
+                    "line_number": 853,
+                    "text": "font-size: 19PX;"
+                },
+                {
+                    "line_number": 854,
+                    "text": "text-align: center;"
+                },
+                {
+                    "line_number": 855,
+                    "text": "cursor: pointer;"
+                },
+                {
+                    "line_number": 856,
+                    "text": "}"
+                },
+                {
+                    "line_number": 857,
+                    "text": ""
+                },
+                {
+                    "line_number": 858,
+                    "text": "/* Estilo para las opciones del select */"
+                },
+                {
+                    "line_number": 859,
+                    "text": "select.dbMiTraste option {"
+                },
+                {
+                    "line_number": 860,
+                    "text": "background-color: #333;"
+                },
+                {
+                    "line_number": 861,
+                    "text": "color: white;"
+                },
+                {
+                    "line_number": 862,
+                    "text": "}"
+                },
+                {
+                    "line_number": 863,
+                    "text": ""
+                },
+                {
+                    "line_number": 864,
+                    "text": "/* \u2191\u2191\u2191\u2191\u2191\u2191\u2191\u2191\u2191\u2191\u2191\u2191\u2191\u2191\u2191\u2191\u2191 CSS TRASTE \u2191\u2191\u2191\u2191\u2191\u2191\u2191\u2191\u2191\u2191\u2191\u2191\u2191\u2191\u2191\u2191\u2191 */"
+                },
+                {
+                    "line_number": 865,
+                    "text": ""
+                },
+                {
+                    "line_number": 866,
+                    "text": ""
+                },
+                {
+                    "line_number": 867,
+                    "text": "/* ACLARACIONES"
+                },
+                {
+                    "line_number": 868,
+                    "text": ""
+                },
+                {
+                    "line_number": 869,
+                    "text": "/* !important;"
+                },
+                {
+                    "line_number": 870,
+                    "text": "Es una propiedad CSS que da m\u00e1xima prioridad, anulando cualquier otra declaraci\u00f3n que pueda estar afectando al mismo elemento."
+                },
+                {
+                    "line_number": 871,
+                    "text": ""
+                },
+                {
+                    "line_number": 872,
+                    "text": "*/"
+                },
+                {
+                    "line_number": 873,
+                    "text": ""
+                },
+                {
+                    "line_number": 874,
+                    "text": "/* ESTA CLASE dbsp1 David Baez Spance GENERA UN ESPACIO DONDE SE COLOQUE*/"
+                },
+                {
+                    "line_number": 875,
+                    "text": ".dbsp1 {padding-bottom: 1%;@media (min-width: 384px) {padding-bottom: 1%;}@media (min-width: 412px) {padding-bottom: 1%;}@media (min-width: 576px) {padding-bottom: 1%;}@media (min-width:  768px) {padding-bottom: 1%;}@media (min-width: 992px) {padding-bottom: 1%;}@media (min-width: 1200px) {padding-bottom: 1%;}@media (min-width: 1920px) {padding-bottom: 1%;}}"
+                },
+                {
+                    "line_number": 876,
+                    "text": ".dbsp2 {padding-bottom: 2%;@media (min-width: 384px)  {padding-bottom: 2%;}@media (min-width: 412px)  {padding-bottom: 2%;}@media (min-width: 576px)  {padding-bottom: 2%;}@media (min-width:  768px)  {padding-bottom: 2%;}@media (min-width: 992px)  {padding-bottom: 2%;}@media (min-width: 1200px) {padding-bottom: 2%;}@media (min-width: 1920px) {padding-bottom: 2%;}}"
+                },
+                {
+                    "line_number": 877,
+                    "text": ".dbsp3 {padding-bottom: 3%;@media (min-width: 384px)  {padding-bottom: 3%;}@media (min-width: 412px)  {padding-bottom: 3%;}@media (min-width: 576px)  {padding-bottom: 3%;}@media (min-width:  768px)  {padding-bottom: 3%;}@media (min-width: 992px)  {padding-bottom: 3%;}@media (min-width: 1200px) {padding-bottom: 3%;}@media (min-width: 1920px) {padding-bottom: 3%;}}"
+                },
+                {
+                    "line_number": 878,
+                    "text": ".dbsp4 {padding-bottom: 4%;@media (min-width: 384px)  {padding-bottom: 4%;}@media (min-width: 412px)  {padding-bottom: 4%;}@media (min-width: 576px)  {padding-bottom: 4%;}@media (min-width:  768px)  {padding-bottom: 4%;}@media (min-width: 992px)  {padding-bottom: 4%;}@media (min-width: 1200px) {padding-bottom: 4%;}@media (min-width: 1920px) {padding-bottom: 4%;}}"
+                },
+                {
+                    "line_number": 879,
+                    "text": ".dbsp5 {padding-bottom: 5%;@media (min-width: 384px)  {padding-bottom: 5%;}@media (min-width: 412px)  {padding-bottom: 5%;}@media (min-width: 576px)  {padding-bottom: 5%;}@media (min-width:  768px)  {padding-bottom: 5%;}@media (min-width: 992px)  {padding-bottom: 5%;}@media (min-width: 1200px) {padding-bottom: 5%;}@media (min-width: 1920px) {padding-bottom: 5%;}}"
+                },
+                {
+                    "line_number": 880,
+                    "text": ".dbsp6 {padding-bottom: 6%;@media (min-width: 384px)  {padding-bottom: 6%;}@media (min-width: 412px)  {padding-bottom: 6%;}@media (min-width: 576px)  {padding-bottom: 6%;}@media (min-width:  768px)  {padding-bottom: 6%;}@media (min-width: 992px)  {padding-bottom: 6%;}@media (min-width: 1200px) {padding-bottom: 6%;}@media (min-width: 1920px) {padding-bottom: 6%;}}"
+                },
+                {
+                    "line_number": 881,
+                    "text": ".dbsp7 {padding-bottom: 7%;@media (min-width: 384px)  {padding-bottom: 7%;}@media (min-width: 412px)  {padding-bottom: 7%;}@media (min-width: 576px)  {padding-bottom: 7%;}@media (min-width:  768px)  {padding-bottom: 7%;}@media (min-width: 992px)  {padding-bottom: 7%;}@media (min-width: 1200px) {padding-bottom: 7%;}@media (min-width: 1920px) {padding-bottom: 7%;}}"
+                },
+                {
+                    "line_number": 882,
+                    "text": ".dbsp8 {padding-bottom: 8%;@media (min-width: 384px)  {padding-bottom: 8%;}@media (min-width: 412px)  {padding-bottom: 8%;}@media (min-width: 586px)  {padding-bottom: 8%;}@media (min-width:  7868px)  {padding-bottom: 8%;}@media (min-width: 992px)  {padding-bottom: 8%;}@media (min-width: 1200px) {padding-bottom: 8%;}@media (min-width: 1920px) {padding-bottom: 8%;}}"
+                },
+                {
+                    "line_number": 883,
+                    "text": ".dbsp9 {padding-bottom: 9%;@media (min-width: 384px)  {padding-bottom: 9%;}@media (min-width: 412px)  {padding-bottom: 9%;}@media (min-width: 586px)  {padding-bottom: 9%;}@media (min-width:  7868px)  {padding-bottom: 9%;}@media (min-width: 992px)  {padding-bottom: 9%;}@media (min-width: 1200px) {padding-bottom: 9%;}@media (min-width: 1920px) {padding-bottom: 9%;}}"
+                },
+                {
+                    "line_number": 884,
+                    "text": ".dbsp16 {padding-bottom: 16%;@media (min-width: 384px)  {padding-bottom: 16%;}@media (min-width: 412px)  {padding-bottom: 16%;}@media (min-width: 586px)  {padding-bottom: 9%;}@media (min-width:  7868px)  {padding-bottom: 16%;}@media (min-width: 992px)  {padding-bottom: 16%;}@media (min-width: 1200px) {padding-bottom: 16%;}@media (min-width: 1920px) {padding-bottom: 16%;}}"
+                },
+                {
+                    "line_number": 885,
+                    "text": ".dbsp21 {padding-bottom: 21%;@media (min-width: 384px)  {padding-bottom: 21%;}@media (min-width: 412px)  {padding-bottom: 21%;}@media (min-width: 586px)  {padding-bottom: 9%;}@media (min-width:  7868px)  {padding-bottom: 21%;}@media (min-width: 992px)  {padding-bottom: 21%;}@media (min-width: 1200px) {padding-bottom: 21%;}@media (min-width: 1920px) {padding-bottom: 21%;}}"
+                },
+                {
+                    "line_number": 886,
+                    "text": ""
+                },
+                {
+                    "line_number": 887,
+                    "text": ".dbtop1  { padding-top: 1%; }"
+                },
+                {
+                    "line_number": 888,
+                    "text": ".dbtop2  { padding-top: 2%; }"
+                },
+                {
+                    "line_number": 889,
+                    "text": ".dbtop3  { padding-top: 3%; }"
+                },
+                {
+                    "line_number": 890,
+                    "text": ".dbtop4  { padding-top: 4%; }"
+                },
+                {
+                    "line_number": 891,
+                    "text": ".dbtop5  { padding-top: 5%; }"
+                },
+                {
+                    "line_number": 892,
+                    "text": ".dbtop6  { padding-top: 6%; }"
+                },
+                {
+                    "line_number": 893,
+                    "text": ".dbtop7  { padding-top: 7%; }"
+                },
+                {
+                    "line_number": 894,
+                    "text": ".dbtop8  { padding-top: 8%; }"
+                },
+                {
+                    "line_number": 895,
+                    "text": ".dbtop9  { padding-top: 9%; }"
+                },
+                {
+                    "line_number": 896,
+                    "text": ".dbtop10 { padding-top: 10%; }"
+                },
+                {
+                    "line_number": 897,
+                    "text": ".dbtop11 { padding-top: 11%; }"
+                },
+                {
+                    "line_number": 898,
+                    "text": ".dbtop12 { padding-top: 12%; }"
+                },
+                {
+                    "line_number": 899,
+                    "text": ".dbtop13 { padding-top: 13%; }"
+                },
+                {
+                    "line_number": 900,
+                    "text": ".dbtop14 { padding-top: 14%; }"
+                },
+                {
+                    "line_number": 901,
+                    "text": ".dbtop15 { padding-top: 15%; }"
+                },
+                {
+                    "line_number": 902,
+                    "text": ".dbtop16 { padding-top: 16%; }"
+                },
+                {
+                    "line_number": 903,
+                    "text": ".dbtop17 { padding-top: 17%; }"
+                },
+                {
+                    "line_number": 904,
+                    "text": ".dbtop18 { padding-top: 18%; }"
+                },
+                {
+                    "line_number": 905,
+                    "text": ".dbtop19 { padding-top: 19%; }"
+                },
+                {
+                    "line_number": 906,
+                    "text": ".dbtop20 { padding-top: 20%; }"
+                },
+                {
+                    "line_number": 907,
+                    "text": ""
+                },
+                {
+                    "line_number": 908,
+                    "text": ""
+                },
+                {
+                    "line_number": 909,
+                    "text": ".last {"
+                },
+                {
+                    "line_number": 910,
+                    "text": "padding-bottom: 7%;"
+                },
+                {
+                    "line_number": 911,
+                    "text": ""
+                },
+                {
+                    "line_number": 912,
+                    "text": "@media (min-width: 384px) {padding-bottom: 5%;}"
+                },
+                {
+                    "line_number": 913,
+                    "text": "@media (min-width: 412px) {padding-bottom: 5%;}"
+                },
+                {
+                    "line_number": 914,
+                    "text": "@media (min-width: 576px) {padding-bottom: 4%;}"
+                },
+                {
+                    "line_number": 915,
+                    "text": "@media (min-width:  768px) {padding-bottom: 4%;}"
+                },
+                {
+                    "line_number": 916,
+                    "text": "@media (min-width: 992px) {padding-bottom: 7%;}"
+                },
+                {
+                    "line_number": 917,
+                    "text": "@media (min-width: 1200px) {padding-bottom: 7%;} /* HD (1080p) */"
+                },
+                {
+                    "line_number": 918,
+                    "text": "@media (min-width: 1920px) {padding-bottom: 7%;} /* FHD(2K/4K) */"
+                },
+                {
+                    "line_number": 919,
+                    "text": "}"
+                },
+                {
+                    "line_number": 920,
+                    "text": ""
+                },
+                {
+                    "line_number": 921,
+                    "text": ".primer {"
+                },
+                {
+                    "line_number": 922,
+                    "text": "padding-top: 7%;"
+                },
+                {
+                    "line_number": 923,
+                    "text": ""
+                },
+                {
+                    "line_number": 924,
+                    "text": "@media (min-width: 384px) {padding-top: 5%;}"
+                },
+                {
+                    "line_number": 925,
+                    "text": "@media (min-width: 412px) {padding-top: 5%;}"
+                },
+                {
+                    "line_number": 926,
+                    "text": "@media (min-width: 576px) {padding-top: 4%;}"
+                },
+                {
+                    "line_number": 927,
+                    "text": "@media (min-width:  768px) {padding-top: 4%;}"
+                },
+                {
+                    "line_number": 928,
+                    "text": "@media (min-width: 992px) {padding-top: 7%;}"
+                },
+                {
+                    "line_number": 929,
+                    "text": "@media (min-width: 1200px) {padding-top: 7%;} /* HD (1080p) */"
+                },
+                {
+                    "line_number": 930,
+                    "text": "@media (min-width: 1920px) {padding-top: 7%;} /* FHD(2K/4K) */"
+                },
+                {
+                    "line_number": 931,
+                    "text": "}"
+                },
+                {
+                    "line_number": 932,
+                    "text": ""
+                },
+                {
+                    "line_number": 933,
+                    "text": "/*  MSO1*/"
+                },
+                {
+                    "line_number": 934,
+                    "text": ""
+                },
+                {
+                    "line_number": 935,
+                    "text": ".mso1, .mso2 {"
+                },
+                {
+                    "line_number": 936,
+                    "text": "font-family: 'Material Symbols Outlined Local';"
+                },
+                {
+                    "line_number": 937,
+                    "text": "font-weight: normal;"
+                },
+                {
+                    "line_number": 938,
+                    "text": "font-style: normal;"
+                },
+                {
+                    "line_number": 939,
+                    "text": "font-size: 14px;"
+                },
+                {
+                    "line_number": 940,
+                    "text": "line-height: 1;"
+                },
+                {
+                    "line_number": 941,
+                    "text": "letter-spacing: normal;"
+                },
+                {
+                    "line_number": 942,
+                    "text": "text-transform: none;"
+                },
+                {
+                    "line_number": 943,
+                    "text": "display: inline-block;"
+                },
+                {
+                    "line_number": 944,
+                    "text": "white-space: nowrap;"
+                },
+                {
+                    "line_number": 945,
+                    "text": "word-wrap: normal;"
+                },
+                {
+                    "line_number": 946,
+                    "text": "direction: ltr;"
+                },
+                {
+                    "line_number": 947,
+                    "text": "-webkit-font-feature-settings: 'liga';"
+                },
+                {
+                    "line_number": 948,
+                    "text": "-webkit-font-smoothing: antialiased;"
+                },
+                {
+                    "line_number": 949,
+                    "text": "border: 1px solid goldenrod;"
+                },
+                {
+                    "line_number": 950,
+                    "text": "border-radius: 2em;"
+                },
+                {
+                    "line_number": 951,
+                    "text": "cursor: pointer;"
+                },
+                {
+                    "line_number": 952,
+                    "text": "font-size: 20px;"
+                },
+                {
+                    "line_number": 953,
+                    "text": "}"
+                },
+                {
+                    "line_number": 954,
+                    "text": ""
+                },
+                {
+                    "line_number": 955,
+                    "text": ".mso2 {"
+                },
+                {
+                    "line_number": 956,
+                    "text": "border: 0px solid goldenrod;"
+                },
+                {
+                    "line_number": 957,
+                    "text": "border-radius: 0em;"
+                },
+                {
+                    "line_number": 958,
+                    "text": "}"
+                },
+                {
+                    "line_number": 959,
+                    "text": ""
+                },
+                {
+                    "line_number": 960,
+                    "text": ""
+                },
+                {
+                    "line_number": 961,
+                    "text": "/* MOSTRAR IMAGENES */"
+                },
+                {
+                    "line_number": 962,
+                    "text": ""
+                },
+                {
+                    "line_number": 963,
+                    "text": ".notas-enlace {"
+                },
+                {
+                    "line_number": 964,
+                    "text": "font-family: \"Franklin Gothic Medium\";"
+                },
+                {
+                    "line_number": 965,
+                    "text": "padding: 2px;"
+                },
+                {
+                    "line_number": 966,
+                    "text": "display: inline-block;"
+                },
+                {
+                    "line_number": 967,
+                    "text": "margin: 2px;"
+                },
+                {
+                    "line_number": 968,
+                    "text": "text-decoration: none;"
+                },
+                {
+                    "line_number": 969,
+                    "text": "color: inherit;"
+                },
+                {
+                    "line_number": 970,
+                    "text": "transition: all 0.17s ease;"
+                },
+                {
+                    "line_number": 971,
+                    "text": "}"
+                },
+                {
+                    "line_number": 972,
+                    "text": ""
+                },
+                {
+                    "line_number": 973,
+                    "text": ".notas-enlace:hover {"
+                },
+                {
+                    "line_number": 974,
+                    "text": "box-shadow: 0 4px 8px rgba(0,0,0,0.90); /* Sombra m\u00e1s pronunciada */"
+                },
+                {
+                    "line_number": 975,
+                    "text": "transform: translateY(-1px); /* Movimiento sutil hacia arriba */"
+                },
+                {
+                    "line_number": 976,
+                    "text": "}"
+                },
+                {
+                    "line_number": 977,
+                    "text": ""
+                },
+                {
+                    "line_number": 978,
+                    "text": ".notas-columna {"
+                },
+                {
+                    "line_number": 979,
+                    "text": "float: left;"
+                },
+                {
+                    "line_number": 980,
+                    "text": "color: red;"
+                },
+                {
+                    "line_number": 981,
+                    "text": "}"
+                },
+                {
+                    "line_number": 982,
+                    "text": ""
+                },
+                {
+                    "line_number": 983,
+                    "text": "#imagen-container {"
+                },
+                {
+                    "line_number": 984,
+                    "text": "display: none;"
+                },
+                {
+                    "line_number": 985,
+                    "text": "position: relative;  /* Cambiado de 'relative' a 'fixed' */"
+                },
+                {
+                    "line_number": 986,
+                    "text": "background: white;"
+                },
+                {
+                    "line_number": 987,
+                    "text": "border: 1px solid #f2e5e5;"
+                },
+                {
+                    "line_number": 988,
+                    "text": "box-shadow: 0 0 10px rgba(0,0,0,0.1);"
+                },
+                {
+                    "line_number": 989,
+                    "text": "z-index: 1000;"
+                },
+                {
+                    "line_number": 990,
+                    "text": "align-items: center;"
+                },
+                {
+                    "line_number": 991,
+                    "text": "box-sizing: border-box;"
+                },
+                {
+                    "line_number": 992,
+                    "text": "/*  width: 15%;*/"
+                },
+                {
+                    "line_number": 993,
+                    "text": "}"
+                },
+                {
+                    "line_number": 994,
+                    "text": ""
+                },
+                {
+                    "line_number": 995,
+                    "text": "/*****************  BUSCADOR EN EL CANTO ******************/"
+                },
+                {
+                    "line_number": 996,
+                    "text": ""
+                },
+                {
+                    "line_number": 997,
+                    "text": ".buscador-cantos {"
+                },
+                {
+                    "line_number": 998,
+                    "text": "margin-left: auto;  /* Esto empuja el div a la derecha */"
+                },
+                {
+                    "line_number": 999,
+                    "text": "width: fit-content; /* Ajusta el ancho al contenido */"
+                },
+                {
+                    "line_number": 1000,
+                    "text": "position: relative; /* Necesario para el dropdown */"
+                },
+                {
+                    "line_number": 1001,
+                    "text": "}"
+                },
+                {
+                    "line_number": 1002,
+                    "text": ""
+                },
+                {
+                    "line_number": 1003,
+                    "text": "#inputBusqueda {"
+                },
+                {
+                    "line_number": 1004,
+                    "text": "padding: 8px 12px;"
+                },
+                {
+                    "line_number": 1005,
+                    "text": "border: 1px solid #ddd;"
+                },
+                {
+                    "line_number": 1006,
+                    "text": "border-radius: 20px;"
+                },
+                {
+                    "line_number": 1007,
+                    "text": "width: 200px;"
+                },
+                {
+                    "line_number": 1008,
+                    "text": "text-align: left;"
+                },
+                {
+                    "line_number": 1009,
+                    "text": "background-color: white;"
+                },
+                {
+                    "line_number": 1010,
+                    "text": "transition: all 0.3s ease;"
+                },
+                {
+                    "line_number": 1011,
+                    "text": "box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);"
+                },
+                {
+                    "line_number": 1012,
+                    "text": "}"
+                },
+                {
+                    "line_number": 1013,
+                    "text": ""
+                },
+                {
+                    "line_number": 1014,
+                    "text": "#inputBusqueda:hover {"
+                },
+                {
+                    "line_number": 1015,
+                    "text": "box-shadow: 0 7px 15px rgba(0, 0, 0, 0.55);"
+                },
+                {
+                    "line_number": 1016,
+                    "text": "}"
+                },
+                {
+                    "line_number": 1017,
+                    "text": ""
+                },
+                {
+                    "line_number": 1018,
+                    "text": "#inputBusqueda:focus {"
+                },
+                {
+                    "line_number": 1019,
+                    "text": "box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);"
+                },
+                {
+                    "line_number": 1020,
+                    "text": "outline: none;"
+                },
+                {
+                    "line_number": 1021,
+                    "text": "border-color: goldenrod;"
+                },
+                {
+                    "line_number": 1022,
+                    "text": "}"
+                },
+                {
+                    "line_number": 1023,
+                    "text": ""
+                },
+                {
+                    "line_number": 1024,
+                    "text": "#resultadosBusqueda {"
+                },
+                {
+                    "line_number": 1025,
+                    "text": "position: absolute;"
+                },
+                {
+                    "line_number": 1026,
+                    "text": "right: 0;"
+                },
+                {
+                    "line_number": 1027,
+                    "text": "background: white;"
+                },
+                {
+                    "line_number": 1028,
+                    "text": "border: 1px solid #ddd;"
+                },
+                {
+                    "line_number": 1029,
+                    "text": "margin-top: 5px;"
+                },
+                {
+                    "line_number": 1030,
+                    "text": "z-index: 1000;"
+                },
+                {
+                    "line_number": 1031,
+                    "text": "display: none; /* Oculto por defecto */"
+                },
+                {
+                    "line_number": 1032,
+                    "text": "}"
+                },
+                {
+                    "line_number": 1033,
+                    "text": ""
+                },
+                {
+                    "line_number": 1034,
+                    "text": "/* UDPATE BUSCADOR*/"
+                },
+                {
+                    "line_number": 1035,
+                    "text": ""
+                },
+                {
+                    "line_number": 1036,
+                    "text": "#resultadosBusqueda {"
+                },
+                {
+                    "line_number": 1037,
+                    "text": "/*position: relative;*/ /* NO ME GUSTA COMO LO HACE CON ESTO*/"
+                },
+                {
+                    "line_number": 1038,
+                    "text": "position: absolute;"
+                },
+                {
+                    "line_number": 1039,
+                    "text": "max-height: 400px;"
+                },
+                {
+                    "line_number": 1040,
+                    "text": "overflow-y: auto;"
+                },
+                {
+                    "line_number": 1041,
+                    "text": "background-color: aliceblue;"
+                },
+                {
+                    "line_number": 1042,
+                    "text": "}"
+                },
+                {
+                    "line_number": 1043,
+                    "text": ""
+                },
+                {
+                    "line_number": 1044,
+                    "text": ".resultados-sidebar {"
+                },
+                {
+                    "line_number": 1045,
+                    "text": "position: absolute;"
+                },
+                {
+                    "line_number": 1046,
+                    "text": "right: 0;"
+                },
+                {
+                    "line_number": 1047,
+                    "text": "top: 0;"
+                },
+                {
+                    "line_number": 1048,
+                    "text": "width: 250px;"
+                },
+                {
+                    "line_number": 1049,
+                    "text": "background: white;"
+                },
+                {
+                    "line_number": 1050,
+                    "text": "border-left: 1px solid #ddd;"
+                },
+                {
+                    "line_number": 1051,
+                    "text": "padding: 10px;"
+                },
+                {
+                    "line_number": 1052,
+                    "text": "max-height: 400px;"
+                },
+                {
+                    "line_number": 1053,
+                    "text": "overflow-y: auto;"
+                },
+                {
+                    "line_number": 1054,
+                    "text": "box-shadow: -2px 0 5px rgba(0,0,0,0.1);"
+                },
+                {
+                    "line_number": 1055,
+                    "text": "display: none;"
+                },
+                {
+                    "line_number": 1056,
+                    "text": "}"
+                },
+                {
+                    "line_number": 1057,
+                    "text": ""
+                },
+                {
+                    "line_number": 1058,
+                    "text": "#resultadosBusqueda:hover .resultados-sidebar {"
+                },
+                {
+                    "line_number": 1059,
+                    "text": "display: block;"
+                },
+                {
+                    "line_number": 1060,
+                    "text": "}"
+                },
+                {
+                    "line_number": 1061,
+                    "text": ""
+                },
+                {
+                    "line_number": 1062,
+                    "text": ".resultado-item {"
+                },
+                {
+                    "line_number": 1063,
+                    "text": "padding: 8px;"
+                },
+                {
+                    "line_number": 1064,
+                    "text": "border-bottom: 1px solid #eee;"
+                },
+                {
+                    "line_number": 1065,
+                    "text": "cursor: pointer;"
+                },
+                {
+                    "line_number": 1066,
+                    "text": "}"
+                },
+                {
+                    "line_number": 1067,
+                    "text": ""
+                },
+                {
+                    "line_number": 1068,
+                    "text": ".resultado-item:hover {"
+                },
+                {
+                    "line_number": 1069,
+                    "text": "background-color: #03527a;"
+                },
+                {
+                    "line_number": 1070,
+                    "text": "}"
+                },
+                {
+                    "line_number": 1071,
+                    "text": ""
+                },
+                {
+                    "line_number": 1072,
+                    "text": ".resultado-item {"
+                },
+                {
+                    "line_number": 1073,
+                    "text": "font-family: sans-serif;"
+                },
+                {
+                    "line_number": 1074,
+                    "text": "padding: 10px;"
+                },
+                {
+                    "line_number": 1075,
+                    "text": "border-bottom: 1px solid #eee;"
+                },
+                {
+                    "line_number": 1076,
+                    "text": "cursor: pointer;"
+                },
+                {
+                    "line_number": 1077,
+                    "text": "text-align: left;"
+                },
+                {
+                    "line_number": 1078,
+                    "text": "}"
+                },
+                {
+                    "line_number": 1079,
+                    "text": ""
+                },
+                {
+                    "line_number": 1080,
+                    "text": ".resultado-item:hover {"
+                },
+                {
+                    "line_number": 1081,
+                    "text": "background: #03527a;"
+                },
+                {
+                    "line_number": 1082,
+                    "text": "color: white;"
+                },
+                {
+                    "line_number": 1083,
+                    "text": "}"
+                },
+                {
+                    "line_number": 1084,
+                    "text": ""
+                },
+                {
+                    "line_number": 1085,
+                    "text": ""
+                },
+                {
+                    "line_number": 1086,
+                    "text": "/*****************  BUSCADOR EN EL CANTO ******************/"
+                },
+                {
+                    "line_number": 1087,
+                    "text": ""
+                },
+                {
+                    "line_number": 1088,
+                    "text": ".dbright {"
+                },
+                {
+                    "line_number": 1089,
+                    "text": "display: flex;"
+                },
+                {
+                    "line_number": 1090,
+                    "text": "justify-content: flex-end; /* Alinea todo en la celda a la derecha */"
+                },
+                {
+                    "line_number": 1091,
+                    "text": "}"
+                },
+                {
+                    "line_number": 1092,
+                    "text": ""
+                },
+                {
+                    "line_number": 1093,
+                    "text": ""
+                },
+                {
+                    "line_number": 1094,
+                    "text": "#imagen-nota {"
+                },
+                {
+                    "line_number": 1095,
+                    "text": "max-width: 29em;"
+                },
+                {
+                    "line_number": 1096,
+                    "text": "width: max-content;"
+                },
+                {
+                    "line_number": 1097,
+                    "text": "object-fit: contain;"
+                },
+                {
+                    "line_number": 1098,
+                    "text": "align-content: center;"
+                },
+                {
+                    "line_number": 1099,
+                    "text": "position: relative;"
+                },
+                {
+                    "line_number": 1100,
+                    "text": "height: 7em;"
+                },
+                {
+                    "line_number": 1101,
+                    "text": "}"
+                },
+                {
+                    "line_number": 1102,
+                    "text": ""
+                },
+                {
+                    "line_number": 1103,
+                    "text": ".dbpict {"
+                },
+                {
+                    "line_number": 1104,
+                    "text": ""
+                },
+                {
+                    "line_number": 1105,
+                    "text": "max-width: 7em;"
+                },
+                {
+                    "line_number": 1106,
+                    "text": "width: max-content;"
+                },
+                {
+                    "line_number": 1107,
+                    "text": "object-fit: contain;"
+                },
+                {
+                    "line_number": 1108,
+                    "text": "align-content: center;"
+                },
+                {
+                    "line_number": 1109,
+                    "text": "position: relative;"
+                },
+                {
+                    "line_number": 1110,
+                    "text": "height: 7em;"
+                },
+                {
+                    "line_number": 1111,
+                    "text": "}"
+                },
+                {
+                    "line_number": 1112,
+                    "text": ""
+                },
+                {
+                    "line_number": 1113,
+                    "text": "/* OCULTAR OPCIONES*/"
+                },
+                {
+                    "line_number": 1114,
+                    "text": ""
+                },
+                {
+                    "line_number": 1115,
+                    "text": "/* Agrega esto a tu hoja de estilos */"
+                },
+                {
+                    "line_number": 1116,
+                    "text": ".odb {"
+                },
+                {
+                    "line_number": 1117,
+                    "text": "display: table-row;"
+                },
+                {
+                    "line_number": 1118,
+                    "text": "/*display: block;*/"
+                },
+                {
+                    "line_number": 1119,
+                    "text": "/*block !important;*/"
+                },
+                {
+                    "line_number": 1120,
+                    "text": "}"
+                },
+                {
+                    "line_number": 1121,
+                    "text": ""
+                },
+                {
+                    "line_number": 1122,
+                    "text": ".zboton {"
+                },
+                {
+                    "line_number": 1123,
+                    "text": "font-size: 20px;"
+                },
+                {
+                    "line_number": 1124,
+                    "text": "border: 1px solid darkgoldenrod !important;"
+                },
+                {
+                    "line_number": 1125,
+                    "text": "color: red;"
+                },
+                {
+                    "line_number": 1126,
+                    "text": "}"
+                },
+                {
+                    "line_number": 1127,
+                    "text": ""
+                },
+                {
+                    "line_number": 1128,
+                    "text": ""
+                },
+                {
+                    "line_number": 1129,
+                    "text": ".fleft, .fright {"
+                },
+                {
+                    "line_number": 1130,
+                    "text": "color: red;"
+                },
+                {
+                    "line_number": 1131,
+                    "text": "transition: transform 0.3s;"
+                },
+                {
+                    "line_number": 1132,
+                    "text": "}"
+                },
+                {
+                    "line_number": 1133,
+                    "text": ""
+                },
+                {
+                    "line_number": 1134,
+                    "text": ".fleft {float: left;}"
+                },
+                {
+                    "line_number": 1135,
+                    "text": ".fright {float: right;}"
+                },
+                {
+                    "line_number": 1136,
+                    "text": ""
+                },
+                {
+                    "line_number": 1137,
+                    "text": ".fleft:hover {"
+                },
+                {
+                    "line_number": 1138,
+                    "text": "transform: translateX(-5px); /* Desplaza hacia la izquierda */"
+                },
+                {
+                    "line_number": 1139,
+                    "text": "transition: transform 0.3s ease; /* Agrega una transici\u00f3n suave */"
+                },
+                {
+                    "line_number": 1140,
+                    "text": "}"
+                },
+                {
+                    "line_number": 1141,
+                    "text": ""
+                },
+                {
+                    "line_number": 1142,
+                    "text": ".fright:hover {"
+                },
+                {
+                    "line_number": 1143,
+                    "text": "transform: translateX(5px); /* Desplaza hacia la derecha */"
+                },
+                {
+                    "line_number": 1144,
+                    "text": "transition: transform 0.3s ease; /* Agrega una transici\u00f3n suave */"
+                },
+                {
+                    "line_number": 1145,
+                    "text": "}"
+                },
+                {
+                    "line_number": 1146,
+                    "text": ""
+                },
+                {
+                    "line_number": 1147,
+                    "text": ".dbhr {"
+                },
+                {
+                    "line_number": 1148,
+                    "text": "width: 100%;"
+                },
+                {
+                    "line_number": 1149,
+                    "text": "border: none;"
+                },
+                {
+                    "line_number": 1150,
+                    "text": "height: 0;"
+                },
+                {
+                    "line_number": 1151,
+                    "text": "margin: 0;"
+                },
+                {
+                    "line_number": 1152,
+                    "text": "padding: 0;"
+                },
+                {
+                    "line_number": 1153,
+                    "text": ""
+                },
+                {
+                    "line_number": 1154,
+                    "text": "@media (max-width: 760px) {"
+                },
+                {
+                    "line_number": 1155,
+                    "text": "display: none;"
+                },
+                {
+                    "line_number": 1156,
+                    "text": "}"
+                },
+                {
+                    "line_number": 1157,
+                    "text": ""
+                },
+                {
+                    "line_number": 1158,
+                    "text": "@media (min-width: 761px) and (max-width: 991px) {"
+                },
+                {
+                    "line_number": 1159,
+                    "text": "border-top: 1px solid #00000000;"
+                },
+                {
+                    "line_number": 1160,
+                    "text": "width: 800px;"
+                },
+                {
+                    "line_number": 1161,
+                    "text": "}"
+                },
+                {
+                    "line_number": 1162,
+                    "text": "}"
+                },
+                {
+                    "line_number": 1163,
+                    "text": ""
+                },
+                {
+                    "line_number": 1164,
+                    "text": "/*  CODIGO DESCONTINUADO"
+                },
+                {
+                    "line_number": 1165,
+                    "text": ""
+                },
+                {
+                    "line_number": 1166,
+                    "text": ".bis {"
+                },
+                {
+                    "line_number": 1167,
+                    "text": "display: flex;"
+                },
+                {
+                    "line_number": 1168,
+                    "text": "align-items: center;"
+                },
+                {
+                    "line_number": 1169,
+                    "text": "border-left: 1px solid #868686;"
+                },
+                {
+                    "line_number": 1170,
+                    "text": "height: 7%;"
+                },
+                {
+                    "line_number": 1171,
+                    "text": "padding-left: 10px;"
+                },
+                {
+                    "line_number": 1172,
+                    "text": "margin-left: 26%;"
+                },
+                {
+                    "line_number": 1173,
+                    "text": "position: absolute;"
+                },
+                {
+                    "line_number": 1174,
+                    "text": "margin-top: -2%;"
+                },
+                {
+                    "line_number": 1175,
+                    "text": ""
+                },
+                {
+                    "line_number": 1176,
+                    "text": "@media (min-width: 384px) {"
+                },
+                {
+                    "line_number": 1177,
+                    "text": "height: 9%;"
+                },
+                {
+                    "line_number": 1178,
+                    "text": "margin-left: 67%;"
+                },
+                {
+                    "line_number": 1179,
+                    "text": "/*margin-left: 26%;"
+                },
+                {
+                    "line_number": 1180,
+                    "text": "margin-top: -1%;"
+                },
+                {
+                    "line_number": 1181,
+                    "text": "}"
+                },
+                {
+                    "line_number": 1182,
+                    "text": ""
+                },
+                {
+                    "line_number": 1183,
+                    "text": "@media (min-width:  768px) and (max-width: 991px)"
+                },
+                {
+                    "line_number": 1184,
+                    "text": "{"
+                },
+                {
+                    "line_number": 1185,
+                    "text": "height: 11%;"
+                },
+                {
+                    "line_number": 1186,
+                    "text": "margin-left: 68%;"
+                },
+                {
+                    "line_number": 1187,
+                    "text": "margin-top: -5%;"
+                },
+                {
+                    "line_number": 1188,
+                    "text": "}"
+                },
+                {
+                    "line_number": 1189,
+                    "text": "}"
+                },
+                {
+                    "line_number": 1190,
+                    "text": ""
+                },
+                {
+                    "line_number": 1191,
+                    "text": ""
+                },
+                {
+                    "line_number": 1192,
+                    "text": ".dbhr {"
+                },
+                {
+                    "line_number": 1193,
+                    "text": "color: transparent;"
+                },
+                {
+                    "line_number": 1194,
+                    "text": "@media (max-width: 760px) {"
+                },
+                {
+                    "line_number": 1195,
+                    "text": "display: none;"
+                },
+                {
+                    "line_number": 1196,
+                    "text": "}"
+                },
+                {
+                    "line_number": 1197,
+                    "text": ""
+                },
+                {
+                    "line_number": 1198,
+                    "text": "@media (min-width:  761px) and (max-width: 991px) {"
+                },
+                {
+                    "line_number": 1199,
+                    "text": "width: 800px;"
+                },
+                {
+                    "line_number": 1200,
+                    "text": "}"
+                },
+                {
+                    "line_number": 1201,
+                    "text": ""
+                },
+                {
+                    "line_number": 1202,
+                    "text": "@media (min-width: 992px ){"
+                },
+                {
+                    "line_number": 1203,
+                    "text": "display: none;"
+                },
+                {
+                    "line_number": 1204,
+                    "text": "}"
+                },
+                {
+                    "line_number": 1205,
+                    "text": "}"
+                },
+                {
+                    "line_number": 1206,
+                    "text": ""
+                },
+                {
+                    "line_number": 1207,
+                    "text": "*/"
+                },
+                {
+                    "line_number": 1208,
+                    "text": ""
+                },
+                {
+                    "line_number": 1209,
+                    "text": "/* CSS en clase MENU REDES SOCIALES*/"
+                },
+                {
+                    "line_number": 1210,
+                    "text": ".menu-trigger {"
+                },
+                {
+                    "line_number": 1211,
+                    "text": "cursor: pointer;"
+                },
+                {
+                    "line_number": 1212,
+                    "text": "position: relative;"
+                },
+                {
+                    "line_number": 1213,
+                    "text": "display: inline-block;"
+                },
+                {
+                    "line_number": 1214,
+                    "text": "}"
+                },
+                {
+                    "line_number": 1215,
+                    "text": ""
+                },
+                {
+                    "line_number": 1216,
+                    "text": ".social-menu {"
+                },
+                {
+                    "line_number": 1217,
+                    "text": "display: none;"
+                },
+                {
+                    "line_number": 1218,
+                    "text": "position: absolute;"
+                },
+                {
+                    "line_number": 1219,
+                    "text": "left: 0;"
+                },
+                {
+                    "line_number": 1220,
+                    "text": "top: 100%;"
+                },
+                {
+                    "line_number": 1221,
+                    "text": "background: white;"
+                },
+                {
+                    "line_number": 1222,
+                    "text": "border: 1px solid #ddd;"
+                },
+                {
+                    "line_number": 1223,
+                    "text": "padding: 10px;"
+                },
+                {
+                    "line_number": 1224,
+                    "text": "box-shadow: 0 2px 5px rgba(0,0,0,0.2);"
+                },
+                {
+                    "line_number": 1225,
+                    "text": "z-index: 100;"
+                },
+                {
+                    "line_number": 1226,
+                    "text": "min-width: 120px;"
+                },
+                {
+                    "line_number": 1227,
+                    "text": "}"
+                },
+                {
+                    "line_number": 1228,
+                    "text": ""
+                },
+                {
+                    "line_number": 1229,
+                    "text": ".social-menu a {"
+                },
+                {
+                    "line_number": 1230,
+                    "text": "display: block;"
+                },
+                {
+                    "line_number": 1231,
+                    "text": "padding: 5px 0;"
+                },
+                {
+                    "line_number": 1232,
+                    "text": "color: black;"
+                },
+                {
+                    "line_number": 1233,
+                    "text": "text-decoration: none;"
+                },
+                {
+                    "line_number": 1234,
+                    "text": "}"
+                },
+                {
+                    "line_number": 1235,
+                    "text": ""
+                },
+                {
+                    "line_number": 1236,
+                    "text": ".social-menu a:hover {"
+                },
+                {
+                    "line_number": 1237,
+                    "text": "color: #555;"
+                },
+                {
+                    "line_number": 1238,
+                    "text": "}"
+                },
+                {
+                    "line_number": 1239,
+                    "text": ""
+                },
+                {
+                    "line_number": 1240,
+                    "text": ".show-menu {"
+                },
+                {
+                    "line_number": 1241,
+                    "text": "display: block !important;"
+                },
+                {
+                    "line_number": 1242,
+                    "text": "}"
+                },
+                {
+                    "line_number": 1243,
+                    "text": ""
+                },
+                {
+                    "line_number": 1244,
+                    "text": ""
+                },
+                {
+                    "line_number": 1245,
+                    "text": ".PowerOff{"
+                },
+                {
+                    "line_number": 1246,
+                    "text": "display: none;"
+                },
+                {
+                    "line_number": 1247,
+                    "text": "}"
+                },
+                {
+                    "line_number": 1248,
+                    "text": ""
+                },
+                {
+                    "line_number": 1249,
+                    "text": ""
+                },
+                {
+                    "line_number": 1250,
+                    "text": ""
+                },
+                {
+                    "line_number": 1251,
+                    "text": "/****************************************"
+                },
+                {
+                    "line_number": 1252,
+                    "text": "CONTROL DE IMAGEN PARA ACORDES"
+                },
+                {
+                    "line_number": 1253,
+                    "text": "*******************************************/"
+                },
+                {
+                    "line_number": 1254,
+                    "text": "/* Estilos b\u00e1sicos */"
+                },
+                {
+                    "line_number": 1255,
+                    "text": ""
+                },
+                {
+                    "line_number": 1256,
+                    "text": ".acorde-container {"
+                },
+                {
+                    "line_number": 1257,
+                    "text": "padding: 30px;"
+                },
+                {
+                    "line_number": 1258,
+                    "text": "text-align: center;"
+                },
+                {
+                    "line_number": 1259,
+                    "text": "max-width: 500px;"
+                },
+                {
+                    "line_number": 1260,
+                    "text": "width: 100%;"
+                },
+                {
+                    "line_number": 1261,
+                    "text": "}"
+                },
+                {
+                    "line_number": 1262,
+                    "text": ""
+                },
+                {
+                    "line_number": 1263,
+                    "text": "h1 {"
+                },
+                {
+                    "line_number": 1264,
+                    "text": "color: #333;"
+                },
+                {
+                    "line_number": 1265,
+                    "text": "margin-bottom: 20px;"
+                },
+                {
+                    "line_number": 1266,
+                    "text": "}"
+                },
+                {
+                    "line_number": 1267,
+                    "text": ""
+                },
+                {
+                    "line_number": 1268,
+                    "text": "#acorde-selector {"
+                },
+                {
+                    "line_number": 1269,
+                    "text": "text-align: center;"
+                },
+                {
+                    "line_number": 1270,
+                    "text": "padding: 2px;"
+                },
+                {
+                    "line_number": 1271,
+                    "text": "font-size: 1.5rem;"
+                },
+                {
+                    "line_number": 1272,
+                    "text": "border-radius: 5px;"
+                },
+                {
+                    "line_number": 1273,
+                    "text": "border-color: goldenrod;"
+                },
+                {
+                    "line_number": 1274,
+                    "text": "border: 0px solid #ddd;"
+                },
+                {
+                    "line_number": 1275,
+                    "text": "width: auto;"
+                },
+                {
+                    "line_number": 1276,
+                    "text": "margin-bottom: 20px;"
+                },
+                {
+                    "line_number": 1277,
+                    "text": "-webkit-appearance: none;"
+                },
+                {
+                    "line_number": 1278,
+                    "text": "color: red;"
+                },
+                {
+                    "line_number": 1279,
+                    "text": "font-weight: bold;"
+                },
+                {
+                    "line_number": 1280,
+                    "text": "outline: none;"
+                },
+                {
+                    "line_number": 1281,
+                    "text": "background-color: transparent;"
+                },
+                {
+                    "line_number": 1282,
+                    "text": "}"
+                },
+                {
+                    "line_number": 1283,
+                    "text": ""
+                },
+                {
+                    "line_number": 1284,
+                    "text": "#acorde-display {"
+                },
+                {
+                    "line_number": 1285,
+                    "text": "background-color: #ffffff;"
+                },
+                {
+                    "line_number": 1286,
+                    "text": "min-height: auto;"
+                },
+                {
+                    "line_number": 1287,
+                    "text": "height: auto; /* Altura fija */"
+                },
+                {
+                    "line_number": 1288,
+                    "text": "@media (min-width: 384px) {"
+                },
+                {
+                    "line_number": 1289,
+                    "text": "/*width: 106.72%;*/"
+                },
+                {
+                    "line_number": 1290,
+                    "text": "width: 108%;"
+                },
+                {
+                    "line_number": 1291,
+                    "text": "}"
+                },
+                {
+                    "line_number": 1292,
+                    "text": "@media (min-width: 768px) {"
+                },
+                {
+                    "line_number": 1293,
+                    "text": "width: 100%;"
+                },
+                {
+                    "line_number": 1294,
+                    "text": "}"
+                },
+                {
+                    "line_number": 1295,
+                    "text": "@media (min-width: 992px) {}"
+                },
+                {
+                    "line_number": 1296,
+                    "text": ""
+                },
+                {
+                    "line_number": 1297,
+                    "text": "}"
+                },
+                {
+                    "line_number": 1298,
+                    "text": ""
+                },
+                {
+                    "line_number": 1299,
+                    "text": "#acorde-imagen {"
+                },
+                {
+                    "line_number": 1300,
+                    "text": "border: 0px solid #ffffff;"
+                },
+                {
+                    "line_number": 1301,
+                    "text": "height: auto;"
+                },
+                {
+                    "line_number": 1302,
+                    "text": "display: none;"
+                },
+                {
+                    "line_number": 1303,
+                    "text": "object-fit: contain;"
+                },
+                {
+                    "line_number": 1304,
+                    "text": "margin: 0 auto;"
+                },
+                {
+                    "line_number": 1305,
+                    "text": "pointer-events: none;"
+                },
+                {
+                    "line_number": 1306,
+                    "text": "user-select: none;"
+                },
+                {
+                    "line_number": 1307,
+                    "text": "-webkit-user-drag: none;"
+                },
+                {
+                    "line_number": 1308,
+                    "text": "-webkit-touch-callout: none;"
+                },
+                {
+                    "line_number": 1309,
+                    "text": ""
+                },
+                {
+                    "line_number": 1310,
+                    "text": "/*  margin-left: auto;"
+                },
+                {
+                    "line_number": 1311,
+                    "text": "margin-left: initial;   */"
+                },
+                {
+                    "line_number": 1312,
+                    "text": ""
+                },
+                {
+                    "line_number": 1313,
+                    "text": "@media (min-width: 384px) {"
+                },
+                {
+                    "line_number": 1314,
+                    "text": "width: 364px;"
+                },
+                {
+                    "line_number": 1315,
+                    "text": "max-width: 60%;"
+                },
+                {
+                    "line_number": 1316,
+                    "text": "}"
+                },
+                {
+                    "line_number": 1317,
+                    "text": "@media (min-width: 768px) {"
+                },
+                {
+                    "line_number": 1318,
+                    "text": "width: 768px;"
+                },
+                {
+                    "line_number": 1319,
+                    "text": "max-width: 70%;"
+                },
+                {
+                    "line_number": 1320,
+                    "text": "}"
+                },
+                {
+                    "line_number": 1321,
+                    "text": "@media (min-width: 992px) {"
+                },
+                {
+                    "line_number": 1322,
+                    "text": "width: 992px;"
+                },
+                {
+                    "line_number": 1323,
+                    "text": "max-width: 60%;"
+                },
+                {
+                    "line_number": 1324,
+                    "text": "}"
+                },
+                {
+                    "line_number": 1325,
+                    "text": "}"
+                },
+                {
+                    "line_number": 1326,
+                    "text": ""
+                },
+                {
+                    "line_number": 1327,
+                    "text": ""
+                },
+                {
+                    "line_number": 1328,
+                    "text": ""
+                },
+                {
+                    "line_number": 1329,
+                    "text": ".r1, .r2 {"
+                },
+                {
+                    "line_number": 1330,
+                    "text": "position: relative;"
+                },
+                {
+                    "line_number": 1331,
+                    "text": "min-height: 0px;"
+                },
+                {
+                    "line_number": 1332,
+                    "text": "}"
+                },
+                {
+                    "line_number": 1333,
+                    "text": ""
+                },
+                {
+                    "line_number": 1334,
+                    "text": ".r1::before, .r2::before {"
+                },
+                {
+                    "line_number": 1335,
+                    "text": "content: \"\u00a0\u00a0BIS A.\";"
+                },
+                {
+                    "line_number": 1336,
+                    "text": "position: absolute;"
+                },
+                {
+                    "line_number": 1337,
+                    "text": "align-content: center;"
+                },
+                {
+                    "line_number": 1338,
+                    "text": "border-left: 2px solid #c6c5c59e;"
+                },
+                {
+                    "line_number": 1339,
+                    "text": "color: #c6c5c59e;"
+                },
+                {
+                    "line_number": 1340,
+                    "text": "width: max-content;"
+                },
+                {
+                    "line_number": 1341,
+                    "text": ""
+                },
+                {
+                    "line_number": 1342,
+                    "text": "/* Media queries para r1 */"
+                },
+                {
+                    "line_number": 1343,
+                    "text": "@media (min-width: 384px) {"
+                },
+                {
+                    "line_number": 1344,
+                    "text": "height: 330px;"
+                },
+                {
+                    "line_number": 1345,
+                    "text": "margin-left: 76%;"
+                },
+                {
+                    "line_number": 1346,
+                    "text": "margin-top: 0%;"
+                },
+                {
+                    "line_number": 1347,
+                    "text": "}"
+                },
+                {
+                    "line_number": 1348,
+                    "text": ""
+                },
+                {
+                    "line_number": 1349,
+                    "text": "@media (min-width: 768px) {"
+                },
+                {
+                    "line_number": 1350,
+                    "text": "font-size: 1.5rem;"
+                },
+                {
+                    "line_number": 1351,
+                    "text": "height: 281px;"
+                },
+                {
+                    "line_number": 1352,
+                    "text": "margin-left: 80%;"
+                },
+                {
+                    "line_number": 1353,
+                    "text": "margin-top: 0%;"
+                },
+                {
+                    "line_number": 1354,
+                    "text": "}"
+                },
+                {
+                    "line_number": 1355,
+                    "text": ""
+                },
+                {
+                    "line_number": 1356,
+                    "text": "@media (min-width: 992px) {"
+                },
+                {
+                    "line_number": 1357,
+                    "text": "font-size: 1.3rem;"
+                },
+                {
+                    "line_number": 1358,
+                    "text": "font-weight: bold;"
+                },
+                {
+                    "line_number": 1359,
+                    "text": "height: 234px;"
+                },
+                {
+                    "line_number": 1360,
+                    "text": "margin-left: 80%;"
+                },
+                {
+                    "line_number": 1361,
+                    "text": "margin-top: 0%"
+                },
+                {
+                    "line_number": 1362,
+                    "text": ""
+                },
+                {
+                    "line_number": 1363,
+                    "text": "}"
+                },
+                {
+                    "line_number": 1364,
+                    "text": "}"
+                },
+                {
+                    "line_number": 1365,
+                    "text": ""
+                },
+                {
+                    "line_number": 1366,
+                    "text": ".pnota {"
+                },
+                {
+                    "line_number": 1367,
+                    "text": "display: flex;"
+                },
+                {
+                    "line_number": 1368,
+                    "text": ""
+                },
+                {
+                    "line_number": 1369,
+                    "text": "}"
+                },
+                {
+                    "line_number": 1370,
+                    "text": ""
+                },
+                {
+                    "line_number": 1371,
+                    "text": ".pnota1 {"
+                },
+                {
+                    "line_number": 1372,
+                    "text": "color: red;"
+                },
+                {
+                    "line_number": 1373,
+                    "text": "margin-top: 19px;"
+                },
+                {
+                    "line_number": 1374,
+                    "text": "}"
+                },
+                {
+                    "line_number": 1375,
+                    "text": ""
+                },
+                {
+                    "line_number": 1376,
+                    "text": ".pnota2 {"
+                },
+                {
+                    "line_number": 1377,
+                    "text": "text-align: justify;"
+                },
+                {
+                    "line_number": 1378,
+                    "text": "}"
+                },
+                {
+                    "line_number": 1379,
+                    "text": ""
+                },
+                {
+                    "line_number": 1380,
+                    "text": ".QUITARPARAMOSTRAR {"
+                },
+                {
+                    "line_number": 1381,
+                    "text": "display: none;"
+                },
+                {
+                    "line_number": 1382,
+                    "text": "}"
+                },
+                {
+                    "line_number": 1383,
+                    "text": ""
+                },
+                {
+                    "line_number": 1384,
+                    "text": ".dbcej1 {"
+                },
+                {
+                    "line_number": 1385,
+                    "text": "color: black;"
+                },
+                {
+                    "line_number": 1386,
+                    "text": "margin-left: 29px;"
+                },
+                {
+                    "line_number": 1387,
+                    "text": "margin-top: -52px;"
+                },
+                {
+                    "line_number": 1388,
+                    "text": "font-size: 25px;"
+                },
+                {
+                    "line_number": 1389,
+                    "text": "color: #87CEEB;"
+                },
+                {
+                    "line_number": 1390,
+                    "text": "}"
+                },
+                {
+                    "line_number": 1391,
+                    "text": ""
+                },
+                {
+                    "line_number": 1392,
+                    "text": ".dbcej2 {"
+                },
+                {
+                    "line_number": 1393,
+                    "text": "font-size: small;"
+                },
+                {
+                    "line_number": 1394,
+                    "text": "font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"
+                },
+                {
+                    "line_number": 1395,
+                    "text": "bottom: 15%;"
+                },
+                {
+                    "line_number": 1396,
+                    "text": "color: black;"
+                },
+                {
+                    "line_number": 1397,
+                    "text": "}"
+                },
+                {
+                    "line_number": 1398,
+                    "text": ""
+                },
+                {
+                    "line_number": 1399,
+                    "text": ""
+                },
+                {
+                    "line_number": 1400,
+                    "text": ".ojo {"
+                },
+                {
+                    "line_number": 1401,
+                    "text": "position: relative;"
+                },
+                {
+                    "line_number": 1402,
+                    "text": "width: 50px;  /* Ajusta al tama\u00f1o de tu ojo */"
+                },
+                {
+                    "line_number": 1403,
+                    "text": "height: 30px;"
+                },
+                {
+                    "line_number": 1404,
+                    "text": "animation: gui\u00f1o-natural 3s ease-in-out infinite;"
+                },
+                {
+                    "line_number": 1405,
+                    "text": ""
+                },
+                {
+                    "line_number": 1406,
+                    "text": "border-radius: 50%;"
+                },
+                {
+                    "line_number": 1407,
+                    "text": "}"
+                },
+                {
+                    "line_number": 1408,
+                    "text": ""
+                },
+                {
+                    "line_number": 1409,
+                    "text": "@keyframes gui\u00f1o-natural {"
+                },
+                {
+                    "line_number": 1410,
+                    "text": "0%, 70% {"
+                },
+                {
+                    "line_number": 1411,
+                    "text": "clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); /* Ojo abierto */"
+                },
+                {
+                    "line_number": 1412,
+                    "text": "}"
+                },
+                {
+                    "line_number": 1413,
+                    "text": "80% {"
+                },
+                {
+                    "line_number": 1414,
+                    "text": "clip-path: polygon(0% 50%, 100% 50%, 100% 50%, 0% 50%); /* Ojo cerrado */"
+                },
+                {
+                    "line_number": 1415,
+                    "text": "}"
+                },
+                {
+                    "line_number": 1416,
+                    "text": "90%, 100% {"
+                },
+                {
+                    "line_number": 1417,
+                    "text": "clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); /* Ojo abierto */"
+                },
+                {
+                    "line_number": 1418,
+                    "text": "}"
+                },
+                {
+                    "line_number": 1419,
+                    "text": "}"
+                },
+                {
+                    "line_number": 1420,
+                    "text": ""
+                },
+                {
+                    "line_number": 1421,
+                    "text": "/* Efecto de ojos Cerrado*/"
+                },
+                {
+                    "line_number": 1422,
+                    "text": ".ojoh:hover {"
+                },
+                {
+                    "line_number": 1423,
+                    "text": "animation: gui\u00f1o-natural 1.6s ease-in-out infinite;"
+                },
+                {
+                    "line_number": 1424,
+                    "text": "animation-delay: 0s, 3s; /* Versi\u00f3n alternativa */"
+                },
+                {
+                    "line_number": 1425,
+                    "text": "}"
+                },
+                {
+                    "line_number": 1426,
+                    "text": ""
+                },
+                {
+                    "line_number": 1427,
+                    "text": "@keyframes gui\u00f1o-natural {"
+                },
+                {
+                    "line_number": 1428,
+                    "text": "0%, 70% {clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); /* Abierto */}"
+                },
+                {
+                    "line_number": 1429,
+                    "text": "80% {clip-path: polygon(0% 50%, 100% 50%, 100% 50%, 0% 50%); /* Cerrado */}"
+                },
+                {
+                    "line_number": 1430,
+                    "text": "90%, 100% {clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); /* Abierto */}"
+                },
+                {
+                    "line_number": 1431,
+                    "text": "}"
+                }
+            ],
+            "token_count": 8780
+        }
+    ]
+}

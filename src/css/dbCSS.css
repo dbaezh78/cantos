@@ -73,15 +73,17 @@
         white-space: nowrap;
         pointer-events: auto; /* Permite interactuar con los selects */
 
-        position: absolute;
         transform: translateX(-50%); /* Centra el acorde en la posición */
+        top: -3px;        /* Este controla la posición del del acorde ↑↓ */
+        /*position: absolute;
         white-space: nowrap;
         pointer-events: auto;
-        top: -3px;        /* Este controla la posición del del acorde ↑↓ */
+        */
+
       }
 
         .chord {
-        background: none;
+        background: white;
         border: none;
         appearance: none;
         font-weight: bold;
@@ -91,10 +93,11 @@
         margin: 0;
         text-align: right;
         outline: none;
-
+        
         @media (min-width: 384px) {
           font-size: 1rem;
           margin-left: 5px;
+          outline: none;
         }
         @media (min-width: 768px) {font-size: 1.83rem;}
         @media (min-width: 992px) {font-size: 1rem;}
