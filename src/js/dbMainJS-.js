@@ -47,7 +47,6 @@ window.addEventListener('appinstalled', () => {
     deferredPrompt = null;
 });
 
-
 const acordes = ["Do", "Do#", "Re", "Re#", "Mi", "Fa", "Fa#", "Sol", "Sol#", "La", "Si♭", "Si"];
 const dbTrastes = ["♫ Traste", "1ᵉʳ traste", "2ᵒ traste", "3ᵉʳ traste", "4ᵒ traste", "5ᵒ traste", "6ᵒ traste", "7ᵒ traste", "8ᵒ traste", "9ᵒ traste", "10ᵒ traste"];
 
@@ -90,6 +89,8 @@ function calcularAcordeDesplazado(acorde, desplazamiento) {
     return indiceActual === -1 ? acorde : acordes[(indiceActual + desplazamiento + acordes.length) % acordes.length];
 }
 
+// Configurar Eventos Acordes
+
 function configurarEventosAcordes() {
     document.querySelectorAll('.chord').forEach(select => {
         select.addEventListener('change', function() {
@@ -108,6 +109,9 @@ function configurarEventosAcordes() {
         });
     });
 }
+
+
+
 
 function renderizarAcordes(contenedor, acordesData) {
     const divAcordes = document.createElement('div');
