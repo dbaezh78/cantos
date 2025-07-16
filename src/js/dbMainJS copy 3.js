@@ -90,6 +90,12 @@ function calcularAcordeDesplazado(acorde, desplazamiento) {
     return indiceActual === -1 ? acorde : acordes[(indiceActual + desplazamiento + acordes.length) % acordes.length];
 }
 
+
+/***********************
+* EL REAL PROBLEMA
+ ***********************/
+
+
 function configurarEventosAcordes() {
     document.querySelectorAll('.chord').forEach(select => {
         select.addEventListener('change', function() {
@@ -108,6 +114,11 @@ function configurarEventosAcordes() {
         });
     });
 }
+
+
+/***********************
+ * RENDERIZAR ACORDE
+ ***********************/
 
 function renderizarAcordes(contenedor, acordesData) {
     const divAcordes = document.createElement('div');
