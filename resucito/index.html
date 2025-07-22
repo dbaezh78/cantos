@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/cantos/src/ico.ico" type="image/x-icon">
+    <link rel="stylesheet" href="cssgral.css">
+    <link rel="stylesheet" href="index.css">
+    <!-- Enlace para Material Symbols Outlined -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+    <title id="tt"></title> <!-- El título de la pestaña se llenará con JavaScript desde canto_data.js -->
+</head>
+<body>
+
+    <!-- Contenedor principal que envuelve todo el contenido de la página -->
+    <div class="main-wrapper">
+        <div class="header-section">
+            <div class="top-row-controls">
+                
+                <home class="home-icon-container">
+                    <a href="/cantos/" class="material-symbols-outlined icon-button">home</a>
+                    <!-- 
+                    <a href="/cantos/" class="material-symbols-outlined icon-button">home</a>
+                    --->
+                    
+                </home>
+
+                <div class="toolbar mgap"> <!-- Añadida clase mgap aquí -->
+
+                    <!-- Selector para cejilla/traste -->
+                    <select id="cejillaSelect" class="toolbar-item" data-default="5ᵒ traste">
+                        <option value="">Cejilla</option>
+                        <option value="0">0ᵒ traste</option>
+                        <option value="1">1ᵒ traste</option>
+                        <option value="2">2ᵒ traste</option>
+                        <option value="3">3ᵒ traste</option>
+                        <option value="4">4ᵒ traste</option>
+                        <option value="5">5ᵒ traste</option>
+                        <!-- Más opciones si es necesario -->
+                    </select>
+
+                    <!-- Icono de libro/vista -->
+                     <a href="#" id="CallNotas" class="toolbar-item icon-button">
+                        <span class="material-symbols-outlined">music_note</span>
+                    </a>
+                    
+                    <a href="#" id="toggleVista" class="toolbar-item icon-button">
+                        <span class="material-symbols-outlined">menu_book</span>
+                    </a>
+                    
+                    <!-- Nuevo botón para mostrar/ocultar toda la asamblea -->
+                    <a href="#" id="showAllAsambleaBtn" class="toolbar-item icon-button">
+                        <span class="material-symbols-outlined">visibility</span>
+                    </a>
+
+                    <!-- Icono de control de audio -->
+                    <a href="#reproductor-audio" id="audio-control-btn" class="toolbar-item icon-button audio-control">
+                        <span class="material-symbols-outlined audio-icon">play_circle</span>
+                    </a>
+
+                    <!-- Icono de desplazamiento (scroll) -->
+                    <!--cel 384px   data-velocidad="6" data-incremento="3">-->
+                    <!--cel 768px   data-velocidad="7" data-incremento="1">-->
+                    <a href="#" id="startScroll" class="toolbar-item icon-button" data-velocidad="7" data-incremento="1">
+                        <span class="material-symbols-outlined scroll-icon">south</span>
+                    </a>
+
+                    <!-- Campo de búsqueda -->
+                    <input type="search" id="searchInput" placeholder="Buscar..." class="toolbar-item search-input">
+                </div>
+            </div>
+            
+        <div>
+        <audio id="cantoAudioPlayer" class="saudio" controls="" controlslist="download" preload="metadata" loop="">
+        <source src="" type="audio/mpeg"></audio> <!-- La fuente se establecerá con JS -->
+        </div>
+
+        </div>
+
+            <h1>
+                <!-- Los títulos del canto se llenarán con JavaScript desde canto_data.js -->
+                <div class="dbt1"></div>
+                <div class="dbs2"></div>
+            </h1>
+
+        <div class="container">
+            <div class="canto-content-wrapper">
+                <div id="canto-left-container" class="canto-column">
+                    <!-- Contenido del canto izquierdo se cargará aquí desde JavaScript -->
+                </div>
+                <div id="canto-right-container" class="canto-column">
+                    <!-- Contenido del canto derecho se cargará aquí desde JavaScript -->
+                </div>
+            </div>
+        </div>
+        <div class="pie dbr">
+            <div id="cantoCategories"></div>
+            <div class="nCanto" id="nCan"  ></div>
+            <div ><div class="cno" id="dbno"></div></div>
+        
+        </div>
+    </div>
+    <!-- Modal para la selección de acordes -->
+    <div id="chordSelectionModal" class="modal-overlay">
+        <div class="modal-content">
+            <div id="chordList" class="chord-list">
+                <!-- Los acordes se cargarán aquí dinámicamente -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Nuevo Modal para mostrar imágenes de acordes -->
+    <div id="chordImagesModal" class="modal-overlay">
+        <div class="modal-content">
+            <h2>Prountuario de Acordes</h2>
+            <div id="chordImageList" class="chord-image-list">
+                <!-- Las imágenes de acordes se cargarán aquí dinámicamente -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Nuevo Modal para mostrar la imagen de acorde grande -->
+    <div id="largeImageModal" class="modal-overlay">
+        <div class="modal-content large-image-content">
+            <img id="largeChordImage" src="" alt="Acorde ampliado">
+        </div>
+    </div>
+
+    <!-- Carga de scripts: ¡El orden es importante! -->
+    <script src="canto_data.js"></script> <!-- Primero, ya que contiene los datos -->
+    <script src="jsgral.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
